@@ -1,4 +1,6 @@
 import { ServicesDataLeft, ServicesDataRight } from "./ourServicesData"
+import { motion } from "framer-motion"
+import { fadeTransition } from "../transitions/globalTransitions"
 
 const OurServices = () => {
     return (
@@ -23,13 +25,16 @@ const OurServices = () => {
         </div>
         <div className="contact" id="contact">
         <div className="container">
-          <div className="copy">
+          <motion.div initial="hidden"
+                      whileInView="visible"
+                      variants={fadeTransition}  
+                      className="copy">
             <h2>contact</h2>
             <p>
               <b>business partners and alliances</b><br/>
               We invite you to get in touch with our representatives and business partners via phone or email in order to bring you the tailored assistance your business requires. Please do not attempt to harm our business teams.
             </p>
-          </div>
+          </motion.div>
           <div className="contacts">
             <div className="item">
               <img src="../assets/images/contact1.png" alt="" />

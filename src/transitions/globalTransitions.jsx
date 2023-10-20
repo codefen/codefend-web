@@ -15,18 +15,6 @@ export const loop = {
 };
 //////////////////////////////////////////////////////////////////
 
-export const appearTransition = {
-  visible:{
-      x:'0',
-      opacity:[0.0,1],
-      scale: [2,1.1],
-      transition:{
-        duration: 0.8,
-      }
-  },
-  hidden:{ x: '-100vw', opacity:0},
-}
-
 export const slideInTransition = {
   visible:{
       x:'0',
@@ -42,6 +30,7 @@ export const fadeTransition = {
       opacity:1,
       transition:{
         duration: 1,
+        delay: 0.2,
       }
   },
   hidden:{ opacity: 0},
