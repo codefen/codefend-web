@@ -28,7 +28,7 @@ const MainDiferences = () => {
                         variants={{y: '50vw', opacity:0}} 
                         viewport={{ once: true }} 
                         className="image">
-              <img src="../assets/images/cuadro.png" alt="" />
+              <img src="../assets/images/cuadro.png" alt="statistics table img" />
             </motion.div>
             <div className="list">
               <ul>

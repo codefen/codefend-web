@@ -12,7 +12,7 @@ const OurSoftware = () => {
             </p>
           </div>
           <div className="image">
-            <img src="../assets/images/cuadro2.png" alt="" />
+            <img src="../assets/images/cuadro2.png" alt="statistics img" />
           </div>
           <div className="items">
             <div className="item">

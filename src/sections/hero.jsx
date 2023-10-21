@@ -10,7 +10,7 @@ const Hero = () =>{
         <div className="container">
           <div className="header">
             <div className="brand">
-              <img src="../assets/images/brand.png" alt="" />
+              <img src="../assets/images/brand.png" alt="logo" />
             </div>
             <motion.div initial="hidden"
                         animate="visible" 
@@ -49,7 +49,7 @@ const Hero = () =>{
                       duration: 0.6,}}}
             variants={{y: '50vw', opacity:0}} 
             className="image">
-              <img src="../assets/images/hacker.png" alt="" />
+              <img src="../assets/images/hacker.png" alt="hacker img" />
             </motion.div>
           </div>
           <div className="features">

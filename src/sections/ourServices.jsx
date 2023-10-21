@@ -37,7 +37,7 @@ const OurServices = () => {
           </motion.div>
           <div className="contacts">
             <div className="item">
-              <img src="../assets/images/contact1.png" alt="" />
+              <img src="../assets/images/contact1.png" alt="contact" />
               <p><b>Khalid Ayed</b><br/>
               riyadh, saudi arabia <br/>
                 <a href="mailto:khalid@codefend.com">khalid@codefend.com</a> <br/>
@@ -45,7 +45,7 @@ const OurServices = () => {
               </p>
             </div>
             <div className="item">
-              <img src="../assets/images/contact2.png" alt="" />
+              <img src="../assets/images/contact2.png" alt="contact" />
               <p><b>Juan Maxit</b><br/>
               buenos aires <br/>
                 <a href="mailto:maxit@codefend.com">maxit@codefend.com</a> <br/>
@@ -53,7 +53,7 @@ const OurServices = () => {
               </p>
             </div>
             <div className="item">
-              <img src="../assets/images/contact3.png" alt="" />
+              <img src="../assets/images/contact3.png" alt="contact" />
               <p><b>Zaki Qureshey</b><br/>
               hyderabad, india <br/>
                 <a href="mailto:zaki@codefend.com">zaki@codefend.com</a> <br/>
@@ -61,7 +61,7 @@ const OurServices = () => {
               </p>
             </div>
             <div className="item">
-              <img src="../assets/images/contact4.png" alt="" />
+              <img src="../assets/images/contact4.png" alt="contact" />
               <p><b>Almerindo Graziano</b><br/>
               cyprus <br/>
                 <a href="mailto:almerindo@codefend.com">almerindo@codefend.com</a> <br/>
