@@ -7,15 +7,13 @@ export const ServicesDataLeft = () => {
         return <>
                 {
                     ourServiceLeft.map((data, index) => {
-                        return <>
-                                <motion.div variants={serviceTransition} viewport={{ once: true }} initial='hidden'  whileInView='visible' className="item" key={index}>
+                        return (<motion.div key={index} variants={serviceTransition} viewport={{ once: true }} initial='hidden'  whileInView='visible' className="item">
                                   <p>
                                     <b>{data.title}</b>
                                     <br />
                                     {data.description}
                                   </p>                
-                                </motion.div>
-                               </>                        
+                                </motion.div>)                                          
                     })
                 }
                </>   
@@ -25,15 +23,13 @@ export const ServicesDataRight = () => {
     return <>
             {
                 ourServiceRight.map((data, index) => {
-                    return <>
-                             <motion.div variants={serviceTransition} viewport={{ once: true }} initial='hidden'  whileInView='visible' className="item" key={index}>
+                    return (<motion.div key={index} variants={serviceTransition} viewport={{ once: true }} initial='hidden'  whileInView='visible' className="item">
                                <p>
                                  <b>{data.title}</b>
                                  <br />
                                  {data.description}
                                </p>                
-                             </motion.div>
-                            </>
+                             </motion.div>)                
                 })
             }
            </>   
