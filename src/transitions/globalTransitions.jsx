@@ -36,6 +36,16 @@ export const fadeTransition = {
   hidden:{ opacity: 0},
 }
 
+export const horizontalVariant = {
+  initial: { x: 0 },
+  animate: {x: [0, 60, 0], transition: { duration: 8, repeat: Infinity } },
+};
+
+export const verticalVariant = {
+  initial: { y: -5 },
+  animate: { y: [0,-30,0], transition: { duration: 8, repeat: Infinity } },
+};
+
 
 ///////////////////////////////////////////////////////////////////
 // ourServices 
@@ -53,6 +63,18 @@ export const serviceTransition = {
     opacity: 0,
     transition: {
       y: { stiffness: 1000 }
+    }
+  },
+  hoverLeft: {
+    x: -30,
+    transition:{
+      duration:0.6
+    }
+  },
+  hoverRight: {
+    x: 30,
+    transition:{
+      duration:0.6
     }
   }
 };

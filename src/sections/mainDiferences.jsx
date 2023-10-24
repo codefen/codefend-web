@@ -28,12 +28,14 @@ const MainDiferences = () => {
                         variants={{y: '50vw', opacity:0}} 
                         viewport={{ once: true }} 
                         className="image">
-              <img src="../assets/images/cuadro.png" alt="statistics table img" />
+              <img src="../assets/images/cuadro.png" loading="lazy" alt="statistics table img" />
             </motion.div>
             <div className="list">
               <ul>
                 <motion.li variants={serviceTransition} viewport={{ once: true }} initial='hidden'  whileInView='visible' className="item">
-                  <img src="../assets/images/icon1.png" alt="" />
+                  <div>                  
+                  <img src="../assets/images/icon1.png" loading="lazy" alt="icon-img" />
+                  </div>
                   <p>
                     <b>our asm delivers permanent surveillance</b>
                     <br />
@@ -44,7 +46,9 @@ const MainDiferences = () => {
                   </p>
                 </motion.li>
                 <motion.li variants={serviceTransition} viewport={{ once: true }} initial='hidden'  whileInView='visible' className="item">
-                  <img src="../assets/images/icon2.png" alt="" />
+                  <div>
+                  <img src="../assets/images/icon2.png" loading="lazy" alt="icon-img" />
+                  </div>
                   <p>
                     <b>issues communicated quickly</b>
                     <br />
@@ -55,7 +59,9 @@ const MainDiferences = () => {
                   </p>
                 </motion.li>
                 <motion.li variants={serviceTransition} viewport={{ once: true }} initial='hidden'  whileInView='visible' className="item">
-                  <img src="../assets/images/icon3.png" alt="" />
+                  <div>
+                  <img src="../assets/images/icon3.png" loading="lazy" alt="icon-img" />
+                  </div>
                   <p>
                     <b>seriously connected with real hackers</b>
                     <br />

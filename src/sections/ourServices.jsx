@@ -1,6 +1,6 @@
 import { ServicesDataLeft, ServicesDataRight } from "./ourServicesData"
 import { motion } from "framer-motion"
-import { fadeTransition } from "../transitions/globalTransitions"
+import { fadeTransition, horizontalVariant, verticalVariant  } from "../transitions/globalTransitions"
 
 const OurServices = () => {
     return (
@@ -12,6 +12,14 @@ const OurServices = () => {
               Codefend offers cybersecurity intel, research, and security services, all unified in a unique platform. This platform allows you to monitor your assets, infrastructure and your organization's security, while establishing direct communication between our professionals and your security team. Our conventional services include:
             </p>
           </div>
+          <motion.img 
+            variants={horizontalVariant} 
+            initial='initial' 
+            animate='animate' 
+            style={{position:'absolute', height:'100px', width:'200px'}} 
+            src={require("../assets/images/fragment1.png")} 
+            alt="esto-es-prueba" />
+          
           <div className="list">
             <div className="left">
               <ServicesDataLeft/>
@@ -37,7 +45,7 @@ const OurServices = () => {
           </motion.div>
           <div className="contacts">
             <div className="item">
-              <img src="../assets/images/contact1.png" alt="contact" />
+              <img src="../assets/images/contact1.png" loading="lazy" alt="contact" />
               <p><b>Khalid Ayed</b><br/>
               riyadh, saudi arabia <br/>
                 <a href="mailto:khalid@codefend.com">khalid@codefend.com</a> <br/>
@@ -45,7 +53,7 @@ const OurServices = () => {
               </p>
             </div>
             <div className="item">
-              <img src="../assets/images/contact2.png" alt="contact" />
+              <img src="../assets/images/contact2.png" loading="lazy" alt="contact" />
               <p><b>Juan Maxit</b><br/>
               buenos aires <br/>
                 <a href="mailto:maxit@codefend.com">maxit@codefend.com</a> <br/>
@@ -53,7 +61,7 @@ const OurServices = () => {
               </p>
             </div>
             <div className="item">
-              <img src="../assets/images/contact3.png" alt="contact" />
+              <img src="../assets/images/contact3.png" loading="lazy" alt="contact" />
               <p><b>Zaki Qureshey</b><br/>
               hyderabad, india <br/>
                 <a href="mailto:zaki@codefend.com">zaki@codefend.com</a> <br/>
@@ -61,7 +69,7 @@ const OurServices = () => {
               </p>
             </div>
             <div className="item">
-              <img src="../assets/images/contact4.png" alt="contact" />
+              <img src="../assets/images/contact4.png" loading="lazy" alt="contact" />
               <p><b>Almerindo Graziano</b><br/>
               cyprus <br/>
                 <a href="mailto:almerindo@codefend.com">almerindo@codefend.com</a> <br/>
