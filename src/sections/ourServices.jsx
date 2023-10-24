@@ -1,6 +1,6 @@
 import { ServicesDataLeft, ServicesDataRight } from "./ourServicesData"
 import { motion } from "framer-motion"
-import { fadeTransition, horizontalVariant, verticalVariant  } from "../transitions/globalTransitions"
+import { fadeTransition  } from "../transitions/globalTransitions"
 
 const OurServices = () => {
     return (
@@ -12,13 +12,6 @@ const OurServices = () => {
               Codefend offers cybersecurity intel, research, and security services, all unified in a unique platform. This platform allows you to monitor your assets, infrastructure and your organization's security, while establishing direct communication between our professionals and your security team. Our conventional services include:
             </p>
           </div>
-          <motion.img 
-            variants={horizontalVariant} 
-            initial='initial' 
-            animate='animate' 
-            style={{position:'absolute', height:'100px', width:'200px'}} 
-            src={require("../assets/images/fragment1.png")} 
-            alt="esto-es-prueba" />
           
           <div className="list">
             <div className="left">

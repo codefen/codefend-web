@@ -1,5 +1,4 @@
-import { motion } from "framer-motion";
-import { verticalVariant } from "../transitions/globalTransitions";
+
 
 const OurSoftware = () => {
     return (
@@ -14,7 +13,7 @@ const OurSoftware = () => {
               the highest level of protection for your data & infrastructure.
             </p>
           </div>
-          <motion.img variants={verticalVariant} initial='initial' animate='animate' src={require("../assets/images/fragment4.png")} style={{position:'absolute', width:'200px', right:'3%', bottom:'60%'}} alt="fragments" />
++
           <div className="image">
             <img src="../assets/images/cuadro2.png" loading="lazy" alt="statistics img" />
           </div>
