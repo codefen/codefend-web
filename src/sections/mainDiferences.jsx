@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { fadeTransition } from "../transitions/globalTransitions";
+import { slideTransition } from "../transitions/globalTransitions";
 import { serviceTransition } from "../transitions/globalTransitions";
 
 const MainDiferences = () => {
@@ -8,7 +8,8 @@ const MainDiferences = () => {
         <div className="container">
           <motion.div initial="hidden"
                       whileInView="visible"
-                      variants={fadeTransition} 
+                      variants={slideTransition} 
+                      viewport={{ once: true }}
                       className="copy">
             <h2>main differences</h2>
             <p>
@@ -32,9 +33,22 @@ const MainDiferences = () => {
             </motion.div>
             <div className="list">
               <ul>
-                <motion.li variants={serviceTransition} viewport={{ once: true }} initial='hidden'  whileInView='visible' className="item">
+                <motion.li 
+                  viewport={{ once: true }} 
+                  initial={{x:70, opacity:0}}  
+                  whileInView={{
+                    x:0,
+                    opacity:1,
+                    transition:{
+                      duration:2,
+                      delay:0.7,
+                      type:'spring',
+                      bounce:0.6
+                    }
+                  }} 
+                  className="item">
                   <div>                  
-                  <img src="../assets/images/icon1.png" loading="lazy" alt="icon-img" />
+                    <img src="../assets/images/icon1.png" loading="lazy" alt="icon-img" />
                   </div>
                   <p>
                     <b>our asm delivers permanent surveillance</b>
@@ -45,7 +59,20 @@ const MainDiferences = () => {
                     demand in our plataform.
                   </p>
                 </motion.li>
-                <motion.li variants={serviceTransition} viewport={{ once: true }} initial='hidden'  whileInView='visible' className="item">
+                <motion.li 
+                  viewport={{ once: true }} 
+                  initial={{x:70, opacity:0}}  
+                  whileInView={{
+                    x:0,
+                    opacity:1,
+                    transition:{
+                      duration:2,
+                      delay:0.8,
+                      type:'spring',
+                      bounce:0.6
+                    }
+                  }}  
+                  className="item">
                   <div>
                   <img src="../assets/images/icon2.png" loading="lazy" alt="icon-img" />
                   </div>
@@ -58,7 +85,20 @@ const MainDiferences = () => {
                     issues as soon as it appears.
                   </p>
                 </motion.li>
-                <motion.li variants={serviceTransition} viewport={{ once: true }} initial='hidden'  whileInView='visible' className="item">
+                <motion.li 
+                  viewport={{ once: true }} 
+                  initial={{x:70, opacity:0}}  
+                  whileInView={{
+                    x:0,
+                    opacity:1,
+                    transition:{
+                      duration:2,
+                      delay:0.9,
+                      type:'spring',
+                      bounce:0.6
+                    }
+                  }}  
+                  className="item">
                   <div>
                   <img src="../assets/images/icon3.png" loading="lazy" alt="icon-img" />
                   </div>

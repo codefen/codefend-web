@@ -1,6 +1,6 @@
 import { ServicesDataLeft, ServicesDataRight } from "./ourServicesData"
 import { motion } from "framer-motion"
-import { fadeTransition  } from "../transitions/globalTransitions"
+import { slideTransition  } from "../transitions/globalTransitions"
 
 const OurServices = () => {
     return (
@@ -16,11 +16,11 @@ const OurServices = () => {
           <div className="list">
             <div className="left">
               <ServicesDataLeft/>
-              <div className="line"></div>
+              <motion.div initial={{y:'-100%'}} whileInView={{y:0, transition:{duration:2, delay:0.5}}} viewport={{once:true}} className="line"></motion.div>
             </div>
             <div className="right">
               <ServicesDataRight/>
-              <div className="line"></div>
+              <motion.div initial={{y:'-100%'}} whileInView={{y:0, transition:{duration:2, delay:0.5}}} viewport={{once:true}} className="line"></motion.div>
             </div>
           </div>
         </div>
@@ -28,7 +28,7 @@ const OurServices = () => {
         <div className="container">
           <motion.div initial="hidden"
                       whileInView="visible"
-                      variants={fadeTransition}  
+                      variants={slideTransition}  
                       className="copy">
             <h2>contact</h2>
             <p>
@@ -41,7 +41,7 @@ const OurServices = () => {
               <img src="../assets/images/contact1.png" loading="lazy" alt="contact" />
               <p><b>Khalid Ayed</b><br/>
               riyadh, saudi arabia <br/>
-                <a href="mailto:khalid@codefend.com">khalid@codefend.com</a> <br/>
+                {/* <a href="mailto:khalid@codefend.com">khalid@codefend.com</a> <br/> */}
                 +20 112 347 2840
               </p>
             </div>
@@ -49,7 +49,7 @@ const OurServices = () => {
               <img src="../assets/images/contact2.png" loading="lazy" alt="contact" />
               <p><b>Juan Maxit</b><br/>
               buenos aires <br/>
-                <a href="mailto:maxit@codefend.com">maxit@codefend.com</a> <br/>
+                {/* <a href="mailto:maxit@codefend.com">maxit@codefend.com</a> <br/> */}
                 +54 911 3650 2089
               </p>
             </div>
@@ -57,7 +57,7 @@ const OurServices = () => {
               <img src="../assets/images/contact3.png" loading="lazy" alt="contact" />
               <p><b>Zaki Qureshey</b><br/>
               hyderabad, india <br/>
-                <a href="mailto:zaki@codefend.com">zaki@codefend.com</a> <br/>
+                {/* <a href="mailto:zaki@codefend.com">zaki@codefend.com</a> <br/> */}
                 +91 9000 062 062
               </p>
             </div>
@@ -65,7 +65,7 @@ const OurServices = () => {
               <img src="../assets/images/contact4.png" loading="lazy" alt="contact" />
               <p><b>Almerindo Graziano</b><br/>
               cyprus <br/>
-                <a href="mailto:almerindo@codefend.com">almerindo@codefend.com</a> <br/>
+                {/* <a href="mailto:almerindo@codefend.com">almerindo@codefend.com</a> <br/> */}
                 +357 99 883 356
               </p>
             </div>

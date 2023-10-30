@@ -1,10 +1,11 @@
-
+import { motion } from "framer-motion"
+import { slideTransition } from "../transitions/globalTransitions"
 
 const OurSoftware = () => {
     return (
         <section className="our-software">
         <div className="container">
-          <div className="copy">
+          <motion.div variants={slideTransition} viewport={{once:true}} whileInView='visible' initial='hidden' className="copy">
             <h2>our software</h2>
             <p>
               Codefend is your comprehensive solution for all your company's
@@ -12,7 +13,7 @@ const OurSoftware = () => {
               designed to protect your organization from cyber threats, ensuring
               the highest level of protection for your data & infrastructure.
             </p>
-          </div>
+          </motion.div>
 +
           <div className="image">
             <img src="../assets/images/cuadro2.png" loading="lazy" alt="statistics img" />

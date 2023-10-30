@@ -11,7 +11,7 @@ export const ServicesDataLeft = () => {
                                   key={index} 
                                   variants={serviceTransition} 
                                   viewport={{ once: true }} 
-                                  initial='hidden'  
+                                  initial='hiddenleft'  
                                   whileInView='visible' 
                                   whileHover='hoverLeft'
                                   className="item">
@@ -34,7 +34,7 @@ export const ServicesDataRight = () => {
                                key={index} 
                                variants={serviceTransition} 
                                viewport={{ once: true }} 
-                               initial='hidden'  
+                               initial='hiddenright'  
                                whileInView='visible' 
                                whileHover='hoverRight'
                                className="item">
