@@ -27,24 +27,12 @@ const Hero = () =>{
               <img src="../assets/images/brand.png" alt="logo" />
             </motion.div>
             <div className="menu">
-              <motion.a animate={{
-                    opacity:1,
-                    transform:'scale(1)',
-                    transition:{
-                      delay:0.7
-                    }
-                  }}
-                        initial="hidden"
-                        variants={appearTransition}  
-                        className="btn alt">
+              <a href="#contact" className="btn alt">
                 contact
-              </motion.a>
-              <motion.a animate="visible" 
-                        initial="hidden"
-                        variants={appearTransition}  
-                        href="#" className="btn main">
+              </a>
+              <a href="#" className="btn main">
                 download
-              </motion.a>
+              </a>
             </div>
           </div>
           <div className="content">

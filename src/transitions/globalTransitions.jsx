@@ -3,22 +3,22 @@
 // hero - features loop
 //////////////////////////////////////////////////////////////////
 export const verticalAnimation = {
-  initial: { y: -5 },
-  animate: { y: [0,-30,0], transition: { duration: 8, repeat: Infinity } },
+  initial: { y: -15 },
+  animate: { y: [20,0,20], transition: { duration: 8, repeat: Infinity } },
 };
 //////////////////////////////////////////////////////////////////
 
 export const appearTransition = {
   visible:{
     opacity:1,
-    transform:'scale(1)',
+    y:0,
     transition:{
       delay:1
     }
   },
   hidden:{
     opacity:0,
-    transform:'scale(0.6)'
+    y:-40
   }
 }
 
