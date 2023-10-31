@@ -163,6 +163,7 @@ section.hero {
     align-items: flex-end;
     margin: 0 auto;
     z-index: 10;
+    min-height: 600px;
 
     .copy {
       flex: 1;
@@ -183,6 +184,7 @@ section.hero {
       display: flex;
       justify-content: center;
       z-index: 9;
+      //display: none;
       img {
         max-height: 600px;
       }
@@ -485,7 +487,7 @@ section.our-software {
   background-color: #e7e7e9;
   padding-top: var(--padding-top-sections-c);
   padding-bottom: var(--padding-top-sections-c);
-  background-image: url('../assets/images/bkg-red1.png');
+  background-image: url('../assets/images/bkg-red1.webp');
   background-position: top left;
   background-repeat: no-repeat;
   z-index: 20;
@@ -529,7 +531,7 @@ section.our-services {
   background-color: #f2f2f2;
   padding-top: calc(var(--padding-top-sections-c) * 2);
   padding-bottom: calc(var(--padding-top-sections-c) * 2);
-  background-image: url('../assets/images/bkg-red2.png');
+  background-image: url('../assets/images/bkg-red2.webp');
   background-position: bottom left;
   background-repeat: no-repeat;
   overflow-x: hidden;

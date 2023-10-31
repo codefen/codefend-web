@@ -28,7 +28,7 @@ const MainDiferences = () => {
                         variants={{y: '50vw', opacity:0}} 
                         viewport={{ once: true }} 
                         className="image">
-              <img class="lozad" src="../assets/images/cuadro.png" loading="lazy" alt="statistics table img" />
+              <img src="../assets/images/cuadro.webp" loading="lazy" alt="statistics table img" />
             </motion.div>
             <div className="list">
               <ul>
@@ -47,7 +47,7 @@ const MainDiferences = () => {
                   }} 
                   className="item">
                   <div>                  
-                    <img class="lozad" src="../assets/images/icon1.png" loading="lazy" alt="icon-img" />
+                    <img src="../assets/images/icon1.png" loading="lazy" alt="icon-img" />
                   </div>
                   <p>
                     <b>our asm delivers permanent surveillance</b>
@@ -73,7 +73,7 @@ const MainDiferences = () => {
                   }}  
                   className="item">
                   <div>
-                  <img class="lozad" src="../assets/images/icon2.png" loading="lazy" alt="icon-img" />
+                  <img src="../assets/images/icon2.png" loading="lazy" alt="icon-img" />
                   </div>
                   <p>
                     <b>issues communicated quickly</b>
@@ -99,7 +99,7 @@ const MainDiferences = () => {
                   }}  
                   className="item">
                   <div>
-                  <img class="lozad" src="../assets/images/icon3.png" loading="lazy" alt="icon-img" />
+                  <img src="../assets/images/icon3.png" loading="lazy" alt="icon-img" />
                   </div>
                   <p>
                     <b>seriously connected with real hackers</b>
