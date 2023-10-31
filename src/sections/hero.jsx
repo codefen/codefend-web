@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import { appearTransition, slideTransition, verticalAnimation } from "../transitions/globalTransitions";
+import { slideTransition } from "../transitions/globalTransitions";
 import { TypeAnimation } from 'react-type-animation';
 
 
@@ -66,23 +66,12 @@ const Hero = () =>{
               </p>
             </motion.div>
             </>
-            <motion.div 
-            initial={{y:'50vh', opacity:0, scale:0.5}}             
-            animate={{y:'0',
-                      opacity:[0.0,1],
-                      scale:1,
-                      transition:{
-                      duration: 0.3,
-                      delay:0.3,
-                    }}}
-            variants={{y: '50vw', opacity:0}} 
+            <div 
             className="image">
-              <motion.img variants={verticalAnimation} 
-                          initial='initial'
-                          animate='animate'
+              <img 
                           src="../assets/images/hacker.png" 
                           alt="hacker img" />
-            </motion.div>
+            </div>
           </div>
           <div className="features">
             <ul>            

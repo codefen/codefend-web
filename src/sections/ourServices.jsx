@@ -38,34 +38,34 @@ const OurServices = () => {
           </motion.div>
           <div className="contacts">
             <div className="item">
-              <img src="../assets/images/contact1.png" loading="lazy" alt="contact" />
+              <img class="lozad" src="../assets/images/contact1.png" loading="lazy" alt="contact" />
               <p><b>Khalid Ayed</b><br/>
               riyadh, saudi arabia <br/>
-                {/* <a href="mailto:khalid@codefend.com">khalid@codefend.com</a> <br/> */}
+                <a href="mailto:khalid@codefend.com">khalid@codefend.com</a> <br/>
                 +20 112 347 2840
               </p>
             </div>
             <div className="item">
-              <img src="../assets/images/contact2.png" loading="lazy" alt="contact" />
+              <img class="lozad" src="../assets/images/contact2.png" loading="lazy" alt="contact" />
               <p><b>Juan Maxit</b><br/>
               buenos aires <br/>
-                {/* <a href="mailto:maxit@codefend.com">maxit@codefend.com</a> <br/> */}
+                <a href="mailto:maxit@codefend.com">maxit@codefend.com</a> <br/>
                 +54 911 3650 2089
               </p>
             </div>
             <div className="item">
-              <img src="../assets/images/contact3.png" loading="lazy" alt="contact" />
+              <img class="lozad" src="../assets/images/contact3.png" loading="lazy" alt="contact" />
               <p><b>Zaki Qureshey</b><br/>
               hyderabad, india <br/>
-                {/* <a href="mailto:zaki@codefend.com">zaki@codefend.com</a> <br/> */}
+                <a href="mailto:zaki@codefend.com">zaki@codefend.com</a> <br/>
                 +91 9000 062 062
               </p>
             </div>
             <div className="item">
-              <img src="../assets/images/contact4.png" loading="lazy" alt="contact" />
+              <img class="lozad" src="../assets/images/contact4.png" loading="lazy" alt="contact" />
               <p><b>Almerindo Graziano</b><br/>
               cyprus <br/>
-                {/* <a href="mailto:almerindo@codefend.com">almerindo@codefend.com</a> <br/> */}
+                <a href="mailto:almerindo@codefend.com">almerindo@codefend.com</a> <br/>
                 +357 99 883 356
               </p>
             </div>

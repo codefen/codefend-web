@@ -16,7 +16,7 @@ const OurSoftware = () => {
           </motion.div>
 +
           <div className="image">
-            <img src="../assets/images/cuadro2.png" loading="lazy" alt="statistics img" />
+            <img class="lozad" src="../assets/images/cuadro2.png" loading="lazy" alt="statistics img" />
           </div>
           <div className="items">
             <div className="item">
