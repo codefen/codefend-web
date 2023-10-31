@@ -68,9 +68,7 @@ const Hero = () =>{
             </>
             <div 
             className="image">
-              <img 
-                          src="../assets/images/hacker.png" 
-                          alt="hacker img" />
+              <img src="../assets/images/hacker.webp" alt="hacker img" />
             </div>
           </div>
           <div className="features">
