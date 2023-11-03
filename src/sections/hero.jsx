@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { slideTransition } from "../transitions/globalTransitions";
 import { TypeAnimation } from 'react-type-animation';
@@ -8,7 +7,6 @@ const Hero = () =>{
 
     return (
       <section className="hero">
-        <div className="ss"></div>
         <div className="container">
           <div className="header">
             <motion.div 

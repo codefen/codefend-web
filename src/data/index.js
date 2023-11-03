@@ -19,3 +19,19 @@ export const ourServiceRight = [
     {title:'advanced se', 
     description:'Rise your company defenses against phishing, smishing and vishing attacks with our social engineering services. Improve your security posture and educate your employees with our social engineering services.'},
 ]
+
+const link = 'linkedin.com/in/'
+
+export const members = [
+    {image:'src/assets/images/members/chris.webp',name:'Christian C. Russo', rol:'offensive security', profile:`${link}chris-c-russo/`,experience:'10+ years'},
+    {image:'src/assets/images/members/alvaro.webp',name:'Alvaro Yaquemet', rol:'web and network pentest', profile:`${link}alvaroyaquemet/`,experience:'5+ years'},
+    {image:'src/assets/images/members/leandro.webp',name:'Leandro Ferrari', rol:'pentest & offensice cloud security', profile:`${link}leandroferrari/`,experience:'10+years'},
+    {image:'src/assets/images/members/elias.webp',name:'Elias Bustos', rol:'human documencation', profile:`${link}eliasbus/`,experience:'10+ years'},
+    {image:'src/assets/images/members/francisco.webp',name:'Francisco Ruiz', rol:'offensive security', profile:`${link}franciscomruiz/`,experience:'10+ years'},
+    {image:'src/assets/images/members/edgardo.webp',name:'Edgardo Krause', rol:'web application pentest', profile:`${link}edgardokrause/`,experience:'7+ years'},
+    {image:'src/assets/images/members/emiliano.webp',name:'Emiliano Peralta', rol:'pentest & social engineering', profile:`${link}emilianoperalta/`,experience:'10+ years'},
+    {image:'src/assets/images/members/ignacio.webp',name:'Ignacio Gomez', rol:'user interface', profile:`${link}gomez-ignacio/`,experience:'10+ years'},
+    {image:'src/assets/images/members/luca.webp',name:'Maria Luca Fenochietto', rol:'operations', profile:`${link}luca-fenochietto/`,experience:'10+ years'},
+    {image:'src/assets/images/members/maxi.webp',name:'Maximiliano Daniel Olivera', rol:'pentest', profile:`${link}maximiliano-daniel-olivera/`,experience:'3+ years'},
+    {image:'src/assets/images/members/esteban.webp',name:'Esteban Cano', rol:'web pentest & devsec ops', profile:`${link}estebancano/`,experience:'5+ years'},
+]
