@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import { slideTransition } from "../transitions/globalTransitions"
 
 const Prices = () => {
     return (
@@ -95,22 +96,36 @@ const Prices = () => {
         </div>
 
 
-        <div className="crypto">
+        <motion.div 
+          initial={{x:'-100vw'}}
+          whileInView={{x:0}}
+          transition={{delay:.5, duration:1.5}}
+          viewport={{once:true}}
+          className="crypto">
           <div className="container">
           <div className="coin">
             <img loading="lazy" src="src/assets/images/coin.webp" alt="bitcoin" />
               <div>
-                <h3>bitcoin is welcome</h3>        
-                <p>
+                <motion.h3
+                variants={slideTransition}
+                initial='hidden'
+                whileInView='visible'
+                viewport={{once:true}}
+                >bitcoin is welcome</motion.h3>        
+                <motion.p
+                initial={{x:'20vw', opacity:0}}
+                whileInView={{x:0, opacity:1}}
+                transition={{delay:1, duration:1}}
+                viewport={{once:true}}>
                 <b><span>for customers and our ethical hackers:</span><br />
                   We accept all major cryptocurrencies, including bitcoin,
                   ethereum, and litecoin.</b> By accepting these 
                   cryptocurrencies, we are making it easier for
-                  our customers to do business with us.</p>
+                  our customers to do business with us.</motion.p>
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
     </section>
     )
 }

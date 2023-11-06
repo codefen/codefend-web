@@ -3,7 +3,7 @@ const FreeTrial = () =>{
       <section className="free-trial">
         <div className="container">
           <div className="form-contain">
-            <div>
+            <div className="title">
               <h1>free trial</h1>
 
               <p><b>create a user and see what we can do, at no cost</b><br />
