@@ -41,13 +41,23 @@ const Hero = () =>{
                          className="copy">
               <TypeAnimation
               sequence={[
-                // Same substring at the start will only be typed out once, initially
                 'intel meets protection',
-                1000, // wait 1s before replacing "Mice" with "Hamsters"
-                'Always On Cybersecurity Service',
                 1000,
-                'Team of Cybersecurity Professionals.',
-                1000
+                'Attack surface surveillance',
+                1000,
+                'Dive deeper the darkweb.',
+                1000,
+                'Remove vendor risk',
+                1000,
+                'continuous pentest',
+                1000,
+                'Unveil...',
+                1000,
+                'Unveil your shadow IT',
+                1000,
+                'decentralized pentest',
+                1000,
+                'quieter become, able to hear'
               ]}
               wrapper="h1"
               speed={50}

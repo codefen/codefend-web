@@ -25,10 +25,9 @@ const MainDiferences = () => {
                             opacity:[0.0,1],
                             transition:{
                             duration: 0.6,}}}
-                        variants={{y: '50vw', opacity:0}} 
                         viewport={{ once: true }} 
                         className="image">
-              <img src="../assets/images/cuadro.webp" loading="lazy" alt="statistics table img" />
+              <img src="src/assets/images/cuadro.webp" loading="lazy" alt="statistics table img" />
             </motion.div>
             <div className="list">
               <ul>

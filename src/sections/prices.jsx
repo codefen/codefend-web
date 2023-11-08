@@ -8,53 +8,59 @@ const Prices = () => {
         <div className="title">
           <motion.h2 
             initial={{opacity:0, y:'-100px'}} 
-            transition={{delay:.5, duration:1}}
+            transition={{delay:.3, duration:1}}
             whileInView={{opacity:1, y:0}}
             viewport={{once:true}}
             >UNIQUE PENTEST & SURVEILLANCE</motion.h2>
           <motion.p 
             initial={{opacity:0}} 
-            transition={{delay:1.2, duration:1}}
+            transition={{delay:1, duration:1}}
             viewport={{once:true}}
             whileInView={{opacity:1}}>Choose between performing o single pentest, with a duration of one month from start to finish,
             <b>recommended for small businesses and startups</b>
             or perform a permanent supervision of your systems and infrastructure with a year duration,
-            <b>recommended for establishied companies with a wide range of assets</b>
+            <b>recommended for establishied companies with a wide range ofsrc assets</b>
           </motion.p>
         </div>
-        <div className="card-contain">
+        <motion.div 
+          initial={{scale:.9, opacity:0}}
+          transition={{duration:1, delay:1}}
+          whileInView={{scale:1, opacity:1}}
+          viewport={{once:true}}
+          className="card-contain">
+          
           <div className="card">
-            <h3><b>Small size pentest & scope</b></h3>
+            <h3><b>Small business</b></h3>
             <div className="price">
-              <img loading="lazy" src="src/assets/images/icon4.webp" alt="thunder-icon" />
+              <img loading="lazy" src='src/assets/images/icon4.webp' alt="thunder-icon" />
               <div>
-              <h4>$3,870</h4>
+              <h4>$1,500</h4>
               <p>
-                one pentest $3.870<br />
-                surveillance $38,700 per year
+                4 weeks:$1,500/monthly biled<br />
+                12 months:$15,000/anually billed
               </p>
               </div>
             </div>
             <ul>
               <li className="paragraph-color">- Recommended for start ups and new companies</li>
-              <li>- one-shot pentest $3,870-one report</li>
+              <li>- one-shot pentest $1,500-one report</li>
               <li>- one year subscription $38,700 per year</li>
               <li>- includes, 3 weeks of pentest + 1 week report</li>
               <li className="paragraph-color">- Dedicated hacker alocation according to your needs</li>
             </ul>
             <button>evaluate now</button>
           </div>
-          {/* <div className="recommend"> */}
-            <div className="card" >
-              <h3><b>Medium size pentest & scope</b></h3>
+                   
+          <div className="card" >
+              <h3><b>Medium size</b></h3>
               <div className="price">
-                <img loading="lazy" src="src/assets/images/icon6.webp" alt="reload-icon" />
+                <img loading="lazy" src='src/assets/images/icon6.webp' alt="reload-icon" />
                 <div>
 
-                <h4>$6,800</h4>
+                <h4>$4,500</h4>
                 <p>
-                  one pentest $6.800<br />
-                  surveillance $68,000 per year
+                  4 weeks:$4,500/monthly biled<br />
+                  12 months:$45,000/anually billed
                 </p>
                 </div>
               </div>
@@ -67,17 +73,17 @@ const Prices = () => {
                 <li className="paragraph-color">- Dedicated hacker allocation according to your needs</li>             
               </ul>
               <button>evaluate now</button>
-            </div>
-          {/* </div> */}
+          </div>
+            
           <div className="card">
-            <h3><b>Large size pentest & scope</b></h3>
+            <h3><b>Full service</b></h3>
             <div className="price">
-              <img loading="lazy" src="src/assets/images/icon5.webp" alt="icon" />
+              <img loading="lazy" src='src/assets/images/icon5.webp' alt="icon" />
               <div>
-              <h4>$9,200</h4>
+              <h4>$13,500</h4>
               <p>
-                one pentest $9.200<br />
-                surveillance $92,000 per year
+                4 weeks:$13,500/monthly biled<br />
+                12 months:$135,000/anually billed
               </p>
               </div>
             </div>
@@ -92,7 +98,8 @@ const Prices = () => {
             </ul>
            <button>evaluate now</button>
           </div>
-        </div>
+          
+        </motion.div>
         </div>
 
 
@@ -104,7 +111,7 @@ const Prices = () => {
           className="crypto">
           <div className="container">
           <div className="coin">
-            <img loading="lazy" src="src/assets/images/coin.webp" alt="bitcoin" />
+            <motion.img  loading="lazy" src="src/assets/images/coin.webp" alt="bitcoin" />
               <div>
                 <motion.h3
                 variants={slideTransition}
