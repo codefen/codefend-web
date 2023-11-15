@@ -1,9 +1,42 @@
 import { motion } from "framer-motion"
 import { slideTransition } from "../transitions/globalTransitions"
+import { useEffect, useRef, useState } from "react"
+
 
 const OurSoftware = () => {
+
+  const img = useRef(null);
+  const [scrolly, setScrolly] = useState(0)
+
+  useEffect(()=>{
+
+    const handleScroll = () => {
+      setScrolly(window.scrollY); 
+      let round = 3500;
+
+      img.current.style.transform = `translateY(${(scrolly - round) / 15}px) translateX(${(scrolly - round) / 15}px)`;
+
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    
+  },[scrolly])
+
+
     return (
         <section className="our-software">
+        <img 
+          ref={img}
+          style={{
+            position:'absolute',
+            zIndex:'-1', 
+            top:0, 
+            left:0, 
+            objectFit:'cover',
+          }} 
+          loading="lazy"
+          src="../assets/images/bkg-elmt.webp" 
+          alt="background" />
         <div className="container">
           <motion.div variants={slideTransition} viewport={{once:true}} whileInView='visible' initial='hidden' className="copy">
             <h2>our software</h2>
@@ -16,7 +49,7 @@ const OurSoftware = () => {
           </motion.div>
 +
           <div className="image">
-            <img src="src/assets/images/cuadro2.webp" loading="lazy" alt="statistics img" />
+            <img src="../assets/images/cuadro2.webp" loading="lazy" alt="statistics img" />
           </div>
           <div className="items">
             <div className="item">

@@ -23,23 +23,28 @@ export const ourServiceRight = [
 const link = 'linkedin.com/in/'
 
 export const members = [
-    {image:'src/assets/images/members/chris.webp',name:'Christian C. Russo', rol:'offensive security', profile:`${link}chris-c-russo/`,experience:'10+ years'},
-    {image:'src/assets/images/members/alvaro.webp',name:'Alvaro Yaquemet', rol:'web and network pentest', profile:`${link}alvaroyaquemet/`,experience:'5+ years'},
-    {image:'src/assets/images/members/leandro.webp',name:'Leandro Ferrari', rol:'pentest & offensice cloud security', profile:`${link}leandroferrari/`,experience:'10+years'},
-    {image:'src/assets/images/members/elias.webp',name:'Elias Bustos', rol:'human documencation', profile:`${link}eliasbus/`,experience:'10+ years'},
-    {image:'src/assets/images/members/francisco.webp',name:'Francisco Ruiz', rol:'offensive security', profile:`${link}franciscomruiz/`,experience:'10+ years'},
-    {image:'src/assets/images/members/edgardo.webp',name:'Edgardo Krause', rol:'web application pentest', profile:`${link}edgardokrause/`,experience:'7+ years'},
-    {image:'src/assets/images/members/emiliano.webp',name:'Emiliano Peralta', rol:'pentest & social engineering', profile:`${link}emilianoperalta/`,experience:'10+ years'},
-    {image:'src/assets/images/members/ignacio.webp',name:'Ignacio Gomez', rol:'user interface', profile:`${link}gomez-ignacio/`,experience:'10+ years'},
-    {image:'src/assets/images/members/luca.webp',name:'Maria Luca Fenochietto', rol:'operations', profile:`${link}luca-fenochietto/`,experience:'10+ years'},
-    {image:'src/assets/images/members/maxi.webp',name:'Maximiliano Daniel Olivera', rol:'pentest', profile:`${link}maximiliano-daniel-olivera/`,experience:'3+ years'},
-    {image:'src/assets/images/members/esteban.webp',name:'Esteban Cano', rol:'web pentest & devsec ops', profile:`${link}estebancano/`,experience:'5+ years'},
+    {image:'../assets/images/members/chris.webp',name:'Christian C. Russo', rol:'offensive security', profile:`${link}chris-c-russo/`,experience:'10+ years'},
+    {image:'../assets/images/members/alvaro.webp',name:'Alvaro Yaquemet', rol:'web and network pentest', profile:`${link}alvaroyaquemet/`,experience:'5+ years'},
+    {image:'../assets/images/members/leandro.webp',name:'Leandro Ferrari', rol:'pentest & offensice cloud security', profile:`${link}leandroferrari/`,experience:'10+years'},
+    {image:'../assets/images/members/elias.webp',name:'Elias Bustos', rol:'human documencation', profile:`${link}eliasbus/`,experience:'10+ years'},
+    {image:'../assets/images/members/francisco.webp',name:'Francisco Ruiz', rol:'offensive security', profile:`${link}franciscomruiz/`,experience:'10+ years'},
+    {image:'../assets/images/members/edgardo.webp',name:'Edgardo Krause', rol:'web application pentest', profile:`${link}edgardokrause/`,experience:'7+ years'},
+    {image:'../assets/images/members/emiliano.webp',name:'Emiliano Peralta', rol:'pentest & social engineering', profile:`${link}emilianoperalta/`,experience:'10+ years'},
+    {image:'../assets/images/members/ignacio.webp',name:'Ignacio Gomez', rol:'user interface', profile:`${link}gomez-ignacio/`,experience:'10+ years'},
+    {image:'../assets/images/members/luca.webp',name:'Maria Luca Fenochietto', rol:'operations', profile:`${link}luca-fenochietto/`,experience:'10+ years'},
+    {image:'../assets/images/members/maxi.webp',name:'Maximiliano Daniel Olivera', rol:'pentest', profile:`${link}maximiliano-daniel-olivera/`,experience:'3+ years'},
+    {image:'../assets/images/members/esteban.webp',name:'Esteban Cano', rol:'web pentest & devsec ops', profile:`${link}estebancano/`,experience:'5+ years'},
 ]
 
 export const testimonials = [
-    {name:'Mohammed Alam', image:'1', profile:'', rol:'CEO Al-bilad for consultation and solutions', description:'Chris C is an excellent professional engineer in the area of ethical hacking in addition, he is skillful in web security'},
-    {name:'Diego Barcena', image:'2', profile:'', rol:'Sr,Full-Stack Developer & DevOps', description:'Working with Fran was an awesome experience i had the pleasure to work with him not only once but twice in two completely different environments. He has both aoutstranding technical and communication skills and he is always delivering quality solutions.'},
-    {name:'Gabriel Coronel', image:'3', profile:'', rol:'Owner at Networklink | Cisco CCNPx2 Enterprise/Security', description:'Fran displays extremely high levels of energy and commitment in everything he does i can say with confidence that he demonstrated excellent knowledge of the Security technologies. He takes initiatives and does not wait for the instructions.'},
-    {name:'Dr.Zoki Quereshey', image:'4', profile:'', rol:'Director General-National Security Cluster, India`s 1st Security Cluster', description:'Chris is an excellent IT security professional, he helped us run vulnerability assessments detect and fix web application security vulnerabilities, and also performed mobile application security with us. Highly recommended.'},
-    {name:'Juan Ignacio Salaberry', image:'5', profile:'', rol:'Strategic and Operational Planning Director (Anses)', description:'Chris is an excellent proffessional, passionate and talented. He helped us through a difficult proyect, he was a thorough consultant and a pleasure to work with.'},
+    [
+        {name:'Mohammed Alam', image:'1', profile:'', rol:'CEO Al-bilad for consultation and solutions', description:'Chris C is an excellent professional engineer in the area of ethical hacking in addition, he is skillful in web security'},
+        {name:'Diego Barcena', image:'2', profile:'', rol:'Sr,Full-Stack Developer & DevOps', description:'Working with Fran was an awesome experience i had the pleasure to work with him not only once but twice in two completely different environments. He has both aoutstranding technical and communication skills and he is always delivering quality solutions.'},
+        {name:'Gabriel Coronel', image:'3', profile:'', rol:'Owner at Networklink | Cisco CCNPx2 Enterprise/Security', description:'Fran displays extremely high levels of energy and commitment in everything he does i can say with confidence that he demonstrated excellent knowledge of the Security technologies. He takes initiatives and does not wait for the instructions.'},
+    ],
+    [
+        {name:'Dr.Zoki Quereshey', image:'4', profile:'', rol:'Director General-National Security Cluster, India`s 1st Security Cluster', description:'Chris is an excellent IT security professional, he helped us run vulnerability assessments detect and fix web application security vulnerabilities, and also performed mobile application security with us. Highly recommended.'},
+        {name:'Juan Ignacio Salaberry', image:'5', profile:'', rol:'Strategic and Operational Planning Director (Anses)', description:'Chris is an excellent proffessional, passionate and talented. He helped us through a difficult proyect, he was a thorough consultant and a pleasure to work with.'},
+        {name:'Juan Salaberry', image:'5', profile:'', rol:'Strategic and Operational Planning Director (Anses)', description:'Chris is an excellent proffessional, passionate and talented. He helped us through a difficult proyect, he was a thorough consultant and a pleasure to work with.'},
+    ],
 ]

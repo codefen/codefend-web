@@ -1,4 +1,37 @@
+import { useEffect, useRef, useState } from "react"
+
 const FreeTrial = () =>{
+   const img1 = useRef(null);
+   const img2 = useRef(null);
+   const [scrolly, setScrolly] = useState(0)
+
+    useEffect(()=>{
+
+      const handleScroll = () => {
+        setScrolly(window.scrollY); 
+        let round = 7800;
+        if (scrolly > round) {
+          img1.current.style.top = (scrolly - round) / 5 + 'px';
+          img2.current.style.bottom = (scrolly - round) / 5 + 'px';
+        } else {
+          img1.current.style.top = '0px';
+          img2.current.style.bottom = '0px';
+        }
+      };
+
+      const handleResize = () => {
+        if (window.innerWidth <= 820) {
+          window.removeEventListener('scroll', handleScroll);
+        } else {
+          window.addEventListener('scroll', handleScroll);
+        }
+      };
+  
+      window.addEventListener('scroll', handleScroll);
+      window.addEventListener('resize', handleResize);
+      
+    },[scrolly])
+
     return(
       <section className="free-trial">
         <div className="container">
@@ -29,8 +62,8 @@ const FreeTrial = () =>{
             </form>
           </div>
           <div className="img-contain">
-            <img src="src/assets/images/front.webp" alt="d" />
-            <img src="src/assets/images/back.webp" alt="d" />
+            <img ref={img1} src="../assets/images/front.webp" alt="d" />
+            <img ref={img2} src="../assets/images/back.webp" alt="d" />
           </div>
           </div>
       </section>

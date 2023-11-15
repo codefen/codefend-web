@@ -22,7 +22,7 @@ const Hero = () =>{
                   duration:1
                 }}
               className="brand">
-              <img src="../assets/images/brand.png" alt="logo" />
+              <img src="../assets/images/brand.webp" alt="logo" />
             </motion.div>
             <div className="menu">
               <a href="#contact" className="btn alt">
