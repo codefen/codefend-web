@@ -46,14 +46,6 @@ const OurServices = () => {
               </p>
             </div>
             <div className="item">
-              <img src="../assets/images/contact2.webp" loading="lazy" alt="contact" />
-              <p><b>Juan Maxit</b><br/>
-              buenos aires <br/>
-                <a href="mailto:maxit@codefend.com">maxit@codefend.com</a> <br/>
-                +54 911 3650 2089
-              </p>
-            </div>
-            <div className="item">
               <img src="../assets/images/contact3.webp" loading="lazy" alt="contact" />
               <p><b>Zaki Qureshey</b><br/>
               hyderabad, india <br/>

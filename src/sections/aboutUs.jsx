@@ -55,7 +55,7 @@ const AboutUs = () => {
                                         <img src={`../assets/images/person${i + 1}.webp`} alt="icon person" />
                                         <p>
                                             <b>{tes.name}</b><br />
-                                            Profile: {tes.profile}<br/>
+                                            Profile: <a href={`https://${tes.profile}`} target="_blank">{tes.profile}</a><br/>
                                         {tes.rol}
                                         </p>
                                     </div>
@@ -90,7 +90,7 @@ const AboutUs = () => {
                                         <img src={`../assets/images/person${i + 4}.webp`} alt="icon person" />
                                         <p>
                                             <b>{tes.name}</b><br />
-                                            Profile: {tes.profile}<br/>
+                                            Profile: <a href={`https://${tes.profile}`} target="_blank">{tes.profile}</a><br/>
                                         {tes.rol}
                                         </p>
                                     </div>
