@@ -1,4 +1,6 @@
 import AboutUs from "../sections/aboutUs";
+import Capabilities from "../sections/capabilities";
+import Crypto from "../sections/crypto";
 import Features from "../sections/features";
 import Footer from "../sections/footer";
 import FreeTrial from "../sections/freeTrial";
@@ -19,11 +21,13 @@ function Home() {
       <MainDiferences />
       <OurSoftware />  
       <Features />
+      <Capabilities />
       <OurServices />   
       <Prices />
       <Members />
-      <FreeTrial/>
+      <Crypto />
       <AboutUs />
+      <FreeTrial/>
       <Footer />
     </>
   );

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { slideTransition } from "../transitions/globalTransitions";
 import { TypeAnimation } from 'react-type-animation';
+import { Link } from "react-router-dom";
 
 
 const Hero = () =>{
@@ -24,6 +25,16 @@ const Hero = () =>{
               className="brand">
               <img src="../assets/images/brand.webp" alt="logo" />
             </motion.div>
+            
+                <ul className="navigate">
+                  <li><Link to ="/">home</Link></li>
+                  <li><Link to ="/software">software</Link></li>
+                  <li><Link to ="/industries">industries</Link></li>
+                  <li><Link to ="/services">services</Link></li>
+                  <li><Link to ="/compliance">compliance</Link></li>
+                  <li><Link to ="/partners">partners</Link></li>
+                </ul>
+            
             <div className="menu">
               <a href="#contact" className="btn alt">
                 contact
@@ -76,7 +87,6 @@ const Hero = () =>{
             </>
             <div 
             className="image">
-              <img src="../assets/images/hacker.webp" alt="hacker img" />
             </div>
           </div>
           <div className="features">

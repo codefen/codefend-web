@@ -1,14 +1,10 @@
-import { motion } from "framer-motion"
+
 
 const Footer = () => {
     return(
         <footer>
  
-                <motion.img 
-                initial={{ x:'-10vw'}}
-                whileInView={{ x:0}}
-                transition={{duration:2, ease:'easeOut'}}
-                viewport={{once:true}}
+                <img 
                 className="bkg_footer" 
                 src="../assets/images/bkg-red7.png" 
                 alt="background red" />

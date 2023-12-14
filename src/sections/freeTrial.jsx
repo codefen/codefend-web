@@ -9,7 +9,7 @@ const FreeTrial = () =>{
 
       const handleScroll = () => {
         setScrolly(window.scrollY); 
-        let round = 10000;
+        let round = 13000;
         if (scrolly > round) {
           img1.current.style.top = (scrolly - round) / 5 + 'px';
           img2.current.style.bottom = (scrolly - round) / 5 + 'px';
@@ -37,9 +37,10 @@ const FreeTrial = () =>{
         <div className="container">
           <div className="form-contain">
             <div className="title">
-              <h1>free trial</h1>
-
-              <p><b>create a user and see what we can do, at no cost</b><br />
+              <h1>free demo</h1>
+              {/* <p className="rectangle">create a user and see what we can do, at no cost</p> */}
+              <b>create a user and see what we can do, at no cost</b>
+              <p>
                 You will receive an email with the necessary information to confirm your user
                 and access the application. Once inside, you will have access to all the basic function,
                 and if you wish, you can hire one of our services.

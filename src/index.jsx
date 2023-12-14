@@ -7,16 +7,29 @@ import Home from "./pages/Home";
 import './styles/global.scss';
 
 import reportWebVitals from './reportWebVitals';
+import Software from './pages/software';
+import Industries from './pages/industries';
+import Services from './pages/services';
+import Compliance from './pages/compliance';
+import Partners from './pages/partners';
 
 export default function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="*" element={<Home />} />
-        </Route>
-      </Routes>
+      
+      <div>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="software" element={<Software />} />
+            <Route path="industries" element={<Industries />} />
+            <Route path="services" element={<Services />} />
+            <Route path="compliance" element={<Compliance />} />
+            <Route path="partners" element={<Partners />} />
+            <Route path="*" element={<Home />} />
+          </Route>
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 }

@@ -48,3 +48,19 @@ export const testimonials = [
         {name:'Pedro E.Morris Daly', image:'6', profile:`${link}pmorrisdaly/`, rol:'CEO/CIO-Mission Critical Engineer', description:'I have worked with Francisco many times, I have witnessed professional growthat light speed, he has a very rich holistic perspective, he is one of the most competentinformation security professionals...'},
     ],
 ]
+
+export const capabilities = [
+    [
+        {title:'scope / web resources', description:'in this section you can include domains and subdomains to be pentested. The application comes with an integrated feature to detect subdomains, and our default policy is to detect shadow IT as soon as possible, so your attack surface or scoping can be expanded or contracted any time your organization requires it.'},
+        {title:'scope / mobile resources', description:'from this section you can scope mobile apps. You can use it either to pentest and evaluate the security of your own application, or analyze the applications that you and your team use on daily basis and find out if your information is properly protected.'},
+        {title:'scope / cloud resources', description:'this module holds the cloud assets of your organization. Our capabilities are limited to Amazon Web Services, Microsoft Azure, and GCP. '},
+        {title:'scope / lan resources', description:'this module allows you to define local area network assets, or intenal access and provide our team access one '},
+        {title:'scope / source code', description:'supervise your development cycle and processes with a dedicated specialist with proven expertise in the required stack. If you are thinking about adding a dependency to your source code, you may also be interested in analyzing such dependencies to avoid supply chain attacks.'},
+        {title:'scope / socials', description:'from this section you can add names, email addresses, phone numbers, and some other information of your staff member in order to conduct social engineering attacks. Codefend delivers complex / advanced social engineering attacks thruought different channels.'},
+    ],
+    [
+        {title:'communication / Issues', description:'Visualize and address vulnerabilities. Allows you to view each issue or vulnerability present in your assets.Provides a platform to request assistance within the issue interface if additional support is required. Tailor your approach to handling specific vulnerabilities efficiently.'},
+        {title:'communication / create reports', description:'Create customized reports on demand. Enables you to select a group of issues (e.g., web or mobile resources) and generate detailed, tailored reports.Choose specific parameters and criteria for the report to meet your reporting needs. Efficiency, streamlines the process of generating comprehensive reports for effective communication.'},
+        {title:'communication / customer support', description:'Address IT security business requirements.Provides a dedicated space to request special assistance for any specific IT security needs.Personalized Support: Tailor support requests to match your unique business security concerns. Facilitates a direct channel for obtaining timely and specialized support.'},
+    ]
+]
