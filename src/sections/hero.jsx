@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { slideTransition } from "../transitions/globalTransitions";
 import { TypeAnimation } from 'react-type-animation';
-import { Link } from "react-router-dom";
+
+import Header from "./header";
 
 
 const Hero = () =>{
@@ -9,41 +10,6 @@ const Hero = () =>{
     return (
       <section className="hero">
         <div className="container">
-          <div className="header">
-            <motion.div 
-              initial={{
-                opacity:0, 
-                transform:'scale(0.8)'}}
-              animate={{
-                opacity:1, 
-                transform:'scale(1)',
-                }} 
-                transition={{
-                  delay:0.2,
-                  duration:1
-                }}
-              className="brand">
-              <img src="../assets/images/brand.webp" alt="logo" />
-            </motion.div>
-            
-                <ul className="navigate">
-                  <li><Link to ="/">home</Link></li>
-                  <li><Link to ="/software">software</Link></li>
-                  <li><Link to ="/industries">industries</Link></li>
-                  <li><Link to ="/services">services</Link></li>
-                  <li><Link to ="/compliance">compliance</Link></li>
-                  <li><Link to ="/partners">partners</Link></li>
-                </ul>
-            
-            <div className="menu">
-              <a href="#contact" className="btn alt">
-                contact
-              </a>
-              <a href="#" className="btn main">
-                download
-              </a>
-            </div>
-          </div>
           <div className="content">
             <>
             < motion.div initial="hidden"
