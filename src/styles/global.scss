@@ -356,8 +356,8 @@ section.highlights {
         padding: 5vh 0;
       }
     }
-
-  }  
+  } 
+   
 }
 
 ///////////////////////////////////////////////////////////////////
@@ -1313,9 +1313,7 @@ section.about-us{
           background-color: #000000;
           display: flex;
           justify-content:space-between;
-          flex-direction: column;
-          
-          
+          flex-direction: column;     
     
           div{
             column-gap: 1em;
@@ -1467,6 +1465,61 @@ section.capabilities{
         height: 300px;
       }
     }
+  }
+}
+
+section.industries{
+  background-color: #000;
+  background-image: url("../../public/assets/images/bkg-industries.png");
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-size: 150vw;
+  min-height: 100vh;
+  color: #fff;
+  overflow-x: hidden;
+  .container{
+
+    .subtitle{
+      position: relative;
+      top: 25vh;
+      max-width: 50%;
+    }
+
+    .contain{
+      margin-top: 100vh;
+      display: flex;
+      column-gap: 2vw;
+      row-gap: 2vw;
+      flex-wrap: wrap;
+      .item{
+        display: flex;
+        gap: 1vw;
+        justify-content: center;
+        align-items: center;
+        //flexWrap:'wrap';
+        //flex:'0 0 auto';
+        max-width: 900px;
+        height: auto;
+        .image{
+          position: relative;
+          background-position: contain;
+          background-size: cover;
+          min-width: 180px;
+          height: 180px;
+          box-shadow:inset 0px 0px 20px 10px #000;               
+          border-radius: 50%;
+          overflow: hidden;
+        }
+      }
+    }
+
+  }
+  @media screen and (max-width: 768px) {
+    
+    .item{
+      flex-wrap: wrap;
+    }
+
   }
 }
 
