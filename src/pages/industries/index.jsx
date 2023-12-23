@@ -1,5 +1,5 @@
 import React from "react";
-import {industriesData} from "../data/index.js";
+import {industriesData} from "../../data/index.js";
 
 const Industries = () => {
   return <>
