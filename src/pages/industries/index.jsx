@@ -3,10 +3,7 @@ import {industriesData} from "../../data/index.js";
 
 const Industries = () => {
   return <>
-  <section 
-
-    className="industries">
-    {/* <img style={{width:'100vw', height:'100vh'}} src="../../public/assets/images/bkg-industries.png" alt="" /> */}
+  <section className="industries">
     <div className="container">
       <div 
       className="subtitle">
@@ -14,7 +11,6 @@ const Industries = () => {
         <p>Codefend is your comprehensive solution for all your company's security needs. Our application combines a wide range of services designed to protect your organization from cyber threats, ensuring the highest level of protection for your data & infrastructure.</p>
       </div>
       <div className="contain">
-
 
         {
           industriesData.map((data, i)=>{
@@ -36,7 +32,6 @@ const Industries = () => {
             )
           })
         }
-
 
       </div>
     </div>

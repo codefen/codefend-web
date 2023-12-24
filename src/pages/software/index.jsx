@@ -1,8 +1,11 @@
 import React from "react";
+import Features from "./features";
+import Capabilities from "./capabilities";
 
 const Software = () => {
   return <>
-  <h1>Software</h1>
+      <Features />
+      <Capabilities />
  </>;
 };
 

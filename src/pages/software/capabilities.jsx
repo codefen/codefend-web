@@ -1,5 +1,5 @@
 import React from "react";
-import { capabilities } from "../data/index.js";
+import { capabilities } from "../../data/index.js";
 
 const Capabilities = () => {
   return (

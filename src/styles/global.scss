@@ -515,9 +515,6 @@ section.main-differences {
 // our software - section 4
 //////////////////////////////////////////////////////////////////
 section.our-software {
-  // background-image: url('../assets/images/bkg-elmt.webp');
-  // background-repeat: no-repeat;
-  // background-size: contain;
   padding-top: var(--padding-top-sections-c);
   padding-bottom: var(--padding-top-sections-c);
   background: linear-gradient(#333333,#000000);
@@ -1485,6 +1482,7 @@ section.industries{
 
     .contain{
       margin-top: 100vh;
+      margin-bottom: 20vh;
       display: flex;
       column-gap: 2vw;
       row-gap: 2vw;
@@ -1674,7 +1672,6 @@ section.section-3{
       max-width: 600px;
       position: relative;
       &:nth-child(2){
-        //border: 3px solid red;
         img{
           position: absolute;
           bottom:-50px;
@@ -1687,7 +1684,6 @@ section.section-3{
  .contain{
    background-color: #090a22;
    background-image: url('../../public/assets/images/img-services3.png');
-   //background-size: 100%;
    background-repeat: no-repeat;
    background-position: 80%;
    padding: 4vw 4vw;
@@ -1696,9 +1692,9 @@ section.section-3{
      display: flex;
      flex-direction: column;
      row-gap: 1vw;
+     margin-bottom: 6vh;
      li{
        background-color: rgba(0, 0, 0, 0.6);
-       //margin: 1vw;
        padding: 1vw 1vw;
        outline: 3px solid #282947;
        &:nth-child(2){

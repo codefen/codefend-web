@@ -1,8 +1,5 @@
 import AboutUs from "../../sections/aboutUs";
-import Capabilities from "../../sections/capabilities";
 import Crypto from "../../sections/crypto";
-import Features from "../../sections/features";
-import Footer from "../../sections/footer";
 import FreeTrial from "../../sections/freeTrial";
 import Hero from "../../sections/hero";
 import Highlights from "../../sections/highlights";
@@ -20,8 +17,6 @@ function Home() {
       <Highlights />
       <MainDiferences />
       <OurSoftware />  
-      <Features />
-      <Capabilities />
       <OurServices />   
       <Prices />
       <Members />
