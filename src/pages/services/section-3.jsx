@@ -45,8 +45,8 @@ Gather actionable intelligence with our open source and human Intelligence servi
                   <li>
                     <h2><b>key benefits</b></h2>
                     <p>               
-                      - Assesses susceptibility to sophisticated social engineering attacks.
-                      - Evaluates human-centric security risks with targeted techniques.
+                      - Assesses susceptibility to sophisticated social engineering attacks. <br /> 
+                      - Evaluates human-centric security risks with targeted techniques. <br />
                       - Strengthens defenses against social engineering threats.
                     </p>
                   </li>

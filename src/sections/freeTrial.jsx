@@ -9,7 +9,7 @@ const FreeTrial = () =>{
 
       const handleScroll = () => {
         setScrolly(window.scrollY); 
-        let round = 13000;
+        let round =8700;
         if (scrolly > round) {
           img1.current.style.top = (scrolly - round) / 5 + 'px';
           img2.current.style.bottom = (scrolly - round) / 5 + 'px';

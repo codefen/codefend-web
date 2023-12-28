@@ -1,9 +1,27 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useRef, useState } from "react";
+import { FaBars } from "react-icons/fa6";
+import { FaX } from "react-icons/fa6";
+
+
 const Header = () => {
+    const [close, setClose] = useState(true)
+    const menu = useRef()
+
+    const menuAppear = () => {
+        if(close){
+            menu.current.style.right = '-10vw';
+            setClose(false)
+        } else {
+            menu.current.style.right = '-120vw';
+            setClose(true)
+        }
+    }
+
     return (
     
-         <div className="header">
+         <header className="header">
             <div className="container">
                 <motion.div 
                 initial={{
@@ -21,13 +39,20 @@ const Header = () => {
                 <img src="../assets/images/brand.webp" alt="logo" />
                 </motion.div>
                 
-                <ul className="navigate">
-                    <li><Link to ="/">home</Link></li>
-                    <li><Link to ="/software">software</Link></li>
-                    <li><Link to ="/industries">industries</Link></li>
-                    <li><Link to ="/services">services</Link></li>
-                    <li><Link to ="/compliance">compliance</Link></li>
-                    <li><Link to ="/partners">partners</Link></li>
+                <button onClick={menuAppear} className="toggle">
+                    {
+                        close ? <FaBars color="#fff" size={30}/>
+                              : <FaX color="#fff" size={30}/>
+                    }
+                </button>
+
+                <ul ref={menu} className="navigate">
+                    <li><Link onClick={menuAppear} to ="/">home</Link></li>
+                    <li><Link onClick={menuAppear} to ="/software">software</Link></li>
+                    <li><Link onClick={menuAppear} to ="/industries">industries</Link></li>
+                    <li><Link onClick={menuAppear} to ="/services">services</Link></li>
+                    <li><Link onClick={menuAppear} to ="/compliance">compliance</Link></li>
+                    <li><Link onClick={menuAppear} to ="/partners">partners</Link></li>
                 </ul>
                 
                 <div className="menu">
@@ -39,7 +64,7 @@ const Header = () => {
                 </a>
                 </div>
             </div>
-          </div>
+          </header>
         
     )
 }
