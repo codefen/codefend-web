@@ -1,6 +1,5 @@
-import AboutUs from "../../sections/aboutUs";
+
 import Crypto from "../../sections/crypto";
-import FreeTrial from "../../sections/freeTrial";
 import Hero from "../../sections/hero";
 import Highlights from "../../sections/highlights";
 import MainDiferences from "../../sections/mainDiferences";
@@ -21,8 +20,6 @@ function Home() {
       <Prices />
       <Members />
       <Crypto />
-      <AboutUs />
-      <FreeTrial/>
     </>
   );
 }

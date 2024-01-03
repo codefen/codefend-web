@@ -56,12 +56,12 @@ const Header = () => {
                 </ul>
                 
                 <div className="menu">
-                <a href="#contact" className="btn alt">
-                    contact
-                </a>
-                <a href="#" className="btn main">
-                    download
-                </a>
+                    <a href="#contact" className="btn alt">
+                        contact
+                    </a>
+                    <a href="#" className="btn main">
+                        download
+                    </a>
                 </div>
             </div>
           </header>

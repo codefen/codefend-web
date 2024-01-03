@@ -12,13 +12,12 @@ import Industries from './pages/industries';
 import Services from './pages/services';
 import Compliance from './pages/compliance';
 import Partners from './pages/partners';
-import Header from './sections/header';
-import Footer from './sections/footer';
+
 
 export default function App() {
   return (
     <BrowserRouter>
-        <Header />
+
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
@@ -30,7 +29,7 @@ export default function App() {
             <Route path="*" element={<Home />} />
           </Route>
         </Routes>
-        <Footer /> 
+
     </BrowserRouter>
   );
 }

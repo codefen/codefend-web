@@ -7,7 +7,7 @@ function Crypto(){
         <div className="coin">
           <div
             className="img-coin" >
-            <img className="coin1"  loading="lazy" src="../assets/images/coin.webp" alt="bitcoin" />
+            <img className="coin1"  loading="lazy" src="../assets/images/coinred.webp" alt="bitcoin" />
           </div>
 
         <div>

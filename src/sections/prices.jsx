@@ -59,7 +59,7 @@ const Prices = () => {
                   transition={{duration:0.5, delay:0.5, ease:'linear'}}
                   viewport={{once:true}} 
                   className="card">
-                    <h3><b>Small business</b></h3>
+                    <h3>Small business</h3>
                     <div className="price">
                       <img loading="lazy" src='../assets/images/icon4.webp' alt="thunder-icon" />
                       <div>
@@ -89,7 +89,7 @@ const Prices = () => {
                   transition={{duration:0.5, delay:0.7, ease:'linear'}}
                   viewport={{once:true}} 
                   className="card" >
-                      <h3><b>Medium size</b></h3>
+                      <h3>Medium size</h3>
                       <div className="price">
                         <img loading="lazy" src='../assets/images/icon6.webp' alt="reload-icon" />
                         <div>
@@ -120,7 +120,7 @@ const Prices = () => {
                   transition={{duration:0.5, delay:1, ease:'linear'}}
                   viewport={{once:true}} 
                   className="card">
-                    <h3><b>Full service</b></h3>
+                    <h3>Full service</h3>
                     <div className="price">
                       <img loading="lazy" src='../assets/images/icon5.webp' alt="icon" />
                       <div>
@@ -162,7 +162,7 @@ const Prices = () => {
                   transition={{duration:0.5, delay:0.5, ease:'linear'}}
                   viewport={{once:true}} 
                   className="card">
-                    <h3><b>Small business</b></h3>
+                    <h3>Small business</h3>
                     <div className="price">
                       <img loading="lazy" src='../assets/images/icon4.webp' alt="thunder-icon" />
                       <div>
@@ -174,14 +174,14 @@ const Prices = () => {
                       </div>
                     </div>
                     <ul>
-                      <li><img src={img} alt="check icon" /> Platform access </li>
-                      <li><img src={img} alt="check icon" />	Automated scan </li>
-                      <li><img src={img} alt="check icon" /> Custom scan </li>
-                      <li><img src={img} alt="check icon" /> Basic Manual testing ✓ </li>
-                      <li><img src={img} alt="check icon" /> 	Frecuency: one single scan per month  </li>
-                      <li><img src={img} alt="check icon" /> Deliverables: one single report per month  </li>
-                      <li><img src={img} alt="check icon" /> Service duration: 12 months </li>
-                      <li><img src={img} alt="check icon" /> Scope / attack surface: small </li> 
+                      <li><img src={img} loading="lazy" alt="check icon" /> Platform access </li>
+                      <li><img src={img} loading="lazy" alt="check icon" />	Automated scan </li>
+                      <li><img src={img} loading="lazy" alt="check icon" /> Custom scan </li>
+                      <li><img src={img} loading="lazy" alt="check icon" /> Basic Manual testing ✓ </li>
+                      <li><img src={img} loading="lazy" alt="check icon" /> 	Frecuency: one single scan per month  </li>
+                      <li><img src={img} loading="lazy" alt="check icon" /> Deliverables: one single report per month  </li>
+                      <li><img src={img} loading="lazy" alt="check icon" /> Service duration: 12 months </li>
+                      <li><img src={img} loading="lazy" alt="check icon" /> Scope / attack surface: small </li> 
                     </ul>
                     <button>evaluate now</button>
                   </motion.div>
@@ -192,7 +192,7 @@ const Prices = () => {
                   transition={{duration:0.5, delay:0.7, ease:'linear'}}
                   viewport={{once:true}} 
                   className="card" >
-                      <h3><b>Medium size</b></h3>
+                      <h3>Medium size</h3>
                       <div className="price">
                         <img loading="lazy" src='../assets/images/icon6.webp' alt="reload-icon" />
                         <div>
@@ -223,7 +223,7 @@ const Prices = () => {
                   transition={{duration:0.5, delay:1, ease:'linear'}}
                   viewport={{once:true}}  
                   className="card">
-                    <h3><b>Full service</b></h3>
+                    <h3>Full service</h3>
                     <div className="price">
                       <img loading="lazy" src='../assets/images/icon5.webp' alt="icon" />
                       <div>
