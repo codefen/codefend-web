@@ -1372,6 +1372,10 @@ section.about-us{
         animation: 20s slideleft infinite linear;
         justify-content: center;
 
+        &:hover{
+          animation-play-state: paused;
+        }
+
         @keyframes slideleft {
           from{
             transform: translateX(0);
@@ -1387,15 +1391,18 @@ section.about-us{
          animation: 20s slideright infinite linear;
          justify-content: center;
 
-         @keyframes slideright {
-           from{
-             transform: translateX(calc(-300%));
-           }
-           to{
-             transform: translateX(calc((-100% / 3 + 2em) * 6 ));
+        &:hover{
+          animation-play-state: paused;
+        }
 
-           }
-         }
+         @keyframes slideright {
+          from {
+            transform: translateX(calc((100% / 3 + 2em) * -6));
+          }
+          to {
+            transform: translateX(0);
+          }
+        }
        }
     
       .card-contain{
@@ -1434,7 +1441,9 @@ section.about-us{
         &:nth-child(1){
           //background-color: blue;
           animation: 20s slideleft infinite linear;
-  
+          &:active{
+            animation-play-state: paused;
+          }
           @keyframes slideleft {
             from{
               transform: translateX(0);
@@ -1448,13 +1457,15 @@ section.about-us{
         &:nth-child(2){
           //background-color: blue;
           animation: 20s slideright infinite linear;
-  
+          &:active{
+            animation-play-state: paused;
+          }
           @keyframes slideright {
             from{
-              transform: translateX(0);
+              transform: translateX(calc(333px * -7 ));
             }
             to{
-              transform: translateX(calc(-333px * 7 ));
+              transform: translateX(0);
             }
           }
         }
