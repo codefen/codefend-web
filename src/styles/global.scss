@@ -46,7 +46,7 @@ body {
 
 ::-webkit-scrollbar {
   width: .6rem;
-  background-color: #bdbdbd;
+  background-color: #1b1b1b;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -161,7 +161,7 @@ section {
       gap:1vw;
       transition: right 0.4s;
       li {
-        font-size: 20px;
+        font-size: 16px;
         font-weight: 800;
         padding: 0.5vw;
         &:hover {
@@ -818,6 +818,10 @@ section.prices{
   color: #fff;
   background-color: rgba(206, 204, 204, 0.8);
   padding: 0%;
+  overflow-x: hidden;
+  background-image: url(/src/assets/images/bkg-red3.webp);
+  background-size: cover;
+  padding: calc(var(--padding-top-sections-c) * 2) 0em calc(var(--padding-top-sections-c) * 4) 0em;
 
   .background{
     background-image: url('../assets/images/bkg-red3.webp');
@@ -1012,6 +1016,8 @@ section.prices{
   min-height: 670px;
   position: relative;
   margin: 130px 0px;
+  background-color: #ffffff;
+
   .copy {
     position: absolute;
     top: 25%;
@@ -1041,7 +1047,7 @@ section.prices{
     bottom: -140px;
 
     .item {
-      background-color: rgb(206, 204, 204);
+      background-color: #ffffff;
       flex: 1;
       display: flex;
       align-items: center;

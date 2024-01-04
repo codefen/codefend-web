@@ -20,7 +20,7 @@ const Prices = () => {
 
     return (
       <section className="prices">
-        <div className="background">
+        <div className="">
           <div className="title">
             <motion.h2 
               initial={{opacity:0, y:'-100px'}} 
