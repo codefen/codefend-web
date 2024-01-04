@@ -1015,8 +1015,9 @@ section.prices{
   background-repeat: no-repeat;
   min-height: 670px;
   position: relative;
-  margin: 130px 0px;
-  background-color: #ffffff;
+  margin: 0px 0px 130px 0px;
+  // padding: calc(var(--padding-top-sections-c) * 2) 0em calc(var(--padding-top-sections-c) * 4) 0em;
+  background-color: #e2e2e2;
 
   .copy {
     position: absolute;
@@ -1044,7 +1045,10 @@ section.prices{
     bottom: 0px;
     left: 0px;
     right: 0px;
-    bottom: -140px;
+    bottom: -130px;
+    justify-content: center;
+    background-color: #f2f2f2;
+    padding: 10px;
 
     .item {
       background-color: #ffffff;
@@ -1055,6 +1059,7 @@ section.prices{
       justify-content: center;
       column-gap: 2vw;
       padding: 0 3vw;
+      max-width: 500px;
 
       img {
         border-radius: 50%;

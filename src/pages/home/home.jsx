@@ -7,6 +7,7 @@ import Members from "../../sections/members";
 import OurServices from "../../sections/ourServices";
 import OurSoftware from "../../sections/ourSoftware";
 import Prices from "../../sections/prices";
+import Contact from "../../sections/contact";
 
 
 function Home() {
@@ -18,6 +19,7 @@ function Home() {
       <OurSoftware />  
       <OurServices />   
       <Prices />
+      <Contact />
       <Members />
       <Crypto />
     </>
