@@ -4,16 +4,22 @@ import { useRef } from "react"
 import img from '../../public/assets/images/check.svg'
 
 const Prices = () => {
-    const slide = useRef(null)
+    const slide = useRef(null);
 
+    
     function handleSlide({target}){
+      const monthlyBtn = document.getElementById('monthlyBtn');
+      const anuallyBtn = document.getElementById('anuallyBtn');
       const {current} = slide
-      console.log(event.target.className)
+      console.log(monthlyBtn)
       if(target.className === "monthly"){
         current.style.transform = `translate(0vw)`;
+        monthlyBtn.classList.add('active');
+        anuallyBtn.classList.remove('active');
       } else{
         current.style.transform = `translate(-100vw)`;
-        
+        anuallyBtn.classList.add('active');
+        monthlyBtn.classList.remove('active');
       }
       
     }
@@ -39,11 +45,11 @@ const Prices = () => {
             </motion.p>
           </div>
           <div className="buttons">
-            <button className="monthly" onClick={handleSlide}>Monthly</button>
-            <button className="anually" onClick={handleSlide}>Anually</button>
+            <button className="monthly" id="monthlyBtn" onClick={handleSlide}>Monthly</button>
+            <button className="anually" id="anuallyBtn" onClick={handleSlide}>Anually</button>
           </div>
-          <div className="slide">
-            <div ref={slide} className="ddd">
+          <div className="slides">
+            <div ref={slide} className="items">
               <div 
                 // initial={{scale:.9, opacity:0}}
                 // transition={{duration:1, delay:1}}
