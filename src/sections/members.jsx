@@ -26,9 +26,7 @@ const Members = () => {
     return (
         <section className="members">
             <div className="container">
-                <b>meet us</b>
-                <h2>TEAM MEMBERS</h2>
-
+                <h1>meet us</h1>
                 {
                     showCarosel 
                     ?  <div className="contain-members"> 

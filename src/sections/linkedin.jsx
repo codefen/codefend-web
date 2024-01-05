@@ -1,14 +1,13 @@
 import { useRef, useEffect, useState } from "react";
 import { testimonials } from "../data"
 
-const AboutUs = () => {
+const Linkedin = () => {
 
     return(
         <section className="about-us">
             <div className="container">
                 <div className="title">
-                    <b>linkedin testimonials</b>
-                    <h2>WHAT THEY SAY ABOUT US</h2>
+                    <h1>linkedin testimonials</h1>
                 </div>
 
                 <div className="contain">
@@ -119,4 +118,4 @@ const AboutUs = () => {
     )
 }
 
-export default AboutUs
+export default Linkedin

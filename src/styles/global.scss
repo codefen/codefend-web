@@ -4,8 +4,8 @@
   --text-color: #ffffff;
   --text-color-alt: #333333;
   --text-color-alt2: #ff7878;
-  --text-color-alt3: #ff2424;
-  --text-color-alt4: rgb(255,50,83);
+  --text-color-alt3: #ff6464;
+  --text-color-alt4: #ff3939;
 
   --btn-color-main: #ff2424;
   --btn-color-alt: #333333;
@@ -897,9 +897,8 @@ section.prices{
             .card{
               max-height: 570px;
               max-width: 400px;
-              background-color: rgba(0, 0, 0, 0.7);
-              border: 2px solid #333333;
-              padding: 30px 25px;
+              background-color: rgba(0, 0, 0, 0.5);
+              padding: 30px 45px;
               display: flex;
               flex-direction: column;
               gap: 2em;
@@ -915,19 +914,23 @@ section.prices{
               h3{
                 font-size: 2em;
                 margin: 0;
-                color: var(--text-color-alt4)
+                color: var(--text-color-alt3)
               }
 
               ul{
                 line-height: 1.7em;
                 li{
                   padding: 4px 0;
-                  border-bottom: 1px solid #333333;
+                  border-bottom: 1px dashed #990000;
                   &:nth-last-child(1){
                     border-bottom: none;
                   }
                   img{
-                    margin-right: 1vh;
+					margin-right: 1vh;
+					position: relative;
+					bottom: -4px;
+					display: block;
+					float: left;
                   }
                 }
 
@@ -938,7 +941,7 @@ section.prices{
                 gap: 2em;
                 position: relative;
                 h4{
-                  color: var(--text-color-alt4);
+                  color: var(--text-color-alt3);
                   margin: 0;
                   font-size: 3em;
                 }
@@ -964,21 +967,25 @@ section.prices{
                 max-width: 13em;
                 margin-right: auto;
                 cursor: pointer;
+				font-family: Questrial;
+				color: #fee;
+				font-size: 18px;
               }
             }
 
             .card:nth-child(2){
-              border:8px solid var(--text-color-alt4);
+              border:8px solid var(--text-color-alt3);
               position: relative;
               &:before {
-                content: 'Popular';
-                outline:8px solid var(--text-color-alt4);
-                font-weight: bold;
+                content: 'Most selected service';
+                outline:8px solid var(--text-color-alt3);
+                font-weight: normal;
+				padding: 8px 0;
                 position: absolute;
                 top:-30px;
                 left:0;
                 width: 100%;
-                background-color: var(--text-color-alt4);
+                background-color: var(--text-color-alt3);
               }
             }
 
@@ -1293,22 +1300,26 @@ section.free-trial{
         input{
           border-radius: 0px;
           border: none;
-          border-bottom: 3px solid #dbd7d7;
+          border-bottom: 1px dashed #eee;
           height: 3em;
+		font-family: Questrial;
+		font-size: 18px;
+		padding: 0 20px;
           &:focus{
-            border-bottom: 3px solid #9f9f9f;
+            border-bottom: 1px dashed #ff3939;
             outline: none;
-            background-color: #d6d3d3;
+            background-color: #ffeeee;
           }
         }
         button{
-          border: none;
-          margin: auto;
-          background: var(--text-color-alt3);
-          color: white;
-          font-size: 18px;
-          padding: 1em;
-          max-width: 120px;
+              border: none;
+    margin: auto;
+    background: var(--text-color-alt4);
+    color: white;
+    font-size: 16px;
+    padding: 1em;
+    max-width: 260px;
+    font-family: Questrial;
         }
       }
     }
@@ -1602,9 +1613,12 @@ footer {
           margin-bottom: 1vw;
         }
         li{
+		padding: 10px 0px;
+		display: block;
           &:hover{
             a{
               text-decoration:underline;
+			  color: #ff6464;
             }
           }
         }

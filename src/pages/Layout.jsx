@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Header from '../sections/header';
 import Footer from '../sections/footer';
-import AboutUs from "../sections/aboutUs";
+import Linkedin from "../sections/linkedin";
 import FreeTrial from "../sections/freeTrial";
 
 function Layout() {
@@ -10,7 +10,7 @@ function Layout() {
       <Header />
       <Outlet />
       <FreeTrial/>
-      <AboutUs />
+      <Linkedin />
       <Footer /> 
     </>
   );
