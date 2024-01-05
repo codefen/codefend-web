@@ -841,6 +841,7 @@ section.prices{
       cursor: pointer;
       transition: .1s ease-in all;
       transform: scale(1);
+	  font-family: Questrial;
 
       &.active {
         transform: scale(1.1);      

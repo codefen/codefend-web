@@ -33,7 +33,7 @@ const Prices = () => {
               transition={{delay:.3, duration:1}}
               whileInView={{opacity:1, y:0}}
               viewport={{once:true}}
-              >UNIQUE PENTEST & SURVEILLANCE</motion.h2>
+              >PENTEST ON DEMAND & ASSETS SURVEILLANCE</motion.h2>
             <motion.p 
               initial={{opacity:0}} 
               transition={{delay:1, duration:1}}
@@ -45,8 +45,8 @@ const Prices = () => {
             </motion.p>
           </div>
           <div className="buttons">
-            <button className="monthly" id="monthlyBtn" onClick={handleSlide}>Monthly</button>
-            <button className="anually" id="anuallyBtn" onClick={handleSlide}>Anually</button>
+            <button className="monthly" id="monthlyBtn" onClick={handleSlide}>on demand / monthly</button>
+            <button className="anually" id="anuallyBtn" onClick={handleSlide}>surveillance / yearly</button>
           </div>
           <div className="slides">
             <div ref={slide} className="items">
@@ -138,6 +138,7 @@ const Prices = () => {
                       </div>
                     </div>
                     <ul>
+					  <li><img src={img} alt="check icon" /> A very sharp team.</li>
                       <li><img src={img} alt="check icon" /> Platform access </li>
                       <li><img src={img} alt="check icon" />	Automated scan </li>
                       <li><img src={img} alt="check icon" /> Custom scan </li>
