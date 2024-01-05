@@ -1100,51 +1100,56 @@ section.prices{
 ///////////////////////////////////////////////////////////////////
 // bitcoin - section 8
 //////////////////////////////////////////////////////////////////
-.crypto{
+section.crypto{
   overflow: hidden;
   background-color: #000000;
   color: #fff;
+  padding-top: calc(var(--padding-top-sections-c) * 1.5);
+  padding-bottom: calc(var(--padding-top-sections-c) * 1.5);
   .container{
     display: flex;
     align-items: center;
     margin: 0 10em;
     background-image: url('../assets/images/coin-web.webp');
     background-repeat: no-repeat;
-    background-size: 50vw;
-    background-position: 100% ;
+    background-size: 600px;
+    background-position: 80% ;
     min-height: 600px;
+    justify-content: center;
 
-    .coin{
+    .coin-div {
       display: flex;
+      flex-direction: column;
       flex-wrap: wrap;
       gap: 2em;
-      margin-left: 5vw;
-
-
-      .img-coin {
-        height: 150px;
-        width: 150px;
-
-        .coin1 {
-          top:0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-        }
+      transform: translateX(-50%);
+      h3 {
+        font-size:58px;
+        margin: 0;
+        font-weight: 400;
       }
-
-      div{
-        max-width: 500px;
-        b{
-          span{
-            font-weight: 900;
-            font-size: 20px;
+      .content {
+        display: flex;
+        gap: 40px;
+        .img-coin {
+          height: 150px;
+          width: 150px;
+          .coin1 {
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
           }
         }
-        h3{
-          font-size:3em;
-          margin: 0;
-        }
+        p {
+          max-width: 410px;
+          b {
+            span {
+              font-weight: 900;
+              font-size: 20px;
+            }
+          }
+        }        
       }
     }
   }
@@ -1154,12 +1159,17 @@ section.prices{
       background-size: 90%;
       background-position: bottom;
       margin: 0%;
-      .coin{
+      .coin-div {
         justify-content: center;
         text-align: center;
         margin-top: -10vh;
         margin-left: 0;
         padding: 0px 2vw;
+        transform: translateX(0%);
+        .content {
+          flex-direction: column;
+          align-items: center;
+        }
       }
     }
   }
@@ -1190,6 +1200,7 @@ section.members{
       flex-wrap: wrap;
       gap: 2vw;
       margin: 7vh auto;
+      justify-content: center;
 
       .card{
         padding: 0.5em 2em;
@@ -1230,6 +1241,7 @@ section.members{
         cursor: grab;
         .carousel{
           flex-wrap: nowrap;
+          justify-content: flex-start;
           .card{
             min-width: 250px;
             flex-direction: column;
