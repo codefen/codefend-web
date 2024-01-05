@@ -904,6 +904,7 @@ section.prices{
               flex-direction: column;
               gap: 2em;
               transition: transform 0.3s;
+			  box-shadow: 0px 0px 25px -5px rgba(0,0,0,1);
 
               // &:hover{
               //   transform: scale(1.02);
@@ -1026,6 +1027,7 @@ section.prices{
           margin: auto;
         }
       }
+	  padding: 50px 0;
     }
   }
 }
