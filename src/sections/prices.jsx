@@ -242,6 +242,7 @@ const Prices = () => {
                       </div>
                     </div>
                     <ul>
+					  <li><img src={img} alt="check icon" /> Red team operations & attack simulation</li>
                       <li><img src={img} alt="check icon" /> Platform access </li>
                       <li><img src={img} alt="check icon" />	Automated scan </li>
                       <li><img src={img} alt="check icon" /> Custom scan </li>

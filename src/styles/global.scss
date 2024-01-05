@@ -971,6 +971,7 @@ section.prices{
 				font-family: Questrial;
 				color: #fee;
 				font-size: 18px;
+				border-radius: 3px;
               }
             }
 
@@ -979,6 +980,22 @@ section.prices{
               position: relative;
               &:before {
                 content: 'Most selected service';
+                outline:8px solid var(--text-color-alt3);
+                font-weight: normal;
+				padding: 8px 0;
+                position: absolute;
+                top:-30px;
+                left:0;
+                width: 100%;
+                background-color: var(--text-color-alt3);
+              }
+            }
+			
+			.card:nth-child(3){
+              border:8px solid var(--text-color-alt3);
+              position: relative;
+              &:before {
+                content: 'Advanced red team operations.';
                 outline:8px solid var(--text-color-alt3);
                 font-weight: normal;
 				padding: 8px 0;
