@@ -13,13 +13,19 @@
   --higlights-color-line: #6f2121;
   --highlights-color-bkg: #4c0b0b;
 
-  --padding-general: 0 3vw;
+  --padding-general: 90px 3vw;
   //--margin-general: 8vw 0;
   --padding-top-sections: 90px;
 
   --section-alt-bkg: #f2f2f2;
 
   --mobile-breakpoint: 768px;
+
+  @media screen and (max-width: 820px) {
+    
+    --padding-general: 90px 30px;
+    
+  }
 }
 
 @font-face {
@@ -33,6 +39,11 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  @media screen and (max-width: 820px) {
+    
+      font-size: 14px;
+    
+  }
 }
 
 body {
@@ -106,14 +117,7 @@ section {
     z-index: 5;
   }
 }
-@media screen and (max-width: 820px) {
-  :root {
-    --padding-general: 0 30px;
-  }
-  html {
-    font-size: 14px;
-  }
-}
+
 @media screen and (max-width: 1030px) {
   h1 {
     min-height: 90px;
@@ -399,7 +403,7 @@ section.highlights {
 //////////////////////////////////////////////////////////////////
 section.main-differences {
   background-color: var(--section-alt-bkg);
-  padding-top: var(--padding-top-sections);
+ 
   overflow: hidden;
 
   .container {
@@ -558,8 +562,6 @@ section.main-differences {
 // our software - section 4
 //////////////////////////////////////////////////////////////////
 section.our-software {
-  padding-top: var(--padding-top-sections);
-  padding-bottom: var(--padding-top-sections);
   background: linear-gradient(#333333, #000000);
   z-index: 1;
   position: relative;
@@ -621,7 +623,7 @@ section.features {
   overflow: hidden;
   background-color: #000000;
   color: #f2f2f2;
-  padding-top: var(--padding-top-sections);
+ 
   text-align: center;
   h2 {
     font-size: 3em;
@@ -728,8 +730,6 @@ section.features {
 //////////////////////////////////////////////////////////////////
 section.our-services {
   background-color: #f2f2f2;
-  padding-top: var(--padding-top-sections);
-  padding-bottom: var(--padding-top-sections);
   background-image: url("../public/assets/images/bkg-white.webp");
   // background-position: bottom left;
   background-size: cover;
@@ -812,11 +812,9 @@ section.our-services {
 section.prices {
   color: #fff;
   background-color: rgba(206, 204, 204, 0.8);
-  padding: 0%;
   overflow-x: hidden;
   background-image: url("../assets/images/bkg-sand-red.jpg");
   background-size: cover;
-  padding: var(--padding-top-sections) 0px var(--padding-top-sections);
 
   .paragraph-color {
     color: var(--text-color-alt2);
@@ -1113,7 +1111,7 @@ section.prices {
   @media screen and (max-width: 768px) {
     // margin-left: -30px;
     // margin-right: -30px;
-    min-height: 960px;
+    min-height: 750px;
 
     .copy {
       width: 100% !important;
@@ -1138,8 +1136,7 @@ section.crypto {
   overflow: hidden;
   background-color: #000000;
   color: #fff;
-  padding-top: var(--padding-top-sections);
-  padding-bottom: var(--padding-top-sections);
+
   .container {
     display: flex;
     align-items: center;
@@ -1218,8 +1215,10 @@ section.members {
   background-image: url("../assets/images/bkg-red5.webp");
   background-size: cover;
   color: #fff;
-  padding-top: var(--padding-top-sections);
-  padding-bottom: var(--padding-top-sections);
+
+  h1 {
+    text-align: center;
+  }
 
   .contain-members {
     overflow-y: hidden;
@@ -1295,8 +1294,6 @@ section.free-trial {
   overflow: hidden;
   background-color: var(--section-alt-bkg);
   min-height: 90vh;
-  padding-top: var(--padding-top-sections);
-  padding-bottom: var(--padding-top-sections);
 
   .container {
     display: flex;
@@ -1330,7 +1327,7 @@ section.free-trial {
           border-bottom: 1px dashed #eee;
           height: 3em;
           font-family: Questrial;
-          font-size: 18px;
+          font-size: 16px;
           padding: 0 20px;
           &:focus {
             border-bottom: 1px dashed #ff3939;
@@ -1404,8 +1401,6 @@ section.free-trial {
 //////////////////////////////////////////////////////////////////
 section.about-us {
   overflow: hidden;
-  padding: var(--padding-top-sections) 0
-  var(--padding-top-sections) 0;
   height: auto;
   background-color: #121111;
   color: #fff;
@@ -1431,10 +1426,14 @@ section.about-us {
   }
 
   .title {
-    margin: 4vh 0;
+    text-align: center;
+    margin-bottom: 7vh;
     b {
       font-size: 1.5em;
     }
+  }
+  .container {
+    margin-bottom: 90px;
   }
   .contain {
     width: 100%;
@@ -1564,7 +1563,7 @@ section.about-us {
     }
   }
   @media screen and (max-width: 820px) {
-    padding: 0;
+    // padding: 0;
     .title {
       padding: 2vw;
     }
@@ -1575,36 +1574,41 @@ section.about-us {
 // footer - section 7
 //////////////////////////////////////////////////////////////////
 footer {
-  background-color: #000000;
+  background-color: #ffffff;
   color: #ffffff;
   min-height: 500px;
   position: relative;
+  padding-top: 100px;
   .bkg_footer {
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 150%;
+    height: 120%;
     object-fit: cover;
     z-index: 2;
   }
 
   .tools {
     overflow-y: hidden;
-    width: 98%;
+    left: 0px;
+    right: 0px;
     height: auto;
     position: absolute;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.8);
     display: flex;
-    padding: 3vw 1vw;
+    padding: 0px 4vw 90px 4vw;
     gap: 4vw;
     flex-wrap: wrap;
     z-index: 3;
 
     .footer_logo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       img {
-        width: 400px;
-        height: 200px;
+        width: 340px;
+        height: 100px;
       }
       ul {
         display: flex;
@@ -1619,8 +1623,8 @@ footer {
           justify-content: center;
           cursor: pointer;
           img {
-            width: 80%;
-            height: 80%;
+            width: 50%;
+            height: 50%;
           }
         }
       }
@@ -1663,7 +1667,7 @@ footer {
         //flex: 1 1 auto;
         //padding: 0;
         img {
-          width: 250px;
+          width: 90%;
           height: 100px;
         }
       }
@@ -1679,8 +1683,6 @@ footer {
 // capabilities - section 7
 //////////////////////////////////////////////////////////////////
 section.capabilities {
-  padding-top: var(--padding-top-sections);
-  padding-bottom: var(--padding-top-sections);
   background-color: #000;
   color: #fff;
   display: flex;

@@ -58,8 +58,8 @@ const FreeTrial = () =>{
               <input placeholder="company size" type="text" />
               <input placeholder="company industry" type="text" />
               <input placeholder="saudi arabia" type="text" />
-              <a href="#">i consent i've read and i accept the terms and conditions</a>
-              <button type="submit">show me what you can.</button>
+              <p>I consent I've read and I accept the <a href="">terms and conditions</a></p>
+              <button type="submit">show me what you can</button>
             </form>
           </div>
           <div className="img-contain">
