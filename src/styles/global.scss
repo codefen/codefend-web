@@ -1,6 +1,8 @@
 :root {
   --text-large: 18px;
   --text-small: 12px;
+  --text-h2-normal: 38px;
+  --text-h2-large: 58px;
   --text-color: #ffffff;
   --text-color-alt: #333333;
   --text-color-alt2: #ff7878;
@@ -22,9 +24,7 @@
   --mobile-breakpoint: 768px;
 
   @media screen and (max-width: 820px) {
-    
     --padding-general: 90px 30px;
-    
   }
 }
 
@@ -40,9 +40,7 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
   @media screen and (max-width: 820px) {
-    
-      font-size: 14px;
-    
+    font-size: 14px;
   }
 }
 
@@ -78,7 +76,7 @@ h1 {
 }
 
 h2 {
-  font-size: 38px;
+  font-size: var(--text-h2-large);
   font-weight: normal;
   margin: 0px;
 }
@@ -118,6 +116,16 @@ section {
   }
 }
 
+header + section {
+  padding-top: 170px;
+}
+
+@media screen and (max-width: 820px) {
+  header + section {
+    padding-top: 120px;
+  }
+}
+
 @media screen and (max-width: 1030px) {
   h1 {
     min-height: 90px;
@@ -146,8 +154,9 @@ section {
         z-index: 1;
         min-height: 50px;
         min-width: 170px;
-        width: 20vw;
-        height: 5vw;
+        max-width: 320px;
+        width: 40vw;
+        // height: 5vw;
       }
     }
 
@@ -403,7 +412,7 @@ section.highlights {
 //////////////////////////////////////////////////////////////////
 section.main-differences {
   background-color: var(--section-alt-bkg);
- 
+
   overflow: hidden;
 
   .container {
@@ -559,16 +568,18 @@ section.main-differences {
 }
 
 ///////////////////////////////////////////////////////////////////
-// our software - section 4
+// our software
 //////////////////////////////////////////////////////////////////
 section.our-software {
-  background: linear-gradient(#333333, #000000);
+  background-image: url("../../public/assets/images/bkg-soft.jpg");
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-color: #000000;
   z-index: 1;
   position: relative;
   overflow: hidden;
   .copy {
     padding-bottom: 30px;
-    // padding-top: 100px;
     color: var(--text-color);
     p {
       max-width: 800px;
@@ -576,6 +587,7 @@ section.our-software {
   }
 
   .image {
+    text-align: center;
     img {
       height: 100%;
       width: 85%;
@@ -585,7 +597,7 @@ section.our-software {
   .items {
     display: flex;
     column-gap: 45px;
-    padding: 45px;
+    padding: 45px 45px 0px 45px;
     justify-content: center;
     .item:first-child {
       text-align: end;
@@ -599,39 +611,48 @@ section.our-software {
   }
 
   @media screen and (max-width: 768px) {
+    .image {
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
     .items {
       flex-direction: column;
       padding: 20px 0px;
       color: var(--text-color);
       text-shadow: 0 0 8px #000000;
       .item {
-        text-align: center;
         &:first-child {
-          text-align: center;
+          text-align: left;
         }
-      }
-      b {
-        color: var(--text-color);
       }
     }
   }
 }
+
 ///////////////////////////////////////////////////////////////////
-// features - section 5
+// features
 //////////////////////////////////////////////////////////////////
 section.features {
   overflow: hidden;
-  background-color: #000000;
+  // background-color: #000000;
+  background: rgb(34, 34, 34);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 34, 34, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
   color: #f2f2f2;
- 
   text-align: center;
+
   h2 {
-    font-size: 3em;
-    margin-bottom: 5vw;
+    font-size: var(--text-h2-large);
+    margin-bottom: 90px;
   }
   .contain-columns {
     overflow: hidden;
-    margin-bottom: 10vw;
+    margin-bottom: 120px;
     display: flex;
     flex-wrap: wrap;
     gap: 1vw;
@@ -652,6 +673,12 @@ section.features {
           font-size: 25px;
         }
       }
+      p {
+        min-height: 100px;
+      }
+      .img-app {
+        max-height: 700px;
+      }
       // & > img{
       //   min-height: 530px;
       //   min-width: 480px;
@@ -659,11 +686,11 @@ section.features {
     }
   }
   .app {
-    margin: -3vw;
-    padding-top: var(--padding-top-sections);
-    padding-bottom: var(--padding-top-sections);
-    background-image: url("../assets/images/bkg-red6.webp");
-    background-size: 100% 100%;
+    // margin: -3vw;
+    // padding-top: var(--padding-top-sections);
+    // padding-bottom: var(--padding-top-sections);
+    // background-image: url("../assets/images/bkg-red6.webp");
+    // background-size: 100% 100%;
     .contain {
       margin: auto;
       max-width: 70%;
@@ -870,7 +897,7 @@ section.prices {
         // transform: scale(1.1);
       }
     }
-  }  
+  }
   .slides {
     overflow: hidden;
     width: 100vw;
@@ -1687,7 +1714,7 @@ section.capabilities {
   color: #fff;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  // align-items: center;
   gap: 3vw;
 
   b {
@@ -1695,13 +1722,14 @@ section.capabilities {
     font-size: 20px;
   }
   h2 {
-    font-size: 70px;
+    margin-bottom: 60px;
   }
   .box {
     padding: 1vw 2vw 2vw 2vw;
     border: 3px solid var(--text-color-alt2);
-    max-width: 65%;
+    // max-width: 65%;
     margin: auto;
+    margin-bottom: 30px;
     .first-p {
       max-width: 60%;
     }
@@ -1726,7 +1754,7 @@ section.capabilities {
     .box {
       max-width: 95%;
       .first-p {
-        text-align: center;
+        // text-align: center;
         max-width: 90%;
         margin: auto;
       }

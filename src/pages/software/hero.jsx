@@ -34,7 +34,7 @@ const HeroSoftware = () => {
             objectFit:'cover',
           }} 
           loading="lazy"
-          src='../assets/images/bkg-elmt.webp'
+          src='../assets/images/bkg-soft.jpg'
           alt="background" />
         <div className="container">
           <motion.div variants={slideTransition} viewport={{once:true}} whileInView='visible' initial='hidden' className="copy">
@@ -48,7 +48,7 @@ const HeroSoftware = () => {
           </motion.div>
 +
           <div className="image">
-            <img src="../assets/images/app-black1.webp" loading="lazy" alt="statistics img" />
+            <img src="../assets/images/sleek-1.png" loading="lazy" alt="statistics img" />
           </div>
           <div className="items">
             <div className="item">

@@ -25,17 +25,7 @@ const OurSoftware = () => {
 
     return (
         <section className="our-software">
-        <img 
-          style={{
-            position:'absolute',
-            zIndex:'-1', 
-            top:0, 
-            left:0, 
-            objectFit:'cover',
-          }} 
-          loading="lazy"
-          src='../assets/images/bkg-elmt.webp'
-          alt="background" />
+       
         <div className="container">
           <motion.div variants={slideTransition} viewport={{once:true}} whileInView='visible' initial='hidden' className="copy">
             <h2>our software</h2>
@@ -48,7 +38,7 @@ const OurSoftware = () => {
           </motion.div>
 +
           <div className="image">
-            <img src="../assets/images/cuadro2.webp" loading="lazy" alt="statistics img" />
+            <img src="../assets/images/sleek-1.png" loading="lazy" alt="statistics img" />
           </div>
           <div className="items">
             <div className="item">
