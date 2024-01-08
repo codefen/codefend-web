@@ -123,7 +123,7 @@ header + section {
 
 @media screen and (max-width: 768px) {
   header + section {
-    padding-top: 120px;
+    padding-top: 20vh;
   }
 }
 
@@ -135,7 +135,11 @@ header + section {
   }
 }
 
-.header {
+
+///////////////////////////////////////////////////////////////////
+// header
+//////////////////////////////////////////////////////////////////
+header.header {
   background-color: rgba(0, 0, 0, 0.4);
   position: sticky;
   width: 100%;
@@ -1892,7 +1896,7 @@ section.services {
 
 section.section-1 {
   color: #fff;
-  padding: 10px 0%;
+  padding: 0;
   overflow-x: hidden;
 
   .active{
@@ -2003,9 +2007,11 @@ section.section-1 {
 section.section-2 {
   color: #fff;
   padding: 0%;
-  margin: 14vw 0;
+  margin: 0;
   overflow-x: hidden;
-
+  padding-top: 20vh;
+  background-color: #020212;
+  
   .active{
 
     h3{
@@ -2111,9 +2117,10 @@ section.section-2 {
 section.section-3 {
   color: #fff;
   padding: 0%;
-  margin-top: 14vw 0;
+  margin-top: 0;
   overflow-x: hidden;
-
+  padding-top: 20vh;
+  background-color: #020212;
   .active{
 
     h3{
