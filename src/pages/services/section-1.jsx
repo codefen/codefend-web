@@ -1,16 +1,49 @@
+import { useState, useRef } from "react"
+
 const Section1 = () => {
+
+  const slide = useRef()
+
+  function slideDirection(number, {target}){
+    const slide1 = document.getElementById("slide1");
+    const slide2 = document.getElementById("slide2");
+    const slide3 = document.getElementById("slide3");
+    const {current} = slide
+    switch(number){
+      case 1:
+        current.style.transform = "translateX(0%)"
+        target.classList.add('active');
+        slide2.classList.remove('active');
+        slide3.classList.remove('active');
+        break
+      case 2:
+        current.style.transform = "translateX(-100%)"
+        target.classList.add('active');
+        slide1.classList.remove('active');
+        slide3.classList.remove('active');
+        break
+      case 3:
+        current.style.transform = "translateX(-200%)"
+        target.classList.add('active');
+        slide1.classList.remove('active');
+        slide2.classList.remove('active');
+        break
+    }
+  }
+
     return (
         <section className="section-1">
             <ul>
-              <li>
+              <li id="slide1" onClick={(e)=>slideDirection(1,e)} className="active">
               
                     <h3 >web application pentest</h3>
                     <p>
                       Codefend does manual and semi-automated penetration testing processes using commercial and proprietary security software to evaluate your web application from the perspective of anonymous and authenticated users.
                     </p>
-                 
+                    <img src="../../public/assets/images/triangle.png" alt="triangle" />
+
               </li>
-              <li>
+              <li id="slide2" onClick={(e)=>slideDirection(2,e)}>
             
                     <h3>mobile application pentest</h3>
                     <p>
@@ -18,16 +51,17 @@ const Section1 = () => {
                     </p>
                     <img src="../../public/assets/images/triangle.png" alt="triangle" />
               </li>
-              <li>
+              <li id="slide3" onClick={(e)=>slideDirection(3,e)}>
             
                   <h3>cloud security posture</h3>
                   <p>
                     Codefend does manual and semi-automated penetration testing processes using commercial and proprietary security software to evaluate your web application from the perspective of anonymous and authenticated users.
                   </p>
-                
+                  <img src="../../public/assets/images/triangle.png" alt="triangle" />
+
               </li>
             </ul>
-            <div className="slide-contain">
+            <div ref={slide} className="slide-contain">
               <div className="contain" style={{
                 backgroundImage:'url("../../public/assets/images/img-services4.png")'
               }}>
