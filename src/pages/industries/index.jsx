@@ -7,7 +7,7 @@ const Industries = () => {
     <div className="container">
       <div 
       className="subtitle">
-        <h2>Industries</h2>
+        <h2>industries</h2>
         <p>Codefend is your comprehensive solution for all your company's security needs. Our application combines a wide range of services designed to protect your organization from cyber threats, ensuring the highest level of protection for your data & infrastructure.</p>
       </div>
       <div className="contain">
