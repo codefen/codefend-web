@@ -1274,8 +1274,8 @@ section.members {
         width: 465px;
         column-gap: 1em;
         display: flex;
-        flex-wrap: wrap;
         align-items: center;
+        max-height: 130px;
 
         &:hover {
           outline: 5px solid var(--text-color-alt2);
@@ -1313,6 +1313,7 @@ section.members {
           justify-content: center;
           text-align: center;
           padding: 0.5em 0.4em;
+          max-height: none;
         }
       }
     }
@@ -1501,7 +1502,7 @@ section.about-us {
 
       &:nth-child(2) {
         //background-color: red;
-        animation: 30s slideslow infinite linear;
+        animation: 20s slideslow infinite linear;
         justify-content: center;
 
         &:hover {
@@ -1509,6 +1510,25 @@ section.about-us {
         }
 
         @keyframes slideslow {
+          from {
+            transform: translateX(-5%);
+          }
+          to {
+            transform: translateX(calc((-105% / 3 - 2em) * 4));
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        //background-color: red;
+        animation: 35s slideslow2 infinite linear;
+        justify-content: center;
+
+        &:hover {
+          animation-play-state: paused;
+        }
+
+        @keyframes slideslow2 {
           from {
             transform: translateX(-5%);
           }
@@ -1606,7 +1626,7 @@ section.about-us {
 // footer - section 7
 //////////////////////////////////////////////////////////////////
 footer {
-  background-color: #ffffff;
+  background-color: #000;
   color: #ffffff;
   min-height: 500px;
   position: relative;
@@ -1898,7 +1918,7 @@ section.section-1 {
   color: #fff;
   padding: 0;
   overflow-x: hidden;
-
+  
   .active{
 
     h3{
@@ -1949,6 +1969,7 @@ section.section-1 {
         background-position: right;
         padding: 4vw 4vw;
         min-width: 92vw;
+        max-height: 1000px;
   
         &:nth-child(1) {
           background-position: 70%;
