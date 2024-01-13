@@ -641,7 +641,6 @@ section.our-software {
 //////////////////////////////////////////////////////////////////
 section.features {
   overflow: hidden;
-  // background-color: #000000;
   background: rgb(34, 34, 34);
   background: linear-gradient(
     0deg,
@@ -649,75 +648,69 @@ section.features {
     rgba(0, 0, 0, 1) 100%
   );
   color: #f2f2f2;
-  text-align: center;
+  padding: 0;
+
+  .container{
+    max-width: 2400px;
+  }
 
   h2 {
     font-size: var(--text-h2-large);
     margin-bottom: 90px;
+    text-align: center;
   }
   .contain-columns {
-    overflow: hidden;
+    //overflow: hidden;
     margin-bottom: 120px;
     display: flex;
-    flex-wrap: wrap;
     gap: 1vw;
-    .column {
-      flex: 1;
-      div {
-        width: 80%;
-        margin: auto;
-        .subtitle_features {
-          display: flex;
-          justify-content: center;
-          img {
-            width: 50px !important;
-            height: 50px !important;
-          }
+
+    .column { 
+      &:first-child{
+        flex: 1;
+        //flex: 2;
+      }
+      &:nth-child(2){
+        position: relative;
+        max-width: 700px;
+        flex: 1;
+        img{
+          max-height: 85%;
         }
+      }
+      div {
+        max-width: 1000px;
+        margin: 0 1vw;
         h3 {
           font-size: 25px;
         }
-      }
-      p {
-        min-height: 100px;
-      }
-      .img-app {
-        max-height: 700px;
-      }
-      // & > img{
-      //   min-height: 530px;
-      //   min-width: 480px;
-      // }
-    }
-  }
-  .app {
-    // margin: -3vw;
-    // padding-top: var(--padding-top-sections);
-    // padding-bottom: var(--padding-top-sections);
-    // background-image: url("../assets/images/bkg-red6.webp");
-    // background-size: 100% 100%;
-    .contain {
-      margin: auto;
-      max-width: 70%;
-      .subtitle_app {
-        display: flex;
-        column-gap: 2vw;
-        align-items: center;
-        justify-content: center;
-        text-align: start;
-        max-width: 80%;
-        margin: 40px 0;
-        h3 {
-          font-size: 30px;
+        p {
+          min-height: 100px;
         }
       }
+      .right {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+      }
     }
   }
+
   @media screen and (max-width: 820px) {
     .contain-columns {
       display: flex;
       flex-direction: column;
       .column {
+        &:nth-child(2){
+          max-width: none;
+          .right{
+            position: initial;
+            margin: auto;
+            height: 90%;
+
+          }
+        }
         div {
           width: 95%;
           margin: auto;
@@ -734,24 +727,7 @@ section.features {
             font-size: 25px;
           }
         }
-        //  & > img{
-        //    height: 0 !important;
-        //    width: 0 !important;
-        //  }
-      }
-    }
-
-    .app {
-      margin: -8vw;
-      .contain {
-        margin: auto;
-        max-width: 90%;
-        .subtitle_app {
-          display: flex;
-          flex-direction: column;
-          margin: auto;
-          max-width: 90%;
-        }
+        
       }
     }
   }

@@ -8,16 +8,7 @@ const Features = () => {
         <div className="contain-columns">
           <div className="column">
             <div>
-              <motion.div
-                initial={{ x: "-20vw", opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1, delay: 0.3 }}
-                className="subtitle_features"
-              >
-                <img src="../../public/assets/images/check-red.webp" alt="" />
-                <motion.h3>specialized customer support</motion.h3>
-              </motion.div>
+              <motion.h3>specialized customer support</motion.h3>
               <motion.p
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -25,11 +16,10 @@ const Features = () => {
                 transition={{ duration: 1, delay: 0.9 }}
               >
                 <b>
-                  Priorizamos brindar soluciones rapidas & efectivas a todos
-                  nuestros clientes.
+                monitor your attack surface
+Reveal and manage your hidden IT infrastructure
                 </b>{" "}
-                software cuenta con un sistema de chat integrado que nos hace
-                acordar a IRC.
+                 with our comprehensive automated attack surface expansion. Discover and continuously update your attack surface with our integrated systems of automated and manual detection.
               </motion.p>
             </div>
             <motion.img
@@ -38,23 +28,14 @@ const Features = () => {
               // viewport={{once:true}}
               // transition={{duration:1, delay:1.5}}
               loading="lazy"
-              src="../assets/images/app-black2.webp"
+              src="../assets/images/app-blue1.png"
               alt="image of app"
-              className="img-app"
+             
             />
           </div>
           <div className="column">
             <div>
-              <motion.div
-                initial={{ x: "20vw", opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1, delay: 0.3 }}
-                className="subtitle_features"
-              >
-                <img src="../../public/assets/images/check-red.webp" alt="" />
-                <motion.h3>attack surface surveillance</motion.h3>
-              </motion.div>
+              <motion.h3>uncertain about your mobile apps?</motion.h3>
               <motion.p
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -62,11 +43,9 @@ const Features = () => {
                 transition={{ duration: 1, delay: 0.9 }}
               >
                 <b>
-                  Unvenil your shadow IT with our automated attack surface
-                  expansion.
+                Codefend offers detailed analysis of mobile applications.
                 </b>{" "}
-                Descubra y conserve actualizado su superficie de ataque con
-                nuestros sistemas de detección automatizado y manual.
+ Simply add the applications you and your team use in our application, and upon completion, we will provide you with a <b> comprehensive report on the operations the application performs with your information and its security status.</b>
               </motion.p>
             </div>
             <motion.img
@@ -75,34 +54,93 @@ const Features = () => {
               // transition={{duration:1, delay:1.5}}
               // viewport={{once:true}}
               loading="lazy"
-              src="../assets/images/app-black4.webp"
+              src="../assets/images/app-blue2.png"
               alt="image of app"
-              className="img-app"
+              className="right"
             />
           </div>
         </div>
-        <div className="app">
-          <div className="contain">
-            <div className="subtitle_app">
-              <img src="../../public/assets/images/thing.webp" alt="" />
-              <div>
-                <h3>how secure are the applications you have installed?</h3>
-                <p>
-                  Codefend realiza análisis de aplicaciones mobile en detalle.
-                  Simplemente añada las aplicaciones que ud y su equipo utilizan
-                  en nuestra aplicación, y al finalizar le daremos un informe
-                  completo sobre las operaciones que la aplicación realiza con
-                  su información, y la seguridad de la misma
-                </p>
-              </div>
+        <div className="contain-columns">
+          <div className="column">
+            <div>
+              <motion.h3>Detailed vulnerabilties & issues</motion.h3>
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, delay: 0.9 }}
+              >
+                <b>
+                Reveal and manage your hidden IT infrastructure
+                </b>{" "}
+ 
+                Our professionals at Codefend will conduct a multidisciplinary research of your systems, identifying and reporting each vulnerability individually. Following this, you will have the capability to generate a report directly from the app, ensuring you have comprehensive insights at your fingertips!
+              </motion.p>
             </div>
-            <img
+            <motion.img
+              // initial={{y:'20vw', opacity:0}}
+              // whileInView={{y:0, opacity:1}}
+              // viewport={{once:true}}
+              // transition={{duration:1, delay:1.5}}
               loading="lazy"
-              src="../assets/images/app-black3.webp"
-              alt="image of app "
+              src="../assets/images/app-blue3.png"
+              alt="image of app"
+             
+            />
+          </div>
+          <div className="column">
+            <motion.img
+              // initial={{y:'20vw', opacity:0}}
+              // whileInView={{y:0, opacity:1}}
+              // transition={{duration:1, delay:1.5}}
+              // viewport={{once:true}}
+              loading="lazy"
+              src="../assets/images/app-blue4.png"
+              alt="image of app"
+              className="right"
             />
           </div>
         </div>
+        <div className="contain-columns">
+          <div className="column">
+            <div>
+              <motion.h3>We prioritize providing rapid and effective solutions to all our clients.</motion.h3>
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, delay: 0.9 }}
+              >
+                <b>
+                We prioritize providing rapid and effective solutions to all our clients.
+                </b>{" "}
+                 Our software features an integrated chat system reminiscent of IRC, enhancing user experience and support efficiency.
+              </motion.p>
+            </div>
+            <motion.img
+              // initial={{y:'20vw', opacity:0}}
+              // whileInView={{y:0, opacity:1}}
+              // viewport={{once:true}}
+              // transition={{duration:1, delay:1.5}}
+              loading="lazy"
+              src="../assets/images/app-blue5.png"
+              alt="image of app"
+             
+            />
+          </div>
+          <div className="column">
+            <motion.img
+              // initial={{y:'20vw', opacity:0}}
+              // whileInView={{y:0, opacity:1}}
+              // transition={{duration:1, delay:1.5}}
+              // viewport={{once:true}}
+              loading="lazy"
+              src="../assets/images/app-blue6.png"
+              alt="image of app"
+              className="right"
+            />
+          </div>
+        </div>                  
       </div>
     </section>
   );
