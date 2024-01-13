@@ -11,10 +11,10 @@ const Header = () => {
 
     const menuAppear = () => {
         if(close){
-            menu.current.style.right = '-10vw';
+            menu.current.style.right = '0%';
             setClose(false)
         } else {
-            menu.current.style.right = '-120vw';
+            menu.current.style.right = '-120%';
             setClose(true)
         }
     }
@@ -37,7 +37,7 @@ const Header = () => {
                     duration:1
                     }}
                 className="brand">
-                <img src="../assets/images/brand.webp" alt="logo" />
+                <img src="../assets/images/logo-light.svg" alt="logo" />
                 </motion.div>
                 
                 <button onClick={menuAppear} className="toggle">
