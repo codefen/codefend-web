@@ -178,12 +178,20 @@ header.header {
       transition: right 0.4s;
 
       li {
-        font-size: 16px;
-        font-weight: 800;
-        padding: 0.5vw;
+        a {
+          font-size: 16px;
+          font-weight: 800;
+          padding: 0.5vw;
+          display: block;
+        }
+
+        &.active {
+          color: var(--text-color-alt2);
+        }
+
         &:hover {
           color: var(--text-color-alt2);
-          box-shadow: 0 4px 0 var(--text-color-alt2);
+          box-shadow: 0 2px 0 var(--text-color-alt2);
         }
       }
     }

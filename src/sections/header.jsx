@@ -1,15 +1,18 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { FaBars } from "react-icons/fa6";
 import { FaX } from "react-icons/fa6";
 
 
 const Header = () => {
-    const [close, setClose] = useState(true)
-    const menu = useRef()
+    const [close, setClose] = useState(true);
+    const [isActived, setIsActived] = useState('');
+    const menu = useRef();
+    const location = useLocation();
 
     const menuAppear = () => {
+        window.scrollTo(0, 0);
         if(close){
             menu.current.style.right = '0%';
             setClose(false)
@@ -17,7 +20,18 @@ const Header = () => {
             menu.current.style.right = '-120%';
             setClose(true)
         }
+        
     }
+
+    useEffect(() => {
+        // Actualiza el estado basado en la ruta actual
+        const links = menu.current.querySelectorAll("li a");
+        links.forEach(link => {
+            const linkPath = link.getAttribute("href");
+            link.classList.toggle("active", location.pathname === ('/' + linkPath));
+        });
+    }, [location.pathname]);
+
 
     return (
     
