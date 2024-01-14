@@ -1,39 +1,24 @@
 import { useRef } from "react";
 const Section3 = () => {
+  function slideDirection(number) {
+    const slide3 = document.querySelector(".section-3 .slide-contain");
+    const slides = document.querySelectorAll(".section-3 .slide-contain .contain");
+    const slideItems3 = document.querySelectorAll(".section-3 .items .item");
+    const transformValue = `translateX(${(number - 1) * -100}%)`;
 
-  const slide = useRef()
+    // Setear la clase "active" al slide correspondiente
+    slideItems3.forEach((item, index) => {
+      item.classList.toggle("active", index + 1 === number);
+    });
 
-  function slideDirection(number, {target}){
-    const slide1 = document.getElementById("slide7");
-    const slide2 = document.getElementById("slide8");
-    const slide3 = document.getElementById("slide9");
-    const {current} = slide
-    switch(number){
-      case 1:
-        current.style.transform = "translateX(0%)"
-        target.classList.add('active');
-        slide2.classList.remove('active');
-        slide3.classList.remove('active');
-        break
-      case 2:
-        current.style.transform = "translateX(-100%)"
-        target.classList.add('active');
-        slide1.classList.remove('active');
-        slide3.classList.remove('active');
-        break
-      case 3:
-        current.style.transform = "translateX(-200%)"
-        target.classList.add('active');
-        slide1.classList.remove('active');
-        slide2.classList.remove('active');
-        break
-    }
+    // Mover el contenedor de los slides
+    slide3.style.transform = transformValue;
   }
 
     return (
         <section className="section-3">
-            <ul>
-              <li id="slide7" onClick={(e)=>slideDirection(1,e)}>
+            <div className="items">
+              <div className="item" id="slide7" onClick={()=>slideDirection(1)}>
 
                     <h3>intel & research services</h3>
                     <p>
@@ -41,8 +26,8 @@ const Section3 = () => {
                     </p>
                     <img src="../../public/assets/images/triangle.png" alt="triangle"/>
 
-              </li>
-              <li id="slide8" onClick={(e)=>slideDirection(2,e)}  className="active">
+              </div>
+              <div className="item active" id="slide8" onClick={()=>slideDirection(2)}>
 
                     <h3>advanced social engineering</h3>
                     <p>
@@ -50,8 +35,8 @@ const Section3 = () => {
                     </p>
                     <img src="../../public/assets/images/triangle.png" alt="triangle" />
 
-              </li>
-              <li id="slide9" onClick={(e)=>slideDirection(3,e)}>
+              </div>
+              <div className="item" id="slide9" onClick={()=>slideDirection(3)}>
 
                   <h3>dark web, data leaks, leak clouds</h3>
                   <p>   
@@ -59,9 +44,9 @@ const Section3 = () => {
                   </p>
                   <img src="../../public/assets/images/triangle.png" alt="triangle" />
 
-              </li>
-            </ul>
-            <div ref={slide} style={{transform:'translateX(-100%)'}} className="slide-contain">
+              </div>
+            </div>
+            <div style={{transform:'translateX(-100%)'}} className="slide-contain">
               <div className="contain" style={{
                 backgroundImage:'url("../../public/assets/images/img-services7.png")'
               }}>
