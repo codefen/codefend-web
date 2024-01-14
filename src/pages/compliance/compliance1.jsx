@@ -6,11 +6,46 @@ const Compliance1 = () =>{
             <div className="container">
                 <div className="card_container">
                     {
-                        complianceData.map((data)=>{
+                        complianceData[0].map((data)=>{
                             return(
                                 <div key={data.title} className="card">
-                                    <h3>{data.title}</h3>
-                                    <p>{data.description}</p>
+                                    <h3><b>{data.title}</b></h3>
+                                    <p>{data.description1} 
+                                        <br />
+                                        <br />
+                                       {data.description2}
+                                    </p>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
+                <div className="card_container">
+                    {
+                        complianceData[1].map((data)=>{
+                            return(
+                                <div key={data.title} className="card">
+                                    <h3><b>{data.title}</b></h3>
+                                    <p>{data.description1} 
+                                        <br />
+                                        <br />
+                                       {data.description2}
+                                    </p>
+                                </div>
+                            )
+                        })
+                    }
+                </div><div className="card_container">
+                    {
+                        complianceData[2].map((data)=>{
+                            return(
+                                <div key={data.title} className="card">
+                                    <h3><b>{data.title}</b></h3>
+                                    <p>{data.description1} 
+                                        <br />
+                                        <br />
+                                       {data.description2}
+                                    </p>
                                 </div>
                             )
                         })

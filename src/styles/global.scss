@@ -2106,6 +2106,9 @@ section.herocompliance{
       height: 80px;
       border: 1px solid #3c5e66;
       box-shadow: 0px 0px 6px 1px #034e5f;
+      &::placeholder {
+        font-size: 34px;
+      }
     }
   }
 }
@@ -2114,17 +2117,38 @@ section.compliance1 {
   background-color: #000;
   color: #fff;
   .container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
     .card_container{
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
+
       .card{
+        margin: 40px 0;
         //overflow: hidden;
         width: 500px;
-        border: 2px solid grey;
+        border: 2px solid rgb(54, 52, 52);
         padding: 0 1vw;
         height: auto;
+        h3 > b{
+          font-family: "Roboto", sans-serif;
+          color: red;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 820px) {
+    .container{
+      .card_container{
+        .card{
+
+          //overflow: hidden;
+          padding: 0 20px;
+          width: auto;
+          min-width: 200px;
+
+        }
       }
     }
   }
