@@ -1920,6 +1920,7 @@ section.services {
   }
 
   @media screen and (max-width: 768px) {
+    min-height: 50vh;
     background-position: 49%;
     .container {
       .subtitle {
