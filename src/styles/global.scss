@@ -183,10 +183,9 @@ header.header {
           font-weight: 800;
           padding: 0.5vw;
           display: block;
-        }
-
-        &.active {
-          color: var(--text-color-alt2);
+          &.active {
+            color: var(--text-color-alt2);
+          }
         }
 
         &:hover {

@@ -24,11 +24,11 @@ const Header = () => {
     }
 
     useEffect(() => {
-        // Actualiza el estado basado en la ruta actual
         const links = menu.current.querySelectorAll("li a");
         links.forEach(link => {
             const linkPath = link.getAttribute("href");
-            link.classList.toggle("active", location.pathname === ('/' + linkPath));
+            // setIsActived(location.pathname === linkPath);
+            link.classList.toggle("active", location.pathname === linkPath);
         });
     }, [location.pathname]);
 
