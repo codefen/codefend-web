@@ -2231,13 +2231,19 @@ section.section-3 {
 }
 
 section.herocompliance {
-  height: 60vh;
+  // height: 45vh;
   background-color: #000;
   background-image: url('../../public/assets/images/bkg-compliance.png');
   background-repeat: no-repeat;
   background-position: right top;
-  background-size: contain;
+  background-size: 75%;
   color: #fff;
+
+  .container.tarjetas {
+    margin-top: 30vh;
+    display: flex;
+    flex-direction: column;
+  }
 
   .container {
     position: relative;
@@ -2254,26 +2260,18 @@ section.herocompliance {
       }
     }
 
-  }
-}
-
-section.compliance1 {
-  background-color: #000;
-  color: #fff;
-
-  .container {
-
-
     input {
       background: transparent;
       color: #fff;
-      width: 100%;
-      height: 80px;
+      // width: 100%;
+      height: 60px;
       border: 1px solid #3c5e66;
       box-shadow: 0px 0px 6px 1px #034e5f;
+      padding: 0px 20px;
+      font-size: 22px;
 
       &::placeholder {
-        font-size: 34px;
+        font-size: 22px;
       }
     }
 
