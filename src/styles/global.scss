@@ -2276,17 +2276,11 @@ section.herocompliance {
     }
 
     .cards {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-      justify-content: space-between;
-    }
-    .card_container {
-
+      margin-top: 40px;
       .card {
-        margin: 40px 0;
+        // margin: 40px 0;
         //overflow: hidden;
-        width: 500px;
+        // width: 500px;
         border: 2px solid rgb(54, 52, 52);
         padding: 0 1vw;
         height: auto;
