@@ -4,6 +4,7 @@ const Partners1 = () => {
   return <>
   <section className="partners1">
         <div className="container">
+            <input type="text" placeholder="search"/>
             <div className="contain-info">
                 <div className="item">
                     <div className="img-contain">
