@@ -1,9 +1,13 @@
-import React from "react";
+import HeroPartners from "./hero"
+import Partners1 from "./partners1"
 
 const Partners = () => {
-  <>
-          <h1>Partners</h1>
-         </>;
-};
+    return(
+        <>
+            <HeroPartners />
+            <Partners1 />
+        </>
+    )
+}
 
-export default Partners;
+export default Partners

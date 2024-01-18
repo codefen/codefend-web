@@ -1,9 +1,8 @@
-import { useRef } from "react";
 
 const Section2 = () => {
   function slideDirection(number) {
     const slide2 = document.querySelector(".section-2 .slide-contain");
-    const slides = document.querySelectorAll(".section-2 .slide-contain .contain");
+    // const slides = document.querySelectorAll(".section-2 .slide-contain .contain");
     const slideItems2 = document.querySelectorAll(".section-2 .items .item");
     const transformValue = `translateX(${(number - 1) * -100}%)`;
 
@@ -21,7 +20,7 @@ const Section2 = () => {
       <div className="items">
         <div
           className="item"
-          id="slide4"
+        
           onClick={(e) => slideDirection(1)}
         >
           <h3>internal network pentest</h3>
@@ -33,7 +32,7 @@ const Section2 = () => {
           </p>
           <img src="../../public/assets/images/triangle.png" alt="triangle" />
         </div>
-        <div className="item active" id="slide5" onClick={() => slideDirection(2)}>
+        <div className="item active" onClick={() => slideDirection(2)}>
           <h3>external network pentest</h3>
           <p>
             Codefend does manual and semi-automated penetration testing
@@ -43,7 +42,7 @@ const Section2 = () => {
           </p>
           <img src="../../public/assets/images/triangle.png" alt="triangle" />
         </div>
-        <div className="item" id="slide6" onClick={() => slideDirection(3)}>
+        <div className="item" onClick={() => slideDirection(3)}>
           <h3>source code review</h3>
           <p>
             Codefend does manual and semi-automated penetration testing

@@ -13,7 +13,6 @@ import Services from './pages/services';
 import Compliance from './pages/compliance';
 import Partners from './pages/partners';
 
-
 export default function App() {
   return (
     <BrowserRouter>
@@ -26,6 +25,7 @@ export default function App() {
             <Route path="services" element={<Services />} />
             <Route path="compliance" element={<Compliance />} />
             <Route path="partners" element={<Partners />} />
+            
             <Route path="*" element={<Home />} />
           </Route>
         </Routes>

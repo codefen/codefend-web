@@ -7,7 +7,6 @@ import { FaX } from "react-icons/fa6";
 
 const Header = () => {
     const [close, setClose] = useState(true);
-    const [isActived, setIsActived] = useState('');
     const menu = useRef();
     const location = useLocation();
 
@@ -68,6 +67,7 @@ const Header = () => {
                     <li><Link onClick={menuAppear} to ="/services">services</Link></li>
                     <li><Link onClick={menuAppear} to ="/compliance">compliance</Link></li>
                     <li><Link onClick={menuAppear} to ="/partners">partners</Link></li>
+                    <li><Link onClick={menuAppear} to ="/team">team</Link></li>
                 </ul>
                 
                 <div className="menu">

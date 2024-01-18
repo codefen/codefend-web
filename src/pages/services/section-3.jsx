@@ -1,8 +1,8 @@
-import { useRef } from "react";
+
 const Section3 = () => {
   function slideDirection(number) {
     const slide3 = document.querySelector(".section-3 .slide-contain");
-    const slides = document.querySelectorAll(".section-3 .slide-contain .contain");
+    // const slides = document.querySelectorAll(".section-3 .slide-contain .contain");
     const slideItems3 = document.querySelectorAll(".section-3 .items .item");
     const transformValue = `translateX(${(number - 1) * -100}%)`;
 
@@ -18,7 +18,7 @@ const Section3 = () => {
     return (
         <section className="section-3">
             <div className="items">
-              <div className="item" id="slide7" onClick={()=>slideDirection(1)}>
+              <div className="item" onClick={()=>slideDirection(1)}>
 
                     <h3>intel & research services</h3>
                     <p>
@@ -27,7 +27,7 @@ const Section3 = () => {
                     <img src="../../public/assets/images/triangle.png" alt="triangle"/>
 
               </div>
-              <div className="item active" id="slide8" onClick={()=>slideDirection(2)}>
+              <div className="item active" onClick={()=>slideDirection(2)}>
 
                     <h3>advanced social engineering</h3>
                     <p>
@@ -36,7 +36,7 @@ const Section3 = () => {
                     <img src="../../public/assets/images/triangle.png" alt="triangle" />
 
               </div>
-              <div className="item" id="slide9" onClick={()=>slideDirection(3)}>
+              <div className="item" onClick={()=>slideDirection(3)}>
 
                   <h3>dark web, data leaks, leak clouds</h3>
                   <p>   

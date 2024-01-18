@@ -1,4 +1,3 @@
-import { useState, useRef } from "react";
 
 const Section1 = () => {
 
@@ -23,7 +22,7 @@ const Section1 = () => {
     <section className="section-1">
       <div className="items">
         <div
-          id="slide1"
+        
           onClick={() => slideDirection(1)}
           className="item active"
         >
@@ -36,7 +35,7 @@ const Section1 = () => {
           </p>
           <img src="../../public/assets/images/triangle.png" alt="triangle" />
         </div>
-        <div className="item" id="slide2" onClick={(e) => slideDirection(2, e)}>
+        <div className="item" onClick={(e) => slideDirection(2, e)}>
           <h3>mobile application pentest</h3>
           <p>
             Ensure the security of your mobile application with our
@@ -45,7 +44,7 @@ const Section1 = () => {
           </p>
           <img src="../../public/assets/images/triangle.png" alt="triangle" />
         </div>
-        <div className="item" id="slide3" onClick={(e) => slideDirection(3, e)}>
+        <div className="item" onClick={(e) => slideDirection(3, e)}>
           <h3>cloud security posture</h3>
           <p>
             Codefend does manual and semi-automated penetration testing
