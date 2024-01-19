@@ -2282,11 +2282,13 @@ section.herocompliance {
 }
 
 section.heropartners{
-  height: 80vh;
+  // height: 80vh;
   background-color: #000;
   background-image: url('../../public/assets/images/bkg-partners.png');
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: contain;
+  background-position: center;
+  padding-bottom: 30vh;
   color: #fff;
   .container{
     .subtitle {
@@ -2333,8 +2335,8 @@ section.partners1{
     .contain-info{
       display: flex;
       flex-wrap: wrap;
-      gap: 1vw;
-      padding: var(--padding-general);
+      gap: 50px;
+      // padding: var(--padding-general);
       .item{
         border: 3px solid red;
         max-width: 800px;
@@ -2359,6 +2361,7 @@ section.partners1{
     }
     .nextgen{
       position: relative;
+      margin-top: 90px;
       h1{
         position: relative;
         text-align: center;
