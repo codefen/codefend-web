@@ -21,7 +21,6 @@ function Home() {
       <Prices />
       <Contact />
       <Members />
-      <Crypto />
     </>
   );
 }

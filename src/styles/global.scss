@@ -777,12 +777,10 @@ section.features {
       .column {
         &:nth-child(2) {
           max-width: none;
-
           .right {
             position: initial;
             margin: auto;
             height: 90%;
-
           }
         }
 
@@ -1542,27 +1540,26 @@ section.about-us {
   color: #fff;
   position: relative;
 
-  //box-shadow:inset 20px 30px 15px -10px white, 10px 15px 15px -10px white, ;
-  &::before,
-  &::after {
-    background: linear-gradient(to right, #000 0%, rgba(255, 255, 255, 0));
-    content: "";
-    height: 100%;
-    position: absolute;
-    width: 10%;
-    z-index: 1;
-  }
+   &::before,
+   &::after {
+     background: linear-gradient(to right, #000 0%, rgba(255, 255, 255, 0));
+     content: "";
+     height: 100%;
+     position: absolute;
+     width: 10%;
+     z-index: 1;
+   }
 
-  &::before {
-    left: 0;
-    top: 0;
-  }
+   &::before {
+     left: 0;
+     top: 0;
+   }
 
-  &::after {
-    right: 0;
-    top: 0;
-    transform: rotateZ(180deg);
-  }
+   &::after {
+     right: 0;
+     top: 0;
+     transform: rotateZ(180deg);
+   }
 
   .title {
     text-align: center;
@@ -1590,71 +1587,13 @@ section.about-us {
       //height: auto;
       display: flex;
 
-      &:nth-child(1) {
-        //background-color: blue;
-        animation: 25s slideleft infinite linear;
-        justify-content: center;
-
-        &:hover {
-          animation-play-state: paused;
-        }
-
-        @keyframes slideleft {
-          from {
-            transform: translateX(-5%);
-          }
-
-          to {
-            transform: translateX(calc((-105% / 3 - 1em) * 6));
-          }
-        }
-      }
-
-      &:nth-child(2) {
-        //background-color: red;
-        animation: 20s slideslow infinite linear;
-        justify-content: center;
-
-        &:hover {
-          animation-play-state: paused;
-        }
-
-        @keyframes slideslow {
-          from {
-            transform: translateX(-5%);
-          }
-
-          to {
-            transform: translateX(calc((-105% / 3 - 2em) * 4));
-          }
-        }
-      }
-
-      &:nth-child(3) {
-        //background-color: red;
-        animation: 35s slideslow2 infinite linear;
-        justify-content: center;
-
-        &:hover {
-          animation-play-state: paused;
-        }
-
-        @keyframes slideslow2 {
-          from {
-            transform: translateX(-5%);
-          }
-
-          to {
-            transform: translateX(calc((-105% / 3 - 1em) * 6));
-          }
-        }
-      }
-
-      .card-contain {
+      .row-contain1,.row-contain2, .row-contain3{
         display: flex;
         height: auto;
-        width: 100%;
-        gap: 4em;
+
+        &:hover {
+          animation-play-state: paused;
+        }
 
         &::-webkit-scrollbar {
           display: none;
@@ -1663,15 +1602,16 @@ section.about-us {
         .card {
           padding: 1em;
           border: 2px solid var(--text-color-alt2);
-          min-width: calc(100% / 3 - 4em);
+          min-width: 520px;
           height: 90%;
           background-color: #000000;
           display: flex;
           justify-content: space-between;
           flex-direction: column;
+          margin: 0 40px;
 
           div {
-            column-gap: 1em;
+            column-gap: 18px;
             display: flex;
             align-items: center;
 
@@ -1683,46 +1623,98 @@ section.about-us {
         }
       }
 
-      @media screen and (max-width: 820px) {
-        &:nth-child(1) {
-          //background-color: blue;
-          animation: 25s slideleft infinite linear;
+      .row-contain1{
+        animation: 25s slideleft infinite linear;
+        width: calc((554.233px * 12) + (80px * 12));
 
-          &:active {
-            animation-play-state: paused;
+        @keyframes slideleft {
+          from {
+            transform: translateX(-0%);
+          }
+          to {
+            transform: translateX(calc((-554.233px * 6) + (-80px * 6)));
+          }
+        }
+      }
+
+      .row-contain2{
+        animation: 20s slideslow infinite linear;
+        width: calc((554.233px * 8) + (80px * 8));
+
+        @keyframes slideslow {
+          from {
+            transform: translateX(-0%);
           }
 
+          to {
+            transform: translateX(calc((-554.233px * 4) + (-80px * 4)));
+          }
+        }
+      }
+
+      .row-contain3{
+        animation: 35s slideslow2 infinite linear;
+        width: calc((554.233px * 12) + (80px * 12));
+
+        @keyframes slideslow2 {
+          from {
+            transform: translateX(-0%);
+          }
+
+          to {
+            transform: translateX(calc((-554.233px * 6) + (-80px * 6)));
+          }
+        }
+      }
+
+      @media screen and (max-width: 820px) {
+
+        .row-contain1 {
+          --space-card:40px;
+          //background-color: blue;
+          width: calc((330.233px * 12) + (80px * 12));
+          animation: 25s slideleft infinite linear;
           @keyframes slideleft {
             from {
               transform: translateX(0);
             }
 
             to {
-              transform: translateX(calc(-333px * 7));
+              transform: translateX(calc((-330.233px * 6) + (-80px * 6)));
             }
           }
         }
 
-        &:nth-child(2) {
+        .row-contain2 {
           //background-color: blue;
+          width: calc((330.233px * 8) + (80px * 8));
           animation: 30s slideslow infinite linear;
-
-          &:active {
-            animation-play-state: paused;
-          }
-
           @keyframes slideslow {
             from {
               transform: translateX(0);
             }
 
             to {
-              transform: translateX(calc(-333px * 7));
+              transform: translateX(calc((-330.233px * 4) + (-80px * 4)));
+            }
+          }
+        }
+        .row-contain3 {
+          //background-color: blue;
+          width: calc((330.233px * 12) + (80px * 12));
+          animation: 30s slideslow2 infinite linear;
+          @keyframes slideslow2 {
+            from {
+              transform: translateX(0);
+            }
+
+            to {
+              transform: translateX(calc((-330.233px * 6) + (-80px * 6)));
             }
           }
         }
 
-        .card-contain {
+        .row-contain1, .row-contain2, .row-contain3 {
           .card {
             min-width: 300px;
             height: auto;

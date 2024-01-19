@@ -13,7 +13,7 @@ const Linkedin = () => {
                 <div className="contain">
                     <div className="slide-contain">
                         <div
-                            className="card-contain">
+                            className="row-contain1">
                             {
                                 testimonials[0].map((tes, i)=>{
                                     return(
@@ -54,7 +54,7 @@ const Linkedin = () => {
 
                     <div className="slide-contain">
                         <div
-                            className="card-contain">
+                            className="row-contain2">
                             {
                                 testimonials[1].map((tes, i)=>{
                                     return(
@@ -94,7 +94,7 @@ const Linkedin = () => {
 
                     <div className="slide-contain">
                         <div
-                            className="card-contain">
+                            className="row-contain3">
                             {
                                 testimonials[2].map((tes, i)=>{
                                     return(

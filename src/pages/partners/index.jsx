@@ -1,3 +1,5 @@
+
+import DDD from "./ddd"
 import HeroPartners from "./hero"
 import Partners1 from "./partners1"
 
