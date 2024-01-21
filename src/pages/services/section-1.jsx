@@ -33,7 +33,7 @@ const Section1 = () => {
             evaluate your web application from the perspective of anonymous and
             authenticated users.
           </p>
-          <img src="../../public/assets/images/triangle.png" alt="triangle" />
+          <img src="../assets/images/triangle.png" alt="triangle" />
         </div>
         <div className="item" onClick={(e) => slideDirection(2, e)}>
           <h3>mobile application pentest</h3>
@@ -42,7 +42,7 @@ const Section1 = () => {
             decentralized mobile application pentest services. Protect your
             user’s sensitive information with our professional services.
           </p>
-          <img src="../../public/assets/images/triangle.png" alt="triangle" />
+          <img src="../assets/images/triangle.png" alt="triangle" />
         </div>
         <div className="item" onClick={(e) => slideDirection(3, e)}>
           <h3>cloud security posture</h3>
@@ -52,7 +52,7 @@ const Section1 = () => {
             evaluate your web application from the perspective of anonymous and
             authenticated users.
           </p>
-          <img src="../../public/assets/images/triangle.png" alt="triangle" />
+          <img src="../assets/images/triangle.png" alt="triangle" />
         </div>
       </div>
       {/* <div ref={slide} className="slide-contain"> */}
@@ -61,7 +61,7 @@ const Section1 = () => {
           className="contain"
           style={{
             backgroundImage:
-              'url("../../public/assets/images/img-services4.png")',
+              'url("../assets/images/img-services4.png")',
           }}
         >
           <h2>SERVICES: WEB APPLICATION PENETRATION TEST</h2>
@@ -152,7 +152,7 @@ const Section1 = () => {
           className="contain"
           style={{
             backgroundImage:
-              'url("../../public/assets/images/img-services5.png")',
+              'url("../assets/images/img-services5.png")',
           }}
         >
           <h2>CLOUD: SECURITY POSTURE MANAGMENT</h2>

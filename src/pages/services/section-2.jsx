@@ -30,7 +30,7 @@ const Section2 = () => {
             evaluate your web application from the perspective of anonymous and
             authenticated users.
           </p>
-          <img src="../../public/assets/images/triangle.png" alt="triangle" />
+          <img src="../assets/images/triangle.png" alt="triangle" />
         </div>
         <div className="item active" onClick={() => slideDirection(2)}>
           <h3>external network pentest</h3>
@@ -40,7 +40,7 @@ const Section2 = () => {
             evaluate your web application from the perspective of anonymous and
             authenticated users.
           </p>
-          <img src="../../public/assets/images/triangle.png" alt="triangle" />
+          <img src="../assets/images/triangle.png" alt="triangle" />
         </div>
         <div className="item" onClick={() => slideDirection(3)}>
           <h3>source code review</h3>
@@ -50,7 +50,7 @@ const Section2 = () => {
             evaluate your web application from the perspective of anonymous and
             authenticated users.
           </p>
-          <img src="../../public/assets/images/triangle.png" alt="triangle" />
+          <img src="../assets/images/triangle.png" alt="triangle" />
         </div>
       </div>
       <div
@@ -61,7 +61,7 @@ const Section2 = () => {
           className="contain"
           style={{
             backgroundImage:
-              'url("../../public/assets/images/img-services7.png")',
+              'url("../assets/images/img-services7.png")',
           }}
         >
           <h2>SERVICES: INTERNAL NETWORK PENTEST</h2>
@@ -104,7 +104,7 @@ const Section2 = () => {
           className="contain"
           style={{
             backgroundImage:
-              'url("../../public/assets/images/img-services6.png")',
+              'url("../assets/images/img-services6.png")',
           }}
         >
           <h2>CODEFEND SERVICES: EXTERNAL NETWORK PENTESTSUMMARY</h2>

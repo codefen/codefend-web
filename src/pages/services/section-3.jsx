@@ -24,7 +24,7 @@ const Section3 = () => {
                     <p>
                       Gather actionable intelligence with our open source and human Intelligence services. Improve your decision-making and stay ahead of the competition with our decentralized open source intel services.
                     </p>
-                    <img src="../../public/assets/images/triangle.png" alt="triangle"/>
+                    <img src="../assets/images/triangle.png" alt="triangle"/>
 
               </div>
               <div className="item active" onClick={()=>slideDirection(2)}>
@@ -33,7 +33,7 @@ const Section3 = () => {
                     <p>
                       Codefend does manual and semi-automated penetration testing processes using commercial and proprietary security software to evaluate your web application from the perspective of anonymous and authenticated users.
                     </p>
-                    <img src="../../public/assets/images/triangle.png" alt="triangle" />
+                    <img src="../assets/images/triangle.png" alt="triangle" />
 
               </div>
               <div className="item" onClick={()=>slideDirection(3)}>
@@ -42,13 +42,13 @@ const Section3 = () => {
                   <p>   
                       Codefend does manual and semi-automated penetration testing processes using commercial and proprietary security software to evaluate your web application from the perspective of anonymous and authenticated users.
                   </p>
-                  <img src="../../public/assets/images/triangle.png" alt="triangle" />
+                  <img src="../assets/images/triangle.png" alt="triangle" />
 
               </div>
             </div>
             <div style={{transform:'translateX(-100%)'}} className="slide-contain">
               <div className="contain" style={{
-                backgroundImage:'url("../../public/assets/images/img-services7.png")'
+                backgroundImage:'url("../assets/images/img-services7.png")'
               }}>
               <h2>SERVICES: INTEL & RESEARCH SERVICES</h2>
 
@@ -103,7 +103,7 @@ const Section3 = () => {
                   </ul>
               </div>
               <div className="contain" style={{
-                backgroundImage:'url("../../public/assets/images/img-services5.png")'
+                backgroundImage:'url("../assets/images/img-services5.png")'
               }}>
                 <h2>CLOUD:  SECURITY POSTURE MANAGMENT</h2>
                   <ul>

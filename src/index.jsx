@@ -12,6 +12,7 @@ import Industries from './pages/industries';
 import Services from './pages/services';
 import Compliance from './pages/compliance';
 import Partners from './pages/partners';
+import Friends from './pages/friends';
 
 export default function App() {
   return (
@@ -25,7 +26,7 @@ export default function App() {
             <Route path="services" element={<Services />} />
             <Route path="compliance" element={<Compliance />} />
             <Route path="partners" element={<Partners />} />
-            
+            {/* <Route path="team" element={<Friends />} /> */}
             <Route path="*" element={<Home />} />
           </Route>
         </Routes>

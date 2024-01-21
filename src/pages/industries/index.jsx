@@ -20,7 +20,7 @@ const Industries = () => {
                 className="item">
                 <div 
                 style={{
-                  backgroundImage: `url(../../public/assets/images/item_${i + 1}.png)`
+                  backgroundImage: `url(../assets/images/item_${i + 1}.png)`
                 }}
                 className="image">
                 </div>
