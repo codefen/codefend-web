@@ -21,22 +21,24 @@ const Footer = () => {
                     <div className="footer_links">
                         <ul>
                             <li>for hackers</li>
-                            <li><a href="#">work remote & full time</a></li>
-                            <li><a href="#">submite your vulnerability</a></li>
-                            <li><a href="#">our rewards</a></li>
+                            <li><a className="line" href="#">work remote & full time</a></li>
+                            <li><a className="line" href="#">submite your vulnerability</a></li>
+                            <li><a className="line" href="#">our rewards</a></li>
                         </ul>
                         <ul>
                             <li>codefend</li>
-                            <li><a href="#">our sales team</a></li>
-                            <li><a href="#">partnership</a></li>
-                            <li><a href="#">contact us</a></li>
+                            <li><a className="line" href="#">our sales team</a></li>
+                            <li><a href="mailto:business@codefend.com">partnership</a></li>
+                            <li><a href="mailto:hello@codefend.com">contact us</a></li>
+                            <li><a href="https://docs.google.com/document/d/1KZRrfHR4hIy2YyKkQmPK7Azp-zkbk7mYhCM6xKlVsoE/edit#heading=h.otbipzz762sq">Terms of use</a></li>
+                            <li><a href="https://docs.google.com/document/d/1e0Th-KsMRn_DO8uJ14WZkAqJK7DiUFvrLkQ2yol6E_o/edit?usp=sharing">Privacy policy</a></li>
                         </ul>
                         <ul>
                             <li>resources</li>
-                            <li><a href="#">enciclopedia</a></li>
-                            <li><a href="#">cursos</a></li>
-                            <li><a href="##">prescanner</a></li>
-                            <li><a href="##">infosec</a></li>
+                            <li><a className="line" href="#">enciclopedia</a></li>
+                            <li><a className="line" href="#">cursos</a></li>
+                            <li><a className="line" href="##">prescanner</a></li>
+                            <li><a className="line" href="##">infosec</a></li>
                         </ul>
                     </div>
                 </div>

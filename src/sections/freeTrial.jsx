@@ -1,14 +1,40 @@
 import { useEffect, useRef, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 const FreeTrial = () => {
   const img1 = useRef(null);
   const img2 = useRef(null);
   const [scrolly, setScrolly] = useState(0);
+  const [currentPage, setCurrentPage] = useState(0);
+  const location = useLocation()
 
+  useEffect(()=>{
+    if (location.pathname === '/') {
+      setCurrentPage(8700);
+    } else if (location.pathname === '/software') {
+      setCurrentPage(4700);
+    } else if (location.pathname === '/industries') {
+      setCurrentPage(2700);
+      
+    } else if (location.pathname === '/services') {
+      setCurrentPage(3700);
+      
+    } else if (location.pathname === '/compliance') {
+      setCurrentPage(2700);
+      
+    } else if (location.pathname === '/partners') {
+      setCurrentPage(3000);
+      
+    } else if (location.pathname === '/team') {
+      setCurrentPage(1700);
+      
+    } 
+  },[location.pathname])
+  
   useEffect(() => {
     const handleScroll = () => {
       setScrolly(window.scrollY);
-      let round = 8700;
+      let round = currentPage;
       if (scrolly > round) {
         img1.current.style.top = (scrolly - round) / 5 + "px";
         img2.current.style.bottom = (scrolly - round) / 5 + "px";

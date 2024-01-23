@@ -8,13 +8,13 @@ const Partners1 = () => {
             <div className="contain-info">
                 <div className="item">
                     <div className="img-contain">
-                        <img src="../assets/images/img.png" alt="" />
+                        <img src="../assets/images/img.png" alt="web-albilad-solutions" />
                         <div className="countrys">
-                            <img src="../assets/images/country1.png" alt="" />
-                            <img src="../assets/images/country2.png" alt="" />
-                            <img src="../assets/images/country3.png" alt="" />
-                            <img src="../assets/images/country4.png" alt="" />
-                            <img src="../assets/images/country5.png" alt="" />
+                            <img src="../assets/images/country1.png" alt="country-1" />
+                            <img src="../assets/images/country2.png" alt="country-2" />
+                            <img src="../assets/images/country3.png" alt="country-3" />
+                            <img src="../assets/images/country4.png" alt="country-4" />
+                            <img src="../assets/images/country5.png" alt="country-5" />
                         </div>
                     </div>
                     <ul>
@@ -28,7 +28,11 @@ const Partners1 = () => {
                         <li>
                             <h3>Exclusivity and special support</h3>
                             <p><b>Al-bilad, as the exclusive partner in the mena</b> (middle east and north africa) area, <b>boasts dedicated servers and exclusive access points for all its clients. </b>These facilities are <b>strategically located in the AWS Bahrain</b> DC53 MMR Data Center, situated in Askar, Bahrain.</p>
-                        </li>
+                        </li>img
+img
+img
+img
+img
                         <li>
                             <h3>More information</h3>
                             <a target="_blank" href="https://albilad-solutions.com">- https://albilad-solutions.com</a> <br /><br />
@@ -39,7 +43,7 @@ const Partners1 = () => {
                 </div>
                 <div className="item">
                     <div className="img-contain">
-                        <img src="" alt="" />
+                        {/* <img src="" alt="" /> */}
                     </div>
                     <ul>
                         <li>
@@ -51,7 +55,7 @@ const Partners1 = () => {
             </div>
             <div className="nextgen">
                 <h1>Next-Gen commercial networks codefend's vision</h1>
-                <img src="../assets/images/red.png" alt="" />
+                <img src="../assets/images/red.png" alt="cyber-circle" />
                 <div className="nextgen-contain">
                     <div className="nextitem">
                         <h3>NEXT-GEN NETWORKS VISION</h3>

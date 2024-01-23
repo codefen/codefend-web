@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 
-const CardMembers = ({member, index}) => {
+const CardMembers = ({member, index, select}) => {
     return (
         <motion.div 
             initial={{opacity:0, x: -50, y: -50}}
@@ -8,7 +8,7 @@ const CardMembers = ({member, index}) => {
             transition={{duration:0.3, delay: index * 0.1}}
             viewport={{once:true}}
             onClick={()=>{
-                console.log(member.name)
+                select(index)
             }}
             className="card">
             <img loading="lazy" src={member.image} alt={` ${member.name}`} />
