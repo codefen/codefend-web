@@ -139,6 +139,11 @@ header + section {
 ///////////////////////////////////////////////////////////////////
 // header
 //////////////////////////////////////////////////////////////////
+.down{
+  background-color: #830000 !important;
+  padding: 0 !important;
+  top: 0px !important;
+}
 header.header {
   background-color: rgba(0, 0, 0, 0.4);
   position: sticky;
@@ -146,6 +151,7 @@ header.header {
   top: 20px;
   z-index: 1000;
   color: #ffffff;
+  transition: all 0.3s linear;
 
   .container {
     max-width: 1900px;

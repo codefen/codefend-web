@@ -6,9 +6,17 @@ import { FaX } from "react-icons/fa6";
 
 
 const Header = () => {
-    const [close, setClose] = useState(true);
+    let [close, setClose] = useState(true);
     const menu = useRef();
     const location = useLocation();
+
+
+    window.addEventListener('scroll', ()=>{
+        const header = document.querySelector('.header');
+        header.classList.toggle('down', window.scrollY > 0);
+    })
+
+
 
     const menuAppear = () => {
         window.scrollTo(0, 0);
