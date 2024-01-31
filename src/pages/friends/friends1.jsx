@@ -9,36 +9,45 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
-const Friends1 = ()=> {
-    const teamFilter = ['Alvaro Yaquemet','Leandro Ferrari','Elias Bustos','Francisco Ruiz','Emiliano Peralta','Maria Luca Fenochietto','Maximiliano Daniel Olivera','Esteban Cano'];
+const Friends1 = () => {
+    const teamFilter = ['Alvaro Yaquemet', 'Leandro Ferrari', 'Elias Bustos', 'Francisco Ruiz', 'Emiliano Peralta', 'Maria Luca Fenochietto', 'Maximiliano Daniel Olivera', 'Esteban Cano'];
     const filtered = members.filter((data) => !teamFilter.includes(data.name));
     let cards = [];
     let profiles = [];
 
 
-    useEffect(()=>{
-      cards = document.querySelectorAll('.card');
-      profiles = document.querySelectorAll('.profile');
-      cards[0].classList.add('active')
-    },[])  
+    useEffect(() => {
+        cards = document.querySelectorAll('.card');
+        profiles = document.querySelectorAll('.profile');
+        cards[0].classList.add('active')
+    }, [])
 
     const SelectCard = (index) => {
-         cards.forEach((card) => card.classList.remove('active'));
-         profiles.forEach((card) => card.classList.remove('showprofile'));
-         cards[index].classList.toggle('active');
-         profiles[index].classList.toggle('showprofile');
-     }
+        cards.forEach((card) => card.classList.remove('active'));
+        profiles.forEach((card) => card.classList.remove('showprofile'));
+        cards[index].classList.toggle('active');
+        profiles[index].classList.toggle('showprofile');
+    }
 
 
     return (
-        <section 
-        className="friends1">
+        <section
+            className="friends1">
+                
             <Swiper
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 spaceBetween={50}
                 slidesPerView={6}
                 navigation
-                breakpoints= {{
+                breakpoints={{
+                    2300: {
+                        slidesPerView: 8,
+                        spaceBetween: 40
+                    },
+                    2000: {
+                        slidesPerView: 7,
+                        spaceBetween: 40
+                    },
                     1550: {
                         slidesPerView: 6,
                         spaceBetween: 40
@@ -63,29 +72,32 @@ const Friends1 = ()=> {
                 onSwiper={(swiper) => console.log(swiper)}
                 onSlideChange={() => console.log('slide change')}
                 loop={true}
-            > 
+            >
                 {
-                    filtered.map((member, i)=>{
-                        return(
-                          <SwiperSlide key={i}>
-                              {/* <CardMembers key={i} member={member} index={i} select={SelectCard}/> */}
-                                <div 
-                                    onClick={()=>SelectCard(i)}
+                    filtered.map((member, i) => {
+                        return (
+                            <SwiperSlide key={i}>
+                                {/* <CardMembers key={i} member={member} index={i} select={SelectCard}/> */}
+                                <div
+                                    onClick={() => SelectCard(i)}
                                     className="card">
                                     <img loading="lazy" src={member.image} alt={` ${member.name}`} />
                                     <p>
                                         <span><b>{member.name}</b></span><br />
                                         Rol: {member.rol} <br />
-                                        <a href={`https://${member.profile}`} target="_blank">Profile: {member.profile}</a> <br />
+                                        Profile:<br />
+                                        <a href={`https://${member.profile}`} target="_blank">{member.profile}</a> <br />
                                         Experience: {member.experience}
                                     </p>
                                 </div>
-                          </SwiperSlide>
-                          
+                            </SwiperSlide>
+
                         )
                     })
                 }
+                
             </Swiper>
+            <div className="container">
             <div className="profile-contain">
                 <div className="profile showprofile">
                     <img src="../public/assets/images/bkg-chris.png" alt="image-chris" />
@@ -93,42 +105,43 @@ const Friends1 = ()=> {
                     <div className="information">
                         <h2>Christian 'Ch' Russo</h2>
                         <span>OFFENSIVE SECURITY RESEARCH</span>
-                        <div className="text">                           
+                        <div className="text">
                             <h3>Profesional Summary</h3>
                             <p>Based on the information provided and the search results, it appears that Christian "ch" Russo is a hacker who has been involved in several high-profile security breaches. However, due to the limitations in accessing the LinkedIn profile and other direct sources, the following resume is constructed based on the information available from the KrebsOnSecurity articles and other related content. <br /><br />
-                            Christian "ch" Russo is a security researcher and hacker known for exposing vulnerabilities in major websites. With a background in coding in PHP and using SQL databases, Russo has demonstrated a deep understanding of web security and the implications of data breaches.</p>
+                                Christian "ch" Russo is a security researcher and hacker known for exposing vulnerabilities in major websites. With a background in coding in PHP and using SQL databases, Russo has demonstrated a deep understanding of web security and the implications of data breaches.</p>
                             <h3>Key Achievements</h3>
                             <p>Identified and exposed security flaws in The Pirate Bay's database, gaining access to user information including usernames and hashed passwords (6) - Contacted eHarmony offering to sell security services to help the company fix security flaws, which eHarmony declined (11) - Involved in a security breach at PlentyOfFish.com, although the details of this involvement are not specified in the search results.</p>
                         </div>
-                    </div> 
+                    </div>
                 </div>
                 <div className="profile">
                     <img src="../public/assets/images/bkg-edgardo.png" alt="image-edgardo" />
                     <div className="information">
                         <h2>Edgardo Krauser</h2>
                         <span>OFFENSIVE SECURITY RESEARCH</span>
-                        <div className="text">              
+                        <div className="text">
                             <h3>Profesional Summary</h3>
                             <p>Based on the information provided and the search results, it appears that Christian "ch" Russo is a hacker who has been involved in several high-profile security breaches. However, due to the limitations in accessing the LinkedIn profile and other direct sources, the following resume is constructed based on the information available from the KrebsOnSecurity articles and other related content. <br /><br />
-                            Christian "ch" Russo is a security researcher and hacker known for exposing vulnerabilities in major websites. With a background in coding in PHP and using SQL databases, Russo has demonstrated a deep understanding of web security and the implications of data breaches.</p>
+                                Christian "ch" Russo is a security researcher and hacker known for exposing vulnerabilities in major websites. With a background in coding in PHP and using SQL databases, Russo has demonstrated a deep understanding of web security and the implications of data breaches.</p>
                             <h3>Key Achievements</h3>
                             <p>Identified and exposed security flaws in The Pirate Bay's database, gaining access to user information including usernames and hashed passwords (6) - Contacted eHarmony offering to sell security services to help the company fix security flaws, which eHarmony declined (11) - Involved in a security breach at PlentyOfFish.com, although the details of this involvement are not specified in the search results.</p>
                         </div>
-                    </div> 
+                    </div>
                 </div>
                 <div className="profile">
                     <img src="../public/assets/images/bkg-ignacio.png" alt="image-ignacio" />
                     <div className="information">
-                        <h2>Ignacio Gomez</h2>
-                        <span>OFFENSIVE SECURITY RESEARCH</span>
-                        <div className="text">                   
-                            <h3>Profesional Summary</h3>
-                            <p>Based on the information provided and the search results, it appears that Christian "ch" Russo is a hacker who has been involved in several high-profile security breaches. However, due to the limitations in accessing the LinkedIn profile and other direct sources, the following resume is constructed based on the information available from the KrebsOnSecurity articles and other related content. <br /><br />
-                            Christian "ch" Russo is a security researcher and hacker known for exposing vulnerabilities in major websites. With a background in coding in PHP and using SQL databases, Russo has demonstrated a deep understanding of web security and the implications of data breaches.</p>
+                        <h2>Ignacio Gómez</h2>
+                        <span>EXPERT IN USER BEHAVIOR AND INTERFACES</span>
+                        <div className="text">
+                            <h3>Professional Summary</h3>
+                            <p>Ignacio Gómez is a distinguished expert specializing in the intricate field of user behavior and interfaces. His expertise lies in the strategic application of behavioral science to interface design, enabling a profound understanding of user interactions with digital environments. Gómez possesses a unique blend of technical acumen and psychological insight, making him adept at predicting and influencing user behavior through interface design.<br /><br />
+                                Throughout his career, Gómez has been instrumental in conducting advanced human behavior research at major corporations. His work primarily involves dissecting complex user interactions and employing this knowledge to enhance interface design, thereby subtly guiding user actions and decisions. His approach is deeply rooted in technical sophistication, focusing on the psychological aspects of user interaction rather than mere aesthetic design.</p>
                             <h3>Key Achievements</h3>
-                            <p>Identified and exposed security flaws in The Pirate Bay's database, gaining access to user information including usernames and hashed passwords (6) - Contacted eHarmony offering to sell security services to help the company fix security flaws, which eHarmony declined (11) - Involved in a security breach at PlentyOfFish.com, although the details of this involvement are not specified in the search results.</p>
+                            <p>Developed sophisticated models for predicting user behavior, significantly enhancing user engagement and satisfaction - Pioneered research methods in user behavior analysis, leading to groundbreaking insights in interface usability - Successfully implemented strategies for user behavior manipulation through interface design, resulting in improved business outcomes for several large-scale corporations.</p>
                         </div>
-                    </div> 
+                    </div>
+
                 </div>
                 <div className="profile">
                     <img src="../public/assets/images/bkg-hems.png" alt="image-hems" />
@@ -140,38 +153,36 @@ const Friends1 = ()=> {
                             <p>Versatile Frontend Engineer specializing in web and mobile software development with  6 years of experience building user-friendly applications.</p>
                         </div>
 
-                    </div> 
+                    </div>
                 </div>
                 <div className="profile">
                     <img src="../public/assets/images/bkg-mixa.png" alt="image-mixa" />
                     <div className="information">
                         <h2>Misael Los santos</h2>
                         <span>OFFENSIVE SECURITY RESEARCH</span>
-                        <div className="text">       
+                        <div className="text">
                             <h3>Profesional Summary</h3>
                             <p>Based on the information provided and the search results, it appears that Christian "ch" Russo is a hacker who has been involved in several high-profile security breaches. However, due to the limitations in accessing the LinkedIn profile and other direct sources, the following resume is constructed based on the information available from the KrebsOnSecurity articles and other related content. <br /><br />
-                            Christian "ch" Russo is a security researcher and hacker known for exposing vulnerabilities in major websites. With a background in coding in PHP and using SQL databases, Russo has demonstrated a deep understanding of web security and the implications of data breaches.</p>
+                                Christian "ch" Russo is a security researcher and hacker known for exposing vulnerabilities in major websites. With a background in coding in PHP and using SQL databases, Russo has demonstrated a deep understanding of web security and the implications of data breaches.</p>
                             <h3>Key Achievements</h3>
                             <p>Identified and exposed security flaws in The Pirate Bay's database, gaining access to user information including usernames and hashed passwords (6) - Contacted eHarmony offering to sell security services to help the company fix security flaws, which eHarmony declined (11) - Involved in a security breach at PlentyOfFish.com, although the details of this involvement are not specified in the search results.</p>
                         </div>
-                    </div> 
+                    </div>
                 </div>
                 <div className="profile">
                     <img src="../public/assets/images/bkg-peroni.png" alt="image-peroni" />
                     <div className="information">
                         <h2>Miguel Peroni</h2>
                         <span>OFFENSIVE SECURITY RESEARCH</span>
-                        <div className="text">                       
+                        <div className="text">
                             <h3>Profesional Summary</h3>
                             <p>Miguel is a Highly skilled Senior Technology & Business Consultant with a proven track record of delivering innovative solutions and driving business growth. Offering a wealth of experience in strategic planning, project management, and client relationship management. Focusing to leverage their expertise to contribute to the success of dynamic organization as Codefend is. <br /><br />
 
-                            Miguel have a wide work experience with the most important technology vendors like: Cisco Systems, Proofpoint, Lenovo, DellEMC, IXSystems, HPE, Aruba, Fortinet, Juniper, Checkpoint, Nokia, Palo Alto, Huawei, RedHAt, Microsoft, Veeam, Acronis, Tenable, IBM, SolarWinds, Progress - Ipswitch, <br /><br />
-                                        
-                            He is based in Latam from where have been travelling & providing services for companies in North, Central and South America: Financial Services, Manufacturing, Media & Entertainment, Technology, Telco, Retail, and Government entities.</p>
-                            <h3></h3>
-                            <p></p>
+                                Miguel have a wide work experience with the most important technology vendors like: Cisco Systems, Proofpoint, Lenovo, DellEMC, IXSystems, HPE, Aruba, Fortinet, Juniper, Checkpoint, Nokia, Palo Alto, Huawei, RedHAt, Microsoft, Veeam, Acronis, Tenable, IBM, SolarWinds, Progress - Ipswitch, <br /><br />
+
+                                He is based in Latam from where have been travelling & providing services for companies in North, Central and South America: Financial Services, Manufacturing, Media & Entertainment, Technology, Telco, Retail, and Government entities.</p>
                         </div>
-                    </div> 
+                    </div>
                 </div>
                 <div className="profile">
                     <img src="../public/assets/images/bkg-zaballa.png" alt="image-peroni" />
@@ -179,7 +190,7 @@ const Friends1 = ()=> {
                         <h2>Federico Zaballa</h2>
                         <span>OFFENSIVE SECURITY RESEARCH</span>
                         <div className="text">
-                            
+
                             <h3>Profesional Summary</h3>
                             <p>A forward-thinking cybersecurity professional and Co-founder/Business Director at Codefend, I possess a demonstrated history of excelling in strategic business and technical leadership within the cybersecurity realm. My passion lies in navigating intricate cybersecurity challenges to formulate strategic business solutions, leveraging my expertise as a DevSecOps advocate, cloud architecture specialist, and data analytics enthusiast. As a seasoned leader, I specialize in the creation and implementation of robust security infrastructures, utilizing data-driven insights to strengthen cyber defenses and architecting secure, scalable cloud environments. <br /><br />
 
@@ -200,10 +211,9 @@ const Friends1 = ()=> {
                                 Startup Co-founder:
                                 Founded a startup, demonstrating entrepreneurial spirit and leadership in building a new venture. This achievement reflects the ability to navigate the challenges of entrepreneurship and contribute to the creation of innovative solutions.</p>
                         </div>
-                        <h3></h3>
-                        <p></p>
-                    </div> 
+                    </div>
                 </div>
+            </div>
             </div>
         </section>
     )
