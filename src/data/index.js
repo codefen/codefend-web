@@ -37,6 +37,7 @@ export const members = [
     {image:'../assets/images/members/hemsleek.png',name:'Asiyanbi Mubashir', rol:'Frontend Software Engineer', profile:`${link}hemsleek/`,experience:'4+ years'},
     {image:'../assets/images/members/mixael.png',name:'Misael Los santos', rol:'frontend developer', profile:`${link}misael-los-santos-011b00220/`,experience:'1+ years'},
     {image:'../assets/images/members/miguel.png',name:'Miguel Peroni', rol:'Security & CyberSecurity', profile:`${link}peroni/`,experience:'8+ years'},
+    {image:'../assets/images/members/zaballa.png',name:'Federico Zaballa', rol:'Head of team, Web 3.0', profile:`${link}zaballaf`,experience:'15+ years'},
 
 ]
 
