@@ -2534,7 +2534,7 @@ section.friends1{
         &::aftesr{
           content: '';
           width: 100%;
-          height: 10%;
+          height: 12%;
           background: linear-gradient(to top, #000, transparent);
           position: absolute;
           bottom: 0%;
@@ -2599,6 +2599,11 @@ section.friends1{
         background-repeat: no-repeat;
         opacity:0;
       }
+      &:nth-child(8){
+        background-image: url('../../public/assets/images/bkg-gaspi.png');
+        background-repeat: no-repeat;
+        opacity:0;
+      }
     }
   }
   @media screen and (max-width: 768px) {
@@ -2612,26 +2617,15 @@ section.friends1{
         img{
           display: block;
         }
-        &:nth-child(1){
+        &:nth-child(1), 
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(5),
+        &:nth-child(6),
+        &:nth-child(7),
+        &:nth-child(8){
         background-image: none;
-        }
-        &:nth-child(2){
-        background-image: none; 
-        }
-        &:nth-child(3){
-        background-image: none;  
-        }
-        &:nth-child(4){
-        background-image: none;  
-        }
-        &:nth-child(5){
-        background-image: none;
-        }
-        &:nth-child(6){
-        background-image: none;
-        }
-        &:nth-child(7){
-          background-image: none;
         }
       }
     }
@@ -2655,6 +2649,8 @@ section.friends1{
   box-shadow: 0 0 14px #00000044;
   transition: all 0.2s;
   border: none;
+  max-width: 220px;
+  cursor: pointer;
 
   &.alt {
     background-color: var(--btn-color-alt);

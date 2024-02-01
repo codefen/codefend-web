@@ -118,13 +118,12 @@ const Friends1 = () => {
                     <img src="../public/assets/images/bkg-edgardo.png" alt="image-edgardo" />
                     <div className="information">
                         <h2>Edgardo Krauser</h2>
-                        <span>OFFENSIVE SECURITY RESEARCH</span>
-                        <div className="text">
+                        <span>CIBER SECURITY</span>
+                        <div className="text">              
                             <h3>Profesional Summary</h3>
-                            <p>Based on the information provided and the search results, it appears that Christian "ch" Russo is a hacker who has been involved in several high-profile security breaches. However, due to the limitations in accessing the LinkedIn profile and other direct sources, the following resume is constructed based on the information available from the KrebsOnSecurity articles and other related content. <br /><br />
-                                Christian "ch" Russo is a security researcher and hacker known for exposing vulnerabilities in major websites. With a background in coding in PHP and using SQL databases, Russo has demonstrated a deep understanding of web security and the implications of data breaches.</p>
-                            <h3>Key Achievements</h3>
-                            <p>Identified and exposed security flaws in The Pirate Bay's database, gaining access to user information including usernames and hashed passwords (6) - Contacted eHarmony offering to sell security services to help the company fix security flaws, which eHarmony declined (11) - Involved in a security breach at PlentyOfFish.com, although the details of this involvement are not specified in the search results.</p>
+                            <p>Edgardo Krause is an experienced Senior Security Engineer with a focus on cybersecurity and penetration testing. He specializes in identifying and mitigating security vulnerabilities in web applications, mobile applications, and network infrastructure. With a strong background in security research, testing automation, and software development, Edgardo is dedicated to staying ahead of emerging threats and trends in the field. He has a proven track record in contributing to global security efforts and has worked on various penetration testing and red teaming engagements. <br /><br />
+                                He  holds publics recognitions from differentes companies and governaments, among them the US Department of State and the CERN.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -147,7 +146,7 @@ const Friends1 = () => {
                     <img src="../public/assets/images/bkg-hems.png" alt="image-hems" />
                     <div className="information">
                         <h2>Asiyanbi Mubashir</h2>
-                        <span>OFFENSIVE SECURITY RESEARCH</span>
+                        <span>FRONT END ENGINEER</span>
                         <div className="text">
                             <h3>Profesional Summary</h3>
                             <p>Versatile Frontend Engineer specializing in web and mobile software development with  6 years of experience building user-friendly applications.</p>
@@ -159,13 +158,12 @@ const Friends1 = () => {
                     <img src="../public/assets/images/bkg-mixa.png" alt="image-mixa" />
                     <div className="information">
                         <h2>Misael Los santos</h2>
-                        <span>OFFENSIVE SECURITY RESEARCH</span>
-                        <div className="text">
+                        <span>FRONT END DEVELOPER</span>
+                        <div className="text">       
                             <h3>Profesional Summary</h3>
-                            <p>Based on the information provided and the search results, it appears that Christian "ch" Russo is a hacker who has been involved in several high-profile security breaches. However, due to the limitations in accessing the LinkedIn profile and other direct sources, the following resume is constructed based on the information available from the KrebsOnSecurity articles and other related content. <br /><br />
-                                Christian "ch" Russo is a security researcher and hacker known for exposing vulnerabilities in major websites. With a background in coding in PHP and using SQL databases, Russo has demonstrated a deep understanding of web security and the implications of data breaches.</p>
-                            <h3>Key Achievements</h3>
-                            <p>Identified and exposed security flaws in The Pirate Bay's database, gaining access to user information including usernames and hashed passwords (6) - Contacted eHarmony offering to sell security services to help the company fix security flaws, which eHarmony declined (11) - Involved in a security breach at PlentyOfFish.com, although the details of this involvement are not specified in the search results.</p>
+                            <p>With over a year and a half of experience as a front-end developer, I have excelled in crafting responsive and visually appealing websites/applications using cutting-edge technologies such as Angular and React for various national companies. My expertise extends beyond front-end development, as I possess robust skills in full-stack development, underscored by the creation of intuitive and aesthetically pleasing interfaces in collaborative projects. <br /><br />
+                             My professional journey reflects a continuous commitment to personal growth, highlighted by my exploration into cybersecurity and pentesting at Codefend. This adaptability and ongoing pursuit of new skills position me as a versatile professional ready to tackle contemporary challenges in the digital realm.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -185,7 +183,7 @@ const Friends1 = () => {
                     </div>
                 </div>
                 <div className="profile">
-                    <img src="../public/assets/images/bkg-zaballa.png" alt="image-peroni" />
+                    <img src="../public/assets/images/bkg-zaballa.png" alt="image-zaballa" />
                     <div className="information">
                         <h2>Federico Zaballa</h2>
                         <span>OFFENSIVE SECURITY RESEARCH</span>
@@ -212,6 +210,17 @@ const Friends1 = () => {
                                 Founded a startup, demonstrating entrepreneurial spirit and leadership in building a new venture. This achievement reflects the ability to navigate the challenges of entrepreneurship and contribute to the creation of innovative solutions.</p>
                         </div>
                     </div>
+                </div>
+                <div className="profile">
+                    <img src="../public/assets/images/bkg-gaspi.png" alt="image-gaspar" />
+                    <div className="information">
+                        <h2>Gaspar O.</h2>
+                        <span>OFFENSIVE SECURITY</span>
+                        <div className="text">                       
+                            <h3>Profesional Summary</h3>
+                            <p>I'm from Buenos Aires 🇦🇷. I'm a Computer Science student. Currently I'm working on Cybersecurity, Pentesting, DevSecOps, Cloud Security and Cybersecurity consulting. </p>
+                        </div>
+                    </div> 
                 </div>
             </div>
             </div>
