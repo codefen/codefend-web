@@ -11,7 +11,7 @@ const Footer = () => {
                 <div className="tools">
                     <div className="footer_logo">
                         <img src="../assets/images/logo-light.svg" alt="" />
-                        <ul>
+                        <ul style={{display:'none'}}>
                             <li><img loading="lazy" src="../assets/images/WhatsApp-logo.webp" alt="logo WhatsApp"/></li>
                             <li><img loading="lazy" src="../assets/images/Telegram-logo.webp" alt="logo Telegram"/></li>
                             <li><img loading="lazy" src="../assets/images/signal-logo.webp" alt="logo signal"/></li>
