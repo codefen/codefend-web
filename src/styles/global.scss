@@ -2462,6 +2462,11 @@ section.friends1{
   overflow: hidden;
   background-color: #000;
   color: #fff;
+
+  .swiper-slide{
+    display: flex;
+    justify-content: center;
+  }
   .swiper-button-prev, .swiper-button-next{
     color: red;
     height: 100px;

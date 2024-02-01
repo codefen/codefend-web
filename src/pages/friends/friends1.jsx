@@ -1,7 +1,7 @@
 
 import { members } from "../../data"
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
@@ -9,25 +9,49 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
-const Friends1 = () => {
-    const teamFilter = ['Alvaro Yaquemet', 'Leandro Ferrari', 'Elias Bustos', 'Francisco Ruiz', 'Emiliano Peralta', 'Maria Luca Fenochietto', 'Maximiliano Daniel Olivera', 'Esteban Cano'];
-    const filtered = members.filter((data) => !teamFilter.includes(data.name));
-    let cards = [];
-    let profiles = [];
+const teamFilter = ['Alvaro Yaquemet','Leandro Ferrari','Elias Bustos','Francisco Ruiz','Emiliano Peralta','Maria Luca Fenochietto','Maximiliano Daniel Olivera','Esteban Cano'];
+const filtered = members.filter((data) => !teamFilter.includes(data.name));
 
+const Friends1 = ()=> {
+    // let cards = [];
+    // let profiles = [];
+    // const [indexActive, setIndexActive] = useState(0);
+
+    // useEffect(()=>{
+    //     cards = document.querySelectorAll('.card');
+    //     profiles = document.querySelectorAll('.profile');
+    //     cards[0].classList.add('active');
+    // },[])  
+
+    const [indexActive, setIndexActive] = useState(0);
+    const [cards, setCards] = useState([]);
+    const [profiles, setProfiles] = useState([]);
 
     useEffect(() => {
-        cards = document.querySelectorAll('.card');
-        profiles = document.querySelectorAll('.profile');
-        cards[0].classList.add('active')
-    }, [])
+      const cardElements = document.querySelectorAll('.card');
+      const profileElements = document.querySelectorAll('.profile');
+    
+      setCards(cardElements);
+      setProfiles(profileElements);
+
+      setIndexActive(0);
+    }, []);
+
+
+    const handleSlideChange = ({activeIndex}) => {
+            setIndexActive(activeIndex);
+
+            profiles.forEach((card) => card.classList.remove('showprofile'));
+            profiles[activeIndex].classList.add('showprofile');
+    };
 
     const SelectCard = (index) => {
-        cards.forEach((card) => card.classList.remove('active'));
-        profiles.forEach((card) => card.classList.remove('showprofile'));
-        cards[index].classList.toggle('active');
-        profiles[index].classList.toggle('showprofile');
-    }
+         cards.forEach((card) => card.classList.remove('active'));
+         profiles.forEach((card) => card.classList.remove('showprofile'));
+         cards[index].classList.toggle('active');
+         profiles[index].classList.toggle('showprofile');
+         console.log('click div', index )
+     }
 
 
     return (
@@ -39,48 +63,46 @@ const Friends1 = () => {
                 spaceBetween={50}
                 slidesPerView={6}
                 navigation
-                breakpoints={{
-                    2300: {
-                        slidesPerView: 8,
-                        spaceBetween: 40
-                    },
-                    2000: {
-                        slidesPerView: 7,
-                        spaceBetween: 40
-                    },
-                    1550: {
-                        slidesPerView: 6,
-                        spaceBetween: 40
-                    },
-                    1000: {
-                        slidesPerView: 4,
-                        spaceBetween: 40
-                    },
-                    600: {
-                        slidesPerView: 3,
-                        spaceBetween: 30
-                    },
-                    400: {
-                        slidesPerView: 2,
-                        spaceBetween: 30
-                    },
-                    100: {
-                        slidesPerView: 1,
-                        spaceBetween: 20
-                    }
+                breakpoints= {{
+                     2300: {
+                         slidesPerView: 8,
+                         spaceBetween: 40
+                     },
+                     2000: {
+                         slidesPerView: 7,
+                         spaceBetween: 40
+                     },
+                     1550: {
+                         slidesPerView: 6,
+                         spaceBetween: 40
+                     },
+                     1000: {
+                         slidesPerView: 4,
+                         spaceBetween: 40
+                     },
+                     600: {
+                         slidesPerView: 3,
+                         spaceBetween: 30
+                     },
+                     400: {
+                         slidesPerView: 2,
+                         spaceBetween: 30
+                     },
+                     100: {
+                         slidesPerView: 1,
+                         spaceBetween: 20
+                     }
                 }}
-                onSwiper={(swiper) => console.log(swiper)}
-                onSlideChange={() => console.log('slide change')}
-                loop={true}
-            >
+                onSlideChange={window.innerWidth < 400 ? handleSlideChange : ()=>{}}
+            > 
                 {
-                    filtered.map((member, i) => {
-                        return (
-                            <SwiperSlide key={i}>
-                                {/* <CardMembers key={i} member={member} index={i} select={SelectCard}/> */}
-                                <div
-                                    onClick={() => SelectCard(i)}
-                                    className="card">
+                    filtered.map((member, i)=>{
+                        return(
+                          <SwiperSlide key={i}>
+                              {/* <CardMembers key={i} member={member} index={i} select={SelectCard}/> */}
+                                <div 
+                                    onClick={window.innerWidth > 400 ? ()=>SelectCard(i) : ()=>{}}
+                                    className={`card ${i === indexActive && window.innerWidth < 400 ? 'active' : ''}`}>
                                     <img loading="lazy" src={member.image} alt={` ${member.name}`} />
                                     <p>
                                         <span><b>{member.name}</b></span><br />
