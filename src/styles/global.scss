@@ -1205,12 +1205,12 @@ section.crypto {
   .container {
     display: flex;
     align-items: center;
-    margin: 0 10em;
+    // margin: 0 10em;
     background-image: url("../assets/images/coin-web.webp");
     background-repeat: no-repeat;
     background-size: 600px;
     background-position: 80%;
-    min-height: 600px;
+    // min-height: 300px;
     justify-content: center;
 
     .coin-div {
@@ -2465,7 +2465,7 @@ section.friends1{
   padding-top: 0px;
 
   .swiper-wrapper {
-    gap: 30px;
+    // gap: 30px;
     // overflow: hidden;
   }
   .swiper-slide{

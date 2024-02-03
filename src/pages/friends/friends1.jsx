@@ -60,7 +60,7 @@ const Friends1 = ()=> {
                 <div className="container">
             <Swiper
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
-                spaceBetween={50}
+                spaceBetween={0}
                 slidesPerView={6}
                 navigation
                 breakpoints= {{
