@@ -2462,7 +2462,12 @@ section.friends1{
   overflow: hidden;
   background-color: #000;
   color: #fff;
+  padding-top: 0px;
 
+  .swiper-wrapper {
+    gap: 30px;
+    // overflow: hidden;
+  }
   .swiper-slide{
     display: flex;
     justify-content: center;
@@ -2472,10 +2477,15 @@ section.friends1{
     height: 100px;
     top: 40%;
     transition: background-color .5ms  linear;
+    background-color: #321f1f;
+    padding: 0px 8px;
     &:active{
 
-      background-color: rgba(63, 62, 62, 0.6);
+      background-color: #000;
     }
+  }
+  .swiper-button-prev {
+    // left: -60px;
   }
   .active {
     outline: 5px solid var(--btn-color-main);
@@ -2488,6 +2498,7 @@ section.friends1{
   .swiper{
     padding: 10px;
     box-shadow: 30px 20px 50px 10px #000;
+    // overflow: visible;
   }
   .card {
     padding: 0.5em 2em;
@@ -2614,6 +2625,11 @@ section.friends1{
   @media screen and (max-width: 768px) {
     .card{
       min-height: 350px;
+    }
+
+    .swiper-wrapper {
+      gap: 0px;
+      // overflow: visible;
     }
     .profile-contain{
       min-height:fit-content;
