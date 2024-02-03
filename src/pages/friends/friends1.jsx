@@ -56,40 +56,40 @@ const Friends1 = ()=> {
     return (
         <section
             className="friends1">
-                <div className="container">
+                
             <Swiper
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
-                spaceBetween={0}
+                spaceBetween={50}
                 slidesPerView={6}
                 navigation
                 breakpoints= {{
                      2300: {
                          slidesPerView: 8,
-                         spaceBetween: 0
+                         spaceBetween: 40
                      },
                      2000: {
                          slidesPerView: 7,
-                         spaceBetween: 0
+                         spaceBetween: 40
                      },
                      1550: {
                          slidesPerView: 6,
-                         spaceBetween: 0
+                         spaceBetween: 40
                      },
                      1000: {
                          slidesPerView: 4,
-                         spaceBetween: 0
+                         spaceBetween: 40
                      },
                      600: {
                          slidesPerView: 3,
-                         spaceBetween: 0
+                         spaceBetween: 30
                      },
                      400: {
                          slidesPerView: 2,
-                         spaceBetween: 0
+                         spaceBetween: 30
                      },
                      100: {
                          slidesPerView: 1,
-                         spaceBetween: 0
+                         spaceBetween: 20
                      }
                 }}
                 onSlideChange={window.innerWidth < 400 ? handleSlideChange : ()=>{}}
@@ -118,7 +118,7 @@ const Friends1 = ()=> {
                 }
                 
             </Swiper>
-            
+            <div className="container">
             <div className="profile-contain">
                 <div className="profile showprofile">
                     <img src="../public/assets/images/bkg-chris.png" alt="image-chris" />
