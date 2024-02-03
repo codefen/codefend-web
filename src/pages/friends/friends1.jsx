@@ -24,16 +24,17 @@ const Friends1 = ()=> {
     // },[])  
 
     const [indexActive, setIndexActive] = useState(0);
+    const [cards, setCards] = useState([]);
     const [profiles, setProfiles] = useState([]);
-    let cards = [];
 
     useEffect(() => {
-      cards = document.querySelectorAll('.card');
+      const cardElements = document.querySelectorAll('.card');
       const profileElements = document.querySelectorAll('.profile');
     
+      setCards(cardElements);
       setProfiles(profileElements);
+
       setIndexActive(0);
-      cards[0].classList.add('active')
     }, []);
 
 
