@@ -2477,12 +2477,12 @@ section.friends1{
     height: 100px;
     top: 40%;
     transition: background-color .5ms  linear;
-    background-color: #321f1f;
+    // background-color: #321f1f;
     padding: 0px 8px;
-    &:active{
+    // &:active{
 
-      background-color: #000;
-    }
+    //   background-color: #000;
+    // }
   }
   .swiper-button-prev {
     // left: -60px;
