@@ -2,6 +2,12 @@ import { useEffect, useRef, useState } from "react"
 import { members } from "../data"
 import { motion } from "framer-motion"
 import CardMembers from "../components/card-members"
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 const Members = () => {
     const carousel = useRef(null)
@@ -31,19 +37,38 @@ const Members = () => {
                 {
                     showCarosel 
                     ?  <div className="contain-members"> 
-                            <motion.div 
-                                initial={{opacity:0}}
-                                whileInView={{opacity:1}}
-                                viewport={{once:true}}
-                                className="carousel">
+                            <Swiper 
+                                spaceBetween={50}
+                                slidesPerView={3}
+                                breakpoints= {{
+                                    600: {
+                                        slidesPerView: 2,
+                                        spaceBetween: 30
+                                    },
+                                    400: {
+                                        slidesPerView: 1,
+                                        spaceBetween: 30
+                                    },
+                                    300: {
+                                        slidesPerView: 1,
+                                        spaceBetween: 20
+                                    },
+                                    200: {
+                                        slidesPerView: 1,
+                                        spaceBetween: 20
+                                    }
+                               }}
+                            >
                                {
                                    members.map((member, i)=>{
                                        return(
-                                           <CardMembers key={i} member={member} index={i} />
+                                        <SwiperSlide key={i}>
+                                            <CardMembers member={member} index={i} />
+                                        </SwiperSlide>
                                        )
                                    })
                                }
-                            </motion.div>
+                            </Swiper>
                        </div>
                     : <motion.div style={{padding:'5px'}} ref={carousel} className="contain-members" whileTap={{cursor:"grabbing"}}> 
                             <div className="carousel">
