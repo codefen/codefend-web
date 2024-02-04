@@ -6,14 +6,12 @@ function Crypto() {
           <h3>bitcoin is welcome</h3>
 
           <div className="content">
-            <div className="img-coin">
               <img
                 className="coin1"
                 loading="lazy"
                 src="../assets/images/coinred.webp"
                 alt="bitcoin"
               />
-            </div>
             <p>
               <b>
                 <span>For dear customers, ethical hackers and business partners:</span>

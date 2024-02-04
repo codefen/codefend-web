@@ -11,7 +11,7 @@ import 'swiper/css/scrollbar';
 
 const Members = () => {
     const carousel = useRef(null)
-    const [screen, setScreen] = useState(0)
+    const [screen, setScreen] = useState(1000)
     const [showCarosel, setShowCarousel] = useState(false)
     const [width, setWidth] = useState(0)
     
@@ -27,7 +27,7 @@ const Members = () => {
             setShowCarousel(false)
         }
         window.addEventListener('resize', handleResize)
-    },[width,screen])
+    },[width, screen])
 
 
     return (
