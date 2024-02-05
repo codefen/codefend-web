@@ -84,16 +84,16 @@ const Friends1 = ()=> {
                          slidesPerView: 3,
                          spaceBetween: 30
                      },
-                     400: {
-                         slidesPerView: 2,
+                     500: {
+                         slidesPerView: 1,
                          spaceBetween: 30
                      },
-                     100: {
+                     200: {
                          slidesPerView: 1,
                          spaceBetween: 20
                      }
                 }}
-                onSlideChange={window.innerWidth < 400 ? handleSlideChange : ()=>{}}
+                onSlideChange={window.innerWidth < 600 ? handleSlideChange : ()=>{}}
             > 
                 {
                     filtered.map((member, i)=>{
@@ -101,8 +101,8 @@ const Friends1 = ()=> {
                           <SwiperSlide key={i}>
                               {/* <CardMembers key={i} member={member} index={i} select={SelectCard}/> */}
                                 <div 
-                                    onClick={window.innerWidth > 400 ? ()=>SelectCard(i) : ()=>{}}
-                                    className={`card ${i === indexActive && window.innerWidth < 400 ? 'active' : ''}`}>
+                                    onClick={window.innerWidth > 600 ? ()=>SelectCard(i) : ()=>{}}
+                                    className={`card ${i === indexActive && window.innerWidth < 600 ? 'active' : ''}`}>
                                     <img loading="lazy" src={member.image} alt={` ${member.name}`} />
                                     <p>
                                         <span><b>{member.name}</b></span><br />
@@ -122,7 +122,7 @@ const Friends1 = ()=> {
             <div className="container">
             <div className="profile-contain">
                 <div className="profile showprofile">
-                    <img src="../public/assets/images/bkg-chris.png" alt="image-chris" />
+                    <img src="../assets/images/bkg-chris.png" alt="image-chris" />
 
                     <div className="information">
                         <h2>Christian 'Ch' Russo</h2>
@@ -137,7 +137,7 @@ const Friends1 = ()=> {
                     </div>
                 </div>
                 <div className="profile">
-                    <img src="../public/assets/images/bkg-edgardo.png" alt="image-edgardo" />
+                    <img src="../assets/images/bkg-edgardo.png" alt="image-edgardo" />
                     <div className="information">
                         <h2>Edgardo Krauser</h2>
                         <span>CIBER SECURITY</span>
@@ -150,7 +150,7 @@ const Friends1 = ()=> {
                     </div>
                 </div>
                 <div className="profile">
-                    <img src="../public/assets/images/bkg-ignacio.png" alt="image-ignacio" />
+                    <img src="../assets/images/bkg-ignacio.png" alt="image-ignacio" />
                     <div className="information">
                         <h2>Ignacio Gómez</h2>
                         <span>EXPERT IN USER BEHAVIOR AND INTERFACES</span>
@@ -165,7 +165,7 @@ const Friends1 = ()=> {
 
                 </div>
                 <div className="profile">
-                    <img src="../public/assets/images/bkg-hems.png" alt="image-hems" />
+                    <img src="../assets/images/bkg-hems.png" alt="image-hems" />
                     <div className="information">
                         <h2>Asiyanbi Mubashir</h2>
                         <span>FRONT END ENGINEER</span>
@@ -177,7 +177,7 @@ const Friends1 = ()=> {
                     </div>
                 </div>
                 <div className="profile">
-                    <img src="../public/assets/images/bkg-mixa.png" alt="image-mixa" />
+                    <img src="../assets/images/bkg-mixa.png" alt="image-mixa" />
                     <div className="information">
                         <h2>Misael Los santos</h2>
                         <span>FRONT END DEVELOPER</span>
@@ -190,7 +190,7 @@ const Friends1 = ()=> {
                     </div>
                 </div>
                 <div className="profile">
-                    <img src="../public/assets/images/bkg-peroni.png" alt="image-peroni" />
+                    <img src="../assets/images/bkg-peroni.png" alt="image-peroni" />
                     <div className="information">
                         <h2>Miguel Peroni</h2>
                         <span>OFFENSIVE SECURITY RESEARCH</span>
@@ -205,7 +205,7 @@ const Friends1 = ()=> {
                     </div>
                 </div>
                 <div className="profile">
-                    <img src="../public/assets/images/bkg-zaballa.png" alt="image-zaballa" />
+                    <img src="../assets/images/bkg-zaballa.png" alt="image-zaballa" />
                     <div className="information">
                         <h2>Federico Zaballa</h2>
                         <span>OFFENSIVE SECURITY RESEARCH</span>
@@ -234,7 +234,7 @@ const Friends1 = ()=> {
                     </div>
                 </div>
                 <div className="profile">
-                    <img src="../public/assets/images/bkg-gaspi.png" alt="image-gaspar" />
+                    <img src="../assets/images/bkg-gaspi.png" alt="image-gaspar" />
                     <div className="information">
                         <h2>Gaspar O.</h2>
                         <span>OFFENSIVE SECURITY</span>
