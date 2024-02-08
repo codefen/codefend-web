@@ -153,6 +153,10 @@ const Section1 = () => {
           style={{
             backgroundImage:
               'url("../assets/images/img-services5.png")',
+              '@media (max-width: 820px)': {
+                backgroundImage: 'url("../assets/images/img-services5.webp")',
+                /* Cambia la imagen de fondo a una versión más pequeña o diferente */
+              }
           }}
         >
           <h2>CLOUD: SECURITY POSTURE MANAGMENT</h2>

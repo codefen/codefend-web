@@ -14,7 +14,7 @@ const MainDiferences = () => {
             <p>
               Codefend serves all its clients via a desktop application that
               requires installation. From this platform, we establish secure &
-              encrypted communications with yourv company's staff. Codefend
+              encrypted communications with your company's staff. Codefend
               conducts systematic supervision of your infrastructure, employing
               diverse techniques and private information providers.
             </p>

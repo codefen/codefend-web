@@ -48,7 +48,11 @@ const Section3 = () => {
             </div>
             <div style={{transform:'translateX(-100%)'}} className="slide-contain">
               <div className="contain" style={{
-                backgroundImage:'url("../assets/images/img-services7.png")'
+                backgroundImage:'url("../assets/images/img-services7.png")',
+                '@media (max-width: 820px)': {
+                  backgroundImage: 'url("../assets/images/img-services7.webp")',
+                }
+                
               }}>
               <h2>SERVICES: INTEL & RESEARCH SERVICES</h2>
 
@@ -103,7 +107,10 @@ const Section3 = () => {
                   </ul>
               </div>
               <div className="contain" style={{
-                backgroundImage:'url("../assets/images/img-services5.png")'
+                backgroundImage:'url("../assets/images/img-services5.png")',
+                '@media (max-width: 820px)': {
+                  backgroundImage: 'url("../assets/images/img-services5.webp")',
+                }
               }}>
                 <h2>CLOUD:  SECURITY POSTURE MANAGMENT</h2>
                   <ul>

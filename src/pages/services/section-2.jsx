@@ -62,6 +62,9 @@ const Section2 = () => {
           style={{
             backgroundImage:
               'url("../assets/images/img-services7.png")',
+              '@media (max-width: 820px)': {
+                backgroundImage: 'url("../assets/images/img-services7.webp")',
+              }
           }}
         >
           <h2>SERVICES: INTERNAL NETWORK PENTEST</h2>
@@ -105,6 +108,9 @@ const Section2 = () => {
           style={{
             backgroundImage:
               'url("../assets/images/img-services6.png")',
+              '@media (max-width: 820px)': {
+                backgroundImage: 'url("../assets/images/img-services6.webp")',
+              }
           }}
         >
           <h2>CODEFEND SERVICES: EXTERNAL NETWORK PENTESTSUMMARY</h2>
