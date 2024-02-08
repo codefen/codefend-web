@@ -34,6 +34,7 @@
   font-weight: 400;
   src: local("Questrial-Regular"),
     url("../assets/fonts/Questrial-Regular.ttf") format("truetype");
+  font-display: swap;
 }
 
 html {
@@ -1273,7 +1274,12 @@ section.crypto {
       }
     }
   }
+  @media screen and (max-width: 650px) {
+    .container {
+      background-image: url("../assets/images/coin-web-mobile.png");
+  }}
 }
+
 
 ///////////////////////////////////////////////////////////////////
 // members - section 9
@@ -1281,7 +1287,7 @@ section.crypto {
 section.members {
   overflow: hidden;
   background-color: #000000;
-  background-image: url("../assets/images/bkg-red5.webp");
+  background-image: url("../assets/images/bkg-red5.png");
   background-size: cover;
   color: #fff;
 
