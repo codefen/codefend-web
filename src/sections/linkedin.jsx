@@ -20,7 +20,7 @@ const Linkedin = () => {
                                     <div key={tes.name} className="card">
                                         <p>{tes.description}</p>
                                         <div>
-                                            <img src={tes.image} alt="icon person" />
+                                            <img loading="lazy" src={tes.image} alt="icon person" />
                                             <p>
                                                 <b>{tes.name}</b><br />
                                                 Profile: <a href={`https://${tes.profile}`} target="_blank">{tes.profile}</a><br/>
@@ -37,7 +37,7 @@ const Linkedin = () => {
                                     <div key={tes.name} className="card">
                                         <p>{tes.description}</p>
                                         <div>
-                                            <img src={tes.image} alt="icon person" />
+                                            <img loading="lazy" src={tes.image} alt="icon person" />
                                             <p>
                                                 <b>{tes.name}</b><br />
                                                 Profile: <a href={`https://${tes.profile}`} target="_blank">{tes.profile}</a><br/>
@@ -61,7 +61,7 @@ const Linkedin = () => {
                                     <div key={tes.name} className="card">
                                         <p>{tes.description}</p>
                                         <div>
-                                            <img src={tes.image} alt="icon person" />
+                                            <img loading="lazy" src={tes.image} alt="icon person" />
                                             <p>
                                                 <b>{tes.name}</b><br />
                                                 Profile: <a href={`https://${tes.profile}`} target="_blank">{tes.profile}</a><br/>
@@ -78,7 +78,7 @@ const Linkedin = () => {
                                     <div key={tes.name} className="card">
                                         <p>{tes.description}</p>
                                         <div>
-                                            <img src={tes.image} alt="icon person" />
+                                            <img loading="lazy" src={tes.image} alt="icon person" />
                                             <p>
                                                 <b>{tes.name}</b><br />
                                                 Profile: <a href={`https://${tes.profile}`} target="_blank">{tes.profile}</a><br/>
@@ -101,7 +101,7 @@ const Linkedin = () => {
                                     <div key={tes.name} className="card">
                                         <p>{tes.description}</p>
                                         <div>
-                                            <img src={tes.image} alt="icon person" />
+                                            <img loading="lazy" src={tes.image} alt="icon person" />
                                             <p>
                                                 <b>{tes.name}</b><br />
                                                 Profile: <a href={`https://${tes.profile}`} target="_blank">{tes.profile}</a><br/>
@@ -118,7 +118,7 @@ const Linkedin = () => {
                                     <div key={tes.name} className="card">
                                         <p>{tes.description}</p>
                                         <div>
-                                            <img src={tes.image} alt="icon person" />
+                                            <img loading="lazy" src={tes.image} alt="icon person" />
                                             <p>
                                                 <b>{tes.name}</b><br />
                                                 Profile: <a href={`https://${tes.profile}`} target="_blank">{tes.profile}</a><br/>

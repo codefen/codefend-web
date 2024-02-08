@@ -8,13 +8,13 @@ const Partners1 = () => {
                 <div className="contain-info">
                     <div className="item">
                         <div className="img-contain">
-                            <img src="../assets/images/img.png" alt="web-albilad-solutions" />
+                            <img loading="lazy" src="../assets/images/img.png" alt="web-albilad-solutions" />
                             <div className="countrys">
-                                <img src="../assets/images/country1.png" alt="country-1" />
-                                <img src="../assets/images/country2.png" alt="country-2" />
-                                <img src="../assets/images/country3.png" alt="country-3" />
-                                <img src="../assets/images/country4.png" alt="country-4" />
-                                <img src="../assets/images/country5.png" alt="country-5" />
+                                <img loading="lazy" src="../assets/images/country1.png" alt="country-1" />
+                                <img loading="lazy" src="../assets/images/country2.png" alt="country-2" />
+                                <img loading="lazy" src="../assets/images/country3.png" alt="country-3" />
+                                <img loading="lazy" src="../assets/images/country4.png" alt="country-4" />
+                                <img loading="lazy" src="../assets/images/country5.png" alt="country-5" />
                             </div>
                         </div>
                         <ul>
@@ -51,7 +51,7 @@ const Partners1 = () => {
                 </div>
                 <div className="contacts">
                         <div className="item">
-                            <img src="../assets/images/contact1.webp" loading="lazy" alt="contact" />
+                            <img  src="../assets/images/contact1.webp" loading="lazy" alt="contact" />
                             <p><b>Khalid Ayed</b><br />
                                 riyadh, saudi arabia <br />
                                 <a href="mailto:khalid@codefend.com">khalid@codefend.com</a> <br />
@@ -77,7 +77,7 @@ const Partners1 = () => {
                     </div>
                 <div className="nextgen">
                     <h1>Next-Gen commercial networks codefend's vision</h1>
-                    <img src="../assets/images/red.png" alt="cyber-circle" />
+                    <img loading="lazy" src="../assets/images/red.png" alt="cyber-circle" />
                     <div className="nextgen-contain">
                         <div className="nextitem">
                             <h3>NEXT-GEN NETWORKS VISION</h3>
