@@ -32,7 +32,7 @@ const Section2 = () => {
           </p>
           <img src="../assets/images/triangle.png" alt="triangle" />
         </div>
-        <div className="item active" onClick={() => slideDirection(2)}>
+        <div className="item " onClick={() => slideDirection(2)}>
           <h3>external network pentest</h3>
           <p>
             Codefend does manual and semi-automated penetration testing
@@ -42,7 +42,7 @@ const Section2 = () => {
           </p>
           <img src="../assets/images/triangle.png" alt="triangle" />
         </div>
-        <div className="item" onClick={() => slideDirection(3)}>
+        <div className="item active" onClick={() => slideDirection(3)}>
           <h3>source code review</h3>
           <p>
             Codefend does manual and semi-automated penetration testing

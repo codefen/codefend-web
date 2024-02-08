@@ -50,7 +50,6 @@ const Friends1 = ()=> {
          profiles.forEach((card) => card.classList.remove('showprofile'));
          cards[index].classList.toggle('active');
          profiles[index].classList.toggle('showprofile');
-         console.log('click div', index )
      }
 
 
@@ -80,12 +79,12 @@ const Friends1 = ()=> {
                          slidesPerView: 4,
                          spaceBetween: 40
                      },
-                     600: {
+                     768: {
                          slidesPerView: 3,
                          spaceBetween: 30
                      },
-                     500: {
-                         slidesPerView: 1,
+                     600: {
+                         slidesPerView: 2,
                          spaceBetween: 30
                      },
                      200: {
