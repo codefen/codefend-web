@@ -57,8 +57,7 @@ const Prices = () => {
             whileInView={{ opacity: 1 }}
           >
             Choose between performing o single pentest, with a duration of one
-            month from start to finish,
-            <b>recommended for small businesses and startups</b>
+            month from start to finish,<b> recommended for small businesses and startups </b>
             or perform a permanent supervision of your systems and
             infrastructure with a year duration,
             <b>

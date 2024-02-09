@@ -95,7 +95,7 @@ const Partners1 = () => {
                             </div>
                         </div>
                         <div className="nextitem">
-                            <b>36%</b>
+                            <b>35%</b>
                             <div className="text">
                                 <h3>UP TO 35% FOR EXCLUSIVE PARTNERS</h3>
                                 <p>Codefend provides an exclusive partnership program that allows you to operate with complete exclusivity in your chosen countries, subject to availability. This partnership guarantees the provision of dedicated servers and activities, ensuring consistent availability. <br /><br />

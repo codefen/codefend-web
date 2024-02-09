@@ -51,7 +51,7 @@ const MainDiferences = () => {
                   <p>
                     <b>our asm delivers permanent surveillance</b>
                     <br />
-                    We consider information security should be a run as a
+                    We consider information security should be run as a
                     process. We provide permanent survelliance instead of once
                     in a year checks. Vulnerabilities found are notified on
                     demand in our plataform.

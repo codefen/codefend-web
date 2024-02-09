@@ -75,8 +75,8 @@ const FreeTrial = () => {
             <input placeholder="we need continious serveillance" type="text" />
             <input placeholder="first name" type="text" />
             <input placeholder="last name" type="text" />
-            <input placeholder="role in company" type="email" />
-            <input placeholder="work email" type="number" />
+            <input placeholder="role in company" type="text" />
+            <input placeholder="work email" type="email" />
             <input placeholder="mobile phone number" type="text" />
             <input placeholder="company name" type="text" />
             <input placeholder="company website" type="text" />
