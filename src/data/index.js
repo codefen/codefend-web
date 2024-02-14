@@ -28,19 +28,19 @@ export const members = [
     {image:'../assets/images/members/leandro.webp',name:'Leandro Ferrari', rol:'pentest & offensice cloud security', profile:`${link}leandroferrari/`,experience:'10+years'},
     {image:'../assets/images/members/elias.webp',name:'Elias Bustos', rol:'human documencation', profile:`${link}eliasbus/`,experience:'10+ years'},
     {image:'../assets/images/members/francisco.webp',name:'Francisco Ruiz', rol:'offensive security', profile:`${link}franciscomruiz/`,experience:'10+ years'},
-    {image:'../assets/images/members/edgardo.webp',name:'Edgardo Krause', rol:'web application pentest', profile:`${link}edgardokrause/`,experience:'7+ years'},
+    {image:'../assets/images/members/edgardo.webp',name:'Edgardo Krause', rol:'CyberSecurity', profile:`${link}edgardokrause/`,experience:'7+ years'},
     {image:'../assets/images/members/emiliano.webp',name:'Emiliano Peralta', rol:'pentest & social engineering', profile:`${link}emilianoperalta/`,experience:'10+ years'},
     {image:'../assets/images/members/ignacio.webp',name:'Ignacio Gomez', rol:'user experience', profile:`${link}gomez-ignacio/`,experience:'10+ years'},
     {image:'../assets/images/members/luca.webp',name:'Maria Luca Fenochietto', rol:'operations', profile:`${link}luca-fenochietto/`,experience:'10+ years'},
     {image:'../assets/images/members/maxi.webp',name:'Maximiliano Daniel Olivera', rol:'pentest', profile:`${link}maximiliano-daniel-olivera/`,experience:'3+ years'},
     {image:'../assets/images/members/esteban.webp',name:'Esteban Cano', rol:'web pentest & devsec ops', profile:`${link}estebancano/`,experience:'5+ years'},
     {image:'../assets/images/members/hemsleek.png',name:'Asiyanbi Mubashir', rol:'frontend software Engineer', profile:`${link}hemsleek/`,experience:'4+ years'},
-    {image:'../assets/images/members/mixael.png',name:'Misael Los santos', rol:'frontend developer', profile:`${link}misael-los-santos-011b00220/`,experience:'1+ years'},
-    {image:'../assets/images/members/miguel.png',name:'Miguel Peroni', rol:'Security & CyberSecurity', profile:`${link}peroni/`,experience:'8+ years'},
-    {image:'../assets/images/members/zaballa.png',name:'Federico Zaballa', rol:'Head of team, Web 3.0', profile:`${link}zaballaf`,experience:'15+ years'},
+    {image:'../assets/images/members/mixael.png',name:'Misael Los santos', rol:'developer', profile:`${link}misael-los-santos-011b00220/`,experience:'1+ years'},
+    {image:'../assets/images/members/miguel.png',name:'Miguel Peroni', rol:'CyberSecurity', profile:`${link}peroni/`,experience:'8+ years'},
+    {image:'../assets/images/members/zaballa.png',name:'Federico Zaballa', rol:'cloud security', profile:`${link}zaballaf`,experience:'15+ years'},
     {image:'../assets/images/members/gaspar.png',name:'Gaspar O.', rol:'pentest', profile:`${link}gonesto/`,experience:'4+ years'},
-    {image:'../assets/images/members/matias.png',name:'Matias', rol:'software', profile:`${link}matias/`,experience:'10+ years'},
-    {image:'../assets/images/members/marcos.png',name:'Marcos', rol:'software', profile:`${link}marcos/`,experience:'3+ years'}
+    // {image:'../assets/images/members/matias.png',name:'Matias', rol:'software', profile:`${link}matias/`,experience:'10+ years'},
+    // {image:'../assets/images/members/marcos.png',name:'Marcos', rol:'software', profile:`${link}marcos/`,experience:'3+ years'}
 ]
 
 export const testimonials = [
