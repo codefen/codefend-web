@@ -32,4 +32,4 @@ jobs:
         aws-region: ${{ secrets.AWS_REGION }}
 
     - name: Sync directory with S3
-      run: aws s3 sync build s3://${{ secrets.S3_BUCKET_STAGE }} --delete
+      run: aws s3 sync build s3://${{ secrets.S3_BUCKET_PROD }} --delete
