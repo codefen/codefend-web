@@ -58,7 +58,9 @@ const Header = () => {
                     duration:1
                     }}
                 className="brand">
-                <img src="../assets/images/logo-light.svg" alt="logo" />
+                <a href="/#hero">
+                    <img src="../assets/images/logo-light.svg" alt="logo" />
+                </a>
                 </motion.div>
                 
                 <button onClick={menuAppear} className="toggle">

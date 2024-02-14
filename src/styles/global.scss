@@ -1306,6 +1306,14 @@ section.members {
       display: none;
     }
 
+    .swiper-button-prev, .swiper-button-next{
+      color: red;
+      height: 100px;
+      top: 40%;
+      transition: background-color .5ms  linear;
+      padding: 0px 8px;
+    }
+
     .carousel {
       display: flex;
       flex-wrap: wrap;
@@ -2335,6 +2343,7 @@ section.partners1 {
       }
     }
   }
+
   .contacts {
     display: flex;
     column-gap: 13px;
@@ -2355,7 +2364,7 @@ section.partners1 {
       padding: 0 3vw;
       max-width: 500px;
       border: 2px solid #3a3a3a;
-
+      z-index: 55;
       img {
         border-radius: 50%;
         border: 1px solid #bebebe;

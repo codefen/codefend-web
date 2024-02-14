@@ -3,11 +3,11 @@ import { members } from "../data"
 import { motion } from "framer-motion"
 import CardMembers from "../components/card-members"
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, A11y } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
 
 const Members = () => {
     const carousel = useRef(null)
@@ -38,7 +38,9 @@ const Members = () => {
                     showCarosel 
                     ?  <div className="contain-members"> 
                             <Swiper 
-                                spaceBetween={50}
+                        modules={[Navigation, A11y]}
+                        spaceBetween={50}
+                        navigation
                                 slidesPerView={3}
                                 breakpoints= {{
                                     600: {
