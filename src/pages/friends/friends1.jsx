@@ -9,19 +9,10 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
-const teamFilter = ['Alvaro Yaquemet', 'Leandro Ferrari', 'Elias Bustos', 'Francisco Ruiz', 'Emiliano Peralta', 'Maria Luca Fenochietto', 'Maximiliano Daniel Olivera', 'Esteban Cano'];
+const teamFilter = ['Alvaro Yaquemet', 'Leandro Ferrari', 'Elias Bustos', 'Francisco Ruiz', 'Emiliano Peralta', 'Maria Luca Fenochietto', 'Maximiliano Daniel Olivera', 'Esteban Cano', 'Matias', 'Marcos'];
 const filtered = members.filter((data) => !teamFilter.includes(data.name));
 
 const Friends1 = () => {
-    // let cards = [];
-    // let profiles = [];
-    // const [indexActive, setIndexActive] = useState(0);
-
-    // useEffect(()=>{
-    //     cards = document.querySelectorAll('.card');
-    //     profiles = document.querySelectorAll('.profile');
-    //     cards[0].classList.add('active');
-    // },[])  
 
     const [indexActive, setIndexActive] = useState(0);
     const [cards, setCards] = useState([]);
@@ -118,6 +109,7 @@ const Friends1 = () => {
                 }
 
             </Swiper>
+            
             <div className="container">
                 <div className="profile-contain">
                     <div className="profile showprofile">
