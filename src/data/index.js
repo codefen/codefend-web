@@ -39,8 +39,9 @@ export const members = [
     {image:'../assets/images/members/miguel.png',name:'Miguel Peroni', rol:'CyberSecurity', profile:`${link}peroni/`,experience:'8+ years'},
     {image:'../assets/images/members/zaballa.png',name:'Federico Zaballa', rol:'cloud security', profile:`${link}zaballaf`,experience:'15+ years'},
     {image:'../assets/images/members/gaspar.png',name:'Gaspar O.', rol:'pentest', profile:`${link}gonesto/`,experience:'4+ years'},
-    // {image:'../assets/images/members/matias.png',name:'Matias', rol:'software', profile:`${link}matias/`,experience:'10+ years'},
-    // {image:'../assets/images/members/marcos.png',name:'Marcos', rol:'software', profile:`${link}marcos/`,experience:'3+ years'}
+    {image:'../assets/images/members/matias.png',name:'Matias', rol:'software', profile:`${link}matias/`,experience:'10+ years'},
+    {image:'../assets/images/members/marcos.png',name:'Marcos', rol:'software', profile:`${link}marcos/`,experience:'3+ years'},
+    //{image:'../assets/images/members/fede.png',name:'Federico Zaballa', rol:'software', profile:`${link}fdmazza/`,experience:'5+ years'}
 ]
 
 export const testimonials = [
