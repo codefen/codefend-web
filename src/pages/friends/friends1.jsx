@@ -186,7 +186,7 @@ const Friends1 = () => {
                         <img loading="lazy" src="../assets/images/bkg-peroni.png" alt="image-peroni" />
                         <div className="information">
                             <h2>Miguel Peroni</h2>
-                            <span>OFFENSIVE SECURITY RESEARCH</span>
+                            <span>Business</span>
                             <div className="text">
                                 <h3>Profesional Summary</h3>
                                 <p>Miguel is a Highly skilled Senior Technology & Business Consultant with a proven track record of delivering innovative solutions and driving business growth. Offering a wealth of experience in strategic planning, project management, and client relationship management. Focusing to leverage their expertise to contribute to the success of dynamic organization as Codefend is. <br /><br />
