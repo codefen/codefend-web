@@ -36,7 +36,7 @@ export const members = [
     {image:'../assets/images/members/esteban.webp',name:'Esteban Cano', rol:'web pentest & devsec ops', profile:`${link}estebancano/`,experience:'5+ years'},
     {image:'../assets/images/members/hemsleek.png',name:'Asiyanbi Mubashir', rol:'frontend software Engineer', profile:`${link}hemsleek/`,experience:'4+ years'},
     {image:'../assets/images/members/mixael.png',name:'Misael Los santos', rol:'developer', profile:`${link}misael-los-santos-011b00220/`,experience:'1+ years'},
-    {image:'../assets/images/members/miguel.png',name:'Miguel Peroni', rol:'CyberSecurity', profile:`${link}peroni/`,experience:'8+ years'},
+    {image:'../assets/images/members/miguel.png',name:'Miguel Peroni', rol:'business expert', profile:`${link}peroni/`,experience:'8+ years'},
     {image:'../assets/images/members/zaballa.png',name:'Federico Zaballa', rol:'cloud security', profile:`${link}zaballaf`,experience:'15+ years'},
     {image:'../assets/images/members/gaspar.png',name:'Gaspar O.', rol:'pentest', profile:`${link}gonesto/`,experience:'4+ years'},
     {image:'../assets/images/members/matias.png',name:'Matias', rol:'software', profile:`${link}matias/`,experience:'10+ years'},
