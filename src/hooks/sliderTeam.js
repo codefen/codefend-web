@@ -51,9 +51,7 @@ const useSliderTeam = (idSlider) => {
              autoChangeCard();
             }, 3000);
             
-        if(window.innerWidth < 820){
-            clearInterval(intervalId);
-        } 
+
             
         const handleMouseEnter = () => {
             clearInterval(intervalId);
@@ -62,16 +60,35 @@ const useSliderTeam = (idSlider) => {
         const handleMouseLeave = () => {
             if(window.innerWidth < 820){
                 return null
-            }         
-            intervalId = setInterval(autoChangeCard(), 3000);
+            }        
+            setTimeout(()=>{
+                intervalId = setInterval(autoChangeCard(), 3000);
+            }, 3000) 
         };
+
         cards.forEach((card)=>{
            card.addEventListener("mouseenter", handleMouseEnter);
            card.addEventListener("mouseleave", handleMouseLeave);
         })
 
-        return () => clearInterval(intervalId);
+        if(window.innerWidth < 820){
+            clearInterval(intervalId);
+            cards.forEach((card)=>{
+                card.removeEventListener("mouseenter", handleMouseEnter);
+                card.removeEventListener("mouseleave", handleMouseLeave);
+            })
+        } 
+
+        return () =>{ 
+            clearInterval(intervalId);
+            cards.forEach((card)=>{
+                card.removeEventListener("mouseenter", handleMouseEnter);
+                card.removeEventListener("mouseleave", handleMouseLeave);
+            })
+        };
      }, [indexActive]); 
+
+
 
     return {
         indexActive,
