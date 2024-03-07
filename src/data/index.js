@@ -44,6 +44,21 @@ export const members = [
     //{image:'../assets/images/members/fede.png',name:'Federico Zaballa', rol:'software', profile:`${link}fdmazza/`,experience:'5+ years'}
 ]
 
+export const team = [
+    [
+        {id:'chris', image:'../assets/images/members/chris.webp',name:'Christian C. Russo', rol:'offensive security', profile:`${link}chris-c-russo/`,experience:'10+ years'},
+        {id:'edgardo', image:'../assets/images/members/edgardo.webp',name:'Edgardo Krause', rol:'CyberSecurity', profile:`${link}edgardokrause/`,experience:'7+ years'},
+        {id:'ignacio', image:'../assets/images/members/ignacio.webp',name:'Ignacio Gomez', rol:'user experience', profile:`${link}gomez-ignacio/`,experience:'10+ years'},
+        {id:'hemsleek', image:'../assets/images/members/hemsleek.png',name:'Asiyanbi Mubashir', rol:'frontend software Engineer', profile:`${link}hemsleek/`,experience:'4+ years'},
+    ],
+    [
+        {id:'zaballa', image:'../assets/images/members/zaballa.png',name:'Federico Zaballa', rol:'cloud security', profile:`${link}zaballaf`,experience:'15+ years'},
+        {id:'miguel', image:'../assets/images/members/miguel.png',name:'Miguel Peroni', rol:'CyberSecurity', profile:`${link}peroni/`,experience:'8+ years'},
+        {id:'misael', image:'../assets/images/members/mixael.png',name:'Misael Los santos', rol:'developer', profile:`${link}misael-los-santos-011b00220/`,experience:'1+ years'},
+        {id:'gaspar', image:'../assets/images/members/gaspar.png',name:'Gaspar O.', rol:'pentest', profile:`${link}gonesto/`,experience:'4+ years'},
+    ]
+]
+
 export const testimonials = [
     [
         {name:'Mohammed Alam', image:'../assets/images/testimonials/chris/alam.webp', profile:`${link}mohammed-alam-0a553560/`, rol:'CEO Al-bilad for consultation and solutions', description:'Chris C is an excellent professional engineer in the area of ethical hacking in addition, he is skillful in web security'},
