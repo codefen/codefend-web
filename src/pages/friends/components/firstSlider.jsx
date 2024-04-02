@@ -20,7 +20,7 @@ const breakPoints = {
         spaceBetween: 40
     },
     1550: {
-        slidesPerView: 3,
+        slidesPerView: 4,
         spaceBetween: 40
     },
     1000: {
@@ -102,14 +102,29 @@ const FirstSlider = () => {
                         </div>
                     </div>
                 </div>
+                <div id="miguel" className="profile">
+                    <img loading="lazy" src="../assets/images/bkg-peroni.png" alt="image-peroni" />
+                    <div className="information">
+                        <h2>Miguel Peroni</h2>
+                        <span>OFFENSIVE SECURITY RESEARCH</span>
+                        <div className="text">
+                            <h3>Profesional Summary</h3>
+                            <p>Miguel is a Highly skilled Senior Technology & Business Consultant with a proven track record of delivering innovative solutions and driving business growth. Offering a wealth of experience in strategic planning, project management, and client relationship management. Focusing to leverage their expertise to contribute to the success of dynamic organization as Codefend is. <br /><br />
+
+                                Miguel have a wide work experience with the most important technology vendors like: Cisco Systems, Proofpoint, Lenovo, DellEMC, IXSystems, HPE, Aruba, Fortinet, Juniper, Checkpoint, Nokia, Palo Alto, Huawei, RedHAt, Microsoft, Veeam, Acronis, Tenable, IBM, SolarWinds, Progress - Ipswitch, <br /><br />
+
+                                He is based in Latam from where have been travelling & providing services for companies in North, Central and South America: Financial Services, Manufacturing, Media & Entertainment, Technology, Telco, Retail, and Government entities.</p>
+                        </div>
+                    </div>
+                </div>
                 <div id="ignacio" className="profile">
                     <img loading="lazy" src="../assets/images/bkg-ignacio.png" alt="image-ignacio" />
                     <div className="information">
                         <h2>Ignacio Gómez</h2>
-                        <span>EXPERT IN USER BEHAVIOR AND INTERFACES</span>
+                        <span>product</span>
                         <div className="text">
                             <h3>Professional Summary</h3>
-                            <p>Ignacio Gómez is a distinguished expert specializing in the intricate field of user behavior and interfaces. His expertise lies in the strategic application of behavioral science to interface design, enabling a profound understanding of user interactions with digital environments. Gómez possesses a unique blend of technical acumen and psychological insight, making him adept at predicting and influencing user behavior through interface design.<br /><br />
+                            <p>Ignacio Gómez is a distinguished expert specializing in the intricate field of product and user behavior. His expertise lies in the strategic application of behavioral science to final product, enabling a profound understanding of user interactions with digital environments. Gómez possesses a unique blend of technical acumen and psychological insight, making him adept at predicting and influencing user behavior through interface design.<br /><br />
                                 Throughout his career, Gómez has been instrumental in conducting advanced human behavior research at major corporations. His work primarily involves dissecting complex user interactions and employing this knowledge to enhance interface design, thereby subtly guiding user actions and decisions. His approach is deeply rooted in technical sophistication, focusing on the psychological aspects of user interaction rather than mere aesthetic design.</p>
                             <h3>Key Achievements</h3>
                             <p>Developed sophisticated models for predicting user behavior, significantly enhancing user engagement and satisfaction - Pioneered research methods in user behavior analysis, leading to groundbreaking insights in interface usability - Successfully implemented strategies for user behavior manipulation through interface design, resulting in improved business outcomes for several large-scale corporations.</p>
@@ -117,20 +132,7 @@ const FirstSlider = () => {
                     </div>
 
                 </div>
-                <div id="hemsleek" className="profile">
-                    <img loading="lazy" src="../assets/images/bkg-hems.png" alt="image-hems" />
-                    <div className="information">
-                        <h2>Asiyanbi 'Am' Mubashir</h2>
-                        <span>FRONTEND SOFTWARE ENGINEER</span>
-                        <div className="text">
-                            <h3>Professional Summary</h3>
-                            <p>From Nigeria, Asiyanbi "Am" Mubashir excels in frontend development with SolidJS, ReactJS, and React Native with Expo. Passionate about TypeScript and Firebase, his work is characterized by responsive design and scalable applications using Tailwind CSS. With experience in Node.js and Express, as well as Next.js, SASS, and GraphQL, Mubashir combines creativity and technical skill to drive innovation in software development.</p>
-                            <h3>Key Achievements</h3>
-                            <p>At Codefend.com, he led projects that enhanced user experience. His leadership in mobile development increased user engagement. Academically recognized at the University of Ilorin, his robot car project showcases his technical ingenuity.</p>
-                        </div>
-                    </div>
-
-                </div>
+                
             </div>
     </div>
     )

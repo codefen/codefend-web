@@ -88,21 +88,21 @@ const SecondSlider = () => {
                     </div>
 
                 </div>
-                <div id="miguel" className="profile">
-                    <img loading="lazy" src="../assets/images/bkg-peroni.png" alt="image-peroni" />
+                <div id="hemsleek" className="profile">
+                    <img loading="lazy" src="../assets/images/bkg-hems.png" alt="image-hems" />
                     <div className="information">
-                        <h2>Miguel Peroni</h2>
-                        <span>OFFENSIVE SECURITY RESEARCH</span>
+                        <h2>Asiyanbi 'Am' Mubashir</h2>
+                        <span>FRONTEND SOFTWARE ENGINEER</span>
                         <div className="text">
-                            <h3>Profesional Summary</h3>
-                            <p>Miguel is a Highly skilled Senior Technology & Business Consultant with a proven track record of delivering innovative solutions and driving business growth. Offering a wealth of experience in strategic planning, project management, and client relationship management. Focusing to leverage their expertise to contribute to the success of dynamic organization as Codefend is. <br /><br />
-
-                                Miguel have a wide work experience with the most important technology vendors like: Cisco Systems, Proofpoint, Lenovo, DellEMC, IXSystems, HPE, Aruba, Fortinet, Juniper, Checkpoint, Nokia, Palo Alto, Huawei, RedHAt, Microsoft, Veeam, Acronis, Tenable, IBM, SolarWinds, Progress - Ipswitch, <br /><br />
-
-                                He is based in Latam from where have been travelling & providing services for companies in North, Central and South America: Financial Services, Manufacturing, Media & Entertainment, Technology, Telco, Retail, and Government entities.</p>
+                            <h3>Professional Summary</h3>
+                            <p>From Nigeria, Asiyanbi "Am" Mubashir excels in frontend development with SolidJS, ReactJS, and React Native with Expo. Passionate about TypeScript and Firebase, his work is characterized by responsive design and scalable applications using Tailwind CSS. With experience in Node.js and Express, as well as Next.js, SASS, and GraphQL, Mubashir combines creativity and technical skill to drive innovation in software development.</p>
+                            <h3>Key Achievements</h3>
+                            <p>At Codefend.com, he led projects that enhanced user experience. His leadership in mobile development increased user engagement. Academically recognized at the University of Ilorin, his robot car project showcases his technical ingenuity.</p>
                         </div>
                     </div>
-                </div>
+
+                </div>                
+                
                 <div id="misael" className="profile ">
                     <img loading="lazy" src="../assets/images/bkg-mixa.png" alt="image-mixa" />
                     <div className="information">

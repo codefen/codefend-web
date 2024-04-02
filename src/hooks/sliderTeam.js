@@ -49,7 +49,7 @@ const useSliderTeam = (idSlider) => {
          };
          intervalId = setInterval(() => {
              autoChangeCard();
-            }, 3000);
+            }, 999999);
             
 
             
@@ -62,8 +62,8 @@ const useSliderTeam = (idSlider) => {
                 return null
             }        
             setTimeout(()=>{
-                intervalId = setInterval(autoChangeCard(), 3000);
-            }, 3000) 
+                intervalId = setInterval(autoChangeCard(), 999999);
+            }, 999999) 
         };
 
         cards.forEach((card)=>{

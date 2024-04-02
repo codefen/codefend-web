@@ -2476,8 +2476,8 @@ section.partners1 {
 
 }
 
-section.herofriends{
-  height: 80vh;
+section.herofriends {
+  height: 67vh;
   background-color: #000;
   background-image: url('../../public/assets/images/bkg-friend.png');
   background-repeat: no-repeat;
@@ -2504,7 +2504,7 @@ section.herofriends{
   }
 }
 
-section.friends1{
+section.friends1 {
   overflow: hidden;
   background-color: #000;
   color: #fff;
@@ -2530,11 +2530,10 @@ section.friends1{
     box-shadow: 30px 20px 50px 10px #000;
   }
   .card {
-
      padding: 0.5em 2em;
      border: 2px solid var(--text-color-alt2);
      background-color: rgba(0, 0, 0, 0.5);
-     width: 400px;
+    //  width: 400px;
      column-gap: 1em;
      display: flex;
      align-items: center;
@@ -2609,52 +2608,45 @@ section.friends1{
     }
   }
 
-  .container-1 {
+  .container-1, .container-2 {
     .profile-contain{
       .profile{
-        &:nth-child(1){
+        &#chris {
           background-image: url('../../public/assets/images/bkg-chris.png');
           background-repeat: no-repeat;
           opacity:0;
         }
-        &:nth-child(2){
+        &#edgardo {
           background-image: url('../../public/assets/images/bkg-edgardo.png');
           background-repeat: no-repeat;
           opacity:0;
         }
-        &:nth-child(3){ 
+        &#ignacio { 
           background-image: url('../../public/assets/images/bkg-ignacio.png');
           background-repeat: no-repeat;
           opacity:0;
         }
-        &:nth-child(4){
+        &#hemsleek {
           background-image: url('../../public/assets/images/bkg-hems.png');
           background-repeat: no-repeat;
           opacity:0;
         }
-      }
-    }
-  }
-
-  .container-2{
-    .profile-contain{
-      .profile{
-        &:nth-child(1){
+        &#zaballa {
           background-image: url('../../public/assets/images/bkg-zaballa.png');
           background-repeat: no-repeat;
           opacity:0;
         }
-        &:nth-child(2){
+        &#miguel{
           background-image: url('../../public/assets/images/bkg-peroni.png');
           background-repeat: no-repeat;
           opacity:0;
         }
-        &:nth-child(3){
+        &#misael {
           background-image: url('../../public/assets/images/bkg-mixa.png');
           background-repeat: no-repeat;
           opacity:0;
         }
-        &:nth-child(4){
+        &#gaspar {
           background-image: url('../../public/assets/images/bkg-gaspi.png');
           background-repeat: no-repeat;
           opacity:0;
@@ -2686,7 +2678,7 @@ section.friends1{
     }
     .card{
       min-height: 350px;
-      max-width: 200px;
+      width: 90vw;
       flex-direction: column;
       justify-content: center;
     }
