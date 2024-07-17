@@ -47,10 +47,7 @@ const Section1 = () => {
         <div className="item" onClick={(e) => slideDirection(3, e)}>
           <h3>cloud security posture</h3>
           <p>
-            Codefend does manual and semi-automated penetration testing
-            processes using commercial and proprietary security software to
-            evaluate your web application from the perspective of anonymous and
-            authenticated users.
+          Codefend offers robust cloud security assessments using advanced manual and automated techniques. We leverage a blend of commercial and proprietary tools to ensure comprehensive protection for your cloud infrastructure.
           </p>
           <img src="../assets/images/triangle.png" alt="triangle" />
         </div>
@@ -64,20 +61,7 @@ const Section1 = () => {
               'url("../assets/images/img-services4.png")',
           }}
         >
-          <h2>SERVICES: WEB APPLICATION PENETRATION TEST</h2>
           <ul>
-            <li>
-              <h3>
-                <b>SUMMARY:</b>
-              </h3>
-
-              <p>
-                Codefend does manual and semi-automated penetration testing
-                processes using commercial and proprietary security software to
-                evaluate your web application from the perspective of an
-                attacker.
-              </p>
-            </li>
             <li>
               <h3>MORE DETAILS:</h3>
               <p>
@@ -107,20 +91,7 @@ const Section1 = () => {
           </ul>
         </div>
         <div className="contain">
-          <h2>SECURITY: MOBILE APPLICATION PENETRATION TEST</h2>
-
           <ul>
-            <li>
-              <h3>
-                <b>SUMMARY:</b>
-              </h3>
-              <p>
-                Codefend does manual and semi-automated penetration testing
-                processes using commercial and proprietary security software to
-                evaluate your web application from the perspective of anonymous
-                and authenticated users.
-              </p>
-            </li>
             <li>
               <h3>MORE DETAILS:</h3>
               <p>
@@ -159,20 +130,7 @@ const Section1 = () => {
               }
           }}
         >
-          <h2>CLOUD: SECURITY POSTURE MANAGMENT</h2>
           <ul>
-            <li>
-              <h3>
-                <b>SUMMARY:</b>
-              </h3>
-
-              <p>
-                Codefend does manual and semi-automated penetration testing
-                processes using commercial and proprietary security software to
-                evaluate your web application from the perspective of an
-                attacker.
-              </p>
-            </li>
             <li>
               <h3>MORE DETAILS:</h3>
               <p>

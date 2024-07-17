@@ -19,7 +19,7 @@ const Friends1 = () => {
 
             <FirstSlider />
 
-            <SecondSlider />
+            {/* <SecondSlider /> */}
 
         </section>
     )

@@ -12,9 +12,8 @@ const MainDiferences = () => {
                       className="copy">
             <h2>main differences</h2>
             <p>
-              Codefend serves all its clients via a desktop application that
-              requires installation. From this platform, we establish secure &
-              encrypted communications with your company's staff. Codefend
+              Codefend serves all its clients via a web application. From this platform, <strong>we establish secure &
+              encrypted communications with your company's staff</strong>. Codefend
               conducts systematic supervision of your infrastructure, employing
               diverse techniques and private information providers.
             </p>
@@ -49,12 +48,9 @@ const MainDiferences = () => {
                     <img src="../assets/images/icon1.webp" loading="lazy" alt="icon-img" />
                   </div>
                   <p>
-                    <b>our asm delivers permanent surveillance</b>
+                    <b>our <span title="Attack Surface Management">ASM</span> offers on-demand pentesting</b>
                     <br />
-                    We consider information security should be run as a
-                    process. We provide permanent survelliance instead of once
-                    in a year checks. Vulnerabilities found are notified on
-                    demand in our plataform.
+                    We believe information security should be continuous. Users can request pentesting whenever needed—whether it's for a new webpage, a new section, or a new mobile app. Vulnerabilities are promptly reported on our platform.
                   </p>
                 </motion.li>
                 <motion.li 
@@ -77,10 +73,7 @@ const MainDiferences = () => {
                   <p>
                     <b>issues communicated quickly</b>
                     <br />
-                    Traditional security companies run scans once a year.
-                    Codefend delivers scans on daily basis. We do not waste a
-                    minute to communicate an issue once we find it. Address
-                    issues as soon as it appears.
+                    Traditional security companies run scans once a year. With Codefend, you can see bugs and issues as soon as the pentester finds them. Our system delivers daily scans and immediate notifications, allowing you to address issues as they appear.
                   </p>
                 </motion.li>
                 <motion.li 
@@ -101,12 +94,9 @@ const MainDiferences = () => {
                   <img src="../assets/images/icon3.webp" loading="lazy" alt="icon-img" />
                   </div>
                   <p>
-                    <b>seriously connected with real hackers</b>
+                    <b>deeply connected with real hackers</b>
                     <br />
-                    Codefend is not exactly a traditional information security
-                    company. Aside from compliance reports for your web
-                    applications, we deliver information extracted from several
-                    private communities.
+                    Codefend isn't your typical cybersecurity firm. Beyond standard compliance reports for your web applications, we gather insights from various private communities where true hackers operate. This gives Codefend distinct edge over other security companies relying on conventional tools.
                   </p>
                 </motion.li>
               </ul>
@@ -114,8 +104,8 @@ const MainDiferences = () => {
                 <a href="#contact" className="btn alt">
                   contact
                 </a>
-                <a href="#" className="btn main">
-                  download
+                <a href="https://panel.codefend.com/auth/signup" target="_blank" className="btn main">
+                  start now
                 </a>
               </div>
             </div>

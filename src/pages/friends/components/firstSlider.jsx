@@ -24,7 +24,7 @@ const breakPoints = {
         spaceBetween: 40
     },
     1000: {
-        slidesPerView: 2,
+        slidesPerView: 4,
         spaceBetween: 40
     },
     200: {
@@ -60,10 +60,10 @@ const FirstSlider = () => {
                                 <img loading="lazy" src={member.image} alt={` ${member.name}`} />
                                 <p>
                                     <span><b>{member.name}</b></span><br />
-                                    Rol: {member.rol} <br />
-                                    Profile:<br />
+                                    {member.rol} <br />
+                                    {/* Profile:<br />
                                     <a href={`https://${member.profile}`} target="_blank">{member.profile}</a> <br />
-                                    Experience: {member.experience}
+                                    Experience: {member.experience} */}
                                 </p>
                             </div>
                         </SwiperSlide>
@@ -79,7 +79,7 @@ const FirstSlider = () => {
 
                     <div className="information">
                         <h2>Christian 'Ch' Russo</h2>
-                        <span>OFFENSIVE SECURITY RESEARCH</span>
+                        <span>CEO</span>
                         <div className="text">
                             <h3>Profesional Summary</h3>
                             <p>Based on the information provided and the search results, it appears that Christian "ch" Russo is a hacker who has been involved in several high-profile security breaches. However, due to the limitations in accessing the LinkedIn profile and other direct sources, the following resume is constructed based on the information available from the KrebsOnSecurity articles and other related content. <br /><br />
@@ -124,10 +124,10 @@ const FirstSlider = () => {
                         <span>product</span>
                         <div className="text">
                             <h3>Professional Summary</h3>
-                            <p>Ignacio Gómez is a distinguished expert specializing in the intricate field of product and user behavior. His expertise lies in the strategic application of behavioral science to final product, enabling a profound understanding of user interactions with digital environments. Gómez possesses a unique blend of technical acumen and psychological insight, making him adept at predicting and influencing user behavior through interface design.<br /><br />
+                            <p>Ignacio Gómez is a distinguished expert specializing in the intricate field of product and user behavior. His expertise lies in the strategic application of behavioral science to final product, enabling a profound understanding of user interactions with digital environments.<br /><br />
                                 Throughout his career, Gómez has been instrumental in conducting advanced human behavior research at major corporations. His work primarily involves dissecting complex user interactions and employing this knowledge to enhance interface design, thereby subtly guiding user actions and decisions. His approach is deeply rooted in technical sophistication, focusing on the psychological aspects of user interaction rather than mere aesthetic design.</p>
                             <h3>Key Achievements</h3>
-                            <p>Developed sophisticated models for predicting user behavior, significantly enhancing user engagement and satisfaction - Pioneered research methods in user behavior analysis, leading to groundbreaking insights in interface usability - Successfully implemented strategies for user behavior manipulation through interface design, resulting in improved business outcomes for several large-scale corporations.</p>
+                            <p>Developed sophisticated models for predicting user behavior, significantly enhancing user engagement and satisfaction - Successfully implemented strategies for user behavior manipulation through interface design, resulting in improved business outcomes for several large-scale corporations.</p>
                         </div>
                     </div>
 

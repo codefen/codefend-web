@@ -1,5 +1,6 @@
 
 import Crypto from "../../sections/crypto";
+import Linkedin from "../../sections/linkedin";
 import Hero from "../../sections/hero";
 import Highlights from "../../sections/highlights";
 import MainDiferences from "../../sections/mainDiferences";
@@ -18,9 +19,11 @@ function Home() {
       <MainDiferences />
       <OurSoftware />  
       <OurServices />   
-      <Prices />
+      {/* <Prices /> */}
       <Contact />
-      <Members />
+      <Crypto />
+      <Linkedin />
+      {/* <Members /> */}
     </>
   );
 }

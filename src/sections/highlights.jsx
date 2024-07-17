@@ -33,13 +33,9 @@ const Highlights = () => {
                   }
                  }}
                >
-              <h2>threat intel & research</h2>
+              <h2>1. create your account</h2>
               <p>
-                Codefend expertise in threat intel and research positions us as
-                leaders in offensive cybersecurity. We perform meticulous data
-                collection across several communities and continuous threat
-                analysis, we empower our clients to anticipate adversary
-                tactics.
+              Create an account for your company—it's very easy; we just need some basic information!
               </p>
                </motion.div>
             </li>
@@ -60,15 +56,13 @@ const Highlights = () => {
                   }
                  }}
                >
-              <h2>attack surface surveillance</h2>
+              <h2>2. add your resources</h2>
               <p>
-                Codefend considers essential to understand and effectively
-                supervise your attack surface. Codefend’s expertise in attack
-                surface surveillance ensures your team can detect all potential
-                infrastructure vulnerabilities in a timely manner.
+              Follow the step-by-step process to add all the resources you want to analyze.
               </p>
                </motion.div>
             </li>
+            
             <li style={{ paddingRight: "0px", borderRight: "none" }}>
             <motion.div
                 initial={{
@@ -86,12 +80,9 @@ const Highlights = () => {
                   }
                  }}
                >
-              <h2>continious pentest</h2>
+              <h2>3. get your pentest</h2>
               <p>
-                Continuous pentest is crucial in a robust offensive security
-                strategy. Codefend approach is based on a dynamic and permanent
-                security assessment. We provide periodic and updated penetration
-                tests to replicate adversary tactics.
+               Choose the plan that best fits your needs and start the pentest! You'll receive instant notifications of detected vulnerabilities directly in your inbox.
               </p>
                </motion.div>
             </li>

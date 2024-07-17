@@ -10,9 +10,9 @@ function Layout() {
         <>
             <Header />
             <Outlet />
-            <Crypto />
-            <FreeTrial />
-            <Linkedin />
+            {/* <Crypto /> */}
+            {/* <FreeTrial /> */}
+            {/* <Linkedin /> */}
             <Footer />
         </>
     );

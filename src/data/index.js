@@ -45,9 +45,9 @@ export const members = [
 
 export const team = [
     [
-        {id:'chris', image:'../assets/images/members/chris.webp',name:'Christian C. Russo', rol:'offensive security', profile:`${link}chris-c-russo/`,experience:'10+ years'},
-        {id:'edgardo', image:'../assets/images/members/edgardo.webp',name:'Edgardo Krause', rol:'CyberSecurity', profile:`${link}edgardokrause/`,experience:'7+ years'},
-        {id:'miguel', image:'../assets/images/members/miguel.png',name:'Miguel Peroni', rol:'CyberSecurity', profile:`${link}peroni/`,experience:'8+ years'},
+        {id:'chris', image:'../assets/images/members/chris.webp',name:'Christian C. Russo', rol:'CEO', profile:`${link}chris-c-russo/`,experience:'10+ years'},
+        {id:'edgardo', image:'../assets/images/members/edgardo.webp',name:'Edgardo Krause', rol:'cyberSecurity', profile:`${link}edgardokrause/`,experience:'7+ years'},
+        {id:'miguel', image:'../assets/images/members/miguel.png',name:'Miguel Peroni', rol:'operations', profile:`${link}peroni/`,experience:'8+ years'},
         {id:'ignacio', image:'../assets/images/members/ignacio.webp',name:'Ignacio Gomez', rol:'product', profile:`${link}gomez-ignacio/`,experience:'10+ years'}
     ],
     [
@@ -60,12 +60,12 @@ export const team = [
 
 export const testimonials = [
     [
-        {name:'Mohammed Alam', image:'../assets/images/testimonials/chris/alam.webp', profile:`${link}mohammed-alam-0a553560/`, rol:'CEO Al-bilad for consultation and solutions', description:'Chris C is an excellent professional engineer in the area of ethical hacking in addition, he is skillful in web security'},
+        {name:'Mohammed Alam', image:'../assets/images/testimonials/chris/alam.webp', profile:`${link}mohammed-alam-0a553560/`, rol:'CEO Al-bilad for consultation and solutions', description:'Chris (Codefend) is an excellent professional engineer in the area of ethical hacking in addition, he is skillful in web security'},
         {name:'Dr.Zoki Quereshey', image:'../assets/images/testimonials/chris/zoki.webp', profile:`${link}dr-zaki-qureshey-50b3616/`, rol:'Director General-National Security Cluster, India`s 1st Security Cluster', description:'Chris is an excellent IT security professional, he helped us run vulnerability assessments detect and fix web application security vulnerabilities, and also performed mobile application security with us. Highly recommended.'},
-        {name:'Juan Ignacio Salaberry', image:'../assets/images/testimonials/chris/juan.webp', profile:`${link}jisalaberry/`, rol:'Strategic and Operational Planning Director (Anses)', description:'Chris is an excellent proffessional, passionate and talented. He helped us through a difficult proyect, he was a thorough consultant and a pleasure to work with.'},
-        {name:'Patrick Joleys', image:'../assets/images/testimonials/chris/patrick.png', profile:`${link}patrickjoleys/`, rol:'Blockchain Consultant', description:'Chris Russo is an excellent Information Security Consultant, with great expertise in Web application security, I`ve been working with him and I can recommend his services'},
+        {name:'Juan Ignacio Salaberry', image:'../assets/images/testimonials/chris/juan.webp', profile:`${link}jisalaberry/`, rol:'Strategic and Operational Planning Director (Anses)', description:'Chris (Codefend) is an excellent proffessional, passionate and talented. He helped us through a difficult proyect, he was a thorough consultant and a pleasure to work with.'},
+        {name:'Patrick Joleys', image:'../assets/images/testimonials/chris/patrick.png', profile:`${link}patrickjoleys/`, rol:'Blockchain Consultant', description:'Codefend is an excellent Information Security Consultant, with great expertise in Web application security, I`ve been working with him and I can recommend his services'},
         {name:'Luca Fenochietto', image:'../assets/images/testimonials/chris/luca.png', profile:`${link}luca-fenochietto/`, rol:'Blockchain Consultant', description:'Amazing knowledge on IT security and related topics. Captures the clients needs and treat it with extremely delicacy. It`s a service highly recommended.'},
-        {name:'Ahmed Baseer', image:'../assets/images/testimonials/chris/ahmed.png', profile:`${link}ahmed-baseer-22aba831/`, rol:'Talent Consultant', description:'Chris is a great professional to work with. We worked together and he helped me a lot to get started and also to understand internal processes. His work ethics is immaculate and so easy to work together with. He goes out of his way when you ask for some help and guidance. Great professional..!'},
+        {name:'Ahmed Baseer', image:'../assets/images/testimonials/chris/ahmed.png', profile:`${link}ahmed-baseer-22aba831/`, rol:'Talent Consultant', description:'Chris (Codefend) is a great professional to work with. He helped me a lot to get started and also to understand internal processes. His work ethics is immaculate and so easy to work together with. Great professional..!'},
     ],
     [
         {name:'Diego Barcena', image:'../assets/images/testimonials/fran/diego.webp', profile:`${link}diego-barcena/`, rol:'Sr,Full-Stack Developer & DevOps', description:'Working with Fran was an awesome experience i had the pleasure to work with him not only once but twice in two completely different environments. He has both aoutstranding technical and communication skills and he is always delivering quality solutions.'},
@@ -85,17 +85,17 @@ export const testimonials = [
 
 export const capabilities = [
     [
-        {title:'scope / web resources', description:'in this section you can include domains and subdomains to be pentested. The application comes with an integrated feature to detect subdomains, and our default policy is to detect shadow IT as soon as possible, so your attack surface or scoping can be expanded or contracted any time your organization requires it.'},
-        {title:'scope / mobile resources', description:'from this section you can scope mobile apps. You can use it either to pentest and evaluate the security of your own application, or analyze the applications that you and your team use on daily basis and find out if your information is properly protected.'},
-        {title:'scope / cloud resources', description:'this module holds the cloud assets of your organization. Our capabilities are limited to Amazon Web Services, Microsoft Azure, and GCP. '},
-        {title:'scope / lan resources', description:'this module allows you to define local area network assets, or intenal access and provide our team access one '},
-        {title:'scope / source code', description:'supervise your development cycle and processes with a dedicated specialist with proven expertise in the required stack. If you are thinking about adding a dependency to your source code, you may also be interested in analyzing such dependencies to avoid supply chain attacks.'},
-        {title:'scope / socials', description:'from this section you can add names, email addresses, phone numbers, and some other information of your staff member in order to conduct social engineering attacks. Codefend delivers complex / advanced social engineering attacks thruought different channels.'},
+        {title:'web resources', description:'in this section you can include domains and subdomains to be pentested. The application comes with an integrated feature to detect subdomains, and our default policy is to detect shadow IT as soon as possible, so your attack surface or scoping can be expanded or contracted any time your organization requires it.'},
+        {title:'mobile resources', description:'from this section you can scope mobile apps. You can use it either to pentest and evaluate the security of your own application, or analyze the applications that you and your team use on daily basis and find out if your information is properly protected.'},
+        {title:'cloud resources', description:'this module holds the cloud assets of your organization. Our capabilities are limited to Amazon Web Services, Microsoft Azure, and GCP. '},
+        {title:'lan resources', description:'this module allows you to define local area network assets, or intenal access and provide our team access one '},
+        {title:'source code', description:'supervise your development cycle and processes with a dedicated specialist with proven expertise in the required stack. If you are thinking about adding a dependency to your source code, you may also be interested in analyzing such dependencies to avoid supply chain attacks.'},
+        {title:'socials', description:'from this section you can add names, email addresses, phone numbers, and some other information of your staff member in order to conduct social engineering attacks. Codefend delivers complex / advanced social engineering attacks thruought different channels.'},
     ],
     [
-        {title:'communication / Issues', description:'Visualize and address vulnerabilities. Allows you to view each issue or vulnerability present in your assets.Provides a platform to request assistance within the issue interface if additional support is required. Tailor your approach to handling specific vulnerabilities efficiently.'},
-        {title:'communication / create reports', description:'Create customized reports on demand. Enables you to select a group of issues (e.g., web or mobile resources) and generate detailed, tailored reports.Choose specific parameters and criteria for the report to meet your reporting needs. Efficiency, streamlines the process of generating comprehensive reports for effective communication.'},
-        {title:'communication / customer support', description:'Address IT security business requirements.Provides a dedicated space to request special assistance for any specific IT security needs.Personalized Support: Tailor support requests to match your unique business security concerns. Facilitates a direct channel for obtaining timely and specialized support.'},
+        {title:'Issues', description:'Visualize and address vulnerabilities. Allows you to view each issue or vulnerability present in your assets.Provides a platform to request assistance within the issue interface if additional support is required. Tailor your approach to handling specific vulnerabilities efficiently.'},
+        {title:'create reports', description:'Create customized reports on demand. Enables you to select a group of issues (e.g., web or mobile resources) and generate detailed, tailored reports.Choose specific parameters and criteria for the report to meet your reporting needs. Efficiency, streamlines the process of generating comprehensive reports for effective communication.'},
+        {title:'customer support', description:'Address IT security business requirements.Provides a dedicated space to request special assistance for any specific IT security needs.Personalized Support: Tailor support requests to match your unique business security concerns. Facilitates a direct channel for obtaining timely and specialized support.'},
     ]
 ]
 

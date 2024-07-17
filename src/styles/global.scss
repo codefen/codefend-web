@@ -77,7 +77,7 @@ h1 {
 }
 
 h2 {
-  font-size: var(--text-h2-large);
+  font-size: var(--text-h2-normal);
   font-weight: normal;
   margin: 0px;
 }
@@ -139,7 +139,7 @@ header + section {
 ///////////////////////////////////////////////////////////////////
 // header
 //////////////////////////////////////////////////////////////////
-.down{
+.down {
   background: linear-gradient(to right, #650101 67%, #ff0000) !important;
   padding: 0 !important;
   top: 0px !important;
@@ -274,7 +274,7 @@ header.header {
 // hero - section 1
 //////////////////////////////////////////////////////////////////
 section.hero {
-  background-image: url("../../public/assets/images/bkg-sand.webp");
+  background-image: url("../../public/assets/images/bkg-hero.jpg");
   background-position: top;
   background-repeat: no-repeat;
   background-color: #000000;
@@ -283,25 +283,28 @@ section.hero {
   position: relative;
   padding: 3vw;
   max-width: 100vw;
-  min-height: 700px;
-  height: 85vh;
+  min-height: 600px;
+  height: 65vh;
   // max-height: 100vh;
   overflow: hidden;
   z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   .content {
     display: flex;
     align-items: flex-end;
     margin: 0 auto;
     z-index: 10;
-    min-height: 600px;
+    // min-height: 600px;
 
     .copy {
       flex: 1;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding-bottom: 153px;
+      // padding-bottom: 153px;
       font-size: var(--text-large);
       line-height: 34px;
 
@@ -352,7 +355,7 @@ section.hero {
       justify-content: center;
       margin: 0px;
       padding: 0px;
-      animation: 15s slide infinite linear;
+      animation: 45s slide infinite linear;
       white-space: nowrap;
 
       li {
@@ -378,9 +381,10 @@ section.hero {
   }
 
   @media screen and (max-width: 820px) {
-    background-image: url("../../public/assets/images/bkg-sand-mobile.webp");
+    // background-image: url("../../public/assets/images/bkg-sand-mobile.webp");
     //background-size: 100vh;
-    background-size: cover;
+    background-position: 40%;
+    padding-top: 120px;
 
     .bkg-2 {
       height: 400px;
@@ -452,15 +456,22 @@ section.highlights {
     li {
       color: var(--text-color);
       border-right: 1px solid var(--higlights-color-line);
-      padding: 70px 3vw 100px 3vw;
+      padding: 70px 3vw 70px 3vw;
+      flex: 1;
 
       h2 {
         color: var(--text-color-alt2);
+        // font-size: 26px;
+      }
+
+      p {
+        font-size: 18px;
       }
     }
   }
 
   @media screen and (max-width: 768px) {
+    padding: 0px 30px;
     ul {
       flex-direction: column;
 
@@ -655,6 +666,13 @@ section.our-software {
   position: relative;
   overflow: hidden;
 
+  #particles-js {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
   .copy {
     padding-bottom: 30px;
     color: var(--text-color);
@@ -740,8 +758,8 @@ section.features {
     text-align: center;
   }
 
-  .swiper-pagination{
-    span{
+  .swiper-pagination {
+    span {
       height: 20px;
       width: 20px;
     }
@@ -753,9 +771,9 @@ section.features {
     align-items: center;
     position: relative;
     div {
-     max-width: 700px;
-     margin: 0 1vw;
-     text-align: center;
+      max-width: 700px;
+      margin: 0 1vw;
+      text-align: center;
       h3 {
         font-size: 25px;
       }
@@ -1112,7 +1130,7 @@ section.contact {
   background-repeat: no-repeat;
   min-height: 670px;
   position: relative;
-  margin: 0px 0px 130px 0px;
+  // margin: 0px 0px 130px 0px;
   background-color: #e2e2e2;
 
   .copy {
@@ -1201,6 +1219,7 @@ section.crypto {
   overflow: hidden;
   background-color: #000000;
   color: #fff;
+  padding: 0px;
 
   .container {
     display: flex;
@@ -1212,6 +1231,7 @@ section.crypto {
     background-position: 80%;
     // min-height: 300px;
     justify-content: center;
+    padding: 90px 0px;
 
     .coin-div {
       display: flex;
@@ -1231,11 +1251,10 @@ section.crypto {
         gap: 40px;
         align-items: center;
 
-          .coin1 {
-            min-width: 150px;
-            min-height:150px ;
-          }
-        
+        .coin1 {
+          min-width: 150px;
+          min-height: 150px;
+        }
 
         p {
           max-width: 410px;
@@ -1277,9 +1296,9 @@ section.crypto {
   @media screen and (max-width: 650px) {
     .container {
       background-image: url("../assets/images/coin-web-mobile.png");
-  }}
+    }
+  }
 }
-
 
 ///////////////////////////////////////////////////////////////////
 // members - section 9
@@ -1306,11 +1325,12 @@ section.members {
       display: none;
     }
 
-    .swiper-button-prev, .swiper-button-next{
+    .swiper-button-prev,
+    .swiper-button-next {
       color: red;
       height: 100px;
       top: 40%;
-      transition: background-color .5ms  linear;
+      transition: background-color 0.5ms linear;
       padding: 0px 8px;
     }
 
@@ -1364,21 +1384,21 @@ section.members {
         padding: 30px 0;
       }
 
-        .card {
-          min-width: 250px;
-          min-height: 280px;
-          flex-direction: column;
-          justify-content: center;
-          text-align: center;
-          padding: 0.5em 0.4em;
-          max-height: none;
-          border: 2px solid var(--text-color-alt2);
-          background-color: rgba(0, 0, 0, 0.5);
-          img{
-            width: 110px;
-            height: 110px;
-          }
+      .card {
+        min-width: 250px;
+        min-height: 280px;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 0.5em 0.4em;
+        max-height: none;
+        border: 2px solid var(--text-color-alt2);
+        background-color: rgba(0, 0, 0, 0.5);
+        img {
+          width: 110px;
+          height: 110px;
         }
+      }
     }
   }
 }
@@ -1417,16 +1437,18 @@ section.free-trial {
         display: flex;
         flex-direction: column;
         gap: 1em;
-        max-width: 80%;
+        max-width: 90%;
 
         input {
           border-radius: 0px;
           border: none;
-          border-bottom: 1px dashed #eee;
-          height: 3em;
+          border-bottom: 1px dashed #d3d3d3;
+          height: 40px;
+          width: 100%;
           font-family: Questrial;
           font-size: 16px;
           padding: 0 20px;
+          box-sizing: border-box;
 
           &:focus {
             border-bottom: 1px dashed #ff3939;
@@ -1435,15 +1457,28 @@ section.free-trial {
           }
         }
 
+        select {
+          font-family: Questrial;
+          font-size: 16px;
+          border-radius: 0px;
+          border: none;
+          border-bottom: 1px dashed #d3d3d3;
+          width: 100%;
+          height: 43px;
+          padding: 0 20px;
+        }
+
+        .extra-group {
+          margin-top: 10px;
+        }
         button {
           border: none;
           margin: auto;
           background: var(--text-color-alt4);
           color: white;
-          font-size: 16px;
-          padding: 1em;
-          max-width: 260px;
+          font-size: 18px;
           font-family: Questrial;
+          padding: 18px 23px;
         }
       }
     }
@@ -1599,7 +1634,7 @@ section.about-us {
       }
 
       .row-contain1 {
-        animation: 25s slideleft infinite linear;
+        animation: 55s slideleft infinite linear;
         width: calc((554.233px * 12) + (80px * 12));
 
         @keyframes slideleft {
@@ -1718,12 +1753,12 @@ section.about-us {
 footer {
   background-color: #000;
   color: #ffffff;
-  min-height: 500px;
+  min-height: 250px;
   position: relative;
   padding-top: 100px;
-  .line{
+  .line {
     color: #999;
-    text-decoration: line-through ;
+    text-decoration: line-through;
   }
 
   .bkg_footer {
@@ -1744,10 +1779,11 @@ footer {
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.8);
     display: flex;
-    padding: 0px 4vw 90px 4vw;
+    padding: 90px 0px;
     gap: 4vw;
     flex-wrap: wrap;
     z-index: 3;
+    justify-content: space-around;
 
     .footer_logo {
       display: flex;
@@ -1755,10 +1791,12 @@ footer {
       justify-content: center;
 
       img {
-        width: 340px;
-        height: 100px;
+        max-width: 200px;
       }
-
+      p {
+        margin: 10px;
+        font-size: 14px;
+      }
       ul {
         display: flex;
         justify-content: center;
@@ -1784,17 +1822,17 @@ footer {
     .footer_links {
       display: flex;
       align-items: start;
-      gap: 3vw;
-      margin-top: 6%;
+      justify-content: space-between;
+      gap: 5vw;
 
       ul {
         li:first-child {
-          font-size: 25px;
-          margin-bottom: 1vw;
+          font-size: 20px;
+          margin-bottom: 7px;
         }
 
         li {
-          padding: 10px 0px;
+          padding: 6px 0px;
           display: block;
 
           &:hover {
@@ -1810,19 +1848,15 @@ footer {
 
   @media screen and (max-width: 820px) {
     overflow: hidden;
-    min-height: 1000px;
-    //padding: 0;
+    min-height: 700px;
+    padding: 0;
     .tools {
       padding: 40px 10vw;
+      flex-direction: column-reverse;
       //padding: 0;
 
       .footer_logo {
-        //flex: 1 1 auto;
-        //padding: 0;
-        img {
-          width: 90%;
-          height: 100px;
-        }
+        margin-top: 40px;
       }
 
       .footer_links {
@@ -1997,8 +2031,9 @@ section.services {
   background-color: #000;
   background-image: url("../../public/assets/images/bkg-services.png");
   background-repeat: no-repeat;
-  min-height: 70vh;
-  background-size: cover;
+  min-height: 50vh;
+  background-size: contain;
+  background-position: right;
   color: #fff;
 
   .container {
@@ -2014,9 +2049,9 @@ section.services {
   }
 
   @media screen and (max-width: 768px) {
-     background-image: url("../../public/assets/images/bkg-services-mobile.webp");
-     background-size: cover;
-     background-position: top;
+    background-image: url("../../public/assets/images/bkg-services-mobile.webp");
+    background-size: cover;
+    background-position: top;
 
     min-height: 50vh;
     .container {
@@ -2041,6 +2076,7 @@ section.section-3 {
   padding: 0;
   overflow-x: hidden;
   background-color: #000;
+  padding-bottom: 70px;
 
   .active {
     h3 {
@@ -2075,6 +2111,7 @@ section.section-3 {
       cursor: pointer;
       h3 {
         font-size: 36px;
+        margin: 0px;
       }
       img {
         display: none;
@@ -2092,6 +2129,7 @@ section.section-3 {
       padding: 4vw 4vw;
       min-width: 92vw;
       max-height: 1000px;
+      background-size: 60vw;
 
       &:nth-child(1) {
         background-position: 70%;
@@ -2123,8 +2161,8 @@ section.section-3 {
   }
 
   @media screen and (max-width: 820px) {
-    .slide-contain{
-      .contain{
+    .slide-contain {
+      .contain {
         background-position: center;
         background-image: url("../../public/assets/images/img-services1.webp");
       }
@@ -2168,15 +2206,14 @@ section.section-2 {
       background-image: url("../../public/assets/images/img-services2.png");
     }
     @media screen and (max-width: 820px) {
-      .slide-contain{
-        .contain{
+      .slide-contain {
+        .contain {
           background-position: center;
           background-image: url("../../public/assets/images/img-services2.webp");
         }
       }
     }
   }
-  
 }
 
 section.section-3 {
@@ -2188,8 +2225,8 @@ section.section-3 {
     }
   }
   @media screen and (max-width: 820px) {
-    .slide-contain{
-      .contain{
+    .slide-contain {
+      .contain {
         background-position: center;
         background-image: url("../../public/assets/images/img-services3.webp");
       }
@@ -2261,10 +2298,10 @@ section.herocompliance {
   }
 
   @media screen and (max-width: 820px) {
-     background-image: url("../../public/assets/images/bkg-compliance-mobile.webp");
-     background-repeat: no-repeat;
-     background-position: top;
-     background-size: 100%;
+    background-image: url("../../public/assets/images/bkg-compliance-mobile.webp");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
 
     .container {
       .card_container {
@@ -2284,10 +2321,9 @@ section.heropartners {
   background-image: url("../../public/assets/images/bkg-partners.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  padding-bottom: 30vh;
+  background-position: bottom center;
   color: #fff;
-  height: 50vh;
+  min-height: 55vh;
   .container {
     .subtitle {
       background-color: rgba(0, 0, 0, 0.5);
@@ -2300,7 +2336,7 @@ section.heropartners {
     }
   }
   @media screen and (max-width: 820px) {
-  background-image: url("../../public/assets/images/bkg-partners-mobile.webp");
+    background-image: url("../../public/assets/images/bkg-partners-mobile.webp");
   }
 }
 
@@ -2311,7 +2347,7 @@ section.partners1 {
   background-repeat: no-repeat;
   background-position: left 90%;
   background-size: 100%;
-  padding: 100px 0 0 0;
+  padding: 0px 0 0 0;
   overflow: hidden;
   position: relative;
 
@@ -2383,7 +2419,7 @@ section.partners1 {
         font-size: 14px;
       }
     }
-  }  
+  }
   .nextgen {
     position: relative;
     margin-top: 90px;
@@ -2400,11 +2436,12 @@ section.partners1 {
       height: 350px;
     }
     .nextgen-contain {
-      padding: 150px 0 0px 0px;
+      padding: 40px 0 0px 0px;
       display: flex;
       flex-direction: column;
       row-gap: 40px;
       align-items: end;
+      position: relative;
       .nextitem {
         background-color: rgba(0, 0, 0, 0.7);
         max-width: 45%;
@@ -2473,13 +2510,12 @@ section.partners1 {
       }
     }
   }
-
 }
 
 section.herofriends {
   height: 67vh;
   background-color: #000;
-  background-image: url('../../public/assets/images/bkg-friend.png');
+  background-image: url("../../public/assets/images/bkg-friend.png");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: top;
@@ -2496,9 +2532,9 @@ section.herofriends {
     }
   }
   @media screen and (max-width: 768px) {
-    background-image: url('../../public/assets/images/bkg-friend-mobile.webp');
+    background-image: url("../../public/assets/images/bkg-friend-mobile.webp");
     background-size: cover;
-    height: 70vh;
+    height: 40vh;
     align-items: flex-end;
     justify-content: center;
   }
@@ -2510,11 +2546,12 @@ section.friends1 {
   color: #fff;
   padding-top: 0px;
 
-  .swiper-button-prev, .swiper-button-next{
+  .swiper-button-prev,
+  .swiper-button-next {
     color: red;
     height: 100px;
     top: 40%;
-    transition: background-color .5ms  linear;
+    transition: background-color 0.5ms linear;
     padding: 0px 8px;
   }
   .active {
@@ -2525,19 +2562,19 @@ section.friends1 {
     opacity: 1 !important;
   }
 
-  .swiper{
+  .swiper {
     padding: 10px;
     box-shadow: 30px 20px 50px 10px #000;
   }
   .card {
-     padding: 0.5em 2em;
-     border: 2px solid var(--text-color-alt2);
-     background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.5em 2em;
+    border: 2px solid var(--text-color-alt2);
+    background-color: rgba(0, 0, 0, 0.5);
     //  width: 400px;
-     column-gap: 1em;
-     display: flex;
-     align-items: center;
-     max-height: 130px;
+    column-gap: 1em;
+    display: flex;
+    align-items: center;
+    max-height: 130px;
 
     p {
       max-width: 100%;
@@ -2545,47 +2582,48 @@ section.friends1 {
       text-overflow: ellipsis;
       a {
         text-wrap: nowrap;
-        
       }
     }
 
     img {
-      height: 90px;
-      width: 90px;
+      height: 75px;
+      width: 75px;
     }
   }
 
-  .container-1, .container-2{
+  .container-1,
+  .container-2 {
     .profile-contain {
       border-bottom: 2px solid #212020;
       position: relative;
       height: 900px;
       width: 100%;
-      .profile{
+      .profile {
         background-position: top right;
         position: absolute;
         height: 100%;
         width: 100%;
-        transition: opacity .5s linear !important;
-        img{
+        transition: opacity 0.5s linear !important;
+        background-size: 80vw;
+        img {
           display: none;
         }
-        .information{
+        .information {
           padding: 4em 10px;
           max-width: 600px;
           height: 85%;
           position: relative;
-  
-          &::after{
-            content: '';
-            width: 100%;
-            height: 12%;
-            background: linear-gradient(to top, #000, transparent);
-            position: absolute;
-            bottom: 0%;
-          }
-  
-          span{
+
+          // &::after{
+          //   content: '';
+          //   width: 100%;
+          //   height: 12%;
+          //   background: linear-gradient(to top, #000, transparent);
+          //   position: absolute;
+          //   bottom: 0%;
+          // }
+
+          span {
             background: linear-gradient(to right, #e75454, #f10707);
             padding: 10px 40px;
             font-size: 20px;
@@ -2597,8 +2635,8 @@ section.friends1 {
           .text {
             height: 80%;
             overflow-y: auto;
-  
-            h3{
+
+            h3 {
               color: var(--btn-color-main);
               text-decoration: underline;
             }
@@ -2608,76 +2646,77 @@ section.friends1 {
     }
   }
 
-  .container-1, .container-2 {
-    .profile-contain{
-      .profile{
+  .container-1,
+  .container-2 {
+    .profile-contain {
+      .profile {
         &#chris {
-          background-image: url('../../public/assets/images/bkg-chris.png');
+          background-image: url("../../public/assets/images/bkg-chris.png");
           background-repeat: no-repeat;
-          opacity:0;
+          opacity: 0;
         }
         &#edgardo {
-          background-image: url('../../public/assets/images/bkg-edgardo.png');
+          background-image: url("../../public/assets/images/bkg-edgardo.png");
           background-repeat: no-repeat;
-          opacity:0;
+          opacity: 0;
         }
-        &#ignacio { 
-          background-image: url('../../public/assets/images/bkg-ignacio.png');
+        &#ignacio {
+          background-image: url("../../public/assets/images/bkg-ignacio.png");
           background-repeat: no-repeat;
-          opacity:0;
+          opacity: 0;
         }
         &#hemsleek {
-          background-image: url('../../public/assets/images/bkg-hems.png');
+          background-image: url("../../public/assets/images/bkg-hems.png");
           background-repeat: no-repeat;
-          opacity:0;
+          opacity: 0;
         }
         &#zaballa {
-          background-image: url('../../public/assets/images/bkg-zaballa.png');
+          background-image: url("../../public/assets/images/bkg-zaballa.png");
           background-repeat: no-repeat;
-          opacity:0;
+          opacity: 0;
         }
-        &#miguel{
-          background-image: url('../../public/assets/images/bkg-peroni.png');
+        &#miguel {
+          background-image: url("../../public/assets/images/bkg-peroni.png");
           background-repeat: no-repeat;
-          opacity:0;
+          opacity: 0;
         }
         &#misael {
-          background-image: url('../../public/assets/images/bkg-mixa.png');
+          background-image: url("../../public/assets/images/bkg-mixa.png");
           background-repeat: no-repeat;
-          opacity:0;
+          opacity: 0;
         }
         &#gaspar {
-          background-image: url('../../public/assets/images/bkg-gaspi.png');
+          background-image: url("../../public/assets/images/bkg-gaspi.png");
           background-repeat: no-repeat;
-          opacity:0;
+          opacity: 0;
         }
       }
     }
   }
 
   @media screen and (max-width: 1400px) {
-    .profile-contain{
-      .profile{
-        &:nth-child(1), 
+    .profile-contain {
+      .profile {
+        &:nth-child(1),
         &:nth-child(2),
         &:nth-child(3),
         &:nth-child(4),
         &:nth-child(5),
         &:nth-child(6),
         &:nth-child(7),
-        &:nth-child(8){
+        &:nth-child(8) {
           background-position: 10%;
         }
       }
     }
   }
   @media screen and (max-width: 820px) {
-    .swiper-slide{
+    .swiper-slide {
       display: flex;
       justify-content: center;
     }
-    .card{
-      min-height: 350px;
+    .card {
+      min-height: 200px;
       width: 90vw;
       flex-direction: column;
       justify-content: center;
@@ -2687,12 +2726,12 @@ section.friends1 {
       gap: 0px;
     }
     .container-1,
-    .container-2{
-      .profile-contain{
-        min-height:fit-content;
-        height: 1400px;
-        .profile{
-          img{
+    .container-2 {
+      .profile-contain {
+        min-height: fit-content;
+        min-height: 1200px;
+        .profile {
+          img {
             display: block;
           }
           &:nth-child(1), 
@@ -2702,8 +2741,8 @@ section.friends1 {
           &:nth-child(5),
           &:nth-child(6),
           &:nth-child(7),
-          &:nth-child(8){
-            background-image: none;
+          &:nth-child(8) {
+            background-image: none !important;
           }
         }
       }

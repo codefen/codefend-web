@@ -77,15 +77,15 @@ const Header = () => {
                     <li><Link onClick={menuAppear} to ="/services">services</Link></li>
                     <li><Link onClick={menuAppear} to ="/compliance">compliance</Link></li>
                     <li><Link onClick={menuAppear} to ="/partners">partners</Link></li>
-                    <li><Link onClick={menuAppear} to ="/team">team</Link></li>
+                    <li><Link onClick={menuAppear} to ="/about-us">about us</Link></li>
                 </ul>
                 
                 <div className="menu">
                     <a href="#contact" className="btn alt">
                         contact
                     </a>
-                    <a href="#" className="btn main">
-                        download
+                    <a href="https://panel.codefend.com/auth/signup" target="_blank" className="btn main">
+                        try codefend for free
                     </a>
                 </div>
             </div>

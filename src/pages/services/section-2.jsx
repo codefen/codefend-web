@@ -25,30 +25,21 @@ const Section2 = () => {
         >
           <h3>internal network pentest</h3>
           <p>
-            Codefend does manual and semi-automated penetration testing
-            processes using commercial and proprietary security software to
-            evaluate your web application from the perspective of anonymous and
-            authenticated users.
+          Codefend conducts thorough penetration tests within your internal network environment. We simulate real-world attacks to identify vulnerabilities and assess the security resilience of your internal systems, ensuring comprehensive protection against potential threats.
           </p>
           <img src="../assets/images/triangle.png" alt="triangle" />
         </div>
         <div className="item " onClick={() => slideDirection(2)}>
           <h3>external network pentest</h3>
           <p>
-            Codefend does manual and semi-automated penetration testing
-            processes using commercial and proprietary security software to
-            evaluate your web application from the perspective of anonymous and
-            authenticated users.
+          Codefend performs rigorous penetration tests on your external network infrastructure. Our expert team simulates external threats to uncover vulnerabilities, providing insights to fortify your perimeter defenses and safeguard against potential cyber attacks.
           </p>
           <img src="../assets/images/triangle.png" alt="triangle" />
         </div>
         <div className="item active" onClick={() => slideDirection(3)}>
           <h3>source code review</h3>
           <p>
-            Codefend does manual and semi-automated penetration testing
-            processes using commercial and proprietary security software to
-            evaluate your web application from the perspective of anonymous and
-            authenticated users.
+          Codefend conducts meticulous reviews of your application's source code. Our specialized analysis uncovers potential security flaws, ensuring robust protection by identifying and addressing vulnerabilities at the code level.
           </p>
           <img src="../assets/images/triangle.png" alt="triangle" />
         </div>
@@ -67,20 +58,7 @@ const Section2 = () => {
               }
           }}
         >
-          <h2>SERVICES: INTERNAL NETWORK PENTEST</h2>
-
           <ul>
-            <li>
-              <h3>
-                <b>SUMMARY</b>
-              </h3>
-              <p>
-                Codefend does manual and semi-automated penetration testing
-                processes using commercial and proprietary security software to
-                evaluate your web application from the perspective of an
-                attacker
-              </p>
-            </li>
             <li>
               <h3>MORE DETAILS:</h3>
               <p>
@@ -113,20 +91,7 @@ const Section2 = () => {
               }
           }}
         >
-          <h2>CODEFEND SERVICES: EXTERNAL NETWORK PENTESTSUMMARY</h2>
-
           <ul>
-            <li>
-              <h3>
-                <b>SUMMARY:</b>
-              </h3>
-              <p>
-                Codefend does manual and semi-automated penetration testing
-                processes using commercial and proprietary security software to
-                evaluate your web application from the perspective of an
-                attacker.
-              </p>
-            </li>
             <li>
               <h3>MORE DETAILS:</h3>
               <p>
@@ -150,20 +115,7 @@ const Section2 = () => {
           </ul>
         </div>
         <div className="contain">
-          <h2>SOURCE CODE REVIEW:</h2>
-
           <ul>
-            <li>
-              <h3>
-                <b>SUMMARY</b>
-              </h3>
-              <p>
-                Codefend does manual and semi-automated penetration testing
-                processes using commercial and proprietary security software to
-                evaluate your web application from the perspective of an
-                attacker.
-              </p>
-            </li>
             <li>
               <h3>MORE DETAILS:</h3>
               <p>

@@ -22,8 +22,9 @@ const Linkedin = () => {
                                         <div>
                                             <img loading="lazy" src={tes.image} alt="icon person" />
                                             <p>
-                                                <b>{tes.name}</b><br />
-                                                Profile: <a href={`https://${tes.profile}`} target="_blank">{tes.profile}</a><br/>
+                                                <b>{tes.name}</b>
+                                                <br />
+                                                {/* Profile: <a href={`https://${tes.profile}`} target="_blank">{tes.profile}</a><br/> */}
                                             {tes.rol}
                                             </p>
                                         </div>
@@ -39,8 +40,10 @@ const Linkedin = () => {
                                         <div>
                                             <img loading="lazy" src={tes.image} alt="icon person" />
                                             <p>
-                                                <b>{tes.name}</b><br />
-                                                Profile: <a href={`https://${tes.profile}`} target="_blank">{tes.profile}</a><br/>
+                                                <b>{tes.name}</b>
+                                                {/* <br />
+                                                Profile: <a href={`https://${tes.profile}`} target="_blank">{tes.profile}</a> */}
+                                                <br/>
                                             {tes.rol}
                                             </p>
                                         </div>
@@ -52,7 +55,7 @@ const Linkedin = () => {
                     </div>
 
 
-                    <div className="slide-contain">
+                    {/* <div className="slide-contain">
                         <div
                             className="row-contain2">
                             {
@@ -90,9 +93,9 @@ const Linkedin = () => {
                                 })
                             }
                         </div>
-                    </div>
+                    </div> */}
 
-                    <div className="slide-contain">
+                    {/* <div className="slide-contain">
                         <div
                             className="row-contain3">
                             {
@@ -130,7 +133,7 @@ const Linkedin = () => {
                                 })
                             }
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
 

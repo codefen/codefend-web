@@ -3,7 +3,7 @@ function Crypto() {
     <section className="crypto">
       <div className="container">
         <div className="coin-div">
-          <h3>bitcoin is welcome</h3>
+          {/* <h3>bitcoin is welcome</h3> */}
 
           <div className="content">
               <img
@@ -14,7 +14,7 @@ function Crypto() {
               />
             <p>
               <b>
-                <span>For dear customers, ethical hackers and business partners:</span>
+                <span>bitcoin is welcome</span>
 				</b>
                 <br />
                 We accept all major cryptocurrencies, including bitcoin,

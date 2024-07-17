@@ -19,25 +19,21 @@ const Hero = () =>{
               <TypeAnimation
               sequence={[
                 'intel meets protection',
-                1000,
-                'Attack surface surveillance',
-                1000,
-                'Dive deeper the darkweb.',
-                1000,
-                'Remove vendor risk',
-                1000,
+                3000,
+                'attack surface surveillance',
+                3000,
+                'dive deeper the darkweb.',
+                3000,
+                'remove vendor risk',
+                3000,
                 'continuous pentest',
-                1000,
-                'Unveil...',
-                1000,
-                'Unveil your shadow IT',
-                1000,
-                'decentralized pentest',
-                1000,
+                3000,
+                'unveil your shadow IT',
+                3000,
                 'quieter become, able to hear'
               ]}
               wrapper="h1"
-              speed={50}
+              speed={70}
               style={{
                 display: 'inline-block',
                 fontSize: '40px'

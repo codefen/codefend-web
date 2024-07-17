@@ -31,7 +31,7 @@ const Section3 = () => {
 
                     <h3>advanced social engineering</h3>
                     <p>
-                      Codefend does manual and semi-automated penetration testing processes using commercial and proprietary security software to evaluate your web application from the perspective of anonymous and authenticated users.
+                      Codefend uses sophisticated techniques to test your organization's human defenses, identifying vulnerabilities and providing insights to enhance security awareness and resilience.
                     </p>
                     <img src="../assets/images/triangle.png" alt="triangle" />
 
@@ -40,7 +40,7 @@ const Section3 = () => {
 
                   <h3>dark web, data leaks, leak clouds</h3>
                   <p>   
-                      Codefend does manual and semi-automated penetration testing processes using commercial and proprietary security software to evaluate your web application from the perspective of anonymous and authenticated users.
+                    Codefend tracks data leaks and exposed information on the dark web. We identify and alert you to potential threats, ensuring your sensitive data remains secure.
                   </p>
                   <img src="../assets/images/triangle.png" alt="triangle" />
 
@@ -54,15 +54,7 @@ const Section3 = () => {
                 }
                 
               }}>
-              <h2>SERVICES: INTEL & RESEARCH SERVICES</h2>
-
                   <ul>
-                    <li>
-                      <h3><b>SUMMARY</b></h3>
-                      <p>
-                      Codefend does manual and semi-automated penetration testing processes using commercial and proprietary security software to evaluate your web application from the perspective of an attacker.
-                      </p>
-                    </li>
                     <li>
                       <h3>MORE DETAILS:</h3>
                       <p>
@@ -81,15 +73,7 @@ const Section3 = () => {
                   </ul>
               </div>
               <div className="contain" >
-              <h2>SERVICES: ADVANCES SOCIAL ENGINEERING</h2>
-
                   <ul>
-                    <li>
-                      <h3><b>SUMMARY </b></h3>
-                      <p>
-                      Codefend does manual and semi-automated penetration testing processes using commercial and proprietary security software to evaluate your web application from the perspective of an attacker.
-                      </p>
-                    </li>
                     <li>
                       <h3>MORE DETAILS:</h3>
                       <p>
@@ -112,16 +96,7 @@ const Section3 = () => {
                   backgroundImage: 'url("../assets/images/img-services5.webp")',
                 }
               }}>
-                <h2>CLOUD:  SECURITY POSTURE MANAGMENT</h2>
                   <ul>
-                    <li>
-                    <h3><b>SUMMARY:</b></h3>
-
-                          <p>
-                          Codefend does manual and semi-automated penetration testing processes using commercial and proprietary security software to evaluate your web application from the perspective of an attacker.
-
-                          </p>
-                    </li>
                     <li>
                           <h3>MORE DETAILS:</h3>
                           <p>
