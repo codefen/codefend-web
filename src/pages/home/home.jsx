@@ -4,7 +4,7 @@ import Hero from "../../sections/hero";
 import Highlights from "../../sections/highlights";
 import MainDiferences from "../../sections/mainDiferences";
 import OurServices from "../../sections/ourServices";
-import OurSoftware from "../../sections/ourSoftware";
+import OurSoftware from "../../sections/ourSoftware/ourSoftware";
 import Contact from "../../sections/contact";
 import DocumentMetadata from "../../components/DocumentMetadata";
 import { pageHomeMetaData } from "../../data/metaData";
