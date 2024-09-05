@@ -21,7 +21,7 @@ const Header = () => {
     ]
   );
   const padding = useTransform(scrollY, [0, 100], ["1rem", "0"]);
-  const top = useTransform(scrollY, [0, 100], ["35px", "0px"]);
+  const top = useTransform(scrollY, [0, 100], ["25px", "0px"]);
   const blurFilter = useTransform(scrollY, [0, 100], ["0px", "7px"]);
 
   const toggleMenu = useCallback(() => {

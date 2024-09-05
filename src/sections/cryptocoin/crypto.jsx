@@ -11,7 +11,7 @@ function Crypto() {
               <img
                 className={css.bitCoinImg}
                 loading="lazy"
-                src="/images/coinred.webp"
+                src="/images/bitcoinimg.webp"
                 alt="bitcoin"
                 width={120}
                 height={120}

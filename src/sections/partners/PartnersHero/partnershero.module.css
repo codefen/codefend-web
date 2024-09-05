@@ -14,9 +14,10 @@
 
 .container {
   background-color: rgba(0, 0, 0, 0.35);
-  padding: 2vw 2vw;
+  max-width: 615px;
   margin-top: 5vw;
-  max-width: 660px;
+  padding-block: 2vw;
+  padding-inline: 3.25rem;
   h1 {
     font-size: var(--text-h2-normal);
   }
