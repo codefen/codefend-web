@@ -1,144 +1,59 @@
-import { useRef, useEffect, useState } from "react";
-import { testimonials } from "../data"
+import { testimonials } from "../data";
+import TestimonialCard from "../components/TestimonialCard";
+
+// testimonials[0] = Chris Testimonials
+// testimonials[1] = Fran Testimonials
+// testimonials[2] = Edd Testimonials
+const USE_TESTIMONIALS = [testimonials[0], testimonials[2]];
 
 const Linkedin = () => {
+  return (
+    <section className="about-us">
+      <div className="container">
+        <div className="title">
+          <h2>Linkedin testimonials</h2>
+        </div>
 
-    return(
-        <section className="about-us">
-            <div className="container">
-                <div className="title">
-                    <h1>linkedin testimonials</h1>
-                </div>
-
-                <div className="contain">
-                    <div className="slide-contain">
-                        <div
-                            className="row-contain1">
-                            {
-                                testimonials[0].map((tes, i)=>{
-                                    return(
-                                    <div key={tes.name} className="card">
-                                        <p>{tes.description}</p>
-                                        <div>
-                                            <img loading="lazy" src={tes.image} alt="icon person" />
-                                            <p>
-                                                <b>{tes.name}</b>
-                                                <br />
-                                                {/* Profile: <a href={`https://${tes.profile}`} target="_blank">{tes.profile}</a><br/> */}
-                                            {tes.rol}
-                                            </p>
-                                        </div>
-                                    </div>
-                                    )
-                                })
-                            }
-                            {
-                                testimonials[0].map((tes, i)=>{
-                                    return(
-                                    <div key={tes.name} className="card">
-                                        <p>{tes.description}</p>
-                                        <div>
-                                            <img loading="lazy" src={tes.image} alt="icon person" />
-                                            <p>
-                                                <b>{tes.name}</b>
-                                                {/* <br />
-                                                Profile: <a href={`https://${tes.profile}`} target="_blank">{tes.profile}</a> */}
-                                                <br/>
-                                            {tes.rol}
-                                            </p>
-                                        </div>
-                                    </div>
-                                    )
-                                })
-                            }
-                        </div>
-                    </div>
-
-
-                    {/* <div className="slide-contain">
-                        <div
-                            className="row-contain2">
-                            {
-                                testimonials[1].map((tes, i)=>{
-                                    return(
-                                    <div key={tes.name} className="card">
-                                        <p>{tes.description}</p>
-                                        <div>
-                                            <img loading="lazy" src={tes.image} alt="icon person" />
-                                            <p>
-                                                <b>{tes.name}</b><br />
-                                                Profile: <a href={`https://${tes.profile}`} target="_blank">{tes.profile}</a><br/>
-                                            {tes.rol}
-                                            </p>
-                                        </div>
-                                    </div>
-                                    )
-                                })
-                            }
-                            {
-                                testimonials[1].map((tes, i)=>{
-                                    return(
-                                    <div key={tes.name} className="card">
-                                        <p>{tes.description}</p>
-                                        <div>
-                                            <img loading="lazy" src={tes.image} alt="icon person" />
-                                            <p>
-                                                <b>{tes.name}</b><br />
-                                                Profile: <a href={`https://${tes.profile}`} target="_blank">{tes.profile}</a><br/>
-                                            {tes.rol}
-                                            </p>
-                                        </div>
-                                    </div>
-                                    )
-                                })
-                            }
-                        </div>
-                    </div> */}
-
-                    {/* <div className="slide-contain">
-                        <div
-                            className="row-contain3">
-                            {
-                                testimonials[2].map((tes, i)=>{
-                                    return(
-                                    <div key={tes.name} className="card">
-                                        <p>{tes.description}</p>
-                                        <div>
-                                            <img loading="lazy" src={tes.image} alt="icon person" />
-                                            <p>
-                                                <b>{tes.name}</b><br />
-                                                Profile: <a href={`https://${tes.profile}`} target="_blank">{tes.profile}</a><br/>
-                                            {tes.rol}
-                                            </p>
-                                        </div>
-                                    </div>
-                                    )
-                                })
-                            }
-                            {
-                                testimonials[2].map((tes, i)=>{
-                                    return(
-                                    <div key={tes.name} className="card">
-                                        <p>{tes.description}</p>
-                                        <div>
-                                            <img loading="lazy" src={tes.image} alt="icon person" />
-                                            <p>
-                                                <b>{tes.name}</b><br />
-                                                Profile: <a href={`https://${tes.profile}`} target="_blank">{tes.profile}</a><br/>
-                                            {tes.rol}
-                                            </p>
-                                        </div>
-                                    </div>
-                                    )
-                                })
-                            }
-                        </div>
-                    </div> */}
-                </div>
+        <div className="contain">
+          {USE_TESTIMONIALS.map((testimonialGroup, groupIndex) => (
+            <div
+              key={groupIndex}
+              className="slide-contain"
+              aria-roledescription="carousel"
+            >
+              <div
+                className={`row-contain slide-animation slide-animation-${
+                  groupIndex + 1
+                }`}
+                aria-live="off"
+                aria-atomic="true"
+                aria-busy="false"
+              >
+                {testimonialGroup.map((tes, i) => (
+                  <TestimonialCard
+                    key={`${tes.name}-${i}`}
+                    description={tes.description}
+                    image={tes.image}
+                    name={tes.name}
+                    rol={tes.rol}
+                  />
+                ))}
+                {testimonialGroup.map((tes, i) => (
+                  <TestimonialCard
+                    key={`${tes.name}-${i}`}
+                    description={tes.description}
+                    image={tes.image}
+                    name={tes.name}
+                    rol={tes.rol}
+                  />
+                ))}
+              </div>
             </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
 
-        </section>
-    )
-}
-
-export default Linkedin
+export default Linkedin;

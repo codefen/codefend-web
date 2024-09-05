@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
-import { slideTransition } from "../transitions/globalTransitions";
 import { useRef } from "react";
-import img from "../../public/assets/images/check.svg";
+import img from "/images/check.svg";
 
 const Prices = () => {
   const slide = useRef(null);
@@ -57,7 +56,8 @@ const Prices = () => {
             whileInView={{ opacity: 1 }}
           >
             Choose between performing o single pentest, with a duration of one
-            month from start to finish,<b> recommended for small businesses and startups </b>
+            month from start to finish,
+            <b> recommended for small businesses and startups </b>
             or perform a permanent supervision of your systems and
             infrastructure with a year duration,
             <b>
@@ -68,14 +68,7 @@ const Prices = () => {
         </div>
         <div className="slides">
           <div ref={slide} className="items">
-            <div
-              // initial={{scale:.9, opacity:0}}
-              // transition={{duration:1, delay:1}}
-              // whileInView={{scale:1, opacity:1}}
-              // viewport={{once:true}}
-              className="contain"
-            >
-              {/* <h4>monthly</h4> */}
+            <div className="contain">
               <div className="card-contain">
                 <motion.div
                   initial={{ y: "-5vh", opacity: 0 }}
@@ -88,7 +81,7 @@ const Prices = () => {
                   <div className="price">
                     <img
                       loading="lazy"
-                      src="../assets/images/icon4.webp"
+                      src="/images/icon4.webp"
                       alt="thunder-icon"
                     />
                     <div>
@@ -144,7 +137,7 @@ const Prices = () => {
                   <div className="price">
                     <img
                       loading="lazy"
-                      src="../assets/images/icon6.webp"
+                      src="/images/icon6.webp"
                       alt="reload-icon"
                     />
                     <div>
@@ -199,11 +192,7 @@ const Prices = () => {
                 >
                   <h3>Full service</h3>
                   <div className="price">
-                    <img
-                      loading="lazy"
-                      src="../assets/images/icon5.webp"
-                      alt="icon"
-                    />
+                    <img loading="lazy" src="/images/icon5.webp" alt="icon" />
                     <div>
                       <h4>$13,500</h4>
                       <p>
@@ -273,7 +262,7 @@ const Prices = () => {
                   <div className="price">
                     <img
                       loading="lazy"
-                      src="../assets/images/icon4.webp"
+                      src="/images/icon4.webp"
                       alt="thunder-icon"
                     />
                     <div>
@@ -333,7 +322,7 @@ const Prices = () => {
                   <div className="price">
                     <img
                       loading="lazy"
-                      src="../assets/images/icon6.webp"
+                      src="/images/icon6.webp"
                       alt="reload-icon"
                     />
                     <div>
@@ -388,11 +377,7 @@ const Prices = () => {
                 >
                   <h3>Full service</h3>
                   <div className="price">
-                    <img
-                      loading="lazy"
-                      src="../assets/images/icon5.webp"
-                      alt="icon"
-                    />
+                    <img loading="lazy" src="/images/icon5.webp" alt="icon" />
                     <div>
                       <h4>$135,000</h4>
                       <p>

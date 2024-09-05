@@ -1,14 +1,17 @@
-
-import HeroPartners from "./hero"
-import Partners1 from "./partners1"
+import AboutPartnesSection from "../../sections/partners/AboutPartners/AboutPartnersSection";
+import DocumentMetadata from "../../components/DocumentMetadata";
+import PartnersHero from "../../sections/partners/PartnersHero/PartnersHero";
+import { pagePartnersMetaData } from "../../data/metaData";
 
 const Partners = () => {
-    return(
-        <>
-            <HeroPartners />
-            <Partners1 />
-        </>
-    )
-}
+  return (
+    <>
+      <DocumentMetadata meta={pagePartnersMetaData} />
+      <PartnersHero />
+      {/* <PartnersSection /> */}
+      <AboutPartnesSection />
+    </>
+  );
+};
 
-export default Partners
+export default Partners;

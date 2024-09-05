@@ -1,85 +1,84 @@
 export const ourServiceLeft = [
-    {title:'web application security', 
+    {id:"sil1",title:'web application security', 
     description:'Codefend does manual and semi-automated penetration testing processes using commercial and proprietary security software to evaluate your web application from the perspective of anonymous and authenticated users.'},
-    {title:'external network security', 
+    {id:"sil2",title:'external network security', 
     description:'Reinforce the robustness of your internal network with our specialized assessments. Our expertise ensures a stronger infrastructure, protecting not only your data but also the trust of your customers and employees.'},
-    {title:'cloud infrastructure solutions', 
+    {id:"sil3",title:'cloud infrastructure solutions', 
     description:'Perform periodic reviews during the development of your software and before your product launch. Codefend will detect vulnerabilities and fix security issues in your applications to increase your defenses against potential threats.'},
-    {title:'intel & research services', 
+    {id:"sil4",title:'intel & research services', 
     description:'Gather actionable intelligence with our open source and human Intelligence services. Improve your decision-making and stay ahead of the competition with our decentralized open source intel services.'},
 ]
 
 export const ourServiceRight = [
-    {title:'mobile application security', 
+    {id:"sir1",title:'mobile application security', 
     description:'Ensure the security of your mobile application with our decentralized mobile application pentest services. Protect your user’s sensitive information with our professional services.'},
-    {title:'internal network security', 
+    {id:"sir2",title:'internal network security', 
     description:'Reinforce the robustness of your internal network with our specialized assessments. Our expertise ensures a stronger infrastructure, protecting not only your data but also the trust of your customers and employees.'},
-    {title:'source code review', 
+    {id:"sir3",title:'source code review', 
     description:'Perform periodic reviews during the development of your software and before your product launch. Codefend will detect vulnerabilities and fix security issues in your applications to increase your defenses against potential threats.'},
-    {title:'advanced se', 
+    {id:"sir4",title:'advanced se', 
     description:'Rise your company defenses against phishing, smishing and vishing attacks with our social engineering services. Improve your security posture and educate your employees with our social engineering services.'},
 ]
 
 const link = 'linkedin.com/in/'
 
 export const members = [
-    {image:'../assets/images/members/chris.webp',name:'Christian C. Russo', rol:'offensive security', profile:`${link}chris-c-russo/`,experience:'10+ years'},
-    {image:'../assets/images/members/alvaro.webp',name:'Alvaro Yaquemet', rol:'web and network pentest', profile:`${link}alvaroyaquemet/`,experience:'5+ years'},
-    {image:'../assets/images/members/leandro.webp',name:'Leandro Ferrari', rol:'pentest & offensice cloud security', profile:`${link}leandroferrari/`,experience:'10+years'},
-    {image:'../assets/images/members/elias.webp',name:'Elias Bustos', rol:'human documencation', profile:`${link}eliasbus/`,experience:'10+ years'},
-    {image:'../assets/images/members/francisco.webp',name:'Francisco Ruiz', rol:'offensive security', profile:`${link}franciscomruiz/`,experience:'10+ years'},
-    {image:'../assets/images/members/edgardo.webp',name:'Edgardo Krause', rol:'CyberSecurity', profile:`${link}edgardokrause/`,experience:'7+ years'},
-    {image:'../assets/images/members/emiliano.webp',name:'Emiliano Peralta', rol:'pentest & social engineering', profile:`${link}emilianoperalta/`,experience:'10+ years'},
-    {image:'../assets/images/members/ignacio.webp',name:'Ignacio Gomez', rol:'product', profile:`${link}gomez-ignacio/`,experience:'10+ years'},
-    {image:'../assets/images/members/luca.webp',name:'Maria Luca Fenochietto', rol:'operations', profile:`${link}luca-fenochietto/`,experience:'10+ years'},
-    {image:'../assets/images/members/maxi.webp',name:'Maximiliano Daniel Olivera', rol:'pentest', profile:`${link}maximiliano-daniel-olivera/`,experience:'3+ years'},
-    {image:'../assets/images/members/esteban.webp',name:'Esteban Cano', rol:'web pentest & devsec ops', profile:`${link}estebancano/`,experience:'5+ years'},
-    {image:'../assets/images/members/hemsleek.png',name:'Asiyanbi Mubashir', rol:'frontend software Engineer', profile:`${link}hemsleek/`,experience:'4+ years'},
-    {image:'../assets/images/members/mixael.png',name:'Misael Los santos', rol:'developer', profile:`${link}misael-los-santos-011b00220/`,experience:'1+ years'},
-    {image:'../assets/images/members/miguel.png',name:'Miguel Peroni', rol:'business expert', profile:`${link}peroni/`,experience:'8+ years'},
-    {image:'../assets/images/members/zaballa.png',name:'Federico Zaballa', rol:'cloud security', profile:`${link}zaballaf`,experience:'15+ years'},
-    {image:'../assets/images/members/gaspar.png',name:'Gaspar O.', rol:'pentest', profile:`${link}gonesto/`,experience:'4+ years'},
-    {image:'../assets/images/members/marcos.png',name:'Marcos', rol:'software', profile:`${link}--/`,experience:'3+ years'},
-    //{image:'../assets/images/members/fede.png',name:'Federico Zaballa', rol:'software', profile:`${link}fdmazza/`,experience:'5+ years'}
+    {image:'/images/members/chris.webp',name:'Christian C. Russo', rol:'offensive security', profile:`${link}chris-c-russo/`,experience:'10+ years'},
+    {image:'/images/members/alvaro.webp',name:'Alvaro Yaquemet', rol:'web and network pentest', profile:`${link}alvaroyaquemet/`,experience:'5+ years'},
+    {image:'/images/members/leandro.webp',name:'Leandro Ferrari', rol:'pentest & offensice cloud security', profile:`${link}leandroferrari/`,experience:'10+years'},
+    {image:'/images/members/elias.webp',name:'Elias Bustos', rol:'human documencation', profile:`${link}eliasbus/`,experience:'10+ years'},
+    {image:'/images/members/francisco.webp',name:'Francisco Ruiz', rol:'offensive security', profile:`${link}franciscomruiz/`,experience:'10+ years'},
+    {image:'/images/members/edgardo.webp',name:'Edgardo Krause', rol:'CyberSecurity', profile:`${link}edgardokrause/`,experience:'7+ years'},
+    {image:'/images/members/emiliano.webp',name:'Emiliano Peralta', rol:'pentest & social engineering', profile:`${link}emilianoperalta/`,experience:'10+ years'},
+    {image:'/images/members/ignacio.webp',name:'Ignacio Gomez', rol:'product', profile:`${link}gomez-ignacio/`,experience:'10+ years'},
+    {image:'/images/members/luca.webp',name:'Maria Luca Fenochietto', rol:'operations', profile:`${link}luca-fenochietto/`,experience:'10+ years'},
+    {image:'/images/members/maxi.webp',name:'Maximiliano Daniel Olivera', rol:'pentest', profile:`${link}maximiliano-daniel-olivera/`,experience:'3+ years'},
+    {image:'/images/members/esteban.webp',name:'Esteban Cano', rol:'web pentest & devsec ops', profile:`${link}estebancano/`,experience:'5+ years'},
+    {image:'/images/members/hemsleek.png',name:'Asiyanbi Mubashir', rol:'frontend software Engineer', profile:`${link}hemsleek/`,experience:'4+ years'},
+    {image:'/images/members/mixael.png',name:'Misael Los santos', rol:'developer', profile:`${link}misael-los-santos-011b00220/`,experience:'1+ years'},
+    {image:'/images/members/miguel.png',name:'Miguel Peroni', rol:'business expert', profile:`${link}peroni/`,experience:'8+ years'},
+    {image:'/images/members/zaballa.png',name:'Federico Zaballa', rol:'cloud security', profile:`${link}zaballaf`,experience:'15+ years'},
+    {image:'/images/members/gaspar.png',name:'Gaspar O.', rol:'pentest', profile:`${link}gonesto/`,experience:'4+ years'},
+    {image:'/images/members/marcos.png',name:'Marcos', rol:'software', profile:`${link}--/`,experience:'3+ years'},
 ]
 
 export const team = [
     [
-        {id:'chris', image:'../assets/images/members/chris.webp',name:'Christian C. Russo', rol:'CEO', profile:`${link}chris-c-russo/`,experience:'10+ years'},
-        {id:'edgardo', image:'../assets/images/members/edgardo.webp',name:'Edgardo Krause', rol:'cyberSecurity', profile:`${link}edgardokrause/`,experience:'7+ years'},
-        {id:'miguel', image:'../assets/images/members/miguel.png',name:'Miguel Peroni', rol:'operations', profile:`${link}peroni/`,experience:'8+ years'},
-        {id:'ignacio', image:'../assets/images/members/ignacio.webp',name:'Ignacio Gomez', rol:'product', profile:`${link}gomez-ignacio/`,experience:'10+ years'}
+        {id:'chris', image:'/images/members/chris.webp',name:'Christian Russo', rol:'CEO', profile:`${link}chris-c-russo/`,experience:'10+ years'},
+        {id:'edgardo', image:'/images/members/edgardo.webp',name:'Edgardo Krause', rol:'cyberSecurity', profile:`${link}edgardokrause/`,experience:'7+ years'},
+        {id:'miguel', image:'/images/members/miguel.png',name:'Miguel Peroni', rol:'operations', profile:`${link}peroni/`,experience:'8+ years'},
+        {id:'ignacio', image:'/images/members/ignacio.webp',name:'Ignacio Gomez', rol:'product', profile:`${link}gomez-ignacio/`,experience:'10+ years'}
     ],
     [
-        {id:'zaballa', image:'../assets/images/members/zaballa.png',name:'Federico Zaballa', rol:'cloud security', profile:`${link}zaballaf`,experience:'15+ years'},
-        {id:'hemsleek', image:'../assets/images/members/hemsleek.png',name:'Asiyanbi Mubashir', rol:'frontend software Engineer', profile:`${link}hemsleek/`,experience:'4+ years'},
-        {id:'misael', image:'../assets/images/members/mixael.png',name:'Misael Los santos', rol:'developer', profile:`${link}misael-los-santos-011b00220/`,experience:'1+ years'},
-        {id:'gaspar', image:'../assets/images/members/gaspar.png',name:'Gaspar O.', rol:'pentest', profile:`${link}gonesto/`,experience:'4+ years'}
+        {id:'zaballa', image:'/images/members/zaballa.png',name:'Federico Zaballa', rol:'cloud security', profile:`${link}zaballaf`,experience:'15+ years'},
+        {id:'hemsleek', image:'/images/members/hemsleek.png',name:'Asiyanbi Mubashir', rol:'frontend software Engineer', profile:`${link}hemsleek/`,experience:'4+ years'},
+        {id:'misael', image:'/images/members/mixael.png',name:'Misael Los santos', rol:'developer', profile:`${link}misael-los-santos-011b00220/`,experience:'1+ years'},
+        {id:'gaspar', image:'/images/members/gaspar.png',name:'Gaspar O.', rol:'pentest', profile:`${link}gonesto/`,experience:'4+ years'}
     ]
 ]
 
 export const testimonials = [
     [
-        {name:'Mohammed Alam', image:'../assets/images/testimonials/chris/alam.webp', profile:`${link}mohammed-alam-0a553560/`, rol:'CEO Al-bilad for consultation and solutions', description:'Chris (Codefend) is an excellent professional engineer in the area of ethical hacking in addition, he is skillful in web security'},
-        {name:'Dr.Zoki Quereshey', image:'../assets/images/testimonials/chris/zoki.webp', profile:`${link}dr-zaki-qureshey-50b3616/`, rol:'Director General-National Security Cluster, India`s 1st Security Cluster', description:'Chris is an excellent IT security professional, he helped us run vulnerability assessments detect and fix web application security vulnerabilities, and also performed mobile application security with us. Highly recommended.'},
-        {name:'Juan Ignacio Salaberry', image:'../assets/images/testimonials/chris/juan.webp', profile:`${link}jisalaberry/`, rol:'Strategic and Operational Planning Director (Anses)', description:'Chris (Codefend) is an excellent proffessional, passionate and talented. He helped us through a difficult proyect, he was a thorough consultant and a pleasure to work with.'},
-        {name:'Patrick Joleys', image:'../assets/images/testimonials/chris/patrick.png', profile:`${link}patrickjoleys/`, rol:'Blockchain Consultant', description:'Codefend is an excellent Information Security Consultant, with great expertise in Web application security, I`ve been working with him and I can recommend his services'},
-        {name:'Luca Fenochietto', image:'../assets/images/testimonials/chris/luca.png', profile:`${link}luca-fenochietto/`, rol:'Blockchain Consultant', description:'Amazing knowledge on IT security and related topics. Captures the clients needs and treat it with extremely delicacy. It`s a service highly recommended.'},
-        {name:'Ahmed Baseer', image:'../assets/images/testimonials/chris/ahmed.png', profile:`${link}ahmed-baseer-22aba831/`, rol:'Talent Consultant', description:'Chris (Codefend) is a great professional to work with. He helped me a lot to get started and also to understand internal processes. His work ethics is immaculate and so easy to work together with. Great professional..!'},
+        {name:'Mohammed Alam', image:'/images/testimonials/chris/alam.webp', profile:`${link}mohammed-alam-0a553560/`, rol:'CEO Al-bilad for consultation and solutions', description:'Chris is an excellent professional engineer in the area of ethical hacking in addition, he is skillful in web security'},
+        {name:'Dr. Zaki Qureshey', image:'/images/testimonials/chris/zoki.webp', profile:`${link}dr-zaki-qureshey-50b3616/`, rol:'CEO Homeland Security Solutions B.V', description:'Chris is an excellent IT security professional, he helped us run vulnerability assessments, detect and fix web application security vulnerabilities, and also performed mobile application security with us. Highly recommended.'},
+        {name:'Juan Ignacio Salaberry', image:'/images/testimonials/chris/juan.webp', profile:`${link}jisalaberry/`, rol:'Strategic and Operational Planning Director (Anses)', description:'Chris is an excellent professional, passionate and talented. He helped us through a difficult project, he was a thorough consultant and a pleasure to work with.'},
+        {name:'Patrick Joleys', image:'/images/testimonials/chris/patrick.png', profile:`${link}patrickjoleys/`, rol:'Blockchain Consultant', description:'Codefend is an excellent Information Security Consultant, with great expertise in Web application security, I`ve been working with him and I can recommend his services'},
+        {name:'Luca Fenochietto', image:'/images/testimonials/chris/luca.png', profile:`${link}luca-fenochietto/`, rol:'Blockchain Consultant', description:'Amazing knowledge on IT security and related topics. Captures the clients needs and treat it with extremely delicacy. It`s a service highly recommended.'},
+        {name:'Baseer Ahmed', image:'/images/testimonials/chris/ahmed.png', profile:`${link}ahmed-baseer-22aba831/`, rol:'Talent Consultant', description:'Chris is a great professional to work with. He helped me a lot to get started and also to understand internal processes. His work ethics is immaculate and so easy to work together with. Great professional..!'},
     ],
     [
-        {name:'Diego Barcena', image:'../assets/images/testimonials/fran/diego.webp', profile:`${link}diego-barcena/`, rol:'Sr,Full-Stack Developer & DevOps', description:'Working with Fran was an awesome experience i had the pleasure to work with him not only once but twice in two completely different environments. He has both aoutstranding technical and communication skills and he is always delivering quality solutions.'},
-        {name:'Gabriel Coronel', image:'../assets/images/testimonials/fran/gabriel.webp', profile:`${link}gabriel-coronel/`, rol:'Owner at Networklink | Cisco CCNPx2 Enterprise/Security', description:'Fran displays extremely high levels of energy and commitment in everything he does i can say with confidence that he demonstrated excellent knowledge of the Security technologies. He takes initiatives and does not wait for the instructions.'},
-        {name:'Pedro E.Morris Daly', image:'../assets/images/testimonials/fran/pedro.webp', profile:`${link}pmorrisdaly/`, rol:'CEO/CIO-Mission Critical Engineer', description:'I have worked with Francisco many times, I have witnessed professional growthat light speed, he has a very rich holistic perspective, he is one of the most competentinformation security professionals...'},
-        {name:'Damian Galvez', image:'../assets/images/testimonials/fran/dam.png', profile:`${link}damiangalvez/`, rol:'Sysadmin/DevOps at Globant', description:'I had the pleasure of working with Francisco. He has great skills, he has a tremendous know how and technical knowledge. He is a very intelligent person, always willing to help and always providing solutions. He response very well under stressful situations, being able to diagnose and resolve problems very quickly. He is a very good person'},
+        {name:'Diego Barcena', image:'/images/testimonials/fran/diego.webp', profile:`${link}diego-barcena/`, rol:'Sr,Full-Stack Developer & DevOps', description:'Working with Fran was an awesome experience i had the pleasure to work with him not only once but twice in two completely different environments. He has both aoutstranding technical and communication skills and he is always delivering quality solutions.'},
+        {name:'Gabriel Coronel', image:'/images/testimonials/fran/gabriel.webp', profile:`${link}gabriel-coronel/`, rol:'Owner at Networklink | Cisco CCNPx2 Enterprise/Security', description:'Fran displays extremely high levels of energy and commitment in everything he does i can say with confidence that he demonstrated excellent knowledge of the Security technologies. He takes initiatives and does not wait for the instructions.'},
+        {name:'Pedro E.Morris Daly', image:'/images/testimonials/fran/pedro.webp', profile:`${link}pmorrisdaly/`, rol:'CEO/CIO-Mission Critical Engineer', description:'I have worked with Francisco many times, I have witnessed professional growthat light speed, he has a very rich holistic perspective, he is one of the most competentinformation security professionals...'},
+        {name:'Damian Galvez', image:'/images/testimonials/fran/dam.png', profile:`${link}damiangalvez/`, rol:'Sysadmin/DevOps at Globant', description:'I had the pleasure of working with Francisco. He has great skills, he has a tremendous know how and technical knowledge. He is a very intelligent person, always willing to help and always providing solutions. He response very well under stressful situations, being able to diagnose and resolve problems very quickly. He is a very good person'},
     ],
     [
-        {name:'Kevin Acosta', image:'../assets/images/testimonials/edgardo/kevin.png', profile:`${link}kevin-acosta-3248521a3/`, rol:'Test Automation Engineer', description:'Una persona altamente capaz y buena onda, haber trabajado con alguien tan pro activo y profesional en mi primer trabajo fue una de las mejores experiencias que tuve.'},
-        {name:'Rubén Dario Oberti', image:'../assets/images/testimonials/edgardo/ruben.png', profile:`${link}rubén-darío-oberti-41329282/`, rol:'Analista funcional / Operador Proc de datos', description:'He trabajado con Edgardo en el Banco Santander a través de una consultora. Es un profesional con un marcado perfil de servicio hacia el cliente. Se destacan entre sus virtudes "La iniciativa propia y el compartir sus conocimientos" . Sin dudas es una persona con un potencial exitoso. Se adapta a trabajar en equipo o bien en forma independiente. Para destacar su calidad humana.'},
-        {name:'Alex Oliveros Ortiz', image:'../assets/images/testimonials/edgardo/alex.png', profile:`${link}alex-oliveros-ortiz/`, rol:'Gestión Proyectos Telco & IT. MBA, CSM , Kanban-PM', description:'Excelente compañero de trabajo. Posee un buen conjunto de skills técnicos y habilidades soft; que hacen del desarrollar actividades en equipo una experiencia amena.'},
-        {name:'Pablo David Veliz', image:'../assets/images/testimonials/edgardo/pablo.png', profile:`${link}pablo-david-veliz/`, rol:'Cybersecurity at PWC', description:'Tuve la suerte de compartir espacio laboral con Edgardo en Consultoria Global y es alguien muy proactivo, que siempre esta innovando y buscando soluciones a cualquier problema , nunca se queda estancado, es muy creativo y siempre predispuesto a aprender y colaborar. Desde mi humilde opinion es alguien invaluable en cualquier equipo que tenga la suerte de contar con su capacidad profesional y humana.'},
-        {name:'Evenly Herrera', image:'../assets/images/testimonials/edgardo/evenly.png', profile:`${link}evenly-herrera/`, rol:'Ingeniera Ambiental ', description:'Trabaje con Edgardo haciendo desarrollo de páginas web, es muy buen profesional y excelente para trabajar en equipo. Aprendí mucho de él en el tiempo que trabajamos juntos. Además es muy visionario y es muy bueno resolviendo problemas de forma efectiva.'},
-        {name:'Matias Valdez Nardi', image:'../assets/images/testimonials/edgardo/matias.png', profile:`${link}mvaldez/`, rol:'FullStack Developer', description:'Excelente profesional y persona, con quien gracias a sus habilidades de análisis, perseverancia y liderazgo hemos conseguido grandes hazañas y los objetivos propuestos en momentos donde la cantidad de trabajo era interminable y los tiempos de entrega muy ajustados.'},
+        {name:'Kevin Acosta', image:'/images/testimonials/edgardo/kevin.png', profile:`${link}kevin-acosta-3248521a3/`, rol:'Test Automation Engineer', description:'Una persona altamente capaz y buena onda, haber trabajado con alguien tan pro activo y profesional en mi primer trabajo fue una de las mejores experiencias que tuve.'},
+        {name:'Rubén Dario Oberti', image:'/images/testimonials/edgardo/ruben.png', profile:`${link}rubén-darío-oberti-41329282/`, rol:'Analista funcional / Operador Proc de datos', description:'He trabajado con Edgardo en el Banco Santander a través de una consultora. Es un profesional con un marcado perfil de servicio hacia el cliente. Se destacan entre sus virtudes "La iniciativa propia y el compartir sus conocimientos" . Sin dudas es una persona con un potencial exitoso. Se adapta a trabajar en equipo o bien en forma independiente. Para destacar su calidad humana.'},
+        {name:'Alex Oliveros Ortiz', image:'/images/testimonials/edgardo/alex.png', profile:`${link}alex-oliveros-ortiz/`, rol:'Gestión Proyectos Telco & IT. MBA, CSM , Kanban-PM', description:'Excelente compañero de trabajo. Posee un buen conjunto de skills técnicos y habilidades soft; que hacen del desarrollar actividades en equipo una experiencia amena.'},
+        {name:'Pablo David Veliz', image:'/images/testimonials/edgardo/pablo.png', profile:`${link}pablo-david-veliz/`, rol:'Cybersecurity at PWC', description:'Tuve la suerte de compartir espacio laboral con Edgardo en Consultoria Global y es alguien muy proactivo, que siempre esta innovando y buscando soluciones a cualquier problema , nunca se queda estancado, es muy creativo y siempre predispuesto a aprender y colaborar. Desde mi humilde opinion es alguien invaluable en cualquier equipo que tenga la suerte de contar con su capacidad profesional y humana.'},
+        {name:'Evenly Herrera', image:'/images/testimonials/edgardo/evenly.png', profile:`${link}evenly-herrera/`, rol:'Ingeniera Ambiental ', description:'Trabaje con Edgardo haciendo desarrollo de páginas web, es muy buen profesional y excelente para trabajar en equipo. Aprendí mucho de él en el tiempo que trabajamos juntos. Además es muy visionario y es muy bueno resolviendo problemas de forma efectiva.'},
+        {name:'Matias Valdez Nardi', image:'/images/testimonials/edgardo/matias.png', profile:`${link}mvaldez/`, rol:'FullStack Developer', description:'Excelente profesional y persona, con quien gracias a sus habilidades de análisis, perseverancia y liderazgo hemos conseguido grandes hazañas y los objetivos propuestos en momentos donde la cantidad de trabajo era interminable y los tiempos de entrega muy ajustados.'},
     ],
 ]
 

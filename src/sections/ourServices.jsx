@@ -1,13 +1,13 @@
-import { ServicesDataLeft, ServicesDataRight } from "./ourServicesData";
+import { ServicesData } from "./ourServicesData";
+import { ourServiceLeft, ourServiceRight } from "../data";
 import { motion } from "framer-motion";
-import { slideTransition } from "../transitions/globalTransitions";
 
 const OurServices = () => {
   return (
     <section className="our-services">
       <div className="container">
         <div className="copy">
-          <h2>our services</h2>
+          <h2>Our services</h2>
           <p>
             Codefend offers cybersecurity intel, research, and security
             services, all unified in a unique platform. This platform allows you
@@ -20,7 +20,21 @@ const OurServices = () => {
 
         <div className="list">
           <div className="left">
-            <ServicesDataLeft />
+            <ServicesData
+              data={ourServiceLeft}
+              initialVariant="hiddenleft"
+              hoverVariant="hoverLeft"
+            />
+          </div>
+          <div className="line-container" style={{ "--line-margin-r": "39px" }}>
+            <motion.div
+              initial={{ y: "-100%" }}
+              whileInView={{ y: 0, transition: { duration: 2, delay: 0.5 } }}
+              viewport={{ once: true }}
+              className="line"
+            ></motion.div>
+          </div>
+          <div className="line-container">
             <motion.div
               initial={{ y: "-100%" }}
               whileInView={{ y: 0, transition: { duration: 2, delay: 0.5 } }}
@@ -29,13 +43,11 @@ const OurServices = () => {
             ></motion.div>
           </div>
           <div className="right">
-            <ServicesDataRight />
-            <motion.div
-              initial={{ y: "-100%" }}
-              whileInView={{ y: 0, transition: { duration: 2, delay: 0.5 } }}
-              viewport={{ once: true }}
-              className="line"
-            ></motion.div>
+            <ServicesData
+              data={ourServiceRight}
+              initialVariant="hiddenright"
+              hoverVariant="hoverRight"
+            />
           </div>
         </div>
       </div>

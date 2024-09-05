@@ -1,24 +1,15 @@
 import React from "react";
-import Section1 from "./section-1";
-import Section2 from "./section-2";
-import Section3 from "./section-3";
+import DocumentMetadata from "../../components/DocumentMetadata";
+import { pageServicesMetaData } from "../../data/metaData";
+import ServiceSlidesSection from "../../sections/ServiceSlidesSection";
+import ServiceHero from "../../sections/ServiceHero";
 
 const Services = () => {
   return (
     <>
-      <section className="services">
-        <div className="container">
-          <div className="subtitle">
-            <h2>services</h2>
-            <p>
-            Codefend offers cybersecurity intel, research, and security services, all unified in a unique platform. Allowing you to monitor your assets, infrastructure and your organization's security, while establishing direct communication between our professionals and your security team.
-            </p>
-          </div>
-        </div>
-      </section>
-      <Section1 />
-      <Section2 />
-      <Section3 />
+      <DocumentMetadata meta={pageServicesMetaData} />
+      <ServiceHero />
+      <ServiceSlidesSection />
     </>
   );
 };

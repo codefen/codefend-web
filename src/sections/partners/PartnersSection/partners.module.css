@@ -1,0 +1,58 @@
+.partnesSection {
+  background-color: #000;
+  color: #fff;
+  padding: 0px 0 0 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.wrapper {
+  padding: var(--padding-general);
+}
+
+.containerContacts {
+  display: flex;
+  column-gap: 13px;
+  margin-top: 25px;
+  bottom: -130px;
+  justify-content: center;
+
+  p {
+    color: var(--text-color);
+    flex: 1;
+    line-height: 20px;
+    font-size: 14px;
+  }
+}
+
+.partnesCard {
+  background-color: #181818;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  height: 127px;
+  justify-content: center;
+  column-gap: 2vw;
+  padding: 0 3vw;
+  max-width: 500px;
+  border: 2px solid #3a3a3a;
+  z-index: 55;
+  img {
+    border-radius: 50%;
+    border: 1px solid #bebebe;
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .containerContacts {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .partnesCard {
+    gap: 40px;
+    padding: 0 30px;
+  }
+}

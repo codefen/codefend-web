@@ -1,38 +1,42 @@
-import { motion } from "framer-motion"
-import { slideTransition } from "../transitions/globalTransitions"
-import { useRef } from "react" 
-import img from '../../public/assets/images/check.svg'
+import { motion } from "framer-motion";
+import { slideTransition } from "../transitions/globalTransitions";
+import { useLocation } from "react-router-dom";
+import { useRef, useEffect } from "react";
 
 const Contact = () => {
-    const slide = useRef(null)
+  const contactRef = useRef(null);
+  const location = useLocation();
 
-    function handleSlide({target}){
-      const {current} = slide
-      console.log(event.target.className)
-      if(target.className === "monthly"){
-        current.style.transform = `translate(0vw)`;
-      } else{
-        current.style.transform = `translate(-100vw)`;
-        
+  useEffect(() => {
+    if (location.state?.scrollToContact) {
+      const contactSection = contactRef.current;
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: "smooth" });
       }
-      
     }
+  }, [location]);
 
-    return (
-      <section className="contact" id="contact">
-        <div className="container">
-          <motion.div initial="hidden"
-                      whileInView="visible"
-                      variants={slideTransition}  
-                      className="copy">
-            <h2>contact</h2>
-            <p>
-              <b>business partners and alliances</b><br/>
-              We invite you to get in touch with our representatives and business partners via phone or email in order to bring you the tailored assistance your business requires. Please do not attempt to harm our business teams.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-    )
-}
-export default Contact
+  return (
+    <section ref={contactRef} className="contact" id="contact">
+      <div className="container">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          variants={slideTransition}
+          className="copy"
+        >
+          <h2>contact</h2>
+          <p>
+            <b>business partners and alliances</b>
+            <br />
+            We invite you to get in touch with our representatives and business
+            partners via phone or email in order to bring you the tailored
+            assistance your business requires. Please do not attempt to harm our
+            business teams.
+          </p>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+export default Contact;

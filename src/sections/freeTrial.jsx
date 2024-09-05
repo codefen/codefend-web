@@ -1,36 +1,31 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { countries, topCountriesOnList } from '../data/countries.js';
+import { countries, topCountriesOnList } from "../data/countries.js";
 
 const FreeTrial = () => {
   const img1 = useRef(null);
   const img2 = useRef(null);
   const [scrolly, setScrolly] = useState(0);
   const [currentPage, setCurrentPage] = useState(0);
-  const location = useLocation()
+  const location = useLocation();
 
   useEffect(() => {
-    if (location.pathname === '/') {
+    if (location.pathname === "/") {
       setCurrentPage(8700);
-    } else if (location.pathname === '/software') {
+    } else if (location.pathname === "/software") {
       setCurrentPage(4700);
-    } else if (location.pathname === '/industries') {
+    } else if (location.pathname === "/industries") {
       setCurrentPage(2700);
-
-    } else if (location.pathname === '/services') {
+    } else if (location.pathname === "/services") {
       setCurrentPage(3700);
-
-    } else if (location.pathname === '/compliance') {
+    } else if (location.pathname === "/compliance") {
       setCurrentPage(2700);
-
-    } else if (location.pathname === '/partners') {
+    } else if (location.pathname === "/partners") {
       setCurrentPage(3000);
-
-    } else if (location.pathname === '/team') {
+    } else if (location.pathname === "/team") {
       setCurrentPage(1700);
-
     }
-  }, [location.pathname])
+  }, [location.pathname]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,7 +53,6 @@ const FreeTrial = () => {
   }, [scrolly]);
 
   const handleForm = () => {
-
     event.preventDefault(); // Evita el envío predeterminado del formulario
 
     // Obtener datos del formulario
@@ -74,38 +68,47 @@ const FreeTrial = () => {
     var idiom = document.querySelector("#form-field-idiom").value;
 
     // Construir la URL con los datos del formulario
-    var apiUrl = "https://kundalini.codefend.com/kundalini/index.php?model=users%2Fnew" +
-      "&lead_fname=" + encodeURIComponent(lead_fname) +
-      "&lead_lname=" + encodeURIComponent(lead_lname) +
-      "&lead_role=" + encodeURIComponent(lead_role) +
-      "&lead_email=" + encodeURIComponent(lead_email) +
-      "&lead_phone=" + encodeURIComponent(lead_phone) +
-      "&company_name=" + encodeURIComponent(company_name) +
-      "&company_web=" + encodeURIComponent(company_web) +
-      "&company_size=" + encodeURIComponent(company_size) +
-      "&company_area=" + encodeURIComponent(company_area) +
-      "&reseller_name=" + encodeURIComponent(reseller)
-      "&reseller_id=77" +
-      "&idiom=" + encodeURIComponent(idiom) +
-      "&phase=1"
+    var apiUrl =
+      "https://kundalini.codefend.com/kundalini/index.php?model=users%2Fnew" +
+      "&lead_fname=" +
+      encodeURIComponent(lead_fname) +
+      "&lead_lname=" +
+      encodeURIComponent(lead_lname) +
+      "&lead_role=" +
+      encodeURIComponent(lead_role) +
+      "&lead_email=" +
+      encodeURIComponent(lead_email) +
+      "&lead_phone=" +
+      encodeURIComponent(lead_phone) +
+      "&company_name=" +
+      encodeURIComponent(company_name) +
+      "&company_web=" +
+      encodeURIComponent(company_web) +
+      "&company_size=" +
+      encodeURIComponent(company_size) +
+      "&company_area=" +
+      encodeURIComponent(company_area) +
+      "&reseller_name=" +
+      encodeURIComponent(reseller);
+    "&reseller_id=77" + "&idiom=" + encodeURIComponent(idiom) + "&phase=1";
 
     // Obtener los elementos por su ID
-    const messageSuccess = document.getElementById('messageSuccess');
-    const messageDanger = document.getElementById('messageDanger');
-    messageSuccess.style.display = 'none';
-    messageDanger.style.display = 'none';
+    const messageSuccess = document.getElementById("messageSuccess");
+    const messageDanger = document.getElementById("messageDanger");
+    messageSuccess.style.display = "none";
+    messageDanger.style.display = "none";
     // Realizar la solicitud POST
     fetch(apiUrl, { method: "POST" })
-      .then(response => response.json())
-      .then(data => {
+      .then((response) => response.json())
+      .then((data) => {
         console.log("Respuesta de la API:", data);
-        messageSuccess.style.display = 'block';
+        messageSuccess.style.display = "block";
       })
-      .catch(error => {
+      .catch((error) => {
         console.error("Error al realizar la solicitud:", error);
-        messageDanger.style.display = 'block';
+        messageDanger.style.display = "block";
       });
-  }
+  };
 
   return (
     <section className="free-trial">
@@ -177,7 +180,11 @@ const FreeTrial = () => {
               />
             </div>
             <div className="input-group">
-              <select className="log-inputs log-text" name="company_size" required>
+              <select
+                className="log-inputs log-text"
+                name="company_size"
+                required
+              >
                 <option value="" disabled hidden>
                   Select Company Size
                 </option>
@@ -212,7 +219,8 @@ const FreeTrial = () => {
                   <option
                     key={index}
                     value={option.value}
-                    hidden={option?.hidden}>
+                    hidden={option?.hidden}
+                  >
                     {option.label}
                   </option>
                 ))}
@@ -232,16 +240,13 @@ const FreeTrial = () => {
               </span>
             </div> */}
             <div className="extra-group">
-              <button type="submit">
-                submit
-              </button>
-
+              <button type="submit">submit</button>
             </div>
           </form>
         </div>
         <div className="img-contain">
-          <img ref={img1} src="../assets/images/front.webp" alt="d" />
-          <img ref={img2} src="../assets/images/back.webp" alt="d" />
+          <img ref={img1} src="/images/front.webp" alt="d" />
+          <img ref={img2} src="/images/back.webp" alt="d" />
         </div>
       </div>
     </section>
@@ -249,6 +254,3 @@ const FreeTrial = () => {
 };
 
 export default FreeTrial;
-
-
-
