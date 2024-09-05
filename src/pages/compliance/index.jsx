@@ -1,12 +1,14 @@
-import React, { useState, useRef, useEffect } from 'react';
-import HeroCompliance from './hero';
+import HeroCompliance from "./hero";
+import DocumentMetadata from "../../components/DocumentMetadata";
+import { pageComplianceMetaData } from "../../data/metaData";
 
 const Compliance = () => {
-    return (
-        <>
-            <HeroCompliance />
-        </>
-    );
+  return (
+    <>
+      <DocumentMetadata meta={pageComplianceMetaData} />
+      <HeroCompliance />
+    </>
+  );
 };
 
 export default Compliance;

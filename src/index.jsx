@@ -1,36 +1,34 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from "react";
+import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./pages/Layout";
 import Home from "./pages/home/home";
 
-import './styles/global.scss';
+import "./styles/global.scss";
 
-import reportWebVitals from './reportWebVitals';
-import Software from './pages/software';
-import Industries from './pages/industries';
-import Services from './pages/services';
-import Compliance from './pages/compliance';
-import Partners from './pages/partners';
-import Friends from './pages/friends';
+import reportWebVitals from "./reportWebVitals";
+import Software from "./pages/software";
+import Industries from "./pages/industries";
+import Services from "./pages/services";
+import Compliance from "./pages/compliance";
+import Partners from "./pages/partners";
+import Friends from "./pages/friends";
 
 export default function App() {
   return (
     <BrowserRouter>
-
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="software" element={<Software />} />
-            <Route path="industries" element={<Industries />} />
-            <Route path="services" element={<Services />} />
-            <Route path="compliance" element={<Compliance />} />
-            <Route path="partners" element={<Partners />} />
-            <Route path="about-us" element={<Friends />} />
-            <Route path="*" element={<Home />} />
-          </Route>
-        </Routes>
-
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="software" element={<Software />} />
+          <Route path="industries" element={<Industries />} />
+          <Route path="services" element={<Services />} />
+          <Route path="compliance" element={<Compliance />} />
+          <Route path="partners" element={<Partners />} />
+          <Route path="about-us" element={<Friends />} />
+          <Route path="*" element={<Home />} />
+        </Route>
+      </Routes>
     </BrowserRouter>
   );
 }

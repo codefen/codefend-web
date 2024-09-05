@@ -1,0 +1,19 @@
+.profileSkeletonLoader {
+  width: 80px;
+  height: 80px;
+  background-color: #ddd;
+  border-radius: 100%;
+  animation: 2s skeletonLoader infinite;
+}
+
+@keyframes skeletonLoader {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

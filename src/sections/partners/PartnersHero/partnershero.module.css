@@ -1,0 +1,27 @@
+.partnesHero {
+  background-image: url("/images/bg-heroServices2.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  color: #fff;
+  min-height: 70vh;
+  mask-image: linear-gradient(var(--color-black-100) 80%, transparent);
+
+  @media screen and (max-width: 820px) {
+    background-image: url("/images/bkg-partners-mobile.webp");
+  }
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.35);
+  padding: 2vw 2vw;
+  margin-top: 5vw;
+  max-width: 660px;
+  h1 {
+    font-size: var(--text-h2-normal);
+  }
+
+  p {
+    max-width: 650px;
+  }
+}

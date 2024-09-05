@@ -38,7 +38,7 @@ const OurSoftware = () => {
           </motion.div>
 +
           <div className="image">
-            <img src="../assets/images/sleek-1.png" loading="lazy" alt="statistics img" />
+            <img src="/images/sleek-1.png" loading="lazy" alt="statistics img" />
           </div>
           <div className="items">
             <div className="item">
