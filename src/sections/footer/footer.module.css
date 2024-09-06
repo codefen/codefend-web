@@ -12,12 +12,14 @@ footer.footerSection {
   --logo-img-w: 100%;
   --container-direction: column-reverse;
 
+  --bg-overflow: hidden;
+
   background-color: var(--section-alt-bkg);
   color: #ffffff;
   min-height: var(--section-min-h);
   position: relative;
   padding-block-start: var(--section-padding-start);
-  overflow: hidden;
+  overflow: var(--bg-overflow);
 
   &::after {
     content: " ";
@@ -147,6 +149,7 @@ footer.footerSection {
     --section-min-h: 250px;
     --section-padding-start: 20rem;
     --banner-height: 105%;
+    --bg-overflow: visible;
   }
 }
 
