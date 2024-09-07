@@ -1,5 +1,6 @@
 import { EffectCreative, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import css from "./softwareFeatures.module.css";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -8,7 +9,7 @@ import "swiper/css/scrollbar";
 
 const Features = () => {
   return (
-    <section className="features">
+    <section className={css.features}>
       <div className="container">
         <h2>remarkable features</h2>
 
@@ -27,7 +28,7 @@ const Features = () => {
               onClick={() => {
                 console.log(swiperSlide.isActive);
               }}
-              className="column"
+              className={css.column}
             >
               <div>
                 <h3>specialized customer support</h3>
@@ -53,7 +54,7 @@ const Features = () => {
               onClick={() => {
                 console.log(swiperSlide.isActive);
               }}
-              className="column"
+              className={css.column}
             >
               <div>
                 <h3>uncertain about your mobile apps?</h3>
@@ -83,7 +84,7 @@ const Features = () => {
               onClick={() => {
                 console.log(swiperSlide.isActive);
               }}
-              className="column"
+              className={css.column}
             >
               <img
                 loading="lazy"
@@ -98,7 +99,7 @@ const Features = () => {
               onClick={() => {
                 console.log(swiperSlide.isActive);
               }}
-              className="column"
+              className={css.column}
             >
               <div>
                 <h3>Detailed vulnerabilties & issues</h3>
@@ -123,7 +124,7 @@ const Features = () => {
               onClick={() => {
                 console.log(swiperSlide.isActive);
               }}
-              className="column"
+              className={css.column}
             >
               <img
                 loading="lazy"

@@ -1,7 +1,7 @@
 import React from "react";
-import Features from "./features";
 import Capabilities from "./capabilities";
 import OurSoftware from "../../sections/ourSoftware/ourSoftware";
+import Features from "../../sections/softwareFeatures/features";
 import DocumentMetadata from "../../components/DocumentMetadata";
 import { pageSoftwareMetaData } from "../../data/metaData";
 const Software = () => {

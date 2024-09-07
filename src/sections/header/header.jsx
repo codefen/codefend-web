@@ -1,9 +1,10 @@
 import { Link, NavLink } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { NAVIGATE_LINKS } from "../data/header";
+import { NAVIGATE_LINKS } from "../../data/header";
 import { FaBars } from "react-icons/fa6";
 import { FaX } from "react-icons/fa6";
 import { useState, useCallback, useRef } from "react";
+import css from "./header.module.css";
 
 // Se verifica el soport para backdrop-filter
 const supportBackdrop = CSS.supports("backdrop-filter", "blur(1px)");
@@ -35,7 +36,7 @@ const Header = () => {
 
   return (
     <motion.header
-      className="header"
+      className={css.header}
       style={{
         "--header-bg": backgroundColor,
         "--header-padding": padding,
@@ -43,8 +44,8 @@ const Header = () => {
         "--header-blur": blurFilter,
       }}
     >
-      <div className="header-wrapper">
-        <div className="container">
+      <div className={css.wrapper}>
+        <div className={`container ${css.container}`}>
           <motion.div
             initial={{
               opacity: 0,
@@ -58,7 +59,7 @@ const Header = () => {
               delay: 0.2,
               duration: 1,
             }}
-            className="brand"
+            className={css.brand}
           >
             <a href="/#hero">
               <img src="/images/logo-light.svg" alt="logo" />
@@ -74,25 +75,27 @@ const Header = () => {
           </button>
 
           <div
-            className="navigate-container"
+            className={css.navigateContainer}
             style={{ "--menu-width": !isMenuOpen ? "0%" : "100dvw" }}
           >
-            <ul ref={menuRef} className="navigate">
-              {NAVIGATE_LINKS.map((path) => (
-                <li key={path}>
-                  <NavLink
-                    to={`/${path}`}
-                    className={({ isActive }) => (isActive ? "active" : "")}
-                    onClick={closeMenuOnLinkClick}
-                  >
-                    {path.replace("-", " ")}
-                  </NavLink>
-                </li>
-              ))}
-            </ul>
+            <div className={css.navigateWrapper}>
+              <ul ref={menuRef} className={css.navigate}>
+                {NAVIGATE_LINKS.map((path) => (
+                  <li key={path}>
+                    <NavLink
+                      to={`/${path}`}
+                      className={({ isActive }) => (isActive ? css.active : "")}
+                      onClick={closeMenuOnLinkClick}
+                    >
+                      {path.replace("-", " ")}
+                    </NavLink>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
-          <div className="menu">
+          <div className={css.menu}>
             <Link
               className="btn alt"
               to={{ pathname: "/", hash: "#contact" }}
