@@ -6,7 +6,6 @@ function Crypto() {
       <div className={css.wrapper}>
         <div className={css.container}>
           <div className={css.containerContent}>
-            <h2>Bitcoin is welcome</h2>
             <div>
               <img
                 className={css.bitCoinImg}
@@ -16,6 +15,7 @@ function Crypto() {
                 width={120}
                 height={120}
               />
+              <h2>Bitcoin is welcome</h2>
               <p>
                 <b>
                   for customers and our ethical hackers: we accept all major

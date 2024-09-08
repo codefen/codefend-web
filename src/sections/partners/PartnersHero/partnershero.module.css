@@ -1,15 +1,21 @@
 .partnesHero {
+  --mask-img-percentage: 80%;
+  --hero-min-h: 70dvh;
+  --hero-bg-size: cover;
+  --bg-position-y: -4dvh;
+  --hero-max-h: 1000px;
   background-image: url("/images/bg-heroServices2.webp");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: var(--hero-bg-size);
   background-position: top center;
+  background-position-y: var(--bg-position-y);
   color: #fff;
-  min-height: 70vh;
-  mask-image: linear-gradient(var(--color-black-100) 80%, transparent);
-
-  @media screen and (max-width: 820px) {
-    background-image: url("/images/bkg-partners-mobile.webp");
-  }
+  min-height: var(--hero-min-h);
+  max-height: var(--hero-max-h);
+  mask-image: linear-gradient(
+    var(--color-black-100) var(--mask-img-percentage),
+    transparent
+  );
 }
 
 .container {
@@ -20,9 +26,51 @@
   padding-inline: 3.25rem;
   h1 {
     font-size: var(--text-h2-normal);
+    min-height: 0 !important;
   }
 
   p {
     max-width: 650px;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .partnesHero {
+    background-image: url("/images/bkg-partners-mobile.webp");
+    --bg-position-y: -15dvw;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .partnesHero {
+    --mask-img-percentage: 60%;
+    --hero-min-h: 80dvh;
+    --hero-bg-size: cover;
+    --bg-position-y: -20dvh;
+    --hero-max-h: none;
+  }
+}
+
+@media only screen and (min-width: 2340px) {
+  .partnesHero {
+    --bg-position-y: -30dvh;
+  }
+}
+
+@media only screen and (min-width: 2740px) {
+  .partnesHero {
+    --mask-img-percentage: 70%;
+    --bg-position-y: -35dvh;
+  }
+}
+
+@media only screen and (max-height: 900px) and (min-width: 1480px) {
+  .partnesHero {
+    --bg-position-y: -8vh;
+  }
+}
+@media only screen and (max-height: 1000px) and (min-width: 1780px) and (max-width: 1998px) {
+  .partnesHero {
+    --bg-position-y: -22vh;
   }
 }

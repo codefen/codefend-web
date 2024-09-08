@@ -1,17 +1,33 @@
 footer.footerSection {
+  --links-width: 100%;
+  --links-padding-i: 2vw;
+  --links-max-w: 720px;
+  --links-margin-start: 1.75rem;
+  --section-padding-start: 0;
+  --banner-width: 99%;
+  --banner-height: 100%;
+
+  --section-min-h: 800px;
+  --links-direction: column;
+  --logo-img-w: 100%;
+  --container-direction: column-reverse;
+
+  --bg-overflow: hidden;
+
   background-color: var(--section-alt-bkg);
   color: #ffffff;
-  min-height: 250px;
+  min-height: var(--section-min-h);
   position: relative;
-  padding-block-start: 9.5rem;
+  padding-block-start: var(--section-padding-start);
+  overflow: var(--bg-overflow);
 
   &::after {
     content: " ";
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
-    height: 120%;
+    width: var(--banner-width);
+    height: var(--banner-height);
     background-size: cover;
     z-index: 2;
     background-image: url("/images/bkg-red8.webp");
@@ -30,7 +46,7 @@ footer.footerSection {
 
   img {
     object-fit: contain;
-    width: 400px;
+    width: var(--logo-img-w);
     max-width: 400px;
     aspect-ratio: 1 / 0.35;
   }
@@ -38,6 +54,8 @@ footer.footerSection {
     margin: 10px;
     font-size: 14px;
     text-align: center;
+    line-height: 0;
+    margin-block-start: -6px;
   }
   ul {
     display: flex;
@@ -61,29 +79,41 @@ footer.footerSection {
   }
 }
 
-.tools {
+.wrapper {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  bottom: 0;
+  z-index: 3;
+  padding-inline: 0;
+  padding-block-start: 70px;
+  padding-block-end: 40px;
   overflow-y: hidden;
   left: 0px;
   right: 0px;
   height: auto;
-  position: absolute;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.container {
   display: flex;
-  padding-inline: 0;
-  padding-block-start: 70px;
-  padding-block-end: 40px;
+  flex-direction: var(--container-direction);
   gap: 4vw;
   flex-wrap: wrap;
-  z-index: 3;
   justify-content: space-around;
+  max-width: 1900px;
+  margin-inline: auto;
 }
 
 .footerlinks {
   display: flex;
+  flex-direction: var(--links-direction);
   align-items: start;
   justify-content: space-between;
   gap: 5vw;
+  width: var(--links-width);
+  padding-inline: var(--links-padding-i);
+  max-width: var(--links-max-w);
+  margin-block-start: var(--links-margin-start);
+  align-items: center;
 
   ul {
     li:first-child {
@@ -105,30 +135,44 @@ footer.footerSection {
   }
 }
 
+@media only screen and (min-width: 580px) {
+  footer.footerSection {
+    --links-direction: row;
+    --section-min-h: 540px;
+    --logo-img-w: 400px;
+    --container-direction: row;
+  }
+}
+
+@media only screen and (min-width: 820px) {
+  footer.footerSection {
+    --section-min-h: 250px;
+    --section-padding-start: 20rem;
+    --banner-height: 105%;
+    --bg-overflow: visible;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  footer.footerSection {
+    --links-width: auto;
+    --links-padding-i: 0;
+    --links-max-w: 900px;
+    --links-margin-start: 0;
+    --section-padding-start: 9.5rem;
+    --banner-width: 100%;
+    --banner-height: 120%;
+  }
+}
+
 @media screen and (max-width: 820px) {
   footer.footerSection {
-    overflow: hidden;
-    min-height: 700px;
-    padding: 0;
-
     &::after {
-      height: 100%;
       background-repeat: no-repeat;
       background-position: left bottom;
     }
   }
-  .tools {
-    flex-direction: column-reverse;
+  .wrapper {
     padding: 40px 10vw;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .footerLogo {
-    margin-top: 40px;
-  }
-
-  .footerLinks {
-    flex-direction: column;
   }
 }

@@ -1,11 +1,28 @@
 import css from "./partnerform.module.css";
 import { useTransition } from "react";
 
-const dispatch = (formData) => {
-  console.log({ name: formData.get("fullName") });
-
-  console.log("Sending...");
-  return true;
+const dispatch = async (formData) => {
+  console.log({ name: formData.get("name") });
+  const data = {
+    fullName: formData.get("name"),
+    companyRol: formData.get("companyRol"),
+    email: formData.get("email"),
+    phoneNumber: formData.get("phone"),
+    companyWebsite: formData.get("companyWebsite"),
+    companySize: formData.get("companySize"),
+    country: formData.get("country"),
+  };
+  const res = await fetch(
+    "https://formspree.io/f/{form_id}",
+    JSON.stringify(data),
+    {
+      headers: { Accept: "application/json" },
+    }
+  );
+  if (res.ok) {
+    return true;
+  }
+  return false;
 };
 
 const PartnerForm = () => {
@@ -16,7 +33,7 @@ const PartnerForm = () => {
     const formData = new FormData(e.target);
     startTransition(() => {
       dispatch(formData);
-      console.log("Finish send.");
+      e.target.reset();
     });
   };
   return (
@@ -26,9 +43,14 @@ const PartnerForm = () => {
         Unlock a lucrative opportunity with Codefend by becoming one of our
         trusted distributors.{" "}
       </p>
-      <form className={css.partnerForm} onSubmit={onSubmit}>
+      <form
+        className={css.partnerForm}
+        onSubmit={onSubmit}
+        action="https://formspree.io/f/{form_id}"
+        method="post"
+      >
         <input
-          name="fullName"
+          name="name"
           placeholder="Full name"
           type="text"
           autoComplete="name"
@@ -41,14 +63,14 @@ const PartnerForm = () => {
           autoComplete="off"
         />
         <input
-          name="workEmail"
+          name="email"
           placeholder="Work email"
           type="email"
           autoComplete="email"
           required
         />
         <input
-          name="phoneNumber"
+          name="phone"
           placeholder="Phone number"
           type="text"
           autoComplete="tel"
