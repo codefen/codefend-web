@@ -9,7 +9,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import FirstSlider from "./components/firstSlider";
-import SecondSlider from "./components/secondSlider";
 
 
 const Friends1 = () => {
@@ -18,8 +17,6 @@ const Friends1 = () => {
         <section className="friends1">
 
             <FirstSlider />
-
-            {/* <SecondSlider /> */}
 
         </section>
     )

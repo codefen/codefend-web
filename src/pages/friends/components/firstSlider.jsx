@@ -10,71 +10,65 @@ import "swiper/css/scrollbar";
 
 const breakPoints = {
   2300: {
-    slidesPerView: 4,
-    spaceBetween: 40,
+      slidesPerView: 4,
+      spaceBetween: 40
   },
   2000: {
-    slidesPerView: 4,
-    spaceBetween: 40,
+      slidesPerView: 4,
+      spaceBetween: 40
   },
   1550: {
-    slidesPerView: 4,
-    spaceBetween: 40,
+      slidesPerView: 3,
+      spaceBetween: 40
   },
-  1000: {
-    slidesPerView: 4,
-    spaceBetween: 40,
+  850: {
+      slidesPerView: 2,
+      spaceBetween: 40
   },
   200: {
-    slidesPerView: 1,
-    spaceBetween: 20,
-  },
-};
+      slidesPerView: 1,
+      spaceBetween: 20
+  }
+}
 
 const FirstSlider = () => {
-  const { indexActive, handleSlide, selectCard } = useSliderTeam("slider-1");
+
+  const {indexActive,
+         handleSlide, 
+         selectCard} = useSliderTeam('slider-1')
 
   return (
-    <div id="slider-1" className="container-1">
+      <div id="slider-1" className="container-1">
       <Swiper
-        modules={[Navigation, Pagination, A11y, Autoplay]}
-        spaceBetween={50}
-        slidesPerView={4}
-        navigation
-        breakpoints={breakPoints}
-        onSlideChange={window.innerWidth < 600 ? handleSlide : () => {}}
+          modules={[Navigation, Pagination, A11y, Autoplay]}
+          spaceBetween={50}
+          slidesPerView={4}
+          navigation
+          breakpoints={breakPoints}
+          onSlideChange={window.innerWidth < 600 ? handleSlide : () => { }}
       >
-        {team[0].map((member, i) => {
-          return (
-            <SwiperSlide key={i}>
-              {/* <CardMembers key={i} member={member} index={i} select={SelectCard}/> */}
-              <div
-                onClick={
-                  window.innerWidth > 600 ? () => selectCard(i) : () => {}
-                }
-                className={`card ${
-                  i === indexActive && window.innerWidth < 600 ? "active" : ""
-                }`}
-              >
-                <img
-                  loading="lazy"
-                  src={member.image}
-                  alt={` ${member.name}`}
-                />
-                <p>
-                  <span>
-                    <b>{member.name}</b>
-                  </span>
-                  <br />
-                  {member.rol} <br />
-                  {/* Profile:<br />
-                                    <a href={`https://${member.profile}`} target="_blank">{member.profile}</a> <br />
-                                    Experience: {member.experience} */}
-                </p>
-              </div>
-            </SwiperSlide>
-          );
-        })}
+          {
+              team[0].map((member, i) => {
+                  return (
+                      <SwiperSlide key={i}>
+                          {/* <CardMembers key={i} member={member} index={i} select={SelectCard}/> */}
+                          <div
+                              onClick={window.innerWidth > 600 ? () => selectCard(i) : () => { }}
+                              className={`card ${i === indexActive && window.innerWidth < 600 ? 'active' : ''}`}>
+                              <img loading="lazy" src={member.image} alt={` ${member.name}`} />
+                              <p>
+                                  <span><b>{member.name}</b></span><br />
+                                  Rol: {member.rol} <br />
+                                  Profile:<br />
+                                  <a href={`https://${member.profile}`} target="_blank">{member.profile}</a> <br />
+                                  Experience: {member.experience}
+                              </p>
+                          </div>
+                      </SwiperSlide>
+
+                  )
+              })
+          }
       </Swiper>
 
       <div className="profile-contain">
