@@ -1,10 +1,3 @@
-import { EffectCreative, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
 
 const Features = () => {
   return (
@@ -12,21 +5,8 @@ const Features = () => {
       <div className="container">
         <h2>remarkable features</h2>
 
-        <Swiper
-          modules={[EffectCreative, Pagination]}
-          pagination={{
-            clickable: true,
-          }}
-          spaceBetween={50}
-          slidesPerView={"auto"}
-          loop={true}
-          grabCursor={true}
-        >
-          <SwiperSlide>
+
             <div
-              onClick={() => {
-                console.log(swiperSlide.isActive);
-              }}
               className="column"
             >
               <div>
@@ -47,12 +27,8 @@ const Features = () => {
                 alt="image of app"
               />
             </div>
-          </SwiperSlide>
-          <SwiperSlide>
+
             <div
-              onClick={() => {
-                console.log(swiperSlide.isActive);
-              }}
               className="column"
             >
               <div>
@@ -77,14 +53,22 @@ const Features = () => {
                 className="right"
               />
             </div>
-          </SwiperSlide>
-          <SwiperSlide>
+
             <div
-              onClick={() => {
-                console.log(swiperSlide.isActive);
-              }}
               className="column"
             >
+              <div>
+                <h3>specialized customer support</h3>
+                <p>
+                  <b>
+                    monitor your attack surface Reveal and manage your hidden IT
+                    infrastructure
+                  </b>{" "}
+                  with our comprehensive automated attack surface expansion.
+                  Discover and continuously update your attack surface with our
+                  integrated systems of automated and manual detection.
+                </p>
+              </div>
               <img
                 loading="lazy"
                 src="/images/app-blue4.png"
@@ -92,12 +76,8 @@ const Features = () => {
                 className="right"
               />
             </div>
-          </SwiperSlide>
-          <SwiperSlide>
+
             <div
-              onClick={() => {
-                console.log(swiperSlide.isActive);
-              }}
               className="column"
             >
               <div>
@@ -117,14 +97,22 @@ const Features = () => {
                 alt="image of app"
               />
             </div>
-          </SwiperSlide>
-          <SwiperSlide>
+
             <div
-              onClick={() => {
-                console.log(swiperSlide.isActive);
-              }}
               className="column"
             >
+              <div>
+                <h3>specialized customer support</h3>
+                <p>
+                  <b>
+                    monitor your attack surface Reveal and manage your hidden IT
+                    infrastructure
+                  </b>{" "}
+                  with our comprehensive automated attack surface expansion.
+                  Discover and continuously update your attack surface with our
+                  integrated systems of automated and manual detection.
+                </p>
+              </div>
               <img
                 loading="lazy"
                 src="/images/app-blue4.png"
@@ -132,8 +120,7 @@ const Features = () => {
                 className="right"
               />
             </div>
-          </SwiperSlide>
-        </Swiper>
+
       </div>
     </section>
   );

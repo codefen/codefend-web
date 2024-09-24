@@ -1,8 +1,8 @@
 import React from "react";
 import DocumentMetadata from "../../components/DocumentMetadata";
 import { pageServicesMetaData } from "../../data/metaData";
-import ServiceSlidesSection from "../../sections/ServiceSlidesSection";
-import ServiceHero from "../../sections/ServiceHero";
+import ServiceSlidesSection from "./ServiceSlidesSection";
+import ServiceHero from "./ServiceHero";
 
 const Services = () => {
   return (
