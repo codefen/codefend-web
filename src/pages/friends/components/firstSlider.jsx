@@ -122,7 +122,7 @@ const FirstSlider = () => {
           />
           <div className="information">
             <h2>Edgardo Krauser</h2>
-            <span>CIBER SECURITY</span>
+            <span>Cybersecurity</span>
             <div className="text">
               <h3>Profesional Summary</h3>
               <p>
@@ -148,7 +148,7 @@ const FirstSlider = () => {
           <img loading="lazy" src="/images/bkg-peroni.png" alt="image-peroni" />
           <div className="information">
             <h2>Miguel Peroni</h2>
-            <span>OFFENSIVE SECURITY RESEARCH</span>
+            <span>Partnership Manager</span>
             <div className="text">
               <h3>Profesional Summary</h3>
               <p>
@@ -182,7 +182,7 @@ const FirstSlider = () => {
           />
           <div className="information">
             <h2>Ignacio Gómez</h2>
-            <span>product</span>
+            <span>Product</span>
             <div className="text">
               <h3>Professional Summary</h3>
               <p>

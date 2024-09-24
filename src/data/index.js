@@ -45,9 +45,9 @@ export const members = [
 export const team = [
     [
         {id:'chris', image:'/images/members/chris.webp',name:'Christian Russo', rol:'CEO', profile:`${link}chris-c-russo/`,experience:'10+ years'},
-        {id:'edgardo', image:'/images/members/edgardo.webp',name:'Edgardo Krause', rol:'cyberSecurity', profile:`${link}edgardokrause/`,experience:'7+ years'},
-        {id:'miguel', image:'/images/members/miguel.png',name:'Miguel Peroni', rol:'operations', profile:`${link}peroni/`,experience:'8+ years'},
-        {id:'ignacio', image:'/images/members/ignacio.webp',name:'Ignacio Gomez', rol:'product', profile:`${link}gomez-ignacio/`,experience:'10+ years'}
+        {id:'edgardo', image:'/images/members/edgardo.webp',name:'Edgardo Krause', rol:'Cybersecurity', profile:`${link}edgardokrause/`,experience:'7+ years'},
+        {id:'miguel', image:'/images/members/miguel.png',name:'Miguel Peroni', rol:'Partnership Manager', profile:`${link}peroni/`,experience:'8+ years'},
+        {id:'ignacio', image:'/images/members/ignacio.webp',name:'Ignacio Gomez', rol:'Product', profile:`${link}gomez-ignacio/`,experience:'10+ years'}
     ],
     [
         {id:'zaballa', image:'/images/members/zaballa.png',name:'Federico Zaballa', rol:'cloud security', profile:`${link}zaballaf`,experience:'15+ years'},
