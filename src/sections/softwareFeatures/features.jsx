@@ -4,7 +4,7 @@ const Features = () => {
   return (
     <section className={css.features}>
       <div className={`container ${css.container}`}>
-        <h2>remarkable features</h2>
+        <h2>Remarkable features</h2>
 
         <div className={css.column}>
           <div>

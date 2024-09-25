@@ -15,7 +15,8 @@ section.features {
 
   h2 {
     font-size: var(--title-size);
-    margin-bottom: 90px;
+    margin-bottom: 75px;
+    margin-top: 40px;
     text-align: center;
   }
 }
