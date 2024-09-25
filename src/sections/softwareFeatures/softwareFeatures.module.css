@@ -75,6 +75,6 @@ section.features .container {
   section.features {
     --column-wrap: nowrap;
     --column-flex-odd: row-reverse;
-    /* --column-img-w: clamp(55cqw, 20vw, 1200px); */
+    --column-img-w: clamp(55cqw, 20vw, 1200px);
   }
 }
