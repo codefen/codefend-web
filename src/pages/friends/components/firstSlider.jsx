@@ -7,68 +7,101 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import { useState } from "react";
+import animation from "../../../styles/animation.module.css";
 
 const breakPoints = {
   2300: {
-      slidesPerView: 4,
-      spaceBetween: 40
+    slidesPerView: 4,
+    spaceBetween: 40,
   },
   2000: {
-      slidesPerView: 4,
-      spaceBetween: 40
+    slidesPerView: 4,
+    spaceBetween: 40,
   },
   1550: {
-      slidesPerView: 3,
-      spaceBetween: 40
+    slidesPerView: 3,
+    spaceBetween: 40,
   },
   850: {
-      slidesPerView: 2,
-      spaceBetween: 40
+    slidesPerView: 2,
+    spaceBetween: 40,
   },
   200: {
-      slidesPerView: 1,
-      spaceBetween: 20
-  }
-}
+    slidesPerView: 1,
+    spaceBetween: 20,
+  },
+};
 
 const FirstSlider = () => {
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
-  const {indexActive,
-         handleSlide, 
-         selectCard} = useSliderTeam('slider-1')
+  const handleImageLoad = () => {
+    setIsImageLoaded(true);
+  };
+
+  const { indexActive, handleSlide, selectCard } = useSliderTeam("slider-1");
 
   return (
-      <div id="slider-1" className="container-1">
+    <div id="slider-1" className="container-1">
       <Swiper
-          modules={[Navigation, Pagination, A11y, Autoplay]}
-          spaceBetween={50}
-          slidesPerView={4}
-          navigation
-          breakpoints={breakPoints}
-          onSlideChange={window.innerWidth < 600 ? handleSlide : () => { }}
+        modules={[Navigation, Pagination, A11y, Autoplay]}
+        spaceBetween={50}
+        slidesPerView={4}
+        navigation
+        breakpoints={breakPoints}
+        onSlideChange={window.innerWidth < 600 ? handleSlide : () => {}}
       >
-          {
-              team[0].map((member, i) => {
-                  return (
-                      <SwiperSlide key={i}>
-                          {/* <CardMembers key={i} member={member} index={i} select={SelectCard}/> */}
-                          <div
-                              onClick={window.innerWidth > 600 ? () => selectCard(i) : () => { }}
-                              className={`card ${i === indexActive && window.innerWidth < 600 ? 'active' : ''}`}>
-                              <img loading="lazy" src={member.image} alt={` ${member.name}`} />
-                              <p>
-                                  <span><b>{member.name}</b></span><br />
-                                  Rol: {member.rol} <br />
-                                  Profile:<br />
-                                  <a href={`https://${member.profile}`} target="_blank">{member.profile}</a> <br />
-                                  Experience: {member.experience}
-                              </p>
-                          </div>
-                      </SwiperSlide>
-
-                  )
-              })
-          }
+        {team[0].map((member, i) => {
+          return (
+            <SwiperSlide key={i}>
+              {/* <CardMembers key={i} member={member} index={i} select={SelectCard}/> */}
+              <div
+                onClick={
+                  window.innerWidth > 600 ? () => selectCard(i) : () => {}
+                }
+                className={`card ${
+                  i === indexActive && window.innerWidth < 600 ? "active" : ""
+                }`}
+              >
+                {!isImageLoaded && (
+                  <div
+                    role="img"
+                    aria-label="Loading profile image"
+                    className={animation.profileSkeletonLoader}
+                  ></div>
+                )}
+                <img
+                  src={member.image}
+                  alt={` ${member.name}`}
+                  onLoad={handleImageLoad}
+                  style={{
+                    opacity: isImageLoaded ? "1" : "0",
+                    position: isImageLoaded ? "static" : "absolute",
+                  }}
+                  loading="lazy"
+                  decoding="async"
+                  aria-hidden={isImageLoaded ? "false" : "true"}
+                  itemProp="image"
+                />
+                <p>
+                  <span>
+                    <b>{member.name}</b>
+                  </span>
+                  <br />
+                  Rol: {member.rol} <br />
+                  Profile:
+                  <br />
+                  <a href={`https://${member.profile}`} target="_blank">
+                    {member.profile}
+                  </a>{" "}
+                  <br />
+                  Experience: {member.experience}
+                </p>
+              </div>
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
 
       <div className="profile-contain">
