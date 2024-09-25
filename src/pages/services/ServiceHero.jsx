@@ -2,7 +2,7 @@ const ServiceHero = () => (
   <section className="services">
     <div className="container">
       <div className="subtitle">
-        <h2>services</h2>
+        <h2>Services</h2>
         <p>
           Codefend offers cybersecurity intel, research, and security services,
           all unified in a unique platform. Allowing you to monitor your assets,

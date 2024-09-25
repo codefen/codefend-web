@@ -1,95 +1,101 @@
 import css from "./partnerform.module.css";
-import { useTransition } from "react";
-
-const dispatch = async (formData) => {
-  console.log({ name: formData.get("name") });
-  const data = {
-    fullName: formData.get("name"),
-    companyRol: formData.get("companyRol"),
-    email: formData.get("email"),
-    phoneNumber: formData.get("phone"),
-    companyWebsite: formData.get("companyWebsite"),
-    companySize: formData.get("companySize"),
-    country: formData.get("country"),
-  };
-  const res = await fetch(
-    "https://formspree.io/f/{form_id}",
-    JSON.stringify(data),
-    {
-      headers: { Accept: "application/json" },
-    }
-  );
-  if (res.ok) {
-    return true;
-  }
-  return false;
-};
+import { useTransition, useState, useEffect, useRef } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import { dispatch, validateForm } from "./action";
 
 const PartnerForm = () => {
+  const navigate = useNavigate();
   const [isPending, startTransition] = useTransition();
+  const [formData, setFormData] = useState({
+    name: "",
+    companyRol: "",
+    email: "",
+    phone: "",
+    companyWebsite: "",
+    companySize: "",
+    country: "",
+  });
+  const [error, setError] = useState("");
+  const contactRef = useRef(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state?.scrollToContact) {
+      const contactSection = contactRef.current;
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: "smooth" });
+        const offset = -100;
+        window.scrollBy({ top: offset, behavior: "smooth" });
+      }
+    }
+  }, [location]);
 
   const onSubmit = (e) => {
     e.preventDefault();
-    const formData = new FormData(e.target);
-    startTransition(() => {
-      dispatch(formData);
-      e.target.reset();
-    });
+    const data = new FormData(e.target);
+    if (validateForm(data)) {
+      setError("");
+      startTransition(() => {
+        dispatch(data).then((res) => {
+          if (res) {
+            e.target.reset();
+            navigate("/home", {
+              replace: true,
+              unstable_viewTransition: true,
+              preventScrollReset: false,
+            });
+            window.scrollTo(0, 0);
+          } else {
+            setError("Failed to send message. Please try again.");
+          }
+        });
+      });
+    } else {
+      setError("All fields are required");
+    }
   };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
   return (
-    <article className={css.partneforFormContainer}>
+    <article
+      ref={contactRef}
+      className={css.partneforFormContainer}
+      id="contact"
+    >
       <h3>DISTRIBUTOR CONTACT FORM </h3>
       <p>
         Unlock a lucrative opportunity with Codefend by becoming one of our
         trusted distributors.{" "}
       </p>
-      <form
-        className={css.partnerForm}
-        onSubmit={onSubmit}
-        action="https://formspree.io/f/{form_id}"
-        method="post"
-      >
-        <input
-          name="name"
-          placeholder="Full name"
-          type="text"
-          autoComplete="name"
-          required
-        />
-        <input
-          name="companyRol"
-          placeholder="Role in company"
-          type="text"
-          autoComplete="off"
-        />
-        <input
-          name="email"
-          placeholder="Work email"
-          type="email"
-          autoComplete="email"
-          required
-        />
-        <input
-          name="phone"
-          placeholder="Phone number"
-          type="text"
-          autoComplete="tel"
-        />
-        <input
-          name="companyWebsite"
-          placeholder="Company website"
-          type="text"
-          autoComplete="off"
-          required
-        />
-        <input
-          name="companySize"
-          placeholder="Company size"
-          type="text"
-          autoComplete="off"
-          required
-        />
-        <input placeholder="Country" type="text" autoComplete="off" required />
+      <form className={css.partnerForm} onSubmit={onSubmit}>
+        {Object.entries(formData).map(([key, value], i) => (
+          <input
+            key={i}
+            name={key}
+            placeholder={
+              key.charAt(0).toUpperCase() +
+              key.slice(1).replace(/([A-Z])/g, " $1")
+            }
+            type={key === "email" ? "email" : "text"}
+            autoComplete={
+              key === "email"
+                ? "email"
+                : key === "name"
+                ? "name"
+                : key === "phone"
+                ? "tel"
+                : "off"
+            }
+            required
+            value={value}
+            onChange={handleChange}
+          />
+        ))}
+        {error && <p className={css.errorMessage}>{error}</p>}
         <button type="submit" disabled={isPending}>
           Submit
         </button>

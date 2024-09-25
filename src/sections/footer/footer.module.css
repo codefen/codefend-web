@@ -14,7 +14,7 @@ footer.footerSection {
 
   --bg-overflow: hidden;
 
-  background-color: var(--section-alt-bkg);
+  background-color: var(--color-black-100);
   color: #ffffff;
   min-height: var(--section-min-h);
   position: relative;
@@ -47,7 +47,7 @@ footer.footerSection {
   img {
     object-fit: contain;
     width: var(--logo-img-w);
-    max-width: 400px;
+    max-width: 350px;
     aspect-ratio: 1 / 0.35;
   }
   small {
