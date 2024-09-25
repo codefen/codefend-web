@@ -101,7 +101,6 @@ const FreeTrial = () => {
     fetch(apiUrl, { method: "POST" })
       .then((response) => response.json())
       .then((data) => {
-        console.log("Respuesta de la API:", data);
         messageSuccess.style.display = "block";
       })
       .catch((error) => {

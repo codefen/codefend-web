@@ -87,7 +87,7 @@ const Header = () => {
                       to={`/${path}`}
                       className={(obj) => {
                         if (
-                          path === "home" &&
+                          path === "partners" &&
                           location.pathname === "/" &&
                           location.hash === "#contact"
                         )
@@ -107,7 +107,7 @@ const Header = () => {
           <div className={css.menu}>
             <Link
               className="btn alt"
-              to={{ pathname: "/", hash: "#contact" }}
+              to={{ pathname: "/partners", hash: "#contact" }}
               state={{ scrollToContact: true }}
             >
               contact
