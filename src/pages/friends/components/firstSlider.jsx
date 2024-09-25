@@ -106,7 +106,7 @@ const FirstSlider = () => {
 
       <div className="profile-contain">
         <div id="chris" className="profile showprofile">
-          <img src="/images/bkg-chris.png" alt="image-chris" />
+          <img src="/images/bkg-chris.png" alt="image-chris" loading="eager" />
 
           <div className="information">
             <h2>Christian 'Ch' Russo</h2>
@@ -144,6 +144,7 @@ const FirstSlider = () => {
         <div id="edgardo" className="profile">
           <img
             loading="lazy"
+            decoding="async"
             src="/images/bkg-edgardo.png"
             alt="image-edgardo"
           />
@@ -172,7 +173,12 @@ const FirstSlider = () => {
           </div>
         </div>
         <div id="miguel" className="profile">
-          <img loading="lazy" src="/images/bkg-peroni.png" alt="image-peroni" />
+          <img
+            src="/images/bkg-peroni.png"
+            alt="image-peroni"
+            loading="lazy"
+            decoding="async"
+          />
           <div className="information">
             <h2>Miguel Peroni</h2>
             <span>Partnership Manager</span>
@@ -203,9 +209,10 @@ const FirstSlider = () => {
         </div>
         <div id="ignacio" className="profile">
           <img
-            loading="lazy"
             src="/images/bkg-ignacio.png"
             alt="image-ignacio"
+            loading="lazy"
+            decoding="async"
           />
           <div className="information">
             <h2>Ignacio Gómez</h2>
