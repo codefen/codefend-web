@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { NAVIGATE_LINKS } from "../../data/header";
 import { FaBars } from "react-icons/fa6";
@@ -10,6 +10,7 @@ import css from "./header.module.css";
 const supportBackdrop = CSS.supports("backdrop-filter", "blur(1px)");
 
 const Header = () => {
+  const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef();
   const { scrollY } = useScroll();
@@ -84,7 +85,15 @@ const Header = () => {
                   <li key={path}>
                     <NavLink
                       to={`/${path}`}
-                      className={({ isActive }) => (isActive ? css.active : "")}
+                      className={(obj) => {
+                        if (
+                          path === "home" &&
+                          location.pathname === "/" &&
+                          location.hash === "#contact"
+                        )
+                          return css.active;
+                        return obj.isActive ? css.active : "";
+                      }}
                       onClick={closeMenuOnLinkClick}
                     >
                       {path.replace("-", " ")}
