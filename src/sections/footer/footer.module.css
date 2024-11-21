@@ -47,7 +47,7 @@ footer.footerSection {
   img {
     object-fit: contain;
     width: var(--logo-img-w);
-    max-width: 400px;
+    max-width: 300px;
     aspect-ratio: 1 / 0.35;
   }
   small {

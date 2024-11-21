@@ -60,9 +60,13 @@ const ServiceSlidesSection = () => {
                 <ul>
 
                   <div className={`item`} key={i}>
-                    <h3>{item.subTitle.title}</h3>
-                    <p>{item.subTitle.description}</p>
+                    <h2>{item.subTitle.title}</h2>
+                    {/* <p>{item.subTitle.description}</p> */}
                   </div>
+                  <li>
+                    <h3>SUMMARY:</h3>
+                    <p>{item.subTitle.description}</p>
+                  </li>                  
                   <li>
                     <h3>MORE DETAILS:</h3>
                     <p>{item.slide.details}</p>
