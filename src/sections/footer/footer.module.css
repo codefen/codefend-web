@@ -45,10 +45,10 @@ footer.footerSection {
   justify-content: center;
 
   img {
-    object-fit: contain;
-    width: var(--logo-img-w);
-    max-width: 300px;
-    aspect-ratio: 1 / 0.35;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin-bottom: 30px;
   }
   small {
     margin: 10px;
@@ -160,7 +160,7 @@ footer.footerSection {
     --links-max-w: 900px;
     --links-margin-start: 0;
     --section-padding-start: 9.5rem;
-    --banner-width: 100%;
+    --banner-width: 60%;
     --banner-height: 120%;
   }
 }

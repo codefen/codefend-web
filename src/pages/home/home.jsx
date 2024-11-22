@@ -4,6 +4,7 @@ import Hero from "../../sections/hero";
 import Highlights from "../../sections/highlights";
 import MainDiferences from "../../sections/mainDiferences";
 import OurServices from "../../sections/ourServices";
+import FreeTrial from "../../sections/freeTrial";
 import OurSoftware from "../../sections/ourSoftware/ourSoftware";
 import Contact from "../../sections/contact";
 import DocumentMetadata from "../../components/DocumentMetadata";
@@ -19,9 +20,9 @@ function Home() {
       <OurSoftware />
       <OurServices />
       {/* <Prices /> */}
-      <Contact />
-      <Crypto />
-      <Linkedin />
+      {/* <FreeTrial /> */}
+      {/* <Crypto /> */}
+      {/* <Linkedin /> */}
       {/* <Members /> */}
     </>
   );

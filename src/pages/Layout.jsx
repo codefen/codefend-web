@@ -1,15 +1,19 @@
 import { Outlet } from "react-router-dom";
 import Header from "../sections/header";
 import Footer from "../sections/footer/footer";
+import FreeTrial from "../sections/freeTrial";
+import Linkedin from "../sections/linkedin";
+import Crypto from "../sections/cryptocoin/crypto";
 
 function Layout() {
   return (
     <>
       <Header />
       <Outlet />
-      {/* <Crypto /> */}
-      {/* <FreeTrial /> */}
-      {/* <Linkedin /> */}
+      
+      <FreeTrial />
+      <Crypto />
+      <Linkedin />
       <Footer />
     </>
   );

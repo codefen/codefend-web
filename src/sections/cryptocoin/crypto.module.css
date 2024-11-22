@@ -7,8 +7,7 @@
   --text-al: center;
 
   overflow: hidden;
-  background: var(--color-black-200);
-  background: var(--color-gradient-dark);
+  background: #090909;
   color: #fff;
   padding: 0px;
 }

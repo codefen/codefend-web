@@ -11,19 +11,21 @@ const FreeTrial = () => {
 
   useEffect(() => {
     if (location.pathname === "/") {
-      setCurrentPage(8700);
+      setCurrentPage(3300);
+    } else if (location.pathname === "/home") {
+      setCurrentPage(3300);
     } else if (location.pathname === "/software") {
-      setCurrentPage(4700);
+      setCurrentPage(5700);
     } else if (location.pathname === "/industries") {
       setCurrentPage(2700);
     } else if (location.pathname === "/services") {
-      setCurrentPage(3700);
+      setCurrentPage(4700);
     } else if (location.pathname === "/compliance") {
-      setCurrentPage(2700);
-    } else if (location.pathname === "/partners") {
-      setCurrentPage(3000);
-    } else if (location.pathname === "/team") {
       setCurrentPage(1700);
+    } else if (location.pathname === "/partners") {
+      setCurrentPage(1000);
+    } else if (location.pathname === "/about-us") {
+      setCurrentPage(2000);
     }
   }, [location.pathname]);
 
@@ -115,14 +117,13 @@ const FreeTrial = () => {
       <div className="container">
         <div className="form-contain">
           <div className="title">
-            <h1>start now!</h1>
+            <h1>Contact us</h1>
             {/* <p className="rectangle">create a user and see what we can do, at no cost</p> */}
-            <b>create a user and pentest your resources</b>
+            <b>We’re here to help you secure your systems.</b>
             <p>
-              You will receive an email with the necessary information to
-              confirm your user and access the application. Once inside, you
-              will have access to all the basic function, and if you wish, you
-              can hire one of our services.
+              Have questions or need assistance? Reach out to us by filling out
+              the form below, and our team will get back to you as soon as
+              possible.
             </p>
           </div>
 
@@ -185,9 +186,7 @@ const FreeTrial = () => {
                 name="company_size"
                 required
               >
-                <option value="" disabled hidden>
-                  Select Company Size
-                </option>
+                <option value="" disabled hidden selected>Select Company Size</option>
                 <option value="1-10">1-10</option>
                 <option value="11-50">11-50</option>
                 <option value="51-200">51-200</option>
@@ -197,7 +196,7 @@ const FreeTrial = () => {
             </div>
             <div className="input-group">
               <select id="social-data" className="log-inputs log-text" required>
-                <option value="" disabled hidden defaultValue>
+                <option value="" disabled hidden selected>
                   role
                 </option>
                 <option value="admin">administrative</option>
@@ -212,19 +211,14 @@ const FreeTrial = () => {
                 <option value="law">legal affairs</option>
               </select>
             </div>
-
             <div className="input-group">
-              <select id="country" className="log-inputs log-text" required>
-                {countries.map((option, index) => (
-                  <option
-                    key={index}
-                    value={option.value}
-                    hidden={option?.hidden}
-                  >
-                    {option.label}
-                  </option>
-                ))}
-              </select>
+              <textarea
+                id="message"
+                className="message"
+                placeholder="Write your message here"
+                rows="5"
+                required
+              ></textarea>
             </div>
 
             {/* <div className="extra-group">
@@ -240,7 +234,7 @@ const FreeTrial = () => {
               </span>
             </div> */}
             <div className="extra-group">
-              <button type="submit">submit</button>
+              <button type="submit">send</button>
             </div>
           </form>
         </div>

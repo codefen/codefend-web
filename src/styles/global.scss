@@ -513,7 +513,7 @@ section.highlights {
 //////////////////////////////////////////////////////////////////
 */
 section.main-differences {
-  background-color: var(--section-alt-bkg);
+  background-color: #fafafa;
 
   overflow: hidden;
 
@@ -1363,7 +1363,7 @@ section.members {
 */
 section.free-trial {
   overflow: hidden;
-  background-color: var(--section-alt-bkg);
+  background-color: #f3f3f3;
   min-height: 90vh;
 
   .container {
@@ -1379,12 +1379,12 @@ section.free-trial {
 
       .title {
         h1 {
-          margin: 2vh 0px;
+          margin: 10px 0px;
           font-size: 70px;
         }
 
         p {
-          margin: 3vh 0px;
+          margin: 10px 0px 30px 0px;
         }
       }
 
@@ -1393,7 +1393,9 @@ section.free-trial {
         flex-direction: column;
         gap: 1em;
         max-width: 90%;
-
+        .input-group {
+          width: 100%;
+        }
         input {
           border-radius: 0px;
           border: none;
@@ -1422,6 +1424,20 @@ section.free-trial {
           height: 43px;
           padding: 0 20px;
         }
+        textarea {
+          width: 100%;
+          padding: 20px;
+          border: 1px dashed #d3d3d3;
+          font-family: Questrial;
+          font-size: 16px;
+          box-sizing: border-box;
+
+          &:focus {
+            border-bottom: 1px dashed #ff3939;
+            outline: none;
+            background-color: #ffeeee;
+          }
+        }
 
         .extra-group {
           margin-top: 10px;
@@ -1434,6 +1450,7 @@ section.free-trial {
           font-size: 18px;
           font-family: Questrial;
           padding: 18px 23px;
+          min-width: 120px;
         }
       }
     }
@@ -1739,9 +1756,9 @@ section.services {
   background-color: #000;
   background-image: url("/images/bkg-services.png");
   background-repeat: no-repeat;
-  min-height: 50vh;
-  background-size: contain;
-  background-position: right;
+  min-height: 80vh;
+  background-size: cover;
+  background-position: 50%;
   color: #fff;
 
   .container {
@@ -1786,9 +1803,8 @@ section.sectionService{
   .slide-contain {
     display: flex;
     flex-direction: column;
-    gap: 1vh;
     .contain {
-      background-color: #020212;
+      background-color: #000;
       background-repeat: no-repeat;
       background-position: right;
       padding: 4vw 4vw;
@@ -1850,6 +1866,7 @@ section.sectionService{
       &:nth-last-of-type(odd){
         flex-direction: row-reverse;
         background-position: 10%;
+        background-color: #090909;
       }
     }
   }
