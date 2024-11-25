@@ -113,7 +113,7 @@ const FreeTrial = () => {
   };
 
   return (
-    <section className="free-trial">
+    <section className="free-trial" id="contact">
       <div className="container">
         <div className="form-contain">
           <div className="title">
