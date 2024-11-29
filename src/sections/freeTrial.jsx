@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { countries, topCountriesOnList } from "../data/countries.js";
 
 const FreeTrial = () => {
   const img1 = useRef(null);
@@ -9,39 +8,86 @@ const FreeTrial = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const location = useLocation();
 
-  useEffect(() => {
-    if (location.pathname === "/") {
-      setCurrentPage(3300);
-    } else if (location.pathname === "/home") {
-      setCurrentPage(3300);
-    } else if (location.pathname === "/software") {
-      setCurrentPage(5700);
-    } else if (location.pathname === "/industries") {
-      setCurrentPage(2700);
-    } else if (location.pathname === "/services") {
-      setCurrentPage(4700);
-    } else if (location.pathname === "/compliance") {
-      setCurrentPage(1700);
-    } else if (location.pathname === "/partners") {
-      setCurrentPage(1000);
-    } else if (location.pathname === "/about-us") {
-      setCurrentPage(2000);
+  // Estados del formulario
+  const [formData, setFormData] = useState({
+    lead_fname: "",
+    lead_lname: "",
+    lead_role: "",
+    lead_email: "",
+    lead_phone: "",
+    company_name: "",
+    company_web: "",
+    company_size: "",
+    company_area: "",
+  });
+
+  const [statusMessage, setStatusMessage] = useState(null);
+
+  // Manejador de cambio para los campos
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  // Manejador de envío del formulario
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+
+    const apiUrl = `https://kundalini.codefend.com/kundalini/index.php?model=users%2Fnew&${new URLSearchParams(
+      {
+        ...formData,
+        reseller_name: "Codefend",
+        reseller_id: "77",
+        phase: "1",
+      }
+    )}`;
+
+    try {
+      const response = await fetch(apiUrl, { method: "POST" });
+      const data = await response.json();
+      if (data.success) {
+        setStatusMessage({ type: "success", message: "Form submitted successfully!" });
+      } else {
+        throw new Error("Submission failed");
+      }
+    } catch (error) {
+      setStatusMessage({ type: "error", message: "An error occurred. Please try again." });
     }
+  };
+
+  // Mapeo de rutas para establecer currentPage
+  useEffect(() => {
+    const routesMap = {
+      "/": 3300,
+      "/home": 3300,
+      "/software": 3700,
+      "/industries": 2700,
+      "/services": 4700,
+      "/compliance": 1700,
+      "/partners": 1000,
+      "/about-us": 2000,
+    };
+    setCurrentPage(routesMap[location.pathname] || 0);
   }, [location.pathname]);
 
+  // Animación de imágenes con scroll
   useEffect(() => {
     const handleScroll = () => {
       setScrolly(window.scrollY);
-      let round = currentPage;
-      if (scrolly > round) {
-        img1.current.style.top = (scrolly - round) / 5 + "px";
-        img2.current.style.bottom = (scrolly - round) / 5 + "px";
-      } else {
-        img1.current.style.top = "0px";
-        img2.current.style.bottom = "0px";
+      const offset = scrolly - currentPage;
+  
+      // Verificar que img1 y img2 no sean nulos antes de acceder a style
+      if (img1.current && img2.current) {
+        if (offset > 0) {
+          img1.current.style.top = `${offset / 5}px`;
+          img2.current.style.bottom = `${offset / 5}px`;
+        } else {
+          img1.current.style.top = "0px";
+          img2.current.style.bottom = "0px";
+        }
       }
     };
-
+  
     const handleResize = () => {
       if (window.innerWidth <= 820) {
         window.removeEventListener("scroll", handleScroll);
@@ -49,68 +95,15 @@ const FreeTrial = () => {
         window.addEventListener("scroll", handleScroll);
       }
     };
-
+  
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleResize);
-  }, [scrolly]);
-
-  const handleForm = () => {
-    event.preventDefault(); // Evita el envío predeterminado del formulario
-
-    // Obtener datos del formulario
-    var lead_fname = document.querySelector("#form-field-lead_fname").value;
-    var lead_lname = document.querySelector("#form-field-lead_lname").value;
-    var lead_role = document.querySelector("#form-field-lead_role").value;
-    var lead_email = document.querySelector("#form-field-lead_email").value;
-    var lead_phone = document.querySelector("#form-field-lead_phone").value;
-    var company_name = document.querySelector("#form-field-company_name").value;
-    var company_web = document.querySelector("#form-field-company_web").value;
-    var company_size = document.querySelector("#form-field-company_size").value;
-    var company_area = document.querySelector("#form-field-company_area").value;
-    var idiom = document.querySelector("#form-field-idiom").value;
-
-    // Construir la URL con los datos del formulario
-    var apiUrl =
-      "https://kundalini.codefend.com/kundalini/index.php?model=users%2Fnew" +
-      "&lead_fname=" +
-      encodeURIComponent(lead_fname) +
-      "&lead_lname=" +
-      encodeURIComponent(lead_lname) +
-      "&lead_role=" +
-      encodeURIComponent(lead_role) +
-      "&lead_email=" +
-      encodeURIComponent(lead_email) +
-      "&lead_phone=" +
-      encodeURIComponent(lead_phone) +
-      "&company_name=" +
-      encodeURIComponent(company_name) +
-      "&company_web=" +
-      encodeURIComponent(company_web) +
-      "&company_size=" +
-      encodeURIComponent(company_size) +
-      "&company_area=" +
-      encodeURIComponent(company_area) +
-      "&reseller_name=" +
-      encodeURIComponent(reseller);
-    "&reseller_id=77" + "&idiom=" + encodeURIComponent(idiom) + "&phase=1";
-
-    // Obtener los elementos por su ID
-    const messageSuccess = document.getElementById("messageSuccess");
-    const messageDanger = document.getElementById("messageDanger");
-    messageSuccess.style.display = "none";
-    messageDanger.style.display = "none";
-    // Realizar la solicitud POST
-    fetch(apiUrl, { method: "POST" })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Respuesta de la API:", data);
-        messageSuccess.style.display = "block";
-      })
-      .catch((error) => {
-        console.error("Error al realizar la solicitud:", error);
-        messageDanger.style.display = "block";
-      });
-  };
+  
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [scrolly, currentPage]);
 
   return (
     <section className="free-trial" id="contact">
@@ -118,7 +111,6 @@ const FreeTrial = () => {
         <div className="form-contain">
           <div className="title">
             <h1>Contact us</h1>
-            {/* <p className="rectangle">create a user and see what we can do, at no cost</p> */}
             <b>We’re here to help you secure your systems.</b>
             <p>
               Have questions or need assistance? Reach out to us by filling out
@@ -127,39 +119,44 @@ const FreeTrial = () => {
             </p>
           </div>
 
-          <form>
+          <form onSubmit={handleFormSubmit}>
             <div className="input-group">
               <input
                 type="text"
-                name="first_name"
+                name="lead_fname"
                 placeholder="First name"
-                autoComplete="given-name"
+                value={formData.lead_fname}
+                onChange={handleInputChange}
                 required
               />
             </div>
             <div className="input-group">
               <input
                 type="text"
-                name="last_name"
-                autoComplete="family-name"
+                name="lead_lname"
                 placeholder="Last name"
+                value={formData.lead_lname}
+                onChange={handleInputChange}
                 required
               />
             </div>
             <div className="input-group">
               <input
                 type="email"
-                name="email_address"
-                autoComplete="email"
+                name="lead_email"
                 placeholder="Email"
+                value={formData.lead_email}
+                onChange={handleInputChange}
                 required
               />
             </div>
             <div className="input-group">
               <input
                 type="tel"
-                name="phone_number"
+                name="lead_phone"
                 placeholder="Phone number"
+                value={formData.lead_phone}
+                onChange={handleInputChange}
                 required
               />
             </div>
@@ -168,25 +165,31 @@ const FreeTrial = () => {
                 type="text"
                 name="company_name"
                 placeholder="Company Name"
+                value={formData.company_name}
+                onChange={handleInputChange}
                 required
               />
             </div>
             <div className="input-group">
               <input
                 type="text"
-                name="company_website"
+                name="company_web"
                 placeholder="example.com"
-                size="60"
+                value={formData.company_web}
+                onChange={handleInputChange}
                 required
               />
             </div>
             <div className="input-group">
               <select
-                className="log-inputs log-text"
                 name="company_size"
+                value={formData.company_size}
+                onChange={handleInputChange}
                 required
               >
-                <option value="" disabled hidden selected>Select Company Size</option>
+                <option value="" disabled hidden>
+                  Select Company Size
+                </option>
                 <option value="1-10">1-10</option>
                 <option value="11-50">11-50</option>
                 <option value="51-200">51-200</option>
@@ -195,52 +198,58 @@ const FreeTrial = () => {
               </select>
             </div>
             <div className="input-group">
-              <select id="social-data" className="log-inputs log-text" required>
-                <option value="" disabled hidden selected>
-                  role
+              <select
+                name="lead_role"
+                value={formData.lead_role}
+                onChange={handleInputChange}
+                required
+              >
+                <option value="" disabled hidden>
+                  Select Role
                 </option>
-                <option value="admin">administrative</option>
-                <option value="human">human resources</option>
-                <option value="info">information tech</option>
-                <option value="ads">marketing</option>
-                <option value="sales">sales</option>
-                <option value="finance">finance</option>
-                <option value="cs">customer service</option>
-                <option value="prod">production & ops</option>
-                <option value="plan">strategy & planning</option>
-                <option value="law">legal affairs</option>
+                <option value="admin">Administrative</option>
+                <option value="human">Human Resources</option>
+                <option value="info">Information Technology</option>
+                <option value="ads">Marketing</option>
+                <option value="sales">Sales</option>
+                <option value="finance">Finance</option>
+                <option value="cs">Customer Service</option>
+                <option value="prod">Production & Ops</option>
+                <option value="plan">Strategy & Planning</option>
+                <option value="law">Legal Affairs</option>
               </select>
             </div>
             <div className="input-group">
               <textarea
-                id="message"
-                className="message"
+                name="company_area"
                 placeholder="Write your message here"
                 rows="5"
+                value={formData.company_area}
+                onChange={handleInputChange}
                 required
               ></textarea>
             </div>
 
-            {/* <div className="extra-group">
-              <span className="link link-color">
-                I have read and accept the{' '}
-                <a href="/help/security-and-privacy-policy" target="_blank">
-                  <u>security-and-privacy-policy</u>
-                </a>{' '}
-                and{' '}
-                <a href="/help/terms-and-condition" target="_blank">
-                  <u>Terms of Use.</u>
-                </a>
-              </span>
-            </div> */}
             <div className="extra-group">
-              <button type="submit">send</button>
+              <button type="submit">Send</button>
             </div>
           </form>
+
+          {statusMessage && (
+            <div
+              id={
+                statusMessage.type === "success" ? "messageSuccess" : "messageDanger"
+              }
+              style={{ display: "block", marginTop: "1rem" }}
+            >
+              {statusMessage.message}
+            </div>
+          )}
         </div>
+
         <div className="img-contain">
-          <img ref={img1} src="/images/front.webp" alt="d" />
-          <img ref={img2} src="/images/back.webp" alt="d" />
+          <img ref={img1} src="/images/front.webp" alt="Front Illustration" />
+          <img ref={img2} src="/images/back.webp" alt="Back Illustration" />
         </div>
       </div>
     </section>

@@ -165,11 +165,21 @@ footer.footerSection {
   }
 }
 
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 768px) {
   footer.footerSection {
     &::after {
       background-repeat: no-repeat;
       background-position: left bottom;
+    }
+    .footerlinks {
+      align-items: flex-start;
+    }
+    .footerLogo {
+      align-items: flex-start;
+      img {
+        max-width: 200px;
+        margin-top: 20px;
+      }
     }
   }
   .wrapper {

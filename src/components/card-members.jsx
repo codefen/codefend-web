@@ -11,7 +11,7 @@ const CardMembers = ({member, index}) => {
             <img loading="lazy" src={member.image} alt={` ${member.name}`} />
             <p>
                 <span><b>{member.name}</b></span><br />
-                Rol: {member.rol} <br />
+                Role: {member.rol} <br />
                 <a href={`https://${member.profile}`} target="_blank">Profile: {member.profile}</a> <br />
                 Experience: {member.experience}
             </p>

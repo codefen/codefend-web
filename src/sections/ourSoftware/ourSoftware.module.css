@@ -3,41 +3,44 @@
   z-index: 1;
   position: relative;
   overflow: hidden;
-
-  &::before {
-    --bg-size: 115% 85%;
-    --container-height: 50%;
-    content: "";
-    position: absolute;
-    background-image: url("/images/bkg-red9.webp");
-    background-repeat: no-repeat;
-    background-size: var(--bg-size);
-    width: 100%;
-    height: var(--container-height);
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
+  background-image: url("/images/bkg-red9.webp");
+  background-repeat: no-repeat;
+  height: 80vh;
+  background-position: top left;
+  margin-top: 0px;
 }
 
 .motionContainer {
-  padding-bottom: 30px;
+  /* padding-bottom: 30px; */
   color: var(--text-color);
+  background-color: rgba(0, 0, 0, .15);
+    max-width: 660px;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    padding-left: 3.25rem;
+    padding-right: 3.25rem;
 
   p {
-    max-width: 800px;
+    max-width: 660px;
+    text-shadow: 0 0 15px #000;
   }
 }
 
 .softwareExampleContainer {
   text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  justify-content: center;
+  gap: 5vw;
 
   img {
     /* height: 100%;
     width: 100%;
     object-position: center;
     object-fit: contain; */
-    margin: 0 auto;
+    /* margin: 0 auto; */
     display: block;
   }
 }
@@ -60,21 +63,20 @@
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
   .ourSoftwareSection {
-    &::before {
-      --bg-size: 100% 100%;
-      --container-height: 60%;
+    padding-top: 150px;
+    height: auto;
+    background-size: 270%;
+    padding-bottom: 70px;
+
+    .softwareExampleContainer {
+      flex-direction: column;
+      height: auto;
     }
   }
 
-  .softwareExampleContainer {
-    /* img {
-      width: 95%;
-      height: auto;
-      aspect-ratio: 2 / 1;
-    } */
-  }
+
   .items {
     flex-direction: row;
     padding: 45px 45px 0px 45px;
@@ -86,20 +88,4 @@
     }
   }
 }
-@media only screen and (min-width: 1040px) {
-  .ourSoftwareSection {
-    &::before {
-      --bg-size: 100% 85%;
-      --container-height: 85%;
-    }
-  }
-}
 
-@media only screen and (min-width: 1640px) {
-  .ourSoftwareSection {
-    &::before {
-      --bg-size: 100% 90%;
-      --container-height: 94%;
-    }
-  }
-}

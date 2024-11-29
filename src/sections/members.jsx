@@ -41,7 +41,7 @@ const Members = () => {
                         modules={[Navigation, A11y]}
                         spaceBetween={50}
                         navigation
-                                slidesPerView={3}
+                                slidesPerView={4}
                                 breakpoints= {{
                                     600: {
                                         slidesPerView: 2,
