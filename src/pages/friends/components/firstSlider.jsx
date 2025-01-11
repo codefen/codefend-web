@@ -115,7 +115,7 @@ const FirstSlider = () => {
             alt="image-edgardo"
           />
           <div className="information">
-            <h2>Edgardo Krauser</h2>
+            <h2>Edgardo Krause</h2>
             <span>CIBER SECURITY</span>
             <div className="text">
               <h3>Profesional Summary</h3>

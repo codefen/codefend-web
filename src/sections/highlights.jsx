@@ -33,9 +33,9 @@ const Highlights = () => {
                   }
                  }}
                >
-              <h2>1. create your account</h2>
+              <h2>continuous pentest & surveillance</h2>
               <p>
-              Create an account for your company—it's very easy; we just need some basic information!
+              Monitorea tus activos digitales de forma permanente con nuestras suscripciones mensuales. Recibe notificaciones instantáneas de vulnerabilidades detectadas en tu correo electrónico.
               </p>
                </motion.div>
             </li>
@@ -56,9 +56,9 @@ const Highlights = () => {
                   }
                  }}
                >
-              <h2>2. add your resources</h2>
+              <h2>threat intelligence</h2>
               <p>
-              Follow the step-by-step process to add all the resources you want to analyze.
+              Realizamos operaciones de monitoreo continuo en foros de hacking, dentro de la dark web y en redes sociales para identificar amenazas y vulnerabilidades que puedan afectar a tu organización.
               </p>
                </motion.div>
             </li>
