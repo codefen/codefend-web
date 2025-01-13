@@ -2119,17 +2119,14 @@ section.friends1 {
     .profile-contain {
       border-bottom: 2px solid #212020;
       position: relative;
-      height: 900px;
       width: 100%;
       .profile{
         background-position: top right;
-        position: absolute;
         height: 100%;
         width: 100%;
         background-repeat: no-repeat;
-
-        opacity: 0;
         transition: opacity .5s linear !important;
+        margin-bottom: 20px;
         img{
           display: none;
         }
@@ -2179,7 +2176,14 @@ section.friends1 {
         &#miguel {
           background-image: url("/images/bkg-peroni.png");
         }
+        &:nth-child(odd) {
+          background-position: -5% 0;
+          .information {
+            margin-left: 60%;
+          }
+        }        
       }
+    
     }
   }
 

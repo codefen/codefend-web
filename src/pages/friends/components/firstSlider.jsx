@@ -39,37 +39,7 @@ const FirstSlider = () => {
 
   return (
       <div id="slider-1" className="container-1">
-      <Swiper
-          modules={[Navigation, Pagination, A11y, Autoplay]}
-          spaceBetween={50}
-          slidesPerView={4}
-          navigation
-          breakpoints={breakPoints}
-          onSlideChange={window.innerWidth < 600 ? handleSlide : () => { }}
-      >
-          {
-              team[0].map((member, i) => {
-                  return (
-                      <SwiperSlide key={i}>
-                          {/* <CardMembers key={i} member={member} index={i} select={SelectCard}/> */}
-                          <div
-                              onClick={window.innerWidth > 600 ? () => selectCard(i) : () => { }}
-                              className={`card ${i === indexActive && window.innerWidth < 600 ? 'active' : ''}`}>
-                              <img loading="lazy" src={member.image} alt={` ${member.name}`} />
-                              <p>
-                                  <span><b>{member.name}</b></span><br />
-                                  Rol: {member.rol} <br />
-                                  Profile:<br />
-                                  <a href={`https://${member.profile}`} target="_blank">{member.profile}</a> <br />
-                                  Experience: {member.experience}
-                              </p>
-                          </div>
-                      </SwiperSlide>
 
-                  )
-              })
-          }
-      </Swiper>
 
       <div className="profile-contain">
         <div id="chris" className="profile showprofile">
