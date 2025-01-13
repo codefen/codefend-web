@@ -17,7 +17,7 @@ const Header = () => {
     [0, 100],
     [
       "rgba(0, 0, 0, 0.4)",
-      supportBackdrop ? "rgba(0, 0, 0, 0.83)" : "rgba(0, 0, 0, 1)",
+      supportBackdrop ? "rgba(0, 0, 0, 0.4)" : "rgba(0, 0, 0, 1)",
     ]
   );
   const padding = useTransform(scrollY, [0, 100], ["1rem", "0"]);

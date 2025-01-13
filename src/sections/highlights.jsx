@@ -80,9 +80,9 @@ const Highlights = () => {
                   }
                  }}
                >
-              <h2>3. get your pentest</h2>
+              <h2>snapshot pentest</h2>
               <p>
-               Choose the plan that best fits your needs and start the pentest! You'll receive instant notifications of detected vulnerabilities directly in your inbox.
+               Revise toda su infrastructura crítica con un pentest completo. Reciba un reporte detallado con las vulnerabilidades encontradas y recomendaciones para mitigarlas. Vulnerabilidades comunicadas en 24 horas.
               </p>
                </motion.div>
             </li>
