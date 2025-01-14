@@ -1,0 +1,132 @@
+.modalContainer,
+.modalOverlay {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modalContainer {
+  --pointer-events: none;
+  --display-content: none;
+
+  position: fixed;
+  z-index: 1001;
+  pointer-events: var(--pointer-events);
+  display: var(--display-content);
+  background-color: rgba(0, 0, 0, 0.5);
+
+  &.active {
+    --pointer-events: auto;
+    --display-content: flex;
+
+    .modalContent {
+      animation: enter 0.3s ease-in-out forwards;
+    }
+  }
+}
+
+.modalOverlay {
+  position: absolute;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: var(--pointer-events);
+  user-select: none;
+  display: var(--display-content);
+}
+
+.modalContent {
+  height: 400px;
+  width: 600px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  pointer-events: var(--pointer-events);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.25rem;
+
+  .formContainer {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    flex-grow: 1;
+    width: 100%;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    overflow: auto;
+    flex-grow: 1;
+
+    .input-group {
+      width: 100%;
+    }
+    input {
+      border-radius: 0px;
+      border: none;
+      border-bottom: 1px dashed #999999;
+      height: 40px;
+      width: 100%;
+      font-family: Questrial;
+      font-size: 16px;
+      padding: 0 20px;
+      box-sizing: border-box;
+
+      &:focus {
+        border-bottom: 1px dashed #ff3939;
+        outline: none;
+        background-color: #ffeeee;
+      }
+    }
+
+    label {
+      display: inline-flex;
+      gap: 0.5em;
+    }
+
+    .required {
+      color: #ff3939;
+    }
+
+    button {
+      margin-top: auto;
+      padding: 18px 23px;
+      font-family: Questrial;
+      font-size: 18px;
+      width: 100%;
+      max-width: none;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      overflow: visible;
+
+      &:hover {
+        scale: 1;
+      }
+    }
+  }
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
+  to {
+    opacity: 1;
+    height: 400px;
+    width: 600px;
+  }
+}

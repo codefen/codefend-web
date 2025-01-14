@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import css from "./quote.module.scss";
 import { QuoteTab } from "../../components/QuoteTab";
 import { QuoteProvider } from "../../store/QuoteContext";
@@ -10,6 +10,8 @@ import { SourceCodeTabContent } from "./QuoteTabContent/SourceCodeContent";
 import { SocialTabContent } from "./QuoteTabContent/SocialQuoteContent";
 import { IpInternalsTabContent } from "./QuoteTabContent/IpInternalContent";
 import { IpExternalTabContent } from "./QuoteTabContent/IpExternalContent";
+import { SendProposalModal } from "../../components/SendProposalModal";
+import { Confeti } from "../../components/Confeti";
 
 export const ResourceQuote = () => {
   const [activeTab, setActiveTab] = useState("Web");
@@ -52,6 +54,8 @@ export const ResourceQuote = () => {
           </div>
         </div>
       </section>
+      <SendProposalModal />
+      <Confeti />
     </QuoteProvider>
   );
 };

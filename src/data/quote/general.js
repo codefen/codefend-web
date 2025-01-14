@@ -224,6 +224,10 @@ export const calculateTotalPrice = (resources, DEFAULT, resourceType) => {
     let price = DEFAULT[size] || 0;
     if("socialEngine" === resourceType){
       price *= resource.number;
+    } else if("externalIp" === resourceType){
+      price *= resource.externalIpAmount;
+    } else if("internalIp" === resourceType){
+      price *= resource.internalIpAmount;
     }
     return total + price;
   }, 0);
@@ -274,11 +278,17 @@ export const sendMetrics = (identifier, quotes)=>{
       [resourceType]: calculateResourceList(resourceType, processedItems),
     };
   }, {});
+  const TOTAL_PRICE = Object.values(CLEAN_QUOTE).reduce((total, items) => {
+    return total + items.reduce((sum, item) => sum + (item.price || 0), 0);
+  }, 0);
   const JSON_METRIC = JSON.stringify(CLEAN_QUOTE);
   const formData = new FormData();
   formData.append("reckon", JSON_METRIC);
   formData.append("uid", identifier.id);
   formData.append("model", "reckoner");
+  if(identifier.email) formData.append("email", identifier.email);
+  if(identifier.phone) formData.append("phone", identifier.phone);
+  formData.append("price", TOTAL_PRICE);
 
   fetch(`https://api.codefend.com/kundalini/index.php`, {
     method: "POST",

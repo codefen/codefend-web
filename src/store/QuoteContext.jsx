@@ -10,6 +10,21 @@ export const QuoteProvider = ({ children }) => {
     ...defaultIdentifier,
     id: crypto.randomUUID(),
   });
+  const [sending, setSending] = useState(false);
+  const [showConfetti, setShowConfetti] = useState(false);
+
+  const toggleModal = useCallback(
+    (value) => {
+      setSending(value);
+    },
+    [setSending]
+  );
+  const toggleCoffeti = useCallback(
+    (value) => {
+      setShowConfetti(value);
+    },
+    [setShowConfetti]
+  );
 
   const validationQuote = useCallback(
     (type) => {
@@ -69,18 +84,14 @@ export const QuoteProvider = ({ children }) => {
     [setQuoteState]
   );
 
-  const addEmail = useCallback(
-    (email) => {
-      setIdentifier((prev) => ({ ...prev, email }));
-    },
+  const addIdentifier = useCallback(
+    (key, value) => setIdentifier((prev) => ({ ...prev, [key]: value })),
     [setIdentifier]
   );
 
-  const addPhone = useCallback(
-    (phone) => {
-      setIdentifier((prev) => ({ ...prev, phone }));
-    },
-    [setIdentifier]
+  const resetQuotes = useCallback(
+    () => setQuoteState(initialQuotes),
+    [setQuoteState]
   );
 
   return (
@@ -89,12 +100,15 @@ export const QuoteProvider = ({ children }) => {
         addQuote,
         removeQuote,
         updateQuote,
-        addEmail,
-        addPhone,
+        addIdentifier,
         validationQuote,
         validationSingleQuote,
+        toggleModal,
+        toggleCoffeti,
         quotes,
         identifier,
+        sending,
+        showConfetti,
       }}
     >
       {children}
