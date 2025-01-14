@@ -33,9 +33,9 @@ const Highlights = () => {
                   }
                  }}
                >
-              <h2>1. create your account</h2>
+              <h2>continuous pentest & surveillance</h2>
               <p>
-              Create an account for your company—it's very easy; we just need some basic information!
+              Monitorea tus activos digitales de forma permanente con nuestras suscripciones mensuales. Recibe notificaciones instantáneas de vulnerabilidades detectadas en tu correo electrónico.
               </p>
                </motion.div>
             </li>
@@ -56,9 +56,9 @@ const Highlights = () => {
                   }
                  }}
                >
-              <h2>2. add your resources</h2>
+              <h2>threat intelligence</h2>
               <p>
-              Follow the step-by-step process to add all the resources you want to analyze.
+              Realizamos operaciones de monitoreo continuo en foros de hacking, dentro de la dark web y en redes sociales para identificar amenazas y vulnerabilidades que puedan afectar a tu organización.
               </p>
                </motion.div>
             </li>
@@ -80,9 +80,9 @@ const Highlights = () => {
                   }
                  }}
                >
-              <h2>3. get your pentest</h2>
+              <h2>snapshot pentest</h2>
               <p>
-               Choose the plan that best fits your needs and start the pentest! You'll receive instant notifications of detected vulnerabilities directly in your inbox.
+               Revise toda su infrastructura crítica con un pentest completo. Reciba un reporte detallado con las vulnerabilidades encontradas y recomendaciones para mitigarlas. Vulnerabilidades comunicadas en 24 horas.
               </p>
                </motion.div>
             </li>

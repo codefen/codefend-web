@@ -39,37 +39,7 @@ const FirstSlider = () => {
 
   return (
       <div id="slider-1" className="container-1">
-      <Swiper
-          modules={[Navigation, Pagination, A11y, Autoplay]}
-          spaceBetween={50}
-          slidesPerView={4}
-          navigation
-          breakpoints={breakPoints}
-          onSlideChange={window.innerWidth < 600 ? handleSlide : () => { }}
-      >
-          {
-              team[0].map((member, i) => {
-                  return (
-                      <SwiperSlide key={i}>
-                          {/* <CardMembers key={i} member={member} index={i} select={SelectCard}/> */}
-                          <div
-                              onClick={window.innerWidth > 600 ? () => selectCard(i) : () => { }}
-                              className={`card ${i === indexActive && window.innerWidth < 600 ? 'active' : ''}`}>
-                              <img loading="lazy" src={member.image} alt={` ${member.name}`} />
-                              <p>
-                                  <span><b>{member.name}</b></span><br />
-                                  Rol: {member.rol} <br />
-                                  Profile:<br />
-                                  <a href={`https://${member.profile}`} target="_blank">{member.profile}</a> <br />
-                                  Experience: {member.experience}
-                              </p>
-                          </div>
-                      </SwiperSlide>
 
-                  )
-              })
-          }
-      </Swiper>
 
       <div className="profile-contain">
         <div id="chris" className="profile showprofile">
@@ -77,7 +47,7 @@ const FirstSlider = () => {
 
           <div className="information">
             <h2>Christian 'Ch' Russo</h2>
-            <span>CEO</span>
+            <span>COFOUNDER</span>
             <div className="text">
               <h3>Profesional Summary</h3>
               <p>
@@ -115,8 +85,8 @@ const FirstSlider = () => {
             alt="image-edgardo"
           />
           <div className="information">
-            <h2>Edgardo Krauser</h2>
-            <span>CIBER SECURITY</span>
+            <h2>Edgardo Krause</h2>
+            <span>OFFENSIVE SECURITY LEAD</span>
             <div className="text">
               <h3>Profesional Summary</h3>
               <p>
@@ -142,7 +112,7 @@ const FirstSlider = () => {
           <img loading="lazy" src="/images/bkg-peroni.png" alt="image-peroni" />
           <div className="information">
             <h2>Miguel Peroni</h2>
-            <span>OFFENSIVE SECURITY RESEARCH</span>
+            <span>BUSINESS DEVELOPMENT</span>
             <div className="text">
               <h3>Profesional Summary</h3>
               <p>
@@ -176,7 +146,7 @@ const FirstSlider = () => {
           />
           <div className="information">
             <h2>Ignacio Gómez</h2>
-            <span>product</span>
+            <span>PRODUCT EXPERIENCE</span>
             <div className="text">
               <h3>Professional Summary</h3>
               <p>

@@ -17,6 +17,7 @@ const Friends1 = () => {
         <section className="friends1">
 
             <FirstSlider />
+            
 
         </section>
     )

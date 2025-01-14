@@ -2,7 +2,7 @@
   --text-large: 18px;
   --text-small: 12px;
   --text-h3-normal: 20px;
-  --text-h2-normal: 38px;
+  --text-h2-normal: 34px;
   --text-h2-large: 58px;
   --text-h1-normal: 55px;
   --text-color: #ffffff;
@@ -363,7 +363,7 @@ header.header {
     height: 2.5rem;
 
     &:disabled {
-      opacity: .5;
+      opacity: 0.5;
       background: var(--color-light-100);
       color: var(--text-color-alt);
       box-shadow: none;
@@ -2183,17 +2183,14 @@ section.friends1 {
     .profile-contain {
       border-bottom: 2px solid #212020;
       position: relative;
-      height: 900px;
       width: 100%;
       .profile {
         background-position: top right;
-        position: absolute;
         height: 100%;
         width: 100%;
         background-repeat: no-repeat;
-
-        opacity: 0;
         transition: opacity 0.5s linear !important;
+        margin-bottom: 20px;
         img {
           display: none;
         }
@@ -2242,6 +2239,12 @@ section.friends1 {
         }
         &#miguel {
           background-image: url("/images/bkg-peroni.png");
+        }
+        &:nth-child(odd) {
+          background-position: -5% 0;
+          .information {
+            margin-left: 60%;
+          }
         }
       }
     }
