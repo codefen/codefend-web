@@ -12,15 +12,17 @@ import {
   SOCIAL_SIZE_OPTIONS,
   TAB_SOCIAL_ID,
 } from "../../../data/quote/social";
+import { sendMetrics } from "../../../data/quote/general";
 
 export const SocialTabContent = ({ isActive }) => {
   const {
-    quotes: { socialEngine },
+    quotes: { socialEngine, ...others },
     addQuote,
     removeQuote,
     updateQuote,
     validationQuote,
     validationSingleQuote,
+    identifier,
   } = useQuoteStore();
   const ref = useRef();
   usGoToBottom(ref, [socialEngine.length]);
@@ -38,9 +40,10 @@ export const SocialTabContent = ({ isActive }) => {
     [socialEngine]
   );
 
-  const addMobileApp = () => {
+  const addUserRoleGroup = () => {
     validationQuote("socialEngine");
     addQuote("socialEngine", DEFAULT_SOCIAL_APP);
+    sendMetrics(identifier, { ...others, socialEngine });
   };
   const onVerify = (type, index) => {
     validationSingleQuote(type, index);
@@ -85,7 +88,7 @@ export const SocialTabContent = ({ isActive }) => {
         <div className={css.quoteAddSection}>
           <button
             className={`commonButton ${css.addButton}`}
-            onClick={addMobileApp}
+            onClick={addUserRoleGroup}
             disabled={isAddButtonDisabled}
           >
             <img

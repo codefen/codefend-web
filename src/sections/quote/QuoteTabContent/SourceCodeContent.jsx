@@ -10,15 +10,17 @@ import {
   SOURCECODE_DESCRIPTION,
   TAB_SOURCE_ID,
 } from "../../../data/quote/sourceCode";
+import { sendMetrics } from "../../../data/quote/general";
 
 export const SourceCodeTabContent = ({ isActive }) => {
   const {
-    quotes: { sourceCode },
+    quotes: { sourceCode, ...others },
     addQuote,
     removeQuote,
     updateQuote,
     validationQuote,
     validationSingleQuote,
+    identifier,
   } = useQuoteStore();
   const ref = useRef();
   usGoToBottom(ref, [sourceCode.length]);
@@ -36,9 +38,10 @@ export const SourceCodeTabContent = ({ isActive }) => {
     [sourceCode]
   );
 
-  const addMobileApp = () => {
+  const addSourceCodeRepository = () => {
     validationQuote("sourceCode");
     addQuote("sourceCode", DEFAULT_SOURCE_APP);
+    sendMetrics(identifier, { ...others, sourceCode });
   };
   const onVerify = (type, index) => {
     validationSingleQuote(type, index);
@@ -77,7 +80,7 @@ export const SourceCodeTabContent = ({ isActive }) => {
         <div className={css.quoteAddSection}>
           <button
             className={`commonButton ${css.addButton}`}
-            onClick={addMobileApp}
+            onClick={addSourceCodeRepository}
             disabled={isAddButtonDisabled}
           >
             <img

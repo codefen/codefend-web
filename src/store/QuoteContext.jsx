@@ -76,6 +76,13 @@ export const QuoteProvider = ({ children }) => {
     [setIdentifier]
   );
 
+  const addPhone = useCallback(
+    (phone) => {
+      setIdentifier((prev) => ({ ...prev, phone }));
+    },
+    [setIdentifier]
+  );
+
   return (
     <QuoteContext.Provider
       value={{
@@ -83,6 +90,7 @@ export const QuoteProvider = ({ children }) => {
         removeQuote,
         updateQuote,
         addEmail,
+        addPhone,
         validationQuote,
         validationSingleQuote,
         quotes,

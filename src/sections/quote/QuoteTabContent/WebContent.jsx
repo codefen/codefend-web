@@ -10,15 +10,17 @@ import {
 } from "../../../data/quote/web";
 import css from "../quote.module.scss";
 import { usGoToBottom } from "../../../hooks/useGoToBottom";
+import { sendMetrics } from "../../../data/quote/general";
 
 export const WebTabContent = ({ isActive }) => {
   const {
-    quotes: { web },
+    quotes: { web, ...others },
     addQuote,
     removeQuote,
     updateQuote,
     validationQuote,
     validationSingleQuote,
+    identifier,
   } = useQuoteStore();
   const ref = useRef();
   usGoToBottom(ref, [web.length]);
@@ -39,6 +41,7 @@ export const WebTabContent = ({ isActive }) => {
   const addWebAPP = () => {
     validationQuote("web");
     addQuote("web", DEFAULT_WEB_APP);
+    sendMetrics(identifier, { ...others, web });
   };
   const onVerify = (type, index) => {
     validationSingleQuote(type, index);

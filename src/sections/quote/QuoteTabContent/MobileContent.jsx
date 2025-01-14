@@ -10,15 +10,17 @@ import {
   MOBILE_DESCRIPTION,
   TAB_MOBILE_ID,
 } from "../../../data/quote/mobile";
+import { sendMetrics } from "../../../data/quote/general";
 
 export const MobileTabContent = ({ isActive }) => {
   const {
-    quotes: { mobile },
+    quotes: { mobile, ...others },
     addQuote,
     removeQuote,
     updateQuote,
     validationQuote,
     validationSingleQuote,
+    identifier,
   } = useQuoteStore();
   const ref = useRef();
   usGoToBottom(ref, [mobile.length]);
@@ -39,6 +41,7 @@ export const MobileTabContent = ({ isActive }) => {
   const addMobileApp = () => {
     validationQuote("mobile");
     addQuote("mobile", DEFAULT_MOBILE_APP);
+    sendMetrics(identifier, { ...others, mobile });
   };
   const onVerify = (type, index) => {
     validationSingleQuote(type, index);

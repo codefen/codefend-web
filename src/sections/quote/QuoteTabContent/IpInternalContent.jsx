@@ -11,15 +11,17 @@ import {
   IP_INTERNAL_SIZE_OPTIONS,
   TAB_INTERNAL_IP_ID,
 } from "../../../data/quote/ipInternals";
+import { sendMetrics } from "../../../data/quote/general";
 
 export const IpInternalsTabContent = ({ isActive }) => {
   const {
-    quotes: { internalIp },
+    quotes: { internalIp, ...others },
     addQuote,
     removeQuote,
     updateQuote,
     validationQuote,
     validationSingleQuote,
+    identifier,
   } = useQuoteStore();
   const ref = useRef();
   usGoToBottom(ref, [internalIp.length]);
@@ -37,9 +39,10 @@ export const IpInternalsTabContent = ({ isActive }) => {
     [internalIp]
   );
 
-  const addMobileApp = () => {
+  const addInternalIpGroup = () => {
     validationQuote("internalIp");
     addQuote("internalIp", DEFAULT_IP_INTERNAL_APP);
+    sendMetrics(identifier, { ...others, internalIp });
   };
   const onVerify = (type, index) => {
     validationSingleQuote(type, index);
@@ -86,7 +89,7 @@ export const IpInternalsTabContent = ({ isActive }) => {
         <div className={css.quoteAddSection}>
           <button
             className={`commonButton ${css.addButton}`}
-            onClick={addMobileApp}
+            onClick={addInternalIpGroup}
             disabled={isAddButtonDisabled}
           >
             <img

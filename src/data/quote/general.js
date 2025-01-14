@@ -251,3 +251,37 @@ export const getTitle = (type) => {
       return "";
   }
 };
+
+export const sendMetrics = (identifier, quotes)=>{
+  const CLEAN_QUOTE = Object.entries(quotes).reduce((acc, [resourceType, items]) => {
+    const resourceConfig = RESOURCE_CONFIGS[resourceType];
+    if (!resourceConfig || !resourceConfig.pricing) {
+      console.warn(`No pricing configuration found for resource type: ${resourceType}`);
+      return acc;
+    }
+    const processedItems = items.map(item => {
+      let price = resourceConfig.pricing[item.size] || 0;
+      if(resourceType === "externalIp") price *= item.externalIpAmount;
+      if(resourceType === "internalIp") price *= item.internalIpAmount;
+      if(resourceType === "socialEngine") price *= item.number;
+      return {
+        ...item,
+        price,
+      };
+    });
+    return {
+      ...acc,
+      [resourceType]: calculateResourceList(resourceType, processedItems),
+    };
+  }, {});
+  const JSON_METRIC = JSON.stringify(CLEAN_QUOTE);
+  const formData = new FormData();
+  formData.append("reckon", JSON_METRIC);
+  formData.append("uid", identifier.id);
+  formData.append("model", "reckoner");
+
+  fetch(`https://api.codefend.com/kundalini/index.php`, {
+    method: "POST",
+    body: formData,
+  });
+}

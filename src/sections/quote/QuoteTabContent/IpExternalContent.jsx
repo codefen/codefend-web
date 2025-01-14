@@ -11,15 +11,17 @@ import {
   IP_EXTERNAL_SIZE_OPTIONS,
   TAB_EXTERNAL_IP_ID,
 } from "../../../data/quote/externalIp";
+import { sendMetrics } from "../../../data/quote/general";
 
 export const IpExternalTabContent = ({ isActive }) => {
   const {
-    quotes: { externalIp },
+    quotes: { externalIp, ...others },
     addQuote,
     removeQuote,
     updateQuote,
     validationQuote,
     validationSingleQuote,
+    identifier,
   } = useQuoteStore();
   const ref = useRef();
   usGoToBottom(ref, [externalIp.length]);
@@ -37,9 +39,10 @@ export const IpExternalTabContent = ({ isActive }) => {
     [externalIp]
   );
 
-  const addMobileApp = () => {
+  const addExternalIpGroup = () => {
     validationQuote("externalIp");
     addQuote("externalIp", DEFAULT_IP_EXTERNAL_APP);
+    sendMetrics(identifier, { ...others, externalIp });
   };
   const onVerify = (type, index) => {
     validationSingleQuote(type, index);
@@ -86,7 +89,7 @@ export const IpExternalTabContent = ({ isActive }) => {
         <div className={css.quoteAddSection}>
           <button
             className={`commonButton ${css.addButton}`}
-            onClick={addMobileApp}
+            onClick={addExternalIpGroup}
             disabled={isAddButtonDisabled}
           >
             <img

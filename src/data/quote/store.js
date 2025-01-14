@@ -19,4 +19,5 @@ export const initialQuotes = {
 export const defaultIdentifier = {
   id: 1,
   email: "",
+  phone: ""
 };

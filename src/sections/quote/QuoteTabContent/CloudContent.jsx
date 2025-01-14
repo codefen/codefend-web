@@ -10,15 +10,17 @@ import {
   DEFAULT_CLOUD_APP,
   TAB_CLOUD_ID,
 } from "../../../data/quote/cloud";
+import { sendMetrics } from "../../../data/quote/general";
 
 export const CloudTabContent = ({ isActive }) => {
   const {
-    quotes: { cloud },
+    quotes: { cloud, ...others },
     addQuote,
     removeQuote,
     updateQuote,
     validationQuote,
     validationSingleQuote,
+    identifier,
   } = useQuoteStore();
   const ref = useRef();
   usGoToBottom(ref, [cloud.length]);
@@ -35,10 +37,10 @@ export const CloudTabContent = ({ isActive }) => {
       ),
     [cloud]
   );
-
-  const addWebAPP = () => {
+  const addCloudProvider = () => {
     validationQuote("cloud");
     addQuote("cloud", DEFAULT_CLOUD_APP);
+    sendMetrics(identifier, { ...others, cloud });
   };
   const onVerify = (type, index) => {
     validationSingleQuote(type, index);
@@ -76,7 +78,7 @@ export const CloudTabContent = ({ isActive }) => {
         <div className={css.quoteAddSection}>
           <button
             className={`commonButton ${css.addButton}`}
-            onClick={addWebAPP}
+            onClick={addCloudProvider}
             disabled={isAddButtonDisabled}
           >
             <img
