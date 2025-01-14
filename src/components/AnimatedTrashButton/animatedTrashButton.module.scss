@@ -1,0 +1,25 @@
+.trashButton {
+  position: relative;
+  padding-inline: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(255, 106, 116);
+  overflow: visible;
+  background: #f1f1f1;
+}
+
+.trashButtonWrapper {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background-color: var(--container-color);
+}
+
+.trashButtonContainer {
+  position: relative;
+  color: #ff3a47;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  overflow: visible;
+  justify-content: center;
+}

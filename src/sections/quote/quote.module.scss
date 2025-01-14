@@ -1,0 +1,208 @@
+.sectionModule {
+  background: var(--color-light-100);
+  --border-color: #b2b2b277;
+  --button-radius: calc(0.5rem - 2px);
+
+  * {
+    border-color: var(--border-color);
+    border-style: solid;
+    border-width: 0;
+  }
+
+  h2 {
+    font-size: var(--text-h1-normal);
+    font-weight: 700;
+    color: var(--text-color-alt2);
+  }
+
+  h3 {
+    font-size: var(--text-large);
+    font-weight: 600;
+    color: var(--color-black-200);
+  }
+
+  p {
+    font-size: var(--text-large);
+    font-weight: 400;
+    color: var(--text-color-alt);
+    max-width: 45%;
+  }
+}
+
+.container {
+  padding-inline: 1.5rem;
+}
+
+.sectionCard {
+  margin-inline: auto;
+  max-width: 75rem;
+  margin-top: 4rem;
+}
+
+.sectionCardWrapper {
+  border-width: 1px;
+  border-radius: 0.5rem;
+  border-color: hsl(0, 0%, 95%);
+  background-color: var(--text-color);
+  box-shadow: 0 0 #0000, 0 0 #0000, 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  color: var(--text-color-alt);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.tabsContainer {
+  display: flex;
+  overflow: hidden;
+  padding-bottom: 0.25rem;
+  gap: 0.5rem;
+  padding-inline: 1rem;
+  padding-bottom: 1rem;
+  top: -16px;
+  position: relative;
+  flex: 1 1 6%;
+  min-height: 3rem;
+}
+
+.quoteLayout {
+  display: flex;
+  flex-direction: column;
+  border-top-width: 1px;
+  flex: 1 1 95%;
+  overflow: hidden;
+  height: 100%;
+}
+
+.quoteLeftContainer {
+  flex: 1 1 65%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  h2 {
+    font-size: 1.25rem;
+    margin: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    margin-top: 0.75rem;
+  }
+
+  p {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin: 0;
+    margin-block-end: 1rem;
+    color: #696969;
+    max-width: none;
+  }
+}
+
+.quoteLeftContainerTop {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.quoteRightContainer {
+  padding-inline: 1.5rem;
+  padding-block-end: 1.5rem;
+  flex: 1 1 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  h3 {
+    margin-block-start: 0.83em !important;
+    margin-block-end: 0.83em !important;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    text-indent: 0;
+    border-spacing: 2px;
+
+    thead {
+      tr {
+        border-bottom-width: 1px;
+
+        th {
+          text-align: left;
+          padding-block-end: 0.5rem;
+        }
+
+        & th + th {
+          text-align: right;
+        }
+      }
+    }
+
+    tbody {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+
+      tr {
+        &:first-child {
+          font-weight: 700;
+          color: #000;
+          font-size: 0.875rem;
+        }
+
+        td {
+          padding-block: 0.5rem;
+        }
+
+        & td + td {
+          text-align: right;
+        }
+
+        &:last-child {
+          border-top-width: 1px;
+
+          td {
+            padding-block-start: 0.5rem;
+            font-weight: 600;
+          }
+
+          & td + td {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}
+
+.quoteAddSection {
+  padding: 1.5rem;
+  border-top-width: 1px;
+  margin-top: 1rem;
+
+  & > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+}
+
+.addButton {
+  color: var(--text-color-alt);
+  background-color: var(--color-light-100);
+  width: 100%;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 1080px) {
+  .quoteLayout {
+    flex-direction: row;
+  }
+
+  .quoteRightContainer {
+    border-left-width: 1px;
+  }
+  .sectionCardWrapper {
+    height: 85dvh;
+  }
+}

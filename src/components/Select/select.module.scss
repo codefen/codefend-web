@@ -1,0 +1,70 @@
+.selectContent,
+.selectItem,
+.selectTrigger {
+  position: relative;
+  user-select: none;
+  outline: none;
+  font-family: Questrial;
+}
+
+.selectTrigger {
+  background-color: transparent;
+  border: none;
+
+  text-transform: none;
+  letter-spacing: inherit;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 1px dashed #d3d3d3;
+  border-radius: 0;
+  padding-block: 0.5rem;
+  padding-inline: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  transition: all 0.2s ease-in-out;
+
+  &[data-state="open"] {
+    background-color: #fee;
+    border-bottom: 1px dashed #ff3939;
+  }
+}
+
+.selectContent {
+  z-index: 50;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  border-width: 1px;
+  width: var(--radix-popper-anchor-width);
+  background: #fff;
+  border: 1px solid #00000012;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.selectItem {
+  display: flex;
+  width: auto;
+  cursor: default;
+  align-items: center;
+  padding-block: 1rem;
+  padding-inline: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &[data-state="checked"] {
+    background-color: #ff787836;
+  }
+
+  &:hover {
+    background-color: #ff787827;
+  }
+
+  &[data-disabled] {
+    pointer-events: none;
+    cursor: default;
+    background: #fff;
+    display: none;
+  }
+}

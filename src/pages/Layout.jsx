@@ -4,6 +4,7 @@ import Footer from "../sections/footer/footer";
 import FreeTrial from "../sections/freeTrial";
 import Linkedin from "../sections/linkedin";
 import Crypto from "../sections/cryptocoin/crypto";
+import { ResourceQuote } from "../sections/quote/ResourceQuote";
 
 function Layout() {
   return (
@@ -12,6 +13,7 @@ function Layout() {
       <Outlet />
       
       <FreeTrial />
+      <ResourceQuote />
       <Crypto />
       <Linkedin />
       <Footer />
