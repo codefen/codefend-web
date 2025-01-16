@@ -5,6 +5,7 @@ import { useResourceCalculations } from "../../hooks/useResourceCalculations";
 import { QuotePriceTable } from "../../components/QuotePriceTable";
 import { ResourceSummaryTable } from "../../components/ResourceSummaryTable";
 import { QuoteFooter } from "../../components/QuoteFooter";
+import { useMemo } from "react";
 
 export const QuoteLayout = ({
   children,
@@ -13,7 +14,7 @@ export const QuoteLayout = ({
   description = "",
   quoteDescriptions = WEB_DESCRIPTION,
 }) => {
-  const { quotes } = useQuoteStore();
+  const { quotes, adjustedPrice } = useQuoteStore();
   const { resourceLists, subtotals, totalSubtotal } =
     useResourceCalculations(quotes);
 
@@ -38,10 +39,13 @@ export const QuoteLayout = ({
           <ResourceSummaryTable
             resourceLists={resourceLists}
             subtotals={subtotals}
-            totalSubtotal={totalSubtotal}
+            totalSubtotal={adjustedPrice(totalSubtotal)}
           />
         </div>
-        <QuoteFooter subtotal={totalSubtotal} resourceLists={resourceLists} />
+        <QuoteFooter
+          subtotal={adjustedPrice(totalSubtotal)}
+          resourceLists={resourceLists}
+        />
       </div>
     </div>
   );

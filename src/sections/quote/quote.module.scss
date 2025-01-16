@@ -99,11 +99,51 @@
   }
 }
 
+.quotePriceAdjust {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+}
+
+.quoteAdjustResultContainer {
+  display: flex;
+  flex-direction: column;
+  margin-block-start: 1rem;
+  justify-content: center;
+  align-items: flex-start;
+
+  p {
+    margin-top: 1.6rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    &.price-adjust {
+      color: #22a71d;
+    }
+  }
+
+  p + p {
+    margin-top: 0.5rem;
+  }
+
+  .quoteCurrentAdjust {
+    font-size: 0.95rem;
+  }
+}
+
 .quoteLeftContainerTop {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+}
+
+.quoteSettingContainer {
+  padding-inline: 1.5rem;
+
+  label {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
 }
 
 .quoteRightContainer {

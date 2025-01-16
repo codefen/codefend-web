@@ -2,6 +2,7 @@ import { DEFAULT_CLOUD_APP, DEFAULT_CLOUD_PROVIDERS, TAB_CLOUD_ID } from "./clou
 import { DEFAULT_IP_EXTERNAL_APP, IP_EXTERNAL_PRICING, IP_EXTERNAL_SIZE_OPTIONS, TAB_EXTERNAL_IP_ID } from "./externalIp";
 import { DEFAULT_IP_INTERNAL_APP, IP_INTERNAL_PRICING, IP_INTERNAL_SIZE_OPTIONS, TAB_INTERNAL_IP_ID } from "./ipInternals";
 import { DEFAULT_MOBILE_APP, TAB_MOBILE_ID } from "./mobile";
+import { TAB_SETTINGS_ID } from "./settings";
 import { DEFAULT_SOCIAL_APP, SOCIAL_SIZE_OPTIONS, SOCIAL_SIZE_PRICING, TAB_SOCIAL_ID } from "./social";
 import { DEFAULT_SOURCE_APP, TAB_SOURCE_ID } from "./sourceCode";
 import { DEFAULT_WEB_APP, sizeOptions, TAB_WEB_ID, WEB_SIZE_PRICING } from "./web";
@@ -46,13 +47,14 @@ export const RESOURCE_CONFIGS = {
 };
 
 export const tabs = [
-  { icon: "/resources/web.svg", label: "Web", id: TAB_WEB_ID },
+  { icon: "/resources/world-code.svg", label: "Web", id: TAB_WEB_ID },
   { icon: "/resources/mobile.svg", label: "Mobile", id: TAB_MOBILE_ID },
   { icon: "/resources/cloud.svg", label: "Cloud", id: TAB_CLOUD_ID },
-  { icon: "/resources/network.svg", label: "External IP", id: TAB_EXTERNAL_IP_ID },
+  { icon: "/resources/world-pin.svg", label: "External IP", id: TAB_EXTERNAL_IP_ID },
   { icon: "/resources/network.svg", label: "Internal IP", id: TAB_INTERNAL_IP_ID },
   { icon: "/resources/sourcecode.svg", label: "Source Code", id: TAB_SOURCE_ID },
   { icon: "/resources/social.svg", label: "Social", id: TAB_SOCIAL_ID },
+  { icon: "/resources/setting.svg", label: "Settings", id: TAB_SETTINGS_ID },
 ];
 
 const validators = {
@@ -256,7 +258,7 @@ export const getTitle = (type) => {
   }
 };
 
-export const sendMetrics = (identifier, quotes)=>{
+export const sendMetrics = (identifier, quotes, intensity)=>{
   const CLEAN_QUOTE = Object.entries(quotes).reduce((acc, [resourceType, items]) => {
     const resourceConfig = RESOURCE_CONFIGS[resourceType];
     if (!resourceConfig || !resourceConfig.pricing) {
@@ -278,9 +280,13 @@ export const sendMetrics = (identifier, quotes)=>{
       [resourceType]: calculateResourceList(resourceType, processedItems),
     };
   }, {});
-  const TOTAL_PRICE = Object.values(CLEAN_QUOTE).reduce((total, items) => {
+  let TOTAL_PRICE = Object.values(CLEAN_QUOTE).reduce((total, items) => {
     return total + items.reduce((sum, item) => sum + (item.price || 0), 0);
   }, 0);
+  if(intensity === 100) {
+    const adjustment = (intensity / 100) * TOTAL_PRICE;
+    TOTAL_PRICE += adjustment;
+  }
   const JSON_METRIC = JSON.stringify(CLEAN_QUOTE);
   const formData = new FormData();
   formData.append("reckon", JSON_METRIC);

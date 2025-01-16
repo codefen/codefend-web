@@ -12,6 +12,7 @@ import { IpInternalsTabContent } from "./QuoteTabContent/IpInternalContent";
 import { IpExternalTabContent } from "./QuoteTabContent/IpExternalContent";
 import { SendProposalModal } from "../../components/SendProposalModal";
 import { Confeti } from "../../components/Confeti";
+import { SettingsTabContent } from "./QuoteTabContent/SettingQuoteTab";
 
 export const ResourceQuote = () => {
   const [activeTab, setActiveTab] = useState("Web");
@@ -51,6 +52,7 @@ export const ResourceQuote = () => {
             <SocialTabContent isActive={activeTab === "Social"} />
             <IpInternalsTabContent isActive={activeTab === "Internal IP"} />
             <IpExternalTabContent isActive={activeTab === "External IP"} />
+            <SettingsTabContent isActive={activeTab === "Settings"} />
           </div>
         </div>
       </section>

@@ -1,4 +1,4 @@
-import { createContext, useCallback, useState } from "react";
+import { createContext, useCallback, useMemo, useState } from "react";
 import { defaultIdentifier, initialQuotes } from "../data/quote/store";
 import { validateQuote, validateSingleQuote } from "../data/quote/general";
 
@@ -12,6 +12,7 @@ export const QuoteProvider = ({ children }) => {
   });
   const [sending, setSending] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);
+  const [intensity, setIntensity] = useState(100);
 
   const toggleModal = useCallback(
     (value) => {
@@ -94,6 +95,15 @@ export const QuoteProvider = ({ children }) => {
     [setQuoteState]
   );
 
+  const adjustedPrice = useCallback(
+    (totalSubtotal) => {
+      const intensityPercentage = intensity - 100;
+      const adjustment = (intensityPercentage / 100) * totalSubtotal;
+      return totalSubtotal + adjustment;
+    },
+    [intensity]
+  );
+
   return (
     <QuoteContext.Provider
       value={{
@@ -105,10 +115,13 @@ export const QuoteProvider = ({ children }) => {
         validationSingleQuote,
         toggleModal,
         toggleCoffeti,
+        setIntensity,
+        adjustedPrice,
         quotes,
         identifier,
         sending,
         showConfetti,
+        intensity,
       }}
     >
       {children}
