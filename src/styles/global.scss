@@ -1507,6 +1507,8 @@ section.free-trial {
         flex-direction: column;
         gap: 1em;
         max-width: 90%;
+        container-type: inline-size;
+
         .input-group {
           width: 100%;
         }
@@ -1545,6 +1547,23 @@ section.free-trial {
           font-family: Questrial;
           font-size: 16px;
           box-sizing: border-box;
+          max-width: 100cqw;
+          max-height: 240px;
+
+          &::-webkit-scrollbar {
+            width: 10px;
+            background-color: #ffffff00;
+            border-radius: 0.5rem;
+          }
+
+          &::-webkit-scrollbar-thumb {
+            border-radius: 0.5rem;
+            background-color: #c5c5c5;
+          }
+
+          &::-webkit-scrollbar-thumb:hover {
+            background-color: #b9b9b9;
+          }
 
           &:focus {
             border-bottom: 1px dashed #ff3939;
