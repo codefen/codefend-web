@@ -1693,6 +1693,8 @@ section.about-us {
       .row-contain {
         display: flex;
         height: auto;
+        min-height: 240px;
+        max-height: 240px;
 
         &:hover {
           animation-play-state: paused;
