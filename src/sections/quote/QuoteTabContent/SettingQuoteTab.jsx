@@ -5,9 +5,8 @@ import css from "../quote.module.scss";
 import { sendMetrics } from "../../../data/quote/general";
 import { TAB_SETTINGS_ID } from "../../../data/quote/settings";
 import { Slider } from "../../../components/Slider";
-import { debounce } from "../../../data/debounce";
+import { debounce } from "../../../hooks/debounce";
 import { useResourceCalculations } from "../../../hooks/useResourceCalculations";
-import { AnimatedNumber } from "../../../components/AnimatedNumber";
 
 export const SettingsTabContent = ({ isActive }) => {
   const { quotes, identifier, intensity, setIntensity, adjustedPrice } =

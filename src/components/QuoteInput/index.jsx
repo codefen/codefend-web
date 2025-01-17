@@ -55,7 +55,7 @@ export const QuoteInput = ({
               defaultValue={savedApp.size || defaultApp.size}
               onChange={onSizeChange}
               values={defaultSizeOptions}
-              index={index}
+              name={`size-${index}`}
             ></Select>
             {errors.size && (
               <span className={css.errorText}>{errors.size}</span>

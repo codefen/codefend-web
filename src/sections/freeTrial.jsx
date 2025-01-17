@@ -1,5 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { Select } from "../components/Select";
+import {
+  companySizeOptions,
+  DEFAULT_COMPANY_SIZE,
+  DEFAULT_FORM_DATA,
+  DEFAULT_ROLE,
+  rolesOptions,
+  routesMap,
+} from "../data/contact/contact";
 
 const FreeTrial = () => {
   const img1 = useRef(null);
@@ -9,17 +18,7 @@ const FreeTrial = () => {
   const location = useLocation();
 
   // Estados del formulario
-  const [formData, setFormData] = useState({
-    lead_fname: "",
-    lead_lname: "",
-    lead_role: "",
-    lead_email: "",
-    lead_phone: "",
-    company_name: "",
-    company_web: "",
-    company_size: "",
-    company_area: "",
-  });
+  const [formData, setFormData] = useState(DEFAULT_FORM_DATA);
 
   const [statusMessage, setStatusMessage] = useState(null);
 
@@ -27,6 +26,10 @@ const FreeTrial = () => {
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+  };
+
+  const onChangeSelect = (value, key) => {
+    setFormData((prev) => ({ ...prev, [key]: value }));
   };
 
   // Manejador de envío del formulario
@@ -46,27 +49,23 @@ const FreeTrial = () => {
       const response = await fetch(apiUrl, { method: "POST" });
       const data = await response.json();
       if (data.success) {
-        setStatusMessage({ type: "success", message: "Form submitted successfully!" });
+        setStatusMessage({
+          type: "success",
+          message: "Form submitted successfully!",
+        });
       } else {
         throw new Error("Submission failed");
       }
     } catch (error) {
-      setStatusMessage({ type: "error", message: "An error occurred. Please try again." });
+      setStatusMessage({
+        type: "error",
+        message: "An error occurred. Please try again.",
+      });
     }
   };
 
   // Mapeo de rutas para establecer currentPage
   useEffect(() => {
-    const routesMap = {
-      "/": 3300,
-      "/home": 3300,
-      "/software": 3700,
-      "/industries": 2700,
-      "/services": 4700,
-      "/compliance": 1700,
-      "/partners": 1000,
-      "/about-us": 2000,
-    };
     setCurrentPage(routesMap[location.pathname] || 0);
   }, [location.pathname]);
 
@@ -75,7 +74,7 @@ const FreeTrial = () => {
     const handleScroll = () => {
       setScrolly(window.scrollY);
       const offset = scrolly - currentPage;
-  
+
       // Verificar que img1 y img2 no sean nulos antes de acceder a style
       if (img1.current && img2.current) {
         if (offset > 0) {
@@ -87,7 +86,7 @@ const FreeTrial = () => {
         }
       }
     };
-  
+
     const handleResize = () => {
       if (window.innerWidth <= 820) {
         window.removeEventListener("scroll", handleScroll);
@@ -95,10 +94,10 @@ const FreeTrial = () => {
         window.addEventListener("scroll", handleScroll);
       }
     };
-  
+
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleResize);
-  
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
@@ -181,43 +180,20 @@ const FreeTrial = () => {
               />
             </div>
             <div className="input-group">
-              <select
+              <Select
                 name="company_size"
-                value={formData.company_size}
-                onChange={handleInputChange}
-                required
-              >
-                <option value="" disabled hidden>
-                  Select Company Size
-                </option>
-                <option value="1-10">1-10</option>
-                <option value="11-50">11-50</option>
-                <option value="51-200">51-200</option>
-                <option value="201-500">201-500</option>
-                <option value=">500">&gt;500</option>
-              </select>
+                defaultValue={formData.company_size}
+                onChange={(value) => onChangeSelect(value, "company_size")}
+                values={companySizeOptions}
+              ></Select>
             </div>
             <div className="input-group">
-              <select
+              <Select
                 name="lead_role"
-                value={formData.lead_role}
-                onChange={handleInputChange}
-                required
-              >
-                <option value="" disabled hidden>
-                  Select Role
-                </option>
-                <option value="admin">Administrative</option>
-                <option value="human">Human Resources</option>
-                <option value="info">Information Technology</option>
-                <option value="ads">Marketing</option>
-                <option value="sales">Sales</option>
-                <option value="finance">Finance</option>
-                <option value="cs">Customer Service</option>
-                <option value="prod">Production & Ops</option>
-                <option value="plan">Strategy & Planning</option>
-                <option value="law">Legal Affairs</option>
-              </select>
+                defaultValue={formData.lead_role}
+                onChange={(value) => onChangeSelect(value, "lead_role")}
+                values={rolesOptions}
+              ></Select>
             </div>
             <div className="input-group">
               <textarea
@@ -238,7 +214,9 @@ const FreeTrial = () => {
           {statusMessage && (
             <div
               id={
-                statusMessage.type === "success" ? "messageSuccess" : "messageDanger"
+                statusMessage.type === "success"
+                  ? "messageSuccess"
+                  : "messageDanger"
               }
               style={{ display: "block", marginTop: "1rem" }}
             >
