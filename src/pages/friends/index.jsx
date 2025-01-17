@@ -3,6 +3,7 @@ import Linkedin from "../../sections/linkedin";
 import Herofriends from "./herofriends";
 import DocumentMetadata from "../../components/DocumentMetadata";
 import { pageAboutUsMetaData } from "../../data/metaData";
+import FreeTrial from "../../sections/freeTrial";
 
 const Friends = () => {
   return (
@@ -10,7 +11,8 @@ const Friends = () => {
       <DocumentMetadata meta={pageAboutUsMetaData} />
       <Herofriends />
       <Friends1 />
-      <Linkedin />
+      {/* <Linkedin /> */}
+      <FreeTrial />
     </>
   );
 };
