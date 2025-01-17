@@ -1,15 +1,17 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { NAVIGATE_LINKS } from "../data/header";
+import { NAVIGATE_LINKS } from "../../data/header";
 import { FaBars } from "react-icons/fa6";
 import { FaX } from "react-icons/fa6";
 import { useState, useCallback, useRef } from "react";
+import css from "./header.module.scss";
 
 // Se verifica el soport para backdrop-filter
 const supportBackdrop = CSS.supports("backdrop-filter", "blur(1px)");
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
   const menuRef = useRef();
   const { scrollY } = useScroll();
   const backgroundColor = useTransform(
@@ -25,8 +27,13 @@ const Header = () => {
   const blurFilter = useTransform(scrollY, [0, 100], ["0px", "7px"]);
 
   const toggleMenu = useCallback(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "auto";
+    } else {
+      document.body.style.overflow = "hidden";
+    }
     setIsMenuOpen((prev) => !prev);
-  }, []);
+  }, [isMenuOpen]);
 
   const closeMenuOnLinkClick = useCallback(() => {
     window.scrollTo(0, 0);
@@ -35,7 +42,7 @@ const Header = () => {
 
   return (
     <motion.header
-      className="header"
+      className={css.header}
       style={{
         "--header-bg": backgroundColor,
         "--header-padding": padding,
@@ -43,8 +50,8 @@ const Header = () => {
         "--header-blur": blurFilter,
       }}
     >
-      <div className="header-wrapper">
-        <div className="container">
+      <div className={css.wrapper}>
+        <div className={`container ${css.container}`}>
           <motion.div
             initial={{
               opacity: 0,
@@ -58,7 +65,7 @@ const Header = () => {
               delay: 0.2,
               duration: 1,
             }}
-            className="brand"
+            className={css.brand}
           >
             <a href="/#hero">
               <img src="/images/logo-light.svg" alt="logo" />
@@ -74,28 +81,38 @@ const Header = () => {
           </button>
 
           <div
-            className="navigate-container"
+            className={css.navigateContainer}
             style={{ "--menu-width": !isMenuOpen ? "0%" : "100dvw" }}
           >
-            <ul ref={menuRef} className="navigate">
-              {NAVIGATE_LINKS.map((path) => (
-                <li key={path}>
-                  <NavLink
-                    to={`/${path}`}
-                    className={({ isActive }) => (isActive ? "active" : "")}
-                    onClick={closeMenuOnLinkClick}
-                  >
-                    {path.replace("-", " ")}
-                  </NavLink>
-                </li>
-              ))}
-            </ul>
+            <div className={css.navigateWrapper}>
+              <ul ref={menuRef} className={css.navigate}>
+                {NAVIGATE_LINKS.map((path) => (
+                  <li key={path}>
+                    <NavLink
+                      to={`/${path}`}
+                      className={(obj) => {
+                        if (
+                          path === "partners" &&
+                          location.pathname === "/" &&
+                          location.hash === "#contact"
+                        )
+                          return css.active;
+                        return obj.isActive ? css.active : "";
+                      }}
+                      onClick={closeMenuOnLinkClick}
+                    >
+                      {path.replace("-", " ")}
+                    </NavLink>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
-          <div className="menu">
+          <div className={css.menu}>
             <Link
               className="btn alt"
-              to={{ hash: "#contact" }}
+              to={{ pathname: "/home", hash: "#contact" }}
               state={{ scrollToContact: true }}
             >
               contact
