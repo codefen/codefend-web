@@ -5,7 +5,7 @@ const Capabilities = () => {
   return (
     <section className="capabilities">
       <div className="container">
-        <h2>system capabilities</h2>
+        <h2>System capabilities</h2>
         <div className="box">
           <p className="first-p">
             <b>scope / attack surface definition:</b>

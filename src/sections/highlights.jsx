@@ -33,7 +33,7 @@ const Highlights = () => {
                   }
                  }}
                >
-              <h2>continuous pentest & surveillance</h2>
+              <h2>Continuous pentest & surveillance</h2>
               <p>
               Monitorea tus activos digitales de forma permanente con nuestras suscripciones mensuales. Recibe notificaciones instantáneas de vulnerabilidades detectadas en tu correo electrónico.
               </p>
@@ -56,7 +56,7 @@ const Highlights = () => {
                   }
                  }}
                >
-              <h2>threat intelligence</h2>
+              <h2>Threat intelligence</h2>
               <p>
               Realizamos operaciones de monitoreo continuo en foros de hacking, dentro de la dark web y en redes sociales para identificar amenazas y vulnerabilidades que puedan afectar a tu organización.
               </p>
@@ -80,7 +80,7 @@ const Highlights = () => {
                   }
                  }}
                >
-              <h2>snapshot pentest</h2>
+              <h2>Snapshot pentest</h2>
               <p>
                Revise toda su infrastructura crítica con un pentest completo. Reciba un reporte detallado con las vulnerabilidades encontradas y recomendaciones para mitigarlas. Vulnerabilidades comunicadas en 24 horas.
               </p>

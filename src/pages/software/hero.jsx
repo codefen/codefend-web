@@ -24,7 +24,7 @@ const HeroSoftware = () => {
           initial="hidden"
           className="copy"
         >
-          <h2>our software</h2>
+          <h2>Our software</h2>
           <p>
             Codefend is your comprehensive solution for all your company's
             security needs. Our application combines a wide range of services

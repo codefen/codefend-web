@@ -25,7 +25,7 @@ const Contact = () => {
           variants={slideTransition}
           className="copy"
         >
-          <h2>contact</h2>
+          <h2>Contact</h2>
           <p>
             <b>business partners and alliances</b>
             <br />
