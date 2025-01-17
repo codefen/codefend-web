@@ -1,4 +1,14 @@
 
+export const DEFAULT_FORM_DATA = {
+    name: "",
+    companyRol: "",
+    email: "",
+    phone: "",
+    companyWebsite: "",
+    companySize: "",
+    country: "",
+  }
+
 const getEmailTemplate = (formData)=> `
 Hello Team,
 

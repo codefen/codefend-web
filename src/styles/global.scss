@@ -157,6 +157,12 @@ header + section {
 }
 
 /* 
+class="Toastify__toast Toastify__toast-theme--light Toastify__toast--success Toastify__toast--close-on-click Toastify--animate Toastify__bounce-exit--top-right"
+*/
+.Toastify__toast {
+  width: 400px !important;
+}
+/* 
 SCROLL AREA
 */
 .scroll-area {

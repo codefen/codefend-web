@@ -1,34 +1,12 @@
-import { useLocation, useNavigate } from "react-router-dom";
 import css from "./partnerform.module.css";
-import { useEffect, useRef, useState, useTransition } from "react";
-import { dispatch, validateForm } from "./action";
+import { useState, useTransition } from "react";
+import { DEFAULT_FORM_DATA, dispatch, validateForm } from "./action";
+import { toast } from "react-toastify";
 
 const PartnerForm = () => {
-  const navigate = useNavigate();
   const [isPending, startTransition] = useTransition();
-  const [formData, setFormData] = useState({
-    name: "",
-    companyRol: "",
-    email: "",
-    phone: "",
-    companyWebsite: "",
-    companySize: "",
-    country: "",
-  });
+  const [formData, setFormData] = useState(DEFAULT_FORM_DATA);
   const [error, setError] = useState("");
-  /*const contactRef = useRef(null);
-  const location = useLocation();
-
-   useEffect(() => {
-    if (location.state?.scrollToContact) {
-      const contactSection = contactRef.current;
-      if (contactSection) {
-        contactSection.scrollIntoView({ behavior: "smooth" });
-        const offset = -100;
-        window.scrollBy({ top: offset, behavior: "smooth" });
-      }
-    }
-  }, [location]); */
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -38,7 +16,10 @@ const PartnerForm = () => {
       startTransition(() => {
         dispatch(data).then((res) => {
           if (res) {
-            e.target.reset();
+            setFormData(DEFAULT_FORM_DATA);
+            toast.success(
+              "Your contact has been sent successfully. In a few days someone from the team will be contacting you."
+            );
           } else {
             setError("Failed to send message. Please try again.");
           }
