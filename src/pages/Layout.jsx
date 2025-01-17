@@ -13,7 +13,7 @@ function Layout() {
       <Header />
       <Outlet />
 
-      <FreeTrial />
+      {/* <FreeTrial /> */}
       <ResourceQuote />
       <Crypto />
       <Linkedin />

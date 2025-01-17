@@ -1,5 +1,5 @@
 .sectionModule {
-  background: var(--color-light-100);
+  background: #d5d5d5;
   --border-color: #b2b2b277;
   --button-radius: calc(0.5rem - 2px);
 
@@ -50,6 +50,22 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+}
+
+.sectionHeader {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+
+  h2,
+  h3,
+  p {
+    margin-inline-start: 9dvw;
+  }
 }
 
 .tabsContainer {

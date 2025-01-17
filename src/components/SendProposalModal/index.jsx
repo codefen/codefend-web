@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useQuoteStore } from "../../store/useQuoteStore";
 import css from "./sendproposal.module.scss";
 import { sendMetrics } from "../../data/quote/general";
+import ModalWrapper from "../ModalWrapper";
 
 export const SendProposalModal = () => {
   const {
@@ -29,52 +30,54 @@ export const SendProposalModal = () => {
     sendMetrics(identifier, quotes);
     toggleCoffeti(true);
   };
+  if (!sending) {
+    return null;
+  }
   return (
-    <aside className={`${css.modalContainer} ${sending && css.active}`}>
-      <div aria-hidden="true" className={css.modalOverlay}></div>
-      {sending && (
-        <article role="dialog" className={css.modalContent}>
-          <h1>Send Proposal</h1>
+    <ModalWrapper
+      showCloseBtn
+      action={() => toggleModal(false)}
+      type={css.modalSend}
+    >
+      <h1>Send Proposal</h1>
 
-          <div className={css.formContainer}>
-            <form onSubmit={onSubmit}>
-              <div className="input-group">
-                <label htmlFor="email">
-                  Email <span className={css.required}>*</span>
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  onChange={(e) => onChange("email", e.target.value)}
-                  placeholder="Write your enterprise email"
-                />
-              </div>
-
-              <div className="input-group">
-                <label htmlFor="phone">Phone</label>
-                <input
-                  type="text"
-                  id="phone"
-                  name="phone"
-                  required
-                  onChange={(e) => onChange("phone", e.target.value)}
-                  placeholder="Write your enterprise phone (Optional)"
-                />
-              </div>
-
-              <button
-                type="submit"
-                disabled={!identifier.email && !identifier.phone}
-                className="btn"
-              >
-                Send
-              </button>
-            </form>
+      <div className={css.formContainer}>
+        <form onSubmit={onSubmit}>
+          <div className="input-group">
+            <label htmlFor="email">
+              Email <span className={css.required}>*</span>
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              onChange={(e) => onChange("email", e.target.value)}
+              placeholder="Write your enterprise email"
+            />
           </div>
-        </article>
-      )}
-    </aside>
+
+          <div className="input-group">
+            <label htmlFor="phone">Phone</label>
+            <input
+              type="text"
+              id="phone"
+              name="phone"
+              required
+              onChange={(e) => onChange("phone", e.target.value)}
+              placeholder="Write your enterprise phone (Optional)"
+            />
+          </div>
+
+          <button
+            type="submit"
+            disabled={!identifier.email && !identifier.phone}
+            className="btn"
+          >
+            Send
+          </button>
+        </form>
+      </div>
+    </ModalWrapper>
   );
 };

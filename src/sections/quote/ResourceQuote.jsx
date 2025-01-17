@@ -20,13 +20,15 @@ export const ResourceQuote = () => {
   return (
     <QuoteProvider>
       <section id="quotes" className={css.sectionModule}>
-        <h2>Get a Price Estimate</h2>
-        <h3>Calculate the cost of your next service!</h3>
-        <p>
-          Below, you'll find reference values for our services. Please note that
-          these are estimates and must be confirmed by our commercial team if
-          accepted.
-        </p>
+        <div className={css.sectionHeader}>
+          <h2>Get a Price Estimate</h2>
+          <h3>Calculate the cost of your next service!</h3>
+          <p>
+            Below, you'll find reference values for our services. Please note
+            that these are estimates and must be confirmed by our commercial
+            team if accepted.
+          </p>
+        </div>
         <div className={css.sectionCard}>
           <div className={css.sectionCardWrapper}>
             <div
