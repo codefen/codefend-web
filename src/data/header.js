@@ -6,5 +6,5 @@ export const NAVIGATE_LINKS = [
     "compliance",
     "partners",
     "about-us",
-    "quote"
+    "calculator"
   ];

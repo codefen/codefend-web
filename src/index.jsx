@@ -27,7 +27,7 @@ export default function App() {
           <Route path="compliance" element={<Compliance />} />
           <Route path="partners" element={<Partners />} />
           <Route path="about-us" element={<Friends />} />
-          <Route path="quote" element={<QuotePage />} />
+          <Route path="calculator" element={<QuotePage />} />
           <Route path="*" element={<Home />} />
         </Route>
       </Routes>
