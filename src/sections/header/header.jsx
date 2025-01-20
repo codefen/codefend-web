@@ -112,7 +112,7 @@ const Header = () => {
           <div className={css.menu}>
             <Link
               className="btn alt"
-              to={{ pathname: "/home", hash: "#contact" }}
+              to={{ pathname: "/about-us", hash: "#contact" }}
               state={{ scrollToContact: true }}
             >
               contact
