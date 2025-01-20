@@ -94,14 +94,16 @@ export const SendProposalModal = () => {
               className={css.formContent}
             >
               <div className={css.inputGroup}>
-                <label htmlFor="phone">Phone</label>
+                <label htmlFor="phone">
+                  Write your enterprise phone (Optional)
+                </label>
                 <input
                   type="text"
                   id="phone"
                   name="phone"
                   required
                   onChange={(e) => onChange("phone", e.target.value)}
-                  placeholder="Write your enterprise phone (Optional)"
+                  placeholder="Phone"
                 />
               </div>
 

@@ -27,6 +27,20 @@
     color: var(--text-color-alt);
     max-width: 45%;
   }
+
+  .bgDecoration {
+    position: absolute;
+    z-index: 1;
+    top: 0rem;
+    left: -23rem;
+    width: clamp(360px, 38dvw, 800px);
+  }
+}
+
+.sectionModuleWrapper {
+  max-width: 1880px;
+  margin-inline: auto;
+  position: relative;
 }
 
 .container {
@@ -37,6 +51,8 @@
   margin-inline: auto;
   max-width: 75rem;
   margin-top: 4rem;
+  z-index: 2;
+  position: relative;
 }
 
 .sectionCardWrapper {
@@ -60,11 +76,13 @@
   margin-left: auto;
   margin-right: auto;
   display: flex;
+  z-index: 2;
+  position: relative;
 
   h2,
   h3,
   p {
-    margin-inline-start: 9dvw;
+    margin-inline-start: 27rem;
   }
 }
 
@@ -259,6 +277,7 @@
     border-left-width: 1px;
   }
   .sectionCardWrapper {
-    height: 85dvh;
+    height: 75dvh;
+    max-height: 880px;
   }
 }
