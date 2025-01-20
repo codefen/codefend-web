@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { slideTransition } from "../transitions/globalTransitions";
 import { TypeAnimation } from "react-type-animation";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -45,6 +46,9 @@ const Hero = () => {
               monitoring, and a team of skilled experts, including researchers
               and informants.
             </p>
+            <Link className="btn" to="/calculator">
+              Request a pentest now!
+            </Link>
           </motion.div>
           <div className="image"></div>
         </div>

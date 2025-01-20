@@ -159,7 +159,7 @@ header + section {
 /* 
 class="Toastify__toast Toastify__toast-theme--light Toastify__toast--success Toastify__toast--close-on-click Toastify--animate Toastify__bounce-exit--top-right"
 */
-section.Toastify{
+section.Toastify {
   padding: 0;
 }
 .Toastify__toast {
@@ -426,6 +426,12 @@ section.hero {
 
       & b {
         color: var(--text-color-alt2);
+      }
+
+      a.btn {
+        font-size: 1.25rem;
+        margin-block-start: 1rem;
+        height: 54px;
       }
     }
 
