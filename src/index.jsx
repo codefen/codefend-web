@@ -13,6 +13,7 @@ import Services from "./pages/services";
 import Compliance from "./pages/compliance";
 import Partners from "./pages/partners";
 import Friends from "./pages/friends";
+import { QuotePage } from "./pages/quote";
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
           <Route path="compliance" element={<Compliance />} />
           <Route path="partners" element={<Partners />} />
           <Route path="about-us" element={<Friends />} />
+          <Route path="quote" element={<QuotePage />} />
           <Route path="*" element={<Home />} />
         </Route>
       </Routes>

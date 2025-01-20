@@ -11,7 +11,7 @@ export const SendProposalModal = () => {
     addIdentifier,
     identifier,
     quotes,
-    toggleCoffeti,
+    toggleSuccess,
   } = useQuoteStore();
 
   useEffect(() => {
@@ -28,7 +28,7 @@ export const SendProposalModal = () => {
     e.preventDefault();
     toggleModal(false);
     sendMetrics(identifier, quotes);
-    toggleCoffeti(true);
+    toggleSuccess(true);
   };
   if (!sending) {
     return null;

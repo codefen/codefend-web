@@ -11,7 +11,7 @@ export const QuoteProvider = ({ children }) => {
     id: crypto.randomUUID(),
   });
   const [sending, setSending] = useState(false);
-  const [showConfetti, setShowConfetti] = useState(false);
+  const [showSuccess, setSuccess] = useState(false);
   const [intensity, setIntensity] = useState(100);
 
   const toggleModal = useCallback(
@@ -20,11 +20,11 @@ export const QuoteProvider = ({ children }) => {
     },
     [setSending]
   );
-  const toggleCoffeti = useCallback(
+  const toggleSuccess = useCallback(
     (value) => {
-      setShowConfetti(value);
+      setSuccess(value);
     },
-    [setShowConfetti]
+    [setSuccess]
   );
 
   const validationQuote = useCallback(
@@ -114,13 +114,13 @@ export const QuoteProvider = ({ children }) => {
         validationQuote,
         validationSingleQuote,
         toggleModal,
-        toggleCoffeti,
+        toggleSuccess,
         setIntensity,
         adjustedPrice,
         quotes,
         identifier,
         sending,
-        showConfetti,
+        showSuccess,
         intensity,
       }}
     >

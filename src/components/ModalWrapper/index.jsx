@@ -3,6 +3,7 @@ import { createPortal } from "react-dom";
 import { CloseIcon } from "../CloseIcon";
 import css from "./modal.module.scss";
 import { addEventListener } from "../../hooks/addEventlistener";
+import { AnimatePresence } from "framer-motion";
 
 const root = document.getElementById("root-modal");
 
@@ -45,20 +46,22 @@ const ModalWrapper = ({
       role="dialog"
       aria-modal="true"
     >
-      <article
-        className={`${css.modal} ${!isErrorBox ? type : ""}`}
-        onDoubleClick={(e) => {
-          e.nativeEvent.stopImmediatePropagation();
-          e.stopPropagation();
-        }}
-      >
-        {Boolean(showCloseBtn) && (
-          <span className={css.modalCloseBtn} onClick={closeEvent}>
-            <CloseIcon isButton />
-          </span>
-        )}
-        {children}
-      </article>
+      <AnimatePresence>
+        <article
+          className={`${css.modal} ${!isErrorBox ? type : ""}`}
+          onDoubleClick={(e) => {
+            e.nativeEvent.stopImmediatePropagation();
+            e.stopPropagation();
+          }}
+        >
+          {Boolean(showCloseBtn) && (
+            <span className={css.modalCloseBtn} onClick={closeEvent}>
+              <CloseIcon isButton />
+            </span>
+          )}
+          {children}
+        </article>
+      </AnimatePresence>
     </div>,
     root
   );
