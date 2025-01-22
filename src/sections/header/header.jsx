@@ -89,8 +89,8 @@ const Header = () => {
           >
             <div className={css.navigateWrapper}>
               <ul ref={menuRef} className={css.navigate}>
-                {tt.navigation.links.map((link) => (
-                  <li key={link.path}>
+                {tt.navigation.links.map((link, i) => (
+                  <li key={`${i}-${link.path}`}>
                     <NavLink
                       to={`/${locale}/${link.path}`}
                       className={(obj) => {
@@ -128,6 +128,7 @@ const Header = () => {
                 </Link>
               ) : (
                 <a
+                  key={index}
                   className={button.class}
                   href={button.link}
                   target={button.target || "_self"}
