@@ -5,11 +5,13 @@ import { FaBars } from "react-icons/fa6";
 import { FaX } from "react-icons/fa6";
 import { useState, useCallback, useRef } from "react";
 import css from "./header.module.scss";
+import { useLocales } from "../../store/useLocales";
 
 // Se verifica el soport para backdrop-filter
 const supportBackdrop = CSS.supports("backdrop-filter", "blur(1px)");
 
 const Header = () => {
+  const { t, locale } = useLocales();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
   const menuRef = useRef();
@@ -39,6 +41,7 @@ const Header = () => {
     window.scrollTo(0, 0);
     setIsMenuOpen(false);
   }, []);
+  const tt = t("layout.header");
 
   return (
     <motion.header
@@ -67,8 +70,8 @@ const Header = () => {
             }}
             className={css.brand}
           >
-            <a href="/#hero">
-              <img src="/images/logo-light.svg" alt="logo" />
+            <a href={tt.brand.link}>
+              <img src={tt.brand.logo.src} alt={tt.brand.logo.alt} />
             </a>
           </motion.div>
 
@@ -86,14 +89,14 @@ const Header = () => {
           >
             <div className={css.navigateWrapper}>
               <ul ref={menuRef} className={css.navigate}>
-                {NAVIGATE_LINKS.map((path) => (
-                  <li key={path}>
+                {tt.navigation.links.map((link) => (
+                  <li key={link.path}>
                     <NavLink
-                      to={`/${path}`}
+                      to={`/${locale}/${link.path}`}
                       className={(obj) => {
                         if (
-                          path === "partners" &&
-                          location.pathname === "/" &&
+                          link.path === "about-us" &&
+                          location.pathname === "/about-us" &&
                           location.hash === "#contact"
                         )
                           return css.active;
@@ -101,7 +104,7 @@ const Header = () => {
                       }}
                       onClick={closeMenuOnLinkClick}
                     >
-                      {path.replace("-", " ")}
+                      {link.label}
                     </NavLink>
                   </li>
                 ))}
@@ -110,20 +113,29 @@ const Header = () => {
           </div>
 
           <div className={css.menu}>
-            <Link
-              className="btn alt"
-              to={{ pathname: "/about-us", hash: "#contact" }}
-              state={{ scrollToContact: true }}
-            >
-              contact
-            </Link>
-            <a
-              href="https://panel.codefend.com/auth/signup"
-              target="_blank"
-              className="btn main"
-            >
-              try codefend for free
-            </a>
+            {tt.buttons.map((button, index) =>
+              button?.path ? (
+                <Link
+                  key={index}
+                  className={button.class}
+                  to={{
+                    pathname: `/${locale}/${button.path}`,
+                    hash: button.hash,
+                  }}
+                  state={button?.action ? { [button.action]: true } : undefined}
+                >
+                  {button.label}
+                </Link>
+              ) : (
+                <a
+                  className={button.class}
+                  href={button.link}
+                  target={button.target || "_self"}
+                >
+                  {button.label}
+                </a>
+              )
+            )}
           </div>
         </div>
       </div>

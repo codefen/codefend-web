@@ -1,0 +1,498 @@
+{
+  "layout": {
+    "header": {
+      "brand": {
+        "logo": {
+          "src": "/images/logo-light.svg",
+          "alt": "logo"
+        },
+        "link": "/#hero"
+      },
+      "navigation": {
+        "links": [
+          {
+            "path": "home",
+            "label": "Inicio"
+          },
+          {
+            "path": "software",
+            "label": "Software"
+          },
+          {
+            "path": "industries",
+            "label": "Industrias"
+          },
+          {
+            "path": "services",
+            "label": "Servicios"
+          },
+          {
+            "path": "compliance",
+            "label": "Cumplimiento"
+          },
+          {
+            "path": "partners",
+            "label": "Socios"
+          },
+          {
+            "path": "about-us",
+            "label": "Sobre Nosotros"
+          },
+          {
+            "path": "calculator",
+            "label": "Calculadora"
+          }
+        ]
+      },
+      "buttons": [
+        {
+          "class": "btn alt",
+          "path": "/about-us",
+          "hash": "#contact",
+          "label": "contacto",
+          "action": "scrollToContact",
+          "target": "_self"
+        },
+        {
+          "class": "btn main",
+          "link": "https://panel.codefend.com/auth/signup",
+          "label": "prueba Codefend gratis",
+          "target": "_blank"
+        }
+      ]
+    },
+    "crypto": {
+      "section": {
+        "class": "cryptoSection",
+        "content": {
+          "container": {
+            "class": "container",
+            "innerContent": {
+              "image": {
+                "src": "/images/bitcoinimg.webp",
+                "alt": "bitcoin",
+                "width": 120,
+                "height": 120,
+                "class": "bitCoinImg",
+                "loading": "lazy"
+              },
+              "heading": {
+                "text": "Bitcoin es bienvenido",
+                "tag": "h2"
+              },
+              "paragraph": [
+                {
+                  "text": "para clientes y nuestros hackers éticos: aceptamos todas las principales, incluyendo bitcoin, ethereum y litecoin.",
+                  "bold": true
+                },
+                {
+                  "text": " Al aceptar estas criptomonedas, estamos facilitando que nuestros clientes hagan negocios con nosotros.",
+                  "bold": true
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "testimonials": {
+      "section": {
+        "content": {
+          "title": "Testimonios de Linkedin",
+          "slides": [
+            {
+              "group": "Testimonios de Chris",
+              "testimonials": [
+                {
+                  "name": "Mohammed Alam",
+                  "image": "/images/testimonials/chris/alam.webp",
+                  "profile": "https://www.linkedin.com/in/mohammed-alam-0a553560/",
+                  "role": "CEO Al-bilad for consultation and solutions",
+                  "description": "Chris es un ingeniero profesional excelente en el área de hacking ético; además, tiene habilidades en seguridad web."
+                },
+                {
+                  "name": "Dr. Zaki Qureshey",
+                  "image": "/images/testimonials/chris/zoki.webp",
+                  "profile": "https://www.linkedin.com/in/dr-zaki-qureshey-50b3616/",
+                  "role": "CEO Homeland Security Solutions B.V",
+                  "description": "Chris es un excelente profesional de seguridad informática. Nos ayudó a realizar evaluaciones de vulnerabilidades, detectar y corregir vulnerabilidades de seguridad en aplicaciones web, y también trabajó en la seguridad de aplicaciones móviles con nosotros. Altamente recomendado."
+                },
+                {
+                  "name": "Juan Ignacio Salaberry",
+                  "image": "/images/testimonials/chris/juan.webp",
+                  "profile": "https://www.linkedin.com/in/jisalaberry/",
+                  "role": "Director de Planificación Estratégica y Operativa (Anses)",
+                  "description": "Chris es un profesional excelente, apasionado y talentoso. Nos ayudó en un proyecto difícil, fue un consultor meticuloso y un placer trabajar con él."
+                },
+                {
+                  "name": "Patrick Joleys",
+                  "image": "/images/testimonials/chris/patrick.png",
+                  "profile": "https://www.linkedin.com/in/patrickjoleys/",
+                  "role": "Consultor de Blockchain",
+                  "description": "Chris Russo es un excelente Consultor de Seguridad de la Información, con gran experiencia en la seguridad de aplicaciones web. He trabajado con él y puedo recomendar sus servicios."
+                },
+                {
+                  "name": "Luca Fenochietto",
+                  "image": "/images/testimonials/chris/luca.png",
+                  "profile": "https://www.linkedin.com/in/luca-fenochietto/",
+                  "role": "Consultor de Blockchain",
+                  "description": "Asombroso conocimiento en seguridad informática y temas relacionados. Captura las necesidades del cliente y las trata con extrema delicadeza. Es un servicio altamente recomendado."
+                },
+                {
+                  "name": "Baseer Ahmed",
+                  "image": "/images/testimonials/chris/ahmed.png",
+                  "profile": "https://www.linkedin.com/in/ahmed-baseer-22aba831/",
+                  "role": "Consultor de Talento",
+                  "description": "Chris es un gran profesional con quien trabajar. Me ayudó mucho a comenzar y a comprender los procesos internos. Su ética de trabajo es impecable y es muy fácil trabajar con él. ¡Un gran profesional!"
+                }
+              ]
+            },
+            {
+              "group": "Testimonios de Fran",
+              "disabled": true,
+              "testimonials": [
+                {
+                  "name": "Diego Barcena",
+                  "image": "/images/testimonials/fran/diego.webp",
+                  "profile": "https://www.linkedin.com/in/diego-barcena/",
+                  "role": "Desarrollador Sr. Full-Stack y DevOps",
+                  "description": "Trabajar con Fran fue una experiencia increíble. Tuve el placer de trabajar con él no solo una vez, sino dos, en dos entornos completamente diferentes. Tiene habilidades técnicas y de comunicación sobresalientes y siempre entrega soluciones de calidad."
+                },
+                {
+                  "name": "Gabriel Coronel",
+                  "image": "/images/testimonials/fran/gabriel.webp",
+                  "profile": "https://www.linkedin.com/in/gabriel-coronel/",
+                  "role": "Propietario de Networklink | Cisco CCNPx2 Enterprise/Security",
+                  "description": "Fran demuestra niveles extremadamente altos de energía y compromiso en todo lo que hace. Puedo decir con confianza que demostró un excelente conocimiento de las tecnologías de seguridad. Toma la iniciativa y no espera instrucciones."
+                },
+                {
+                  "name": "Pedro E. Morris Daly",
+                  "image": "/images/testimonials/fran/pedro.webp",
+                  "profile": "https://www.linkedin.com/in/pmorrisdaly/",
+                  "role": "CEO/CIO-Ingeniero de Misión Crítica",
+                  "description": "He trabajado con Francisco muchas veces. He sido testigo de un crecimiento profesional a velocidad de la luz. Tiene una perspectiva holística muy rica y es uno de los profesionales de seguridad de la información más competentes..."
+                },
+                {
+                  "name": "Damian Galvez",
+                  "image": "/images/testimonials/fran/dam.png",
+                  "profile": "https://www.linkedin.com/in/damiangalvez/",
+                  "role": "Administrador de Sistemas/DevOps en Globant",
+                  "description": "Tuve el placer de trabajar con Francisco. Tiene grandes habilidades, un enorme conocimiento técnico y una tremenda inteligencia. Siempre está dispuesto a ayudar y a proporcionar soluciones. Responde muy bien bajo situaciones de estrés, pudiendo diagnosticar y resolver problemas muy rápidamente. Es una excelente persona."
+                }
+              ]
+            },
+            {
+              "group": "Testimonios de Edd",
+              "testimonials": [
+                {
+                  "name": "Kevin Acosta",
+                  "image": "/images/testimonials/edgardo/kevin.png",
+                  "profile": "https://www.linkedin.com/in/kevin-acosta-3248521a3/",
+                  "role": "Ingeniero de Automatización de Pruebas",
+                  "description": "Una persona altamente capaz y buena onda. Haber trabajado con alguien tan proactivo y profesional en mi primer trabajo fue una de las mejores experiencias que tuve."
+                },
+                {
+                  "name": "Rubén Dario Oberti",
+                  "image": "/images/testimonials/edgardo/ruben.png",
+                  "profile": "https://www.linkedin.com/in/rubén-darío-oberti-41329282/",
+                  "role": "Analista funcional / Operador Proc de datos",
+                  "description": "He trabajado con Edgardo en el Banco Santander a través de una consultora. Es un profesional con un marcado perfil de servicio hacia el cliente. Se destacan entre sus virtudes 'La iniciativa propia...'"
+                },
+                {
+                  "name": "Alex Oliveros Ortiz",
+                  "image": "/images/testimonials/edgardo/alex.png",
+                  "profile": "https://www.linkedin.com/in/alex-oliveros-ortiz/",
+                  "role": "Gestión Proyectos Telco & IT. MBA, CSM, Kanban-PM",
+                  "description": "Excelente compañero de trabajo. Posee un buen conjunto de habilidades técnicas y habilidades blandas, que hacen del trabajo en equipo una experiencia amena."
+                },
+                {
+                  "name": "Pablo David Veliz",
+                  "image": "/images/testimonials/edgardo/pablo.png",
+                  "profile": "https://www.linkedin.com/in/pablo-david-veliz/",
+                  "role": "Ciberseguridad en PWC",
+                  "description": "Tuve la suerte de compartir espacio laboral con Edgardo en Consultoría Global. Es alguien muy proactivo, que siempre está innovando y buscando soluciones a cualquier problema. Nunca se queda..."
+                },
+                {
+                  "name": "Evenly Herrera",
+                  "image": "/images/testimonials/edgardo/evenly.png",
+                  "profile": "https://www.linkedin.com/in/evenly-herrera/",
+                  "role": "Ingeniera Ambiental",
+                  "description": "Trabajé con Edgardo desarrollando páginas web. Es un excelente profesional y muy bueno trabajando en equipo. Aprendí mucho de él durante el tiempo que trabajamos juntos. Además, es muy visionario..."
+                },
+                {
+                  "name": "Matias Valdez Nardi",
+                  "image": "/images/testimonials/edgardo/matias.png",
+                  "profile": "https://www.linkedin.com/in/mvaldez/",
+                  "role": "Desarrollador FullStack",
+                  "description": "Excelente profesional y persona. Gracias a sus habilidades de análisis, perseverancia y liderazgo hemos logrado grandes hazañas y los objetivos propuestos en momentos donde la cantidad de trabajo era interminable..."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "footer": {
+      "logo": {
+        "alt": "Logo de Codefend",
+        "src": "/images/logo-light.svg",
+        "link": "/#hero",
+        "copyright": "Copyright © 2025 Codefend LLC"
+      },
+      "links": [
+        {
+          "section": "Soluciones",
+          "items": [
+            { "label": "servicios", "href": "/services" },
+            { "label": "cumplimiento", "href": "/compliance" },
+            { "label": "industrias", "href": "/industries" }
+          ]
+        },
+        {
+          "section": "Producto",
+          "items": [
+            { "label": "nuestro software", "href": "/software" },
+            {
+              "label": "crear cuenta",
+              "href": "https://panel.codefend.com/auth/signup",
+              "target": "_blank"
+            },
+            {
+              "label": "iniciar sesión",
+              "href": "https://panel.codefend.com/auth/signin",
+              "target": "_blank"
+            }
+          ]
+        },
+        {
+          "section": "Compañía",
+          "items": [
+            { "label": "contáctanos", "href": "mailto:hello@codefend.com" },
+            {
+              "label": "términos de uso",
+              "href": "https://docs.google.com/document/d/1KZRrfHR4hIy2YyKkQmPK7Azp-zkbk7mYhCM6xKlVsoE/edit#heading=h.otbipzz762sq",
+              "target": "_blank"
+            },
+            {
+              "label": "política de privacidad",
+              "href": "https://docs.google.com/document/d/1e0Th-KsMRn_DO8uJ14WZkAqJK7DiUFvrLkQ2yol6E_o/edit?usp=sharing",
+              "target": "_blank"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "home": {
+    "metadata": {
+      "title": "Inicio de Codefend: Identificación de Vulnerabilidades, Pruebas de Penetración y Servicios de Red Teaming",
+      "description": "Codefend ofrece una plataforma integral de ciberseguridad para identificar y abordar vulnerabilidades en su infraestructura. Nuestros servicios incluyen identificación de vulnerabilidades, pruebas de penetración, red teaming y programas de recompensas por errores para proteger su organización de ataques cibernéticos."
+    },
+    "hero": {
+      "headings": {
+        "animated": [
+          "La inteligencia se encuentra con la protección",
+          "Vigilancia de la superficie de ataque",
+          "Sumérgete más profundo en la dark web",
+          "Elimina el riesgo del proveedor",
+          "Pruebas de penetración continuas",
+          "Revela tu TI en la sombra",
+          "Cuanto más silencioso te vuelvas, más podrás escuchar"
+        ]
+      },
+      "description": [
+        {
+          "text": "Ofrecemos ",
+          "bold": false
+        },
+        {
+          "text": "servicios avanzados de seguridad de la información",
+          "bold": true
+        },
+        {
+          "text": " para prevenir la interrupción de la continuidad empresarial, pérdidas reputacionales y monetarias. Para lograrlo, empleamos un enfoque multifacético que incluye software y hardware personalizados, monitoreo proactivo de amenazas y un equipo de expertos capacitados, incluidos investigadores e informantes.",
+          "bold": false
+        }
+      ],
+      "cta": "¡Solicita una prueba de penetración ahora!",
+      "features": [
+        "Herramientas únicas",
+        "Suplantación de CID",
+        "Intercepción SS7",
+        "Drenadores Web3",
+        "Seguridad web",
+        "Escaneos gratuitos ilimitados",
+        "Crackmapexecute",
+        "Impact y cobalt strike",
+        "Brute ratel",
+        "Fugas privadas",
+        "El router de cebolla",
+        "Proyecto de Internet Invisible"
+      ]
+    },
+    "highlights": {
+      "sections": [
+        {
+          "title": "Pruebas de penetración y vigilancia continuas",
+          "paddingLeft": true,
+          "description": [
+            {
+              "text": "Monitorea tus activos digitales de forma permanente con nuestras suscripciones mensuales. Recibe notificaciones instantáneas de vulnerabilidades detectadas en tu correo electrónico.",
+              "bold": false
+            }
+          ],
+          "delay": 0.9
+        },
+        {
+          "title": "Inteligencia de amenazas",
+          "paddingLeft": false,
+          "description": [
+            {
+              "text": "Realizamos operaciones de monitoreo continuo en foros de hacking, dentro de la dark web y en redes sociales para identificar amenazas y vulnerabilidades que puedan afectar a tu organización.",
+              "bold": false
+            }
+          ],
+          "delay": 1
+        },
+        {
+          "title": "Pruebas de penetración instantáneas",
+          "paddingLeft": false,
+          "description": [
+            {
+              "text": "Revise toda su infraestructura crítica con una prueba de penetración completa. Reciba un informe detallado con las vulnerabilidades encontradas y recomendaciones para mitigarlas. Vulnerabilidades comunicadas en 24 horas.",
+              "bold": false
+            }
+          ],
+          "delay": 1.1
+        }
+      ]
+    },
+    "mainDifferences": {
+      "title": "Diferencias principales",
+      "intro": [
+        {
+          "text": "Codefend sirve a todos sus clientes a través de una aplicación web. Desde esta plataforma, ",
+          "bold": false
+        },
+        {
+          "text": "establecemos comunicaciones seguras y cifradas con el personal de su empresa",
+          "bold": true
+        },
+        {
+          "text": ". Codefend realiza una supervisión sistemática de su infraestructura, empleando diversas técnicas y proveedores de información privada.",
+          "bold": false
+        }
+      ],
+      "items": [
+        {
+          "icon": "/images/icon1.webp",
+          "title": "nuestro ASM ofrece pruebas de penetración a demanda",
+          "delay": 0.7,
+          "description": [
+            {
+              "text": "Creemos que la seguridad de la información debe ser continua. Los usuarios pueden solicitar pruebas de penetración siempre que sea necesario, ya sea para una nueva página web, una nueva sección o una nueva aplicación móvil. Las vulnerabilidades se informan rápidamente en nuestra plataforma.",
+              "bold": false
+            }
+          ]
+        },
+        {
+          "icon": "/images/icon2.webp",
+          "title": "problemas comunicados rápidamente",
+          "delay": 0.8,
+          "description": [
+            {
+              "text": "Las empresas de seguridad tradicionales realizan escaneos una vez al año. Con Codefend, puedes ver errores y problemas tan pronto como el tester los encuentre. Nuestro sistema ofrece escaneos diarios y notificaciones inmediatas, lo que te permite abordar los problemas a medida que aparecen.",
+              "bold": false
+            }
+          ]
+        },
+        {
+          "icon": "/images/icon3.webp",
+          "title": "conexión profunda con hackers reales",
+          "delay": 0.9,
+          "description": [
+            {
+              "text": "Codefend no es tu empresa de ciberseguridad típica. Más allá de los informes de cumplimiento estándar para tus aplicaciones web, recopilamos información de varias comunidades privadas donde operan verdaderos hackers. Esto le da a Codefend una ventaja distinta sobre otras empresas de seguridad que dependen de herramientas convencionales.",
+              "bold": false
+            }
+          ]
+        }
+      ],
+      "buttons": [
+        {
+          "text": "contacto",
+          "link": "#contact",
+          "type": "alt"
+        },
+        {
+          "text": "comienza ahora",
+          "link": "https://panel.codefend.com/auth/signup",
+          "type": "main"
+        }
+      ]
+    },
+    "ourSoftware": {
+      "title": "Visualiza fácilmente vulnerabilidades y problemas",
+      "description": [
+        {
+          "text": "Desde la sección de vulnerabilidades, puedes acceder a una lista completa de todas las vulnerabilidades y problemas identificados en tu aplicación hasta la fecha. Al hacer clic en cada elemento, podrás ver información detallada y más detalles sobre cada problema. Esto te permitirá mantenerte informado y tomar las medidas necesarias para abordar y resolver riesgos potenciales de seguridad.",
+          "bold": false
+        }
+      ],
+      "image": {
+        "src": "/images/software-img1.png",
+        "alt": "Software de Codefend"
+      }
+    },
+    "ourServices": {
+      "title": "Nuestros servicios",
+      "description": "Codefend ofrece servicios de inteligencia, investigación y ciberseguridad, todos unificados en una plataforma única. Esta plataforma te permite monitorear tus activos, infraestructura y la seguridad de tu organización, mientras establece comunicación directa entre nuestros profesionales y tu equipo de seguridad. Nuestros servicios convencionales incluyen:",
+      "services": {
+        "left": [
+          {
+            "id": "sil1",
+            "title": "seguridad de aplicaciones web",
+            "description": "Codefend realiza procesos manuales y semi-automatizados de pruebas de penetración utilizando software de seguridad comercial y propietario para evaluar tu aplicación web desde la perspectiva de usuarios anónimos y autenticados."
+          },
+          {
+            "id": "sil2",
+            "title": "seguridad de redes externas",
+            "description": "Refuerza la robustez de tu red interna con nuestras evaluaciones especializadas. Nuestra experiencia asegura una infraestructura más sólida, protegiendo no solo tus datos sino también la confianza de tus clientes y empleados."
+          },
+          {
+            "id": "sil3",
+            "title": "soluciones de infraestructura en la nube",
+            "description": "Realiza revisiones periódicas durante el desarrollo de tu software y antes del lanzamiento de tu producto. Codefend detectará vulnerabilidades y solucionará problemas de seguridad en tus aplicaciones para aumentar tus defensas contra posibles amenazas."
+          },
+          {
+            "id": "sil4",
+            "title": "servicios de inteligencia e investigación",
+            "description": "Obtén inteligencia procesable con nuestros servicios de Inteligencia de Fuentes Abiertas y Humana. Mejora tu toma de decisiones y mantente por delante de la competencia con nuestros servicios de inteligencia descentralizados."
+          }
+        ],
+        "right": [
+          {
+            "id": "sir1",
+            "title": "seguridad de aplicaciones móviles",
+            "description": "Asegura la seguridad de tu aplicación móvil con nuestros servicios descentralizados de pruebas de penetración. Protege la información sensible de tus usuarios con nuestros servicios profesionales."
+          },
+          {
+            "id": "sir2",
+            "title": "seguridad de redes internas",
+            "description": "Refuerza la robustez de tu red interna con nuestras evaluaciones especializadas. Nuestra experiencia asegura una infraestructura más sólida, protegiendo no solo tus datos sino también la confianza de tus clientes y empleados."
+          },
+          {
+            "id": "sir3",
+            "title": "revisión de código fuente",
+            "description": "Realiza revisiones periódicas durante el desarrollo de tu software y antes del lanzamiento de tu producto. Codefend detectará vulnerabilidades y solucionará problemas de seguridad en tus aplicaciones para aumentar tus defensas contra posibles amenazas."
+          },
+          {
+            "id": "sir4",
+            "title": "ingeniería social avanzada",
+            "description": "Mejora las defensas de tu empresa contra ataques de phishing, smishing y vishing con nuestros servicios de ingeniería social. Mejora tu postura de seguridad y educa a tus empleados con nuestros servicios de ingeniería social."
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import { slideTransition } from "../../transitions/globalTransitions";
 import css from "./ourSoftware.module.css";
+import { RenderTextBold } from "../../components/RenderTextBold";
 
-const OurSoftware = () => {
+const OurSoftware = ({ t }) => {
   return (
     <section className={css.ourSoftwareSection}>
       <div className="container">
@@ -14,16 +15,10 @@ const OurSoftware = () => {
             initial="hidden"
             className={css.motionContainer}
           >
-            <h2>Easily visualize vulnerabilities & issues</h2>
-            <p>
-            From the vulnerabilities section, you can access a comprehensive list of all vulnerabilities and issues identified in your application to date. By clicking on each item, you will be able to view detailed information and further insights regarding each issue. This will allow you to stay informed and take the necessary steps to address and resolve potential security risks.
-            </p>
+            <h2>{t.title}</h2>
+            <RenderTextBold text={t.description} />
           </motion.div>
-          <img
-            src="/images/software-img1.png"
-            loading="lazy"
-            alt="Codefend Software"
-          />
+          <img src={t.image.src} loading="lazy" alt={t.image.alt} />
         </div>
       </div>
     </section>

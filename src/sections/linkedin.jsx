@@ -1,55 +1,58 @@
-import { testimonials } from "../data";
 import TestimonialCard from "../components/TestimonialCard";
+import { useLocales } from "../store/useLocales";
 
-// testimonials[0] = Chris Testimonials
-// testimonials[1] = Fran Testimonials
-// testimonials[2] = Edd Testimonials
-const USE_TESTIMONIALS = [testimonials[0], testimonials[2]];
+// tt.slides[0] = Chris Testimonials
+// tt.slides[1] = Fran Testimonials / desactivado
+// tt.slides[2] = Edd Testimonials
 
 const Linkedin = () => {
+  const { t } = useLocales();
+  const tt = t("layout.testimonials.section.content");
   return (
     <section className="about-us">
       <div className="container">
         <div className="title">
-          <h2>Linkedin testimonials</h2>
+          <h2>{tt.title}</h2>
         </div>
 
         <div className="contain">
-          {USE_TESTIMONIALS.map((testimonialGroup, groupIndex) => (
-            <div
-              key={groupIndex}
-              className="slide-contain"
-              aria-roledescription="carousel"
-            >
+          {tt.slides
+            .filter((testimonialGroup) => !testimonialGroup?.disabled)
+            .map((group, groupIndex) => (
               <div
-                className={`row-contain slide-animation slide-animation-${
-                  groupIndex + 1
-                }`}
-                aria-live="off"
-                aria-atomic="true"
-                aria-busy="false"
+                key={groupIndex}
+                className="slide-contain"
+                aria-roledescription="carousel"
               >
-                {testimonialGroup.map((tes, i) => (
-                  <TestimonialCard
-                    key={`${tes.name}-${i}`}
-                    description={tes.description}
-                    image={tes.image}
-                    name={tes.name}
-                    rol={tes.rol}
-                  />
-                ))}
-                {testimonialGroup.map((tes, i) => (
-                  <TestimonialCard
-                    key={`${tes.name}-${i}`}
-                    description={tes.description}
-                    image={tes.image}
-                    name={tes.name}
-                    rol={tes.rol}
-                  />
-                ))}
+                <div
+                  className={`row-contain slide-animation slide-animation-${
+                    groupIndex + 1
+                  }`}
+                  aria-live="off"
+                  aria-atomic="true"
+                  aria-busy="false"
+                >
+                  {group.testimonials.map((testimonial, i) => (
+                    <TestimonialCard
+                      key={`${testimonial.name}-${i}`}
+                      name={testimonial.name}
+                      image={testimonial.image}
+                      rol={testimonial.rol}
+                      description={testimonial.description}
+                    />
+                  ))}
+                  {group.testimonials.map((testimonial, i) => (
+                    <TestimonialCard
+                      key={`${testimonial.name}-${i}`}
+                      name={testimonial.name}
+                      image={testimonial.image}
+                      rol={testimonial.rol}
+                      description={testimonial.description}
+                    />
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
         </div>
       </div>
     </section>

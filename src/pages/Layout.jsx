@@ -4,10 +4,11 @@ import Linkedin from "../sections/linkedin";
 import Crypto from "../sections/cryptocoin/crypto";
 import { Bounce, ToastContainer } from "react-toastify";
 import Header from "../sections/header/header";
+import { I18nProvider } from "../store/i18nProvider";
 
 function Layout() {
   return (
-    <>
+    <I18nProvider>
       <Header />
       <Outlet />
 
@@ -29,7 +30,7 @@ function Layout() {
         theme="light"
         transition={Bounce}
       />
-    </>
+    </I18nProvider>
   );
 }
 

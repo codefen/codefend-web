@@ -1,24 +1,28 @@
-import Crypto from "../../sections/cryptocoin/crypto";
-import Linkedin from "../../sections/linkedin";
 import Hero from "../../sections/hero";
 import Highlights from "../../sections/highlights";
 import MainDiferences from "../../sections/mainDiferences";
 import OurServices from "../../sections/ourServices";
-import FreeTrial from "../../sections/freeTrial";
 import OurSoftware from "../../sections/ourSoftware/ourSoftware";
-import Contact from "../../sections/contact";
 import DocumentMetadata from "../../components/DocumentMetadata";
 import { pageHomeMetaData } from "../../data/metaData";
+import { useLocales } from "../../store/useLocales";
 
 function Home() {
+  const { t } = useLocales();
+  console.log({ title: t("home.metadata.title") });
   return (
     <>
-      <DocumentMetadata meta={pageHomeMetaData} />
-      <Hero />
-      <Highlights />
-      <MainDiferences />
-      <OurSoftware />
-      <OurServices />
+      <DocumentMetadata
+        meta={pageHomeMetaData({
+          title: t("home.metadata.title"),
+          description: t("home.metadata.description"),
+        })}
+      />
+      <Hero t={t("home.hero")} />
+      <Highlights t={t("home.highlights")} />
+      <MainDiferences t={t("home.mainDifferences")} />
+      <OurSoftware t={t("home.ourSoftware")} />
+      <OurServices t={t("home.ourServices")} />
       {/* <Prices /> */}
       {/* <FreeTrial /> */}
       {/* <Crypto /> */}

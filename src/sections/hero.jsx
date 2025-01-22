@@ -3,7 +3,15 @@ import { slideTransition } from "../transitions/globalTransitions";
 import { TypeAnimation } from "react-type-animation";
 import { Link } from "react-router-dom";
 
-const Hero = () => {
+const Hero = ({ t }) => {
+  const headingAnimated = t?.headings?.animated || [];
+  const descriptions = t?.description || [];
+  const features = t?.features || [];
+  const typeSequence = headingAnimated.reduce((acc, curr, _) => {
+    acc.push(curr);
+    acc.push(3000);
+    return acc;
+  }, []);
   return (
     <section className="hero" id="hero">
       <div className="container">
@@ -15,21 +23,7 @@ const Hero = () => {
             className="copy"
           >
             <TypeAnimation
-              sequence={[
-                "Intel meets protection",
-                3000,
-                "Attack surface surveillance",
-                3000,
-                "Dive deeper the darkweb.",
-                3000,
-                "Remove vendor risk",
-                3000,
-                "Continuous pentest",
-                3000,
-                "Unveil your shadow IT",
-                3000,
-                "Quieter become, able to hear",
-              ]}
+              sequence={typeSequence}
               wrapper="h1"
               speed={70}
               style={{
@@ -39,48 +33,24 @@ const Hero = () => {
               repeat={Infinity}
             />
             <p>
-              We provide <b>advanced information security services</b> to
-              prevent business continuity disruption, reputational and monetary
-              loss. To make this possible we employ a multifaceted approach that
-              encompasses custom software and hardware, proactive threat
-              monitoring, and a team of skilled experts, including researchers
-              and informants.
+              {descriptions.map((part, index) =>
+                part.bold ? <b key={index}>{part.text}</b> : part.text
+              )}
             </p>
             <Link className="btn" to="/calculator">
-              Request a pentest now!
+              {t.cta}
             </Link>
           </motion.div>
           <div className="image"></div>
         </div>
         <div className="features">
-          <ul>
-            <li>Unique tools</li>
-            <li>Cid spoofing</li>
-            <li>SS7 interception</li>
-            <li>Web3 drainers</li>
-            <li>Web security</li>
-            <li>Unlimited free scans</li>
-            <li>Crackmapexecute</li>
-            <li>Impact & cobalt strike</li>
-            <li>Brute ratel</li>
-            <li>Private leaks</li>
-            <li>The onion router</li>
-            <li>Invisible Internet Project</li>
-          </ul>
-          <ul>
-            <li>Unique tools</li>
-            <li>Cid spoofing</li>
-            <li>SS7 interception</li>
-            <li>Web3 drainers</li>
-            <li>Web security</li>
-            <li>Unlimited free scans</li>
-            <li>Crackmapexecute</li>
-            <li>Impact & cobalt strike</li>
-            <li>Brute ratel</li>
-            <li>Private leaks</li>
-            <li>The onion router</li>
-            <li>Invisible Internet Project</li>
-          </ul>
+          {[1, 2].map((num) => (
+            <ul>
+              {features.map((feature, index) => (
+                <li key={`${index}-${num}`}>{feature}</li>
+              ))}
+            </ul>
+          ))}
         </div>
       </div>
       <div className="bkg-2"></div>

@@ -1,0 +1,498 @@
+{
+  "layout": {
+    "header": {
+      "brand": {
+        "logo": {
+          "src": "/images/logo-light.svg",
+          "alt": "logo"
+        },
+        "link": "/#hero"
+      },
+      "navigation": {
+        "links": [
+          {
+            "path": "home",
+            "label": "Home"
+          },
+          {
+            "path": "software",
+            "label": "Software"
+          },
+          {
+            "path": "industries",
+            "label": "Industries"
+          },
+          {
+            "path": "services",
+            "label": "Services"
+          },
+          {
+            "path": "compliance",
+            "label": "Compliance"
+          },
+          {
+            "path": "partners",
+            "label": "Partners"
+          },
+          {
+            "path": "about-us",
+            "label": "About Us"
+          },
+          {
+            "path": "calculator",
+            "label": "Calculator"
+          }
+        ]
+      },
+      "buttons": [
+        {
+          "class": "btn alt",
+          "path": "about-us",
+          "hash": "#contact",
+          "label": "contact",
+          "action": "scrollToContact",
+          "target": "_self"
+        },
+        {
+          "class": "btn main",
+          "link": "https://panel.codefend.com/auth/signup",
+          "label": "try codefend for free",
+          "target": "_blank"
+        }
+      ]
+    },
+    "crypto": {
+      "section": {
+        "class": "cryptoSection",
+        "content": {
+          "container": {
+            "class": "container",
+            "innerContent": {
+              "image": {
+                "src": "/images/bitcoinimg.webp",
+                "alt": "bitcoin",
+                "width": 120,
+                "height": 120,
+                "class": "bitCoinImg",
+                "loading": "lazy"
+              },
+              "heading": {
+                "text": "Bitcoin is welcome",
+                "tag": "h2"
+              },
+              "paragraph": [
+                {
+                  "text": "for customers and our ethical hackers: we accept all major including bitcoin, ethereum, and litecoin.",
+                  "bold": true
+                },
+                {
+                  "text": " By accepting these cryptocurrencies, we are making it for our customers to do business with us.",
+                  "bold": true
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "testimonials": {
+      "section": {
+        "content": {
+          "title": "Linkedin testimonials",
+          "slides": [
+            {
+              "group": "Chris Testimonials",
+              "testimonials": [
+                {
+                  "name": "Mohammed Alam",
+                  "image": "/images/testimonials/chris/alam.webp",
+                  "profile": "https://www.linkedin.com/in/mohammed-alam-0a553560/",
+                  "role": "CEO Al-bilad for consultation and solutions",
+                  "description": "Chris is an excellent professional engineer in the area of ethical hacking in addition, he is skillful in web security"
+                },
+                {
+                  "name": "Dr. Zaki Qureshey",
+                  "image": "/images/testimonials/chris/zoki.webp",
+                  "profile": "https://www.linkedin.com/in/dr-zaki-qureshey-50b3616/",
+                  "role": "CEO Homeland Security Solutions B.V",
+                  "description": "Chris is an excellent IT security professional, he helped us run vulnerability assessments, detect and fix web application security vulnerabilities, and also performed mobile application security with us. Highly recommended."
+                },
+                {
+                  "name": "Juan Ignacio Salaberry",
+                  "image": "/images/testimonials/chris/juan.webp",
+                  "profile": "https://www.linkedin.com/in/jisalaberry/",
+                  "role": "Strategic and Operational Planning Director (Anses)",
+                  "description": "Chris is an excellent professional, passionate and talented. He helped us through a difficult project, he was a thorough consultant and a pleasure to work with."
+                },
+                {
+                  "name": "Patrick Joleys",
+                  "image": "/images/testimonials/chris/patrick.png",
+                  "profile": "https://www.linkedin.com/in/patrickjoleys/",
+                  "role": "Blockchain Consultant",
+                  "description": "Chris Russo is an excellent Information Security Consultant, with great expertise in Web application security, I`ve been working with him and I can recommend his services"
+                },
+                {
+                  "name": "Luca Fenochietto",
+                  "image": "/images/testimonials/chris/luca.png",
+                  "profile": "https://www.linkedin.com/in/luca-fenochietto/",
+                  "role": "Blockchain Consultant",
+                  "description": "Amazing knowledge on IT security and related topics. Captures the clients needs and treat it with extremely delicacy. It`s a service highly recommended."
+                },
+                {
+                  "name": "Baseer Ahmed",
+                  "image": "/images/testimonials/chris/ahmed.png",
+                  "profile": "https://www.linkedin.com/in/ahmed-baseer-22aba831/",
+                  "role": "Talent Consultant",
+                  "description": "Chris is a great professional to work with. He helped me a lot to get started and also to understand internal processes. His work ethics is immaculate and so easy to work together with. Great professional..!"
+                }
+              ]
+            },
+            {
+              "group": "Fran Testimonials",
+              "disabled": true,
+              "testimonials": [
+                {
+                  "name": "Diego Barcena",
+                  "image": "/images/testimonials/fran/diego.webp",
+                  "profile": "https://www.linkedin.com/in/diego-barcena/",
+                  "role": "Sr, Full-Stack Developer & DevOps",
+                  "description": "Working with Fran was an awesome experience. I had the pleasure to work with him not only once but twice in two completely different environments. He has both outstanding technical and communication skills and he is always delivering quality solutions."
+                },
+                {
+                  "name": "Gabriel Coronel",
+                  "image": "/images/testimonials/fran/gabriel.webp",
+                  "profile": "https://www.linkedin.com/in/gabriel-coronel/",
+                  "role": "Owner at Networklink | Cisco CCNPx2 Enterprise/Security",
+                  "description": "Fran displays extremely high levels of energy and commitment in everything he does. I can say with confidence that he demonstrated excellent knowledge of the Security technologies. He takes initiatives and does not wait for the instructions."
+                },
+                {
+                  "name": "Pedro E. Morris Daly",
+                  "image": "/images/testimonials/fran/pedro.webp",
+                  "profile": "https://www.linkedin.com/in/pmorrisdaly/",
+                  "role": "CEO/CIO-Mission Critical Engineer",
+                  "description": "I have worked with Francisco many times, I have witnessed professional growth at light speed, he has a very rich holistic perspective, he is one of the most competent information security professionals..."
+                },
+                {
+                  "name": "Damian Galvez",
+                  "image": "/images/testimonials/fran/dam.png",
+                  "profile": "https://www.linkedin.com/in/damiangalvez/",
+                  "role": "Sysadmin/DevOps at Globant",
+                  "description": "I had the pleasure of working with Francisco. He has great skills, he has a tremendous know how and technical knowledge. He is a very intelligent person, always willing to help and always providing solutions. He responds very well under stressful situations, being able to diagnose and resolve problems very quickly. He is a very good person."
+                }
+              ]
+            },
+            {
+              "group": "Edd Testimonials",
+              "testimonials": [
+                {
+                  "name": "Kevin Acosta",
+                  "image": "/images/testimonials/edgardo/kevin.png",
+                  "profile": "https://www.linkedin.com/in/kevin-acosta-3248521a3/",
+                  "role": "Test Automation Engineer",
+                  "description": "Una persona altamente capaz y buena onda, haber trabajado con alguien tan proactivo y profesional en mi primer trabajo fue una de las mejores experiencias que tuve."
+                },
+                {
+                  "name": "Rubén Dario Oberti",
+                  "image": "/images/testimonials/edgardo/ruben.png",
+                  "profile": "https://www.linkedin.com/in/rubén-darío-oberti-41329282/",
+                  "role": "Analista funcional / Operador Proc de datos",
+                  "description": "He trabajado con Edgardo en el Banco Santander a través de una consultora. Es un profesional con un marcado perfil de servicio hacia el cliente. Se destacan entre sus virtudes 'La iniciativa propia...'"
+                },
+                {
+                  "name": "Alex Oliveros Ortiz",
+                  "image": "/images/testimonials/edgardo/alex.png",
+                  "profile": "https://www.linkedin.com/in/alex-oliveros-ortiz/",
+                  "role": "Gestión Proyectos Telco & IT. MBA, CSM , Kanban-PM",
+                  "description": "Excelente compañero de trabajo. Posee un buen conjunto de skills técnicos y habilidades soft; que hacen del desarrollar actividades en equipo una experiencia amena."
+                },
+                {
+                  "name": "Pablo David Veliz",
+                  "image": "/images/testimonials/edgardo/pablo.png",
+                  "profile": "https://www.linkedin.com/in/pablo-david-veliz/",
+                  "role": "Cybersecurity at PWC",
+                  "description": "Tuve la suerte de compartir espacio laboral con Edgardo en Consultoria Global y es alguien muy proactivo, que siempre esta innovando y buscando soluciones a cualquier problema , nunca se queda..."
+                },
+                {
+                  "name": "Evenly Herrera",
+                  "image": "/images/testimonials/edgardo/evenly.png",
+                  "profile": "https://www.linkedin.com/in/evenly-herrera/",
+                  "role": "Ingeniera Ambiental",
+                  "description": "Trabaje con Edgardo haciendo desarrollo de páginas web, es muy buen profesional y excelente para trabajar en equipo. Aprendí mucho de él en el tiempo que trabajamos juntos. Además es muy visionario..."
+                },
+                {
+                  "name": "Matias Valdez Nardi",
+                  "image": "/images/testimonials/edgardo/matias.png",
+                  "profile": "https://www.linkedin.com/in/mvaldez/",
+                  "role": "FullStack Developer",
+                  "description": "Excelente profesional y persona, con quien gracias a sus habilidades de análisis, perseverancia y liderazgo hemos conseguido grandes hazañas y los objetivos propuestos en momentos donde la cantidad de trabajo era interminable..."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "footer": {
+      "logo": {
+        "alt": "Codefend logo",
+        "src": "/images/logo-light.svg",
+        "link": "/#hero",
+        "copyright": "Copyright © 2025 Codefend LLC"
+      },
+      "links": [
+        {
+          "section": "Solutions",
+          "items": [
+            { "label": "services", "href": "/services" },
+            { "label": "compliance", "href": "/compliance" },
+            { "label": "industries", "href": "/industries" }
+          ]
+        },
+        {
+          "section": "Product",
+          "items": [
+            { "label": "our software", "href": "/software" },
+            {
+              "label": "create account",
+              "href": "https://panel.codefend.com/auth/signup",
+              "target": "_blank"
+            },
+            {
+              "label": "sign in",
+              "href": "https://panel.codefend.com/auth/signin",
+              "target": "_blank"
+            }
+          ]
+        },
+        {
+          "section": "Company",
+          "items": [
+            { "label": "contact us", "href": "mailto:hello@codefend.com" },
+            {
+              "label": "terms of use",
+              "href": "https://docs.google.com/document/d/1KZRrfHR4hIy2YyKkQmPK7Azp-zkbk7mYhCM6xKlVsoE/edit#heading=h.otbipzz762sq",
+              "target": "_blank"
+            },
+            {
+              "label": "privacy policy",
+              "href": "https://docs.google.com/document/d/1e0Th-KsMRn_DO8uJ14WZkAqJK7DiUFvrLkQ2yol6E_o/edit?usp=sharing",
+              "target": "_blank"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "home": {
+    "metadata": {
+      "title": "Codefend Home: Vulnerability Identification, Penetration Testing, and Red Teaming Services",
+      "description": "Codefend offers a comprehensive cybersecurity platform to identify and address vulnerabilities in your infrastructure. Our services include vulnerability identification, penetration testing, red teaming, and bug bounty programs to protect your organization from cyber attacks."
+    },
+    "hero": {
+      "headings": {
+        "animated": [
+          "Intel meets protection",
+          "Attack surface surveillance",
+          "Dive deeper the darkweb.",
+          "Remove vendor risk",
+          "Continuous pentest",
+          "Unveil your shadow IT",
+          "Quieter become, able to hear"
+        ]
+      },
+      "description": [
+        {
+          "text": "We provide ",
+          "bold": false
+        },
+        {
+          "text": "advanced information security services",
+          "bold": true
+        },
+        {
+          "text": " to prevent business continuity disruption, reputational and monetary loss. To make this possible we employ a multifaceted approach that encompasses custom software and hardware, proactive threat monitoring, and a team of skilled experts, including researchers and informants.",
+          "bold": false
+        }
+      ],
+      "cta": "Request a pentest now!",
+      "features": [
+        "Unique tools",
+        "Cid spoofing",
+        "SS7 interception",
+        "Web3 drainers",
+        "Web security",
+        "Unlimited free scans",
+        "Crackmapexecute",
+        "Impact & cobalt strike",
+        "Brute ratel",
+        "Private leaks",
+        "The onion router",
+        "Invisible Internet Project"
+      ]
+    },
+    "highlights": {
+      "sections": [
+        {
+          "title": "Continuous pentest & surveillance",
+          "paddingLeft": true,
+          "description": [
+            {
+              "text": "Monitorea tus activos digitales de forma permanente con nuestras suscripciones mensuales. Recibe notificaciones instantáneas de vulnerabilidades detectadas en tu correo electrónico.",
+              "bold": false
+            }
+          ],
+          "delay": 0.9
+        },
+        {
+          "title": "Threat intelligence",
+          "paddingLeft": false,
+          "description": [
+            {
+              "text": "Realizamos operaciones de monitoreo continuo en foros de hacking, dentro de la dark web y en redes sociales para identificar amenazas y vulnerabilidades que puedan afectar a tu organización.",
+              "bold": false
+            }
+          ],
+          "delay": 1
+        },
+        {
+          "title": "Snapshot pentest",
+          "paddingLeft": false,
+          "description": [
+            {
+              "text": "Revise toda su infrastructura crítica con un pentest completo. Reciba un reporte detallado con las vulnerabilidades encontradas y recomendaciones para mitigarlas. Vulnerabilidades comunicadas en 24 horas.",
+              "bold": false
+            }
+          ],
+          "delay": 1.1
+        }
+      ]
+    },
+    "mainDifferences": {
+      "title": "Main differences",
+      "intro": [
+        {
+          "text": "Codefend serves all its clients via a web application. From this platform, ",
+          "bold": false
+        },
+        {
+          "text": "we establish secure & encrypted communications with your company's staff",
+          "bold": true
+        },
+        {
+          "text": ". Codefend conducts systematic supervision of your infrastructure, employing diverse techniques and private information providers.",
+          "bold": false
+        }
+      ],
+      "items": [
+        {
+          "icon": "/images/icon1.webp",
+          "title": "our ASM offers on-demand pentesting",
+          "delay": 0.7,
+          "description": [
+            {
+              "text": "We believe information security should be continuous. Users can request pentesting whenever needed—whether it's for a new webpage, a new section, or a new mobile app. Vulnerabilities are promptly reported on our platform.",
+              "bold": false
+            }
+          ]
+        },
+        {
+          "icon": "/images/icon2.webp",
+          "title": "issues communicated quickly",
+          "delay": 0.8,
+          "description": [
+            {
+              "text": "Traditional security companies run scans once a year. With Codefend, you can see bugs and issues as soon as the pentester finds them. Our system delivers daily scans and immediate notifications, allowing you to address issues as they appear.",
+              "bold": false
+            }
+          ]
+        },
+        {
+          "icon": "/images/icon3.webp",
+          "title": "deeply connected with real hackers",
+          "delay": 0.9,
+          "description": [
+            {
+              "text": "Codefend isn't your typical cybersecurity firm. Beyond standard compliance reports for your web applications, we gather insights from various private communities where true hackers operate. This gives Codefend distinct edge over other security companies relying on conventional tools.",
+              "bold": false
+            }
+          ]
+        }
+      ],
+      "buttons": [
+        {
+          "text": "contact",
+          "link": "#contact",
+          "type": "alt"
+        },
+        {
+          "text": "start now",
+          "link": "https://panel.codefend.com/auth/signup",
+          "type": "main"
+        }
+      ]
+    },
+    "ourSoftware": {
+      "title": "Easily visualize vulnerabilities & issues",
+      "description": [
+        {
+          "text": "From the vulnerabilities section, you can access a comprehensive list of all vulnerabilities and issues identified in your application to date. By clicking on each item, you will be able to view detailed information and further insights regarding each issue. This will allow you to stay informed and take the necessary steps to address and resolve potential security risks.",
+          "bold": false
+        }
+      ],
+      "image": {
+        "src": "/images/software-img1.png",
+        "alt": "Codefend Software"
+      }
+    },
+    "ourServices": {
+      "title": "Our services",
+      "description": "Codefend offers cybersecurity intel, research, and security services, all unified in a unique platform. This platform allows you to monitor your assets, infrastructure, and your organization's security, while establishing direct communication between our professionals and your security team. Our conventional services include:",
+      "services": {
+        "left": [
+          {
+            "id": "sil1",
+            "title": "web application security",
+            "description": "Codefend does manual and semi-automated penetration testing processes using commercial and proprietary security software to evaluate your web application from the perspective of anonymous and authenticated users."
+          },
+          {
+            "id": "sil2",
+            "title": "external network security",
+            "description": "Reinforce the robustness of your internal network with our specialized assessments. Our expertise ensures a stronger infrastructure, protecting not only your data but also the trust of your customers and employees."
+          },
+          {
+            "id": "sil3",
+            "title": "cloud infrastructure solutions",
+            "description": "Perform periodic reviews during the development of your software and before your product launch. Codefend will detect vulnerabilities and fix security issues in your applications to increase your defenses against potential threats."
+          },
+          {
+            "id": "sil4",
+            "title": "intel & research services",
+            "description": "Gather actionable intelligence with our open source and human Intelligence services. Improve your decision-making and stay ahead of the competition with our decentralized open source intel services."
+          }
+        ],
+        "right": [
+          {
+            "id": "sir1",
+            "title": "mobile application security",
+            "description": "Ensure the security of your mobile application with our decentralized mobile application pentest services. Protect your user’s sensitive information with our professional services."
+          },
+          {
+            "id": "sir2",
+            "title": "internal network security",
+            "description": "Reinforce the robustness of your internal network with our specialized assessments. Our expertise ensures a stronger infrastructure, protecting not only your data but also the trust of your customers and employees."
+          },
+          {
+            "id": "sir3",
+            "title": "source code review",
+            "description": "Perform periodic reviews during the development of your software and before your product launch. Codefend will detect vulnerabilities and fix security issues in your applications to increase your defenses against potential threats."
+          },
+          {
+            "id": "sir4",
+            "title": "advanced se",
+            "description": "Rise your company defenses against phishing, smishing and vishing attacks with our social engineering services. Improve your security posture and educate your employees with our social engineering services."
+          }
+        ]
+      }
+    }
+  }
+}

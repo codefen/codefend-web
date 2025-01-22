@@ -1,13 +1,13 @@
-export const pageHomeMetaData = {
-    title: "Codefend Home: Vulnerability Identification, Penetration Testing, and Red Teaming Services",
-    description: "Codefend offers a comprehensive cybersecurity platform to identify and address vulnerabilities in your infrastructure. Our services include vulnerability identification, penetration testing, red teaming, and bug bounty programs to protect your organization from cyber attacks.",
+export const pageHomeMetaData = ({ title, description})=> ({
+    title,
+    description,
     keywords: "cybersecurity, vulnerability identification, penetration testing, red teaming, bug bounty program, incident response, security platform, infrastructure security, ethical hacking, threat monitoring, cyber attacks, security assessments, vulnerability management, Codefend, ciberseguridad, identificación de vulnerabilidades, pruebas de penetración, red teaming",
     url: "https://www.codefend.com/home",
     image: "https://www.codefend.com/assets/images/bkg-hero.jpg",
     siteName: "Codefend website",
     applicationType: "website",
     twitter: { card: "summary_large_image" },
-}
+})
 
 export const pageSoftwareMetaData = {
     title: "Codefend Software: Comprehensive Cybersecurity for Your Organization",
