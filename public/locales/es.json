@@ -1067,6 +1067,22 @@
           "increase": "Incrementar",
           "discount": "Descuento",
           "of": "de"
+        },
+        "shared": {
+          "sizeError": "Tamaño inválido",
+          "sizeLabel": "Tamaño del Sistema",
+          "internalIp": {
+            "sizeLabel": "Elige el nivel de criticidad"
+          },
+          "errors": {
+            "web": "Dominio inválido",
+            "mobile": "URL de tienda inválida",
+            "cloud": "Nombre de proveedor inválido",
+            "sourceCode": "URL de repositorio inválida",
+            "socialEngine": "Número inválido",
+            "internalIp": "Número inválido",
+            "externalIp": "Número inválido"
+          }
         }
       },
       "layout": {
@@ -1074,7 +1090,16 @@
         "total": "total",
         "send": "enviar propuesta de borrador",
         "priceAnnual": "Precio anual / una sola vez:",
-        "priceMonthly": "Precio mensual / suscripción:"
+        "priceMonthly": "Precio mensual / suscripción:",
+        "titles": {
+          "web": "Aplicación Web",
+          "mobile": "Aplicación Móvil",
+          "cloud": "Proveedor de Nube",
+          "sourceCode": "Revisión de Código Fuente",
+          "socialEngine": "Ingeniería Social",
+          "internalIp": "Seguridad de IP Interna",
+          "externalIp": "Seguridad de IP Externa"
+        }
       },
       "proposalModal": {
         "title": "Enviar Propuesta",

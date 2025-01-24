@@ -1067,6 +1067,22 @@
           "increase": "Increase",
           "discount": "Discount",
           "of": "of"
+        },
+        "shared": {
+          "sizeError": "Invalid size",
+          "sizeLabel": "System Size",
+          "internalIp": {
+            "sizeLabel": "Choose the criticality level"
+          },
+          "errors": {
+            "web": "Invalid domain",
+            "mobile": "Invalid store url",
+            "cloud": "Invalid provider name",
+            "sourceCode": "Invalid repository url",
+            "socialEngine": "Invalid number",
+            "internalIp": "Invalid number",
+            "externalIp": "Invalid number"
+          }
         }
       },
       "layout": {
@@ -1074,7 +1090,16 @@
         "total": "total",
         "send": "draft send proposal",
         "priceAnnual": "Annual price / one time only:",
-        "priceMonthly": "Monthly price / subscription:"
+        "priceMonthly": "Monthly price / subscription:",
+        "titles": {
+          "web": "Web Application",
+          "mobile": "Mobile Application",
+          "cloud": "Cloud Provider",
+          "sourceCode": "Source Code Review",
+          "socialEngine": "Social",
+          "internalIp": "Internal IP Security",
+          "externalIp": "External IP Security"
+        }
       },
       "proposalModal": {
         "title": "Send Proposal",

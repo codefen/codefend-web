@@ -10,6 +10,5 @@ const DEFAULT_LOCALE_CONTEXT = {
 export const useLocales = () => {
   const store = useContext(I18nContext);
   if (!store) return DEFAULT_LOCALE_CONTEXT;
-  console.log({ store });
   return store;
 }

@@ -32,17 +32,17 @@ export const RESOURCE_CONFIGS = {
   socialEngine: {
     defaultSize: DEFAULT_SOCIAL_APP.size,
     pricing: SOCIAL_SIZE_PRICING,
-    sizeOptions: SOCIAL_SIZE_OPTIONS
+    sizeOptions: SOCIAL_SIZE_OPTIONS("")
   },
   internalIp: {
     defaultSize: DEFAULT_IP_INTERNAL_APP.size,
     pricing: IP_INTERNAL_PRICING,
-    sizeOptions: IP_INTERNAL_SIZE_OPTIONS
+    sizeOptions: IP_INTERNAL_SIZE_OPTIONS("")
   },
   externalIp: {
     defaultSize: DEFAULT_IP_EXTERNAL_APP.size,
     pricing: IP_EXTERNAL_PRICING,
-    sizeOptions: IP_EXTERNAL_SIZE_OPTIONS
+    sizeOptions: IP_EXTERNAL_SIZE_OPTIONS("")
   }
 };
 
@@ -57,29 +57,29 @@ export const tabs = [
   { icon: "/resources/setting.svg", label: "Settings", id: TAB_SETTINGS_ID },
 ];
 
-const validators = {
+const validators = (message)=>({
   web: {
-    domain: (value) => !value?.trim() || !isValidURL(value) ? "Invalid domain" : undefined,
+    domain: (value) => !value?.trim() || !isValidURL(value) ? message : undefined,
   },
   mobile: {
-    url: (value) => !value?.trim() || !isValidURL(value) ? "Invalid store url" : undefined,
+    url: (value) => !value?.trim() || !isValidURL(value) ? message : undefined,
   },
   cloud: {
-    provider: (value) => !value || !value?.trim() || value?.length > 150 ? "Invalid provider name" : undefined, 
+    provider: (value) => !value || !value?.trim() || value?.length > 150 ? message : undefined, 
   },
   sourceCode: {
-    repo: (value) => !value?.trim() || !isValidURL(value) ? "Invalid repository url" : undefined,
+    repo: (value) => !value?.trim() || !isValidURL(value) ? message : undefined,
   },
   socialEngine: {
-    number: (value) => !value || value <= 0 ? "Invalid number" : undefined,
+    number: (value) => !value || value <= 0 ? message : undefined,
   },
   internalIp: {
-    internalIpAmount: (value) => !value || value <= 0 ? "Invalid number" : undefined,
+    internalIpAmount: (value) => !value || value <= 0 ? message : undefined,
   },
   externalIp: {
-    externalIpAmount: (value) => !value || value <= 0 ? "Invalid number" : undefined,
+    externalIpAmount: (value) => !value || value <= 0 ? message : undefined,
   }
-};
+})
 
 const validationFields = {
   web: ["domain"],
@@ -111,24 +111,24 @@ export function isValidURL(url) {
   return urlPattern.test(url);
 }
 
-export const validateSize = (size, sizeOptions) => {
+export const validateSize = (size, sizeOptions, message="") => {
   if (!size || !sizeOptions.some((option) => option.value === size)) {
-    return "Invalid size";
+    return message;
   }
   return undefined;
 };
 
-export const validateQuote = (type, quote) => {
+export const validateQuote = (type, quote, t) => {
   if (!validators[type]) {
     console.warn(`No validators configured for type: ${type}`);
     return quote;
   }
 
-  const selectedSizeOption = RESOURCE_CONFIGS[type]?.sizeOptions || sizeOptions;
+  const selectedSizeOption = RESOURCE_CONFIGS[type]?.sizeOptions || sizeOptions("");
   return quote.map(item => {
     const validatedItem = { ...item };
     // Validación común del size para todos los tipos
-    const sizeError = validateSize(item.size, selectedSizeOption);
+    const sizeError = validateSize(item.size, selectedSizeOption, t.sizeError);
     if (sizeError) {
       validatedItem.sizeError = sizeError;
     } else {
@@ -136,7 +136,7 @@ export const validateQuote = (type, quote) => {
     }
 
     // Validaciones específicas por tipo
-    const typeValidators = validators[type];
+    const typeValidators = validators(t.errors[type])[type];
     const fieldsToValidate = validationFields[type] || [];
 
     fieldsToValidate.forEach(field => {
@@ -155,12 +155,11 @@ export const validateQuote = (type, quote) => {
   });
 };
 
-export const validateSingleQuote = (type, quote, index) => {
+export const validateSingleQuote = (type, quote, index, t) => {
   // Validar que el índice sea válido
   if (index < 0 || !Array.isArray(quote) || index >= quote.length) {
     throw new Error('Invalid index');
   }
-  console.log({ type, vali:validators[type] })
   // Si el tipo no está configurado, devolver la quote sin validar
   if (!validators[type]) {
     console.warn(`No validators configured for type: ${type}`);
@@ -170,9 +169,9 @@ export const validateSingleQuote = (type, quote, index) => {
   // Crear una copia del array original
   const updatedQuote = [...quote];
   const itemToValidate = { ...updatedQuote[index] };
-  const selectedSizeOption = RESOURCE_CONFIGS[type]?.sizeOptions || sizeOptions;
+  const selectedSizeOption = RESOURCE_CONFIGS[type]?.sizeOptions || sizeOptions("");
   // Validación común del size
-  const sizeError = validateSize(itemToValidate.size, selectedSizeOption);
+  const sizeError = validateSize(itemToValidate.size, selectedSizeOption, t.sizeError);
   if (sizeError) {
     itemToValidate.sizeError = sizeError;
   } else {
@@ -180,7 +179,7 @@ export const validateSingleQuote = (type, quote, index) => {
   }
 
   // Validaciones específicas por tipo
-  const typeValidators = validators[type];
+  const typeValidators = validators(t.errors[type])[type];
   const fieldsToValidate = validationFields[type] || [];
 
   fieldsToValidate.forEach(field => {

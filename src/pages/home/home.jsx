@@ -9,7 +9,6 @@ import { useLocales } from "../../store/useLocales";
 
 function Home() {
   const { t } = useLocales();
-  console.log({ title: t("home.metadata.title") });
   return (
     <>
       <DocumentMetadata

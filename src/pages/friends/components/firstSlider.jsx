@@ -38,7 +38,6 @@ const FirstSlider = ({ t }) => {
     const { chris, edgardo, miguel, ignacio } = t.profiles;
     return [chris, edgardo, miguel, ignacio];
   }, [t.profiles]);
-  console.log({ profiles });
   return (
     <div id="slider-1" className="container-1">
       <div className="profile-contain">

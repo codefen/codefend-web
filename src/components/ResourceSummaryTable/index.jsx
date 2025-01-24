@@ -1,9 +1,7 @@
 import { getTitle } from "../../data/quote/general";
 
-const PriceRow = ({ resourceType, list, subtotals }) => {
+const PriceRow = ({ resourceType, list, subtotals, title }) => {
   if (list.length <= 0) return null;
-
-  let title = getTitle(resourceType);
   let count = list.length;
   if (resourceType === "socialEngine") {
     count = list.reduce((acc, item) => acc + Number(item.number), 0);
@@ -36,6 +34,7 @@ export const ResourceSummaryTable = ({
             resourceType={resourceType}
             list={list}
             subtotals={subtotals}
+            title={t.titles?.[resourceType]}
           />
         ))}
 

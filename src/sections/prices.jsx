@@ -9,7 +9,6 @@ const Prices = () => {
     const monthlyBtn = document.getElementById("monthlyBtn");
     const anuallyBtn = document.getElementById("anuallyBtn");
     const { current } = slide;
-    console.log(monthlyBtn);
     if (target.className === "monthly") {
       current.style.transform = `translate(0vw)`;
       monthlyBtn.classList.add("active");

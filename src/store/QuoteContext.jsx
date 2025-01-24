@@ -1,6 +1,7 @@
 import { createContext, useCallback, useMemo, useState } from "react";
 import { defaultIdentifier, initialQuotes } from "../data/quote/store";
 import { validateQuote, validateSingleQuote } from "../data/quote/general";
+import { useLocales } from "./useLocales";
 
 export const QuoteContext = createContext();
 
@@ -13,6 +14,8 @@ export const QuoteProvider = ({ children }) => {
   const [sending, setSending] = useState(false);
   const [showSuccess, setSuccess] = useState(false);
   const [intensity, setIntensity] = useState(100);
+  const { t } = useLocales();
+  const tt = useMemo(() => t("calculator.quote.content.shared"), [t]);
 
   const toggleModal = useCallback(
     (value) => {
@@ -29,7 +32,7 @@ export const QuoteProvider = ({ children }) => {
 
   const validationQuote = useCallback(
     (type) => {
-      const validatedquote = validateQuote(type, quotes[type]);
+      const validatedquote = validateQuote(type, quotes[type], tt);
 
       setQuoteState((prev) => ({
         ...prev,
@@ -41,7 +44,7 @@ export const QuoteProvider = ({ children }) => {
 
   const validationSingleQuote = useCallback(
     (type, index) => {
-      const validatedquote = validateSingleQuote(type, quotes[type], index);
+      const validatedquote = validateSingleQuote(type, quotes[type], index, tt);
 
       setQuoteState((prev) => ({
         ...prev,

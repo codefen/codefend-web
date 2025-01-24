@@ -27,10 +27,8 @@ export const I18nProvider = ({ children }) => {
   const loadTranslations = async (locale) => {
     setIsLoading(true);
     try {
-      console.log(`Entro al try, end: ${LOCALE_ENDPOINT(locale)}`);
       const response = await fetch(LOCALE_ENDPOINT(locale));
       const data = await response.json();
-      console.log({ data });
       setTranslations(data);
     } catch (error) {
       console.error("Error loading translations:", error);
@@ -40,7 +38,6 @@ export const I18nProvider = ({ children }) => {
   };
 
   useLayoutEffect(() => {
-    console.log(`Ejecuto el layout effect: ${locale}`);
     loadTranslations(locale);
   }, [locale]);
 
