@@ -5,6 +5,7 @@ import {
   LOCALE_ENDPOINT,
 } from "../data/i18n/i18n";
 import { useLocation, useNavigate } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 
 export const I18nContext = createContext();
 
@@ -18,7 +19,7 @@ export const I18nProvider = ({ children }) => {
   const navigate = useNavigate();
   const location = useLocation();
   const [isLoading, setIsLoading] = useState(true);
-  const [locale, _] = useState(() => {
+  const [locale, setLanguage] = useState(() => {
     const pathSegments = location?.pathname?.split?.("/");
     return pathSegments?.[1] ? pathSegments[1] : DEFAULT_LOCALE;
   });
@@ -42,6 +43,7 @@ export const I18nProvider = ({ children }) => {
   }, [locale]);
 
   const switchLanguage = (newLocale) => {
+    console.log({ newLocale });
     const validNewLocale = AVALABLE_LOCALES.includes(newLocale)
       ? newLocale
       : DEFAULT_LOCALE;
@@ -51,6 +53,7 @@ export const I18nProvider = ({ children }) => {
       pathSegments.splice(1, 1);
     }
     const newPath = `/${validNewLocale}${pathSegments.join("/")}`;
+    console.log({ newPath });
     setLanguage(validNewLocale);
     navigate(newPath);
   };
@@ -65,7 +68,7 @@ export const I18nProvider = ({ children }) => {
   }
   return (
     <I18nContext.Provider value={{ t, switchLanguage, locale }}>
-      {children}
+      <AnimatePresence>{children}</AnimatePresence>
     </I18nContext.Provider>
   );
 };
