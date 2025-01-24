@@ -5,10 +5,17 @@
 }
 
 .inputsWrapper {
-  display: grid;
-  align-items: flex-end;
-  grid-template-columns: 1.65fr 1fr auto;
-  column-gap: 1.35rem;
+  display: flex;
+  row-gap: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  .inputBoxInput {
+    flex: 100%;
+  }
+  .inputBoxSelect {
+    flex: 1;
+  }
 
   .inputBox {
     display: flex;
@@ -64,4 +71,21 @@
   border-width: 1px;
   width: 2.5rem;
   border-radius: var(--button-radius);
+}
+
+@media only screen and (min-width: 640px) {
+  .inputsWrapper {
+    display: grid;
+    align-items: flex-end;
+    grid-template-columns: 1.65fr 1fr auto;
+    gap: 0;
+    column-gap: 1.35rem;
+
+    .inputBoxInput {
+      flex: auto;
+    }
+    .inputBoxSelect {
+      flex: auto;
+    }
+  }
 }

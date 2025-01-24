@@ -30,7 +30,7 @@ export const QuoteInput = ({
     >
       <div className={`${css.inputContainer} input-container`}>
         <div className={css.inputsWrapper}>
-          <div className={css.inputBox}>
+          <div className={`${css.inputBox} ${css.inputBoxInput}`}>
             {/* <label>{targetLabel}</label> */}
             <input
               placeholder={targetLabel}
@@ -47,7 +47,7 @@ export const QuoteInput = ({
               <span className={css.errorText}>{errors.target}</span>
             )}
           </div>
-          <div className={css.inputBox}>
+          <div className={`${css.inputBox} ${css.inputBoxSelect}`}>
             {/* <label>{sizeLabel}</label> */}
             <Select
               defaultValue={savedApp.size || defaultApp.size}
