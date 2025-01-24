@@ -8,7 +8,7 @@ import { Slider } from "../../../components/Slider";
 import { debounce } from "../../../hooks/debounce";
 import { useResourceCalculations } from "../../../hooks/useResourceCalculations";
 
-export const SettingsTabContent = ({ isActive }) => {
+export const SettingsTabContent = ({ t, isActive }) => {
   const { quotes, identifier, intensity, setIntensity, adjustedPrice } =
     useQuoteStore();
   const intensityPercentage = useMemo(() => intensity - 100, [intensity]);
@@ -19,13 +19,11 @@ export const SettingsTabContent = ({ isActive }) => {
   );
   useEffect(() => {
     if (intensity !== 100) {
-      console.log({ intensity });
       const bouncing = debounce(
         () => sendMetrics(identifier, quotes, intensityPercentage),
         500
       );
       bouncing();
-
       return () => bouncing.cancel();
     }
   }, [intensity]);
@@ -33,14 +31,14 @@ export const SettingsTabContent = ({ isActive }) => {
 
   return (
     <QuoteLayout
-      title="Pricing Configuration"
-      description="Use this section to adjust the pricing intensity for your services. Modify the slider to increase or decrease the estimated price percentage according to your needs."
+      title={t.title}
+      description={t.description}
       id={TAB_SETTINGS_ID}
     >
       <div
         className={`${css.quoteLeftContainerTop} ${css.quoteSettingContainer}`}
       >
-        <label>Ajuste de precio</label>
+        <label>{t.adjustLabel}</label>
         <Slider
           min={60}
           max={200}
@@ -56,11 +54,11 @@ export const SettingsTabContent = ({ isActive }) => {
 
         <div className={css.quoteAdjustResultContainer}>
           <p className={css["price-adjust"]}>
-            Precio ajustado: ${adjustedPriceValue}
+            {t.adjustPrice} ${adjustedPriceValue}
           </p>
           {totalSubtotal > 0 && (
             <p className="text-sm text-muted-foreground mt-2">
-              {intensity > 100 ? "Aumento" : "Descuento"} de $
+              {intensity > 100 ? t.increase : t.discount} {t.of} $
               {adjustedPriceValue - totalSubtotal}
             </p>
           )}

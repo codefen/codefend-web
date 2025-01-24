@@ -11,10 +11,15 @@ const Software = () => {
   return (
     <>
       {/* <HeroSoftware /> */}
-      <DocumentMetadata meta={pageSoftwareMetaData} />
+      <DocumentMetadata
+        meta={pageSoftwareMetaData({
+          title: t("software.metadata.title"),
+          description: t("software.metadata.description"),
+        })}
+      />
       <OurSoftware t={t("home.ourSoftware")} />
-      <Features />
-      <Capabilities />
+      <Features t={t("software.features")} />
+      <Capabilities t={t("software.capabilities")} />
     </>
   );
 };

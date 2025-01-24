@@ -4,6 +4,7 @@ import css from "./sendproposal.module.scss";
 import { sendMetrics } from "../../data/quote/general";
 import ModalWrapper from "../ModalWrapper";
 import { AnimatePresence, motion } from "framer-motion";
+import { useLocales } from "../../store/useLocales";
 
 export const SendProposalModal = () => {
   const {
@@ -15,7 +16,8 @@ export const SendProposalModal = () => {
     toggleSuccess,
   } = useQuoteStore();
   const [steps, setStep] = useState(0);
-
+  const { t } = useLocales();
+  const tt = t("calculator.quote.proposalModal");
   useEffect(() => {
     if (sending) {
       document.body.style.overflow = "hidden";
@@ -48,7 +50,7 @@ export const SendProposalModal = () => {
   }
   return (
     <ModalWrapper showCloseBtn action={resetForm} type={css.modalSend}>
-      <h3>Send Proposal</h3>
+      <h3>{tt.title}</h3>
       <AnimatePresence mode="wait">
         <div className={css.formContainer}>
           {steps === 0 ? (
@@ -62,7 +64,7 @@ export const SendProposalModal = () => {
             >
               <div className={css.inputGroup}>
                 <label htmlFor="email">
-                  Write your enterprise email{" "}
+                  {tt.mailLabel}
                   <span className={css.required}>*</span>
                 </label>
                 <input
@@ -71,7 +73,7 @@ export const SendProposalModal = () => {
                   name="email"
                   required
                   onChange={(e) => onChange("email", e.target.value)}
-                  placeholder="Email"
+                  placeholder={tt.mailPlaceholder}
                 />
               </div>
               <button
@@ -80,7 +82,7 @@ export const SendProposalModal = () => {
                 onClick={onNextStep}
                 className="btn"
               >
-                Next
+                {tt.next}
               </button>
             </motion.div>
           ) : (
@@ -94,16 +96,14 @@ export const SendProposalModal = () => {
               className={css.formContent}
             >
               <div className={css.inputGroup}>
-                <label htmlFor="phone">
-                  Write your enterprise phone (Optional)
-                </label>
+                <label htmlFor="phone">{tt.phoneLabel}</label>
                 <input
                   type="text"
                   id="phone"
                   name="phone"
                   required
                   onChange={(e) => onChange("phone", e.target.value)}
-                  placeholder="Phone"
+                  placeholder={tt.phonePlaceholder}
                 />
               </div>
 
@@ -112,7 +112,7 @@ export const SendProposalModal = () => {
                 disabled={!identifier.email && !identifier.phone}
                 className="btn"
               >
-                Send
+                {tt.send}
               </button>
             </motion.form>
           )}

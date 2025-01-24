@@ -2,10 +2,9 @@ import { WEB_DESCRIPTION } from "../../data/quote/web";
 import css from "./quote.module.scss";
 import { useQuoteStore } from "../../store/useQuoteStore";
 import { useResourceCalculations } from "../../hooks/useResourceCalculations";
-import { QuotePriceTable } from "../../components/QuotePriceTable";
 import { ResourceSummaryTable } from "../../components/ResourceSummaryTable";
 import { QuoteFooter } from "../../components/QuoteFooter";
-import { useMemo } from "react";
+import { useLocales } from "../../store/useLocales";
 
 export const QuoteLayout = ({
   children,
@@ -17,7 +16,8 @@ export const QuoteLayout = ({
   const { quotes, adjustedPrice } = useQuoteStore();
   const { resourceLists, subtotals, totalSubtotal } =
     useResourceCalculations(quotes);
-
+  const { t } = useLocales();
+  const tt = t("calculator.quote.layout");
   return (
     <div
       className={css.quoteLayout}
@@ -35,16 +35,18 @@ export const QuoteLayout = ({
       </div>
       <div className={css.quoteRightContainer}>
         <div>
-          <h3>Order Summary</h3>
+          <h3>{tt.summary}</h3>
           <ResourceSummaryTable
             resourceLists={resourceLists}
             subtotals={subtotals}
             totalSubtotal={adjustedPrice(totalSubtotal)}
+            t={tt}
           />
         </div>
         <QuoteFooter
           subtotal={adjustedPrice(totalSubtotal)}
           resourceLists={resourceLists}
+          t={tt}
         />
       </div>
     </div>

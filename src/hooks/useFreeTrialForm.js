@@ -1,7 +1,7 @@
 import { useCallback, useState } from "react";
 import { DEFAULT_FORM_DATA } from "../data/contact/contact";
 
-export const useContactForm = () => {
+export const useContactForm = (messages) => {
     const [formData, setFormData] = useState(DEFAULT_FORM_DATA);
     const [statusMessage, setStatusMessage] = useState(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -37,8 +37,8 @@ export const useContactForm = () => {
         setStatusMessage({
           type: data.success ? "success" : "error",
           message: data.success 
-            ? "Form submitted successfully!" 
-            : "Submission failed. Please try again.",
+            ? messages.successMessage
+            : messages.successErrorMessage,
         });
   
         if (data.success) {
@@ -47,7 +47,7 @@ export const useContactForm = () => {
       } catch (error) {
         setStatusMessage({
           type: "error",
-          message: "An error occurred. Please try again.",
+          message: messages.errorMessage,
         });
       } finally {
         setIsSubmitting(false);

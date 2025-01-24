@@ -3,7 +3,7 @@ import { useState, useTransition } from "react";
 import { DEFAULT_FORM_DATA, dispatch, validateForm } from "./action";
 import { toast } from "react-toastify";
 
-const PartnerForm = () => {
+const PartnerForm = ({ t }) => {
   const [isPending, startTransition] = useTransition();
   const [formData, setFormData] = useState(DEFAULT_FORM_DATA);
   const [error, setError] = useState("");
@@ -17,16 +17,14 @@ const PartnerForm = () => {
         dispatch(data).then((res) => {
           if (res) {
             setFormData(DEFAULT_FORM_DATA);
-            toast.success(
-              "Your contact has been sent successfully. In a few days someone from the team will be contacting you."
-            );
+            toast.success(t.successMessage);
           } else {
-            setError("Failed to send message. Please try again.");
+            setError(t.errorMessage);
           }
         });
       });
     } else {
-      setError("All fields are required");
+      setError(t.requiredMessage);
     }
   };
 
@@ -37,11 +35,8 @@ const PartnerForm = () => {
 
   return (
     <article className={css.partneforFormContainer}>
-      <h3>DISTRIBUTOR CONTACT FORM </h3>
-      <p>
-        Unlock a lucrative opportunity with Codefend by becoming one of our
-        trusted distributors.{" "}
-      </p>
+      <h3>{t.title}</h3>
+      <p>{t.description}</p>
       <form
         className={css.partnerForm}
         onSubmit={onSubmit}
@@ -52,10 +47,7 @@ const PartnerForm = () => {
           <input
             key={i}
             name={key}
-            placeholder={
-              key.charAt(0).toUpperCase() +
-              key.slice(1).replace(/([A-Z])/g, " $1")
-            }
+            placeholder={t.fieldsPlaceholders[key]}
             type={key === "email" ? "email" : "text"}
             autoComplete={
               key === "email"
@@ -73,7 +65,7 @@ const PartnerForm = () => {
         ))}
         {error && <p className={css.errorMessage}>{error}</p>}
         <button type="submit" disabled={isPending}>
-          Submit
+          {t.btn}
         </button>
       </form>
     </article>

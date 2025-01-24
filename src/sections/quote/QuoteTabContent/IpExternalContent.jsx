@@ -13,7 +13,7 @@ import {
 } from "../../../data/quote/externalIp";
 import { sendMetrics } from "../../../data/quote/general";
 
-export const IpExternalTabContent = ({ isActive }) => {
+export const IpExternalTabContent = ({ t, isActive }) => {
   const {
     quotes: { externalIp, ...others },
     addQuote,
@@ -50,8 +50,8 @@ export const IpExternalTabContent = ({ isActive }) => {
   if (!isActive) return null;
   return (
     <QuoteLayout
-      title="External IP Security"
-      description="Use this section to add the external IP addresses you want to manage or analyze. We classify external IPs into 3 pre-defined categories based on their role and exposure within your infrastructure."
+      title={t.title}
+      description={t.description}
       id={TAB_EXTERNAL_IP_ID}
     >
       <div className={css.quoteLeftContainerTop}>
@@ -74,10 +74,9 @@ export const IpExternalTabContent = ({ isActive }) => {
                   target: app?.externalIpAmountError,
                   size: app?.sizeError,
                 }}
-                targetLabel="Number of internal IPs"
+                targetLabel={t.targetLabel}
                 defaultApp={DEFAULT_IP_EXTERNAL_APP}
-                sizeLabel="Objective's Criticality Level"
-                defaultSizeOptions={IP_EXTERNAL_SIZE_OPTIONS}
+                defaultSizeOptions={IP_EXTERNAL_SIZE_OPTIONS(t.sizeLabel)}
                 targetType="number"
                 min="1"
                 step="1"
@@ -99,7 +98,7 @@ export const IpExternalTabContent = ({ isActive }) => {
               decoding="async"
               alt="plus icon"
             />
-            Add a new external ip
+            {t.addBtn}
           </button>
         </div>
       </div>

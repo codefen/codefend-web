@@ -11,8 +11,9 @@ import {
   TAB_CLOUD_ID,
 } from "../../../data/quote/cloud";
 import { sendMetrics } from "../../../data/quote/general";
+import { sizeOptions } from "../../../data/quote/web";
 
-export const CloudTabContent = ({ isActive }) => {
+export const CloudTabContent = ({ t, isActive }) => {
   const {
     quotes: { cloud, ...others },
     addQuote,
@@ -48,8 +49,8 @@ export const CloudTabContent = ({ isActive }) => {
   if (!isActive) return null;
   return (
     <QuoteLayout
-      title="Cloud Providers"
-      description="Add from this section the cloud providers you want to assess. We classify cloud providers into 3 pre-defined sizes based on an estimated scale."
+      title={t.title}
+      description={t.description}
       id={TAB_CLOUD_ID}
       quoteDescriptions={CLOUD_DESCRIPTION}
     >
@@ -68,9 +69,9 @@ export const CloudTabContent = ({ isActive }) => {
                 onVerifyInputs={() => onVerify("cloud", i)}
                 savedApp={app}
                 errors={{ target: app?.providerError, size: app?.sizeError }}
-                targetLabel="Provider Name"
+                targetLabel={t.targetLabel}
                 defaultApp={DEFAULT_CLOUD_APP}
-                sizeLabel="Provider size"
+                defaultSizeOptions={sizeOptions(t.sizeLabel)}
               />
             ))}
           </AnimatePresence>
@@ -88,7 +89,7 @@ export const CloudTabContent = ({ isActive }) => {
               decoding="async"
               alt="plus icon"
             />
-            Add a new cloud application
+            {t.addBtn}
           </button>
         </div>
       </div>

@@ -5,6 +5,7 @@ import { QuoteInput } from "../../../components/QuoteInput";
 import { useQuoteStore } from "../../../store/useQuoteStore";
 import {
   DEFAULT_WEB_APP,
+  sizeOptions,
   TAB_WEB_ID,
   WEB_DESCRIPTION,
 } from "../../../data/quote/web";
@@ -12,7 +13,7 @@ import css from "../quote.module.scss";
 import { usGoToBottom } from "../../../hooks/useGoToBottom";
 import { sendMetrics } from "../../../data/quote/general";
 
-export const WebTabContent = ({ isActive }) => {
+export const WebTabContent = ({ isActive, t }) => {
   const {
     quotes: { web, ...others },
     addQuote,
@@ -48,12 +49,7 @@ export const WebTabContent = ({ isActive }) => {
   };
   if (!isActive) return null;
   return (
-    <QuoteLayout
-      title="Web Applications"
-      description="Add from this section the web applications you want to pentest. We classify web applications into 3 pre-defined sizes based on an estimated scale."
-      id={TAB_WEB_ID}
-      quoteDescriptions={WEB_DESCRIPTION}
-    >
+    <QuoteLayout title={t.title} description={t.description} id={TAB_WEB_ID}>
       <div className={css.quoteLeftContainerTop}>
         <div ref={ref} className="scroll-area">
           <AnimatePresence initial={false}>
@@ -69,7 +65,8 @@ export const WebTabContent = ({ isActive }) => {
                 onVerifyInputs={() => onVerify("web", i)}
                 savedApp={app}
                 errors={{ target: app.domainError, size: app.sizeError }}
-                targetLabel="Domain Name"
+                targetLabel={t.targetLabel}
+                defaultSizeOptions={sizeOptions(t.sizeLabel)}
               />
             ))}
           </AnimatePresence>
@@ -87,7 +84,7 @@ export const WebTabContent = ({ isActive }) => {
               decoding="async"
               alt="plus icon"
             />
-            Add a new web application
+            {t.addBtn}
           </button>
         </div>
       </div>

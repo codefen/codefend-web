@@ -14,7 +14,7 @@ import {
 } from "../../../data/quote/social";
 import { sendMetrics } from "../../../data/quote/general";
 
-export const SocialTabContent = ({ isActive }) => {
+export const SocialTabContent = ({ t, isActive }) => {
   const {
     quotes: { socialEngine, ...others },
     addQuote,
@@ -51,8 +51,8 @@ export const SocialTabContent = ({ isActive }) => {
   if (!isActive) return null;
   return (
     <QuoteLayout
-      title="Social Engineering Attacks"
-      description="Use this section to add the social engineering scenarios you want to simulate. We classify social engineering techniques into 3 pre-defined categories based on the complexity and potential impact."
+      title={t.title}
+      description={t.description}
       id={TAB_SOCIAL_ID}
       quoteDescriptions={SOCIAL_DESCRIPTION}
     >
@@ -73,10 +73,9 @@ export const SocialTabContent = ({ isActive }) => {
                 onVerifyInputs={() => onVerify("socialEngine", i)}
                 savedApp={app}
                 errors={{ target: app?.numberError, size: app?.sizeError }}
-                targetLabel="Number of Staff"
+                targetLabel={t.targetLabel}
                 defaultApp={DEFAULT_SOCIAL_APP}
-                sizeLabel="Objective's Criticality Level"
-                defaultSizeOptions={SOCIAL_SIZE_OPTIONS}
+                defaultSizeOptions={SOCIAL_SIZE_OPTIONS(t.sizeLabel)}
                 targetType="number"
                 min="1"
                 step="1"
@@ -98,7 +97,7 @@ export const SocialTabContent = ({ isActive }) => {
               decoding="async"
               alt="plus icon"
             />
-            Add a new staff role
+            {t.addBtn}
           </button>
         </div>
       </div>

@@ -5,13 +5,13 @@ export const DEFAULT_SOCIAL_APP = {
   size: "--SELECT--",
 };
 
-export const SOCIAL_SIZE_OPTIONS = [
-    { value: DEFAULT_SOCIAL_APP.size, label: "Choose the criticality level" },
-    { value: "basic", label: "basic role | $10" },
-    { value: "medium", label: "medium role | $50" },
-    { value: "advanced", label: "advanced role | $100" },
-    { value: "special", label: "special role | $1,500" },
-  ];
+export const SOCIAL_SIZE_OPTIONS = (label)=>[
+  { value: DEFAULT_SOCIAL_APP.size, label },
+  { value: "basic", label: "basic role | $10" },
+  { value: "medium", label: "medium role | $50" },
+  { value: "advanced", label: "advanced role | $100" },
+  { value: "special", label: "special role | $1,500" },
+];
 
 export const SOCIAL_SIZE_PRICING = {
     basic: 10,

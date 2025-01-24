@@ -87,7 +87,7 @@
                 },
                 {
                   "text": " Al aceptar estas criptomonedas, estamos facilitando que nuestros clientes hagan negocios con nosotros.",
-                  "bold": true
+                  "bold": false
                 }
               ]
             }
@@ -492,6 +492,598 @@
             "description": "Mejora las defensas de tu empresa contra ataques de phishing, smishing y vishing con nuestros servicios de ingeniería social. Mejora tu postura de seguridad y educa a tus empleados con nuestros servicios de ingeniería social."
           }
         ]
+      }
+    }
+  },
+  "software": {
+    "metadata": {
+      "title": "Software de Codefend: Ciberseguridad Integral para su Organización",
+      "description": "Descubra cómo el software de Codefend proporciona una solución integral para todas las necesidades de seguridad de su empresa. Nuestra aplicación ofrece una amplia gama de servicios para proteger su organización de amenazas cibernéticas, permitiéndole adaptar su plan de seguridad a sus requisitos específicos y presupuesto. Con pruebas de penetración continuas, vigilancia de la superficie de ataque y detección de amenazas en tiempo real, Codefend garantiza protección continua para sus ciclos CI/CD e infraestructura."
+    },
+    "features": {
+      "columned": [
+        {
+          "title": "Informes Instantáneos",
+          "description": "Informes fáciles y rápidos: Filtre vulnerabilidades según el tipo de recurso y genere un informe a demanda siempre que lo necesite, asegurando información procesable rápidamente.",
+          "image": "/images/software-img2.png",
+          "alt": "imagen de la aplicación"
+        },
+        {
+          "title": "Resumen de Vulnerabilidades",
+          "description": "Visualización rápida de vulnerabilidades: Monitoree fácilmente la criticidad asociada con cada vulnerabilidad y vea cuáles están activas y cuáles están resueltas.",
+          "image": "/images/software-img3.png",
+          "alt": "imagen de la aplicación",
+          "className": "right"
+        }
+      ],
+      "columnota": [
+        {
+          "title": "Obtenga todos los detalles de las vulnerabilidades",
+          "description": "Obtenga información precisa y procesable sobre cada vulnerabilidad identificada, incluyendo su descripción técnica, impacto potencial en el negocio, complejidad de remediación y pasos recomendados para resolverla efectivamente.",
+          "image": "/images/software-img4.png",
+          "alt": "imagen de la aplicación",
+          "className": "right"
+        }
+      ],
+      "column": [
+        {
+          "title": "Cumpla con los Estándares",
+          "description": "Vulnerabilidades: Filtre vulnerabilidades según el tipo de recurso y genere un informe a demanda siempre que lo necesite.",
+          "image": "/images/software-img5.png",
+          "alt": "imagen de la aplicación"
+        }
+      ]
+    },
+    "capabilities": {
+      "title": "Capacidades del Sistema",
+      "sections": [
+        {
+          "title": "Definición de Alcance / Superficie de Ataque",
+          "description": "La aplicación cuenta con 6 módulos diferentes dedicados exclusivamente al alcance y la superficie de ataque. Cada uno de estos módulos corresponde a un tipo único de activo a ser evaluado. Por ejemplo, si solo desea verificar sus aplicaciones web y móviles, puede dejar el resto del alcance sin completar.",
+          "items": [
+            {
+              "title": "Recursos Web",
+              "description": "En esta sección puede incluir dominios y subdominios a ser evaluados. La aplicación viene con una función integrada para detectar subdominios, y nuestra política predeterminada es detectar TI en la sombra lo antes posible, para que su superficie de ataque o alcance pueda expandirse o contraerse en cualquier momento que su organización lo requiera."
+            },
+            {
+              "title": "Recursos Móviles",
+              "description": "Desde esta sección puede evaluar aplicaciones móviles. Puede usarla tanto para evaluar la seguridad de su propia aplicación como para analizar las aplicaciones que usted y su equipo usan diariamente y descubrir si su información está debidamente protegida."
+            },
+            {
+              "title": "Recursos en la Nube",
+              "description": "Este módulo contiene los activos en la nube de su organización. Nuestras capacidades están limitadas a Amazon Web Services, Microsoft Azure y GCP."
+            },
+            {
+              "title": "Recursos LAN",
+              "description": "Este módulo le permite definir activos de red de área local, o acceso interno y proporcionar acceso a nuestro equipo."
+            },
+            {
+              "title": "Código Fuente",
+              "description": "Supervise su ciclo de desarrollo y procesos con un especialista dedicado con experiencia comprobada en la pila requerida. Si está pensando en agregar una dependencia a su código fuente, también puede estar interesado en analizar dichas dependencias para evitar ataques a la cadena de suministro."
+            },
+            {
+              "title": "Redes Sociales",
+              "description": "Desde esta sección puede agregar nombres, direcciones de correo electrónico, números de teléfono y otra información de los miembros de su personal para realizar ataques de ingeniería social. Codefend realiza ataques de ingeniería social complejos/avanzados a través de diferentes canales."
+            }
+          ]
+        },
+        {
+          "title": "Comunicación e Informes",
+          "description": "La aplicación abarca 3 módulos especializados diseñados para agilizar la comunicación y los informes para sus necesidades de pruebas de penetración. Cada módulo sirve a un propósito distinto para mejorar su experiencia y eficiencia en la gestión de evaluaciones de seguridad.",
+          "items": [
+            {
+              "title": "Problemas",
+              "description": "Visualice y aborde vulnerabilidades. Le permite ver cada problema o vulnerabilidad presente en sus activos. Proporciona una plataforma para solicitar asistencia dentro de la interfaz del problema si se requiere soporte adicional. Adapte su enfoque para manejar vulnerabilidades específicas de manera eficiente."
+            },
+            {
+              "title": "Crear Informes",
+              "description": "Cree informes personalizados a demanda. Le permite seleccionar un grupo de problemas (por ejemplo, recursos web o móviles) y generar informes detallados y personalizados. Elija parámetros y criterios específicos para el informe para satisfacer sus necesidades de informes. Eficiencia, agiliza el proceso de generación de informes completos para una comunicación efectiva."
+            },
+            {
+              "title": "Soporte al Cliente",
+              "description": "Aborde los requisitos de negocio de seguridad de TI. Proporciona un espacio dedicado para solicitar asistencia especial para cualquier necesidad específica de seguridad de TI. Soporte Personalizado: Adapte las solicitudes de soporte para que coincidan con sus preocupaciones únicas de seguridad empresarial. Facilita un canal directo para obtener soporte especializado y oportuno."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "industries": {
+    "metadata": {
+      "title": "Industrias de Codefend: Soluciones de Ciberseguridad Personalizadas para Cada Sector",
+      "description": "Descubra cómo Codefend proporciona servicios de ciberseguridad personalizados en diversas industrias. Nuestra plataforma ofrece una amplia gama de servicios diseñados para proteger su organización de amenazas cibernéticas, asegurando el más alto nivel de seguridad para sus datos e infraestructura."
+    },
+    "mainContent": {
+      "title": "Industrias",
+      "subtitle": "Codefend es su solución integral para todas las necesidades de seguridad de su empresa. Nuestra aplicación combina una amplia gama de servicios diseñados para proteger su organización de amenazas cibernéticas, asegurando el más alto nivel de protección para sus datos e infraestructura.",
+      "items": [
+        {
+          "title": "Medicina",
+          "description": "Mantenga segura la información de sus pacientes con Codefend. Mejoramos la protección de datos sensibles, registros de pacientes e información de salud con nuestras soluciones avanzadas de gestión de riesgos de seguridad. Aseguramos el cumplimiento continuo con las regulaciones HIPAA para la privacidad del paciente, llevando la seguridad en el cuidado de la salud al siguiente nivel. Con Codefend, las organizaciones y profesionales de la salud pueden centrarse en lo que más importa: sus pacientes."
+        },
+        {
+          "title": "Financiero",
+          "description": "Proteja los fondos de sus clientes. En un entorno de alto riesgo, Codefend despliega soluciones avanzadas de gestión de riesgos de seguridad para instituciones financieras. Identificamos, priorizamos y gestionamos eficazmente las vulnerabilidades y los riesgos de acceso en un panorama de amenazas en constante evolución. Restauramos la confianza y aumentamos la confianza del consumidor en estas instituciones vitales, protegiéndolas contra ciberdelincuentes y ciberterroristas."
+        },
+        {
+          "title": "Gobierno",
+          "description": "Los ciudadanos son lo más importante. Frente a la creciente ola de ciberataques en el sector público, Codefend introduce soluciones líderes en vulnerabilidades y riesgos de acceso. Permitimos que las agencias gubernamentales federales cumplan con las normas establecidas por el Instituto Nacional de Estándares y Tecnología (NIST) y reduzcan su superficie de amenaza general."
+        },
+        {
+          "title": "Comercio",
+          "description": "Siga vendiendo con tranquilidad. Con el volumen de transacciones procesadas diariamente por las organizaciones minoristas, Codefend mejora la seguridad con soluciones de gestión de riesgos específicamente diseñadas para el sector minorista. Mantenga el cumplimiento PCI y obtenga una visión clara de la seguridad de la red minorista, las posibles vulnerabilidades, amenazas y riesgos de acceso para mantenerse por delante de las amenazas cibernéticas. Concéntrese en ofrecer excelentes experiencias a los clientes para impulsar su negocio."
+        },
+        {
+          "title": "Energía y Servicios Públicos",
+          "description": "Mantenga en funcionamiento los sistemas cruciales. Codefend proporciona soluciones avanzadas de gestión de riesgos de seguridad para empresas de servicios públicos y energía. Nos enfocamos en ser proactivos contra las amenazas, basándonos en riesgos de acceso, vulnerabilidades, patrones de ataque y exploits conocidos. Proteja dispositivos de infraestructura crítica, redes SCADA y servidores de aplicaciones críticas."
+        },
+        {
+          "title": "Educación",
+          "description": "Asegure el futuro de la educación con Codefend. Nuestras soluciones de ciberseguridad para la educación superior proporcionan una fuerte protección contra desafíos de seguridad persistentes. Utilizando tecnología avanzada, protegemos extensos activos digitales de vulnerabilidades continuas. Codefend capacita a los equipos de seguridad para mitigar eficazmente vulnerabilidades críticas y riesgos de acceso, reduciendo las amenazas. Aseguramos el correcto funcionamiento de los mecanismos defensivos y la preparación para auditorías de cumplimiento obligatorias."
+        },
+        {
+          "title": "Desarrollo de Software",
+          "description": "Innova con confianza con Codefend, protegiendo tus procesos de desarrollo de software. Nuestras avanzadas soluciones de gestión de riesgos de seguridad priorizan la protección del código fuente, la propiedad intelectual y los entornos de desarrollo. Codefend capacita a los equipos de desarrollo de software para centrarse en la innovación, la calidad del código y la colaboración, manteniendo al mismo tiempo los más altos estándares de ciberseguridad."
+        },
+        {
+          "title": "Fintech",
+          "description": "Eleve la tecnología financiera con Codefend, asegurando la seguridad de sus operaciones fintech. Nuestras avanzadas soluciones de gestión de riesgos de seguridad priorizan la protección de las transacciones financieras, los datos de los clientes y el cumplimiento de las regulaciones de la industria. Codefend permite a las empresas fintech innovar con confianza, ofreciendo experiencias financieras seguras y sin problemas para los clientes."
+        },
+        {
+          "title": "Petróleo y Gas",
+          "description": "Asegure operaciones críticas en la industria del petróleo y gas con Codefend. Nuestras avanzadas soluciones de gestión de riesgos de seguridad se centran en proteger los sistemas de control industrial (ICS), la infraestructura crítica y los datos operativos sensibles. Codefend asegura la continuidad y seguridad de las operaciones de petróleo y gas, mitigando los riesgos asociados con las amenazas cibernéticas."
+        },
+        {
+          "title": "Construcción",
+          "description": "Construya con confianza usando Codefend, asegurando sus operaciones de construcción. Nuestras soluciones integrales de gestión de riesgos de seguridad priorizan la protección de datos de proyectos, equipos de construcción e infraestructura crítica. Codefend capacita a las empresas de construcción para centrarse en la entrega de proyectos, la seguridad y la eficiencia, manteniendo al mismo tiempo un entorno digital seguro."
+        },
+        {
+          "title": "Turismo y Hoteles",
+          "description": "Asegure una experiencia segura y sin problemas para los turistas con Codefend, protegiendo sus operaciones de turismo y hotelería. Nuestras avanzadas soluciones de gestión de riesgos de seguridad priorizan la protección de reservas de clientes, información personal y transacciones de pago. Codefend permite a las empresas de turismo y hotelería centrarse en ofrecer experiencias excepcionales a los huéspedes, construyendo confianza y lealtad."
+        },
+        {
+          "title": "Bienes Raíces",
+          "description": "Proteja las operaciones inmobiliarias con Codefend, asegurando la seguridad de las transacciones de propiedades y datos sensibles. Nuestras soluciones integrales de gestión de riesgos de seguridad priorizan la protección de la información de propiedades, datos de clientes y transacciones financieras. Codefend capacita a las empresas inmobiliarias para operar con confianza en el entorno digital, proporcionando servicios seguros y confiables a los clientes."
+        },
+        {
+          "title": "Logística y Transporte",
+          "description": "Optimice las operaciones de logística y transporte con Codefend, asegurando la seguridad de los procesos de la cadena de suministro y la infraestructura crítica. Nuestras avanzadas soluciones de gestión de riesgos de seguridad priorizan la protección de los datos de la cadena de suministro, los sistemas de transporte y la información operativa sensible. Codefend capacita a las empresas de logística y transporte para operar de manera eficiente en un entorno digital seguro."
+        },
+        {
+          "title": "Blockchain y Web 3.0",
+          "description": "Navegue el panorama descentralizado de manera segura con Codefend, protegiendo sus operaciones dentro del dinámico mundo de las criptomonedas y blockchain. Nuestras avanzadas soluciones de gestión de riesgos de seguridad priorizan la protección de redes blockchain, activos digitales y datos transaccionales. Codefend capacita a las empresas dentro del ecosistema de criptomonedas y blockchain para innovar y prosperar mientras asegura los más altos estándares de ciberseguridad."
+        }
+      ]
+    }
+  },
+  "services": {
+    "metadata": {
+      "title": "Servicios de Codefend: Inteligencia y Soluciones Expertas en Ciberseguridad",
+      "description": "Descubra la gama completa de servicios de ciberseguridad de Codefend, incluyendo pruebas de penetración de aplicaciones web y móviles, evaluaciones de seguridad en la nube y más. Nuestra plataforma unificada le permite monitorear la seguridad y la infraestructura de su organización, asegurando una comunicación directa entre su equipo de seguridad y nuestros profesionales para una protección óptima."
+    },
+    "servicesHero": {
+      "container": {
+        "subtitle": {
+          "title": "Servicios",
+          "description": "Codefend ofrece inteligencia en ciberseguridad, investigación y servicios de seguridad, todos unificados en una plataforma única. Permitiéndole monitorear sus activos, infraestructura y la seguridad de su organización, mientras establece una comunicación directa entre nuestros profesionales y su equipo de seguridad."
+        }
+      }
+    },
+    "serviceSlides": {
+      "summary": "RESUMEN:",
+      "moreDetails": "MÁS DETALLES:",
+      "keyBenefits": "BENEFICIOS CLAVE:",
+      "slides": [
+        {
+          "subTitle": {
+            "id": "item11",
+            "title": "prueba de penetración de aplicaciones web",
+            "description": "Codefend realiza procesos de pruebas de penetración manuales y semi-automatizados utilizando software de seguridad comercial y propietario para evaluar su aplicación web desde la perspectiva de usuarios anónimos y autenticados."
+          },
+          "slide": {
+            "id": "slide11",
+            "bgImage": "/images/img-services-web.png",
+            "bgImageMedia": "none",
+            "details": "Codefend se especializa en proporcionar servicios de pruebas de penetración enfocados en evaluar la seguridad de aplicaciones web y APIs web. Nuestro equipo de expertos en seguridad realiza pruebas exhaustivas para identificar y mitigar posibles vulnerabilidades, asegurando la robustez y resiliencia de sus aplicaciones y servicios web contra posibles amenazas. Con un enfoque en la detección de riesgos y el fortalecimiento de la seguridad, nuestras evaluaciones proporcionan una perspectiva integral para ayudar a garantizar la protección de sus activos digitales contra posibles ataques y brechas de seguridad.",
+            "benefits": [
+              "Identifica y mitiga vulnerabilidades de aplicaciones web.",
+              "Mejora la resiliencia de las aplicaciones web contra amenazas cibernéticas.",
+              "Proporciona una perspectiva de seguridad integral para los activos digitales."
+            ]
+          }
+        },
+        {
+          "subTitle": {
+            "id": "item12",
+            "title": "prueba de penetración de aplicaciones móviles",
+            "description": "Asegure la seguridad de su aplicación móvil con nuestros servicios descentralizados de pruebas de penetración de aplicaciones móviles. Proteja la información sensible de sus usuarios con nuestros servicios profesionales."
+          },
+          "slide": {
+            "id": "slide12",
+            "bgImage": "/images/img-services-mob.png",
+            "bgImageMedia": "none",
+            "details": "Codefend extiende su experiencia para proporcionar servicios de pruebas de penetración adaptados para aplicaciones móviles. Nuestro equipo dedicado de profesionales de seguridad realiza evaluaciones exhaustivas para evaluar la seguridad de sus aplicaciones móviles. A través de pruebas rigurosas, identificamos y abordamos posibles vulnerabilidades, mejorando la resiliencia de sus aplicaciones móviles contra amenazas de seguridad. Con un enfoque estratégico en la detección de riesgos y el refuerzo de la seguridad, nuestras evaluaciones ofrecen una perspectiva holística, asegurando la protección de sus activos digitales contra posibles ataques y brechas de seguridad.",
+            "benefits": [
+              "Evalúa y aborda riesgos de seguridad en aplicaciones móviles.",
+              "Fortalece la resiliencia de las aplicaciones móviles.",
+              "Ofrece un enfoque holístico para proteger los activos digitales."
+            ]
+          }
+        },
+        {
+          "subTitle": {
+            "id": "item21",
+            "title": "prueba de penetración de red interna",
+            "description": "Codefend realiza pruebas de penetración exhaustivas dentro de su entorno de red interna. Simulamos ataques del mundo real para identificar vulnerabilidades y evaluar la resiliencia de seguridad de sus sistemas internos, asegurando una protección integral contra posibles amenazas."
+          },
+          "slide": {
+            "id": "slide21",
+            "bgImage": "/images/img-services-net.png",
+            "bgImageMedia": "none",
+            "details": "Nuestras pruebas de penetración de red interna simulan ataques del mundo real que se originan dentro de su organización. Esta evaluación ayuda a evaluar la efectividad de los controles de seguridad internos e identifica vulnerabilidades que pueden ser explotadas por insiders o actores maliciosos.",
+            "benefits": [
+              "Simula escenarios de ataque interno del mundo real.",
+              "Evalúa efectivamente los controles de seguridad internos.",
+              "Identifica vulnerabilidades explotables por insiders."
+            ]
+          }
+        },
+        {
+          "subTitle": {
+            "id": "item23",
+            "title": "revisión de código fuente",
+            "description": "Codefend realiza revisiones meticulosas del código fuente de su aplicación. Nuestro análisis especializado descubre posibles fallos de seguridad, asegurando una protección robusta al identificar y abordar vulnerabilidades a nivel de código."
+          },
+          "slide": {
+            "id": "slide23",
+            "bgImage": "/images/img-services-code.png",
+            "bgImageMedia": "none",
+            "details": "Codefend ofrece servicios de revisión de código fuente para examinar minuciosamente el código fuente de su aplicación en busca de vulnerabilidades de seguridad. Nuestros expertos proporcionan un análisis profundo para identificar y abordar posibles problemas de seguridad, asegurando la integridad de su software.",
+            "benefits": [
+              "Examina y asegura minuciosamente el código fuente de la aplicación.",
+              "Identifica y aborda posibles problemas de seguridad.",
+              "Asegura la integridad y seguridad del software."
+            ]
+          }
+        },
+        {
+          "subTitle": {
+            "id": "item32",
+            "title": "ingeniería social avanzada",
+            "description": "Codefend utiliza técnicas sofisticadas para probar las defensas humanas de su organización, identificando vulnerabilidades y proporcionando información para mejorar la conciencia y la resiliencia en seguridad."
+          },
+          "slide": {
+            "id": "slide32",
+            "bgImage": "/images/img-services-social.png",
+            "bgImageMedia": "none",
+            "details": "Nuestras pruebas avanzadas de ingeniería social van más allá de los métodos tradicionales para evaluar la susceptibilidad de su organización a ataques sofisticados de ingeniería social. Esto incluye phishing dirigido, vishing y otras técnicas para evaluar los riesgos de seguridad centrados en el factor humano.",
+            "benefits": [
+              "Evalúa la susceptibilidad a ataques sofisticados de ingeniería social.",
+              "Evalúa los riesgos de seguridad centrados en el factor humano con técnicas dirigidas.",
+              "Fortalece las defensas contra amenazas de ingeniería social."
+            ]
+          }
+        },
+        {
+          "subTitle": {
+            "id": "item13",
+            "title": "postura de seguridad en la nube",
+            "description": "Codefend ofrece robustas evaluaciones de seguridad en la nube utilizando técnicas avanzadas manuales y automatizadas. Aprovechamos una combinación de herramientas comerciales y propietarias para asegurar una protección integral de su infraestructura en la nube."
+          },
+          "slide": {
+            "id": "slide13",
+            "bgImage": "/images/img-services-cloud.png",
+            "bgImageMedia": "none",
+            "details": "Codefend también ofrece servicios de Gestión de Postura de Seguridad en la Nube, ayudándole a evaluar y mejorar la seguridad de su infraestructura en la nube. Nuestro equipo evalúa su postura de seguridad en la nube, identifica configuraciones incorrectas y proporciona recomendaciones para fortalecer su entorno en la nube. Con un enfoque proactivo en la seguridad en la nube, ayudamos a mitigar riesgos y asegurar una base de seguridad robusta para sus activos basados en la nube.",
+            "benefits": [
+              "Evalúa y mejora la seguridad de la infraestructura en la nube.",
+              "Identifica y rectifica configuraciones incorrectas en la nube.",
+              "Proporciona medidas proactivas para una seguridad robusta en la nube."
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "cumplimiento": {
+    "metadata": {
+      "title": "Cumplimiento de Codefend: Estándares y Soluciones de Ciberseguridad",
+      "description": "Asegure que su organización cumpla con los estándares de la industria con los servicios de cumplimiento de Codefend. Nuestra plataforma proporciona inteligencia integral en ciberseguridad, investigación y herramientas para ayudarle a navegar los estándares ISO y otros desafíos comunes de seguridad. Busque y encuentre fácilmente las soluciones que necesita para proteger sus activos y mantener el cumplimiento."
+    },
+    "hero": {
+      "title": "Cumplimiento y estándares de la industria",
+      "description": "Codefend ofrece investigación en ciberseguridad y servicios de seguridad, todos unificados en una plataforma única. Permitiéndole monitorear sus activos, infraestructura y la seguridad de su organización, mientras establece una comunicación directa entre profesionales y su equipo de seguridad.",
+      "searchPlaceholder": "buscar",
+      "complianceData": [
+        [
+          {
+            "title": "PCI-DSS",
+            "description1": "Asegurando sus transacciones con tarjetas de pago. PCI DSS es un estándar obligatorio para organizaciones que manejan datos de titulares de tarjetas. Juega un papel crucial en la prevención del fraude con tarjetas de pago y en la protección de la información del titular de la tarjeta en los procesos de transacción. Este estándar es particularmente vital para los sectores de comercio minorista, comercio electrónico y servicios financieros.",
+            "description2": "Nuestros servicios incluyen la realización de evaluaciones de seguridad en profundidad y la implementación de soluciones de vanguardia para cumplir con todos los aspectos de los requisitos de PCI DSS. Nuestra amplia experiencia en seguridad de pagos, mitigación robusta de riesgos y soporte continuo de cumplimiento hace que Codefend sea un aliado invaluable para mantener el cumplimiento de PCI DSS."
+          },
+          {
+            "title": "ISO/IEC 27002",
+            "description1": "ISO/IEC 27002, parte de la familia de estándares ISO/IEC 27000, proporciona directrices y mejores prácticas para controles de seguridad de la información. Ofrece un conjunto completo de objetivos de control de seguridad de la información y una amplia gama de controles que las organizaciones pueden implementar para proteger sus activos de información.",
+            "description2": "En Codefend, nos especializamos en alinear las medidas de seguridad de su organización con las mejores prácticas de ISO/IEC 27002. Nuestros servicios incluyen un análisis detallado de sus controles de seguridad actuales, recomendaciones para mejoras y asistencia en la implementación de medidas de seguridad efectivas. Ayudamos a garantizar que las prácticas de gestión de seguridad de la información de su organización sean completas y estén actualizadas con los últimos estándares de la industria."
+          },
+          {
+            "title": "CUMPLIMIENTO SOC1",
+            "description1": "Garantía de control y reporte financiero. SOC1 se enfoca en los controles en una organización de servicios relevantes para el control interno de las entidades usuarias sobre la información financiera. Esto es particularmente importante para las empresas que manejan transacciones financieras o datos que podrían impactar en los informes financieros de sus clientes.",
+            "description2": "Enfoque de Codefend para SOC1: Codefend ofrece asistencia experta en la evaluación y mejora de los controles relacionados con los informes financieros. Nuestros servicios incluyen la evaluación del diseño y la efectividad operativa de estos controles, asegurando que cumplan con los estándares SOC1 y proporcionando un soporte integral en la preparación y realización de auditorías SOC1."
+          },
+          {
+            "title": "NIST 800-53",
+            "description1": "Controles integrales de seguridad y privacidad. La Publicación Especial 800-53 del NIST proporciona un catálogo de controles de seguridad y privacidad para sistemas de información y organizaciones federales. Es una piedra angular para desarrollar programas integrales de seguridad de la información y privacidad, ofreciendo un marco detallado para proteger activos críticos contra diversas amenazas cibernéticas.",
+            "description2": "En Codefend, ofrecemos servicios de consultoría expertos para alinear las prácticas de seguridad de su organización con los estándares NIST 800-53. Nuestro enfoque incluye una evaluación en profundidad de su postura de seguridad actual en comparación con el catálogo de controles NIST 800-53, identificando brechas y recomendando mejoras. Asistimos en la implementación de controles de seguridad y privacidad personalizados, asegurando una protección robusta de sus sistemas y datos. Nuestra orientación estratégica empodera a su organización para cumplir o superar los estrictos requisitos de seguridad descritos en NIST 800-53."
+          }
+        ],
+        [
+          {
+            "title": "ISO-27001",
+            "description1": "Mejorando su Gestión de Seguridad de la Información. Descubra ISO 27001, el estándar internacional de oro para establecer, mantener y mejorar continuamente un Sistema de Gestión de Seguridad de la Información (SGSI). Este estándar es fundamental para proteger los datos de su organización contra amenazas cibernéticas y garantizar la confidencialidad, integridad y disponibilidad de los datos. Es principalmente beneficioso para sectores como finanzas, salud y servicios de TI.",
+            "description2": "Aprovechando nuestra red de profesionales de ciberseguridad de élite, ofrecemos una guía inigualable en la implementación de marcos robustos de SGSI. Nuestros servicios abarcan cada paso hacia la certificación ISO 27001, desde evaluaciones de riesgos meticulosas hasta la personalización de estrategias de seguridad, asegurando que su negocio cumpla y supere estos rigurosos estándares. Con nuestra experiencia en gestión integral de riesgos y soluciones de seguridad a medida, Codefend es su socio ideal para lograr el cumplimiento de ISO 27001."
+          },
+          {
+            "title": "MARCO DE CIBERSEGURIDAD NIST",
+            "description1": "Fortaleciendo su Resiliencia Cibernética. El Marco de Ciberseguridad NIST, desarrollado por el Instituto Nacional de Estándares y Tecnología, ofrece un marco flexible y completo para gestionar y reducir el riesgo cibernético. Es ampliamente adoptado en varios sectores, proporcionando directrices aplicables a organizaciones de todos los tamaños y tipos.",
+            "description2": "El enfoque de Codefend hacia el Marco de Ciberseguridad NIST implica integrar sus funciones principales: Identificar, Proteger, Detectar, Responder y Recuperar, en la estrategia de ciberseguridad de su organización. Proporcionamos consultoría experta para adaptar este marco a sus necesidades específicas, asegurando una gestión efectiva de riesgos y una mayor resiliencia cibernética. Nuestro equipo asiste en la implementación del marco, revisiones periódicas y mejora continua, alineando sus prácticas de ciberseguridad con los mejores estándares de la industria."
+          },
+          {
+            "title": "CUMPLIMIENTO SOC2",
+            "description1": "Seguridad, Disponibilidad, Integridad del Procesamiento, Confidencialidad y Privacidad. SOC2 está diseñado para empresas que almacenan datos de clientes en la nube, centrándose en cinco principios de servicio de confianza: seguridad, disponibilidad, integridad del procesamiento, confidencialidad y privacidad. Es esencial para proveedores de computación en la nube, empresas SaaS y negocios en el sector de servicios financieros.",
+            "description2": "La Ventaja de Codefend en SOC2: Nos especializamos en crear marcos de seguridad personalizados, realizar procesos de auditoría rigurosos y mantener la integridad operativa para cumplir con los requisitos de SOC2. Codefend asiste tanto en SOC2 Tipo 1 (evaluación del diseño de controles en un momento específico) como en SOC2 Tipo 2 (evaluación de la efectividad operativa de estos controles durante un período)."
+          },
+          {
+            "title": "CCPA",
+            "description1": "Alineándose con los Estándares de Privacidad de California. La Ley de Privacidad del Consumidor de California (CCPA) es un estatuto estatal significativo en los Estados Unidos que tiene como objetivo mejorar los derechos de privacidad y la protección del consumidor para los residentes de California. La CCPA otorga a los consumidores de California nuevos derechos sobre su información personal e impone varios deberes de protección de datos a ciertas empresas que tratan con residentes de California.",
+            "description2": "Codefend proporciona asistencia integral para asegurar que su negocio cumpla completamente con la CCPA. Nuestros servicios incluyen la evaluación de sus prácticas actuales de datos, la mejora de políticas de privacidad y la garantía de un manejo adecuado de las solicitudes de datos de los consumidores. Le ayudamos a entender y navegar los requisitos de la CCPA, enfocándonos en la transparencia, los derechos del consumidor y la gestión efectiva de datos. La experiencia de Codefend asegura que su organización no solo cumpla con la CCPA, sino que también fortalezca su marco general de privacidad de datos."
+          }
+        ],
+        [
+          {
+            "title": "GDPR",
+            "description1": "Garantizando la Privacidad y Protección de Datos. El Reglamento General de Protección de Datos (GDPR) es una regulación fundamental promulgada por la Unión Europea para gobernar la protección de datos y la privacidad. Esta regulación ha establecido un nuevo estándar para los derechos de privacidad, la seguridad y el cumplimiento, impactando profundamente en cómo las organizaciones de todo el mundo gestionan y protegen los datos personales.",
+            "description2": "Codefend ofrece servicios especializados para asegurar el cumplimiento de su organización con el GDPR. Nuestro enfoque incluye la realización de auditorías exhaustivas de datos, la implementación de políticas robustas de protección de datos y la garantía de actividades de procesamiento de datos transparentes. Proporcionamos orientación sobre los derechos de los sujetos de datos, la respuesta a brechas de datos y el mantenimiento del cumplimiento continuo con el GDPR. Con Codefend, puede navegar por las complejidades del GDPR, asegurando los más altos estándares de privacidad y protección de datos para sus clientes."
+          },
+          {
+            "title": "CUMPLIMIENTO HIPAA",
+            "description1": "Protegiendo la Información de Salud del Paciente. HIPAA establece el estándar para proteger los datos sensibles de los pacientes. Cumplir con HIPAA es innegociable para garantizar la confidencialidad, integridad y seguridad de la información de salud del paciente (PHI). Los proveedores de atención médica, las compañías de seguros y las cámaras de compensación de atención médica son algunas de las entidades principales donde el cumplimiento de HIPAA es crítico.",
+            "description2": "Nuestro enfoque incluye garantizar la protección rigurosa de la PHI, la capacitación en cumplimiento para su personal y auditorías regulares para mantener la adherencia a las regulaciones de HIPAA. Nos especializamos en estrategias avanzadas de protección de PHI, capacitación integral en cumplimiento y soporte continuo, colocando a su organización a la vanguardia del cumplimiento de HIPAA."
+          },
+          {
+            "title": "CUMPLIMIENTO SOC3",
+            "description1": "Informe de Controles Generales para una Audiencia Más Amplia. SOC3 es un informe de uso general que proporciona una visión general de alto nivel de los controles de una organización relacionados con los principios de servicio de confianza, similar a SOC2 pero sin las divulgaciones detalladas. Es útil para las empresas que desean demostrar su compromiso con estos principios sin compartir los detalles específicos de sus controles.",
+            "description2": "Estrategia de Codefend para SOC3: Nuestro equipo ayuda a desarrollar informes SOC3 que comuniquen la adherencia de una organización a los principios de confianza en un formato adecuado para el público en general. Esto ayuda a reforzar la confianza y la transparencia con los clientes y las partes interesadas sin revelar información interna sensible o detallada sobre los controles."
+          },
+          {
+            "title": "CMMC",
+            "description1": "Asegurando los Datos de la Cadena de Suministro de Defensa. El Modelo de Certificación de Madurez de Ciberseguridad (CMMC) es un proceso de certificación establecido por el Departamento de Defensa de los Estados Unidos (DoD). Está diseñado para certificar que los contratistas en la cadena de suministro de defensa tienen los controles necesarios para proteger datos sensibles, incluida la Información de Contratos Federales (FCI) y la Información No Clasificada Controlada (CUI).",
+            "description2": "Codefend ofrece soluciones personalizadas para ayudar a su organización a lograr el cumplimiento de CMMC. Nos especializamos en realizar evaluaciones exhaustivas para determinar su nivel actual de madurez en ciberseguridad e identificar áreas de mejora. Nuestro equipo proporciona orientación estratégica sobre la implementación de las prácticas y procesos necesarios para cumplir con los requisitos de CMMC, desde el Nivel 1 (higiene cibernética básica) hasta el Nivel 5 (avanzado). Al asociarse con Codefend, puede asegurarse de que su organización esté lista para la certificación CMMC, un paso crucial para participar en contratos con el DoD."
+          }
+        ]
+      ]
+    }
+  },
+  "partners": {
+    "metadata": {
+      "title": "Socios de Codefend: Colaboración y Beneficios",
+      "description": "Descubra cómo Codefend se asocia con organizaciones líderes para mejorar la ciberseguridad. Nuestra plataforma ofrece una suite completa de servicios, incluyendo inteligencia en ciberseguridad, investigación y soluciones de seguridad. Conozca los beneficios de convertirse en socio, los recursos disponibles y cómo podemos trabajar juntos para fortalecer su postura de seguridad."
+    },
+    "hero": {
+      "title": "Socios y Aliados Comerciales",
+      "description": "Codefend ofrece inteligencia en ciberseguridad, investigación y servicios de seguridad, todos unificados en una plataforma única. Permitiéndole monitorear sus activos, infraestructura y la seguridad de su organización, mientras establece una comunicación directa entre nuestros profesionales y su equipo de seguridad."
+    },
+    "about": {
+      "title": "Expanda sus servicios y gane un 25% por venta",
+      "card1": {
+        "cardTitle": "EXPANDA SU CATÁLOGO DE SERVICIOS Y GANE UN 25% EN CADA VENTA",
+        "percentage": "25%",
+        "paragraph1": "Desbloquee una oportunidad lucrativa con Codefend convirtiéndose en uno de nuestros distribuidores de confianza. Simplemente complete su información y nuestro equipo se pondrá en contacto con usted rápidamente. <b>Disfrute de una generosa comisión del 25% sobre el precio neto de venta</b> de nuestra diversa gama de planes, diseñados para satisfacer todas las necesidades de los clientes. Tiene la flexibilidad de elegir si cobra los pagos directamente de los clientes o si nosotros lo hacemos por usted.",
+        "paragraph2": "No pierda esta oportunidad de <b>expandir su negocio y aumentar sus ingresos con Codefend.</b> Nuestros planes flexibles y soporte continuo facilitan que comience a ganar de inmediato. Únase a nosotros hoy y experimente los beneficios de asociarse con un líder en la industria."
+      },
+      "card2": {
+        "cardTitle": "VISIÓN DE REDES DE PRÓXIMA GENERACIÓN",
+        "icon": "/images/red.png",
+        "paragraph1": "En Codefend, buscamos socios comerciales para expandir nuestra red de distribución y llevar nuestras soluciones de ciberseguridad a más clientes. Valoramos las relaciones a largo plazo y mutuamente beneficiosas, y estamos listos para adaptar los términos a sus necesidades específicas. Asociarse con nosotros le da acceso a productos avanzados de ciberseguridad y al apoyo de nuestro equipo de expertos, lo que nos permite enfrentar juntos los desafíos de seguridad más difíciles de hoy en día."
+      },
+      "partnerForm": {
+        "title": "FORMULARIO DE CONTACTO PARA DISTRIBUIDORES",
+        "description": "Desbloquee una oportunidad lucrativa con Codefend convirtiéndose en uno de nuestros distribuidores de confianza.",
+        "btn": "Enviar",
+        "successMessage": "Su contacto ha sido enviado con éxito. En unos días, alguien del equipo se pondrá en contacto con usted.",
+        "errorMessage": "Error al enviar el mensaje. Por favor, inténtelo de nuevo.",
+        "requiredMessage": "Todos los campos son obligatorios",
+        "fieldsPlaceholders": {
+          "name": "nombre",
+          "companyRol": "rol en la empresa",
+          "email": "correo electrónico",
+          "phone": "teléfono",
+          "companyWebsite": "sitio web de la empresa",
+          "companySize": "tamaño de la empresa",
+          "country": "país"
+        }
+      }
+    }
+  },
+  "aboutus": {
+    "metadata": {
+      "title": "Codefend Sobre Nosotros: Conozca las Mentes Detrás de las Soluciones de Ciberseguridad de Codefend",
+      "description": "Descubra cómo Codefend une la investigación de ciberseguridad de vanguardia, servicios y experiencia en una sola plataforma. Conozca a nuestro equipo, liderado por veteranos de la industria, mientras le ayudamos a proteger sus activos y mantener una seguridad robusta para su organización."
+    },
+    "hero": {
+      "title": "Sobre Nosotros",
+      "description": "Codefend ofrece inteligencia en ciberseguridad, investigación y servicios de seguridad, todos unificados en una plataforma única. Permitiéndole monitorear sus activos, infraestructura y la seguridad de su organización, mientras establece una comunicación directa entre nuestros profesionales y su equipo de seguridad."
+    },
+    "team": {
+      "slider1": {
+        "profiles": {
+          "chris": {
+            "id": "chris",
+            "img": "/images/bkg-chris.png",
+            "alt": "Imagen de Christian",
+            "name": "Christian 'Ch' Russo",
+            "position": "COFUNDADOR",
+            "professionalSummaryTitle": "Resumen Profesional",
+            "professionalSummary": "Basado en la información proporcionada y los resultados de búsqueda, parece que Christian \"Ch\" Russo es un hacker que ha estado involucrado en varias brechas de seguridad de alto perfil. Sin embargo, debido a las limitaciones para acceder al perfil de LinkedIn y otras fuentes directas, el siguiente resumen se construye en base a la información disponible de los artículos de KrebsOnSecurity y otros contenidos relacionados. <br /><br />Christian \"Ch\" Russo es un investigador de seguridad y hacker conocido por exponer vulnerabilidades en sitios web importantes. Con experiencia en programación en PHP y uso de bases de datos SQL, Russo ha demostrado una profunda comprensión de la seguridad web y las implicaciones de las brechas de datos.",
+            "keyAchievementsTitle": "Logros Clave",
+            "keyAchievements": "Identificó y expuso fallos de seguridad en la base de datos de The Pirate Bay, obteniendo acceso a información de usuarios, incluidos nombres de usuario y contraseñas cifradas - Contactó a eHarmony ofreciendo vender servicios de seguridad para ayudar a la empresa a corregir fallos de seguridad, oferta que eHarmony rechazó - Involucrado en una brecha de seguridad en PlentyOfFish.com, aunque los detalles de esta participación no se especifican en los resultados de búsqueda."
+          },
+          "edgardo": {
+            "id": "edgardo",
+            "img": "/images/bkg-edgardo.png",
+            "alt": "Imagen de Edgardo",
+            "name": "Edgardo Krause",
+            "position": "LÍDER DE SEGURIDAD OFENSIVA",
+            "professionalSummaryTitle": "Resumen Profesional",
+            "professionalSummary": "Edgardo Krause es un experimentado Ingeniero Senior en Seguridad con un enfoque en ciberseguridad y pruebas de penetración. Se especializa en identificar y mitigar vulnerabilidades de seguridad en aplicaciones web, aplicaciones móviles e infraestructuras de red. Con un sólido trasfondo en investigación de seguridad, automatización de pruebas y desarrollo de software, Edgardo está comprometido a mantenerse a la vanguardia frente a amenazas y tendencias emergentes en el campo. Tiene un historial comprobado de contribuciones a esfuerzos globales de seguridad y ha trabajado en diversos proyectos de pruebas de penetración y ejercicios de equipos rojos. <br /><br />Cuenta con reconocimientos públicos de diferentes empresas y gobiernos, entre ellos el Departamento de Estado de los EE. UU. y el CERN."
+          },
+          "miguel": {
+            "id": "miguel",
+            "img": "/images/bkg-peroni.png",
+            "alt": "Imagen de Miguel",
+            "name": "Miguel Peroni",
+            "position": "DESARROLLO DE NEGOCIOS",
+            "professionalSummaryTitle": "Resumen Profesional",
+            "professionalSummary": "Miguel es un Consultor Senior en Tecnología y Negocios altamente capacitado con un historial comprobado de ofrecer soluciones innovadoras y fomentar el crecimiento empresarial. Posee una amplia experiencia en planificación estratégica, gestión de proyectos y gestión de relaciones con clientes. Su enfoque está en aprovechar su experiencia para contribuir al éxito de organizaciones dinámicas como lo es Codefend. <br /><br />Miguel tiene una amplia experiencia laboral con los proveedores de tecnología más importantes como: Cisco Systems, Proofpoint, Lenovo, DellEMC, IXSystems, HPE, Aruba, Fortinet, Juniper, Checkpoint, Nokia, Palo Alto, Huawei, RedHat, Microsoft, Veeam, Acronis, Tenable, IBM, SolarWinds, Progress - Ipswitch. <br /><br />Está basado en Latinoamérica, desde donde ha estado viajando y proporcionando servicios a empresas en América del Norte, Central y del Sur: Servicios Financieros, Manufactura, Medios y Entretenimiento, Tecnología, Telecomunicaciones, Retail y entidades gubernamentales."
+          },
+          "ignacio": {
+            "id": "ignacio",
+            "img": "/images/bkg-ignacio.png",
+            "alt": "Imagen de Ignacio",
+            "name": "Ignacio Gómez",
+            "position": "EXPERIENCIA DE PRODUCTO",
+            "professionalSummaryTitle": "Resumen Profesional",
+            "professionalSummary": "Ignacio Gómez es un experto distinguido especializado en el campo intrincado del producto y el comportamiento del usuario. Su experiencia radica en la aplicación estratégica de la ciencia del comportamiento a los productos finales, lo que permite una comprensión profunda de las interacciones de los usuarios con los entornos digitales. <br /><br />A lo largo de su carrera, Gómez ha sido fundamental en la realización de investigaciones avanzadas sobre el comportamiento humano en grandes corporaciones. Su trabajo implica principalmente desentrañar interacciones complejas de los usuarios y emplear este conocimiento para mejorar el diseño de interfaces, guiando sutilmente las acciones y decisiones de los usuarios. Su enfoque está profundamente arraigado en la sofisticación técnica, centrándose en los aspectos psicológicos de la interacción del usuario en lugar del mero diseño estético.",
+            "keyAchievementsTitle": "Logros Clave",
+            "keyAchievements": "Desarrolló modelos sofisticados para predecir el comportamiento del usuario, mejorando significativamente el compromiso y la satisfacción del usuario - Implementó con éxito estrategias para la manipulación del comportamiento del usuario a través del diseño de interfaces, lo que resultó en mejores resultados comerciales para varias corporaciones a gran escala."
+          }
+        }
+      }
+    },
+    "contact": {
+      "title": "Contáctanos",
+      "subtitle": "Estamos aquí para ayudarte a asegurar tus sistemas.",
+      "description": "¿Tienes preguntas o necesitas asistencia? Contáctanos llenando el formulario a continuación, y nuestro equipo se pondrá en contacto contigo lo antes posible.",
+      "form": {
+        "messages": {
+          "successMessage": "¡Formulario enviado con éxito!",
+          "successErrorMessage": "Error en el envío. Por favor, inténtelo de nuevo.",
+          "errorMessage": "Ocurrió un error. Por favor, inténtelo de nuevo."
+        },
+        "inputs": {
+          "lead_fname": "Nombre",
+          "lead_lname": "Apellido",
+          "lead_email": "Correo electrónico",
+          "lead_phone": "Número de teléfono",
+          "company_name": "Nombre de la empresa",
+          "company_web": "ejemplo.com",
+          "company_size": "Seleccione el tamaño de la empresa",
+          "lead_role": {
+            "default": "Seleccione el rol",
+            "labels": [
+              { "label": "Administrativo", "value": "admin" },
+              { "label": "Recursos Humanos", "value": "human" },
+              { "label": "Tecnología de la Información", "value": "info" },
+              { "label": "Marketing", "value": "ads" },
+              { "label": "Ventas", "value": "sales" },
+              { "label": "Finanzas", "value": "finance" },
+              { "label": "Servicio al Cliente", "value": "cs" },
+              { "label": "Producción y Operaciones", "value": "prod" },
+              { "label": "Estrategia y Planificación", "value": "plan" },
+              { "label": "Asuntos Legales", "value": "law" }
+            ]
+          },
+          "company_area": "Escriba su mensaje aquí"
+        },
+        "send": "Enviar",
+        "sending": "Enviando..."
+      }
+    }
+  },
+  "calculator": {
+    "metadata": {
+      "title": "Precios de Codefend: Servicios Personalizados de Pruebas de Penetración en Ciberseguridad",
+      "description": "Explore las opciones de precios flexibles de Codefend para servicios integrales de ciberseguridad, incluidas pruebas de penetración en infraestructura web, móvil y en la nube. Obtenga soluciones de seguridad personalizadas que protejan sus activos digitales."
+    },
+    "quote": {
+      "title": "Obtén una Estimación de Precio",
+      "subtitle": "¡Calcula el costo de tu próximo servicio!",
+      "description": "A continuación, encontrarás valores de referencia para nuestros servicios. Ten en cuenta que estos son estimados y deben ser confirmados por nuestro equipo comercial si son aceptados.",
+      "content": {
+        "web": {
+          "title": "Aplicaciones Web",
+          "description": "Agrega desde esta sección las aplicaciones web que deseas probar. Clasificamos las aplicaciones web en 3 tamaños predefinidos basados en una escala estimada.",
+          "targetLabel": "Nombre de Dominio",
+          "sizeLabel": "Tamaño del Sistema",
+          "addBtn": "Agregar una nueva aplicación web"
+        },
+        "mobile": {
+          "title": "Aplicaciones Móviles",
+          "description": "Agrega desde esta sección las aplicaciones móviles que deseas probar. Clasificamos las aplicaciones móviles en 3 tamaños predefinidos basados en una escala estimada.",
+          "targetLabel": "URL de la tienda de aplicaciones",
+          "sizeLabel": "Tamaño del Sistema",
+          "addBtn": "Agregar una nueva aplicación móvil"
+        },
+        "cloud": {
+          "title": "Proveedores de Nube",
+          "description": "Agrega desde esta sección los proveedores de nube que deseas evaluar. Clasificamos los proveedores de nube en 3 tamaños predefinidos basados en una escala estimada.",
+          "targetLabel": "Nombre del Proveedor",
+          "sizeLabel": "Tamaño del Sistema",
+          "addBtn": "Agregar una nueva aplicación en la nube"
+        },
+        "source": {
+          "title": "Repositorios de Código Fuente",
+          "description": "Agrega desde esta sección los repositorios de código fuente que deseas evaluar. Clasificamos los repositorios en 3 tamaños predefinidos basados en una escala estimada.",
+          "targetLabel": "URL del repositorio",
+          "sizeLabel": "Tamaño del Sistema",
+          "addBtn": "Agregar un nuevo repositorio"
+        },
+        "social": {
+          "title": "Ataques de Ingeniería Social",
+          "description": "Usa esta sección para agregar los escenarios de ingeniería social que deseas simular. Clasificamos las técnicas de ingeniería social en 3 categorías predefinidas basadas en la complejidad y el impacto potencial.",
+          "targetLabel": "Número de Personal",
+          "sizeLabel": "Elige el nivel de criticidad",
+          "addBtn": "Agregar un nuevo rol de personal"
+        },
+        "internalIp": {
+          "title": "Seguridad de IP Interna",
+          "description": "Usa esta sección para agregar las direcciones IP internas que deseas gestionar o analizar. Clasificamos las IP internas en 3 categorías predefinidas basadas en su rol e importancia dentro de tu infraestructura.",
+          "targetLabel": "Número de IPs externas",
+          "sizeLabel": "Elige el nivel de criticidad",
+          "addBtn": "Agregar una nueva IP interna"
+        },
+        "externalIp": {
+          "title": "Seguridad de IP Externa",
+          "description": "Usa esta sección para agregar las direcciones IP externas que deseas gestionar o analizar. Clasificamos las IP externas en 3 categorías predefinidas basadas en su rol y exposición dentro de tu infraestructura.",
+          "targetLabel": "Número de IPs internas",
+          "sizeLabel": "Elige el nivel de criticidad",
+          "addBtn": "Agregar una nueva IP externa"
+        },
+        "setting": {
+          "title": "Configuración de Precios",
+          "description": "Usa esta sección para ajustar la intensidad de los precios para tus servicios. Modifica el deslizador para aumentar o disminuir el porcentaje del precio estimado según tus necesidades.",
+          "adjustLabel": "Ajuste de precio",
+          "adjustPrice": "Precio ajustado:",
+          "increase": "Incrementar",
+          "discount": "Descuento",
+          "of": "de"
+        }
+      },
+      "layout": {
+        "summary": "Resumen del Pedido",
+        "total": "total",
+        "send": "enviar propuesta de borrador",
+        "priceAnnual": "Precio anual / una sola vez:",
+        "priceMonthly": "Precio mensual / suscripción:"
+      },
+      "proposalModal": {
+        "title": "Enviar Propuesta",
+        "mailLabel": "Escribe tu correo electrónico empresarial",
+        "mailPlaceholder": "Correo electrónico",
+        "next": "Siguiente",
+        "phoneLabel": "Escribe tu teléfono empresarial (Opcional)",
+        "phonePlaceholder": "Teléfono",
+        "send": "Enviar"
       }
     }
   }

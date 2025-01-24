@@ -6,13 +6,12 @@ export const DEFAULT_WEB_APP = {
     size: "--SELECT--",
   };
   
-export const sizeOptions = [
-    { value: DEFAULT_WEB_APP.size, label: "System Size" },
-    { value: "small", label: "small | $1,500" },
-    { value: "medium", label: "medium | $4,500" },
-    { value: "full", label: "full | $10,000" },
-    /* { value: "included", label: "included | $0" }, */
-  ];
+export const sizeOptions = (label)=>[
+  { value: DEFAULT_WEB_APP.size, label },
+  { value: "small", label: "small | $1,500" },
+  { value: "medium", label: "medium | $4,500" },
+  { value: "full", label: "full | $10,000" },
+]
 
 export const WEB_SIZE_PRICING = {
     small: 1500,

@@ -13,9 +13,17 @@ import { IpExternalTabContent } from "./QuoteTabContent/IpExternalContent";
 import { SendProposalModal } from "../../components/SendProposalModal";
 import { SettingsTabContent } from "./QuoteTabContent/SettingQuoteTab";
 import { ProposalSentSuccessModal } from "../../components/ProposalSentSuccessModal";
+import { TAB_WEB_ID } from "../../data/quote/web";
+import { TAB_MOBILE_ID } from "../../data/quote/mobile";
+import { TAB_CLOUD_ID } from "../../data/quote/cloud";
+import { TAB_SOURCE_ID } from "../../data/quote/sourceCode";
+import { TAB_SOCIAL_ID } from "../../data/quote/social";
+import { TAB_INTERNAL_IP_ID } from "../../data/quote/ipInternals";
+import { TAB_EXTERNAL_IP_ID } from "../../data/quote/externalIp";
+import { TAB_SETTINGS_ID } from "../../data/quote/settings";
 
-export const ResourceQuote = () => {
-  const [activeTab, setActiveTab] = useState("Web");
+export const ResourceQuote = ({ t }) => {
+  const [activeTab, setActiveTab] = useState(TAB_WEB_ID);
 
   return (
     <QuoteProvider>
@@ -27,13 +35,9 @@ export const ResourceQuote = () => {
             alt="quote coins"
           />
           <div className={css.sectionHeader}>
-            <h2>Get a Price Estimate</h2>
-            <h3>Calculate the cost of your next service!</h3>
-            <p>
-              Below, you'll find reference values for our services. Please note
-              that these are estimates and must be confirmed by our commercial
-              team if accepted.
-            </p>
+            <h2>{t.title}</h2>
+            <h3>{t.subtitle}</h3>
+            <p>{t.description}</p>
           </div>
           <div className={css.sectionCard}>
             <div className={css.sectionCardWrapper}>
@@ -45,7 +49,7 @@ export const ResourceQuote = () => {
                 {tabs.map((tab) => (
                   <QuoteTab
                     key={tab.id}
-                    click={() => setActiveTab(tab.label)}
+                    click={() => setActiveTab(tab.id)}
                     label={tab.label}
                     icon={tab.icon}
                     activeTab={activeTab}
@@ -53,14 +57,38 @@ export const ResourceQuote = () => {
                   />
                 ))}
               </div>
-              <WebTabContent isActive={activeTab === "Web"} />
-              <MobileTabContent isActive={activeTab === "Mobile"} />
-              <CloudTabContent isActive={activeTab === "Cloud"} />
-              <SourceCodeTabContent isActive={activeTab === "Source Code"} />
-              <SocialTabContent isActive={activeTab === "Social"} />
-              <IpInternalsTabContent isActive={activeTab === "Internal IP"} />
-              <IpExternalTabContent isActive={activeTab === "External IP"} />
-              <SettingsTabContent isActive={activeTab === "Settings"} />
+              <WebTabContent
+                t={t.content.web}
+                isActive={activeTab === TAB_WEB_ID}
+              />
+              <MobileTabContent
+                t={t.content.mobile}
+                isActive={activeTab === TAB_MOBILE_ID}
+              />
+              <CloudTabContent
+                t={t.content.cloud}
+                isActive={activeTab === TAB_CLOUD_ID}
+              />
+              <SourceCodeTabContent
+                t={t.content.source}
+                isActive={activeTab === TAB_SOURCE_ID}
+              />
+              <SocialTabContent
+                t={t.content.social}
+                isActive={activeTab === TAB_SOCIAL_ID}
+              />
+              <IpInternalsTabContent
+                t={t.content.internalIp}
+                isActive={activeTab === TAB_INTERNAL_IP_ID}
+              />
+              <IpExternalTabContent
+                t={t.content.externalIp}
+                isActive={activeTab === TAB_EXTERNAL_IP_ID}
+              />
+              <SettingsTabContent
+                t={t.content.setting}
+                isActive={activeTab === TAB_SETTINGS_ID}
+              />
             </div>
           </div>
         </div>

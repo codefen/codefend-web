@@ -1,10 +1,9 @@
 import { Fragment } from "react";
 import { servicesSlides2 } from "../../data/serviceSlides2";
 
-const ServiceSlidesSection = () => {
-
+const ServiceSlidesSection = ({ t }) => {
   return (
-    // <> 
+    // <>
     //   {
     //     servicesSlides.map((serviceSlide, i) => (
     //       <section key={serviceSlide.id} className={`section-${i + 1}`}>
@@ -48,48 +47,48 @@ const ServiceSlidesSection = () => {
     //     ))
     //     };
     // </>
-        <section className="sectionService">
+    <section className="sectionService">
+      <div className="slide-contain ">
+        {t.slides.map((item, i) => (
           <div
-            className="slide-contain "
+            className="contain"
+            key={i}
+            style={{
+              backgroundImage: `url(${item.slide.bgImage})`,
+            }}
           >
-            {servicesSlides2.map((item, i) => (
-              <div className="contain" key={i} style={{
-                backgroundImage: `url(${item.slide.bgImage})`
-              }}>
-                
-                <ul>
-
-                  <div className={`item`} key={i}>
-                    <h2>{item.subTitle.title}</h2>
-                    {/* <p>{item.subTitle.description}</p> */}
-                  </div>
-                  <li>
-                    <h3>SUMMARY:</h3>
-                    <p>{item.subTitle.description}</p>
-                  </li>                  
-                  <li>
-                    <h3>MORE DETAILS:</h3>
-                    <p>{item.slide.details}</p>
-                  </li>
-                  <li>
-                    <h3>
-                      <b>KEY BENEFITS:</b>
-                    </h3>
-                    <p>
-                      {item.slide.benefits.map((benefit, i) => (
-                        <Fragment key={i}>
-                          - {benefit}
-                          <br />
-                        </Fragment>
-                      ))}
-                    </p>
-                  </li>
-                </ul>
+            <ul>
+              <div className={`item`} key={i}>
+                <h2>{item.subTitle.title}</h2>
+                {/* <p>{item.subTitle.description}</p> */}
               </div>
-            ))}
+              <li>
+                <h3>{t.summary}</h3>
+                <p>{item.subTitle.description}</p>
+              </li>
+              <li>
+                <h3>{t.moreDetails}</h3>
+                <p>{item.slide.details}</p>
+              </li>
+              <li>
+                <h3>
+                  <b>{t.keyBenefits}</b>
+                </h3>
+                <p>
+                  {item.slide.benefits.map((benefit, i) => (
+                    <Fragment key={i}>
+                      - {benefit}
+                      <br />
+                    </Fragment>
+                  ))}
+                </p>
+              </li>
+            </ul>
           </div>
-        </section>
-  )
-}
+        ))}
+      </div>
+    </section>
+  );
+};
 
 export default ServiceSlidesSection;

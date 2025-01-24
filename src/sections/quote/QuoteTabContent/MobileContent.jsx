@@ -11,8 +11,9 @@ import {
   TAB_MOBILE_ID,
 } from "../../../data/quote/mobile";
 import { sendMetrics } from "../../../data/quote/general";
+import { sizeOptions } from "../../../data/quote/web";
 
-export const MobileTabContent = ({ isActive }) => {
+export const MobileTabContent = ({ t, isActive }) => {
   const {
     quotes: { mobile, ...others },
     addQuote,
@@ -49,8 +50,8 @@ export const MobileTabContent = ({ isActive }) => {
   if (!isActive) return null;
   return (
     <QuoteLayout
-      title="Mobile Applications"
-      description="Add from this section the mobile applications you want to pentest. We classify mobile applications into 3 pre-defined sizes based on an estimated scale."
+      title={t.title}
+      description={t.description}
       id={TAB_MOBILE_ID}
       quoteDescriptions={MOBILE_DESCRIPTION}
     >
@@ -71,8 +72,9 @@ export const MobileTabContent = ({ isActive }) => {
                 onVerifyInputs={() => onVerify("mobile", i)}
                 savedApp={app}
                 errors={{ target: app?.urlError, size: app?.sizeError }}
-                targetLabel="Store app url"
+                targetLabel={t.targetLabel}
                 defaultApp={DEFAULT_MOBILE_APP}
+                defaultSizeOptions={sizeOptions(t.sizeLabel)}
               />
             ))}
           </AnimatePresence>
@@ -90,7 +92,7 @@ export const MobileTabContent = ({ isActive }) => {
               decoding="async"
               alt="plus icon"
             />
-            Add a new mobile application
+            {t.addBtn}
           </button>
         </div>
       </div>

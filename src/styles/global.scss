@@ -2222,6 +2222,7 @@ section.friends1 {
         background-position: top right;
         height: 100%;
         width: 100%;
+        min-height: clamp(900px, 76dvh, 1000px);
         background-repeat: no-repeat;
         transition: opacity 0.5s linear !important;
         margin-bottom: 20px;
@@ -2296,15 +2297,20 @@ section.friends1 {
       }
     }
   }
-  @media screen and (max-width: 820px) {
+  @media screen and (max-width: 1280px) {
     .container-1 {
       .profile-contain {
         min-height: fit-content;
         min-height: 1200px;
         height: auto;
+
         .profile {
           height: auto;
           margin: 100px 0;
+
+          .information {
+            max-width: 100%;
+          }
           & img {
             display: block;
           }
@@ -2315,6 +2321,11 @@ section.friends1 {
             background-image: none !important;
             position: inherit;
             opacity: 1;
+          }
+          &:nth-child(odd) {
+            .information {
+              margin-left: 0;
+            }
           }
         }
       }

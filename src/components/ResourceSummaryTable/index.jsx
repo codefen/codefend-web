@@ -22,6 +22,7 @@ export const ResourceSummaryTable = ({
   resourceLists,
   subtotals,
   totalSubtotal,
+  t,
 }) => {
   if (!Object.entries(resourceLists).some(([_, list]) => list.length > 0))
     return null;
@@ -39,7 +40,7 @@ export const ResourceSummaryTable = ({
         ))}
 
         <tr>
-          <td>total:</td>
+          <td>{t.total}:</td>
           <td>${totalSubtotal}</td>
         </tr>
       </tbody>

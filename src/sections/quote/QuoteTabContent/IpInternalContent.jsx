@@ -13,7 +13,7 @@ import {
 } from "../../../data/quote/ipInternals";
 import { sendMetrics } from "../../../data/quote/general";
 
-export const IpInternalsTabContent = ({ isActive }) => {
+export const IpInternalsTabContent = ({ t, isActive }) => {
   const {
     quotes: { internalIp, ...others },
     addQuote,
@@ -50,8 +50,8 @@ export const IpInternalsTabContent = ({ isActive }) => {
   if (!isActive) return null;
   return (
     <QuoteLayout
-      title="Internal IP Security"
-      description="Use this section to add the internal IP addresses you want to manage or analyze. We classify internal IPs into 3 pre-defined categories based on their role and importance within your infrastructure."
+      title={t.title}
+      description={t.description}
       id={TAB_INTERNAL_IP_ID}
     >
       <div className={css.quoteLeftContainerTop}>
@@ -74,10 +74,9 @@ export const IpInternalsTabContent = ({ isActive }) => {
                   target: app?.internalIpAmountError,
                   size: app?.sizeError,
                 }}
-                targetLabel="Number of external IPs"
+                targetLabel={t.targetLabel}
                 defaultApp={DEFAULT_IP_INTERNAL_APP}
-                sizeLabel="Objective's Criticality Level"
-                defaultSizeOptions={IP_INTERNAL_SIZE_OPTIONS}
+                defaultSizeOptions={IP_INTERNAL_SIZE_OPTIONS(t.sizeLabel)}
                 targetType="number"
                 min="1"
                 step="1"
@@ -99,7 +98,7 @@ export const IpInternalsTabContent = ({ isActive }) => {
               decoding="async"
               alt="plus icon"
             />
-            Add a new internal ip
+            {t.addBtn}
           </button>
         </div>
       </div>

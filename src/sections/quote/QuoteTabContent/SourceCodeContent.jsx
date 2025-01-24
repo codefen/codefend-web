@@ -11,8 +11,9 @@ import {
   TAB_SOURCE_ID,
 } from "../../../data/quote/sourceCode";
 import { sendMetrics } from "../../../data/quote/general";
+import { sizeOptions } from "../../../data/quote/web";
 
-export const SourceCodeTabContent = ({ isActive }) => {
+export const SourceCodeTabContent = ({ t, isActive }) => {
   const {
     quotes: { sourceCode, ...others },
     addQuote,
@@ -49,8 +50,8 @@ export const SourceCodeTabContent = ({ isActive }) => {
   if (!isActive) return null;
   return (
     <QuoteLayout
-      title="Source Code Repositories"
-      description="Add from this section the source code repositories you want to assess. We classify repositories into 3 pre-defined sizes based on an estimated scale."
+      title={t.title}
+      description={t.description}
       id={TAB_SOURCE_ID}
       quoteDescriptions={SOURCECODE_DESCRIPTION}
     >
@@ -71,8 +72,9 @@ export const SourceCodeTabContent = ({ isActive }) => {
                 onVerifyInputs={() => onVerify("sourceCode", i)}
                 savedApp={app}
                 errors={{ target: app?.repoError, size: app?.sizeError }}
-                targetLabel="Repository url"
+                targetLabel={t.targetLabel}
                 defaultApp={DEFAULT_SOURCE_APP}
+                defaultSizeOptions={sizeOptions(t.sizeLabel)}
               />
             ))}
           </AnimatePresence>
@@ -90,7 +92,7 @@ export const SourceCodeTabContent = ({ isActive }) => {
               decoding="async"
               alt="plus icon"
             />
-            Add a new repository
+            {t.addBtn}
           </button>
         </div>
       </div>

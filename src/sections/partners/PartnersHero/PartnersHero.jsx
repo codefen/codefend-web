@@ -1,16 +1,11 @@
 import css from "./partnershero.module.css";
 
-const PartnersHero = () => (
+const PartnersHero = ({ t }) => (
   <section className={css.partnesHero}>
     <div className="container">
       <div className={css.container}>
-        <h1>Partners and Business allies</h1>
-        <p>
-          Codefend offers cybersecurity intel, research, and security services,
-          all unified in a unique platform. Allowing you to monitor your assets,
-          infrastructure and your organization's security, while establishing
-          direct communication between our professionals and your security team.
-        </p>
+        <h1>{t.title}</h1>
+        <p>{t.description}</p>
       </div>
     </div>
   </section>
