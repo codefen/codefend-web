@@ -6,6 +6,7 @@ import { FaX } from "react-icons/fa6";
 import { useState, useCallback, useRef } from "react";
 import css from "./header.module.scss";
 import { useLocales } from "../../store/useLocales";
+import { LocaleSwitcher } from "../../components/LocaleSwitcher";
 
 // Se verifica el soport para backdrop-filter
 const supportBackdrop = CSS.supports("backdrop-filter", "blur(1px)");
@@ -75,13 +76,16 @@ const Header = () => {
             </a>
           </motion.div>
 
-          <button onClick={toggleMenu} className="toggle">
-            {!isMenuOpen ? (
-              <FaBars color="#fff" size={30} />
-            ) : (
-              <FaX color="#fff" size={30} />
-            )}
-          </button>
+          <div className={css.mobile}>
+            <LocaleSwitcher className={css.localeSwitcher} />
+            <button onClick={toggleMenu} className={"toggle"}>
+              {!isMenuOpen ? (
+                <FaBars color="#fff" size={30} />
+              ) : (
+                <FaX color="#fff" size={30} />
+              )}
+            </button>
+          </div>
 
           <div
             className={css.navigateContainer}
@@ -113,6 +117,7 @@ const Header = () => {
           </div>
 
           <div className={css.menu}>
+            <LocaleSwitcher className={css.localeSwitcher} />
             {tt.buttons.map((button, index) =>
               button?.path ? (
                 <Link
