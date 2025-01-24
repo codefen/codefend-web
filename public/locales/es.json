@@ -785,7 +785,7 @@
       ]
     }
   },
-  "cumplimiento": {
+  "compilence": {
     "metadata": {
       "title": "Cumplimiento de Codefend: Estándares y Soluciones de Ciberseguridad",
       "description": "Asegure que su organización cumpla con los estándares de la industria con los servicios de cumplimiento de Codefend. Nuestra plataforma proporciona inteligencia integral en ciberseguridad, investigación y herramientas para ayudarle a navegar los estándares ISO y otros desafíos comunes de seguridad. Busque y encuentre fácilmente las soluciones que necesita para proteger sus activos y mantener el cumplimiento."
@@ -1009,6 +1009,16 @@
       "title": "Obtén una Estimación de Precio",
       "subtitle": "¡Calcula el costo de tu próximo servicio!",
       "description": "A continuación, encontrarás valores de referencia para nuestros servicios. Ten en cuenta que estos son estimados y deben ser confirmados por nuestro equipo comercial si son aceptados.",
+      "mobileSettingTab": "Sección de Configuración",
+      "mobileTabs": {
+        "web": "Sección Web",
+        "mobile": "Sección Móvil",
+        "cloud": "Sección de Nube",
+        "sourceCode": "Sección de Código Fuente",
+        "socialEngine": "Sección Social",
+        "internalIp": "Sección de IP Interna",
+        "externalIp": "Sección de IP Externa"
+      },
       "content": {
         "web": {
           "title": "Aplicaciones Web",

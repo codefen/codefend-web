@@ -9,6 +9,7 @@ export const Select = ({ onChange, values, defaultValue, name }) => {
       value={defaultValue}
       onValueChange={(value) => onChange(value)}
       name={name}
+      className={css.selectRoot}
     >
       <SelectPrimitive.Trigger className={css.selectTrigger}>
         <SelectPrimitive.Value />
@@ -37,7 +38,7 @@ export const Select = ({ onChange, values, defaultValue, name }) => {
                       key={value.value}
                       className={css.selectItem}
                       value={value.value}
-                      disabled={value.disabled}
+                      disabled={value?.disabled}
                     >
                       <SelectPrimitive.ItemText>
                         {value.label}

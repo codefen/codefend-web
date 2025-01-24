@@ -1009,6 +1009,16 @@
       "title": "Get a Price Estimate",
       "subtitle": "Calculate the cost of your next service!",
       "description": "Below, you'll find reference values for our services. Please note that these are estimates and must be confirmed by our commercial team if accepted.",
+      "mobileSettingTab": "Settings section",
+      "mobileTabs": {
+        "web": "Web section",
+        "mobile": "Mobile section",
+        "cloud": "Cloud section",
+        "sourceCode": "Source Code section",
+        "socialEngine": "Social section",
+        "internalIp": "Internal IP section",
+        "externalIp": "External IP section"
+      },
       "content": {
         "web": {
           "title": "Web Applications",

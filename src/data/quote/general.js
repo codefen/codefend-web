@@ -15,34 +15,41 @@ import { DEFAULT_WEB_APP, sizeOptions, TAB_WEB_ID, WEB_SIZE_PRICING } from "./we
 export const RESOURCE_CONFIGS = {
   web: {
     defaultSize: DEFAULT_WEB_APP.size,
-    pricing: WEB_SIZE_PRICING
+    pricing: WEB_SIZE_PRICING,
+    id: TAB_WEB_ID,
   },
   mobile: {
     defaultSize: DEFAULT_MOBILE_APP.size,
-    pricing: WEB_SIZE_PRICING
+    pricing: WEB_SIZE_PRICING,
+    id: TAB_MOBILE_ID,
   },
   cloud: {
     defaultSize: DEFAULT_CLOUD_APP.size,
-    pricing: WEB_SIZE_PRICING
+    pricing: WEB_SIZE_PRICING,
+    id: TAB_CLOUD_ID,
   },
   sourceCode: {
     defaultSize: DEFAULT_SOURCE_APP.size,
-    pricing: WEB_SIZE_PRICING
+    pricing: WEB_SIZE_PRICING,
+    id: TAB_SOURCE_ID,
   },
   socialEngine: {
     defaultSize: DEFAULT_SOCIAL_APP.size,
     pricing: SOCIAL_SIZE_PRICING,
-    sizeOptions: SOCIAL_SIZE_OPTIONS("")
+    sizeOptions: SOCIAL_SIZE_OPTIONS(""),
+    id: TAB_SOCIAL_ID,
   },
   internalIp: {
     defaultSize: DEFAULT_IP_INTERNAL_APP.size,
     pricing: IP_INTERNAL_PRICING,
-    sizeOptions: IP_INTERNAL_SIZE_OPTIONS("")
+    sizeOptions: IP_INTERNAL_SIZE_OPTIONS(""),
+    id: TAB_INTERNAL_IP_ID,
   },
   externalIp: {
     defaultSize: DEFAULT_IP_EXTERNAL_APP.size,
     pricing: IP_EXTERNAL_PRICING,
-    sizeOptions: IP_EXTERNAL_SIZE_OPTIONS("")
+    sizeOptions: IP_EXTERNAL_SIZE_OPTIONS(""),
+    id: TAB_EXTERNAL_IP_ID,
   }
 };
 

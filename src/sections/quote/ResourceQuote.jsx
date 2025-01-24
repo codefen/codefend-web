@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import css from "./quote.module.scss";
 import { QuoteTab } from "../../components/QuoteTab";
 import { QuoteProvider } from "../../store/QuoteContext";
 import { WebTabContent } from "./QuoteTabContent/WebContent";
-import { tabs } from "../../data/quote/general";
+import { RESOURCE_CONFIGS, tabs } from "../../data/quote/general";
 import { MobileTabContent } from "./QuoteTabContent/MobileContent";
 import { CloudTabContent } from "./QuoteTabContent/CloudContent";
 import { SourceCodeTabContent } from "./QuoteTabContent/SourceCodeContent";
@@ -21,10 +21,21 @@ import { TAB_SOCIAL_ID } from "../../data/quote/social";
 import { TAB_INTERNAL_IP_ID } from "../../data/quote/ipInternals";
 import { TAB_EXTERNAL_IP_ID } from "../../data/quote/externalIp";
 import { TAB_SETTINGS_ID } from "../../data/quote/settings";
+import { Select } from "../../components/Select";
 
 export const ResourceQuote = ({ t }) => {
   const [activeTab, setActiveTab] = useState(TAB_WEB_ID);
-
+  const mobileTabs = useMemo(
+    () =>
+      Object.entries(t.mobileTabs)
+        .map(([key, value]) => ({
+          label: value,
+          value: RESOURCE_CONFIGS[key].id,
+        }))
+        .concat({ label: t.mobileSettingTab, value: TAB_SETTINGS_ID }),
+    [t.mobileTabs]
+  );
+  console.log({ mobileTabs });
   return (
     <QuoteProvider>
       <section id="quotes" className={css.sectionModule}>
@@ -40,6 +51,14 @@ export const ResourceQuote = ({ t }) => {
             <p>{t.description}</p>
           </div>
           <div className={css.sectionCard}>
+            <div className={css.mobileTabs}>
+              <Select
+                values={mobileTabs}
+                defaultValue={activeTab}
+                onChange={(value) => setActiveTab(value)}
+                name="mobile-tabs"
+              />
+            </div>
             <div className={css.sectionCardWrapper}>
               <div
                 className={css.tabsContainer}
