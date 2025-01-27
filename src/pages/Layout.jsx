@@ -9,7 +9,7 @@ import { I18nProvider } from "../store/i18nProvider";
 function Layout() {
   return (
     <I18nProvider>
-      <Header />
+      <><Header />
       <Outlet />
 
       {/* <FreeTrial /> */}
@@ -29,7 +29,7 @@ function Layout() {
         pauseOnHover
         theme="light"
         transition={Bounce}
-      />
+      /></>
     </I18nProvider>
   );
 }

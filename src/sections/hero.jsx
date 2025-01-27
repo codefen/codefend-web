@@ -45,9 +45,9 @@ const Hero = ({ t }) => {
         </div>
         <div className="features">
           {[1, 2].map((num) => (
-            <ul>
+            <ul key={`feature-list-${num}`}>
               {features.map((feature, index) => (
-                <li key={`${index}-${num}`}>{feature}</li>
+                <li key={`feature-${num}-${index}`}>{feature}</li>
               ))}
             </ul>
           ))}
