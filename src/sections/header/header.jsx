@@ -41,6 +41,7 @@ const Header = () => {
   const closeMenuOnLinkClick = useCallback(() => {
     window.scrollTo(0, 0);
     setIsMenuOpen(false);
+    document.body.style.overflow = "auto";
   }, []);
   const tt = t("layout.header");
 
