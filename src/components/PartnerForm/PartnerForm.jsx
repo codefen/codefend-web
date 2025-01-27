@@ -1,97 +1,71 @@
 import css from "./partnerform.module.css";
-import { useTransition } from "react";
+import { useState, useTransition } from "react";
+import { DEFAULT_FORM_DATA, dispatch, validateForm } from "./action";
+import { toast } from "react-toastify";
 
-const dispatch = async (formData) => {
-  console.log({ name: formData.get("name") });
-  const data = {
-    fullName: formData.get("name"),
-    companyRol: formData.get("companyRol"),
-    email: formData.get("email"),
-    phoneNumber: formData.get("phone"),
-    companyWebsite: formData.get("companyWebsite"),
-    companySize: formData.get("companySize"),
-    country: formData.get("country"),
-  };
-  const res = await fetch(
-    "https://formspree.io/f/{form_id}",
-    JSON.stringify(data),
-    {
-      headers: { Accept: "application/json" },
-    }
-  );
-  if (res.ok) {
-    return true;
-  }
-  return false;
-};
-
-const PartnerForm = () => {
+const PartnerForm = ({ t }) => {
   const [isPending, startTransition] = useTransition();
+  const [formData, setFormData] = useState(DEFAULT_FORM_DATA);
+  const [error, setError] = useState("");
 
   const onSubmit = (e) => {
     e.preventDefault();
-    const formData = new FormData(e.target);
-    startTransition(() => {
-      dispatch(formData);
-      e.target.reset();
-    });
+    const data = new FormData(e.target);
+    if (validateForm(data)) {
+      setError("");
+      startTransition(() => {
+        dispatch(data).then((res) => {
+          if (res) {
+            setFormData(DEFAULT_FORM_DATA);
+            toast.success(t.successMessage);
+          } else {
+            setError(t.errorMessage);
+          }
+        });
+      });
+    } else {
+      setError(t.requiredMessage);
+    }
   };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
   return (
     <article className={css.partneforFormContainer}>
-      <h3>DISTRIBUTOR CONTACT FORM </h3>
-      <p>
-        Unlock a lucrative opportunity with Codefend by becoming one of our
-        trusted distributors.{" "}
-      </p>
+      <h3>{t.title}</h3>
+      <p>{t.description}</p>
       <form
         className={css.partnerForm}
         onSubmit={onSubmit}
         action="https://formspree.io/f/{form_id}"
         method="post"
       >
-        <input
-          name="name"
-          placeholder="Full name"
-          type="text"
-          autoComplete="name"
-          required
-        />
-        <input
-          name="companyRol"
-          placeholder="Role in company"
-          type="text"
-          autoComplete="off"
-        />
-        <input
-          name="email"
-          placeholder="Work email"
-          type="email"
-          autoComplete="email"
-          required
-        />
-        <input
-          name="phone"
-          placeholder="Phone number"
-          type="text"
-          autoComplete="tel"
-        />
-        <input
-          name="companyWebsite"
-          placeholder="Company website"
-          type="text"
-          autoComplete="off"
-          required
-        />
-        <input
-          name="companySize"
-          placeholder="Company size"
-          type="text"
-          autoComplete="off"
-          required
-        />
-        <input placeholder="Country" type="text" autoComplete="off" required />
+        {Object.entries(formData).map(([key, value], i) => (
+          <input
+            key={i}
+            name={key}
+            placeholder={t.fieldsPlaceholders[key]}
+            type={key === "email" ? "email" : "text"}
+            autoComplete={
+              key === "email"
+                ? "email"
+                : key === "name"
+                ? "name"
+                : key === "phone"
+                ? "tel"
+                : "off"
+            }
+            required
+            value={value}
+            onChange={handleChange}
+          />
+        ))}
+        {error && <p className={css.errorMessage}>{error}</p>}
         <button type="submit" disabled={isPending}>
-          Submit
+          {t.btn}
         </button>
       </form>
     </article>

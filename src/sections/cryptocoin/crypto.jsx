@@ -1,6 +1,10 @@
+import { RenderTextBold } from "../../components/RenderTextBold";
+import { useLocales } from "../../store/useLocales";
 import css from "./crypto.module.css";
 
 function Crypto() {
+  const { t } = useLocales();
+  const tt = t("layout.crypto.section.content.container.innerContent");
   return (
     <section className={css.cryptoSection}>
       <div className={css.wrapper}>
@@ -8,22 +12,15 @@ function Crypto() {
           <div className={css.containerContent}>
             <div>
               <img
-                className={css.bitCoinImg}
-                loading="lazy"
-                src="/images/bitcoinimg.webp"
-                alt="bitcoin"
-                width={120}
-                height={120}
+                className={tt.image.class}
+                loading={tt.image.loading}
+                src={tt.image.src}
+                alt={tt.image.alt}
+                width={tt.image.width}
+                height={tt.image.height}
               />
-              <h2>Bitcoin is welcome</h2>
-              <p>
-                <b>
-                  for customers and our ethical hackers: we accept all major
-                  cryptocurrencies including bitcoin, ethereum, and litecoin.
-                </b>{" "}
-                By accepting these cryptocurrencies, we are making it easier for
-                our customers to do business with us.
-              </p>
+              <h2>{tt.heading.text}</h2>
+              <RenderTextBold text={tt.paragraph} />
             </div>
           </div>
         </div>

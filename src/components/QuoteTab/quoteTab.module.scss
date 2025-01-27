@@ -1,0 +1,28 @@
+.tab {
+  min-width: 48px;
+  height: 48px;
+  border-radius: 0.5rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--text-color-alt2);
+  border: 0px solid transparent;
+  cursor: pointer;
+  position: relative;
+  transition: all ease 200ms;
+
+  &.active,
+  &:hover {
+    background-color: var(--text-color-alt3);
+  }
+
+  & p {
+    overflow: hidden;
+    color: transparent;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: 0;
+  }
+}

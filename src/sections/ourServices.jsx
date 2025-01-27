@@ -2,26 +2,19 @@ import { ServicesData } from "./ourServicesData";
 import { ourServiceLeft, ourServiceRight } from "../data";
 import { motion } from "framer-motion";
 
-const OurServices = () => {
+const OurServices = ({ t }) => {
   return (
     <section className="our-services">
       <div className="container">
         <div className="copy">
-          <h2>Our services</h2>
-          <p>
-            Codefend offers cybersecurity intel, research, and security
-            services, all unified in a unique platform. This platform allows you
-            to monitor your assets, infrastructure and your organization's
-            security, while establishing direct communication between our
-            professionals and your security team. Our conventional services
-            include:
-          </p>
+          <h2>{t.title}</h2>
+          <p>{t.description}</p>
         </div>
 
         <div className="list">
           <div className="left">
             <ServicesData
-              data={ourServiceLeft}
+              data={t.services.left}
               initialVariant="hiddenleft"
               hoverVariant="hoverLeft"
             />
@@ -44,7 +37,7 @@ const OurServices = () => {
           </div>
           <div className="right">
             <ServicesData
-              data={ourServiceRight}
+              data={t.services.right}
               initialVariant="hiddenright"
               hoverVariant="hoverRight"
             />

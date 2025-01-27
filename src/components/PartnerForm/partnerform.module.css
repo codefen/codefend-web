@@ -36,7 +36,7 @@ form.partnerForm {
     padding-inline: 0.25rem;
 
     &:focus {
-      border-color: var(--color-dark-blue-50);
+      border-color: var(--color-dark-blue-25);
     }
   }
 
@@ -60,6 +60,13 @@ form.partnerForm {
       opacity: 0.75;
     }
   }
+}
+
+.errorMessage {
+  color: var(--text-color-alt4);
+  font-size: 0.85rem;
+  text-align: left;
+  width: 100%;
 }
 
 @media screen and (min-width: 580px) {

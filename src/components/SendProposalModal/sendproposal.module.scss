@@ -1,0 +1,88 @@
+.modalSend {
+  width: 600px;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  pointer-events: var(--pointer-events);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.25rem;
+
+  h3 {
+    align-self: baseline;
+    font-size: 3.5rem;
+    margin-block: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .formContainer {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    flex-grow: 1;
+    width: 100%;
+  }
+
+  .formContent {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    overflow: auto;
+    flex-grow: 1;
+
+    .inputGroup {
+      width: 100%;
+
+      label {
+        margin-bottom: 2rem;
+        font-size: 1.25rem;
+      }
+    }
+    input {
+      border-radius: 0px;
+      border: none;
+      border-bottom: 1px dashed #999999;
+      height: 50px;
+      width: 100%;
+      font-family: Questrial;
+      font-size: 16px;
+      padding: 0 20px;
+      box-sizing: border-box;
+
+      &:focus {
+        border-bottom: 1px dashed #ff3939;
+        outline: none;
+        background-color: #ffeeee;
+      }
+    }
+
+    label {
+      display: inline-flex;
+      gap: 0.5em;
+    }
+
+    .required {
+      color: #ff3939;
+    }
+
+    button {
+      margin-top: auto;
+      padding: 18px 23px;
+      font-family: Questrial;
+      font-size: 18px;
+      width: 100%;
+      max-width: none;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      overflow: visible;
+
+      &:hover {
+        scale: 1;
+      }
+    }
+  }
+}

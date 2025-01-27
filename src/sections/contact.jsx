@@ -1,21 +1,7 @@
 import { motion } from "framer-motion";
 import { slideTransition } from "../transitions/globalTransitions";
-import { useLocation } from "react-router-dom";
-import { useRef, useEffect } from "react";
 
 const Contact = () => {
-  const contactRef = useRef(null);
-  const location = useLocation();
-
-  useEffect(() => {
-    if (location.state?.scrollToContact) {
-      const contactSection = contactRef.current;
-      if (contactSection) {
-        contactSection.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  }, [location]);
-
   return (
     <section ref={contactRef} className="contact" id="contact">
       <div className="container">
@@ -25,7 +11,7 @@ const Contact = () => {
           variants={slideTransition}
           className="copy"
         >
-          <h2>contact</h2>
+          <h2>Contact</h2>
           <p>
             <b>business partners and alliances</b>
             <br />

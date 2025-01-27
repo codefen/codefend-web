@@ -1,0 +1,23 @@
+.modalContainerContent {
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.checkMark {
+  color: rgb(34, 238, 68);
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-block-end: 0.5rem;
+  margin-block-start: 1rem;
+  color: var(--color-black-200);
+}
+
+.text {
+  color: var(--btn-color-alt);
+  text-align: center;
+}

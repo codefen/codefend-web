@@ -1,0 +1,28 @@
+.quoteRightBottomContainer {
+  & > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+
+  p {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    max-width: none;
+  }
+
+  button {
+    --gradient-stops: #f87171, #ef4444;
+    display: inline-flex;
+    box-shadow: 0 1px 2px 0, 0 0 #0000, 0 0 #0000, 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    color: white;
+    padding-inline: 1rem;
+    padding-block: 0.25rem;
+    background: linear-gradient(to bottom, var(--gradient-stops));
+    border-radius: var(--button-radius);
+    border-width: 0;
+
+    &:hover {
+      --gradient-stops: #ef4444, #dc2626;
+    }
+  }
+}

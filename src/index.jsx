@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Layout from "./pages/Layout";
 import Home from "./pages/home/home";
 
@@ -16,23 +16,36 @@ import Friends from "./pages/friends";
 import Enciclopedia from "./pages/enciclopedia";
 import Promo from "./pages/promo";
 import NewHome from "./pages/newHome/newHome";
+import { QuotePage } from "./pages/quote";
+import { AVALABLE_LOCALES } from "./data/i18n/i18n";
+import { I18nProvider } from "./store/i18nProvider";
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="software" element={<Software />} />
-          <Route path="industries" element={<Industries />} />
-          <Route path="services" element={<Services />} />
-          <Route path="compliance" element={<Compliance />} />
-          <Route path="partners" element={<Partners />} />
-          <Route path="about-us" element={<Friends />} />
-          <Route path="enciclopedia" element={<Enciclopedia />} />
-          <Route path="promo" element={<Promo />} />
-          <Route path="newhome" element={<NewHome />} />
-          <Route path="*" element={<Home />} />
+          <Route index element={<Navigate to="/en" replace />} />
+          {AVALABLE_LOCALES.map((locale) => (
+            <Route key={locale} path={locale}>
+              <Route index element={<Home />} />
+              <Route path="software" element={<Software />} />
+              <Route path="industries" element={<Industries />} />
+              <Route path="services" element={<Services />} />
+              <Route path="compliance" element={<Compliance />} />
+              <Route path="partners" element={<Partners />} />
+              <Route path="about-us" element={<Friends />} />
+              <Route path="calculator" element={<QuotePage />} />
+              <Route path="enciclopedia" element={<Enciclopedia />} />
+              <Route path="promo" element={<Promo />} />
+              <Route path="newhome" element={<NewHome />} />
+              <Route
+                path="*"
+                element={<Navigate to={`/${locale}`} replace />}
+              />
+            </Route>
+          ))}
+          <Route path="*" element={<Navigate to="/en" replace />} />
         </Route>
       </Routes>
     </BrowserRouter>

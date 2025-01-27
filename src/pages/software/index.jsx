@@ -4,14 +4,22 @@ import Capabilities from "./capabilities";
 import OurSoftware from "../../sections/ourSoftware/ourSoftware";
 import DocumentMetadata from "../../components/DocumentMetadata";
 import { pageSoftwareMetaData } from "../../data/metaData";
+import { useLocales } from "../../store/useLocales";
+
 const Software = () => {
+  const { t } = useLocales();
   return (
     <>
       {/* <HeroSoftware /> */}
-      <DocumentMetadata meta={pageSoftwareMetaData} />
-      <OurSoftware />
-      <Features />
-      <Capabilities />
+      <DocumentMetadata
+        meta={pageSoftwareMetaData({
+          title: t("software.metadata.title"),
+          description: t("software.metadata.description"),
+        })}
+      />
+      <OurSoftware t={t("home.ourSoftware")} />
+      <Features t={t("software.features")} />
+      <Capabilities t={t("software.capabilities")} />
     </>
   );
 };

@@ -31,6 +31,10 @@ const DocumentMetadata = ({
         name="twitter:card"
         content={twitterCard || "summary_large_image"}
       />
+      <meta name="concept" content="Security"></meta>
+      <meta name="accessLevel" content="Customer"></meta>
+      <meta name="accessLevel" content="Guest"></meta>
+      <meta name="accessLevel" content="Partner"></meta>
     </Helmet>
   </>
 );

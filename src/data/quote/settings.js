@@ -1,0 +1,1 @@
+export const TAB_SETTINGS_ID = "settings-id";

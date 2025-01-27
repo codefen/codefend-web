@@ -1,24 +1,27 @@
 import React from "react";
-import { industriesData } from "../../data/index.js";
 import DocumentMetadata from "../../components/DocumentMetadata";
 import { pageIndustriesMetaData } from "../../data/metaData";
+import { useLocales } from "../../store/useLocales";
+
 const Industries = () => {
+  const { t } = useLocales();
+  const tt = t("industries.mainContent");
   return (
     <>
-      <DocumentMetadata meta={pageIndustriesMetaData} />
+      <DocumentMetadata
+        meta={pageIndustriesMetaData({
+          title: t("industries.metadata.title"),
+          description: t("industries.metadata.description"),
+        })}
+      />
       <section className="industries">
         <div className="container">
           <div className="subtitle">
-            <h2>industries</h2>
-            <p>
-              Codefend is your comprehensive solution for all your company's
-              security needs. Our application combines a wide range of services
-              designed to protect your organization from cyber threats, ensuring
-              the highest level of protection for your data & infrastructure.
-            </p>
+            <h2>{tt.title}</h2>
+            <p>{tt.subtitle}</p>
           </div>
           <div className="contain">
-            {industriesData.map((data, i) => {
+            {tt.items.map((data, i) => {
               return (
                 <div key={data.title} className="item">
                   <div
