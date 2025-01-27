@@ -44,6 +44,8 @@ export const ResourceQuote = ({ t }) => {
             className={css.bgDecoration}
             src="/images/quote-coins.png"
             alt="quote coins"
+            decoding="async"
+            itemProp="image"
           />
           <div className={css.sectionHeader}>
             <h2>{t.title}</h2>

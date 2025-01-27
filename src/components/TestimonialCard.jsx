@@ -33,7 +33,8 @@ const TestimonialCard = ({ description, image, profile, name, rol }) => {
           }}
           loading="lazy"
           decoding="async"
-          aria-hidden={isImageLoaded ? "false" : "true"}
+          aria-hidden={!isImageLoaded}
+          data-loaded={isImageLoaded}
         />
         <p>
           <b id={`name-${namePattern}`}>{name}</b>

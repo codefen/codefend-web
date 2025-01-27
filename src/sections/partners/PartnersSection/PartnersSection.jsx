@@ -9,6 +9,8 @@ const PartnersSection = () => (
             src="/images/contact1.webp"
             loading="lazy"
             alt="contact"
+            decoding="async"
+            itemProp="image"
           />
           <p>
             <b>Khalid Ayed</b>
@@ -23,6 +25,8 @@ const PartnersSection = () => (
             src="/images/contact3.webp"
             loading="lazy"
             alt="contact"
+            decoding="async"
+            itemProp="image"
           />
           <p>
             <b>Zaki Qureshey</b>
@@ -37,6 +41,8 @@ const PartnersSection = () => (
             src="/images/contact4.webp"
             loading="lazy"
             alt="contact"
+            decoding="async"
+            itemProp="image"
           />
           <p>
             <b>Almerindo Graziano</b>

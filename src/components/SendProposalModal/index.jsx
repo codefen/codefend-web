@@ -55,7 +55,7 @@ export const SendProposalModal = () => {
         <div className={css.formContainer}>
           {steps === 0 ? (
             <motion.div
-              key={steps}
+              key="stepmail"
               initial={{ x: 20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: -20, opacity: 0 }}
@@ -87,7 +87,7 @@ export const SendProposalModal = () => {
             </motion.div>
           ) : (
             <motion.form
-              key={steps}
+              key="stepphone"
               initial={{ x: 20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: -20, opacity: 0 }}

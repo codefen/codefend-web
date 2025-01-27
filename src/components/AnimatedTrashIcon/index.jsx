@@ -55,7 +55,7 @@ export const AnimatedTrashIcon = ({ isHovered }) => {
       >
         {[10, 14].map((x, i) => (
           <motion.path
-            key={i}
+            key={`${i}-${x}`}
             d={`M${x} 11v6`}
             initial={false}
             animate={{

@@ -39,7 +39,7 @@ const MainDiferences = ({ t }) => {
             <ul>
               {t.items.map((item, index) => (
                 <motion.li
-                  key={index}
+                  key={`${index}-${item.title}`}
                   className="item"
                   viewport={{ once: true }}
                   initial={{ x: 70, opacity: 0 }}
@@ -55,7 +55,7 @@ const MainDiferences = ({ t }) => {
                   }}
                 >
                   <div>
-                    <img src={item.icon} loading="lazy" alt="icon-img" />
+                    <img src={item.icon} loading="lazy" decoding="async" itemProp="image" alt="icon-img" />
                   </div>
                   <p>
                     <b>{item.title}</b>

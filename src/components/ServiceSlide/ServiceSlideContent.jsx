@@ -36,7 +36,7 @@ const SlideContent = ({ bgImage, bgImageMedia, details, benefits }) => {
           </h3>
           <p>
             {benefits.map((benefit, i) => (
-              <Fragment key={i}>
+              <Fragment key={`benefit-${i}`}>
                 - {benefit}
                 <br />
               </Fragment>
