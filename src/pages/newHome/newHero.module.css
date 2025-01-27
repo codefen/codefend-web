@@ -1,0 +1,29 @@
+.new_hero {
+    --hero-height: 60vh;
+    --hero-text-size: 3rem;
+
+    background-image: url('/images/bg-newhome.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    height: var(--hero-height);
+    color: var(--text-color);
+    font-family: "Big Noodle Titling", sans-serif;
+}
+
+.hero_title {
+    h1 {
+        font-size: var(--text-h1-larger);
+        text-wrap: wrap;
+    }
+
+    span {
+        font-size: var(--hero-text-size);
+    }
+
+}
+@media screen and (max-width: 768px) {
+    .new_hero {
+        --hero-text-size: 2rem;
+    }    
+}

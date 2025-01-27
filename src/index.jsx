@@ -13,6 +13,9 @@ import Services from "./pages/services";
 import Compliance from "./pages/compliance";
 import Partners from "./pages/partners";
 import Friends from "./pages/friends";
+import Enciclopedia from "./pages/enciclopedia";
+import Promo from "./pages/promo";
+import NewHome from "./pages/newHome/newHome";
 
 export default function App() {
   return (
@@ -26,6 +29,9 @@ export default function App() {
           <Route path="compliance" element={<Compliance />} />
           <Route path="partners" element={<Partners />} />
           <Route path="about-us" element={<Friends />} />
+          <Route path="enciclopedia" element={<Enciclopedia />} />
+          <Route path="promo" element={<Promo />} />
+          <Route path="newhome" element={<NewHome />} />
           <Route path="*" element={<Home />} />
         </Route>
       </Routes>

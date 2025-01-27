@@ -1,0 +1,30 @@
+.section_2 {
+    --bg-color-cards: #fff;
+
+    background: var(--color-light-100);
+    height: fit-content;
+    color: var(--text-color-alt);
+    display: flex;
+
+    h1, h2 {
+        font-family: Big Noodle Titling;
+    }
+}
+.container {
+    max-width: 1900px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    & > div {
+        background: var(--bg-color-cards);
+        max-width: 400px;
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}

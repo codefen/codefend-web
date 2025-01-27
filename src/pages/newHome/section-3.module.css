@@ -1,0 +1,31 @@
+.section_3 {
+    background: linear-gradient(to right, #F2F2F2 55%, #FFFFFF 35%);
+    height: fit-content;
+    h2 {
+        font-family: Big Noodle Titling;
+    }
+}
+.container {
+    max-width: 1900px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    img {
+        width: 50%;
+    }
+}
+.section_card {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-self: flex-start;
+    div {
+      &:first-child {
+        background-image: url('/images/line.png');
+        background-repeat: no-repeat;
+        background-position: top;
+        padding-top: 2rem;
+      }
+    }
+}

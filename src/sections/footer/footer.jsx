@@ -31,6 +31,15 @@ const Footer = () => {
               </li>
             </ul>
             <ul>
+              <li>Elements</li>
+              <li>
+                <a href="/enciclopedia">enciclopedia</a>
+              </li>
+              <li>
+                <a href="/promo">promo</a>
+              </li>
+            </ul>
+            <ul>
               <li>Product</li>
               <li>
                 <a href="/software">our software</a>
