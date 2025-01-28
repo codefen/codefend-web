@@ -243,15 +243,15 @@
         {
           "section": "Solutions",
           "items": [
-            { "label": "services", "href": "/services" },
-            { "label": "compliance", "href": "/compliance" },
-            { "label": "industries", "href": "/industries" }
+            { "label": "services", "path": "/services" },
+            { "label": "compliance", "path": "/compliance" },
+            { "label": "industries", "path": "/industries" }
           ]
         },
         {
           "section": "Product",
           "items": [
-            { "label": "our software", "href": "/software" },
+            { "label": "our software", "path": "/software" },
             {
               "label": "create account",
               "href": "https://panel.codefend.com/auth/signup",

@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 import { useLocales } from "../../store/useLocales";
 import css from "./footer.module.css";
 
 const Footer = () => {
-  const { t } = useLocales();
+  const { t, locale } = useLocales();
   const tt = t("layout.footer");
   return (
     <footer className={css.footerSection}>
@@ -28,9 +29,20 @@ const Footer = () => {
                 <li>{link.section}</li>
                 {link.items.map((item, i) => (
                   <li key={`li-${i}`}>
-                    <a href={item.href} target={item?.target || "_self"}>
-                      {item.label}
-                    </a>
+                    {item?.path ? (
+                      <Link
+                        to={`/${locale}${item.path}`}
+                        onClick={(e) => {
+                          window.scrollTo(0, 0);
+                        }}
+                      >
+                        {item.label}
+                      </Link>
+                    ) : (
+                      <a href={item.href} target={item?.target || "_self"}>
+                        {item.label}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>
