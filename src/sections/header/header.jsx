@@ -71,7 +71,7 @@ const Header = () => {
             }}
             className={css.brand}
           >
-            <a href={tt.brand.link}>
+            <a href={`/${locale}${tt.brand.link}`}>
               <img src={tt.brand.logo.src} alt={tt.brand.logo.alt} decoding="async" itemProp="image" />
             </a>
           </motion.div>
