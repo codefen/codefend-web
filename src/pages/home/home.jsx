@@ -8,7 +8,7 @@ import { pageHomeMetaData } from "../../data/metaData";
 import { useLocales } from "../../store/useLocales";
 
 function Home() {
-  const { t } = useLocales();
+  const { t, locale } = useLocales();
   return (
     <>
       <DocumentMetadata
@@ -19,7 +19,7 @@ function Home() {
       />
       <Hero t={t("home.hero")} />
       <Highlights t={t("home.highlights")} />
-      <MainDiferences t={t("home.mainDifferences")} />
+      <MainDiferences t={t("home.mainDifferences")} locale={locale} />
       <OurSoftware t={t("home.ourSoftware")} />
       <OurServices t={t("home.ourServices")} />
       {/* <Prices /> */}

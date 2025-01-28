@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import { slideTransition } from "../transitions/globalTransitions";
 import { RenderTextBold } from "../components/RenderTextBold";
+import { Link } from "react-router-dom";
 
-const MainDiferences = ({ t }) => {
+const MainDiferences = ({ t, locale }) => {
   return (
     <section className="main-differences">
       <div className="container">
@@ -72,18 +73,31 @@ const MainDiferences = ({ t }) => {
               ))}
             </ul>
             <div className="buttons">
-              {t.buttons.map((button, index) => (
+              {t.buttons.map((button, index) => button?.path ? (
+                <Link
+                  key={`fb-${index}`}
+                  className={`btn ${button.type}`}
+                  to={{
+                    pathname: `/${locale}/${button.path}`,
+                    hash: button.hash,
+                  }}
+                  state={button?.action ? { [button.action]: true } : undefined}
+                >
+                  {button.text}
+                </Link>
+              ) : (
                 <a
                   key={index}
                   href={button.link}
                   className={`btn ${button.type}`}
-                  target={button.type === "main" ? "_blank" : "_self"}
-                  rel={button.type === "main" ? "noopener noreferrer" : ""}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   {button.text}
                 </a>
               ))}
             </div>
+
           </div>
         </div>
       </div>

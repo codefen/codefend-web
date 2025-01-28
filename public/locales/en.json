@@ -421,7 +421,10 @@
       "buttons": [
         {
           "text": "contact",
-          "link": "#contact",
+          "path": "about-us",
+          "hash": "#contact",
+          "action": "scrollToContact",
+          "target": "_self",
           "type": "alt"
         },
         {
