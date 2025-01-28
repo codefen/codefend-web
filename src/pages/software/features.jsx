@@ -16,6 +16,7 @@ const Features = ({ t }) => {
               </div>
               <img
                 loading="lazy"
+                decoding="async"
                 src={feature.image}
                 alt={feature.alt}
                 className={feature.className || ""}

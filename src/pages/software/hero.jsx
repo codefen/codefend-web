@@ -13,6 +13,8 @@ const HeroSoftware = () => {
           objectFit: "cover",
         }}
         loading="lazy"
+        decoding="async"
+        itemProp="image"
         src="/images/bkg-soft.jpg"
         alt="background"
       />

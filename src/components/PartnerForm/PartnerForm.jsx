@@ -45,7 +45,7 @@ const PartnerForm = ({ t }) => {
       >
         {Object.entries(formData).map(([key, value], i) => (
           <input
-            key={i}
+            key={`${i}-${key}`}
             name={key}
             placeholder={t.fieldsPlaceholders[key]}
             type={key === "email" ? "email" : "text"}

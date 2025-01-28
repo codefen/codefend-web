@@ -10,6 +10,7 @@ export const QuoteTab = ({ icon, label, activeTab, click, id }) => {
       onClick={click}
       id={id}
       aria-controls={`${id}-panel`}
+      decoding="async"
     >
       <img src={icon} loading="lazy" decoding="async" alt={label} />
       <p className="">{label}</p>

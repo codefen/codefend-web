@@ -80,6 +80,8 @@ const Prices = () => {
                   <div className="price">
                     <img
                       loading="lazy"
+                      decoding="async"
+                      itemProp="image"
                       src="/images/icon4.webp"
                       alt="thunder-icon"
                     />

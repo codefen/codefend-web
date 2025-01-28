@@ -40,6 +40,7 @@ const Header = () => {
   const closeMenuOnLinkClick = useCallback(() => {
     window.scrollTo(0, 0);
     setIsMenuOpen(false);
+    document.body.style.overflow = "auto";
   }, []);
   const tt = t("layout.header");
 
@@ -71,7 +72,7 @@ const Header = () => {
             className={css.brand}
           >
             <a href={tt.brand.link}>
-              <img src={tt.brand.logo.src} alt={tt.brand.logo.alt} />
+              <img src={tt.brand.logo.src} alt={tt.brand.logo.alt} decoding="async" itemProp="image" />
             </a>
           </motion.div>
 
@@ -120,7 +121,7 @@ const Header = () => {
             {tt.buttons.map((button, index) =>
               button?.path ? (
                 <Link
-                  key={index}
+                  key={`fb-${index}`}
                   className={button.class}
                   to={{
                     pathname: `/${locale}/${button.path}`,
@@ -132,7 +133,7 @@ const Header = () => {
                 </Link>
               ) : (
                 <a
-                  key={index}
+                  key={`sec-${index}`}
                   className={button.class}
                   href={button.link}
                   target={button.target || "_self"}

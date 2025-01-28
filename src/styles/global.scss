@@ -505,6 +505,7 @@ section.main-differences {
       display: flex;
       align-items: center;
       padding: 80px 0px;
+      will-change: transform;
 
       img {
         max-width: 45vw;
@@ -528,6 +529,7 @@ section.main-differences {
         display: flex;
         align-items: center;
         column-gap: 3vw;
+        will-change: transform;
 
         & div {
           border-radius: 40px;

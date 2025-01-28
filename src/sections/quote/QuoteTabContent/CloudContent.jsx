@@ -88,6 +88,7 @@ export const CloudTabContent = ({ t, isActive }) => {
               height={16}
               decoding="async"
               alt="plus icon"
+              itemProp="image"
             />
             {t.addBtn}
           </button>

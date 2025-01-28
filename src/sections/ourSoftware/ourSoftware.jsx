@@ -18,7 +18,7 @@ const OurSoftware = ({ t }) => {
             <h2>{t.title}</h2>
             <RenderTextBold text={t.description} />
           </motion.div>
-          <img src={t.image.src} loading="lazy" alt={t.image.alt} />
+          <img src={t.image.src} loading="lazy" alt={t.image.alt} decoding="async" itemProp="image" />
         </div>
       </div>
     </section>

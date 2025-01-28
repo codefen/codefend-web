@@ -244,8 +244,8 @@ const FreeTrial = () => {
           </form>
         </div>
         <div className="img-contain">
-          <img ref={img1} src="/images/front.webp" alt="d" />
-          <img ref={img2} src="/images/back.webp" alt="d" />
+          <img ref={img1} src="/images/front.webp" alt="d" decoding="async" itemProp="image" />
+          <img ref={img2} src="/images/back.webp" alt="d" decoding="async" itemProp="image" />
         </div>
       </div>
     </section>

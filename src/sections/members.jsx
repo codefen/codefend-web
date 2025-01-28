@@ -64,7 +64,7 @@ const Members = () => {
                                {
                                    members.map((member, i)=>{
                                        return(
-                                        <SwiperSlide key={i}>
+                                        <SwiperSlide key={`bnf-${i}`}>
                                             <CardMembers member={member} index={i} />
                                         </SwiperSlide>
                                        )

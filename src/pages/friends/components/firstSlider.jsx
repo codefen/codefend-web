@@ -48,6 +48,7 @@ const FirstSlider = ({ t }) => {
               alt={profile.alt}
               loading="lazy"
               decoding="async"
+              itemProp="image"
             />
 
             <div className="information">

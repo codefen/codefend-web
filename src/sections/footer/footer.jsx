@@ -17,6 +17,8 @@ const Footer = () => {
               <img
                 src={tt.logo.src}
                 loading="lazy"
+                decoding="async"
+                itemProp="image"
                 alt={tt.logo.alt}
                 width={400}
                 height={140}
@@ -29,7 +31,7 @@ const Footer = () => {
               <ul key={link.section}>
                 <li>{link.section}</li>
                 {link.items.map((item, i) => (
-                  <li key={i}>
+                  <li key={`li-${i}`}>
                     <a href={item.href} target={item?.target || "_self"}>
                       {item.label}
                     </a>
