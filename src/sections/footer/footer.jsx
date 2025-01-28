@@ -5,6 +5,7 @@ import css from "./footer.module.css";
 const Footer = () => {
   const { t, locale } = useLocales();
   const tt = t("layout.footer");
+
   return (
     <footer className={css.footerSection}>
       <div className={css.wrapper}>

@@ -13,6 +13,9 @@ import Services from "./pages/services";
 import Compliance from "./pages/compliance";
 import Partners from "./pages/partners";
 import Friends from "./pages/friends";
+import Enciclopedia from "./pages/enciclopedia";
+import Promo from "./pages/promo";
+import NewHome from "./pages/newHome/newHome";
 import { QuotePage } from "./pages/quote";
 import { AVALABLE_LOCALES } from "./data/i18n/i18n";
 import { I18nProvider } from "./store/i18nProvider";
@@ -33,6 +36,9 @@ export default function App() {
               <Route path="partners" element={<Partners />} />
               <Route path="about-us" element={<Friends />} />
               <Route path="calculator" element={<QuotePage />} />
+              <Route path="enciclopedia" element={<Enciclopedia />} />
+              <Route path="promo" element={<Promo />} />
+              <Route path="newhome" element={<NewHome />} />
               <Route
                 path="*"
                 element={<Navigate to={`/${locale}`} replace />}

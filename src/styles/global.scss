@@ -5,6 +5,8 @@
   --text-h2-normal: 34px;
   --text-h2-large: 58px;
   --text-h1-normal: 55px;
+  --text-h1-large: 65px;
+  --text-h1-larger: 140px;
   --text-color: #ffffff;
   --text-color-alt: #333333;
   --text-color-alt2: #ff7878;
@@ -42,6 +44,11 @@
   @media screen and (max-width: 820px) {
     --padding-general: 90px 30px;
   }
+  @media screen and (max-width: 768) {
+    --text-h1-large: 50px;
+    --text-h1-larger: 80px;
+    --text-h2-normal: 35px;
+  } 
 }
 
 @font-face {
@@ -50,6 +57,15 @@
   font-weight: 400;
   src: local("Questrial-Regular"),
     url("/fonts/Questrial-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Big Noodle Titling;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Big-Noodle-Titling"),
+    url("/fonts/big_noodle_titling.ttf") format("truetype");
   font-display: swap;
 }
 
@@ -101,7 +117,7 @@ body {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: var(--text-h1-normal);
   font-weight: normal;
   margin: 0px;
   line-height: 1.1;
@@ -2183,6 +2199,382 @@ section.friends1 {
   }
 }
 
+
+/* 
+///////////////////////////////////////////////////////////////////
+// promo
+//////////////////////////////////////////////////////////////////
+*/
+section.promo {
+  --float-direction: right;
+
+  background-image: url("/images/bkg-occupation.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 80px;
+  height: 100vh;
+
+  .containers {
+    height: 100%;
+    width: 100%;
+    max-width: 2300px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    .buttons-contain {
+      position: absolute;
+      top: 40px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .handle_slider {
+        color: #fff;
+        z-index: 99;
+        font-size: 40px;
+        width: 5rem;
+        border-radius: 10px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.3);
+        }
+      }
+    }
+    .promo_slider {
+      height: 100%;
+      width: 200%;
+      display: flex;
+      .occupation-contain {
+        font-family: "Big Noodle Titling", sans-serif;
+        text-transform: uppercase;  
+        font-size: 3rem;
+        font-weight: bold;
+        color: #fff;
+        height: 100%;
+        min-width: calc(100% / 2);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+          .occupation-title {
+            font-size: var(--text-h1-larger);   
+            line-height: normal;
+            margin: 0;
+          }
+          .bar_services {
+            width: 95%;
+            ul {
+              display: flex;
+              justify-content:space-between;
+              border-right: 8px solid white;
+              border-left: 8px solid white;
+              border-bottom: 8px solid white;
+              padding: 0 1em 1em 1em;
+            }
+            .connections {
+              margin-top: 40px;
+              float: var(--float-direction);
+              display: flex;
+              gap: 1rem;
+              span {
+                &:first-child {
+                  position: relative;
+                  &::before {
+                    content: '';
+                    width: 7px;
+                    height: 45px;
+                    background-color: white;
+                    position: absolute;
+                    top: -45px;
+                    left: 50%;
+                  }
+                }
+              }
+              hr {
+                width: 45px;
+                display: inline-block;
+                height: 7px;
+                background-color: white;
+                border: none;
+              }
+            }
+          }
+          .occupation-price > span {
+            font-size: 11rem;
+          }
+          .occupation-price {
+            .occupation-price_extra {
+              width: fit-content ;
+              padding: 7px 0 7px 0;
+              border-top: 3px solid white;
+              border-bottom: 3px solid white;
+            }
+          }
+      }
+
+      .probability-contain {
+        margin-top: 150px;
+        height: 100%;
+        min-width: calc(100% / 2);
+
+        display: flex;
+        flex-direction: column;
+        gap: 2vh;
+        color: #fff;
+        position: relative;
+          h2, h3, span {
+            font-family: "Big Noodle Titling", sans-serif;
+            text-transform: uppercase;
+          }
+          .probability_cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 3rem;
+            .probability_card_1, .probability_card_2 {
+              color: var(--text-color-alt);
+              background-color: #fff;
+              flex: 1;
+              min-width: 450px;
+              max-width: 700px;
+              min-height: 550px;
+              padding: 4rem 5rem;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              /*box-shadow: 5px 5px 20px 2px #142c3d;*/
+            }
+            .probability_card_1 {
+              .percentage {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+
+                  span {
+                    font-weight: bold;
+                    font-size: 30px;
+                    background-color: var(--btn-color-main);
+                    color: #fff;
+                    padding: 20px;
+                    border-radius: 60px;
+                  }
+                
+              }
+            }
+            .probability_card_2 {
+                .item-content {
+                  display: flex;
+                  align-items: center;
+                  gap: 3rem;
+                  img {
+                    width: 6rem;
+                    height: 6rem;
+                  }
+                }
+            }
+          }
+          .btn {
+            align-self: flex-end;
+          }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1400px) {
+    --float-direction: left;
+    height: fit-content;
+    .containers {
+      .promo_slider {
+        .occupation-contain {
+          padding-top: 120px;
+          gap: 5rem;
+          .occupation-title {
+            font-size: 5rem;   
+          }
+          .bar_services {
+            ul {
+              flex-direction: column;
+              gap: 2rem;
+              width: fit-content;
+              border-right: none;
+              border-top: 8px solid white;
+              padding: 1em 0 1em 1em;
+            }
+          }
+          .occupation-price > span {
+            font-size: 8rem;
+          }
+        }
+        
+        .probability-contain {
+          .probability_cards {
+            .probability_card_1, .probability_card_2 {
+              min-width: fit-content;
+              padding: 1.5rem 2.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width:768px) {
+    height: fit-content;
+    padding-top: 30px;
+    .containers {
+      .buttons-contain {
+        display: none;
+      }
+    }
+    .promo_slider {
+      flex-direction: column;
+      width: 100% !important;
+      .occupation-contain {
+        font-size: 2rem !important;
+        min-width: 100%;
+        .occupation-title {
+          font-size: 4rem !important;
+        }
+      }
+      .probability-contain {
+        min-width: 100%;
+        .probability_card_1 {
+          .percentage {
+            flex-direction: column;
+          }
+        }
+        .probability_card_2 {
+          text-align: center;
+          .item-content {
+            flex-direction: column;
+          }
+      }
+      }
+    }
+  }
+}
+
+
+
+/* 
+///////////////////////////////////////////////////////////////////
+// enciclopedia
+//////////////////////////////////////////////////////////////////
+*/
+section.enciclopedia {
+  padding: 0;
+  background-image: url("/images/bg-enciclopedia.png");
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-size: cover;
+  background-position: 50%;
+  color: #fff;
+  h2 {
+    font-family: "Big Noodle Titling", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .container {
+    padding: 0;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    position: relative;
+    height: 90%;
+    .sidebar {
+      position: absolute;
+      left: 0;
+      height: 90%;
+      width: 15vw;
+      min-width: fit-content;
+      background-color: rgba(0, 0, 0, 0.1);
+      text-align: end;
+      padding: 20rem 2rem 2rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+      div {
+        h2 {
+          margin-bottom: 10px;
+        }
+        li {
+          margin-top: 15px;
+        }
+      }
+    }
+    .enciclopedia_card {
+      background-color: #fff;
+      color: #353434;
+      height: 900px;
+      width: 800px;
+      margin-top: 300px;
+      margin-left: 10vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      h2 {
+        font-size: 30px;
+      }
+      .card_content {
+        max-width: 400px;
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        div {
+
+          &:first-child {
+            background-image: url('/images/line.png');
+            background-repeat: no-repeat;
+            background-position: top;
+            padding-top: 2rem;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1400px) {
+    height: fit-content;
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      .sidebar {
+        position: unset;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        height: fit-content;
+        padding: 1rem;
+        width: 100%;
+        margin-top: 10vh;
+      }
+      .enciclopedia_card {
+        margin: 0;
+        width: 90%;
+        max-width: 700px;
+        height: 70vh;
+        padding: 1rem;
+      }
+      
+    }
+  }
+}
+
+
+
+
+
+
+
+/* 
+///////////////////////////////////////////////////////////////////
+// probability
+//////////////////////////////////////////////////////////////////
+*/
+
+
 /* 
 ///////////////////////////////////////////////////////////////////
 // buttons
@@ -2192,6 +2584,7 @@ section.friends1 {
   font-size: 15px;
   font-weight: 800;
   height: 45px;
+  min-height: 35px;
   color: #ffffff;
   border-radius: 5px;
   background-color: var(--btn-color-main);
@@ -2210,7 +2603,6 @@ section.friends1 {
   }
 
   &:hover {
-    scale: 1.04;
     background-color: #cb2222;
   }
 

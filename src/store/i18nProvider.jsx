@@ -19,11 +19,11 @@ export const I18nProvider = ({ children }) => {
   const navigate = useNavigate();
   const location = useLocation();
   const [isLoading, setIsLoading] = useState(true);
+  const [translations, setTranslations] = useState({});
   const [locale, setLanguage] = useState(() => {
     const pathSegments = location?.pathname?.split?.("/");
     return pathSegments?.[1] ? pathSegments[1] : DEFAULT_LOCALE;
   });
-  const [translations, setTranslations] = useState({});
 
   const loadTranslations = async (locale) => {
     setIsLoading(true);
@@ -43,10 +43,11 @@ export const I18nProvider = ({ children }) => {
   }, [locale]);
 
   const switchLanguage = (newLocale) => {
-    console.log({ newLocale });
+    //console.log({ newLocale });
     const validNewLocale = AVALABLE_LOCALES.includes(newLocale)
       ? newLocale
       : DEFAULT_LOCALE;
+      
     const pathSegments = location.pathname.split("/");
     // Remover el segmento de idioma actual si existe
     if (pathSegments[1] === "en" || pathSegments[1] === "es") {
@@ -57,6 +58,7 @@ export const I18nProvider = ({ children }) => {
     setLanguage(validNewLocale);
     navigate(newPath);
   };
+  
 
   const t = (key) => {
     const value = getNestedValue(translations, key);

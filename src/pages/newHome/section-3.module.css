@@ -1,0 +1,44 @@
+.section_3 {
+    background: linear-gradient(to right, #F2F2F2 55%, #FFFFFF 35%);
+    height: fit-content;
+    h2 {
+        font-family: Big Noodle Titling;
+    }
+}
+.container {
+    max-width: 1900px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 5rem;
+    flex-wrap: wrap;
+    img {
+        width: 60%;
+    }
+}
+.section_card {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-self: flex-start;
+    div {
+      &:first-child {
+        background-image: url('/images/line.png');
+        background-repeat: no-repeat;
+        background-position: top;
+        padding-top: 2rem;
+      }
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .container {
+        img {
+            width: 100%;
+            max-width: 900px;
+            min-width: 300px;
+        }
+    }
+    
+}

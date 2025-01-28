@@ -249,6 +249,14 @@
           ]
         },
         {
+          "section": "Others",
+          "items": [
+            { "label": "promo", "href": "/promo" },
+            { "label": "encyclopedia", "href": "/enciclopedia" },
+            { "label": "new Home", "href": "/newhome" }
+          ]
+        },
+        {
           "section": "Product",
           "items": [
             { "label": "our software", "path": "/software" },
@@ -314,7 +322,7 @@
           "bold": false
         }
       ],
-      "cta": "Request a pentest now!",
+      "cta": "View our small plans",
       "features": [
         "Unique tools",
         "Cid spoofing",
@@ -337,7 +345,7 @@
           "paddingLeft": true,
           "description": [
             {
-              "text": "Monitorea tus activos digitales de forma permanente con nuestras suscripciones mensuales. Recibe notificaciones instantáneas de vulnerabilidades detectadas en tu correo electrónico.",
+              "text": "Monitor your digital assets continuously with our monthly subscriptions. Receive instant notifications of detected vulnerabilities directly in your email.",
               "bold": false
             }
           ],
@@ -348,7 +356,7 @@
           "paddingLeft": false,
           "description": [
             {
-              "text": "Realizamos operaciones de monitoreo continuo en foros de hacking, dentro de la dark web y en redes sociales para identificar amenazas y vulnerabilidades que puedan afectar a tu organización.",
+              "text": "We perform continuous monitoring operations on hacking forums, within the dark web, and on social networks to identify threats and vulnerabilities that could impact your organization.",
               "bold": false
             }
           ],
@@ -359,7 +367,7 @@
           "paddingLeft": false,
           "description": [
             {
-              "text": "Revise toda su infrastructura crítica con un pentest completo. Reciba un reporte detallado con las vulnerabilidades encontradas y recomendaciones para mitigarlas. Vulnerabilidades comunicadas en 24 horas.",
+              "text": "Review your entire critical infrastructure with a comprehensive pentest. Receive a detailed report with identified vulnerabilities and recommendations for mitigation. Vulnerabilities reported within 24 hours.",
               "bold": false
             }
           ],
@@ -465,7 +473,7 @@
           {
             "id": "sil3",
             "title": "cloud infrastructure solutions",
-            "description": "Perform periodic reviews during the development of your software and before your product launch. Codefend will detect vulnerabilities and fix security issues in your applications to increase your defenses against potential threats."
+            "description": "Strengthen your cloud security with tailored assessments and monitoring. Codefend will identify vulnerabilities and optimize your cloud environment to ensure resilience against potential threats."
           },
           {
             "id": "sil4",
@@ -530,8 +538,8 @@
       ],
       "column": [
         {
-          "title": "Comply with Standards",
-          "description": "Vulnerabilities: Filter vulnerabilities according to the type of resource and generate an on-demand report whenever you need it.",
+          "title": "Manage Your Scope",
+          "description": "Effortlessly add web and mobile applications, external and internal IP addresses, and more to gain critical insights into vulnerabilities and potential risks. Our professional hackers will make sure to unvail every potential issue within your organization's scope.",
           "image": "/images/software-img5.png",
           "alt": "image of app"
         }
