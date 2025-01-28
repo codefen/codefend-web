@@ -249,6 +249,14 @@
           ]
         },
         {
+          "section": "Others",
+          "items": [
+            { "label": "promo", "href": "/promo" },
+            { "label": "encyclopedia", "href": "/enciclopedia" },
+            { "label": "new Home", "href": "/newhome" }
+          ]
+        },
+        {
           "section": "Product",
           "items": [
             { "label": "our software", "href": "/software" },

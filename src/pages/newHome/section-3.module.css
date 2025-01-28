@@ -10,8 +10,10 @@
     margin: auto;
     display: flex;
     justify-content: space-evenly;
+    gap: 5rem;
+    flex-wrap: wrap;
     img {
-        width: 50%;
+        width: 60%;
     }
 }
 .section_card {
@@ -28,4 +30,15 @@
         padding-top: 2rem;
       }
     }
+}
+
+@media screen and (max-width: 1400px) {
+    .container {
+        img {
+            width: 100%;
+            max-width: 900px;
+            min-width: 300px;
+        }
+    }
+    
 }

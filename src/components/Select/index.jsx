@@ -1,4 +1,4 @@
-import * as SelectPrimitive from "@radix-ui/react-Select";
+import * as SelectPrimitive from "@radix-ui/react-select";
 import * as ScrollArea from "@radix-ui/react-scroll-area";
 import css from "./select.module.scss";
 import { AnimatePresence, motion } from "framer-motion";

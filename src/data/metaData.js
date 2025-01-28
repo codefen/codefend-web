@@ -71,3 +71,19 @@ export const pageCalculatorMetaData = ({ title, description, locale })=> ({
     url: `https://www.codefend.com/${locale}/calculator`,
     image: "https://www.codefend.com/assets/images/bkg-hero.jpg",
 });
+
+export const pagePromoMetaData = ({ title, description, locale })=> ({
+    title,
+    description,
+    keywords: "Codefend Promo, cybersecurity services, security research, infrastructure monitoring, team members, CEO information, company vision",
+    url: `https://www.codefend.com/${locale}/promo`,
+    image: "https://www.codefend.com/assets/images/bkg-hero.jpg",
+});
+
+export const pageEncyclopediaMetaData = ({ title, description, locale })=> ({
+    title,
+    description,
+    keywords: "Codefend encyclopedia, cybersecurity services, security research, infrastructure monitoring, team members, CEO information, company vision",
+    url: `https://www.codefend.com/${locale}/encyclopedia`,
+    image: "https://www.codefend.com/assets/images/bkg-hero.jpg",
+});

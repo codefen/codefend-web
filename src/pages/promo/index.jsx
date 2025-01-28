@@ -11,6 +11,12 @@ const Promo = () => {
     }
     return (
         <> 
+            {/* <DocumentMetadata
+              meta={pageComplianceMetaData({
+                title: t("promo.metadata.title"),
+                description: t("promo.metadata.description"),
+              })}
+            /> */}
             <section className="promo">
                 <div className="containers">
                     <div className="buttons-contain">

@@ -1,6 +1,5 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { NAVIGATE_LINKS } from "../../data/header";
 import { FaBars } from "react-icons/fa6";
 import { FaX } from "react-icons/fa6";
 import { useState, useCallback, useRef } from "react";

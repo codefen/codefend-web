@@ -1,5 +1,4 @@
 import { ServicesData } from "./ourServicesData";
-import { ourServiceLeft, ourServiceRight } from "../data";
 import { motion } from "framer-motion";
 
 const OurServices = ({ t }) => {

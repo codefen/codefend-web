@@ -1,9 +1,13 @@
+import { useEffect } from "react";
 import { useLocales } from "../../store/useLocales";
 import css from "./footer.module.css";
 
 const Footer = () => {
-  const { t } = useLocales();
+  const { t, locale } = useLocales();
   const tt = t("layout.footer");
+  useEffect(()=> {
+    console.log('naodsasd', locale)
+  })
   return (
     <footer className={css.footerSection}>
       <div className={css.wrapper}>
