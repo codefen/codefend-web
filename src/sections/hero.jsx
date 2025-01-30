@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { slideTransition } from "../transitions/globalTransitions";
-import { TypeAnimation } from "react-type-animation";
 import { Link } from "react-router-dom";
 
 const Hero = ({ t }) => {
@@ -22,6 +21,7 @@ const Hero = ({ t }) => {
             variants={slideTransition}
             className="copy"
           >
+            {/* 
             <TypeAnimation
               sequence={typeSequence}
               wrapper="h1"
@@ -32,6 +32,8 @@ const Hero = ({ t }) => {
               }}
               repeat={Infinity}
             />
+          */}
+            <h1>{headingAnimated[0]}</h1>
             <p>
               {descriptions.map((part, index) =>
                 part.bold ? <b key={index}>{part.text}</b> : part.text

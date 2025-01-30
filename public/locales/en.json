@@ -302,15 +302,7 @@
     },
     "hero": {
       "headings": {
-        "animated": [
-          "Intel meets protection",
-          "Attack surface surveillance",
-          "Dive deeper the darkweb.",
-          "Remove vendor risk",
-          "Continuous pentest",
-          "Unveil your shadow IT",
-          "Quieter become, able to hear"
-        ]
+        "animated": ["Continuous pentest"]
       },
       "description": [
         {

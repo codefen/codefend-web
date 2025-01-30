@@ -326,15 +326,7 @@
     },
     "hero": {
       "headings": {
-        "animated": [
-          "La inteligencia se encuentra con la protección",
-          "Vigilancia de la superficie de ataque",
-          "Sumérgete más profundo en la dark web",
-          "Elimina el riesgo del proveedor",
-          "Pruebas de penetración continuas",
-          "Revela tu TI en la sombra",
-          "Cuanto más silencioso te vuelvas, más podrás escuchar"
-        ]
+        "animated": ["Pruebas de penetración continuas"]
       },
       "description": [
         {
