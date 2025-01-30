@@ -71,9 +71,14 @@ const Header = () => {
             }}
             className={css.brand}
           >
-            <a href={`/${locale}${tt.brand.link}`}>
-              <img src={tt.brand.logo.src} alt={tt.brand.logo.alt} decoding="async" itemProp="image" />
-            </a>
+            <Link to={`/${locale}${tt.brand.link}`}>
+              <img
+                src={tt.brand.logo.src}
+                alt={tt.brand.logo.alt}
+                decoding="async"
+                itemProp="image"
+              />
+            </Link>
           </motion.div>
 
           <div className={css.mobile}>

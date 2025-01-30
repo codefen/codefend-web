@@ -6,7 +6,7 @@
           "src": "/images/logo-light.svg",
           "alt": "logo"
         },
-        "link": "/#hero"
+        "link": "/"
       },
       "navigation": {
         "links": [
@@ -41,6 +41,10 @@
           {
             "path": "calculator",
             "label": "Calculator"
+          },
+          {
+            "path": "plans",
+            "label": "Plans"
           }
         ]
       },
