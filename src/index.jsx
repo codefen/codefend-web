@@ -18,7 +18,7 @@ import Promo from "./pages/promo";
 import NewHome from "./pages/newHome/newHome";
 import { QuotePage } from "./pages/quote";
 import { AVALABLE_LOCALES } from "./data/i18n/i18n";
-import { I18nProvider } from "./store/i18nProvider";
+import PlansPage from "./pages/plans/PlansPage";
 
 export default function App() {
   return (
@@ -39,6 +39,7 @@ export default function App() {
               <Route path="enciclopedia" element={<Enciclopedia />} />
               <Route path="promo" element={<Promo />} />
               <Route path="newhome" element={<NewHome />} />
+              <Route path="plans" element={<PlansPage />} />
               <Route
                 path="*"
                 element={<Navigate to={`/${locale}`} replace />}

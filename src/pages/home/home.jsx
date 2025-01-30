@@ -15,6 +15,7 @@ function Home() {
         meta={pageHomeMetaData({
           title: t("home.metadata.title"),
           description: t("home.metadata.description"),
+          locale,
         })}
       />
       <Hero t={t("home.hero")} />

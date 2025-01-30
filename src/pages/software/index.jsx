@@ -7,7 +7,7 @@ import { pageSoftwareMetaData } from "../../data/metaData";
 import { useLocales } from "../../store/useLocales";
 
 const Software = () => {
-  const { t } = useLocales();
+  const { t, locale } = useLocales();
   return (
     <>
       {/* <HeroSoftware /> */}
@@ -15,6 +15,7 @@ const Software = () => {
         meta={pageSoftwareMetaData({
           title: t("software.metadata.title"),
           description: t("software.metadata.description"),
+          locale,
         })}
       />
       <OurSoftware t={t("home.ourSoftware")} />

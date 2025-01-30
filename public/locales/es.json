@@ -243,23 +243,44 @@
         {
           "section": "Soluciones",
           "items": [
-            { "label": "servicios", "href": "/services" },
-            { "label": "cumplimiento", "href": "/compliance" },
-            { "label": "industrias", "href": "/industries" }
+            {
+              "label": "servicios",
+              "href": "/services"
+            },
+            {
+              "label": "cumplimiento",
+              "href": "/compliance"
+            },
+            {
+              "label": "industrias",
+              "href": "/industries"
+            }
           ]
         },
         {
           "section": "Otros",
           "items": [
-            { "label": "promoción", "path": "/promo" },
-            { "label": "enciclopedia", "path": "/enciclopedia" },
-            { "label": "nueva página de inicio", "path": "/newhome" }
+            {
+              "label": "promoción",
+              "path": "/promo"
+            },
+            {
+              "label": "enciclopedia",
+              "path": "/enciclopedia"
+            },
+            {
+              "label": "nueva página de inicio",
+              "path": "/newhome"
+            }
           ]
         },
         {
           "section": "Producto",
           "items": [
-            { "label": "nuestro software", "href": "/software" },
+            {
+              "label": "nuestro software",
+              "href": "/software"
+            },
             {
               "label": "crear cuenta",
               "href": "https://panel.codefend.com/auth/signup",
@@ -275,7 +296,10 @@
         {
           "section": "Compañía",
           "items": [
-            { "label": "contáctanos", "href": "mailto:hello@codefend.com" },
+            {
+              "label": "contáctanos",
+              "href": "mailto:hello@codefend.com"
+            },
             {
               "label": "términos de uso",
               "href": "https://docs.google.com/document/d/1KZRrfHR4hIy2YyKkQmPK7Azp-zkbk7mYhCM6xKlVsoE/edit#heading=h.otbipzz762sq",
@@ -992,16 +1016,46 @@
           "lead_role": {
             "default": "Seleccione el rol",
             "labels": [
-              { "label": "Administrativo", "value": "admin" },
-              { "label": "Recursos Humanos", "value": "human" },
-              { "label": "Tecnología de la Información", "value": "info" },
-              { "label": "Marketing", "value": "ads" },
-              { "label": "Ventas", "value": "sales" },
-              { "label": "Finanzas", "value": "finance" },
-              { "label": "Servicio al Cliente", "value": "cs" },
-              { "label": "Producción y Operaciones", "value": "prod" },
-              { "label": "Estrategia y Planificación", "value": "plan" },
-              { "label": "Asuntos Legales", "value": "law" }
+              {
+                "label": "Administrativo",
+                "value": "admin"
+              },
+              {
+                "label": "Recursos Humanos",
+                "value": "human"
+              },
+              {
+                "label": "Tecnología de la Información",
+                "value": "info"
+              },
+              {
+                "label": "Marketing",
+                "value": "ads"
+              },
+              {
+                "label": "Ventas",
+                "value": "sales"
+              },
+              {
+                "label": "Finanzas",
+                "value": "finance"
+              },
+              {
+                "label": "Servicio al Cliente",
+                "value": "cs"
+              },
+              {
+                "label": "Producción y Operaciones",
+                "value": "prod"
+              },
+              {
+                "label": "Estrategia y Planificación",
+                "value": "plan"
+              },
+              {
+                "label": "Asuntos Legales",
+                "value": "law"
+              }
             ]
           },
           "company_area": "Escriba su mensaje aquí"
@@ -1032,10 +1086,7 @@
         ],
         "occupation_price": {
           "price": "$1.500",
-          "priceText": [
-            "por mes + ",
-            "por bitcoin aceptado"
-          ]
+          "priceText": ["por mes + ", "por bitcoin aceptado"]
         }
       },
       "probability": {
@@ -1514,6 +1565,147 @@
         "phonePlaceholder": "Teléfono",
         "send": "Enviar"
       }
+    }
+  },
+  "plans": {
+    "metadata": {
+      "title": "Planes Codefend: Protección avanzada contra vulnerabilidades y amenazas",
+      "description": "Descubre los planes de seguridad de Codefend diseñados para startups, medianas y grandes empresas. Protege tu negocio con evaluaciones de vulnerabilidades, pentesting continuo y expertos en ciberseguridad dedicados. Elige el plan ideal y refuerza la seguridad de tu empresa hoy mismo."
+    },
+    "content": {
+      "title": "Preocupado por la seguridad de su empresa?",
+      "description": [
+        {
+          "text": "Planes para paquetes y medianas empresas!",
+          "bold": true,
+          "color": "#fff"
+        },
+        {
+          "text": "Si no dispones del presupuesto necesario para comprar un evaluacion completa,",
+          "bold": false,
+          "color": "#fff"
+        },
+        {
+          "text": "podemos comenzar a evaluar tu empresa ahora mismo,",
+          "bold": true,
+          "color": "var(--text-color-alt2)"
+        },
+        {
+          "text": "crea ahora un usuario en codefend,",
+          "bold": false,
+          "color": "#fff"
+        },
+        {
+          "text": "y descubri una nueva forma de detectar vulnerabilidades y amenazas. Proba ahora!",
+          "bold": true,
+          "color": "var(--text-color-alt2)"
+        }
+      ],
+      "btn": "Comienza ahora",
+      "planItems": [
+        {
+          "delay": 0.5,
+          "title": "Pequeña empresa",
+          "price": "$299",
+          "subtitle": "suscripción mensual básica",
+          "subtitle2": "descuento en suscripción anual a $2,999",
+          "attr": "",
+          "items": [
+            {
+              "text": "Recomendado para startups y nuevas empresas",
+              "bold": true
+            },
+            {
+              "text": "Pentest puntual: $3,870 - un informe",
+              "bold": false
+            },
+            {
+              "text": "Suscripción anual: $38,700",
+              "bold": false
+            },
+            {
+              "text": "Incluye 3 semanas de pentest + 1 semana de informe",
+              "bold": false
+            },
+            {
+              "text": "Asignación de hacker dedicado según tus necesidades",
+              "bold": true
+            }
+          ]
+        },
+        {
+          "delay": 0.7,
+          "title": "Plan mediano",
+          "price": "$699",
+          "subtitle": "suscripción mensual intermedia",
+          "subtitle2": "descuento en suscripción anual a $6,999",
+          "attr": "Servicio más seleccionado",
+          "items": [
+            {
+              "text": "Recomendado para empresas medianas",
+              "bold": true
+            },
+            {
+              "text": "Recomendado para CI/CD",
+              "bold": false
+            },
+            {
+              "text": "Vigilancia de seguridad permanente, pentest continuo",
+              "bold": true
+            },
+            {
+              "text": "Exportar informes de seguridad en cualquier momento",
+              "bold": false
+            },
+            {
+              "text": "Asignación de hacker dedicado según tus necesidades",
+              "bold": false
+            },
+            {
+              "text": "Incluye 3 semanas de pentest + 1 semana de informe",
+              "bold": true
+            }
+          ]
+        },
+        {
+          "delay": 1,
+          "title": "Plan avanzado",
+          "price": "$999",
+          "subtitle": "4 semanas $13,500 / facturación mensual",
+          "subtitle2": "descuento en suscripción a $9,999",
+          "attr": "",
+          "items": [
+            {
+              "text": "Recomendado para empresas establecidas",
+              "bold": true
+            },
+            {
+              "text": "Recomendado para CI/CD",
+              "bold": false
+            },
+            {
+              "text": "Exportar informes de seguridad en cualquier momento",
+              "bold": false
+            },
+            {
+              "text": "Vigilancia de seguridad permanente, pentest continuo",
+              "bold": true
+            },
+            {
+              "text": "Asignación de hacker dedicado según tus necesidades",
+              "bold": false
+            },
+            {
+              "text": "Incluye 3 semanas de pentest + 1 semana de informe",
+              "bold": false
+            },
+            {
+              "text": "Asignación de hacker dedicado según tus necesidades",
+              "bold": true
+            }
+          ]
+        }
+      ]
     }
   }
 }

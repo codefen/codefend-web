@@ -9,27 +9,29 @@ import { I18nProvider } from "../store/i18nProvider";
 function Layout() {
   return (
     <I18nProvider>
-      <><Header />
-      <Outlet />
+      <>
+        <Header />
+        <Outlet />
 
-      {/* <FreeTrial /> */}
-      {/* <ResourceQuote /> */}
-      <Crypto />
-      <Linkedin />
-      <Footer />
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-        transition={Bounce}
-      /></>
+        {/* <FreeTrial /> */}
+        {/* <ResourceQuote /> */}
+        <Crypto />
+        <Linkedin />
+        <Footer />
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+          transition={Bounce}
+        />
+      </>
     </I18nProvider>
   );
 }

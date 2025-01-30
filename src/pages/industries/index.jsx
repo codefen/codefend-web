@@ -4,7 +4,7 @@ import { pageIndustriesMetaData } from "../../data/metaData";
 import { useLocales } from "../../store/useLocales";
 
 const Industries = () => {
-  const { t } = useLocales();
+  const { t, locale } = useLocales();
   const tt = t("industries.mainContent");
   return (
     <>
@@ -12,6 +12,7 @@ const Industries = () => {
         meta={pageIndustriesMetaData({
           title: t("industries.metadata.title"),
           description: t("industries.metadata.description"),
+          locale,
         })}
       />
       <section className="industries">

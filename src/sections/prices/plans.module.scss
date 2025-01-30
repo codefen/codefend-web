@@ -1,0 +1,216 @@
+section.prices {
+  color: #fff;
+  background-color: rgba(206, 204, 204, 0.8);
+  overflow-x: hidden;
+  background-image: url("/images/plans-bkg.jpg");
+  background-size: cover;
+
+  .paragraph-color {
+    color: var(--text-color-alt2);
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top {
+  text-align: left;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-size: 3em;
+    text-transform: lowercase;
+    margin-bottom: 30px;
+  }
+}
+
+.slides {
+  overflow: hidden;
+  width: 100dvw;
+}
+
+.items {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100dvw;
+  transition: all 1000ms;
+
+  .contain {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    align-items: center;
+
+    h4 {
+      margin: auto;
+      font-size: 35px;
+    }
+
+    hr {
+      color: var(--btn-color-main);
+      width: 90%;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.cardContain {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3em;
+  padding-top: 120px;
+
+  .card {
+    max-height: 620px;
+    max-width: 420px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #131313;
+    padding: 30px 45px;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    transition: transform 0.3s;
+    box-shadow: 0px 0px 25px -5px rgba(0, 0, 0, 1);
+    --line-accent-size: 6px;
+
+    h3 {
+      font-size: 2em;
+      margin: 0;
+      color: var(--text-color-alt3);
+    }
+
+    ul {
+      line-height: 1.7em;
+
+      li {
+        padding: 4px 0;
+        border-bottom: 1px dashed #990000;
+
+        &:nth-last-child(1) {
+          border-bottom: none;
+        }
+
+        b {
+          color: var(--text-color-alt2);
+        }
+
+        img {
+          margin-right: 1vh;
+          position: relative;
+          bottom: -4px;
+          display: block;
+          float: left;
+        }
+      }
+    }
+
+    button {
+      border: none;
+      background: var(--text-color-alt4);
+      padding: 1em;
+      max-width: 13em;
+      margin-right: auto;
+      cursor: pointer;
+      font-family: Questrial;
+      color: #fee;
+      font-size: 18px;
+      border-radius: 3px;
+      margin-block-start: auto;
+    }
+  }
+
+  .card:nth-child(2) {
+    border: var(--line-accent-size) solid var(--text-color-alt3);
+    position: relative;
+
+    &:before {
+      content: attr(data-text);
+      outline: var(--line-accent-size) solid var(--text-color-alt3);
+      font-weight: normal;
+      padding: 8px 0;
+      position: absolute;
+      top: -30px;
+      left: 0;
+      width: 100%;
+      background-color: var(--text-color-alt3);
+    }
+  }
+
+  /* 
+  .card:nth-child(3) {
+    border: 8px solid var(--text-color-alt3);
+    position: relative;
+
+    &:before {
+      content: "Advanced red team operations.";
+      outline: 8px solid var(--text-color-alt3);
+      font-weight: normal;
+      padding: 8px 0;
+      position: absolute;
+      top: -30px;
+      left: 0;
+      width: 100%;
+      background-color: var(--text-color-alt3);
+    }
+  }
+*/
+}
+
+.price {
+  display: flex;
+  gap: 2em;
+  position: relative;
+
+  h4 {
+    color: var(--text-color-alt3);
+    margin: 0;
+    font-size: 3em;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  img {
+    position: relative;
+    top: -10px;
+    width: 80px;
+    height: 80px;
+    transition: transform 1s;
+
+    &:hover {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cardContain {
+    gap: 5;
+
+    .card {
+      gap: 2em;
+
+      .price {
+        justify-content: center;
+        text-align: center;
+        gap: 1em;
+      }
+
+      button {
+        margin: auto;
+      }
+    }
+
+    padding: 50px 0;
+  }
+}

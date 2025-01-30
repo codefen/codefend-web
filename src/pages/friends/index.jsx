@@ -13,6 +13,7 @@ const Friends = () => {
         meta={pageAboutUsMetaData({
           title: t("aboutus.metadata.title"),
           description: t("aboutus.metadata.description"),
+          locale
         })}
       />
       <Herofriends t={t("aboutus.hero")} />

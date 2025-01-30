@@ -5,13 +5,14 @@ import { pagePartnersMetaData } from "../../data/metaData";
 import { useLocales } from "../../store/useLocales";
 
 const Partners = () => {
-  const { t } = useLocales();
+  const { t, locale } = useLocales();
   return (
     <>
       <DocumentMetadata
         meta={pagePartnersMetaData({
           title: t("partners.metadata.title"),
           description: t("partners.metadata.description"),
+          locale,
         })}
       />
       <PartnersHero t={t("partners.hero")} />

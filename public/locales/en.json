@@ -1018,25 +1018,22 @@
     },
     "promoSlider": {
       "occupation": {
-          "title": "profesional hackers on demand",
-          "barItems": [
-            "network security",
-            "website security",
-            "application's security",
-            "api's security",
-            "on demand solutions"
-          ],
-          "connections": [
-            "fueled by crowd inteligence",
-            "enhanced with big data"
-          ],
-          "occupation_price": {
-            "price": "$1.500",
-            "priceText": [
-              "per month +",
-              "per bitcoin accepted"
-            ]
-          }
+        "title": "profesional hackers on demand",
+        "barItems": [
+          "network security",
+          "website security",
+          "application's security",
+          "api's security",
+          "on demand solutions"
+        ],
+        "connections": [
+          "fueled by crowd inteligence",
+          "enhanced with big data"
+        ],
+        "occupation_price": {
+          "price": "$1.500",
+          "priceText": ["per month +", "per bitcoin accepted"]
+        }
       },
       "probability": {
         "title": "how to estimate the value of a security flaw?",
@@ -1056,7 +1053,7 @@
             "items": [
               {
                 "img": {
-                  "loading":"lazy",
+                  "loading": "lazy",
                   "alt": "clock icon",
                   "src": "/images/promo-item-1.png"
                 },
@@ -1065,7 +1062,7 @@
               },
               {
                 "img": {
-                  "loading":"lazy",
+                  "loading": "lazy",
                   "alt": "clock icon",
                   "src": "/images/promo-item-2.png"
                 },
@@ -1074,7 +1071,7 @@
               },
               {
                 "img": {
-                  "loading":"lazy",
+                  "loading": "lazy",
                   "alt": "person falling image",
                   "src": "/images/promo-item-3.png"
                 },
@@ -1139,25 +1136,25 @@
   },
   "newHome": {
     "hero": {
-      "title":"survelliance services",
-      "description":"100% online & hassle-free end-point & data protection"
+      "title": "survelliance services",
+      "description": "100% online & hassle-free end-point & data protection"
     },
     "steps": {
       "steps_contain": [
         {
-          "number":"1",
-          "subtitle":"complete the online sign up form",
-          "description":"complete the form with your details"
+          "number": "1",
+          "subtitle": "complete the online sign up form",
+          "description": "complete the form with your details"
         },
         {
-          "number":"2",
-          "subtitle":"choose the right membership",
-          "description":"100% online and hassle-free"
+          "number": "2",
+          "subtitle": "choose the right membership",
+          "description": "100% online and hassle-free"
         },
         {
-          "number":"3",
-          "subtitle":"receive actionable reports online",
-          "description":"obtain peer-verified issues to inbox"
+          "number": "3",
+          "subtitle": "receive actionable reports online",
+          "description": "obtain peer-verified issues to inbox"
         }
       ]
     },
@@ -1169,7 +1166,7 @@
             "src": "/images/service-item-1.png",
             "loading": "lazy"
           },
-          "title":"web applications and services",
+          "title": "web applications and services",
           "description": "The review of web applications and services includes the audit of any service that uses web protocols, including web applications, APIs and websockets."
         },
         {
@@ -1518,6 +1515,147 @@
         "phonePlaceholder": "Phone",
         "send": "Send"
       }
+    }
+  },
+  "plans": {
+    "metadata": {
+      "title": "Codefend Plans: Advanced Protection Against Vulnerabilities and Threats",
+      "description": "Discover Codefend's security plans designed for startups, medium, and large businesses. Protect your business with vulnerability assessments, continuous pentesting, and dedicated cybersecurity experts. Choose the ideal plan and strengthen your company's security today."
+    },
+    "content": {
+      "title": "Worried about your company's security?",
+      "description": [
+        {
+          "text": "Plans for small and medium-sized businesses!",
+          "bold": true,
+          "color": "#fff"
+        },
+        {
+          "text": "If you don't have the necessary budget for a full evaluation,",
+          "bold": false,
+          "color": "#fff"
+        },
+        {
+          "text": "we can start evaluating your company right now,",
+          "bold": true,
+          "color": "var(--text-color-alt2)"
+        },
+        {
+          "text": "create a user on Codefend now,",
+          "bold": false,
+          "color": "#fff"
+        },
+        {
+          "text": "and discover a new way to detect vulnerabilities and threats. Try it now!",
+          "bold": true,
+          "color": "var(--text-color-alt2)"
+        }
+      ],
+      "btn": "Start now",
+      "planItems": [
+        {
+          "delay": 0.5,
+          "title": "Small Business",
+          "price": "$299",
+          "subtitle": "basic monthly subscription",
+          "subtitle2": "annual subscription discount to $2,999",
+          "attr": "",
+          "items": [
+            {
+              "text": "Recommended for startups and new businesses",
+              "bold": true
+            },
+            {
+              "text": "One-time pentest: $3,870 - one report",
+              "bold": false
+            },
+            {
+              "text": "Annual subscription: $38,700",
+              "bold": false
+            },
+            {
+              "text": "Includes 3 weeks of pentest + 1 week of reporting",
+              "bold": false
+            },
+            {
+              "text": "Dedicated hacker assignment according to your needs",
+              "bold": true
+            }
+          ]
+        },
+        {
+          "delay": 0.7,
+          "title": "Medium Plan",
+          "price": "$699",
+          "subtitle": "intermediate monthly subscription",
+          "subtitle2": "annual subscription discount to $6,999",
+          "attr": "Most selected service",
+          "items": [
+            {
+              "text": "Recommended for medium-sized businesses",
+              "bold": true
+            },
+            {
+              "text": "Recommended for CI/CD",
+              "bold": false
+            },
+            {
+              "text": "Permanent security surveillance, continuous pentest",
+              "bold": true
+            },
+            {
+              "text": "Export security reports at any time",
+              "bold": false
+            },
+            {
+              "text": "Dedicated hacker assignment according to your needs",
+              "bold": false
+            },
+            {
+              "text": "Includes 3 weeks of pentest + 1 week of reporting",
+              "bold": true
+            }
+          ]
+        },
+        {
+          "delay": 1,
+          "title": "Advanced Plan",
+          "price": "$999",
+          "subtitle": "4 weeks $13,500 / monthly billing",
+          "subtitle2": "subscription discount to $9,999",
+          "attr": "",
+          "items": [
+            {
+              "text": "Recommended for established businesses",
+              "bold": true
+            },
+            {
+              "text": "Recommended for CI/CD",
+              "bold": false
+            },
+            {
+              "text": "Export security reports at any time",
+              "bold": false
+            },
+            {
+              "text": "Permanent security surveillance, continuous pentest",
+              "bold": true
+            },
+            {
+              "text": "Dedicated hacker assignment according to your needs",
+              "bold": false
+            },
+            {
+              "text": "Includes 3 weeks of pentest + 1 week of reporting",
+              "bold": false
+            },
+            {
+              "text": "Dedicated hacker assignment according to your needs",
+              "bold": true
+            }
+          ]
+        }
+      ]
     }
   }
 }
