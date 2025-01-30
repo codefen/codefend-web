@@ -1,8 +1,10 @@
 
+import { useLocales } from "../../store/useLocales";
 import Occupation from "./occupation";
 import Probability from "./probability";
 
 const Promo = () => {
+    const { t } = useLocales('')
     const handleSlider = (event) => {
         const idButton = event.target.id
         const sliderPromo = document.querySelector('.promo_slider')
@@ -24,8 +26,8 @@ const Promo = () => {
                         <button onClick={handleSlider} className="handle_slider" id="slider-after">&gt;</button>
                     </div>
                     <div className="promo_slider">
-                        <Occupation />
-                        <Probability />
+                        <Occupation t={t("promo.promoSlider.occupation")}/>
+                        <Probability t={t("promo.promoSlider.probability")}/>
                     </div>
                 </div>
             </section>

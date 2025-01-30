@@ -1,27 +1,25 @@
-const Occupation = () => {
+const Occupation = ({t}) => {
     return (
- 
             <div className="occupation-contain">
-                    <p className="occupation-title">profesional hackers on demand</p>
+                    <p className="occupation-title">{t.title}</p>
                     <div className="bar_services">
                         <ul>
-                            <li>network security</li>
-                            <li>website security</li>
-                            <li>application's security</li>
-                            <li>api's security</li>
-                            <li>on demand solutions</li>
+                            {
+                                t.barItems.map((item, i)=> <li key={i}>{item}</li> )
+                            }
                         </ul>
                         <div className="connections">
-                            <span>fueled by crowd intelience</span>
+                            <span>{t.connections[0]}</span>
                             <hr />
-                            <span>enhanced with big data</span>
+                            <span>{t.connections[1]}</span>
                         </div>
                     </div>
                     <div className="occupation-price">
-                        <span>$1.500</span>
+                        <span>{t.occupation_price.price}</span>
                         <div className="occupation-price_extra">
-                            <span>per month + </span>
-                            <span>per bitcoin accepted</span>
+                            {t.occupation_price.priceText.map((text, index) => (
+                                <span key={index}>{text}</span>
+                            ))}
                         </div>
                     </div>
             </div>

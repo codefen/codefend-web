@@ -6,18 +6,19 @@ import Section3 from "./section-3";
 import Section4 from "./section-4";
 import Section5 from "./section-5";
 import Steps from "./steps";
-
+import {useLocales} from "../../store/useLocales"
 
 const NewHome = () => {
+    const { t } = useLocales()
     return (
         <>
-            <NewHero />
-            <Steps />
-            <Section1 />
-            <Section2 />
-            <Section3 />
-            <Section4 />
-            <Section5 />
+            <NewHero t={t("newHome.hero")} />
+            <Steps t={t("newHome.steps")} />
+            <Section1 t={t("newHome.section_1")} />
+            <Section2 t={t("newHome.section_2")} />
+            <Section3 t={t("newHome.section_3")} />
+            <Section4 t={t("newHome.section_4")} />
+            <Section5 t={t("newHome.section_5")} />
         </>
     )
 } 

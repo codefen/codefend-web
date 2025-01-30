@@ -2229,7 +2229,7 @@ section.promo {
       justify-content: space-between;
       .handle_slider {
         color: #fff;
-        z-index: 99;
+        z-index: 10;
         font-size: 40px;
         width: 5rem;
         border-radius: 10px;
@@ -2591,6 +2591,7 @@ section.enciclopedia {
   text-decoration: none;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 0px 23px;
   box-shadow: 0 0 14px #00000044;
   transition: all 0.2s;

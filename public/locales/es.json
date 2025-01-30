@@ -249,6 +249,14 @@
           ]
         },
         {
+          "section": "Otros",
+          "items": [
+            { "label": "promoción", "path": "/promo" },
+            { "label": "enciclopedia", "path": "/enciclopedia" },
+            { "label": "nueva página de inicio", "path": "/newhome" }
+          ]
+        },
+        {
           "section": "Producto",
           "items": [
             { "label": "nuestro software", "href": "/software" },
@@ -1000,6 +1008,389 @@
         },
         "send": "Enviar",
         "sending": "Enviando..."
+      }
+    }
+  },
+  "promo": {
+    "metadata": {
+      "title": "Acerca de Codefend: Conoce las Mentes Detrás de las Soluciones de Ciberseguridad de Codefend",
+      "description": "Descubre cómo Codefend une investigación avanzada en ciberseguridad, servicios y experiencia en una sola plataforma. Conoce a nuestro equipo, liderado por veteranos de la industria, mientras te ayudamos a proteger tus activos y mantener una seguridad robusta para tu organización."
+    },
+    "promoSlider": {
+      "occupation": {
+        "title": "hackers profesionales bajo demanda",
+        "barItems": [
+          "seguridad de redes",
+          "seguridad de sitios web",
+          "seguridad de aplicaciones",
+          "seguridad de apis",
+          "soluciones bajo demanda"
+        ],
+        "connections": [
+          "impulsado por inteligencia colectiva",
+          "potenciado con big data"
+        ],
+        "occupation_price": {
+          "price": "$1.500",
+          "priceText": [
+            "por mes + ",
+            "por bitcoin aceptado"
+          ]
+        }
+      },
+      "probability": {
+        "title": "¿cómo estimar el valor de una vulnerabilidad de seguridad?",
+        "probability_cards": {
+          "probability_card_1": {
+            "percentege": {
+              "number": "30%",
+              "description": "Una vulnerabilidad crítica, con una puntuación CVSS entre 9 y 10, podría costar hasta $2,000,000 USD. Esto representa un 30% de diferencia entre 2018 y 2019."
+            },
+            "img": {
+              "alt": "estadísticas",
+              "src": "/images/graphics.png"
+            },
+            "link": "fuente de datos: www.zerodium.com"
+          },
+          "probability_card_2": {
+            "items": [
+              {
+                "img": {
+                  "loading": "lazy",
+                  "alt": "icono de reloj",
+                  "src": "/images/promo-item-1.png"
+                },
+                "title": "Valoración de vulnerabilidades",
+                "description": "Hasta hoy, no existe un enfoque sistemático para valorar el precio de una vulnerabilidad. Por ello, es común estimar su valor en proporción a su impacto potencial y el riesgo asociado."
+              },
+              {
+                "img": {
+                  "loading": "lazy",
+                  "alt": "icono de reloj",
+                  "src": "/images/promo-item-2.png"
+                },
+                "title": "riesgo implícito",
+                "description": "En primera instancia, se evalúa el potencial de la vulnerabilidad. Naturalmente, cuanto mayores sean sus implicaciones, mayor será su peso y clasificación. Es común el uso de sistemas de puntuación."
+              },
+              {
+                "img": {
+                  "loading": "lazy",
+                  "alt": "imagen de persona cayendo",
+                  "src": "/images/promo-item-3.png"
+                },
+                "title": "usuarios afectados",
+                "description": "Una vez evaluada la vulnerabilidad, también debemos considerar el número de usuarios afectados. Una vulnerabilidad en una aplicación sin usuarios no tiene valor."
+              }
+            ]
+          }
+        },
+        "button": {
+          "text": "Analizar mi negocio"
+        }
+      }
+    }
+  },
+  "encyclopedia": {
+    "sidebar": {
+      "application_bugs": {
+        "title": "errores de aplicación y vulnerabilidades",
+        "items": [
+          "cross-site scripting",
+          "cross-site request forgery",
+          "inyecciones de XPath",
+          "inyecciones de SQL"
+        ]
+      },
+      "hacker_techniques": {
+        "title": "técnicas empleadas por hackers",
+        "items": [
+          "desbordamiento de caché",
+          "división de respuesta HTTP",
+          "envenenamiento de caché",
+          "división de respuesta HTTP",
+          "envenenamiento de caché",
+          "desbordamiento de caché",
+          "división de respuesta HTTP",
+          "envenenamiento de caché",
+          "división de respuesta HTTP",
+          "envenenamiento de caché",
+          "desbordamiento de caché",
+          "división de respuesta HTTP"
+        ]
+      }
+    },
+    "encyclopedia_card": {
+      "sections": [
+        {
+          "title": "monitoreo permanente de infraestructura",
+          "description": "Creemos que la seguridad debe gestionarse como un proceso continuo. Brindamos vigilancia permanente en lugar de revisiones anuales. Las vulnerabilidades detectadas se notifican bajo demanda a través de nuestra plataforma."
+        },
+        {
+          "title": "informes exprés",
+          "description": "Las empresas de seguridad comunes realizan escaneos una vez al año. En cambio, nosotros realizamos análisis diarios. Además, no perdemos un minuto en comunicar una falla: abordamos los problemas tan pronto como podemos."
+        }
+      ],
+      "button": "Analizar mi negocio"
+    }
+  },
+  "newHome": {
+    "hero": {
+      "title": "servicios de vigilancia",
+      "description": "protección de datos y dispositivos 100% en línea y sin complicaciones"
+    },
+    "steps": {
+      "steps_contain": [
+        {
+          "number": "1",
+          "subtitle": "completa el formulario de registro en línea",
+          "description": "rellena el formulario con tus datos"
+        },
+        {
+          "number": "2",
+          "subtitle": "elige la membresía adecuada",
+          "description": "100% en línea y sin complicaciones"
+        },
+        {
+          "number": "3",
+          "subtitle": "recibe informes accionables en línea",
+          "description": "obtén problemas verificados por expertos en tu bandeja de entrada"
+        }
+      ]
+    },
+    "section_1": {
+      "items_contain": [
+        {
+          "img": {
+            "alt": "imagen de laptop",
+            "src": "/images/service-item-1.png",
+            "loading": "lazy"
+          },
+          "title": "aplicaciones y servicios web",
+          "description": "La revisión de aplicaciones y servicios web incluye la auditoría de cualquier servicio que utilice protocolos web, incluyendo aplicaciones web, APIs y websockets."
+        },
+        {
+          "img": {
+            "alt": "imagen de celular",
+            "src": "/images/service-item-2.png",
+            "loading": "lazy"
+          },
+          "title": "aplicaciones móviles",
+          "description": "El análisis de aplicaciones móviles tiene como objetivo detectar vulnerabilidades que puedan exponer al usuario o a la empresa en la comunicación con el servidor de la aplicación."
+        },
+        {
+          "img": {
+            "alt": "imagen de servidor",
+            "src": "/images/service-item-3.png",
+            "loading": "lazy"
+          },
+          "title": "redes y servidores",
+          "description": "Análisis de redes y servidores externos que son accesibles desde la web, detección de servicios obsoletos, firewalls, routers o infraestructura de red con problemas."
+        }
+      ],
+      "info_contain": {
+        "title": "supervisión permanente",
+        "span": "detección temprana y monitoreo de vulnerabilidades",
+        "description": "Monitorea y detecta vulnerabilidades y cambios en los recursos digitales de tu organización. Monitoreo de aplicaciones web en tiempo real. Análisis periódico de tus aplicaciones y detección de vulnerabilidades.",
+        "img": {
+          "alt": "imagen de red",
+          "src": "/images/supervicion.png",
+          "loading": "lazy"
+        }
+      }
+    },
+    "section_2": {
+      "items": [
+        {
+          "img": {
+            "alt": "búsqueda de hackers",
+            "src": "/images/service-item-4.png",
+            "loading": "lazy"
+          },
+          "title": "01. Los hackers buscan vulnerabilidades",
+          "description": "Hackers profesionales buscan vulnerabilidades en el alcance definido, la investigación se lleva a cabo como un proceso permanente. Las vulnerabilidades son detectadas y reportadas por individuos o equipos."
+        },
+        {
+          "img": {
+            "alt": "vulnerabilidad identificada",
+            "src": "/images/service-item-5.png",
+            "loading": "lazy"
+          },
+          "title": "02. ¡Se identifica una vulnerabilidad!",
+          "description": "Después de una investigación adecuada, un hacker competente identifica una vulnerabilidad y la prueba para comprender sus riesgos e implicaciones."
+        },
+        {
+          "img": {
+            "alt": "reporte de vulnerabilidad",
+            "src": "/images/service-item-6.png",
+            "loading": "lazy"
+          },
+          "title": "03. Se crea un reporte de vulnerabilidad",
+          "description": "Una vez que se recopila toda la información, se crea nuestro reporte de vulnerabilidad con contenido detallado, que puede incluir medios, archivos adjuntos, pruebas de concepto y datos accionables."
+        },
+        {
+          "img": {
+            "alt": "validación de vulnerabilidad",
+            "src": "/images/service-item-7.png",
+            "loading": "lazy"
+          },
+          "title": "04. Validación de la vulnerabilidad",
+          "description": "La vulnerabilidad es confirmada por un proceso de verificación de pares, realizado de forma interna por personal de Codefen, cero por ciento de falsos positivos."
+        },
+        {
+          "img": {
+            "alt": "comunicación de vulnerabilidad",
+            "src": "/images/service-item-8.png",
+            "loading": "lazy"
+          },
+          "title": "05. Comunicación de la vulnerabilidad",
+          "description": "Después de ser validada por pares, la vulnerabilidad se comunica al instante para ser abordada y resuelta lo antes posible."
+        },
+        {
+          "img": {
+            "alt": "vulnerabilidad resuelta",
+            "src": "/images/service-item-9.png",
+            "loading": "lazy"
+          },
+          "title": "06. La vulnerabilidad es resuelta",
+          "description": "Resuelva de forma simple la vulnerabilidad, por medio de las indicaciones dadas. Si lo desea, puede pedir una revisión o ayuda desde la misma sección."
+        }
+      ]
+    },
+    "section_3": {
+      "img": {
+        "src": "/images/service-app.png",
+        "alt": "imagen de la aplicación de servicio",
+        "loading": "lazy"
+      },
+      "section_card": {
+        "items": [
+          {
+            "title": "monitoreo permanente de infraestructura",
+            "description": "Creemos que la seguridad debe manejarse como un proceso, por lo que ofrecemos vigilancia permanente en lugar de revisiones anuales. Las vulnerabilidades encontradas se notifican bajo demanda a través de nuestra plataforma."
+          },
+          {
+            "title": "reportes express",
+            "description": "Las empresas de seguridad comunes realizan escaneos una vez al año, en cambio, nosotros escaneamos diariamente. Además, no perdemos ni un minuto para comunicar una falla, abordamos los problemas lo antes posible."
+          }
+        ],
+        "button": "Analizar mi Negocio"
+      }
+    },
+    "section_4": {
+      "container": {
+        "cards": [
+          {
+            "title": "protección básica",
+            "subtitle": "¿tu WordPress ha sido hackeado?",
+            "price": {
+              "amount": "$150",
+              "billing": {
+                "monthly": "facturación mensual",
+                "yearly": "o $1,119 anual"
+              }
+            },
+            "features": [
+              "escaneos automatizados de vulnerabilidades",
+              "supervisión periódica del sistema",
+              "detección de malware",
+              "protección contra ransomware ✓",
+              "soporte técnico dedicado",
+              "cancelación en cualquier momento"
+            ],
+            "button": "comenzar membresía"
+          },
+          {
+            "title": "protección básica",
+            "subtitle": "¿tu WordPress ha sido hackeado?",
+            "price": {
+              "amount": "$450",
+              "billing": {
+                "monthly": "facturación mensual",
+                "yearly": "o $1,119 anual"
+              }
+            },
+            "features": [
+              "acceso a la plataforma",
+              "escaneo automatizado",
+              "escaneo personalizado",
+              "pruebas manuales básicas ✓",
+              "frecuencia: un solo escaneo",
+              "entregables: 1 solo reporte",
+              "duración del servicio: 4 semanas",
+              "alcance / superficie de ataque: pequeña"
+            ],
+            "button": "comenzar membresía"
+          },
+          {
+            "title": "protección avanzada",
+            "subtitle": "múltiples dominios",
+            "price": {
+              "amount": "$1,350",
+              "billing": {
+                "monthly": "facturación mensual",
+                "yearly": "o $1,119 anual"
+              }
+            },
+            "features": [
+              "escaneos automatizados de vulnerabilidades",
+              "supervisión periódica del sistema",
+              "detección de malware",
+              "protección contra ransomware ✓",
+              "soporte técnico dedicado",
+              "cancelación en cualquier momento"
+            ],
+            "button": "comenzar membresía"
+          }
+        ]
+      }
+    },
+    "section_5": {
+      "tabs": ["problemas", "recursos", "miembros"],
+      "content": [
+        {
+          "title": "problemas encontrados",
+          "items": [
+            {
+              "heading": "1.1 Supervisión de información ultrarrápida.",
+              "description": "¡Supervisión dinámica de infraestructura a través de una red grande y distribuida de profesionales! Descubre y soluciona vulnerabilidades con una facilidad sin precedentes."
+            },
+            {
+              "heading": "informes dinámicos, accionables y ricos en contenido",
+              "description": "¡Informes dinámicos listos para imprimir en todo momento! Los informes pueden incluir contenido multimedia, para una comprensión simple y eficaz de la vulnerabilidad."
+            }
+          ]
+        },
+        {
+          "title": "recursos encontrados",
+          "items": [
+            {
+              "heading": "1.1 Supervisión de información ultrarrápida.",
+              "description": "¡Supervisión dinámica de infraestructura a través de una red grande y distribuida de profesionales! Descubre y soluciona vulnerabilidades con una facilidad sin precedentes."
+            },
+            {
+              "heading": "informes dinámicos, accionables y ricos en contenido",
+              "description": "¡Informes dinámicos listos para imprimir en todo momento! Los informes pueden incluir contenido multimedia, para una comprensión simple y eficaz de la vulnerabilidad."
+            }
+          ]
+        },
+        {
+          "title": "miembros encontrados",
+          "items": [
+            {
+              "heading": "1.1 Supervisión de información ultrarrápida.",
+              "description": "¡Supervisión dinámica de infraestructura a través de una red grande y distribuida de profesionales! Descubre y soluciona vulnerabilidades con una facilidad sin precedentes."
+            },
+            {
+              "heading": "informes dinámicos, accionables y ricos en contenido",
+              "description": "¡Informes dinámicos listos para imprimir en todo momento! Los informes pueden incluir contenido multimedia, para una comprensión simple y eficaz de la vulnerabilidad."
+            }
+          ]
+        }
+      ],
+      "image": {
+        "alt": "Aplicación de Servicio",
+        "src": "/images/service-app-2.png",
+        "loading": "lazy"
       }
     }
   },

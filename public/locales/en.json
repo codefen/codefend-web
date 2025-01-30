@@ -1011,6 +1011,393 @@
       }
     }
   },
+  "promo": {
+    "metadata": {
+      "title": "Codefend About Us: Meet the Minds Behind Codefend's Cybersecurity Solutions",
+      "description": "Discover how Codefend unites cutting-edge cybersecurity research, services, and expertise on a single platform. Get to know our team, led by industry veterans, as we help you safeguard your assets and maintain robust security for your organization."
+    },
+    "promoSlider": {
+      "occupation": {
+          "title": "profesional hackers on demand",
+          "barItems": [
+            "network security",
+            "website security",
+            "application's security",
+            "api's security",
+            "on demand solutions"
+          ],
+          "connections": [
+            "fueled by crowd inteligence",
+            "enhanced with big data"
+          ],
+          "occupation_price": {
+            "price": "$1.500",
+            "priceText": [
+              "per month +",
+              "per bitcoin accepted"
+            ]
+          }
+      },
+      "probability": {
+        "title": "how to estimate the value of a security flaw?",
+        "probability_cards": {
+          "probability_card_1": {
+            "percentege": {
+              "number": "30%",
+              "description": "A critical vulnerability, with a cvss score between 9 and 10 could cost up to $2,000,000 usd. This represents a 30% difference between 2018 and 2019."
+            },
+            "img": {
+              "alt": "statistics",
+              "src": "/images/graphics.png"
+            },
+            "link": "data source: www.zerodium.com"
+          },
+          "probability_card_2": {
+            "items": [
+              {
+                "img": {
+                  "loading":"lazy",
+                  "alt": "clock icon",
+                  "src": "/images/promo-item-1.png"
+                },
+                "title": "Vulnerability valuation",
+                "description": "Until today, there’s no approach to systematically valuate the price of a vulnerability, hence it’s common to estimate it’s value in proportion to it’s potential impact and assosiated risk."
+              },
+              {
+                "img": {
+                  "loading":"lazy",
+                  "alt": "clock icon",
+                  "src": "/images/promo-item-2.png"
+                },
+                "title": "implicit risk",
+                "description": "In the first instance, the potential of the vulnerability is evaluated. Naturally, the greater the implications, the more its weight and classification increases. The use of scoring systems is common."
+              },
+              {
+                "img": {
+                  "loading":"lazy",
+                  "alt": "person falling image",
+                  "src": "/images/promo-item-3.png"
+                },
+                "title": "affected users",
+                "description": "Once the vulnerability has been evaluated, we must also consider the number of users affected by it; a vulnerability in an application without users has no value."
+              }
+            ]
+          }
+        },
+        "button": {
+          "text": "Analyze my business"
+        }
+      }
+    }
+  },
+  "encyclopedia": {
+    "metadata": {
+      "title": "Codefend About Us: Meet the Minds Behind Codefend's Cybersecurity Solutions",
+      "description": "Discover how Codefend unites cutting-edge cybersecurity research, services, and expertise on a single platform. Get to know our team, led by industry veterans, as we help you safeguard your assets and maintain robust security for your organization."
+    },
+    "sidebar": {
+      "application_bugs": {
+        "title": "application bugs and vulnerabilities",
+        "items": [
+          "cross-site scripting",
+          "cross-site request forgery",
+          "inyecciones de xpath",
+          "inyecciones de sql"
+        ]
+      },
+      "hacker_techniques": {
+        "title": "techniques employed by hackers",
+        "items": [
+          "cash overflow",
+          "HTTP response splitting",
+          "cache poisoning",
+          "HTTP response splitting",
+          "cache poisoning",
+          "cash overflow",
+          "HTTP response splitting",
+          "cache poisoning",
+          "HTTP response splitting",
+          "cache poisoning",
+          "cash overflow",
+          "HTTP response splitting"
+        ]
+      }
+    },
+    "encyclopedia_card": {
+      "sections": [
+        {
+          "title": "permanent infrastructure monitoring",
+          "description": "We believe security should be run as a process, we provide permanent surveillance instead of once-a-year checks. Vulnerabilities found are notified on demand through our platform."
+        },
+        {
+          "title": "express reporting",
+          "description": "Common security companies run scans once a year, instead, we scan on a daily basis. As well, we don’t waste a minute to communicate a flaw, we address issues as soon as we can."
+        }
+      ],
+      "button": "Analyze my Business"
+    }
+  },
+  "newHome": {
+    "hero": {
+      "title":"survelliance services",
+      "description":"100% online & hassle-free end-point & data protection"
+    },
+    "steps": {
+      "steps_contain": [
+        {
+          "number":"1",
+          "subtitle":"complete the online sign up form",
+          "description":"complete the form with your details"
+        },
+        {
+          "number":"2",
+          "subtitle":"choose the right membership",
+          "description":"100% online and hassle-free"
+        },
+        {
+          "number":"3",
+          "subtitle":"receive actionable reports online",
+          "description":"obtain peer-verified issues to inbox"
+        }
+      ]
+    },
+    "section_1": {
+      "items_contain": [
+        {
+          "img": {
+            "alt": "lapton img",
+            "src": "/images/service-item-1.png",
+            "loading": "lazy"
+          },
+          "title":"web applications and services",
+          "description": "The review of web applications and services includes the audit of any service that uses web protocols, including web applications, APIs and websockets."
+        },
+        {
+          "img": {
+            "alt": "celphone img",
+            "src": "/images/service-item-2.png",
+            "loading": "lazy"
+          },
+          "title": "mobile applications",
+          "description": "The analysis of mobile applications aims to detect vulnerabilities that may expose the user or the company in server application communication."
+        },
+        {
+          "img": {
+            "alt": "server img",
+            "src": "/images/service-item-3.png",
+            "loading": "lazy"
+          },
+          "title": "networks and servers",
+          "description": "Analysis of networks and external servers which are accessible from the web, detection of outdated services, firewalls, routers or network infrastructure with problems."
+        }
+      ],
+      "info_contain": {
+        "title": "permanent supervision",
+        "span": "early detection and monitoring of vulnerabilities",
+        "description": "Monitor and detect vulnerabilities and changes in your organization's digital resources. Monitoring web applications in real time. Periodic analysis of your applications and detection of vulnerabilities.",
+        "img": {
+          "alt": "network image",
+          "src": "/images/supervicion.png",
+          "loading": "lazy"
+        }
+      }
+    },
+    "section_2": {
+      "items": [
+        {
+          "img": {
+            "alt": "hackers search",
+            "src": "/images/service-item-4.png",
+            "loading": "lazy"
+          },
+          "title": "01. hackers search for vulnerabilities",
+          "description": "Professional hackers search for vulnerabilities in the defined scope, the research is conducted as a permanent process. Vulnerabilities are detected and reported by individuals or teams."
+        },
+        {
+          "img": {
+            "alt": "vulnerability identified",
+            "src": "/images/service-item-5.png",
+            "loading": "lazy"
+          },
+          "title": "02. A vulnerability is identified!",
+          "description": "After some proper research, a vulnerability is identified by a meritful hacker and is tested in order to understand its risks and implications."
+        },
+        {
+          "img": {
+            "alt": "vulnerability report",
+            "src": "/images/service-item-6.png",
+            "loading": "lazy"
+          },
+          "title": "03. vulnerability report is created",
+          "description": "Once all the information is collected, our content-rich vulnerability report is created, which may include media, attachments, proof of concepts and actionable data."
+        },
+        {
+          "img": {
+            "alt": "vulnerability validation",
+            "src": "/images/service-item-7.png",
+            "loading": "lazy"
+          },
+          "title": "04. vulnerability validation",
+          "description": "La vulnerabilidad es confirmada por un proceso de verificación de pares, realizado de forma interna por personal de Codefen, cero porciento false positives."
+        },
+        {
+          "img": {
+            "alt": "vulnerability communication",
+            "src": "/images/service-item-8.png",
+            "loading": "lazy"
+          },
+          "title": "05. vulnerability communication",
+          "description": "Después de ser validada por pares, la vulnerabilidad se comunica al instante para ser abordada y resuelta lo antes posible."
+        },
+        {
+          "img": {
+            "alt": "vulnerability fixed",
+            "src": "/images/service-item-9.png",
+            "loading": "lazy"
+          },
+          "title": "06. vulnerability is fixed",
+          "description": "Resuelva de forma simple la vulnerabilidad, por medio de las indicaciones dadas. Si lo desea, puede pedir una revisión o ayuda desde la misma sección!"
+        }
+      ]
+    },
+    "section_3": {
+      "img": {
+        "src": "/images/service-app.png",
+        "alt": "service app image",
+        "loading": "lazy"
+      },
+      "section_card": {
+        "items": [
+          {
+            "title": "permanent infrastructure monitoring",
+            "description": "We believe security should be run as a process, we provide permanent surveillance instead of once-a-year checks. Vulnerabilities found are notified on demand through our platform."
+          },
+          {
+            "title": "express reporting",
+            "description": "Common security companies run scans once a year, instead we scan on a daily basis. As well, we don’t waste a minute to communicate a flaw, we address issues as soon as we can."
+          }
+        ],
+        "button": "Analyze my Business"
+      }
+    },
+    "section_4": {
+      "container": {
+        "cards": [
+          {
+            "title": "basic protection",
+            "subtitle": "has your wordpress been hacked",
+            "price": {
+              "amount": "$150",
+              "billing": {
+                "monthly": "monthly billed",
+                "yearly": "or $1,119 yearly"
+              }
+            },
+            "features": [
+              "automated vulnerability scans",
+              "periodic system supervision",
+              "malware detection",
+              "ransomware protection ✓",
+              "dedicated technical support",
+              "cancellation at any time"
+            ],
+            "button": "start membership"
+          },
+          {
+            "title": "basic protection",
+            "subtitle": "has your wordpress been hacked",
+            "price": {
+              "amount": "$450",
+              "billing": {
+                "monthly": "monthly billed",
+                "yearly": "or $1,119 yearly"
+              }
+            },
+            "features": [
+              "Platform access",
+              "Automated scan",
+              "Custom scan",
+              "Basic Manual testing ✓",
+              "Frequency: one single scan",
+              "Deliverables: 1 single report",
+              "Service duration: 4 weeks",
+              "Scope / attack surface: small"
+            ],
+            "button": "start membership"
+          },
+          {
+            "title": "advance protection",
+            "subtitle": "multiple domains",
+            "price": {
+              "amount": "$1,350",
+              "billing": {
+                "monthly": "monthly billed",
+                "yearly": "or $1,119 yearly"
+              }
+            },
+            "features": [
+              "automated vulnerability scans",
+              "periodic system supervision",
+              "malware detection",
+              "ransomware protection ✓",
+              "dedicated technical support",
+              "cancellation at any time"
+            ],
+            "button": "start membership"
+          }
+        ]
+      }
+    },
+    "section_5": {
+      "tabs": ["issues", "resources", "members"],
+      "content": [
+        {
+          "title": "found issues",
+          "items": [
+            {
+              "heading": "1.1 lighting fast information survilliance.",
+              "description": "Dynamic infrastructure supervision through a large and distributed network of professionals! Discover and fix vulnerabilities with unprecedented ease."
+            },
+            {
+              "heading": "dynamic, actionable & content-rich reports",
+              "description": "Informes dinámicos listos para imprimir en todo momento! Los informes pueden incluir contenido multimedia, para una comprensión simple y eficaz de la vulnerabilidad."
+            }
+          ]
+        },
+        {
+          "title": "found resources",
+          "items": [
+            {
+              "heading": "1.1 lighting fast information survilliance.",
+              "description": "Dynamic infrastructure supervision through a large and distributed network of professionals! Discover and fix vulnerabilities with unprecedented ease."
+            },
+            {
+              "heading": "dynamic, actionable & content-rich reports",
+              "description": "Informes dinámicos listos para imprimir en todo momento! Los informes pueden incluir contenido multimedia, para una comprensión simple y eficaz de la vulnerabilidad."
+            }
+          ]
+        },
+        {
+          "title": "found members",
+          "items": [
+            {
+              "heading": "1.1 lighting fast information survilliance.",
+              "description": "Dynamic infrastructure supervision through a large and distributed network of professionals! Discover and fix vulnerabilities with unprecedented ease."
+            },
+            {
+              "heading": "dynamic, actionable & content-rich reports",
+              "description": "Informes dinámicos listos para imprimir en todo momento! Los informes pueden incluir contenido multimedia, para una comprensión simple y eficaz de la vulnerabilidad."
+            }
+          ]
+        }
+      ],
+      "image": {
+        "alt": "Service App",
+        "src": "/images/service-app-2.png",
+        "loading": "lazy"
+      }
+    }
+  },
   "calculator": {
     "metadata": {
       "title": "Codefend Pricing: Customized Cybersecurity Penetration Testing Services",
