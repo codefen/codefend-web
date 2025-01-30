@@ -7,9 +7,10 @@
   --text-al: center;
 
   overflow: hidden;
-  background: #090909;
+  background: #111111;
   color: #fff;
   padding: 0px;
+  container-type: inline-size;
 }
 
 .wrapper {
@@ -23,17 +24,20 @@
 
   &::after {
     content: " ";
-    position: absolute;
-    background-image: url("/images/cryptobanner.webp");
+    background-image: url("/images/btc-bkg.jpg");
     background-repeat: no-repeat;
-    background-size: 600px;
-    background-position: 80%;
     width: 100%;
-    max-width: 1848px;
     height: 100%;
     mask-image: linear-gradient(var(--color-black-200) 70%, transparent 100%);
     z-index: 1;
     display: var(--banner-img-display);
+    max-width: 1900px;
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-size: 115cqh;
+    position: absolute;
+    max-height: 385px;
+    overflow: hidden;
   }
 }
 
@@ -134,5 +138,11 @@
 @media only screen and (max-width: 1300px) {
   .wrapper::after {
     right: -100px;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .wrapper::after {
+    margin-inline-start: 55rem;
   }
 }
