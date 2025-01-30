@@ -51,7 +51,7 @@
       "buttons": [
         {
           "class": "btn alt",
-          "path": "/about-us",
+          "path": "about-us",
           "hash": "#contact",
           "label": "contacto",
           "action": "scrollToContact",
@@ -249,15 +249,15 @@
           "items": [
             {
               "label": "servicios",
-              "href": "/services"
+              "path": "/services"
             },
             {
               "label": "cumplimiento",
-              "href": "/compliance"
+              "path": "/compliance"
             },
             {
               "label": "industrias",
-              "href": "/industries"
+              "path": "/industries"
             }
           ]
         },
@@ -283,7 +283,7 @@
           "items": [
             {
               "label": "nuestro software",
-              "href": "/software"
+              "path": "/software"
             },
             {
               "label": "crear cuenta",
