@@ -1,7 +1,7 @@
 import { useState } from "react";
 import animation from "../styles/animation.module.css";
 
-const TestimonialCard = ({ description, image, profile, name, rol }) => {
+const TestimonialCard = ({ description, image, profile, name, role }) => {
   const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   const handleImageLoad = () => {
@@ -53,7 +53,7 @@ const TestimonialCard = ({ description, image, profile, name, rol }) => {
               <br />
             </>
           )}
-          <span aria-label="Role">{rol}</span>
+          <span aria-label="Role">{role}</span>
         </p>
       </div>
     </article>
