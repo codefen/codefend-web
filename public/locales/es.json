@@ -342,20 +342,20 @@
           "bold": false
         }
       ],
-      "cta": "¡Solicita una prueba de penetración ahora!",
+      "cta": "ver planes pequeños!",
       "features": [
-        "Herramientas únicas",
-        "Suplantación de CID",
-        "Intercepción SS7",
-        "Drenadores Web3",
-        "Seguridad web",
-        "Escaneos gratuitos ilimitados",
+        "Unique tools",
+        "Cid spoofing",
+        "SS7 interception",
+        "Web3 drainers",
+        "Web security",
+        "Unlimited free scans",
         "Crackmapexecute",
-        "Impact y cobalt strike",
+        "Impact & cobalt strike",
         "Brute ratel",
-        "Fugas privadas",
-        "El router de cebolla",
-        "Proyecto de Internet Invisible"
+        "Private leaks",
+        "The onion router",
+        "Invisible Internet Project"
       ]
     },
     "highlights": {
@@ -1572,22 +1572,22 @@
       "title": "Preocupado por la seguridad de su empresa?",
       "description": [
         {
-          "text": "Planes para paquetes y medianas empresas!",
+          "text": "Planes para paquetes y medianas empresas! ",
           "bold": true,
           "color": "#fff"
         },
         {
-          "text": "Si no dispones del presupuesto necesario para comprar un evaluacion completa,",
+          "text": "Si no dispones del presupuesto necesario para comprar un evaluacion completa, ",
           "bold": false,
           "color": "#fff"
         },
         {
-          "text": "podemos comenzar a evaluar tu empresa ahora mismo,",
+          "text": "podemos comenzar a evaluar tu empresa ahora mismo, ",
           "bold": true,
           "color": "var(--text-color-alt2)"
         },
         {
-          "text": "crea ahora un usuario en codefend,",
+          "text": "crea ahora un usuario en codefend, ",
           "bold": false,
           "color": "#fff"
         },
@@ -1612,19 +1612,23 @@
               "bold": true
             },
             {
-              "text": "Pentest puntual: $3,870 - un informe",
+              "text": "1 hora diaria de revisión y análisis manual!",
               "bold": false
             },
             {
-              "text": "Suscripción anual: $38,700",
+              "text": "Escaneo automatizado de vulnerabilidades.",
               "bold": false
             },
             {
-              "text": "Incluye 3 semanas de pentest + 1 semana de informe",
+              "text": "Protección 24/7 contra amenazas de seguridad",
               "bold": false
             },
             {
-              "text": "Asignación de hacker dedicado según tus necesidades",
+              "text": "Exportar informes de seguridad en cualquier momento",
+              "bold": false
+            },
+            {
+              "text": "Asignación de hacker dedicado su empresa.",
               "bold": true
             }
           ]
@@ -1632,7 +1636,7 @@
         {
           "delay": 0.7,
           "title": "Plan mediano",
-          "price": "$699",
+          "price": "$499 * mes",
           "subtitle": "suscripción mensual intermedia",
           "subtitle2": "descuento en suscripción anual a $6,999",
           "attr": "Servicio más seleccionado",
@@ -1642,7 +1646,15 @@
               "bold": true
             },
             {
+              "text": "3 a 4 horas diarias de revisión y análisis manual!",
+              "bold": true
+            },
+            {
               "text": "Recomendado para CI/CD",
+              "bold": false
+            },
+            {
+              "text": "Escaneo automatizado de vulnerabilidades.",
               "bold": false
             },
             {
@@ -1654,11 +1666,7 @@
               "bold": false
             },
             {
-              "text": "Asignación de hacker dedicado según tus necesidades",
-              "bold": false
-            },
-            {
-              "text": "Incluye 3 semanas de pentest + 1 semana de informe",
+              "text": "Asignación 2 hackers dedicados su empresa.",
               "bold": true
             }
           ]
@@ -1676,11 +1684,15 @@
               "bold": true
             },
             {
-              "text": "Recomendado para CI/CD",
+              "text": "8 horas diarias de revisión y análisis manual!",
               "bold": false
             },
             {
-              "text": "Exportar informes de seguridad en cualquier momento",
+              "text": "Recomendado para CI/CD de alta frecuencia",
+              "bold": false
+            },
+            {
+              "text": "Escaneo automatizado de vulnerabilidades.",
               "bold": false
             },
             {
@@ -1688,16 +1700,20 @@
               "bold": true
             },
             {
-              "text": "Asignación de hacker dedicado según tus necesidades",
+              "text": "Exportar informes de seguridad en cualquier momento",
               "bold": false
             },
             {
-              "text": "Incluye 3 semanas de pentest + 1 semana de informe",
-              "bold": false
-            },
-            {
-              "text": "Asignación de hacker dedicado según tus necesidades",
+              "text": "Asignación 3 a 4 hackers dedicados su empresa.",
               "bold": true
+            },
+            {
+              "text": "Soporte técnico para vulnerabilidades.",
+              "bold": false
+            },
+            {
+              "text": "Rechecks ilimitados.",
+              "bold": false
             }
           ]
         }
