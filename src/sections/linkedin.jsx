@@ -37,7 +37,7 @@ const Linkedin = () => {
                       key={`${testimonial.name}-${i}`}
                       name={testimonial.name}
                       image={testimonial.image}
-                      rol={testimonial.rol}
+                      role={testimonial.role}
                       description={testimonial.description}
                     />
                   ))}
