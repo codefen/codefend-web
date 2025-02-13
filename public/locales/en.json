@@ -975,7 +975,8 @@
         "messages": {
           "successMessage": "Form submitted successfully!",
           "successErrorMessage": "Submission failed. Please try again.",
-          "errorMessage": "An error occurred. Please try again."
+          "errorMessage": "An error occurred. Please try again.",
+          "required": "All fields are required"
         },
         "inputs": {
           "lead_fname": "First name",

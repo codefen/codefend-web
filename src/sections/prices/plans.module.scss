@@ -113,9 +113,8 @@ section.prices {
       }
     }
 
-    button {
+    a {
       border: none;
-      background: var(--text-color-alt4);
       padding: 1em;
       max-width: 13em;
       margin-right: auto;
@@ -125,6 +124,8 @@ section.prices {
       font-size: 18px;
       border-radius: 3px;
       margin-block-start: auto;
+      height: auto;
+      min-height: auto;
     }
   }
 

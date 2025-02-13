@@ -4,14 +4,59 @@ import { RenderTextBold } from "../components/RenderTextBold";
 import { Link } from "react-router-dom";
 
 const MainDiferences = ({ t, locale }) => {
+  const fadeInUp = {
+    hidden: {
+      opacity: 0,
+      y: 20,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const staggeredFadeIn = {
+    hidden: {
+      opacity: 0,
+      x: 15,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const fadeIn = {
+    hidden: {
+      opacity: 0,
+      y: 5,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.7,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
     <section className="main-differences">
       <div className="container">
         <motion.div
           initial="hidden"
           whileInView="visible"
-          variants={slideTransition}
-          viewport={{ once: true }}
+          variants={fadeIn}
+          viewport={{ once: true, margin: "-50px" }}
           className="copy"
         >
           <h2>{t.title}</h2>
@@ -19,15 +64,15 @@ const MainDiferences = ({ t, locale }) => {
         </motion.div>
         <div className="c-2">
           <motion.div
-            initial={{ y: "50vh", opacity: 0 }}
+            initial={{ opacity: 0 }}
             whileInView={{
-              y: "0",
-              opacity: [0.0, 1],
+              opacity: 1,
               transition: {
-                duration: 0.6,
+                duration: 0.8,
+                ease: "easeOut",
               },
             }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-50px" }}
             className="image"
           >
             <img
@@ -43,20 +88,24 @@ const MainDiferences = ({ t, locale }) => {
                   key={`${index}-${item.title}`}
                   className="item"
                   viewport={{ once: true }}
-                  initial={{ x: 70, opacity: 0 }}
+                  initial={{ opacity: 0 }}
                   whileInView={{
-                    x: 0,
                     opacity: 1,
                     transition: {
-                      duration: 2,
-                      delay: item.delay,
-                      type: "spring",
-                      bounce: 0.6,
+                      delay: index * 0.1,
+                      duration: 0.5,
+                      ease: "easeOut",
                     },
                   }}
                 >
                   <div>
-                    <img src={item.icon} loading="lazy" decoding="async" itemProp="image" alt="icon-img" />
+                    <img
+                      src={item.icon}
+                      loading="lazy"
+                      decoding="async"
+                      itemProp="image"
+                      alt="icon-img"
+                    />
                   </div>
                   <p>
                     <b>{item.title}</b>
@@ -73,31 +122,34 @@ const MainDiferences = ({ t, locale }) => {
               ))}
             </ul>
             <div className="buttons">
-              {t.buttons.map((button, index) => button?.path ? (
-                <Link
-                  key={`fb-${index}`}
-                  className={`btn ${button.type}`}
-                  to={{
-                    pathname: `/${locale}/${button.path}`,
-                    hash: button.hash,
-                  }}
-                  state={button?.action ? { [button.action]: true } : undefined}
-                >
-                  {button.text}
-                </Link>
-              ) : (
-                <a
-                  key={index}
-                  href={button.link}
-                  className={`btn ${button.type}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {button.text}
-                </a>
-              ))}
+              {t.buttons.map((button, index) =>
+                button?.path ? (
+                  <Link
+                    key={`fb-${index}`}
+                    className={`btn ${button.type}`}
+                    to={{
+                      pathname: `/${locale}/${button.path}`,
+                      hash: button.hash,
+                    }}
+                    state={
+                      button?.action ? { [button.action]: true } : undefined
+                    }
+                  >
+                    {button.text}
+                  </Link>
+                ) : (
+                  <a
+                    key={index}
+                    href={button.link}
+                    className={`btn ${button.type}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {button.text}
+                  </a>
+                )
+              )}
             </div>
-
           </div>
         </div>
       </div>

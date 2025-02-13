@@ -5,12 +5,14 @@
   --banner-img-display: none;
   --padding-inline: 2.2vw;
   --text-al: center;
+  --min-bg-container-size: 60cqw;
 
   overflow: hidden;
   background: #111111;
   color: #fff;
   padding: 0px;
   container-type: inline-size;
+  box-shadow: 0px -5px 19px 4px #18181894;
 }
 
 .wrapper {
@@ -34,7 +36,7 @@
     max-width: 1900px;
     background-position: 100%;
     background-repeat: no-repeat;
-    background-size: 115cqh;
+    background-size: min(var(--min-bg-container-size), 66rem) min(60cqh, 30rem);
     position: absolute;
     max-height: 385px;
     overflow: hidden;
@@ -135,14 +137,8 @@
   }
 }
 
-@media only screen and (max-width: 1300px) {
-  .wrapper::after {
-    right: -100px;
-  }
-}
-
-@media only screen and (min-width: 2600px) {
-  .wrapper::after {
-    margin-inline-start: 55rem;
+@media only screen and (min-width: 1480px) {
+  .cryptoSection {
+    --min-bg-container-size: 58cqw;
   }
 }

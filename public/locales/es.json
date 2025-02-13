@@ -999,7 +999,8 @@
         "messages": {
           "successMessage": "¡Formulario enviado con éxito!",
           "successErrorMessage": "Error en el envío. Por favor, inténtelo de nuevo.",
-          "errorMessage": "Ocurrió un error. Por favor, inténtelo de nuevo."
+          "errorMessage": "Ocurrió un error. Por favor, inténtelo de nuevo.",
+          "required": "Todos los campos son obligatorios."
         },
         "inputs": {
           "lead_fname": "Nombre",

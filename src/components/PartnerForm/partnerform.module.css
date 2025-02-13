@@ -12,6 +12,7 @@ article.partneforFormContainer {
 
   p {
     margin: 0;
+    font-family: "Questrial";
   }
 }
 
@@ -21,6 +22,7 @@ form.partnerForm {
   flex-direction: column;
   width: 100%;
   row-gap: 1.25rem;
+  font-family: "Questrial";
 
   input {
     background-color: transparent;
@@ -48,6 +50,7 @@ form.partnerForm {
     color: #fff;
     font-size: var(--text-large);
     font-weight: 600;
+    font-family: "Questrial";
     border-radius: 0.25rem;
     text-align: center;
     height: 55px;

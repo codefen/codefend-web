@@ -71,7 +71,13 @@ export default function Plans({ t }) {
                         </li>
                       ))}
                     </ul>
-                    <button>{t.btn}</button>
+                    <a
+                      className="btn"
+                      href="https://panel.codefend.com/auth/signup"
+                      target="_blank"
+                    >
+                      {t.btn}
+                    </a>
                   </motion.div>
                 ))}
               </div>
