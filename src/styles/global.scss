@@ -48,7 +48,7 @@
     --text-h1-large: 50px;
     --text-h1-larger: 80px;
     --text-h2-normal: 35px;
-  } 
+  }
 }
 
 @font-face {
@@ -1368,7 +1368,7 @@ section.free-trial {
       background-color: rgba(255, 255, 255, 0.7);
       padding: 2% 2% 4% 25%;
       margin-left: -10%;
-      z-index: 100;
+      z-index: 40;
       width: 50%;
       min-width: 400px;
 
@@ -1812,19 +1812,24 @@ section.sectionService {
   padding: 0;
   background-color: #000;
   padding-bottom: 70px;
+  overflow-x: hidden;
+  --text-container-max-size: 43vw;
+  --bg-min-size: 92dvw;
+  --container-items-padding: 4dvw;
 
   .slide-contain {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+
     .contain {
       background-color: #000;
       background-repeat: no-repeat;
       background-position: right;
-      padding: 4vw 4vw;
+      padding: var(--container-items-padding);
       max-height: 1000px;
-      min-width: 92vw;
+      min-width: var(--bg-min-size);
       min-height: 450px;
-      background-size: 50vw;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -1845,7 +1850,7 @@ section.sectionService {
       }
 
       ul {
-        max-width: 43vw;
+        max-width: var(--text-container-max-size);
         display: flex;
         flex-direction: column;
         row-gap: 1vw;
@@ -1916,6 +1921,22 @@ section.sectionService {
           }
         }
       }
+    }
+  }
+
+  @media only screen and (max-width: 1900px) {
+    .slide-contain .contain {
+      background-size: 50vw;
+    }
+  }
+
+  @media only screen and (min-width: 1900px) {
+    & {
+      max-width: 1900px;
+      margin-inline: auto;
+      --text-container-max-size: 40%;
+      --bg-min-size: auto;
+      --container-items-padding: 3.5dvw;
     }
   }
 }
@@ -2199,7 +2220,6 @@ section.friends1 {
   }
 }
 
-
 /* 
 ///////////////////////////////////////////////////////////////////
 // promo
@@ -2247,7 +2267,7 @@ section.promo {
       display: flex;
       .occupation-contain {
         font-family: "Big Noodle Titling", sans-serif;
-        text-transform: uppercase;  
+        text-transform: uppercase;
         font-size: 3rem;
         font-weight: bold;
         color: #fff;
@@ -2256,60 +2276,60 @@ section.promo {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-          .occupation-title {
-            font-size: var(--text-h1-larger);   
-            line-height: normal;
-            margin: 0;
+        .occupation-title {
+          font-size: var(--text-h1-larger);
+          line-height: normal;
+          margin: 0;
+        }
+        .bar_services {
+          width: 95%;
+          ul {
+            display: flex;
+            justify-content: space-between;
+            border-right: 8px solid white;
+            border-left: 8px solid white;
+            border-bottom: 8px solid white;
+            padding: 0 1em 1em 1em;
           }
-          .bar_services {
-            width: 95%;
-            ul {
-              display: flex;
-              justify-content:space-between;
-              border-right: 8px solid white;
-              border-left: 8px solid white;
-              border-bottom: 8px solid white;
-              padding: 0 1em 1em 1em;
-            }
-            .connections {
-              margin-top: 40px;
-              float: var(--float-direction);
-              display: flex;
-              gap: 1rem;
-              span {
-                &:first-child {
-                  position: relative;
-                  &::before {
-                    content: '';
-                    width: 7px;
-                    height: 45px;
-                    background-color: white;
-                    position: absolute;
-                    top: -45px;
-                    left: 50%;
-                  }
+          .connections {
+            margin-top: 40px;
+            float: var(--float-direction);
+            display: flex;
+            gap: 1rem;
+            span {
+              &:first-child {
+                position: relative;
+                &::before {
+                  content: "";
+                  width: 7px;
+                  height: 45px;
+                  background-color: white;
+                  position: absolute;
+                  top: -45px;
+                  left: 50%;
                 }
               }
-              hr {
-                width: 45px;
-                display: inline-block;
-                height: 7px;
-                background-color: white;
-                border: none;
-              }
+            }
+            hr {
+              width: 45px;
+              display: inline-block;
+              height: 7px;
+              background-color: white;
+              border: none;
             }
           }
-          .occupation-price > span {
-            font-size: 11rem;
+        }
+        .occupation-price > span {
+          font-size: 11rem;
+        }
+        .occupation-price {
+          .occupation-price_extra {
+            width: fit-content;
+            padding: 7px 0 7px 0;
+            border-top: 3px solid white;
+            border-bottom: 3px solid white;
           }
-          .occupation-price {
-            .occupation-price_extra {
-              width: fit-content ;
-              padding: 7px 0 7px 0;
-              border-top: 3px solid white;
-              border-bottom: 3px solid white;
-            }
-          }
+        }
       }
 
       .probability-contain {
@@ -2322,60 +2342,62 @@ section.promo {
         gap: 2vh;
         color: #fff;
         position: relative;
-          h2, h3, span {
-            font-family: "Big Noodle Titling", sans-serif;
-            text-transform: uppercase;
-          }
-          .probability_cards {
+        h2,
+        h3,
+        span {
+          font-family: "Big Noodle Titling", sans-serif;
+          text-transform: uppercase;
+        }
+        .probability_cards {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 3rem;
+          .probability_card_1,
+          .probability_card_2 {
+            color: var(--text-color-alt);
+            background-color: #fff;
+            flex: 1;
+            min-width: 450px;
+            max-width: 700px;
+            min-height: 550px;
+            padding: 4rem 5rem;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 3rem;
-            .probability_card_1, .probability_card_2 {
-              color: var(--text-color-alt);
-              background-color: #fff;
-              flex: 1;
-              min-width: 450px;
-              max-width: 700px;
-              min-height: 550px;
-              padding: 4rem 5rem;
+            flex-direction: column;
+            justify-content: space-between;
+            /*box-shadow: 5px 5px 20px 2px #142c3d;*/
+          }
+          .probability_card_1 {
+            .percentage {
               display: flex;
-              flex-direction: column;
-              justify-content: space-between;
-              /*box-shadow: 5px 5px 20px 2px #142c3d;*/
-            }
-            .probability_card_1 {
-              .percentage {
-                display: flex;
-                align-items: center;
-                gap: 2rem;
+              align-items: center;
+              gap: 2rem;
 
-                  span {
-                    font-weight: bold;
-                    font-size: 30px;
-                    background-color: var(--btn-color-main);
-                    color: #fff;
-                    padding: 20px;
-                    border-radius: 60px;
-                  }
-                
+              span {
+                font-weight: bold;
+                font-size: 30px;
+                background-color: var(--btn-color-main);
+                color: #fff;
+                padding: 20px;
+                border-radius: 60px;
               }
             }
-            .probability_card_2 {
-                .item-content {
-                  display: flex;
-                  align-items: center;
-                  gap: 3rem;
-                  img {
-                    width: 6rem;
-                    height: 6rem;
-                  }
-                }
+          }
+          .probability_card_2 {
+            .item-content {
+              display: flex;
+              align-items: center;
+              gap: 3rem;
+              img {
+                width: 6rem;
+                height: 6rem;
+              }
             }
           }
-          .btn {
-            align-self: flex-end;
-          }
+        }
+        .btn {
+          align-self: flex-end;
+        }
       }
     }
   }
@@ -2389,7 +2411,7 @@ section.promo {
           padding-top: 120px;
           gap: 5rem;
           .occupation-title {
-            font-size: 5rem;   
+            font-size: 5rem;
           }
           .bar_services {
             ul {
@@ -2405,10 +2427,11 @@ section.promo {
             font-size: 8rem;
           }
         }
-        
+
         .probability-contain {
           .probability_cards {
-            .probability_card_1, .probability_card_2 {
+            .probability_card_1,
+            .probability_card_2 {
               min-width: fit-content;
               padding: 1.5rem 2.5rem;
             }
@@ -2418,7 +2441,7 @@ section.promo {
     }
   }
 
-  @media screen and (max-width:768px) {
+  @media screen and (max-width: 768px) {
     height: fit-content;
     padding-top: 30px;
     .containers {
@@ -2448,13 +2471,11 @@ section.promo {
           .item-content {
             flex-direction: column;
           }
-      }
+        }
       }
     }
   }
 }
-
-
 
 /* 
 ///////////////////////////////////////////////////////////////////
@@ -2478,7 +2499,7 @@ section.enciclopedia {
   .container {
     padding: 0;
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     position: relative;
     height: 90%;
@@ -2523,9 +2544,8 @@ section.enciclopedia {
         flex-direction: column;
         justify-content: space-around;
         div {
-
           &:first-child {
-            background-image: url('/images/line.png');
+            background-image: url("/images/line.png");
             background-repeat: no-repeat;
             background-position: top;
             padding-top: 2rem;
@@ -2557,23 +2577,15 @@ section.enciclopedia {
         height: 70vh;
         padding: 1rem;
       }
-      
     }
   }
 }
-
-
-
-
-
-
 
 /* 
 ///////////////////////////////////////////////////////////////////
 // probability
 //////////////////////////////////////////////////////////////////
 */
-
 
 /* 
 ///////////////////////////////////////////////////////////////////

@@ -1,16 +1,16 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { Select } from "../components/Select";
+import { Select } from "../../components/Select";
 import {
   companySizeOptions,
   DEFAULT_ROLE,
   routesMap,
-} from "../data/contact/contact";
-import { StatusMessage } from "../components/StatusMessage";
-import { useScrollAnimation } from "../hooks/useScrollAnimation";
-import { InputField } from "../components/InputField";
-import { useContactForm } from "../hooks/useFreeTrialForm";
-import { useScrolLToRef } from "../hooks/useScrolLToRef";
+} from "../../data/contact/contact";
+import { StatusMessage } from "../../components/StatusMessage";
+import { useScrollAnimation } from "../../hooks/useScrollAnimation";
+import { InputField } from "../../components/InputField";
+import { useFreeTrialForm } from "./useFreeTrialForm";
+import { useScrolLToRef } from "../../hooks/useScrolLToRef";
 
 const FreeTrial = ({ t, locale }) => {
   const location = useLocation();
@@ -23,7 +23,7 @@ const FreeTrial = ({ t, locale }) => {
     isSubmitting,
     submitForm,
     statusMessage,
-  } = useContactForm(t.form.messages);
+  } = useFreeTrialForm(t.form.messages);
   const ref = useRef(null);
   useScrolLToRef(ref);
 

@@ -2,8 +2,8 @@ import Friends1 from "./friends1";
 import Herofriends from "./herofriends";
 import DocumentMetadata from "../../components/DocumentMetadata";
 import { pageAboutUsMetaData } from "../../data/metaData";
-import FreeTrial from "../../sections/freeTrial";
 import { useLocales } from "../../store/useLocales";
+import FreeTrial from "../../sections/contact/freeTrial";
 
 const Friends = () => {
   const { t, locale } = useLocales();
@@ -13,7 +13,7 @@ const Friends = () => {
         meta={pageAboutUsMetaData({
           title: t("aboutus.metadata.title"),
           description: t("aboutus.metadata.description"),
-          locale
+          locale,
         })}
       />
       <Herofriends t={t("aboutus.hero")} />

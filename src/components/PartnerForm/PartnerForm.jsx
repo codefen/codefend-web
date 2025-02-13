@@ -37,12 +37,7 @@ const PartnerForm = ({ t }) => {
     <article className={css.partneforFormContainer}>
       <h3>{t.title}</h3>
       <p>{t.description}</p>
-      <form
-        className={css.partnerForm}
-        onSubmit={onSubmit}
-        action="https://formspree.io/f/{form_id}"
-        method="post"
-      >
+      <form className={css.partnerForm} onSubmit={onSubmit}>
         {Object.entries(formData).map(([key, value], i) => (
           <input
             key={`${i}-${key}`}
@@ -64,7 +59,7 @@ const PartnerForm = ({ t }) => {
           />
         ))}
         {error && <p className={css.errorMessage}>{error}</p>}
-        <button type="submit" disabled={isPending}>
+        <button type="submit" className="btn" disabled={isPending}>
           {t.btn}
         </button>
       </form>
