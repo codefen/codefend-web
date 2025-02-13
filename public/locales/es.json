@@ -574,7 +574,7 @@
           "items": [
             {
               "title": "Recursos Web",
-              "description": "En esta sección puede incluir dominios y subdominios a ser evaluados. La aplicación viene con una función integrada para detectar subdominios, y nuestra política predeterminada es detectar TI en la sombra lo antes posible, para que su superficie de ataque o alcance pueda expandirse o contraerse en cualquier momento que su organización lo requiera."
+              "description": "En esta sección, agregue dominios y subdominios para evaluación. La aplicación detecta subdominios automáticamente y prioriza la identificación temprana de TI en la sombra, permitiendo ajustar la superficie de ataque según las necesidades de su organización."
             },
             {
               "title": "Recursos Móviles",
@@ -582,7 +582,7 @@
             },
             {
               "title": "Recursos en la Nube",
-              "description": "Este módulo contiene los activos en la nube de su organización. Nuestras capacidades están limitadas a Amazon Web Services, Microsoft Azure y GCP."
+              "description": "Este módulo contiene los activos en la nube de su organización. Nuestras capacidades están limitadas a Amazon Web Services, Microsoft Azure y GCP. Descubra vulnerabilidades en su infrastrctura cloud."
             },
             {
               "title": "Recursos LAN",
@@ -608,11 +608,11 @@
             },
             {
               "title": "Crear Informes",
-              "description": "Cree informes personalizados a demanda. Le permite seleccionar un grupo de problemas (por ejemplo, recursos web o móviles) y generar informes detallados y personalizados. Elija parámetros y criterios específicos para el informe para satisfacer sus necesidades de informes. Eficiencia, agiliza el proceso de generación de informes completos para una comunicación efectiva."
+              "description": "Genere informes personalizados a demanda. Seleccione un grupo de problemas (web, móviles, etc.) y configure criterios específicos para obtener informes detallados. Optimice la generación de informes para una comunicación efectiva."
             },
             {
               "title": "Soporte al Cliente",
-              "description": "Aborde los requisitos de negocio de seguridad de TI. Proporciona un espacio dedicado para solicitar asistencia especial para cualquier necesidad específica de seguridad de TI. Soporte Personalizado: Adapte las solicitudes de soporte para que coincidan con sus preocupaciones únicas de seguridad empresarial. Facilita un canal directo para obtener soporte especializado y oportuno."
+              "description": "Atienda los requisitos de seguridad de TI con un espacio dedicado para solicitar asistencia especializada. Personalice sus solicitudes según sus necesidades específicas y acceda a un canal directo para obtener soporte experto de manera rápida y efectiva."
             }
           ]
         }
@@ -1602,18 +1602,17 @@
         {
           "delay": 0.5,
           "title": "Pequeña empresa",
-          "price": "$299",
+          "price": "$299 mensual",
           "subtitle": "suscripción mensual básica",
-          "subtitle2": "descuento en suscripción anual a $2,999",
           "attr": "",
           "items": [
             {
               "text": "Recomendado para startups y nuevas empresas",
-              "bold": true
+              "bold": false
             },
             {
               "text": "1 hora diaria de revisión y análisis manual!",
-              "bold": false
+              "bold": true
             },
             {
               "text": "Escaneo automatizado de vulnerabilidades.",
@@ -1636,30 +1635,25 @@
         {
           "delay": 0.7,
           "title": "Plan mediano",
-          "price": "$499 * mes",
+          "price": "$499 mensual",
           "subtitle": "suscripción mensual intermedia",
-          "subtitle2": "descuento en suscripción anual a $6,999",
           "attr": "Servicio más seleccionado",
           "items": [
             {
               "text": "Recomendado para empresas medianas",
-              "bold": true
-            },
-            {
-              "text": "3 a 4 horas diarias de revisión y análisis manual!",
-              "bold": true
-            },
-            {
-              "text": "Recomendado para CI/CD",
               "bold": false
+            },
+            {
+              "text": "4 horas diarias de revisión y análisis manual!",
+              "bold": true
             },
             {
               "text": "Escaneo automatizado de vulnerabilidades.",
               "bold": false
             },
             {
-              "text": "Vigilancia de seguridad permanente, pentest continuo",
-              "bold": true
+              "text": "Protección 24/7 contra amenazas de seguridad",
+              "bold": false
             },
             {
               "text": "Exportar informes de seguridad en cualquier momento",
@@ -1668,36 +1662,39 @@
             {
               "text": "Asignación 2 hackers dedicados su empresa.",
               "bold": true
+            },
+            {
+              "text": "Recomendado para CI/CD",
+              "bold": false
+            },
+            {
+              "text": "Vigilancia de seguridad permanente, pentest continuo",
+              "bold": true
             }
           ]
         },
         {
           "delay": 1,
           "title": "Plan avanzado",
-          "price": "$999",
-          "subtitle": "4 semanas $13,500 / facturación mensual",
-          "subtitle2": "descuento en suscripción a $9,999",
+          "price": "$999 mensual",
+          "subtitle": "Suscripción mensual avanzada",
           "attr": "",
           "items": [
             {
               "text": "Recomendado para empresas establecidas",
-              "bold": true
+              "bold": false
             },
             {
               "text": "8 horas diarias de revisión y análisis manual!",
-              "bold": false
-            },
-            {
-              "text": "Recomendado para CI/CD de alta frecuencia",
-              "bold": false
+              "bold": true
             },
             {
               "text": "Escaneo automatizado de vulnerabilidades.",
               "bold": false
             },
             {
-              "text": "Vigilancia de seguridad permanente, pentest continuo",
-              "bold": true
+              "text": "Protección 24/7 contra amenazas de seguridad",
+              "bold": false
             },
             {
               "text": "Exportar informes de seguridad en cualquier momento",
@@ -1705,6 +1702,14 @@
             },
             {
               "text": "Asignación 3 a 4 hackers dedicados su empresa.",
+              "bold": true
+            },
+            {
+              "text": "Recomendado para CI/CD de alta frecuencia",
+              "bold": false
+            },
+            {
+              "text": "Vigilancia de seguridad permanente, pentest continuo",
               "bold": true
             },
             {
