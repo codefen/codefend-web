@@ -39,7 +39,7 @@ const Hero = ({ t }) => {
                 part.bold ? <b key={index}>{part.text}</b> : part.text
               )}
             </p>
-            <Link className="btn" to="/calculator">
+            <Link className="btn" to="./plans">
               {t.cta}
             </Link>
           </motion.div>
