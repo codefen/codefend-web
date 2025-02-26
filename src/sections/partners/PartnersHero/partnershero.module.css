@@ -39,6 +39,9 @@
     background-image: url("/images/bkg-partners-mobile.webp");
     --bg-position-y: -15dvw;
   }
+  .partnesHero .container {
+    margin-top: 40vh;
+  }
 }
 
 @media only screen and (min-width: 2000px) {

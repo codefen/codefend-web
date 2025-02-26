@@ -1742,7 +1742,7 @@ section.industries {
       .subtitle {
         max-width: 80%;
         padding: 20px;
-        margin-top: 10vh;
+        margin-top: 30vh;
         max-width: 100%;
       }
 
@@ -1796,7 +1796,7 @@ section.services {
       .subtitle {
         max-width: 80%;
         padding: 20px;
-        margin-top: 40px;
+        margin-top: 47vh;
         max-width: 100%;
       }
     }
@@ -1964,7 +1964,7 @@ section.herocompliance {
     .subtitle {
       background-color: rgba(0, 0, 0, 0.5);
       padding: 2vw 2vw;
-      margin-top: 5vw;
+      margin-top: 32vh;
       max-width: 660px;
 
       h2 {
@@ -2044,6 +2044,9 @@ section.herofriends {
     height: 40vh;
     align-items: flex-end;
     justify-content: center;
+    .subtitle {
+      margin-top: 30vh !important;
+    }
   }
 }
 
