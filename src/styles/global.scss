@@ -1531,7 +1531,7 @@ section.about-us {
   overflow: hidden;
   height: auto;
   background: var(--color-black-200);
-  background: var(--color-gradient-dark);
+  
   color: #fff;
   position: relative;
 
@@ -1890,13 +1890,15 @@ section.sectionService {
   }
 
   @media screen and (max-width: 820px) {
+    
     .slide-contain {
       .contain {
         background-position: top !important;
         background-size: contain;
         flex-direction: column !important;
         align-items: center;
-        padding-top: 230px;
+        padding-top: 320px;
+        background-size: contain !important;
         ul {
           max-width: 100% !important;
           li {
