@@ -2022,10 +2022,10 @@ section.herocompliance {
 section.herofriends {
   height: 67vh;
   background-color: #000;
-  background-image: url("/images/bkg-friend.png");
+  background-image: url("/images/bkg-friends2.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
-  background-position: top;
+  background-position: bottom;
   color: #fff;
   .container {
     h2 {
@@ -2039,13 +2039,13 @@ section.herofriends {
     }
   }
   @media screen and (max-width: 768px) {
-    background-image: url("/images/bkg-friend-mobile.webp");
+    background-image: url("/images/bkg-friends2.jpg");
     background-size: cover;
     height: 40vh;
     align-items: flex-end;
     justify-content: center;
     .subtitle {
-      margin-top: 30vh !important;
+      margin-top: 20vh !important;
     }
   }
 }
@@ -2120,6 +2120,12 @@ section.friends1 {
         margin-bottom: 20px;
         img {
           display: none;
+          @media screen and (max-width: 820px) {
+            margin-left: -30vw;
+            margin-right: -30vw;
+            min-width: 160vw;
+            height: auto;
+          }
         }
         .information {
           padding: 4em 10px;
