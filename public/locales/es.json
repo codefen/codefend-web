@@ -59,9 +59,10 @@
         },
         {
           "class": "btn main",
-          "link": "https://panel.codefend.com/auth/signup",
-          "label": "prueba Codefend gratis",
-          "target": "_blank"
+          "link": "https://wa.me/1234567890",
+          "label": "Contactanos en Whatsapp",
+          "target": "_blank",
+          "icon": "whatsapp"
         }
       ]
     },
@@ -456,8 +457,8 @@
           "type": "alt"
         },
         {
-          "text": "comienza ahora",
-          "link": "https://panel.codefend.com/auth/signup",
+          "link": "https://wa.me/1234567890",
+          "text": "Contactanos en Whatsapp",
           "type": "main"
         }
       ]
@@ -1598,7 +1599,7 @@
           "color": "var(--text-color-alt2)"
         }
       ],
-      "btn": "Comienza ahora",
+      "btn": "Contactanos",
       "planItems": [
         {
           "delay": 0.5,
