@@ -1,5 +1,3 @@
-import React from "react";
-
 const Capabilities = ({ t }) => {
   return (
     <section className="capabilities">

@@ -1,4 +1,3 @@
-import React from "react";
 import DocumentMetadata from "../../components/DocumentMetadata";
 import { pageIndustriesMetaData } from "../../data/metaData";
 import { useLocales } from "../../store/useLocales";

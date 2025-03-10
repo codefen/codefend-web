@@ -18,3 +18,5 @@ export const QuotePage = () => {
     </>
   );
 };
+
+export default QuotePage;

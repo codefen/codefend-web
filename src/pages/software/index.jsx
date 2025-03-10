@@ -1,4 +1,3 @@
-import React from "react";
 import Features from "./features";
 import Capabilities from "./capabilities";
 import OurSoftware from "../../sections/ourSoftware/ourSoftware";
