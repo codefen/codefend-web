@@ -956,7 +956,7 @@
         "profiles": {
           "chris": {
             "id": "chris",
-            "img": "/images/bkg-chris.png",
+            "img": "/images/bkg-chris.webp",
             "alt": "Imagen de Christian",
             "name": "Christian 'Ch' Russo",
             "position": "COFUNDADOR",
@@ -967,7 +967,7 @@
           },
           "edgardo": {
             "id": "edgardo",
-            "img": "/images/bkg-edgardo.png",
+            "img": "/images/bkg-edgardo.webp",
             "alt": "Imagen de Edgardo",
             "name": "Edgardo Krause",
             "position": "LÍDER DE SEGURIDAD OFENSIVA",
@@ -976,7 +976,7 @@
           },
           "miguel": {
             "id": "miguel",
-            "img": "/images/bkg-peroni.png",
+            "img": "/images/bkg-peroni.webp",
             "alt": "Imagen de Miguel",
             "name": "Miguel Peroni",
             "position": "DESARROLLO DE NEGOCIOS",
@@ -985,7 +985,7 @@
           },
           "ignacio": {
             "id": "ignacio",
-            "img": "/images/bkg-ignacio.png",
+            "img": "/images/bkg-ignacio.webp",
             "alt": "Imagen de Ignacio",
             "name": "Ignacio Gómez",
             "position": "EXPERIENCIA DE PRODUCTO",

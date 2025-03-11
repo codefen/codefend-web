@@ -932,7 +932,7 @@
         "profiles": {
           "chris": {
             "id": "chris",
-            "img": "/images/bkg-chris.png",
+            "img": "/images/bkg-chris.webp",
             "alt": "Christian image",
             "name": "Christian 'Ch' Russo",
             "position": "COFOUNDER",
@@ -943,7 +943,7 @@
           },
           "edgardo": {
             "id": "edgardo",
-            "img": "/images/bkg-edgardo.png",
+            "img": "/images/bkg-edgardo.webp",
             "alt": "Edgardo image",
             "name": "Edgardo Krause",
             "position": "OFFENSIVE SECURITY LEAD",
@@ -952,7 +952,7 @@
           },
           "miguel": {
             "id": "miguel",
-            "img": "/images/bkg-peroni.png",
+            "img": "/images/bkg-peroni.webp",
             "alt": "Miguel image",
             "name": "Miguel Peroni",
             "position": "BUSINESS DEVELOPMENT",
@@ -961,7 +961,7 @@
           },
           "ignacio": {
             "id": "ignacio",
-            "img": "/images/bkg-ignacio.png",
+            "img": "/images/bkg-ignacio.webp",
             "alt": "Ignacio image",
             "name": "Ignacio Gómez",
             "position": "PRODUCT EXPERIENCE",

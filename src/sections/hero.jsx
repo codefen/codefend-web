@@ -55,7 +55,6 @@ const Hero = ({ t }) => {
           ))}
         </div>
       </div>
-      <div className="bkg-2"></div>
     </section>
   );
 };

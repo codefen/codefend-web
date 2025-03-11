@@ -1,4 +1,10 @@
-import { createContext, useLayoutEffect, useState } from "react";
+import {
+  createContext,
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
 import {
   AVALABLE_LOCALES,
   DEFAULT_LOCALE,
@@ -9,26 +15,23 @@ import { AnimatePresence } from "framer-motion";
 
 export const I18nContext = createContext();
 
-const getNestedValue = (obj, path) => {
-  return path.split(".").reduce((prev, curr) => {
-    return prev ? prev[curr] : undefined;
-  }, obj);
-};
+const getNestedValue = (obj, path) =>
+  path.split(".").reduce((prev, curr) => (prev ? prev[curr] : undefined), obj);
 
 export const I18nProvider = ({ children }) => {
   const navigate = useNavigate();
   const location = useLocation();
-  const [isLoading, setIsLoading] = useState(true);
-  const [translations, setTranslations] = useState({});
-  const [locale, setLanguage] = useState(() => {
-    const pathSegments = location?.pathname?.split?.("/");
-    return pathSegments?.[1] ? pathSegments[1] : DEFAULT_LOCALE;
-  });
 
-  const loadTranslations = async (locale) => {
+  // Extraemos el locale inicial del pathname
+  const initialLocale = location.pathname.split("/")[1] || DEFAULT_LOCALE;
+  const [locale, setLocale] = useState(initialLocale);
+  const [translations, setTranslations] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
+
+  const loadTranslations = useCallback(async (currentLocale) => {
     setIsLoading(true);
     try {
-      const response = await fetch(LOCALE_ENDPOINT(locale));
+      const response = await fetch(LOCALE_ENDPOINT(currentLocale));
       const data = await response.json();
       setTranslations(data);
     } catch (error) {
@@ -36,40 +39,47 @@ export const I18nProvider = ({ children }) => {
     } finally {
       setIsLoading(false);
     }
-  };
+  }, []);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     loadTranslations(locale);
-  }, [locale]);
+  }, [locale, loadTranslations]);
 
-  const switchLanguage = (newLocale) => {
-    //console.log({ newLocale });
-    const validNewLocale = AVALABLE_LOCALES.includes(newLocale)
-      ? newLocale
-      : DEFAULT_LOCALE;
-      
-    const pathSegments = location.pathname.split("/");
-    // Remover el segmento de idioma actual si existe
-    if (pathSegments[1] === "en" || pathSegments[1] === "es") {
-      pathSegments.splice(1, 1);
-    }
-    const newPath = `/${validNewLocale}${pathSegments.join("/")}`;
-    console.log({ newPath });
-    setLanguage(validNewLocale);
-    navigate(newPath);
-  };
-  
+  const switchLanguage = useCallback(
+    (newLocale) => {
+      const validLocale = AVALABLE_LOCALES.includes(newLocale)
+        ? newLocale
+        : DEFAULT_LOCALE;
 
-  const t = (key) => {
-    const value = getNestedValue(translations, key);
-    return value !== undefined ? value : key;
-  };
+      const segments = location.pathname.split("/");
+      // Si el primer segmento es un locale válido, lo removemos
+      if (AVALABLE_LOCALES.includes(segments[1])) {
+        segments.splice(1, 1);
+      }
+      const newPath = `/${validLocale}${segments.join("/")}`;
+      setLocale(validLocale);
+      navigate(newPath);
+    },
+    [location.pathname, navigate]
+  );
+
+  const t = useCallback(
+    (key) => {
+      const value = getNestedValue(translations, key);
+      return value !== undefined ? value : key;
+    },
+    [translations]
+  );
+  const contextValue = useMemo(
+    () => ({ t, switchLanguage, locale }),
+    [t, switchLanguage, locale]
+  );
 
   if (isLoading) {
     return <div>Loading translations...</div>;
   }
   return (
-    <I18nContext.Provider value={{ t, switchLanguage, locale }}>
+    <I18nContext.Provider value={contextValue}>
       <AnimatePresence>{children}</AnimatePresence>
     </I18nContext.Provider>
   );

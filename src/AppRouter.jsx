@@ -17,6 +17,7 @@ const NewHome = lazy(() => import("./pages/newHome/newHome"));
 const PlansPage = lazy(() => import("./pages/plans/PlansPage"));
 
 const availableRoutes = [
+  "home",
   "software",
   "industries",
   "services",
@@ -49,6 +50,7 @@ export const AppRouter = () => {
           path: locale,
           children: [
             { index: true, element: <Home /> },
+            { path: "home", element: <Home /> },
             { path: "software", element: <Software /> },
             { path: "industries", element: <Industries /> },
             { path: "services", element: <Services /> },

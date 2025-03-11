@@ -278,7 +278,6 @@ section.hero {
     display: flex;
     align-items: flex-end;
     margin: 0 auto;
-    z-index: 10;
 
     & .copy {
       flex: 1;
@@ -1985,7 +1984,7 @@ section.sectionService {
 
 section.herocompliance {
   background-color: #000;
-  background-image: url("/images/bkg-compliance.png");
+  background-image: url("/images/bkg-compliance.webp");
   background-repeat: no-repeat;
   background-position: right top;
   background-size: 75%;
@@ -2062,7 +2061,7 @@ section.herocompliance {
 section.herofriends {
   height: 67vh;
   background-color: #000;
-  background-image: url("/images/bkg-friends2.jpg");
+  background-image: url("/images/bkg-friends2.webp");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: bottom;
@@ -2079,7 +2078,7 @@ section.herofriends {
     }
   }
   @media screen and (max-width: 768px) {
-    background-image: url("/images/bkg-friends2.jpg");
+    background-image: url("/images/bkg-friends2.webp");
     background-size: cover;
     height: 40vh;
     align-items: flex-end;
@@ -2202,16 +2201,16 @@ section.friends1 {
           }
         }
         &#chris {
-          background-image: url("/images/bkg-chris.png");
+          background-image: url("/images/bkg-chris.webp");
         }
         &#edgardo {
-          background-image: url("/images/bkg-edgardo.png");
+          background-image: url("/images/bkg-edgardo.webp");
         }
         &#ignacio {
-          background-image: url("/images/bkg-ignacio.png");
+          background-image: url("/images/bkg-ignacio.webp");
         }
         &#miguel {
-          background-image: url("/images/bkg-peroni.png");
+          background-image: url("/images/bkg-peroni.webp");
         }
         &:nth-child(odd) {
           background-position: -5% 0;

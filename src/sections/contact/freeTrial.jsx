@@ -129,8 +129,16 @@ const FreeTrial = ({ t, locale }) => {
             ref={img1Ref}
             src="/images/front.webp"
             alt="Front Illustration"
+            width={625}
+            height={635}
           />
-          <img ref={img2Ref} src="/images/back.webp" alt="Back Illustration" />
+          <img
+            ref={img2Ref}
+            src="/images/back.webp"
+            alt="Back Illustration"
+            width={480}
+            height={480}
+          />
         </div>
       </div>
     </section>
