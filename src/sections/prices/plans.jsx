@@ -31,11 +31,16 @@ const PlanCard = memo(({ plan, t }) => (
     variants={cardVariants}
     className={css.card}
     data-text={plan.attr}
-    key={plan.id || plan.title}
   >
     <h3>{plan.title}</h3>
     <div className={css.price}>
-      <img loading="lazy" src="/images/icon4.webp" alt="thunder-icon" />
+      <img
+        loading="lazy"
+        src="/images/icon4.webp"
+        alt="thunder-icon"
+        width={80}
+        height={80}
+      />
       <div>
         <h4>{plan.price}</h4>
         <p>
@@ -57,17 +62,13 @@ const PlanCard = memo(({ plan, t }) => (
             decoding="async"
             itemProp="image"
           />
-          {item.bold ? <strong>{item.text}</strong> : item.text}
+          {item.bold ? <b>{item.text}</b> : item.text}
         </li>
       ))}
     </ul>
-    <a
-      className="btn"
-      href="https://wa.me/1234567890"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      {t.btn} &nbsp;&nbsp;
+    <a className="btn" href="https://wa.me/5491128936430" target="_blank">
+      {t.btn}
+      &nbsp; &nbsp;
       <span>
         <svg
           stroke="currentColor"
@@ -122,7 +123,7 @@ export default memo(function Plans({ t }) {
             <div className={css.contain}>
               <div className={css.cardContain}>
                 {t.planItems.map((plan) => (
-                  <PlanCard key={plan.id || plan.title} plan={plan} t={t} />
+                  <PlanCard plan={plan} t={t} key={plan.id || plan.title} />
                 ))}
               </div>
             </div>
