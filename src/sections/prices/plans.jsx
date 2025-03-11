@@ -73,7 +73,7 @@ export default function Plans({ t }) {
                     </ul>
                     <a
                       className="btn"
-                      href="https://wa.me/1234567890"
+                      href="https://wa.me/5491128936430"
                       target="_blank"
                     >
                       {t.btn}
