@@ -48,6 +48,11 @@
           }
         ]
       },
+      "mobile": {
+        "openBurguerMenu": "Abrir menu",
+        "closeBurguerMenu": "Cerrar menu",
+        "openTranslations": "Menu de cambio de idioma"
+      },
       "buttons": [
         {
           "class": "btn alt",
@@ -131,21 +136,21 @@
                 },
                 {
                   "name": "Patrick Joleys",
-                  "image": "/images/testimonials/chris/patrick.png",
+                  "image": "/images/testimonials/chris/patrick.webp",
                   "profile": "https://www.linkedin.com/in/patrickjoleys/",
                   "role": "Consultor de Blockchain",
                   "description": "Chris Russo es un excelente Consultor de Seguridad de la Información, con gran experiencia en la seguridad de aplicaciones web. He trabajado con él y puedo recomendar sus servicios."
                 },
                 {
                   "name": "Luca Fenochietto",
-                  "image": "/images/testimonials/chris/luca.png",
+                  "image": "/images/testimonials/chris/luca.webp",
                   "profile": "https://www.linkedin.com/in/luca-fenochietto/",
                   "role": "Consultor de Blockchain",
                   "description": "Asombroso conocimiento en seguridad informática y temas relacionados. Captura las necesidades del cliente y las trata con extrema delicadeza. Es un servicio altamente recomendado."
                 },
                 {
                   "name": "Baseer Ahmed",
-                  "image": "/images/testimonials/chris/ahmed.png",
+                  "image": "/images/testimonials/chris/ahmed.webp",
                   "profile": "https://www.linkedin.com/in/ahmed-baseer-22aba831/",
                   "role": "Consultor de Talento",
                   "description": "Chris es un gran profesional con quien trabajar. Me ayudó mucho a comenzar y a comprender los procesos internos. Su ética de trabajo es impecable y es muy fácil trabajar con él. ¡Un gran profesional!"
@@ -191,42 +196,42 @@
               "testimonials": [
                 {
                   "name": "Kevin Acosta",
-                  "image": "/images/testimonials/edgardo/kevin.png",
+                  "image": "/images/testimonials/edgardo/kevin.webp",
                   "profile": "https://www.linkedin.com/in/kevin-acosta-3248521a3/",
                   "role": "Ingeniero de Automatización de Pruebas",
                   "description": "Una persona altamente capaz y buena onda. Haber trabajado con alguien tan proactivo y profesional en mi primer trabajo fue una de las mejores experiencias que tuve."
                 },
                 {
                   "name": "Rubén Dario Oberti",
-                  "image": "/images/testimonials/edgardo/ruben.png",
+                  "image": "/images/testimonials/edgardo/ruben.webp",
                   "profile": "https://www.linkedin.com/in/rubén-darío-oberti-41329282/",
                   "role": "Analista funcional / Operador Proc de datos",
                   "description": "He trabajado con Edgardo en el Banco Santander a través de una consultora. Es un profesional con un marcado perfil de servicio hacia el cliente. Se destacan entre sus virtudes 'La iniciativa propia...'"
                 },
                 {
                   "name": "Alex Oliveros Ortiz",
-                  "image": "/images/testimonials/edgardo/alex.png",
+                  "image": "/images/testimonials/edgardo/alex.webp",
                   "profile": "https://www.linkedin.com/in/alex-oliveros-ortiz/",
                   "role": "Gestión Proyectos Telco & IT. MBA, CSM, Kanban-PM",
                   "description": "Excelente compañero de trabajo. Posee un buen conjunto de habilidades técnicas y habilidades blandas, que hacen del trabajo en equipo una experiencia amena."
                 },
                 {
                   "name": "Pablo David Veliz",
-                  "image": "/images/testimonials/edgardo/pablo.png",
+                  "image": "/images/testimonials/edgardo/pablo.webp",
                   "profile": "https://www.linkedin.com/in/pablo-david-veliz/",
                   "role": "Ciberseguridad en PWC",
                   "description": "Tuve la suerte de compartir espacio laboral con Edgardo en Consultoría Global. Es alguien muy proactivo, que siempre está innovando y buscando soluciones a cualquier problema. Nunca se queda..."
                 },
                 {
                   "name": "Evenly Herrera",
-                  "image": "/images/testimonials/edgardo/evenly.png",
+                  "image": "/images/testimonials/edgardo/evenly.webp",
                   "profile": "https://www.linkedin.com/in/evenly-herrera/",
                   "role": "Ingeniera Ambiental",
                   "description": "Trabajé con Edgardo desarrollando páginas web. Es un excelente profesional y muy bueno trabajando en equipo. Aprendí mucho de él durante el tiempo que trabajamos juntos. Además, es muy visionario..."
                 },
                 {
                   "name": "Matias Valdez Nardi",
-                  "image": "/images/testimonials/edgardo/matias.png",
+                  "image": "/images/testimonials/edgardo/matias.webp",
                   "profile": "https://www.linkedin.com/in/mvaldez/",
                   "role": "Desarrollador FullStack",
                   "description": "Excelente profesional y persona. Gracias a sus habilidades de análisis, perseverancia y liderazgo hemos logrado grandes hazañas y los objetivos propuestos en momentos donde la cantidad de trabajo era interminable..."
@@ -472,7 +477,7 @@
         }
       ],
       "image": {
-        "src": "/images/software-img1.png",
+        "src": "/images/software-img1.webp",
         "alt": "Software de Codefend"
       }
     },

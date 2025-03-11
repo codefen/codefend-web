@@ -9,12 +9,15 @@ import { useLocales } from "../../store/useLocales";
 import { LOCALES_SWITCHER } from "../../data/i18n/i18n";
 import css from "./localeswitcher.module.scss";
 
-export const LocaleSwitcher = ({ className = "" }) => {
+export const LocaleSwitcher = ({
+  className = "",
+  openText = "Change language",
+}) => {
   const { switchLanguage } = useLocales();
   return (
     <div className={className}>
       <DropdownMenu>
-        <DropdownMenuTrigger className={css.noOutline}>
+        <DropdownMenuTrigger className={css.noOutline} aria-label={openText}>
           <img
             src="/images/world.svg"
             alt="World icon"

@@ -1,6 +1,6 @@
 import { Navigate, useRoutes } from "react-router-dom";
 import Layout from "./pages/Layout";
-import { AVALABLE_LOCALES } from "./data/i18n/i18n";
+import { AVALABLE_LOCALES, DEFAULT_LOCALE } from "./data/i18n/i18n";
 import { lazy, Suspense } from "react";
 import Home from "./pages/home/home";
 
@@ -16,13 +16,35 @@ const Promo = lazy(() => import("./pages/promo"));
 const NewHome = lazy(() => import("./pages/newHome/newHome"));
 const PlansPage = lazy(() => import("./pages/plans/PlansPage"));
 
+const availableRoutes = [
+  "software",
+  "industries",
+  "services",
+  "compliance",
+  "partners",
+  "about-us",
+  "calculator",
+  "enciclopedia",
+  "promo",
+  "newhome",
+  "plans",
+];
+
 export const AppRouter = () => {
   const routes = useRoutes([
+    ...availableRoutes.map((route) => ({
+      path: `/${route}`,
+      element: <Navigate to={`/${DEFAULT_LOCALE}/${route}`} replace />,
+    })),
     {
       path: "/",
       element: <Layout />,
       children: [
-        { index: true, element: <Navigate to="/en" replace /> },
+        {
+          index: true,
+          element: <Navigate to={`/${DEFAULT_LOCALE}`} replace />,
+        },
+
         ...AVALABLE_LOCALES.map((locale) => ({
           path: locale,
           children: [
@@ -41,7 +63,7 @@ export const AppRouter = () => {
             { path: "*", element: <Navigate to={`/${locale}`} replace /> },
           ],
         })),
-        { path: "*", element: <Navigate to="/en" replace /> },
+        { path: "*", element: <Navigate to={`/${DEFAULT_LOCALE}`} replace /> },
       ],
     },
   ]);

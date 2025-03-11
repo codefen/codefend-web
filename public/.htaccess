@@ -1,8 +1,66 @@
 Options -MultiViews
+Options -Indexes
 IndexIgnore */*
 RewriteEngine On
 RewriteBase /
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript text/javascript application/json
+</IfModule>
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-l
 RewriteRule ^ index.html [QSA,L]
+
+# Configuración de la caché con mod_expires
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 month"
+  
+  # Imágenes y fuentes: 1 año de caché
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType font/ttf "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  
+  # CSS y JavaScript: 1 mes de caché
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  
+  # HTML y datos: caché más corta
+  ExpiresByType text/html "access plus 2 weeks"
+  ExpiresByType application/json "access plus 1 day"
+</IfModule>
+
+# Configuración de la caché con mod_headers
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-XSS-Protection "1; mode=block"
+  Header set X-Frame-Options "SAMEORIGIN"
+  
+  <FilesMatch "\.(jpg|jpeg|png|gif|webp|svg|ico|ttf|woff|woff2)$">
+    Header set Cache-Control "max-age=31536000, public"
+  </FilesMatch>
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "max-age=2592000, public"
+  </FilesMatch>
+  <FilesMatch "\.(html|json|xml)$">
+    Header set Cache-Control "max-age=86400, public"
+  </FilesMatch>
+</IfModule>
+
+<FilesMatch "(\.htaccess|\.env|\.git)">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+<FilesMatch ".*-[a-zA-Z0-9]{8}\.(css|js)$">
+    Header set Cache-Control "max-age=31536000, public, immutable"
+</FilesMatch>

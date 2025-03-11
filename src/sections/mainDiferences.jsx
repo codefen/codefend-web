@@ -1,39 +1,8 @@
 import { motion } from "framer-motion";
-import { slideTransition } from "../transitions/globalTransitions";
 import { RenderTextBold } from "../components/RenderTextBold";
 import { Link } from "react-router-dom";
 
 const MainDiferences = ({ t, locale }) => {
-  const fadeInUp = {
-    hidden: {
-      opacity: 0,
-      y: 20,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut",
-      },
-    },
-  };
-
-  const staggeredFadeIn = {
-    hidden: {
-      opacity: 0,
-      x: 15,
-    },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut",
-      },
-    },
-  };
-
   const fadeIn = {
     hidden: {
       opacity: 0,
@@ -78,6 +47,7 @@ const MainDiferences = ({ t, locale }) => {
             <img
               src="/images/cuadro.webp"
               loading="lazy"
+              decoding="async"
               alt="statistics table img"
             />
           </motion.div>

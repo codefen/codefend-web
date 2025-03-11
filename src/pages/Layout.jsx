@@ -1,10 +1,12 @@
 import { Outlet } from "react-router-dom";
-import Footer from "../sections/footer/footer";
-import Linkedin from "../sections/linkedin";
-import Crypto from "../sections/cryptocoin/crypto";
 import { Bounce, ToastContainer } from "react-toastify";
 import Header from "../sections/header/header";
 import { I18nProvider } from "../store/i18nProvider";
+import { lazy, Suspense } from "react";
+
+const Footer = lazy(() => import("../sections/footer/footer"));
+const Crypto = lazy(() => import("../sections/cryptocoin/crypto"));
+const Linkedin = lazy(() => import("../sections/linkedin"));
 
 function Layout() {
   return (
@@ -15,9 +17,11 @@ function Layout() {
 
         {/* <FreeTrial /> */}
         {/* <ResourceQuote /> */}
-        <Crypto />
-        <Linkedin />
-        <Footer />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Crypto />
+          <Linkedin />
+          <Footer />
+        </Suspense>
         <ToastContainer
           position="top-right"
           autoClose={5000}

@@ -35,6 +35,8 @@ const TestimonialCard = ({ description, image, profile, name, role }) => {
           decoding="async"
           aria-hidden={!isImageLoaded}
           data-loaded={isImageLoaded}
+          width={80}
+          height={80}
         />
         <p>
           <b id={`name-${namePattern}`}>{name}</b>
@@ -53,7 +55,7 @@ const TestimonialCard = ({ description, image, profile, name, role }) => {
               <br />
             </>
           )}
-          <span aria-label="Role">{role}</span>
+          <span>{role}</span>
         </p>
       </div>
     </article>

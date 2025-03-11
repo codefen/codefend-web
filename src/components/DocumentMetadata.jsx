@@ -35,6 +35,7 @@ const DocumentMetadata = ({
       <meta name="accessLevel" content="Customer"></meta>
       <meta name="accessLevel" content="Guest"></meta>
       <meta name="accessLevel" content="Partner"></meta>
+      <link rel="canonical" href={url || ""} />
     </Helmet>
   </>
 );

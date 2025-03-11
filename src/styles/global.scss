@@ -12,8 +12,8 @@
   --text-color-alt2: #ff7878;
   --text-color-alt3: #ff3939;
   --text-color-alt4: #ff3939;
-
-  --btn-color-main: #ff2424;
+  /*--btn-color-main: #ff2424;*/
+  --btn-color-main: #e81212;
   --btn-color-alt: #333333;
 
   --color-dark-blue-50: #3c4e66;
@@ -257,7 +257,7 @@ SCROLL AREA
 //////////////////////////////////////////////////////////////////
 */
 section.hero {
-  background-image: url("/images/bkg-hero.jpg");
+  background-image: url("/images/bkg-hero.webp");
   background-position: top;
   background-repeat: no-repeat;
   background-color: #000000;
@@ -1531,7 +1531,7 @@ section.about-us {
   overflow: hidden;
   height: auto;
   background: var(--color-black-200);
-  
+
   color: #fff;
   position: relative;
 
@@ -1687,12 +1687,13 @@ section.about-us {
 */
 section.industries {
   background-color: #000;
-  background-image: url("/images/bkg-industries.jpg");
+  background-image: url("/images/bkg-industries.webp");
   background-repeat: no-repeat;
-  min-height: 70vh;
   background-size: contain;
   background-position: right top;
   color: #fff;
+  padding-bottom: 0;
+  min-height: 72dvh;
 
   .container {
     .subtitle {
@@ -1705,7 +1706,50 @@ section.industries {
         font-size: var(--text-h2-normal);
       }
     }
+  }
 
+  @media screen and (max-width: 820px) {
+    background-image: url("/images/bkg-industries-mobile.webp");
+
+    .container {
+      .subtitle {
+        max-width: 80%;
+        padding: 20px;
+        margin-top: 30vh;
+        max-width: 100%;
+      }
+
+      .contain {
+        margin-top: 50vh;
+        row-gap: 80px;
+
+        .item {
+          max-width: 100%;
+          flex-wrap: wrap;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+section.industriesContain {
+  background-color: #000;
+  color: #fff;
+  padding-top: 0;
+  margin-top: -17%;
+
+  .container {
+    .subtitle {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 2vw 2vw;
+      margin-top: 5vw;
+      max-width: 660px;
+
+      h2 {
+        font-size: var(--text-h2-normal);
+      }
+    }
     .contain {
       margin-top: 40vh;
       margin-bottom: 20vh;
@@ -1736,8 +1780,6 @@ section.industries {
   }
 
   @media screen and (max-width: 820px) {
-    background-image: url("/images/bkg-industries-mobile.webp");
-
     .container {
       .subtitle {
         max-width: 80%;
@@ -1745,7 +1787,6 @@ section.industries {
         margin-top: 30vh;
         max-width: 100%;
       }
-
       .contain {
         margin-top: 50vh;
         row-gap: 80px;
@@ -1767,7 +1808,7 @@ section.industries {
 */
 section.services {
   background-color: #000;
-  background-image: url("/images/bkg-services.png");
+  background-image: url("/images/bkg-services.webp");
   background-repeat: no-repeat;
   min-height: 80vh;
   background-size: cover;
@@ -1890,7 +1931,6 @@ section.sectionService {
   }
 
   @media screen and (max-width: 820px) {
-    
     .slide-contain {
       .contain {
         background-position: top !important;

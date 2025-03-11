@@ -6,11 +6,11 @@ const Hero = ({ t }) => {
   const headingAnimated = t?.headings?.animated || [];
   const descriptions = t?.description || [];
   const features = t?.features || [];
-  const typeSequence = headingAnimated.reduce((acc, curr, _) => {
+  /*  const typeSequence = headingAnimated.reduce((acc, curr, _) => {
     acc.push(curr);
     acc.push(3000);
     return acc;
-  }, []);
+  }, []) */
   return (
     <section className="hero" id="hero">
       <div className="container">

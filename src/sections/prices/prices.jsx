@@ -84,6 +84,8 @@ const Prices = () => {
                       itemProp="image"
                       src="/images/icon4.webp"
                       alt="thunder-icon"
+                      width={80}
+                      height={80}
                     />
                     <div>
                       <h4>$1,500</h4>
@@ -263,8 +265,12 @@ const Prices = () => {
                   <div className="price">
                     <img
                       loading="lazy"
+                      decoding="async"
+                      itemProp="image"
                       src="/images/icon4.webp"
                       alt="thunder-icon"
+                      width={80}
+                      height={80}
                     />
                     <div>
                       <h4>$15,000</h4>

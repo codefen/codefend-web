@@ -18,6 +18,7 @@ function Crypto() {
                 alt={tt.image.alt}
                 width={tt.image.width}
                 height={tt.image.height}
+                decoding="async"
               />
               <h2>{tt.heading.text}</h2>
               <RenderTextBold text={tt.paragraph} />
