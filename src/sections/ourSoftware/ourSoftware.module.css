@@ -5,7 +5,8 @@
   overflow: hidden;
   background-image: url("/images/bkg-red9.webp");
   background-repeat: no-repeat;
-  height: 80vh;
+  background-size: contain;
+  /* height: 80vh; */
   background-position: top left;
   margin-top: 0px;
 }
@@ -31,7 +32,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 70vh;
+  /* height: 70vh; */
   justify-content: center;
   gap: 5vw;
 

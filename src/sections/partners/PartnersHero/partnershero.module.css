@@ -1,6 +1,6 @@
 .partnesHero {
   --mask-img-percentage: 80%;
-  --hero-min-h: 70dvh;
+  --hero-min-h: 40vh;
   --hero-bg-size: cover;
   --bg-position-y: -4dvh;
   --hero-max-h: 1000px;
@@ -47,7 +47,7 @@
 @media only screen and (min-width: 2000px) {
   .partnesHero {
     --mask-img-percentage: 60%;
-    --hero-min-h: 80dvh;
+    --hero-min-h: 60vh;
     --hero-bg-size: cover;
     --bg-position-y: -20dvh;
     --hero-max-h: none;

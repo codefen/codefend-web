@@ -66,7 +66,7 @@ const PlanCard = memo(({ plan, t }) => (
         </li>
       ))}
     </ul>
-    <a className="btn" href="https://wa.me/5491128936430" target="_blank">
+    <a className="btn" href="https://api.whatsapp.com/send/?phone=5491128936430" target="_blank">
       {t.btn}
       &nbsp; &nbsp;
       <span>

@@ -1692,7 +1692,7 @@ section.industries {
   background-position: right top;
   color: #fff;
   padding-bottom: 0;
-  min-height: 72dvh;
+  min-height: 60vh;
 
   .container {
     .subtitle {
@@ -1809,7 +1809,7 @@ section.services {
   background-color: #000;
   background-image: url("/images/bkg-services.webp");
   background-repeat: no-repeat;
-  min-height: 80vh;
+  min-height: 50vh;
   background-size: cover;
   background-position: 50%;
   color: #fff;
@@ -1991,7 +1991,7 @@ section.herocompliance {
   color: #fff;
 
   .container.tarjetas {
-    margin-top: 30vh;
+    margin-top: 20vh;
     display: flex;
     flex-direction: column;
   }
@@ -2003,7 +2003,7 @@ section.herocompliance {
     .subtitle {
       background-color: rgba(0, 0, 0, 0.5);
       padding: 2vw 2vw;
-      margin-top: 32vh;
+      margin-top: 10vh;
       max-width: 660px;
 
       h2 {
@@ -2059,7 +2059,7 @@ section.herocompliance {
 }
 
 section.herofriends {
-  height: 67vh;
+  height: 55vh;
   background-color: #000;
   background-image: url("/images/bkg-friends2.webp");
   background-repeat: no-repeat;
@@ -2071,9 +2071,9 @@ section.herofriends {
       font-size: var(--text-h2-normal);
     }
     .subtitle {
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.8);
       padding: 2vw 2vw;
-      margin-top: 2vw;
+      margin-top: 20vh;
       max-width: 660px;
     }
   }
