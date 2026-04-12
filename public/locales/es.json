@@ -29,22 +29,6 @@
           {
             "path": "compliance",
             "label": "Cumplimiento"
-          },
-          {
-            "path": "partners",
-            "label": "Socios"
-          },
-          {
-            "path": "about-us",
-            "label": "Sobre Nosotros"
-          },
-          {
-            "path": "calculator",
-            "label": "Calculadora"
-          },
-          {
-            "path": "plans",
-            "label": "Planes"
           }
         ]
       },
@@ -56,10 +40,8 @@
       "buttons": [
         {
           "class": "btn alt",
-          "path": "about-us",
-          "hash": "#contact",
+          "link": "mailto:hello@codefend.com",
           "label": "contacto",
-          "action": "scrollToContact",
           "target": "_self"
         },
         {
@@ -264,33 +246,16 @@
             {
               "label": "industrias",
               "path": "/industries"
-            }
-          ]
-        },
-        {
-          "section": "Otros",
-          "items": [
-            {
-              "label": "promoción",
-              "path": "/promo"
             },
             {
-              "label": "enciclopedia",
-              "path": "/enciclopedia"
-            },
-            {
-              "label": "nueva página de inicio",
-              "path": "/newhome"
-            }
-          ]
-        },
-        {
-          "section": "Producto",
-          "items": [
-            {
-              "label": "nuestro software",
+              "label": "software",
               "path": "/software"
-            },
+            }
+          ]
+        },
+        {
+          "section": "Plataforma",
+          "items": [
             {
               "label": "crear cuenta",
               "href": "https://panel.codefend.com/auth/signup",
@@ -332,7 +297,9 @@
     },
     "hero": {
       "headings": {
-        "animated": ["Pruebas de penetración continuas"]
+        "animated": [
+          "Pentesting Continuo"
+        ]
       },
       "description": [
         {
@@ -344,24 +311,24 @@
           "bold": true
         },
         {
-          "text": " para prevenir la interrupción de la continuidad empresarial, pérdidas reputacionales y monetarias. Para lograrlo, empleamos un enfoque multifacético que incluye software y hardware personalizados, monitoreo proactivo de amenazas y un equipo de expertos capacitados, incluidos investigadores e informantes.",
+          "text": " para prevenir interrupciones del negocio, pérdidas reputacionales y monetarias — mediante pentesting continuo, monitoreo proactivo de amenazas y operaciones de red team lideradas por expertos.",
           "bold": false
         }
       ],
-      "cta": "ver planes pequeños!",
+      "cta": "Contactar →",
       "features": [
-        "Unique tools",
-        "Cid spoofing",
-        "SS7 interception",
-        "Web3 drainers",
-        "Web security",
-        "Unlimited free scans",
-        "Crackmapexecute",
-        "Impact & cobalt strike",
-        "Brute ratel",
-        "Private leaks",
-        "The onion router",
-        "Invisible Internet Project"
+        "Pentesting de Aplicaciones Web",
+        "Seguridad Móvil",
+        "Redes e Infraestructura",
+        "Revisión de Código Fuente",
+        "Seguridad en la Nube",
+        "Ingeniería Social",
+        "Operaciones de Red Team",
+        "Inteligencia de Amenazas",
+        "Monitoreo de Superficie de Ataque",
+        "Gestión de Vulnerabilidades",
+        "Cumplimiento y Auditorías",
+        "Investigación Zero-Day"
       ]
     },
     "highlights": {
@@ -454,10 +421,8 @@
       ],
       "buttons": [
         {
+          "link": "mailto:hello@codefend.com",
           "text": "contacto",
-          "path": "about-us",
-          "hash": "#contact",
-          "action": "scrollToContact",
           "target": "_self",
           "type": "alt"
         },
@@ -1089,7 +1054,10 @@
         ],
         "occupation_price": {
           "price": "$1.500",
-          "priceText": ["por mes + ", "por bitcoin aceptado"]
+          "priceText": [
+            "por mes + ",
+            "por bitcoin aceptado"
+          ]
         }
       },
       "probability": {
@@ -1189,8 +1157,28 @@
   },
   "newHome": {
     "hero": {
-      "title": "servicios de vigilancia",
-      "description": "protección de datos y dispositivos 100% en línea y sin complicaciones"
+      "line1": "PENTESTING",
+      "line2": "CONTINUO",
+      "line3": "EN TIEMPO REAL",
+      "description": "Protegé la infraestructura digital de tu empresa con pentesting continuo, monitoreo de superficie de ataque y reporte de vulnerabilidades instantáneo — todo desde una sola plataforma.",
+      "stats": [
+        {
+          "value": "500+",
+          "label": "VULNERABILIDADES"
+        },
+        {
+          "value": "97%",
+          "label": "PRECISIÓN"
+        },
+        {
+          "value": "24/7",
+          "label": "MONITOREO"
+        },
+        {
+          "value": "10X",
+          "label": "MÁS RÁPIDO"
+        }
+      ]
     },
     "steps": {
       "steps_contain": [
@@ -1399,7 +1387,11 @@
       }
     },
     "section_5": {
-      "tabs": ["problemas", "recursos", "miembros"],
+      "tabs": [
+        "problemas",
+        "recursos",
+        "miembros"
+      ],
       "content": [
         {
           "title": "problemas encontrados",

@@ -111,15 +111,7 @@ const Header = () => {
                   <li key={`${i}-${link.path}`}>
                     <NavLink
                       to={`/${locale}/${link.path}`}
-                      className={(obj) => {
-                        if (
-                          link.path === "about-us" &&
-                          location.pathname === "/about-us" &&
-                          location.hash === "#contact"
-                        )
-                          return css.active;
-                        return obj.isActive ? css.active : "";
-                      }}
+                      className={(obj) => obj.isActive ? css.active : ""}
                       onClick={closeMenuOnLinkClick}
                     >
                       {link.label}

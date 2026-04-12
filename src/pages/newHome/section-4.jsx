@@ -1,13 +1,12 @@
 import css from './section-4.module.css';
-import img from "/images/check-red.png";
-
+import { CheckIconSVG } from '../../components/HomeSVGIllustrations/HomeSVGIllustrations';
 
 const Section4 = ({t}) => {
     return (
         <section className={css.section_4}>
           <div className={css.container}>
             {t.container.cards.map((card, index) => (
-              <div className={css.card} key={index}>
+              <div className={`${css.card} ${index === 1 ? css.card_featured : ''}`} key={index}>
                 <h2>{card.title}</h2>
                 <span className={css.card_subtitle}>{card.subtitle}</span>
                 <div className={css.card_price}>
@@ -19,7 +18,7 @@ const Section4 = ({t}) => {
                 <ul>
                   {card.features.map((feature, idx) => (
                     <li key={idx}>
-                      <img src={img} loading="lazy" alt="check icon" /> {feature}
+                      <CheckIconSVG /> {feature}
                     </li>
                   ))}
                 </ul>
@@ -28,7 +27,7 @@ const Section4 = ({t}) => {
             ))}
           </div>
         </section>
-    )
-} 
+    );
+}
 
 export default Section4;

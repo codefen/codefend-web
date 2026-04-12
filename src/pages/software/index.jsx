@@ -1,5 +1,6 @@
 import Features from "./features";
 import Capabilities from "./capabilities";
+import HeroSoftware from "./hero";
 import OurSoftware from "../../sections/ourSoftware/ourSoftware";
 import DocumentMetadata from "../../components/DocumentMetadata";
 import { pageSoftwareMetaData } from "../../data/metaData";
@@ -9,7 +10,6 @@ const Software = () => {
   const { t, locale } = useLocales();
   return (
     <>
-      {/* <HeroSoftware /> */}
       <DocumentMetadata
         meta={pageSoftwareMetaData({
           title: t("software.metadata.title"),
@@ -17,6 +17,7 @@ const Software = () => {
           locale,
         })}
       />
+      <HeroSoftware />
       <OurSoftware t={t("home.ourSoftware")} />
       <Features t={t("software.features")} />
       <Capabilities t={t("software.capabilities")} />

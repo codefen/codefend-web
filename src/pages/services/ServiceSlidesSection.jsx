@@ -1,91 +1,72 @@
 import { Fragment } from "react";
 import { servicesSlides2 } from "../../data/serviceSlides2";
+import {
+  WebPentestSVG,
+  MobilePentestSVG,
+  NetworkPentestSVG,
+  SourceCodeSVG,
+  SocialEngineeringSVG,
+  CloudSecuritySVG,
+} from "../../components/ServiceIllustrations/ServiceIllustrations";
+import css from "./serviceSlides.module.css";
+
+const svgMap = [
+  WebPentestSVG,
+  MobilePentestSVG,
+  NetworkPentestSVG,
+  SourceCodeSVG,
+  SocialEngineeringSVG,
+  CloudSecuritySVG,
+];
 
 const ServiceSlidesSection = ({ t }) => {
   return (
-    // <>
-    //   {
-    //     servicesSlides.map((serviceSlide, i) => (
-    //       <section key={serviceSlide.id} className={`section-${i + 1}`}>
-    //         <div className="items">
-    //           {serviceSlide.items.map((item, i) => (
-    //               <div className={`item`}>
-    //                 <h3>{item.title}</h3>
-    //                 <p>{item.description}</p>
-    //                 <img src={item.imgSrc} alt="triangle" />
-    //               </div>
-    //           ))}
-    //         </div>
-    //         <div
-    //           className="slide-contain "
-    //         >
-    //           {serviceSlide.slides.map((slide, i) => (
-    //               <div>
-    //                 <ul>
-    //                   <li>
-    //                     <h3>MORE DETAILS:</h3>
-    //                     <p>{slide.details}</p>
-    //                   </li>
-    //                   <li>
-    //                     <h3>
-    //                       <b>KEY BENEFITS:</b>
-    //                     </h3>
-    //                     <p>
-    //                       {slide.benefits.map((benefit, i) => (
-    //                         <Fragment key={i}>
-    //                           - {benefit}
-    //                           <br />
-    //                         </Fragment>
-    //                       ))}
-    //                     </p>
-    //                   </li>
-    //                 </ul>
-    //               </div>
-    //           ))}
-    //         </div>
-    //       </section>
-    //     ))
-    //     };
-    // </>
-    <section className="sectionService">
-      <div className="slide-contain ">
-        {t.slides.map((item, i) => (
-          <div
-            className="contain"
-            key={i}
-            style={{
-              backgroundImage: `url(${item.slide.bgImage})`,
-            }}
-          >
-            <ul>
-              <div className={`item`} key={i}>
-                <h2>{item.subTitle.title}</h2>
-                {/* <p>{item.subTitle.description}</p> */}
+    <section className={css.servicesSection}>
+      <div className={css.slidesList}>
+        {t.slides.map((item, i) => {
+          const IllustrationSVG = svgMap[i] ?? WebPentestSVG;
+          const isReversed = i % 2 !== 0;
+
+          return (
+            <div
+              key={i}
+              className={`${css.serviceRow} ${isReversed ? css.reversed : ""}`}
+            >
+              {/* Text column */}
+              <div className={css.textCol}>
+                <span className={css.serviceIndex}>
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <h2 className={css.serviceTitle}>{item.subTitle.title}</h2>
+                <p className={css.serviceDesc}>{item.subTitle.description}</p>
+
+                <div className={css.detailsBlock}>
+                  <h3 className={css.detailsLabel}>{t.moreDetails}</h3>
+                  <p className={css.detailsText}>{item.slide.details}</p>
+                </div>
+
+                <div className={css.benefitsBlock}>
+                  <h3 className={css.detailsLabel}>{t.keyBenefits}</h3>
+                  <ul className={css.benefitsList}>
+                    {item.slide.benefits.map((benefit, j) => (
+                      <li key={j} className={css.benefitItem}>
+                        <span className={css.benefitDot} />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-              <li>
-                <h3>{t.summary}</h3>
-                <p>{item.subTitle.description}</p>
-              </li>
-              <li>
-                <h3>{t.moreDetails}</h3>
-                <p>{item.slide.details}</p>
-              </li>
-              <li>
-                <h3>
-                  <b>{t.keyBenefits}</b>
-                </h3>
-                <p>
-                  {item.slide.benefits.map((benefit, i) => (
-                    <Fragment key={i}>
-                      - {benefit}
-                      <br />
-                    </Fragment>
-                  ))}
-                </p>
-              </li>
-            </ul>
-          </div>
-        ))}
+
+              {/* Illustration column */}
+              <div className={css.illustrationCol}>
+                <div className={css.illustrationWrap}>
+                  <IllustrationSVG />
+                </div>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </section>
   );

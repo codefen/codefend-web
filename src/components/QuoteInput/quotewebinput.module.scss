@@ -25,7 +25,7 @@
 
     span.errorText {
       font-size: 0.8rem;
-      color: #6a1e1e;
+      color: #0d2444;
       letter-spacing: 0.2px;
       position: absolute;
       bottom: -55%;
@@ -52,14 +52,14 @@
     transition: all 0.2s ease-in-out;
 
     &:focus {
-      background-color: #fee;
-      border-bottom: 1px dashed #ff3939;
+      background-color: #e8f0fb;
+      border-bottom: 1px dashed #1a6fd4;
       outline: none;
     }
 
     &[data-state="error"] {
-      background-color: #fdf3f3;
-      border-bottom: 1px dashed #a40404;
+      background-color: #eaf0fb;
+      border-bottom: 1px dashed #0d2444;
       outline: none;
       color: #000;
     }

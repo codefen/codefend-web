@@ -1,0 +1,188 @@
+/* ─── Software Hero — matrix background, centered ────────────────────────── */
+
+.hero {
+  position: relative;
+  min-height: 80vh;
+  background: #020b18;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 100px 5vw 80px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 45%, rgba(7,20,40,0.92) 0%, transparent 70%),
+    radial-gradient(ellipse 100% 100% at 50% 50%, rgba(2,11,24,0.5) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 900px;
+  width: 100%;
+}
+
+/* Badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Courier New", monospace;
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  color: #5ba3f5;
+  border: 1px solid rgba(42,127,232,0.35);
+  padding: 6px 18px;
+  border-radius: 2px;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.badge_dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #2a7fe8;
+  animation: pulse 2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(42,127,232,0.7); }
+  50%       { opacity: 0.7; box-shadow: 0 0 0 8px rgba(42,127,232,0); }
+}
+
+/* Headline */
+.headline {
+  font-family: "Big Noodle Titling", "Impact", sans-serif;
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  margin-bottom: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.line_white {
+  color: #ffffff;
+  display: block;
+}
+
+.line_blue {
+  color: #2a7fe8;
+  display: block;
+  text-shadow: 0 0 40px rgba(42,127,232,0.5), 0 0 100px rgba(42,127,232,0.2);
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+  color: #6888a8;
+  line-height: 1.7;
+  max-width: 600px;
+  margin-bottom: 3rem;
+}
+
+/* Feature items row */
+.features {
+  display: flex;
+  gap: 0;
+  width: 100%;
+  border-top: 1px solid rgba(42,127,232,0.12);
+  border-bottom: 1px solid rgba(42,127,232,0.12);
+}
+
+.feature_item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.8rem 2.5vw;
+  flex: 1;
+  border-right: 1px solid rgba(42,127,232,0.12);
+  text-align: left;
+  transition: background 0.2s;
+}
+
+.feature_item:last-child {
+  border-right: none;
+}
+
+.feature_item:hover {
+  background: rgba(42,127,232,0.05);
+}
+
+.feature_num {
+  font-family: "Big Noodle Titling", "Impact", sans-serif;
+  font-size: 2.5rem;
+  color: rgba(42,127,232,0.2);
+  line-height: 1;
+  flex-shrink: 0;
+  letter-spacing: -1px;
+}
+
+.feature_item div h3 {
+  font-family: "Courier New", monospace;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #5ba3f5;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.feature_item div p {
+  font-family: system-ui, sans-serif;
+  font-size: 12px;
+  color: #4a6888;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Bottom fade */
+.bottom_fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(to bottom, transparent, #020b18);
+  pointer-events: none;
+  z-index: 3;
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    min-height: 70vh;
+    padding: 80px 6vw 60px;
+  }
+
+  .headline {
+    font-size: clamp(2.5rem, 14vw, 4rem);
+    letter-spacing: -1px;
+  }
+
+  .features {
+    flex-direction: column;
+  }
+
+  .feature_item {
+    border-right: none;
+    border-bottom: 1px solid rgba(42,127,232,0.12);
+  }
+
+  .feature_item:last-child {
+    border-bottom: none;
+  }
+}

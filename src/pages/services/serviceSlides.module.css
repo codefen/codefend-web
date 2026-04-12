@@ -1,0 +1,218 @@
+/* =====================================================
+   Service Slides — LangSmith-inspired dark layout
+   ===================================================== */
+
+.servicesSection {
+  background-color: #020b18;
+  padding: 0 0 80px 0;
+  overflow-x: hidden;
+}
+
+.slidesList {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Each service row ── */
+.serviceRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 0;
+  padding: 72px 6vw;
+  border-bottom: 1px solid rgba(26, 111, 212, 0.12);
+  position: relative;
+  transition: background 0.3s ease;
+}
+
+.serviceRow:hover {
+  background: rgba(13, 36, 68, 0.35);
+}
+
+/* Subtle left accent line */
+.serviceRow::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #1a6fd4 50%, transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.serviceRow:hover::before {
+  opacity: 0.6;
+}
+
+/* Reversed layout: SVG left, text right */
+.reversed {
+  background: rgba(7, 20, 40, 0.5);
+}
+
+.reversed .textCol {
+  order: 2;
+}
+
+.reversed .illustrationCol {
+  order: 1;
+}
+
+/* ── Text column ── */
+.textCol {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-right: 4vw;
+  max-width: 560px;
+}
+
+.reversed .textCol {
+  padding-right: 0;
+  padding-left: 4vw;
+}
+
+.serviceIndex {
+  font-family: "Roboto Mono", "Courier New", monospace;
+  font-size: 13px;
+  color: #1a6fd4;
+  letter-spacing: 3px;
+  opacity: 0.8;
+  font-weight: 400;
+}
+
+.serviceTitle {
+  font-size: 32px;
+  font-weight: 400;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.serviceDesc {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #8aaece;
+  margin: 0;
+}
+
+/* ── Details block ── */
+.detailsBlock {
+  border-left: 2px solid rgba(26, 111, 212, 0.4);
+  padding-left: 16px;
+}
+
+.detailsLabel {
+  font-family: "Roboto Mono", "Courier New", monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #1a6fd4;
+  text-transform: uppercase;
+  margin: 0 0 8px 0;
+}
+
+.detailsText {
+  font-size: 14px;
+  line-height: 1.65;
+  color: #6a8cae;
+  margin: 0;
+}
+
+/* ── Benefits ── */
+.benefitsBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.benefitsList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.benefitItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: #8aaece;
+  line-height: 1.5;
+}
+
+.benefitDot {
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #1a6fd4;
+  margin-top: 6px;
+  box-shadow: 0 0 6px #1a6fd4;
+}
+
+/* ── Illustration column ── */
+.illustrationCol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.illustrationWrap {
+  width: 100%;
+  max-width: 480px;
+  position: relative;
+}
+
+/* Subtle glow around the illustration area */
+.illustrationWrap::after {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  background: radial-gradient(ellipse at center, rgba(26, 111, 212, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+.illustrationWrap svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 0 24px rgba(26, 111, 212, 0.18));
+}
+
+/* ── Responsive ── */
+@media screen and (max-width: 900px) {
+  .serviceRow {
+    grid-template-columns: 1fr;
+    padding: 52px 6vw;
+    gap: 40px;
+  }
+
+  .reversed .textCol,
+  .reversed .illustrationCol {
+    order: unset;
+  }
+
+  .textCol,
+  .reversed .textCol {
+    padding-right: 0;
+    padding-left: 0;
+    max-width: 100%;
+  }
+
+  .serviceTitle {
+    font-size: 26px;
+  }
+
+  .illustrationWrap {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}

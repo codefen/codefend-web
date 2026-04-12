@@ -1,29 +1,37 @@
 .ourSoftwareSection {
-  background: var(--color-light-100);
-  z-index: 1;
   position: relative;
   overflow: hidden;
-  background-image: url("/images/bkg-red9.webp");
-  background-repeat: no-repeat;
-  background-size: contain;
-  /* height: 80vh; */
-  background-position: top left;
+  background-color: #020b18;
+  background-image:
+    linear-gradient(rgba(42,127,232,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(42,127,232,0.04) 1px, transparent 1px),
+    radial-gradient(ellipse 70% 90% at 10% 50%, rgba(13,42,92,0.5) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 70% at 90% 80%, rgba(26,111,212,0.2) 0%, transparent 50%);
+  background-size: 40px 40px, 40px 40px, 100% 100%, 100% 100%;
+  padding: 80px 0;
   margin-top: 0px;
 }
 
 .motionContainer {
-  /* padding-bottom: 30px; */
-  color: var(--text-color);
-  background-color: rgba(0, 0, 0, .15);
-    max-width: 660px;
-    padding-top: 2vw;
-    padding-bottom: 2vw;
-    padding-left: 3.25rem;
-    padding-right: 3.25rem;
+  color: #e2e8f0;
+  max-width: 500px;
+  padding: 2vw 0;
+
+  h2 {
+    color: #ffffff;
+    font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+    margin-bottom: 1.2rem;
+    line-height: 1.2;
+  }
 
   p {
-    max-width: 660px;
-    text-shadow: 0 0 15px #000;
+    color: #8ab4d8;
+    line-height: 1.7;
+    font-size: 1rem;
+  }
+
+  strong, b {
+    color: #93c5fd;
   }
 }
 
@@ -32,18 +40,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* height: 70vh; */
-  justify-content: center;
   gap: 5vw;
+}
 
-  img {
-    /* height: 100%;
-    width: 100%;
-    object-position: center;
-    object-fit: contain; */
-    /* margin: 0 auto; */
-    display: block;
-  }
+.panelWrapper {
+  flex: 1;
+  max-width: 620px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(42,127,232,0.25);
+  box-shadow: 0 0 50px rgba(26,111,212,0.15), 0 0 100px rgba(26,111,212,0.05);
 }
 
 .items {
@@ -56,37 +62,30 @@
 
 .item {
   max-width: 542px;
-  color: var(--text-color-alt);
+  color: #8ab4d8;
 
   h3 {
-    color: var(--text-color-alt4);
-    font-size: var(--text-large);
+    color: #5ba3f5;
+    font-size: 1.1rem;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .ourSoftwareSection {
-    padding-top: 150px;
-    height: auto;
-    background-size: 270%;
-    padding-bottom: 70px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 
     .softwareExampleContainer {
       flex-direction: column;
-      height: auto;
     }
   }
 
-
-  .items {
-    flex-direction: row;
-    padding: 45px 45px 0px 45px;
+  .panelWrapper {
+    width: 100%;
+    max-width: 100%;
   }
 
-  .item {
-    &:first-child {
-      text-align: end;
-    }
+  .motionContainer {
+    max-width: 100%;
   }
 }
-

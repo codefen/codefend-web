@@ -1,29 +1,221 @@
-.new_hero {
-    --hero-height: 60vh;
-    --hero-text-size: 3rem;
+/* ─── Hero — Strike-inspired, centered, matrix background ─────────────────── */
 
-    background-image: url('/images/bg-newhome.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: right;
-    height: var(--hero-height);
-    color: var(--text-color);
-    font-family: "Big Noodle Titling", sans-serif;
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background: #020b18;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 100px 5vw 80px;
 }
 
-.hero_title {
-    h1 {
-        font-size: var(--text-h1-larger);
-        text-wrap: wrap;
-    }
-
-    span {
-        font-size: var(--hero-text-size);
-    }
-
+/* Radial blue glow at center — sits above the matrix canvas */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 45%, rgba(7,20,40,0.9) 0%, transparent 70%),
+    radial-gradient(ellipse 100% 100% at 50% 50%, rgba(2,11,24,0.45) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 1;
 }
-@media screen and (max-width: 768px) {
-    .new_hero {
-        --hero-text-size: 2rem;
-    }    
+
+/* All content above canvas + overlay */
+.inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 940px;
+  width: 100%;
+}
+
+/* ─── Badge ────────────────────────────────────────────────────────────────── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Courier New", monospace;
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  color: #5ba3f5;
+  border: 1px solid rgba(42, 127, 232, 0.35);
+  padding: 6px 18px;
+  border-radius: 2px;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+}
+
+.badge_dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #2a7fe8;
+  animation: pulse 2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(42,127,232,0.7); }
+  50%       { opacity: 0.7; box-shadow: 0 0 0 8px rgba(42,127,232,0); }
+}
+
+/* ─── Headline ─────────────────────────────────────────────────────────────── */
+.headline {
+  font-family: "Big Noodle Titling", "Impact", sans-serif;
+  font-size: clamp(3.2rem, 9vw, 7.5rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.line_white {
+  color: #ffffff;
+  display: block;
+}
+
+.line_blue {
+  color: #2a7fe8;
+  display: block;
+  text-shadow:
+    0 0 40px rgba(42,127,232,0.55),
+    0 0 100px rgba(42,127,232,0.2);
+}
+
+/* ─── Subtitle ─────────────────────────────────────────────────────────────── */
+.subtitle {
+  font-size: clamp(0.95rem, 1.3vw, 1.15rem);
+  color: #6888a8;
+  line-height: 1.7;
+  max-width: 580px;
+  margin-bottom: 3rem;
+}
+
+/* ─── CTAs ─────────────────────────────────────────────────────────────────── */
+.ctas {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 4.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cta_primary {
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  letter-spacing: 2.5px;
+  font-weight: 700;
+  color: #020b18;
+  background: #2a7fe8;
+  padding: 16px 36px;
+  border: 2px solid #2a7fe8;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: background 0.2s, box-shadow 0.2s;
+  text-transform: uppercase;
+}
+
+.cta_primary:hover {
+  background: #5ba3f5;
+  border-color: #5ba3f5;
+  box-shadow: 0 0 28px rgba(42,127,232,0.5);
+}
+
+.cta_secondary {
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  color: #5ba3f5;
+  text-decoration: none;
+  padding: 16px 28px;
+  border: 1px solid rgba(42,127,232,0.3);
+  border-radius: 2px;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.cta_secondary:hover {
+  border-color: #2a7fe8;
+  color: #93c5fd;
+}
+
+/* ─── Stats row ────────────────────────────────────────────────────────────── */
+.stats {
+  display: flex;
+  gap: clamp(2.5rem, 6vw, 6rem);
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 2.8rem;
+  border-top: 1px solid rgba(42,127,232,0.15);
+  width: 100%;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.stat_value {
+  font-family: "Big Noodle Titling", "Impact", sans-serif;
+  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+  color: #ffffff;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.stat_label {
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #2a7fe8;
+}
+
+/* ─── Bottom fade ──────────────────────────────────────────────────────────── */
+.bottom_fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 140px;
+  background: linear-gradient(to bottom, transparent, #020b18);
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* ─── Responsive ───────────────────────────────────────────────────────────── */
+@media screen and (max-width: 640px) {
+  .hero {
+    min-height: 90vh;
+    padding: 80px 6vw 60px;
+  }
+
+  .headline {
+    font-size: clamp(2.8rem, 16vw, 4.5rem);
+    letter-spacing: -1px;
+  }
+
+  .stats {
+    gap: 2rem;
+  }
+
+  .ctas {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cta_primary,
+  .cta_secondary {
+    text-align: center;
+  }
 }

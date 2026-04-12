@@ -1,70 +1,60 @@
-import { motion } from "framer-motion";
-import { slideTransition } from "../../transitions/globalTransitions";
+import MatrixBackground from "../../components/MatrixBackground/MatrixBackground";
+import { useLocales } from "../../store/useLocales";
+import css from "./hero.module.css";
 
 const HeroSoftware = () => {
+  const { locale } = useLocales();
+  const isEs = locale === "es";
+
+  const features = isEs
+    ? [
+        { label: "SEGURIDAD A MEDIDA", desc: "Precios flexibles adaptados a tus necesidades específicas" },
+        { label: "PROTECCIÓN CONTINUA", desc: "Pentesting continuo integrado en tus ciclos CI/CD" },
+        { label: "REPORTES INSTANTÁNEOS", desc: "Vulnerabilidades verificadas entregadas directamente a tu bandeja" },
+      ]
+    : [
+        { label: "TAILOR YOUR SECURITY", desc: "Flexible pricing tailored to your specific needs" },
+        { label: "FULL-TIME PROTECTION", desc: "Continuous pentesting for your CI/CD cycles" },
+        { label: "INSTANT REPORTING", desc: "Peer-verified issues delivered to your inbox" },
+      ];
+
   return (
-    <section className="our-software">
-      <img
-        style={{
-          position: "absolute",
-          zIndex: "-1",
-          top: 0,
-          left: 0,
-          objectFit: "cover",
-        }}
-        loading="lazy"
-        decoding="async"
-        itemProp="image"
-        src="/images/bkg-soft.jpg"
-        alt="background"
-      />
-      <div className="container">
-        <motion.div
-          variants={slideTransition}
-          viewport={{ once: true }}
-          whileInView="visible"
-          initial="hidden"
-          className="copy"
-        >
-          <h2>Our software</h2>
-          <p>
-            Codefend is your comprehensive solution for all your company's
-            security needs. Our application combines a wide range of services
-            designed to protect your organization from cyber threats, ensuring
-            the highest level of protection for your data & infrastructure.
-          </p>
-        </motion.div>
-        +
-        <div className="image">
-          <img src="/images/sleek-1.png" loading="lazy" alt="statistics img" />
+    <section className={css.hero}>
+      <MatrixBackground />
+      <div className={css.overlay} />
+
+      <div className={css.inner}>
+        {/* Badge */}
+        <div className={css.badge}>
+          <span className={css.badge_dot} />
+          {isEs ? "PLATAFORMA DE SEGURIDAD" : "SECURITY PLATFORM"}
         </div>
-        <div className="items">
-          <div className="item">
-            <p>
-              <b>tailor your security solution to your needs.</b>
-              <br />
-              One of the key advantages of Codefend is the flexibility it offers
-              in terms of price. We understand that every company has unique
-              security requirements, and that's why we provide individualized
-              price for each of our services. This means you can tailor your
-              security solution to fit your financial plan and specific needs,
-              excluding unnecessary expenses.
-            </p>
-          </div>
-          <div className="item">
-            <p>
-              <b>full time protection for your cd/ci cycles.</b>
-              <br />
-              Codefend delivers continuous pentest and attack surface
-              surveillance. Our yearly services are conducted by our team of
-              professionals, who will assess your system's vulnerabilities and
-              provide you with detailed information to increase your defenses.
-              Ensure that your organization remains protected around the clock,
-              with real-time threat detection and response capabilities.
-            </p>
-          </div>
+
+        <h1 className={css.headline}>
+          <span className={css.line_white}>{isEs ? "UNA PLATAFORMA." : "ONE PLATFORM."}</span>
+          <span className={css.line_blue}>{isEs ? "COBERTURA TOTAL." : "TOTAL COVERAGE."}</span>
+        </h1>
+
+        <p className={css.subtitle}>
+          {isEs
+            ? "Codefend es tu solución integral para todas las necesidades de seguridad de tu empresa. Combinamos pentesting, monitoreo de superficie de ataque y reporte de vulnerabilidades en tiempo real."
+            : "Codefend is your comprehensive solution for all your company's security needs. Combining pentesting, attack surface monitoring, and real-time vulnerability reporting."}
+        </p>
+
+        <div className={css.features}>
+          {features.map((f, i) => (
+            <div key={i} className={css.feature_item}>
+              <span className={css.feature_num}>{String(i + 1).padStart(2, "0")}</span>
+              <div>
+                <h3>{f.label}</h3>
+                <p>{f.desc}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
+
+      <div className={css.bottom_fade} />
     </section>
   );
 };

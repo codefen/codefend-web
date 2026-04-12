@@ -34,13 +34,33 @@ const PlanCard = memo(({ plan, t }) => (
   >
     <h3>{plan.title}</h3>
     <div className={css.price}>
-      <img
-        loading="lazy"
-        src="/images/icon4.webp"
-        alt="thunder-icon"
-        width={80}
-        height={80}
-      />
+      <svg
+        className={css.boltIcon}
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        width={64}
+        height={64}
+        aria-hidden="true"
+      >
+        <defs>
+          <linearGradient id="boltGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#5aaeff" />
+            <stop offset="100%" stopColor="#1a6fd4" />
+          </linearGradient>
+          <filter id="boltGlow">
+            <feGaussianBlur stdDeviation="1.5" result="blur" />
+            <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+          </filter>
+        </defs>
+        <path
+          d="M13 2L4.5 13.5H11L10 22L19.5 10H13L13 2Z"
+          fill="url(#boltGrad)"
+          filter="url(#boltGlow)"
+          stroke="rgba(90,174,255,0.4)"
+          strokeWidth="0.5"
+        />
+      </svg>
       <div>
         <h4>{plan.price}</h4>
         <p>

@@ -29,8 +29,8 @@
   position: relative;
 
   &[data-state="open"] {
-    background-color: #fee;
-    --border-color: #ff3939;
+    background-color: #e8f0fb;
+    --border-color: #1a6fd4;
 
     .selectIcon {
       transition: all 0.2s ease-in-out;
@@ -75,11 +75,11 @@
   transition: all 0.2s ease-in-out;
 
   &[data-state="checked"] {
-    background-color: #ff787836;
+    background-color: #1a6fd436;
   }
 
   &:hover {
-    background-color: #ff787827;
+    background-color: #1a6fd427;
   }
 
   &[data-disabled] {

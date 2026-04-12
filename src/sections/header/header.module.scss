@@ -142,14 +142,14 @@ a.active {
       width: 100%;
 
       text-align: center;
-      border-bottom: 1px solid #ff3a47;
+      border-bottom: 1px solid #1a6fd4;
 
       a {
         padding: 20px;
       }
 
       &:first-child {
-        border-top: 1px solid #ff3a47;
+        border-top: 1px solid #1a6fd4;
       }
       &:hover {
         color: inherit;
@@ -157,12 +157,12 @@ a.active {
       }
 
       &:has(> a.active) {
-        background-color: #521717;
+        background-color: #071428;
       }
     }
   }
   a.active {
-    color: #ffc6c6;
+    color: #5ba3f5;
   }
 
   .menu {

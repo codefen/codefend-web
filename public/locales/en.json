@@ -29,22 +29,6 @@
           {
             "path": "compliance",
             "label": "Compliance"
-          },
-          {
-            "path": "partners",
-            "label": "Partners"
-          },
-          {
-            "path": "about-us",
-            "label": "About Us"
-          },
-          {
-            "path": "calculator",
-            "label": "Calculator"
-          },
-          {
-            "path": "plans",
-            "label": "Plans"
           }
         ]
       },
@@ -56,10 +40,8 @@
       "buttons": [
         {
           "class": "btn alt",
-          "path": "about-us",
-          "hash": "#contact",
+          "link": "mailto:hello@codefend.com",
           "label": "contact",
-          "action": "scrollToContact",
           "target": "_self"
         },
         {
@@ -253,23 +235,27 @@
         {
           "section": "Solutions",
           "items": [
-            { "label": "services", "path": "/services" },
-            { "label": "compliance", "path": "/compliance" },
-            { "label": "industries", "path": "/industries" }
+            {
+              "label": "services",
+              "path": "/services"
+            },
+            {
+              "label": "compliance",
+              "path": "/compliance"
+            },
+            {
+              "label": "industries",
+              "path": "/industries"
+            },
+            {
+              "label": "software",
+              "path": "/software"
+            }
           ]
         },
         {
-          "section": "Others",
+          "section": "Platform",
           "items": [
-            { "label": "promo", "path": "/promo" },
-            { "label": "encyclopedia", "path": "/enciclopedia" },
-            { "label": "new Home", "path": "/newhome" }
-          ]
-        },
-        {
-          "section": "Product",
-          "items": [
-            { "label": "our software", "path": "/software" },
             {
               "label": "create account",
               "href": "https://panel.codefend.com/auth/signup",
@@ -285,7 +271,10 @@
         {
           "section": "Company",
           "items": [
-            { "label": "contact us", "href": "mailto:hello@codefend.com" },
+            {
+              "label": "contact us",
+              "href": "mailto:hello@codefend.com"
+            },
             {
               "label": "terms of use",
               "href": "https://docs.google.com/document/d/1KZRrfHR4hIy2YyKkQmPK7Azp-zkbk7mYhCM6xKlVsoE/edit#heading=h.otbipzz762sq",
@@ -308,7 +297,9 @@
     },
     "hero": {
       "headings": {
-        "animated": ["Continuous pentest"]
+        "animated": [
+          "Continuous Penetration Testing"
+        ]
       },
       "description": [
         {
@@ -320,24 +311,24 @@
           "bold": true
         },
         {
-          "text": " to prevent business continuity disruption, reputational and monetary loss. To make this possible we employ a multifaceted approach that encompasses custom software and hardware, proactive threat monitoring, and a team of skilled experts, including researchers and informants.",
+          "text": " to prevent business disruption, reputational damage and financial loss — through continuous pentesting, proactive threat monitoring, and expert-led red team operations.",
           "bold": false
         }
       ],
-      "cta": "View our small plans",
+      "cta": "Contact us →",
       "features": [
-        "Unique tools",
-        "Cid spoofing",
-        "SS7 interception",
-        "Web3 drainers",
-        "Web security",
-        "Unlimited free scans",
-        "Crackmapexecute",
-        "Impact & cobalt strike",
-        "Brute ratel",
-        "Private leaks",
-        "The onion router",
-        "Invisible Internet Project"
+        "Web Application Pentesting",
+        "Mobile Security Testing",
+        "Network & Infrastructure",
+        "Source Code Review",
+        "Cloud Security",
+        "Social Engineering",
+        "Red Team Operations",
+        "Threat Intelligence",
+        "Attack Surface Monitoring",
+        "Vulnerability Management",
+        "Compliance & Audits",
+        "Zero-Day Research"
       ]
     },
     "highlights": {
@@ -430,10 +421,8 @@
       ],
       "buttons": [
         {
+          "link": "mailto:hello@codefend.com",
           "text": "contact",
-          "path": "about-us",
-          "hash": "#contact",
-          "action": "scrollToContact",
           "target": "_self",
           "type": "alt"
         },
@@ -995,16 +984,46 @@
           "lead_role": {
             "default": "Select Role",
             "labels": [
-              { "label": "Administrative", "value": "admin" },
-              { "label": "Human Resources", "value": "human" },
-              { "label": "Information Technology", "value": "info" },
-              { "label": "Marketing", "value": "ads" },
-              { "label": "Sales", "value": "sales" },
-              { "label": "Finance", "value": "finance" },
-              { "label": "Customer Service", "value": "cs" },
-              { "label": "Production & Ops", "value": "prod" },
-              { "label": "Strategy & Planning", "value": "plan" },
-              { "label": "Legal Affairs", "value": "law" }
+              {
+                "label": "Administrative",
+                "value": "admin"
+              },
+              {
+                "label": "Human Resources",
+                "value": "human"
+              },
+              {
+                "label": "Information Technology",
+                "value": "info"
+              },
+              {
+                "label": "Marketing",
+                "value": "ads"
+              },
+              {
+                "label": "Sales",
+                "value": "sales"
+              },
+              {
+                "label": "Finance",
+                "value": "finance"
+              },
+              {
+                "label": "Customer Service",
+                "value": "cs"
+              },
+              {
+                "label": "Production & Ops",
+                "value": "prod"
+              },
+              {
+                "label": "Strategy & Planning",
+                "value": "plan"
+              },
+              {
+                "label": "Legal Affairs",
+                "value": "law"
+              }
             ]
           },
           "company_area": "Write your message here"
@@ -1035,7 +1054,10 @@
         ],
         "occupation_price": {
           "price": "$1.500",
-          "priceText": ["per month +", "per bitcoin accepted"]
+          "priceText": [
+            "per month +",
+            "per bitcoin accepted"
+          ]
         }
       },
       "probability": {
@@ -1139,8 +1161,28 @@
   },
   "newHome": {
     "hero": {
-      "title": "survelliance services",
-      "description": "100% online & hassle-free end-point & data protection"
+      "line1": "CONTINUOUS",
+      "line2": "SECURITY",
+      "line3": "TESTING",
+      "description": "Protect your company's digital infrastructure with real-time pentesting, attack surface monitoring, and instant vulnerability reporting — all from one platform.",
+      "stats": [
+        {
+          "value": "500+",
+          "label": "VULNS FOUND"
+        },
+        {
+          "value": "97%",
+          "label": "ACCURACY"
+        },
+        {
+          "value": "24/7",
+          "label": "MONITORING"
+        },
+        {
+          "value": "10X",
+          "label": "FASTER"
+        }
+      ]
     },
     "steps": {
       "steps_contain": [
@@ -1349,7 +1391,11 @@
       }
     },
     "section_5": {
-      "tabs": ["issues", "resources", "members"],
+      "tabs": [
+        "issues",
+        "resources",
+        "members"
+      ],
       "content": [
         {
           "title": "found issues",

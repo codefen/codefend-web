@@ -2,46 +2,24 @@ import { motion } from "framer-motion";
 
 const Highlights = ({ t }) => {
   return (
-    <motion.section
-      initial={{
-        y: "-100%",
-      }}
-      animate={{
-        y: 0,
-      }}
-      transition={{
-        duration: 0.7,
-        delay: 0.2,
-      }}
-      className="highlights"
-    >
+    <section className="highlights">
       <div className="container">
         <ul>
           {t.sections.map((section, index) => (
             <li
               key={index}
               style={{
-                paddingLeft: section.paddingLeft ? "0px" : undefined,
                 borderRight:
                   index === t.sections.length - 1 ? "none" : undefined,
               }}
             >
               <motion.div
-                initial={{
-                  opacity: 0,
-                  x: -70,
-                }}
-                animate={{
-                  opacity: 1,
-                  x: 0,
-                  transition: {
-                    duration: 1.5,
-                    delay: section.delay,
-                    type: "spring",
-                    bounce: 0.6,
-                  },
-                }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.6, delay: index * 0.15 }}
               >
+                <span className="hl-number">0{index + 1}</span>
                 <h2>{section.title}</h2>
                 <p>
                   {section.description.map((part, idx) =>
@@ -53,7 +31,7 @@ const Highlights = ({ t }) => {
           ))}
         </ul>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { slideTransition } from "../../transitions/globalTransitions";
 import css from "./ourSoftware.module.css";
 import { RenderTextBold } from "../../components/RenderTextBold";
+import { VulnerabilityPanelSVG } from "../../components/DifferencesIllustrations/DifferencesIllustrations";
 
 const OurSoftware = ({ t }) => {
   return (
@@ -18,7 +19,9 @@ const OurSoftware = ({ t }) => {
             <h2>{t.title}</h2>
             <RenderTextBold text={t.description} />
           </motion.div>
-          <img src={t.image.src} loading="lazy" alt={t.image.alt} decoding="async" itemProp="image" />
+          <div className={css.panelWrapper}>
+            <VulnerabilityPanelSVG />
+          </div>
         </div>
       </div>
     </section>

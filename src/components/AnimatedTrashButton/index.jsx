@@ -53,7 +53,7 @@ export const AnimatedTrashButton = ({ onClick, disabled }) => {
         className={css.trashButtonContainer}
         animate={{
           scale: isHovered ? 0.9 : 1,
-          color: isHovered ? "rgb(220, 38, 38)" : "rgb(239, 68, 68)",
+          color: isHovered ? "rgb(13, 36, 68)" : "rgb(26, 111, 212)",
         }}
         whileTap={{ scale: 0.85 }}
         transition={{

@@ -1,31 +1,57 @@
 .section_2 {
-    --bg-color-cards: #fff;
-
-    background: var(--color-light-100);
-    height: fit-content;
-    color: var(--text-color-alt);
-    display: flex;
-
-    h1, h2 {
-        font-family: Big Noodle Titling;
-    }
+    background: #020b18;
+    padding: 80px 0;
+    color: #ffffff;
 }
+
 .container {
-    max-width: 1900px;
-    margin: auto;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 5vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background: #0a1f3d;
+    border: 1px solid rgba(42,127,232,0.2);
+    border-radius: 10px;
+    padding: 2rem 1.5rem;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(42,127,232,0.18);
+    border-color: rgba(42,127,232,0.5);
+}
+
+.card_icon {
+    display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 2rem;
-    & > div {
-        background: var(--bg-color-cards);
-        max-width: 400px;
-        padding: 2rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
+    width: 64px;
+    height: 64px;
+    background: #071428;
+    border-radius: 12px;
+    border: 1px solid rgba(42,127,232,0.3);
+}
+
+.card h2 {
+    font-family: "Big Noodle Titling", sans-serif;
+    font-size: 1.3rem;
+    color: #93c5fd;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card p {
+    color: #8ab4d8;
+    font-size: 0.9rem;
+    line-height: 1.6;
 }

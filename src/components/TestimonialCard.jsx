@@ -1,62 +1,40 @@
 import { useState } from "react";
-import animation from "../styles/animation.module.css";
 
-const TestimonialCard = ({ description, image, profile, name, role }) => {
+const TestimonialCard = ({ description, image, name, role }) => {
   const [isImageLoaded, setIsImageLoaded] = useState(false);
-
-  const handleImageLoad = () => {
-    setIsImageLoaded(true);
-  };
   const namePattern = name.replace(/\s+/g, "-").toLowerCase();
+
   return (
     <article
-      className="card"
+      className="testimonial-card"
       role="article"
       aria-label={`Testimonial from ${name}`}
     >
-      <p>{description}</p>
-      <div>
-        {!isImageLoaded && (
-          <div
-            role="img"
-            aria-label="Loading profile image"
-            className={animation.profileSkeletonLoader}
-          ></div>
-        )}
-        <img
-          src={image}
-          alt="Person profile image"
-          onLoad={handleImageLoad}
-          style={{
-            opacity: isImageLoaded ? "1" : "0",
-            position: isImageLoaded ? "static" : "absolute",
-          }}
-          loading="lazy"
-          decoding="async"
-          aria-hidden={!isImageLoaded}
-          data-loaded={isImageLoaded}
-          width={80}
-          height={80}
-        />
-        <p>
-          <b id={`name-${namePattern}`}>{name}</b>
-          <br />
-          {profile && (
-            <>
-              Profile:{" "}
-              <a
-                href={`https://${profile}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-labelledby={`profile-label-${namePattern} name-${namePattern}`}
-              >
-                {profile}
-              </a>
-              <br />
-            </>
-          )}
+      {/* Quote text — top */}
+      <div className="testimonial-quote">
+        <span className="testimonial-quote-mark">"</span>
+        <p>{description}</p>
+      </div>
+
+      {/* Person info — bottom */}
+      <div className="testimonial-person">
+        <div className="testimonial-avatar">
+          {!isImageLoaded && <div className="avatar-skeleton" role="img" aria-label="Loading" />}
+          <img
+            src={image}
+            alt={`${name} profile`}
+            onLoad={() => setIsImageLoaded(true)}
+            style={{ opacity: isImageLoaded ? 1 : 0 }}
+            loading="lazy"
+            decoding="async"
+            width={52}
+            height={52}
+          />
+        </div>
+        <div className="testimonial-meta">
+          <strong id={`name-${namePattern}`}>{name}</strong>
           <span>{role}</span>
-        </p>
+        </div>
       </div>
     </article>
   );

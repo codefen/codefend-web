@@ -1,64 +1,95 @@
+/* ─── Steps — horizontal process bar, Strike-style ────────────────────────── */
+
 .steps {
-    --border-steps: #2e2d2d solid 1px;
-    --steps-direction: row;
-    --steps-text-direction: row;
-    --padding-text-steps: 0 2rem;
-    
-    background: linear-gradient(#000 40%, #2c2c2c);
-    font-family: "Big Noodle Titling", sans-serif;
-    padding: 0;
-    height: 18vh;
-    display: flex;
-    color: var(--text-color);
-    overflow: hidden;
-    div {
-        height: 100%;
-    }
-    h2 {
-        font-size: var(--text-h2-normal);
-    }
+  background: #071428;
+  border-top: 1px solid rgba(42,127,232,0.12);
+  border-bottom: 1px solid rgba(42,127,232,0.12);
+  padding: 0;
+  overflow: hidden;
 }
+
 .steps_contain {
-    ul {
-        height: 100%;
-        display: flex;
-        flex-direction: var(--steps-direction);
-        align-items: center;
-        li {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            padding: var(--padding-text-steps);
-            border-left: var(--border-steps);
-            border-right: var(--border-steps);
-            height: 100%;
-            min-width: 200px;
-
-            div {
-                height: fit-content;
-                
-                p {
-                    line-height: 0%;
-                    font-family: 'Questrial', sans-serif;
-                }
-            }
-            span {
-                font-size: 5rem;
-            }
-        }
-    }
+  width: 100%;
 }
-@media screen and (max-width: 768px) {
-    
-    .steps {
-        --steps-direction: column;
-        --padding-text-steps: 2rem 2rem;
-        height: fit-content;
-        padding: 0 0.5rem;
 
-        li {
-            width: 100%;
-        }
-    }
-    
+.steps_contain ul {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: 100%;
+}
+
+.steps_contain ul li {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  padding: 2rem 3vw;
+  border-right: 1px solid rgba(42,127,232,0.12);
+  flex: 1;
+  min-width: 0;
+  transition: background 0.25s;
+  height: auto;
+  min-width: 180px;
+}
+
+.steps_contain ul li:last-child {
+  border-right: none;
+}
+
+.steps_contain ul li:hover {
+  background: rgba(42,127,232,0.05);
+}
+
+/* Step number */
+.steps_contain ul li span {
+  font-family: "Big Noodle Titling", "Impact", sans-serif;
+  font-size: 3.5rem;
+  color: rgba(42,127,232,0.2);
+  line-height: 1;
+  flex-shrink: 0;
+  letter-spacing: -2px;
+}
+
+/* Step text container */
+.steps_contain ul li div {
+  height: fit-content;
+}
+
+.steps_contain ul li div h2 {
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #5ba3f5;
+  font-weight: 600;
+  margin-bottom: 5px;
+  line-height: 1.3;
+}
+
+.steps_contain ul li div p {
+  font-family: system-ui, sans-serif;
+  font-size: 13px;
+  color: #4a6888;
+  line-height: 1.4;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .steps_contain ul {
+    flex-direction: column;
+  }
+
+  .steps_contain ul li {
+    border-right: none;
+    border-bottom: 1px solid rgba(42,127,232,0.12);
+    padding: 1.4rem 2rem;
+    min-width: unset;
+  }
+
+  .steps_contain ul li:last-child {
+    border-bottom: none;
+  }
 }
