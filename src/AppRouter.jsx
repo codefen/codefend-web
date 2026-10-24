@@ -10,6 +10,7 @@ const Services = lazy(() => import("./pages/services"));
 const Compliance = lazy(() => import("./pages/compliance"));
 const Partners = lazy(() => import("./pages/partners"));
 const Friends = lazy(() => import("./pages/friends"));
+const QuotePage = lazy(() => import("./pages/quote"));
 const Enciclopedia = lazy(() => import("./pages/enciclopedia"));
 const Promo = lazy(() => import("./pages/promo"));
 const NewHome = lazy(() => import("./pages/newHome/newHome"));
@@ -23,6 +24,7 @@ const availableRoutes = [
   "compliance",
   "partners",
   "about-us",
+  "calculator",
   "enciclopedia",
   "promo",
   "newhome",
@@ -47,7 +49,7 @@ export const AppRouter = () => {
         ...AVALABLE_LOCALES.map((locale) => ({
           path: locale,
           children: [
-            { index: true, element: <NewHome /> },
+            { index: true, element: <Home /> },
             { path: "home", element: <Home /> },
             { path: "software", element: <Software /> },
             { path: "industries", element: <Industries /> },
@@ -55,6 +57,7 @@ export const AppRouter = () => {
             { path: "compliance", element: <Compliance /> },
             { path: "partners", element: <Partners /> },
             { path: "about-us", element: <Friends /> },
+            { path: "calculator", element: <QuotePage /> },
             { path: "enciclopedia", element: <Enciclopedia /> },
             { path: "promo", element: <Promo /> },
             { path: "newhome", element: <NewHome /> },

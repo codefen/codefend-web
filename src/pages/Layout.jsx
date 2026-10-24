@@ -5,6 +5,7 @@ import { I18nProvider } from "../store/i18nProvider";
 import { lazy, Suspense } from "react";
 
 const Footer = lazy(() => import("../sections/footer/footer"));
+const Crypto = lazy(() => import("../sections/cryptocoin/crypto"));
 const Linkedin = lazy(() => import("../sections/linkedin"));
 
 function Layout() {
@@ -17,6 +18,7 @@ function Layout() {
         {/* <FreeTrial /> */}
         {/* <ResourceQuote /> */}
         <Suspense fallback={<div>Loading...</div>}>
+          <Crypto />
           <Linkedin />
           <Footer />
         </Suspense>
