@@ -53,9 +53,9 @@
       box-sizing: border-box;
 
       &:focus {
-        border-bottom: 1px dashed #1a6fd4;
+        border-bottom: 1px dashed #ff3939;
         outline: none;
-        background-color: #e8f0fb;
+        background-color: #ffeeee;
       }
     }
 
@@ -65,7 +65,7 @@
     }
 
     .required {
-      color: #1a6fd4;
+      color: #ff3939;
     }
 
     button {
