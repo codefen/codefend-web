@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-resolved-theme="dark">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#17191b"/>
+<title>Shopee.sg Catalog Crawler — PoC Showroom — Codefend</title>
+<meta name="description" content="Proof-of-concept showroom for a Shopee.sg catalog crawler: DISCOVER → ENRICH → NORMALIZE → EXPORT with extracted product data."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #17191b;
+    --panel: #1d2022;
+    --panel-soft: #222628;
+    --line: #34393a;
+    --muted: #9aa19f;
+    --text: #f1f3ef;
+    --lime: #72d7f5;
+    --ok: #3fb950;
+    --max: 1360px;
+    font-family: "Urbanist", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--text); line-height: 1.55; }
+  a { color: var(--lime); text-decoration: none; }
+  a:hover { color: #a6e7f8; }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    background: #252a2c;
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-size: .86em;
+    color: #d5dde0;
+  }
+  .topline { height: 3px; background: linear-gradient(90deg, var(--lime), #458db4 48%, transparent); }
+  .wrap { width: min(var(--max), calc(100% - 48px)); margin-inline: auto; }
+  .showroom-hero {
+    position: relative;
+    padding: 56px 0 36px;
+    border-bottom: 0;
+    overflow: hidden;
+  }
+  .showroom-hero:before {
+    content: "";
+    position: absolute;
+    width: 520px; height: 420px;
+    top: -220px; right: -80px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(114,215,245,.14), transparent 68%);
+    pointer-events: none;
+  }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--lime);
+    text-transform: uppercase;
+    letter-spacing: 1.7px;
+    font-size: 10px;
+    font-weight: 750;
+  }
+  .eyebrow:before { content: ""; width: 22px; height: 1px; background: var(--lime); }
+  .showroom-hero h1 {
+    margin: 16px 0 14px;
+    max-width: 18ch;
+    font-size: clamp(34px, 5vw, 52px);
+    line-height: 1.05;
+    letter-spacing: -2.2px;
+    font-weight: 650;
+  }
+  .meta-line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 14px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 9px;
+    border: 1px solid var(--ok);
+    color: var(--ok);
+    font-size: 11px;
+    font-weight: 750;
+    letter-spacing: .08em;
+  }
+  .crumb {
+    margin-top: 18px;
+    color: var(--muted);
+    font-size: 12px;
+  }
+  .crumb a { color: var(--muted); }
+  .crumb a:hover { color: var(--lime); }
+  .layout {
+    --div: rgba(255,255,255,.1);
+    display: grid;
+    grid-template-columns: minmax(0, .92fr) minmax(380px, 1.12fr);
+    gap: 0;
+    align-items: stretch;
+    padding: 0 0 64px;
+    border-top: 1px solid var(--div);
+    border-bottom: 1px solid var(--div);
+  }
+  .report-col {
+    position: relative;
+    padding: 36px 40px 40px 0;
+    border-right: 1px solid var(--div);
+  }
+  .report-col > h2 {
+    margin: 0 0 22px;
+    max-width: 28ch;
+    color: #f4f7f5;
+    font-size: clamp(26px, 3.2vw, 34px);
+    line-height: 1.18;
+    letter-spacing: -1.1px;
+    font-weight: 620;
+  }
+  .summary {
+    background: transparent;
+    border: 0;
+    padding: 0;
+  }
+  .summary p {
+    margin: 0 0 18px;
+    color: #ccc;
+    font-size: 16px;
+    line-height: 1.75;
+    max-width: 62ch;
+  }
+  .summary p:last-child { margin-bottom: 0; }
+  .ok { color: var(--ok); font-weight: 650; }
+  .num { font-variant-numeric: tabular-nums; }
+  table.plain {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    background: transparent;
+    border: 0;
+    margin-top: 8px;
+  }
+  table.plain th,
+  table.plain td {
+    text-align: left;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--div);
+    vertical-align: top;
+  }
+  table.plain th {
+    width: 34%;
+    padding-right: 16px;
+    color: var(--muted);
+    font-weight: 650;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+  }
+  table.plain tr:last-child th,
+  table.plain tr:last-child td { border-bottom: 0; }
+  .muted { color: var(--muted); }
+  .note {
+    margin: 12px 0 0;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.55;
+  }
+  .show-block {
+    position: relative;
+    padding: 28px 0 30px;
+    border-bottom: 1px solid var(--div);
+  }
+  .show-block:last-child { border-bottom: 0; padding-bottom: 8px; }
+  .show-block:before,
+  .show-block:after {
+    content: "+";
+    position: absolute;
+    top: -7px;
+    color: rgba(255,255,255,.28);
+    font-size: 11px;
+    line-height: 1;
+    font-weight: 500;
+    pointer-events: none;
+  }
+  .show-block:before { left: 0; }
+  .show-block:after { right: -5px; }
+  .show-block h2 {
+    margin: 0 0 12px;
+    font-size: 13px;
+    letter-spacing: .9px;
+    text-transform: uppercase;
+    color: var(--lime);
+    font-weight: 750;
+  }
+  .show-block p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.65;
+    max-width: 58ch;
+  }
+  .show-block ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 10px;
+  }
+  .show-block li {
+    position: relative;
+    padding-left: 16px;
+    color: #c7cdc9;
+    font-size: 14px;
+    line-height: 1.55;
+  }
+  .show-block li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: .6em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--lime);
+  }
+  .data-col {
+    position: sticky;
+    top: 18px;
+    align-self: start;
+    max-height: calc(100vh - 28px);
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    padding: 0 0 0 28px;
+  }
+  .catalog-head {
+    position: relative;
+    flex: none;
+    padding: 28px 0 16px;
+    border-bottom: 1px solid var(--div);
+  }
+  .catalog-head:before,
+  .catalog-head:after {
+    content: "+";
+    position: absolute;
+    top: -7px;
+    color: rgba(255,255,255,.28);
+    font-size: 11px;
+    line-height: 1;
+    font-weight: 500;
+    pointer-events: none;
+  }
+  .catalog-head:before { left: -32px; }
+  .catalog-head:after { right: 0; }
+  .catalog-head h2 {
+    margin: 0 0 8px;
+    font-size: 13px;
+    letter-spacing: .9px;
+    text-transform: uppercase;
+    color: var(--lime);
+    font-weight: 750;
+  }
+  .catalog-head p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.55;
+  }
+  .items-toolbar {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--div);
+    flex: none;
+  }
+  .items-toolbar input,
+  .items-toolbar select {
+    padding: 10px 12px;
+    border: 1px solid var(--line);
+    border-radius: 0;
+    font: inherit;
+    font-size: 13px;
+    color: var(--text);
+    background: var(--panel-soft);
+  }
+  .items-toolbar input { flex: 1; min-width: 140px; }
+  .items-toolbar input:focus,
+  .items-toolbar select:focus {
+    outline: 1px solid var(--lime);
+    border-color: var(--lime);
+  }
+  #count { font-size: 12px; white-space: nowrap; }
+  #items {
+    overflow: auto;
+    flex: 1;
+    min-height: 360px;
+    padding: 0;
+  }
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+  }
+  .product {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    border-right: 1px solid var(--div);
+    border-bottom: 1px solid var(--div);
+    background: transparent;
+    transition: background .18s ease;
+  }
+  .product:nth-child(2n) { border-right: 0; }
+  .product:hover { background: rgba(114,215,245,.035); }
+  .product-media {
+    display: block;
+    aspect-ratio: 1;
+    background: #222628;
+    overflow: hidden;
+    border-bottom: 1px solid var(--div);
+  }
+  .product-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .product-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 14px 14px 16px;
+    flex: 1;
+  }
+  .product-title {
+    margin: 0;
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 650;
+    line-height: 1.35;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 2.7em;
+  }
+  .product-meta {
+    margin: 0;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .product-price-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 8px 10px;
+    margin-top: auto;
+  }
+  .product-price {
+    font-size: 18px;
+    font-weight: 750;
+    letter-spacing: -.3px;
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+  }
+  .product-price.hold {
+    font-size: 13px;
+    font-weight: 550;
+    color: var(--muted);
+    letter-spacing: 0;
+  }
+  .product-list {
+    font-size: 12px;
+    color: var(--muted);
+    text-decoration: line-through;
+    font-variant-numeric: tabular-nums;
+  }
+  .product-off {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 7px;
+    background: rgba(63,185,80,.16);
+    color: var(--ok);
+    font-size: 10px;
+    font-weight: 750;
+    letter-spacing: .04em;
+  }
+  .product-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid rgba(114,215,245,.35);
+    background: rgba(114,215,245,.08);
+    color: var(--lime);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .02em;
+    text-align: center;
+  }
+  .product-link:hover { background: rgba(114,215,245,.16); color: #a6e7f8; }
+  .product-more {
+    border-top: 1px solid var(--div);
+  }
+  .product-more > summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 10px 14px;
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 650;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+  }
+  .product-more > summary::-webkit-details-marker { display: none; }
+  .product-more > summary:hover { color: var(--lime); background: rgba(114,215,245,.035); }
+  .product-more[open] > summary { color: var(--lime); }
+  .product-detail {
+    padding: 0 14px 16px;
+    font-size: 12px;
+  }
+  .product-detail .grid {
+    display: grid;
+    grid-template-columns: 88px minmax(0, 1fr);
+    gap: 6px 10px;
+  }
+  .product-detail .k { color: var(--muted); }
+  .product-detail .desc {
+    margin-top: 12px;
+    color: var(--muted);
+    max-height: 110px;
+    overflow: auto;
+    white-space: pre-wrap;
+  }
+  .variants {
+    margin-top: 12px;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11px;
+  }
+  .variants th, .variants td {
+    border-bottom: 1px solid var(--div);
+    padding: 6px 4px;
+    text-align: left;
+  }
+  .variants th { color: var(--muted); font-weight: 650; }
+  .page-footer {
+    border-top: 0;
+    padding: 22px 0 36px;
+    color: var(--muted);
+    font-size: 12px;
+  }
+  @media (max-width: 1100px) {
+    .layout { grid-template-columns: minmax(0, 1fr) minmax(320px, 1fr); }
+  }
+  @media (max-width: 900px) {
+    .layout {
+      grid-template-columns: 1fr;
+      border-bottom: 0;
+    }
+    .report-col {
+      padding: 28px 0;
+      border-right: 0;
+      border-bottom: 1px solid var(--div);
+    }
+    .show-block:after { right: 0; }
+    .data-col {
+      position: static;
+      max-height: none;
+      padding: 0;
+    }
+    .catalog-head:before { left: 0; }
+    #items { max-height: none; min-height: 0; }
+    .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 560px) {
+    .wrap { width: min(100% - 34px, var(--max)); }
+    .showroom-hero { padding: 42px 0 28px; }
+    .showroom-hero h1 { letter-spacing: -1.4px; }
+    .product-grid { grid-template-columns: 1fr; }
+    .product { border-right: 0; }
+    .product-price { font-size: 16px; }
+  }
+</style>
+</head>
+<body>
+  <div class="topline"></div>
+  <section class="showroom-hero">
+    <div class="wrap">
+      <div class="eyebrow">Crawler development · Showroom</div>
+      <h1>Shopee.sg catalog crawler</h1>
+      <div class="meta-line">
+        <span class="badge">PASS</span>
+        <span id="gen">—</span>
+        <span>· Marketplace: shopee.sg</span>
+        <span>· Goal: prove DISCOVER → ENRICH → NORMALIZE → EXPORT</span>
+      </div>
+      <p class="crumb">
+        <a href="../../../">Services</a> /
+        <a href="../../">Crawler development</a> /
+        Showroom / Shopee
+      </p>
+    </div>
+  </section>
+
+  <div class="wrap layout">
+    <div class="report-col">
+      <h2>Guest catalog path for Shopee.sg — proven end to end</h2>
+      <div class="summary">
+        <p>
+          We started from Shopee.sg’s public sitemaps and extracted product identifiers as
+          <code>shop_id</code> + <code>item_id</code> pairs. Those IDs were stored in SQLite
+          (~9,068 IDs in this PoC—a sample, not the full marketplace catalog) so we could
+          process them in batches without relying on an official API.
+        </p>
+        <p>
+          Product pages were then opened with Playwright behind a Singapore residential proxy
+          (Proxies.Vision, sticky session). From the guest HTML we read the
+          <code>PDP_BFF_DATA</code> block: title, brand, images, category, stock, description,
+          and color × size variants. That produced a catalog of 62 products and 251 variant
+          rows, at roughly a 69% hit rate. When Shopee issued a traffic verification challenge,
+          we rotated the sticky proxy session and continued.
+        </p>
+        <p>
+          For pricing, we visited shop listing pages, captured product-card XHR responses
+          (<code>item_card_display_price</code>, micro-units → SGD), and joined them back to
+          the catalog by <code>item_id</code>. ScrapingBee stealth reinforced some shop reads.
+          We obtained real prices on at least five items and closed the PoC loop—without
+          Gmail, Facebook, or phone accounts.
+        </p>
+        <p>
+          Limitations are inherent to the guest method. Individual product pages do not
+          expose price / units sold reliably in HTML, so those fields are resolved from shop
+          pages (cards / XHR) and joined by <code>item_id</code>. It works, but it means
+          crawling shops in addition to PDPs. This PoC did not aim for full price / sold
+          coverage across all 62 items—the bar was to prove the loop.
+          <code>our_price</code> landed at 5/62, and <code>list_price</code> /
+          <code>units_sold</code> at 4/62 via the same path. Production coverage means
+          crawling more shops. Occasional traffic challenges (verify) are mitigated by
+          rotating the sticky proxy session.
+        </p>
+        <p>
+          The brief asks for <strong>18 fields</strong> per product / variant. Across
+          <span class="num">62</span> products and <span class="num">251</span> variants,
+          core catalog fields closed near 100%. Gaps in price / sold / list are
+          <strong>coverage</strong> gaps (crawl more shops with the same method), not fields
+          impossible in guest mode. Scaling = more shop crawl, same join by
+          <code>item_id</code>.
+        </p>
+      </div>
+
+      <div class="show-block">
+        <h2>Key findings</h2>
+        <ul>
+          <li><span class="ok">No accounts required</span> — full path without Gmail, Facebook, phone, or Shopee login</li>
+          <li><span class="num">62</span> products · <span class="num">251</span> variants · ~69% PDP hit rate</li>
+          <li>Useful spend <span class="num">≈ USD 0.50–2</span> to close catalog + prices</li>
+          <li>1M priced items estimated at <span class="num">USD 2,200–6,000</span></li>
+        </ul>
+      </div>
+      <div class="show-block">
+        <h2>What we covered</h2>
+        <p>
+          Sitemaps → SQLite ID store → Playwright PDP enrich behind sticky SG residential
+          proxy → shop-page price XHR joined by <code>item_id</code>. DISCOVER → ENRICH →
+          NORMALIZE → EXPORT without an official API.
+        </p>
+      </div>
+      <div class="show-block">
+        <h2>Deliverables</h2>
+        <p>
+          PoC catalog (<code>data.json</code>), field-coverage matrix against the 18-field
+          brief, provider spend notes, and a scale estimate for ~1M Singapore items on the
+          same guest method.
+        </p>
+      </div>
+
+      <table class="plain" style="margin-top:8px">
+        <thead>
+          <tr>
+            <th style="width:28%">Status</th>
+            <th>Fields</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="ok">OK (~100%)</span></td>
+            <td class="muted">
+              <code>brand_name</code>, <code>title</code>, <code>url</code>,
+              <code>ec_bread_crumb1</code>, <code>image_url</code>, <code>images_url</code>,
+              <code>offering_availability</code>, <code>website_sku</code>, <code>ec_website_sku</code>,
+              <code>has_retail_offer</code>, <code>has_3p_offer</code>,
+              <code>product_description</code> (~93–97%),
+              <code>merchants</code> — <span class="num">62/62</span>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Partial</strong></td>
+            <td class="muted">
+              <code>our_price</code> — <span class="num">5/62</span> ·
+              <code>list_price</code> — <span class="num">4/62</span> ·
+              <code>units_sold</code> — <span class="num">4/62</span> ·
+              <code>color</code> / <code>size_name</code> when declared (~47% / ~10%).
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Providers</strong></td>
+            <td class="muted">
+              <strong>Proxies.Vision</strong> — SG residential sticky (≈ USD 0.50–2 useful) ·
+              <strong>ScrapingBee</strong> — stealth shop reads (USD 0 trial).
+              Total PoC investment ≈ <span class="num">USD 15</span>; useful spend for the
+              reported method ≈ <span class="num">USD 0.50–2</span>.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <aside class="data-col" aria-label="Extracted catalog">
+      <div class="catalog-head">
+        <h2>Extracted items</h2>
+        <p>Live dataset from <code>data.json</code> — search and filter the PoC sample.</p>
+      </div>
+      <div class="items-toolbar">
+        <input id="q" type="search" placeholder="Search title, brand, item_id…" autocomplete="off"/>
+        <select id="filter" aria-label="Price filter">
+          <option value="all">All</option>
+          <option value="priced">Priced only</option>
+          <option value="hold">No price</option>
+        </select>
+        <span class="muted num" id="count"></span>
+      </div>
+      <div id="items"><p class="muted" style="padding:16px 0">Loading dataset…</p></div>
+    </aside>
+  </div>
+
+  <footer class="page-footer">
+    <div class="wrap">
+      Dataset: <code>data.json</code> · Showroom path:
+      <code>/en/services/crawlers/showroom/shopee</code> · Host: <span id="host"></span>
+    </div>
+  </footer>
+
+<script>
+function esc(s){
+  return String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+function hasPrice(p){
+  return p.our_price != null && p.our_price !== '' && Number(p.our_price) !== 0;
+}
+function money(v){
+  if (!hasPrice({our_price:v})) return null;
+  return `SGD ${Number(v).toFixed(2)}`;
+}
+function discountPct(list, ours){
+  const a = Number(list), b = Number(ours);
+  if (!(a > 0) || !(b > 0) || b >= a) return null;
+  return Math.round((1 - b / a) * 100);
+}
+
+let ALL = [];
+
+function render(){
+  const q = (document.getElementById('q').value || '').trim().toLowerCase();
+  const f = document.getElementById('filter').value;
+  let list = ALL.slice();
+  if (f === 'priced') list = list.filter(hasPrice);
+  if (f === 'hold') list = list.filter(p => !hasPrice(p));
+  if (q) {
+    list = list.filter(p => {
+      const blob = [p.title, p.brand_name, p.item_id, p.shop_id, p.ec_bread_crumb1, p.ec_bread_crumb2].join(' ').toLowerCase();
+      return blob.includes(q);
+    });
+  }
+  document.getElementById('count').textContent = `${list.length} / ${ALL.length}`;
+  const root = document.getElementById('items');
+  if (!list.length) {
+    root.innerHTML = '<p class="muted" style="padding:16px 0">No results.</p>';
+    return;
+  }
+  root.innerHTML = `<div class="product-grid">${list.map(p => {
+    const img = p.image_url || (p.images_url && p.images_url[0]) || '';
+    const price = money(p.our_price);
+    const listPrice = money(p.list_price);
+    const off = discountPct(p.list_price, p.our_price);
+    const crumbs = [p.ec_bread_crumb1, p.ec_bread_crumb2].filter(Boolean).join(' › ');
+    const merch = p.merchants || p.brand_name || '';
+    const variants = Array.isArray(p.variants) ? p.variants : [];
+    const varRows = variants.slice(0, 24).map(v => `
+      <tr>
+        <td>${esc(v.color || '—')}</td>
+        <td>${esc(v.size_name || '—')}</td>
+        <td>${esc(v.offering_availability || '')}</td>
+        <td class="num">${money(v.our_price) || (price || '—')}</td>
+        <td>${esc(v.website_sku || '')}</td>
+      </tr>`).join('');
+    const more = variants.length > 24 ? `<p class="muted">… and ${variants.length - 24} more variants</p>` : '';
+    return `<article class="product">
+      <a class="product-media" href="${esc(p.url)}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+        <img src="${esc(img)}" alt="" loading="lazy" onerror="this.style.opacity=.25"/>
+      </a>
+      <div class="product-body">
+        <h3 class="product-title">${esc(p.title || '')}</h3>
+        <p class="product-meta">${esc(merch)}${crumbs ? ' · ' + esc(crumbs) : ''}</p>
+        <div class="product-price-row">
+          ${price
+            ? `<span class="product-price">${price}</span>
+               ${listPrice && listPrice !== price ? `<span class="product-list">${listPrice}</span>` : ''}
+               ${off != null ? `<span class="product-off">${off}% OFF</span>` : ''}`
+            : `<span class="product-price hold">price HOLD</span>`}
+        </div>
+        <a class="product-link" href="${esc(p.url)}" target="_blank" rel="noopener">Open on Shopee</a>
+      </div>
+      <details class="product-more">
+        <summary>Details · id ${esc(p.item_id)}</summary>
+        <div class="product-detail">
+          <div class="grid">
+            <div class="k">shop_id</div><div class="num">${esc(p.shop_id)}</div>
+            <div class="k">item_id</div><div class="num">${esc(p.item_id)}</div>
+            <div class="k">merchants</div><div>${esc(p.merchants || 'HOLD')}</div>
+            <div class="k">Stock</div><div>${esc(p.offering_availability || '—')}</div>
+            <div class="k">units_sold</div><div>${p.units_sold != null ? esc(p.units_sold) : 'HOLD'}</div>
+            <div class="k">Retail / 3P</div><div>retail=${esc(p.has_retail_offer)} · 3p=${esc(p.has_3p_offer)}</div>
+            <div class="k">Source</div><div>${esc(p.price_source || p.source || '—')}</div>
+          </div>
+          ${p.product_description ? `<div class="desc">${esc(String(p.product_description).slice(0,900))}</div>` : ''}
+          ${variants.length ? `
+            <p style="margin:14px 0 6px;font-weight:650">Variants (${variants.length})</p>
+            <table class="variants">
+              <thead><tr><th>Color</th><th>Size</th><th>Stock</th><th>Price</th><th>SKU</th></tr></thead>
+              <tbody>${varRows}</tbody>
+            </table>${more}` : ''}
+        </div>
+      </details>
+    </article>`;
+  }).join('')}</div>`;
+}
+
+async function main(){
+  document.getElementById('host').textContent = location.host || 'local';
+  const { meta, products } = await (await fetch('./data.json')).json();
+  document.getElementById('gen').textContent = meta.generated_at || '';
+  ALL = products || [];
+  document.getElementById('q').addEventListener('input', render);
+  document.getElementById('filter').addEventListener('change', render);
+  render();
+}
+main().catch(e => {
+  document.getElementById('items').textContent = String(e);
+});
+</script>
+</body>
+</html>

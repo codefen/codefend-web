@@ -1,0 +1,1 @@
+import{W as o,j as t,r,co as c,cp as i}from"./index-BTt5j690.js";const d=()=>{const{logout:s,getUserdata:e,isAuth:a}=o();return(!e()||!a)&&s(),t.jsx(r.Suspense,{fallback:t.jsx(i,{}),children:t.jsx(c,{})})};export{d as default};

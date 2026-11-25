@@ -1,0 +1,1 @@
+import{h as a,cO as c,r as n}from"./index-BTt5j690.js";const u=()=>{const e=a(),{setActiveOption:i,setActiveSubOption:o,activeOption:s,activeSubOption:r}=c(t=>t);return n.useEffect(()=>{const t=e.pathname.split("/")[2];i(t),o(0)},[e]),{activeOption:s,activeSubOption:r,setActiveSubOption:o}};export{u};

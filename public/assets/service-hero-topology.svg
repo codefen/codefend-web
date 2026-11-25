@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" fill="none" aria-hidden="true">
+  <defs>
+    <radialGradient id="glow" cx="70%" cy="35%" r="55%">
+      <stop offset="0%" stop-color="#72d7f5" stop-opacity=".22"/>
+      <stop offset="100%" stop-color="#72d7f5" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" stroke="#72d7f5" stroke-opacity=".12" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="640" height="480" fill="url(#grid)"/>
+  <rect width="640" height="480" fill="url(#glow)"/>
+  <g stroke="#72d7f5" stroke-opacity=".28" stroke-width="1">
+    <path d="M48 80H592M48 400H592M96 40V440M544 40V440"/>
+    <path d="M84 80h24m-12-12v24M532 80h24m-12-12v24M84 400h24m-12-12v24M532 400h24m-12-12v24"/>
+  </g>
+  <g stroke="#72d7f5" stroke-opacity=".45" stroke-width="1.2">
+    <path d="M160 140L280 200L220 300L360 340L420 220L520 180"/>
+    <path d="M280 200L360 160L420 220" stroke-dasharray="4 6"/>
+    <path d="M220 300L300 360L420 320" stroke-dasharray="4 6"/>
+  </g>
+  <g fill="#72d7f5">
+    <circle cx="160" cy="140" r="5" opacity=".9"/>
+    <circle cx="280" cy="200" r="6" opacity=".95"/>
+    <circle cx="220" cy="300" r="4.5" opacity=".85"/>
+    <circle cx="360" cy="340" r="5.5" opacity=".9"/>
+    <circle cx="420" cy="220" r="7" opacity="1"/>
+    <circle cx="520" cy="180" r="4.5" opacity=".85"/>
+    <circle cx="360" cy="160" r="3.5" opacity=".7"/>
+    <circle cx="300" cy="360" r="3.5" opacity=".7"/>
+    <circle cx="420" cy="320" r="3.5" opacity=".7"/>
+  </g>
+  <g fill="none" stroke="#72d7f5" stroke-opacity=".55" stroke-width="1">
+    <circle cx="420" cy="220" r="16">
+      <animate attributeName="r" values="14;22;14" dur="3.2s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values=".55;.18;.55" dur="3.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="280" cy="200" r="12">
+      <animate attributeName="r" values="10;18;10" dur="2.8s" begin=".6s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values=".5;.12;.5" dur="2.8s" begin=".6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <g font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" fill="#72d7f5" fill-opacity=".7">
+    <text x="172" y="132">NODE</text>
+    <text x="432" y="208">TARGET</text>
+    <text x="368" y="356">PATH</text>
+  </g>
+</svg>

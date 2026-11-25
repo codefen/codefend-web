@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# codefend-web
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Marketing site for [codefend.com](https://codefend.com) — **Next.js 15** (Node), no PHP runtime for the public site.
 
-## Available Scripts
+## Architecture
 
-In the project directory, you can run:
+| Surface | Stack | Notes |
+|--------|--------|--------|
+| Marketing pages (`/en/*`, `/es/*`) | Static HTML exported from PHP templates → `public/` | Same look as the former PHP site |
+| Service detail pages | Static HTML under `public/{locale}/services/*.html` | |
+| Articles detail | Next SSR from MySQL `codefend_web` | `/[locale]/article/[slug]` |
+| Articles list | Static snapshot (re-export after CMS changes) | |
+| User / admin panels | Static SPA in `public/user-panel`, `public/admin-panel` | API remains `api.codefend.com` (PHP) |
+| CMS (`/cms`) | PHP (optional) | Until CMS is ported to Node |
 
-### `npm start`
+## Local
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```bash
+npm install
+npm run dev
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Export marketing HTML from the PHP tree (build-time only):
 
-### `npm test`
+```bash
+npm run export:php
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Env: copy `.env.local` / `.env.production` (`DATABASE_*`, `SITE_URL`).
 
-### `npm run build`
+## Production (OVH)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- App: `/var/www/codefend-web` (systemd `codefend-web`, port 3000)
+- Nginx: proxies `codefend.com` → Node; panels served as static files; `api.codefend.com` stays PHP
+- Old PHP marketing tree: `/var/www/codefend.com.php-bak`

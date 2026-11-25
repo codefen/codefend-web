@@ -1,0 +1,185 @@
+/**
+* Copyright (c) Tiny Technologies, Inc. All rights reserved.
+* Licensed under the LGPL or a commercial license.
+* For LGPL see License.txt in the project root for license information.
+* For commercial licenses see https://www.tiny.cloud/
+*/
+html {
+	--line-color: #72d7f5;
+	--accent-color: #72d7f5;
+	--code-bkg: #10262e;
+	--text-color: #edf5f7;
+	--text-color-alt: #edf5f7;
+	--text-color-alt2: #72d7f5;
+	--text-color-alt3: #bccbd0;
+	--table-border-color: #2a3d45;
+
+	--primary-color: rgb(35 35 35 / 82%);
+	--primary-color-50: #191919;
+	--primary-color-100: #72d7f5;
+	--primary-color-200: rgb(24 24 24 / 60%);
+	--primary-color-250: rgba(41, 41, 41, 0.85);
+	--primary-color-300: #2a3d45;
+	--primary-color-400: #1c2c33;
+	--primary-color-500: #152229;
+
+	--secondary-color: #72d7f5;
+	--secondary-color-50: #72d7f5;
+	--secondary-color-100: #72d7f5;
+	--secondary-color-200: #54b9da;
+	--secondary-color-300: #54b9da;
+	--secondary-color-400: #a2e5f8;
+
+	--tertiary-color-50: #f7f7f7;
+	--tertiary-color-100: #e5e5e5;
+	--tertiary-color-200: #e0e0e0;
+	--tertiary-color-300: #efefef;
+	--tertiary-color-400: #cfcfcf;
+	--tertiary-color-450: #585858;
+	--tertiary-color-500: #afafaf;
+	--tertiary-color-600: #999999;
+	--tertiary-color-700: #666;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary-color-50) var(--primary-color);
+}
+table,
+table td {
+	border-color: var(--table-border-color);
+}
+table tr {
+	padding: 3px 5px;
+}
+table tr:nth-of-type(odd) {
+    background-color: #00000015;
+}
+::-webkit-scrollbar {
+	width: 10px !important;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--primary-color);
+}
+
+::-webkit-scrollbar-thumb {
+	background: #3d5a66;
+	border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #72d7f5;
+}
+@font-face {
+	font-family: Questrial;
+	font-style: normal;
+	font-weight: 400;
+	src:
+		local('Questrial-Regular'),
+		url('/user-panel/fonts/Questrial-Regular.ttf') format('truetype');
+}
+
+body {
+	font-family: Urbanist, Satoshi, Questrial, system-ui, sans-serif;
+	line-height: 1.55;
+	margin: 0 24px;
+	color: var(--text-color-alt3);
+	overflow-x: hidden;
+    font-size: 15px;
+    letter-spacing: 0;
+}
+h3 {
+	color: var(--text-color);
+	border-bottom: 1px solid var(--primary-color-300);
+	border-top: 1px solid var(--primary-color-300);
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	padding: 14px 0 12px;
+	font-family: Urbanist, Satoshi, system-ui, sans-serif;
+	margin-bottom: 18px;
+	margin-top: 28px;
+	font-weight: 700;
+}
+p {
+	color: var(--text-color-alt3);
+	margin-bottom: 20px;
+}
+
+hr {
+	border: 0;
+	border-top: 1px solid var(--primary-color-300);
+	background: transparent;
+	height: 0;
+	margin: 20px 0px;
+}
+
+b {
+	color: var(--text-color-alt);
+}
+
+p a {
+	color: var(--secondary-color);
+}
+
+li {
+	/* color: #ffffff; */
+}
+
+li a {
+	color: var(--secondary-color);
+}
+
+figure.image img {
+	max-width: 100%;
+}
+
+img {
+	max-width: 100%;
+}
+
+code {
+	display: block;
+	white-space: pre-wrap;
+	overflow: auto;
+	/* width: calc(100% - 20px); */
+	font-size: 90%;
+	color: #72d7f5;
+	background-color: var(--code-bkg);
+	padding: 20px;
+	overflow-wrap: anywhere;
+}
+
+.tabla-header-issue {
+	display: flex;
+	margin-top: 30px;
+}
+.tabla-header-issue table {
+	width: 100%;
+}
+.tabla-header-issue tr {
+	/* border-bottom: 1px solid #bebebe; */
+	display: block;
+}
+.tabla-header-issue .left {
+	flex: 1 1 60%;
+	/* border-right: 1px solid var(--primary-color-100); */
+	padding-right: 40px;
+}
+.tabla-header-issue .right {
+	flex: 1 1 35%;
+	padding-left: 40px;
+}
+
+/* .mce-content-body:not([dir="rtl"]) blockquote {
+  border-left: 2px solid #ccc;
+  margin-left: 1.5rem;
+  padding-left: 1rem;
+}
+.mce-content-body[dir="rtl"] blockquote {
+  border-right: 2px solid #ccc;
+  margin-right: 1.5rem;
+  padding-right: 1rem;
+} */

@@ -1,72 +1,29 @@
 {
-  "name": "website",
-  "author": "Codefend",
-  "description": "Codefend website",
-  "version": "2.0.0",
+  "name": "codefend-web",
+  "version": "0.1.0",
   "private": true,
-  "type": "module",
   "scripts": {
-    "start": "cross-env FORCE_COLOR=1 vite",
-    "build": "vite build",
-    "serve": "vite preview",
-    "clean": "rimraf dist build coverage .swc"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start -p ${PORT:-3000}",
+    "lint": "eslint",
+    "export:php": "D:\\xampp2026\\php\\php.exe ..\\codefend2026\\scripts\\export_static.php public"
   },
   "dependencies": {
-    "@radix-ui/react-dialog": "^1.1.5",
-    "@radix-ui/react-dropdown-menu": "^2.1.5",
-    "@radix-ui/react-scroll-area": "1.2.2",
-    "@radix-ui/react-select": "^2.1.4",
-    "@radix-ui/react-slider": "1.2.2",
-    "@testing-library/jest-dom": "6.6.3",
-    "@testing-library/react": "16.2.0",
-    "@testing-library/user-event": "14.6.0",
-    "framer-motion": "11.18.1",
-    "prop-types": "15.8.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-helmet": "6.1.0",
-    "react-masonry-css": "1.0.16",
-    "react-responsive-masonry": "2.6.0",
-    "react-toastify": "^11.0.3",
-    "react-type-animation": "3.2.0",
-    "sass": "1.83.4",
-    "slick-carousel": "1.8.1",
-    "swiper": "11.2.1",
-    "web-vitals": "4.2.4"
+    "mysql2": "^3.24.6",
+    "next": "15.5.29",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "7.21.11",
-    "@vitejs/plugin-react-swc": "3.7.2",
-    "autoprefixer": "10.4.20",
-    "cross-env": "7.0.3",
-    "cssnano": "7.0.6",
-    "lightningcss": "1.29.1",
-    "postcss": "8.5.1",
-    "react-router-dom": "7.1.2",
-    "rimraf": "6.0.1",
-    "save": "2.9.0",
-    "unplugin-lightningcss": "0.2.1",
-    "vite": "6.0.7"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "engines": {
-    "node": ">=20.0.0"
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.29",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }

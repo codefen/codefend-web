@@ -1,0 +1,276 @@
+/**
+* Copyright (c) Tiny Technologies, Inc. All rights reserved.
+* Licensed under the LGPL or a commercial license.
+* For LGPL see License.txt in the project root for license information.
+* For commercial licenses see https://www.tiny.cloud/
+*/
+html {
+	--line-color: #168cb5;
+	--primary-color-100: #168cb5;
+	--code-bkg: #e8f6fb;
+	--text-color: #20282d;
+	--text-color-alt: #20282d;
+	--text-color-alt2: #168cb5;
+	--text-color-alt3: #46565e;
+	--table-border-color: #d9e2e5;
+
+	--primary-color: #fff;
+	--primary-color-50: #fdfdfd;
+	/* --primary-color-100: #fafafa; */
+	--primary-color-200: #f2f5f6;
+	--primary-color-300: #d9e2e5;
+	--primary-color-400: #eef5f7;
+	--primary-color-500: #e8eef0;
+
+	--secondary-color-50: #168cb5;
+	--secondary-color-100: #087da4;
+	--secondary-color-200: #168cb5;
+	--secondary-color-300: #086784;
+	--secondary-color-400: #075872;
+
+	--tertiary-color-50: #cfcfcf;
+	--tertiary-color-100: #afafaf;
+	--tertiary-color-200: #999999;
+	--tertiary-color-300: #657780;
+	--tertiary-color-400: #46565e;
+	--tertiary-color-450: #585858;
+	--tertiary-color-500: #222222;
+	--tertiary-color-600: #1a1a1a;
+	--tertiary-color-700: #000;
+}
+
+[data-theme='dark'] {
+	--line-color: #72d7f5;
+	--primary-color-100: #72d7f5;
+	--code-bkg: #10262e;
+	--text-color: #edf5f7;
+	--text-color-alt: #edf5f7;
+	--text-color-alt2: #72d7f5;
+	--text-color-alt3: #bccbd0;
+	--table-border-color: #2a3d45;
+
+	--primary-color: #d2d2d2;
+	--primary-color-50: #d2d2d2;
+	--primary-color-100: #d2d2d2;
+	--primary-color-200: #d2d2d2;
+	--primary-color-250: #d2d2d2;
+	--primary-color-300: #d2d2d2;
+	--primary-color-400: #d2d2d2;
+	--primary-color-500: #d2d2d2;
+	--primary-color-600: #d2d2d2;
+
+	--secondary-color-mask: #72d7f5;
+
+	--secondary-color: #72d7f5;
+	--secondary-color-50: #72d7f5;
+	--secondary-color-100: #72d7f5;
+	--secondary-color-200: #54b9da;
+	--secondary-color-300: #54b9da;
+	--secondary-color-400: #a2e5f8;
+
+	--tertiary-color-50: #f7f7f7;
+	--tertiary-color-100: #e5e5e5;
+	--tertiary-color-200: #e0e0e0;
+	--tertiary-color-300: #efefef;
+	--tertiary-color-400: #cfcfcf;
+
+	--tertiary-color-500: #afafaf;
+	--tertiary-color-600: #999999;
+	--tertiary-color-700: #666;
+	--tertiary-color-800: #131313;
+
+	code {
+		color: var(--text-color-alt2);
+		/* background-color: #130101; */
+	}
+
+
+}
+*, ::before, ::after {
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary-color-50) var(--primary-color);
+}
+table,
+table td {
+	border-color: var(--table-border-color);
+}
+table tr {
+	padding: 3px 5px;
+}
+table tr:nth-of-type(odd) {
+    background-color: #00000015;
+}
+::-webkit-scrollbar {
+	width: 10px !important;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--primary-color-500);
+}
+
+::-webkit-scrollbar-thumb {
+	background: #9bbcc8;
+	border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #168cb5;
+}
+@font-face {
+	font-family: Questrial;
+	font-style: normal;
+	font-weight: 400;
+	src:
+		local('Questrial-Regular'),
+		url('/user-panel/fonts/Questrial-Regular.ttf') format('truetype');
+}
+
+body {
+	font-family: Urbanist, Satoshi, Questrial, system-ui, sans-serif;
+	line-height: 1.55;
+	margin: 0 24px;
+	color: var(--text-color-alt3);
+	overflow-x: hidden;
+    font-size: 15px;
+    letter-spacing: 0;
+}
+h3 {
+	color: var(--text-color);
+	border-bottom: 1px solid var(--primary-color-300);
+	border-top: 1px solid var(--primary-color-300);
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	padding: 14px 0 12px;
+	font-family: Urbanist, Satoshi, system-ui, sans-serif;
+	margin-bottom: 18px;
+	margin-top: 28px;
+	font-weight: 700;
+}
+p {
+	color: var(--text-color-alt3);
+	margin-bottom: 20px;
+}
+
+hr {
+	border: 0;
+	border-top: 1px solid var(--primary-color-300);
+	background: transparent;
+	height: 0;
+	margin: 20px 0;
+}
+
+b {
+	color: var(--primary-color-100);
+}
+
+p a {
+	color: var(--primary-color-100);
+}
+
+li {
+	/* color: #ffffff; */
+}
+
+li a {
+	color: var(--primary-color-100);
+}
+
+figure.image img {
+	max-width: 100%;
+}
+
+img {
+	max-width: 100%;
+}
+
+code {
+	display: block;
+	white-space: pre-wrap;
+	overflow: auto;
+	/* width: calc(100% - 20px); */
+	font-size: 90%;
+	color: #086784;
+	background-color: var(--code-bkg);
+	padding: 20px;
+	overflow-wrap: anywhere;
+}
+
+.tabla-header-issue {
+	display: flex;
+	margin-top: 30px;
+}
+.tabla-header-issue table {
+	width: 100%;
+}
+.tabla-header-issue tr {
+	/* border-bottom: 1px solid #bebebe; */
+	display: block;
+}
+.tabla-header-issue .left {
+	flex: 1 1 60%;
+	/* border-right: 1px solid var(--primary-color-100); */
+	padding-right: 40px;
+}
+.tabla-header-issue .right {
+	flex: 1 1 35%;
+	padding-left: 40px;
+}
+
+/* .mce-content-body:not([dir="rtl"]) blockquote {
+  border-left: 2px solid #ccc;
+  margin-left: 1.5rem;
+  padding-left: 1rem;
+}
+.mce-content-body[dir="rtl"] blockquote {
+  border-right: 2px solid #ccc;
+  margin-right: 1.5rem;
+  padding-right: 1rem;
+} */
+  .leaks_grid {
+    width: 100%;
+    font-size: .9rem;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px var(--primary-color-300);
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+	    border-spacing: 0px;
+		
+    thead {
+      background-color: var(--primary-color-400);
+      color: var(--secondary-color-200);
+    }
+    td:first-child {
+      width: 15%;
+      padding-left: 2%;
+    }
+    td:nth-child(2) {
+      max-width: 680px;
+      overflow-x: auto;
+      &::-webkit-scrollbar {
+        height: 2px !important;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: #9bbcc8;
+        border-radius: 2px;
+      }
+      &::-webkit-scrollbar-track {
+        background: var(--primary-color-500);
+      }
+    }
+    tr {
+      height: 33px;
+    }
+    hr {
+      color: 1px solid var(--secondary-color-200);
+      background-color: var(--secondary-color-200);
+      height: 3px;
+      width: 80%;
+      margin: 0 auto;
+      opacity: 0.3;
+
+    }
+  }

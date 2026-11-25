@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <base href="/admin-panel/">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Codefend Supervisor</title>
+  <link rel="stylesheet" href="style.css?v=4">
+</head>
+<body>
+  <section id="login" class="login">
+    <form id="loginForm" class="login-card">
+      <div class="brand brand-lockup">
+        <img class="brand-wordmark brand-wordmark--light" src="codefend/wordmark-on-light.svg" width="168" height="27" alt="Codefend">
+        <img class="brand-wordmark brand-wordmark--dark" src="codefend/wordmark-on-dark.svg" width="168" height="27" alt="">
+        <small>supervisor</small>
+      </div>
+      <h1>Administrator access</h1>
+      <p class="muted">Sign in to access the domain catalog.</p>
+      <label for="email">Email</label>
+      <input id="email" type="email" autocomplete="username" required>
+      <label for="password">Password</label>
+      <input id="password" type="password" autocomplete="current-password" required>
+      <label id="mfaLabel" for="mfa" hidden>Authentication code</label>
+      <input id="mfa" autocomplete="one-time-code" inputmode="numeric" hidden>
+      <p id="loginError" class="error" role="alert"></p>
+      <button class="action" type="submit">Sign in</button>
+    </form>
+  </section>
+  <main class="layout" hidden>
+    <aside class="countries">
+      <a class="brand brand-lockup" href="/user-panel/">
+        <img class="brand-wordmark brand-wordmark--light" src="codefend/wordmark-on-light.svg" width="148" height="24" alt="Codefend">
+        <img class="brand-wordmark brand-wordmark--dark" src="codefend/wordmark-on-dark.svg" width="148" height="24" alt="">
+        <small>supervisor</small>
+      </a>
+      <p class="label">COUNTRIES</p>
+      <nav id="countries"></nav>
+      <div class="queue">
+        <p class="label">CATALOG · LEAKS</p>
+        <p id="job">Loading…</p>
+        <button id="queueAction">Start leak queue</button>
+      </div>
+      <button class="logout" id="logout">Sign out</button>
+      <a class="back" href="/user-panel/">← User panel</a>
+    </aside>
+    <section class="domain-list">
+      <header>
+        <p class="label">DOMAIN CATALOG</p>
+        <h1 id="countryTitle">Argentina</h1>
+        <p id="count">Loading…</p>
+        <input id="search" placeholder="Search domains…" aria-label="Search domains">
+      </header>
+      <div id="list" class="list" tabindex="0"><div id="spacer"><div id="rows"></div></div></div>
+      <footer id="range"></footer>
+    </section>
+    <section class="detail">
+      <div id="message" role="status"></div>
+      <div id="content">
+        <div class="empty">
+          <h2>Select a domain</h2>
+          <p>Choose a domain to review its findings.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="purify.min.js"></script>
+  <script src="app.js?v=7"></script>
+</body>
+</html>

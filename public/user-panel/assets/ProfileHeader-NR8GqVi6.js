@@ -1,0 +1,1 @@
+import{j as e,cF as l}from"./index-xnYjRep0.js";const d=({profileMedia:s,title:r,headline:i,bottomText:a})=>e.jsxs(e.Fragment,{children:[e.jsx(l,{src:`${s||"/util/default-profilemedia.webp"}`,size:"110px",top:"8%",left:"4rem"}),e.jsxs("div",{className:"provider-main-info",children:[e.jsx("h3",{children:r}),e.jsx("h4",{children:i}),e.jsx("span",{children:a})]})]});export{d as P};

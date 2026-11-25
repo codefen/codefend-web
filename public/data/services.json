@@ -1,0 +1,998 @@
+{
+    "es": [
+        {
+            "name": "Pentest web",
+            "hero": "Entramos a tu app antes que ellos.",
+            "lead": "Pentesting manual y semiautomatizado de aplicaciones web y API—anónimo y autenticado—centrado en rutas de explotación reales.",
+            "body_title": "Pruebas web y de API que reflejan ataques reales",
+            "card": "Evaluamos tus aplicaciones web y API como lo haría un atacante real—antes de que un incidente lo demuestre.",
+            "body": [
+                "Una prueba de penetración web simula cómo un adversario atacaría tus portales, paneles y APIs. Codefend combina scanners comerciales con pruebas manuales profundas para detectar inyecciones, fallas de control de acceso, debilidades de autenticación, abuso de lógica de negocio y configuraciones incorrectas que las herramientas automáticas no ven.",
+                "Probamos perspectivas no autenticadas y autenticadas, incluyendo roles y límites de privilegio. Tensionamos login, sesiones, aislamiento multi-tenant y flujos sensibles como pagos, paneles admin y exportación de datos.",
+                "Las evaluaciones se alinean con OWASP Top 10 y OWASP API Security, adaptadas a tu stack: frontends SPA, APIs REST o GraphQL, microservicios e integraciones. Cada hallazgo incluye pasos de reproducción, evidencia, impacto de negocio y remediación aplicable.",
+                "Ya sea un gate de release, un programa recurrente de pentest web o una prueba de API antes de un lanzamiento, acotamos el alcance a los activos relevantes y reportamos en lenguaje útil para seguridad y producto."
+            ],
+            "sections": [
+                {
+                    "heading": "Qué cubrimos",
+                    "body": "Mapeo de superficie de ataque, autenticación y sesiones, autorización e IDOR, inyecciones (SQL, XSS, SSRF, comandos), abuso de API, uploads y deserialización, headers y postura TLS, y encadenamiento de hallazgos en rutas realistas de compromiso."
+                },
+                {
+                    "heading": "Entregables",
+                    "body": "Resumen ejecutivo, informe técnico con severidad y contexto tipo CVSS, evidencia de PoC, backlog priorizado de remediación y retest opcional de fixes críticos."
+                }
+            ],
+            "benefits": [
+                "Detectá y priorizá vulnerabilidades web y de API relevantes.",
+                "Reforzá la resiliencia frente a rutas de ataque realistas.",
+                "Entregá a stakeholders una foto de seguridad clara y accionable."
+            ],
+            "faq": [
+                {
+                    "q": "¿Cuánto dura un pentest de aplicación web?",
+                    "a": "La mayoría de los trabajos van de una a tres semanas según tamaño de la app, roles y superficie de API. Confirmamos tiempos en el scoping."
+                },
+                {
+                    "q": "¿También prueban APIs además de la UI?",
+                    "a": "Sí. REST, GraphQL y endpoints relacionados entran en alcance cuando sostienen la aplicación o se exponen como servicios."
+                },
+                {
+                    "q": "¿Es solo escaneo automatizado?",
+                    "a": "No. La automatización ayuda a cubrir; la explotación manual y la lógica de negocio impulsan los hallazgos que más importan."
+                },
+                {
+                    "q": "¿Puede afectar producción?",
+                    "a": "Acordamos entorno, límites de rate y acciones prohibidas de antemano. Muchos clientes prefieren staging; en producción usamos controles cuidadosos."
+                }
+            ],
+            "meta": "Pruebas de penetración en aplicaciones web y API por Codefend. Evaluación manual y semiautomatizada alineada a OWASP.",
+            "slug": "web-pentest",
+            "image": "..\/assets\/services\/web-pentest-hero.jpg"
+        },
+        {
+            "name": "Pentest mobile",
+            "hero": "Probamos la app en la que confían tus usuarios.",
+            "lead": "Pentesting iOS y Android centrado en almacenamiento local, seguridad de transporte, reverse engineering y abuso del backend.",
+            "body_title": "Evaluaciones mobile en el binario y el backend",
+            "card": "Protegé datos sensibles con pentests pensados para apps móviles—no para checklists de web de escritorio.",
+            "body": [
+                "Las apps móviles concentran credenciales, tokens, PII y caches offline en dispositivos fuera del perímetro. Un pentest móvil evalúa cómo extraer, manipular o usar esos activos contra tus APIs.",
+                "Analizamos protecciones del binario, certificate pinning, gaps de detección de jailbreak\/root, almacenamiento inseguro (Keychain, SharedPreferences, SQLite, logs), IPC, deep links y WebViews. El análisis de tráfico y de API completa lo que un dispositivo rooted o una posición MITM puede lograr.",
+                "Seguimos metodologías móviles (incluyendo orientación OWASP MASVS\/MSTG) con foco práctico: priorizamos account takeover, fuga de datos o transacciones no autorizadas—no ruido teórico.",
+                "Ideal antes de publicar en stores, tras un refactor grande, o cuando necesitás assurance sobre datos regulados en apps de consumidores o workforce."
+            ],
+            "sections": [
+                {
+                    "heading": "Qué cubrimos",
+                    "body": "Análisis estático y dinámico, storage en cliente, mal uso de criptografía, resistencia a interceptación, manejo de tokens, abuso de API desde el cliente móvil y exposición de SDKs de terceros."
+                },
+                {
+                    "heading": "Entregables",
+                    "body": "Hallazgos priorizados con evidencia de dispositivo y tráfico, guía de remediación para equipos mobile y backend, y validación opcional post-parche."
+                }
+            ],
+            "benefits": [
+                "Evaluá riesgos específicos de móviles.",
+                "Reforzá la resiliencia de apps iOS y Android.",
+                "Protegé datos de usuarios en todo el stack móvil."
+            ],
+            "faq": [
+                {
+                    "q": "¿Prueban iOS y Android?",
+                    "a": "Sí. Podemos cubrir una plataforma o ambas en el mismo engagement, según alcance y builds disponibles."
+                },
+                {
+                    "q": "¿Hace falta el código fuente?",
+                    "a": "Se puede trabajar solo con binarios. El acceso a fuente acelera la revisión de crypto, storage y APIs peligrosas."
+                },
+                {
+                    "q": "¿Y el backend móvil?",
+                    "a": "Las APIs que consume la app suelen estar en alcance: seguridad móvil sin probar API queda incompleta."
+                },
+                {
+                    "q": "¿Apps empresariales internas?",
+                    "a": "Sí, incluyendo builds por MDM, con perfiles de dispositivo y accesos acordados."
+                }
+            ],
+            "meta": "Pruebas de penetración en aplicaciones móviles iOS y Android por Codefend. Evaluación alineada a MASVS.",
+            "slug": "mobile-pentest",
+            "image": "..\/assets\/services\/mobile-pentest-hero.jpg"
+        },
+        {
+            "name": "Pentest de redes",
+            "hero": "Mapeamos las rutas que tomaría un atacante.",
+            "lead": "Pentesting de perímetro externo y red interna que mapea exposición, footholds y movimiento lateral.",
+            "body_title": "Presión sobre la red interna desde el asiento del atacante",
+            "card": "Evaluamos servicios expuestos y segmentos internos para hallar rutas de acceso, controles débiles y escalada de privilegios.",
+            "body": [
+                "El pentest de red responde una pregunta práctica: si un atacante escanea tu perímetro—o aterriza en la LAN—¿hasta dónde llega? Codefend evalúa servicios expuestos a Internet y, con autorización, segmentos internos como un adversario post-compromiso.",
+                "Hacia afuera: descubrimiento de hosts, puertos, servicios vulnerables, acceso remoto débil e interfaces de gestión expuestas. Hacia adentro: rutas de Active Directory, reuso de credenciales, trusts, fallas de segmentación y escalada hacia sistemas críticos.",
+                "Priorizamos rutas con evidencia sobre listados crudos: qué es alcanzable, qué se encadena y qué fixes derrumban más riesgo. Eso clarifica la remediación para infraestructura e identidad.",
+                "Útil para pentests anuales, due diligence de M&A, redes híbridas conectadas a la nube, o tras cambios grandes de red o identidad."
+            ],
+            "sections": [
+                {
+                    "heading": "Qué cubrimos",
+                    "body": "Recon externo y explotación de servicios, VPN y acceso remoto, hosts internos y AD, movimiento lateral, validación de segmentación y persecución de objetivos de alto valor bajo reglas acordadas."
+                },
+                {
+                    "heading": "Entregables",
+                    "body": "Narrativa de rutas de ataque, hallazgos técnicos con evidencia, mapa priorizado de remediación y readout opcional estilo purple team con defensores."
+                }
+            ],
+            "benefits": [
+                "Mapeá exposición en superficies internas y externas.",
+                "Identificá movimiento lateral y segmentación débil.",
+                "Priorizá correcciones que bajan riesgo real de compromiso."
+            ],
+            "faq": [
+                {
+                    "q": "¿Solo externo, solo interno o ambos?",
+                    "a": "Las tres opciones están disponibles. El engagement combinado da la foto más completa de perímetro y post-foothold."
+                },
+                {
+                    "q": "¿Hace falta VPN o jump-host para pruebas internas?",
+                    "a": "Por lo general sí. Documentamos accesos, cuentas y sistemas fuera de alcance antes del kickoff."
+                },
+                {
+                    "q": "¿Tocan servidores de producción con agresividad?",
+                    "a": "Explotación y validación de impacto siguen las reglas de engagement. Acciones destructivas quedan fuera salvo aprobación explícita."
+                },
+                {
+                    "q": "¿Active Directory está incluido?",
+                    "a": "Cuando entra en alcance, el análisis de rutas AD es parte central del pentest interno."
+                }
+            ],
+            "meta": "Pruebas de penetración en redes internas y externas por Codefend. Perímetro, Active Directory y movimiento lateral.",
+            "slug": "network-pentest",
+            "image": "..\/assets\/services\/network-pentest-hero.jpg"
+        },
+        {
+            "name": "Revisión de código",
+            "hero": "Encontramos el riesgo en el código, no solo en el perímetro.",
+            "lead": "Revisión segura de código para detectar sinks de inyección, fallas de auth, errores de crypto y riesgos de supply chain antes del release.",
+            "body_title": "Revisión de seguridad donde nace el riesgo",
+            "card": "Análisis especializado de tu codebase para descubrir fallas de seguridad en el origen del ciclo de desarrollo.",
+            "body": [
+                "El pentest de perímetro muestra qué es explotable desde afuera. La revisión de código fuente muestra el porqué: patrones peligrosos, checks faltantes y supuestos de diseño que los scanners no ven. En Codefend leemos rutas críticas con mirada ofensiva.",
+                "Nos enfocamos en autenticación, autorización, criptografía, validación de inputs, deserialización, SSRF e inyecciones, secretos en repos y uso riesgoso de frameworks o SDKs cloud. La revisión de dependencias y supply chain se puede incluir con repos y lockfiles.",
+                "Puede ser de aplicación completa o basada en riesgo: pagos, admin, identity providers o microservicios nuevos. Los hallazgos apuntan a archivo y línea para que el equipo corrija sin adivinar.",
+                "Combinála con un pentest web o de API cuando quieras causa raíz y confirmación en runtime."
+            ],
+            "sections": [
+                {
+                    "heading": "Qué cubrimos",
+                    "body": "Lógica AuthN\/AuthZ, crypto y secretos, clases de inyección, uso inseguro de archivos y comandos, misconfiguración de frameworks y componentes de terceros de alto riesgo."
+                },
+                {
+                    "heading": "Entregables",
+                    "body": "Hallazgos anotados con referencias de código, notas de severidad y explotabilidad, patrones de remediación y seguimiento opcional de commits parcheados."
+                }
+            ],
+            "benefits": [
+                "Examiná y endurecé el código fuente.",
+                "Detectá problemas de seguridad antes de producción.",
+                "Protegé la integridad del software entre releases."
+            ],
+            "faq": [
+                {
+                    "q": "¿Qué lenguajes revisan?",
+                    "a": "Stacks frecuentes: JavaScript\/TypeScript, Python, PHP, Java, Go, C# y codebases móviles. Confirmamos el stack en el scoping."
+                },
+                {
+                    "q": "¿Es lo mismo que SAST?",
+                    "a": "SAST ayuda a escala; nuestra revisión es expert-driven y apunta a rutas críticas y fallas de diseño que las tools subreportan."
+                },
+                {
+                    "q": "¿Hace falta acceso completo al repo?",
+                    "a": "Acceso de lectura a repos relevantes y docs de build es ideal. También son comunes revisiones parciales de módulos."
+                },
+                {
+                    "q": "¿Revisan infrastructure-as-code?",
+                    "a": "Sí, Terraform, CloudFormation y configs similares pueden incluirse cuando el riesgo cloud está en alcance."
+                }
+            ],
+            "meta": "Revisión segura de código fuente por Codefend. Análisis experto de auth, crypto, inyección y supply chain.",
+            "slug": "source-code-review",
+            "image": "..\/assets\/services\/source-code-review-hero.jpg"
+        },
+        {
+            "name": "Ingeniería social",
+            "hero": "Probamos la capa humana.",
+            "lead": "Ejercicios autorizados de phishing, vishing e ingeniería social dirigida que miden el riesgo humano real con reglas claras.",
+            "body_title": "Presión controlada sobre la capa humana",
+            "card": "Técnicas sofisticadas para evaluar defensas humanas y convertir puntos débiles en mejoras de conciencia y proceso.",
+            "body": [
+                "Los controles técnicos fallan cuando convence a alguien de hacer clic, compartir o aprobar. Las evaluaciones de ingeniería social avanzada miden cómo responde tu organización a pretextos realistas—no a plantillas caricaturescas.",
+                "Las campañas pueden incluir spear phishing, payloads controlados, escenarios de callback\/vishing y señuelos multi-paso alineados a tu industria. Todo corre bajo reglas explícitas: dominios, marcas, targets y criterios de éxito aprobados.",
+                "Los resultados apuntan a gaps de proceso y control: cultura de reporte, filtrado de correo, verificación de identidad, helpdesk y exposición de usuarios privilegiados. Evitamos narrativas de culpa y priorizamos hardening medible.",
+                "Útil antes de rediseñar awareness, tras fusiones, o cuando finanzas y ejecutivos son blanco de fraude tipo BEC."
+            ],
+            "sections": [
+                {
+                    "heading": "Qué cubrimos",
+                    "body": "Phishing y spear phishing, vishing, pretextos, elementos físicos o híbridos opcionales cuando hay autorización, y métricas de clic, reporte y compromiso."
+                },
+                {
+                    "heading": "Entregables",
+                    "body": "Métricas de campaña, insights agregados y por rol según acuerdo, ejemplos de pretextos exitosos y recomendaciones de training y controles de proceso."
+                }
+            ],
+            "benefits": [
+                "Medí la exposición a ataques sociales avanzados.",
+                "Evaluá riesgo humano con técnicas dirigidas.",
+                "Reforzá defensas con datos, no con intuición."
+            ],
+            "faq": [
+                {
+                    "q": "¿El informe señala personas?",
+                    "a": "No. Reportamos patrones agregados y por rol según lo acordado—nunca culpa pública individual."
+                },
+                {
+                    "q": "¿Pueden imitar nuestra marca?",
+                    "a": "Solo con autorización escrita y assets lookalike aprobados bajo las reglas de engagement."
+                },
+                {
+                    "q": "¿Incluyen vishing?",
+                    "a": "Sí, cuando está en alcance. El pretexto por voz suele revelar gaps de helpdesk y verificación."
+                },
+                {
+                    "q": "¿Cómo evitan sustos de malware?",
+                    "a": "Los payloads son controlados y no destructivos por defecto; explicamos las medidas de seguridad antes del lanzamiento."
+                }
+            ],
+            "meta": "Ingeniería social avanzada y phishing autorizado por Codefend. Pruebas de riesgo humano con reglas de engagement claras.",
+            "slug": "social-engineering",
+            "image": "..\/assets\/services\/social-engineering-hero.jpg"
+        },
+        {
+            "name": "Seguridad cloud",
+            "hero": "Exponemos las malas configuraciones que importan.",
+            "lead": "Evaluación de postura de seguridad cloud en AWS, Azure y GCP—identidad, red, storage y servicios de alto riesgo.",
+            "body_title": "Postura cloud en identidad, storage y red",
+            "card": "Detectá misconfigurations y controles débiles en tu nube antes de que se vuelvan una ruta de compromiso.",
+            "body": [
+                "Muchos incidentes cloud empiezan con misconfigurations cotidianas: storage público, roles sobredimensionados, security groups abiertos, logging ausente o cuentas de prueba olvidadas. Codefend evalúa tu postura cloud con inventario automatizado y revisión manual.",
+                "Revisamos IAM y federación de identidad, exposición de red, cifrado y manejo de claves, readiness de logging y detección, planos de control de Kubernetes o contenedores cuando aplica, y rutas conectadas a SaaS que amplían el blast radius.",
+                "Los hallazgos se ordenan por explotabilidad e impacto—no por volumen de alertas—para que el equipo corrija lo que realmente abre puertas. Las recomendaciones mapean a owners: plataforma, seguridad y aplicación.",
+                "Útil como baseline de hardening, preparación pre-auditoría, limpieza de sprawl multi-cuenta, o tras migraciones rápidas a la nube."
+            ],
+            "sections": [
+                {
+                    "heading": "Qué cubrimos",
+                    "body": "Identidad y acceso, red y perímetro cloud, exposición de storage, secretos y KMS, gaps de logging\/monitoreo y configuración de workloads en los principales proveedores."
+                },
+                {
+                    "heading": "Entregables",
+                    "body": "Informe de postura con misconfigurations priorizadas, guía de remediación por familia de controles y revalidación opcional tras fixes."
+                }
+            ],
+            "benefits": [
+                "Mejorá la postura de seguridad cloud.",
+                "Identificá y corregí misconfigurations críticas.",
+                "Construí una base proactiva de riesgo en la nube."
+            ],
+            "faq": [
+                {
+                    "q": "¿Qué nubes soportan?",
+                    "a": "AWS, Microsoft Azure y Google Cloud Platform son las principales. Los alcances multi-cloud son frecuentes."
+                },
+                {
+                    "q": "¿Necesitan credenciales admin?",
+                    "a": "Preferimos roles de lectura con mínimo privilegio. No hace falta write access para la revisión de postura."
+                },
+                {
+                    "q": "¿Es CSPM continuo?",
+                    "a": "Esta oferta es una evaluación experta. El monitoreo continuo se puede plantear como modelo operativo posterior."
+                },
+                {
+                    "q": "¿Incluyen contenedores y Kubernetes?",
+                    "a": "Sí, cuando hay acceso y alcance definidos—plano de control y misconfigurations de workloads."
+                }
+            ],
+            "meta": "Evaluación de postura de seguridad en la nube por Codefend para AWS, Azure y GCP.",
+            "slug": "cloud-security",
+            "image": "..\/assets\/services\/cloud-security-hero.jpg"
+        },
+        {
+            "name": "Filtraciones de datos",
+            "hero": "Encontramos tus datos antes que alguien más.",
+            "lead": "Detección de credenciales, documentos y menciones sensibles de marca o infraestructura en superficies de riesgo abiertas.",
+            "body_title": "Encontrá datos expuestos antes que alguien más",
+            "card": "Detectá credenciales y documentos expuestos a tiempo—para responder antes del uso indebido.",
+            "body": [
+                "Credenciales, archivos de clientes y documentos internos siguen filtrándose en paste sites, buckets públicos, repos, foros y mercados secundarios. La detección de filtraciones acorta el tiempo entre exposición y respuesta.",
+                "Codefend monitorea dominios, marcas, identidades ejecutivas e indicadores de infraestructura en fuentes abiertas y canales de riesgo; los analistas triagen verdaderos positivos. Recibís señales priorizadas con contexto para rotar secretos, bajar contenido o abrir un incidente.",
+                "Complementa al pentesting: las pruebas ofensivas hallan qué se puede romper; la detección de leaks halla qué ya está afuera. Juntas reducen exposición futura y presente.",
+                "Casos típicos: protección de marca, reducción de credential stuffing, visibilidad en M&A y monitoreo continuo para industrias reguladas."
+            ],
+            "sections": [
+                {
+                    "heading": "Qué cubrimos",
+                    "body": "Credenciales y material de sesión expuestos, documentos sensibles, dumps de código\/config que mencionan tu org, e indicadores de marca\/infraestructura con potencial de abuso."
+                },
+                {
+                    "heading": "Entregables",
+                    "body": "Alertas con severidad y evidencia, notas de analista, acciones de respuesta recomendadas y tendencia a lo largo de la ventana de monitoreo."
+                }
+            ],
+            "benefits": [
+                "Detectá temprano credenciales y documentos expuestos.",
+                "Reducí la ventana entre exposición y respuesta.",
+                "Entregá señales de filtración claras y priorizadas."
+            ],
+            "faq": [
+                {
+                    "q": "¿Es solo dark web?",
+                    "a": "Cubrimos web abierta, paste sites y otros canales relevantes para tu marca—no una sola fuente underground."
+                },
+                {
+                    "q": "¿Qué tan rápido alertan?",
+                    "a": "Depende del canal y el plan. Las exposiciones críticas de credenciales se priorizan para notificación rápida."
+                },
+                {
+                    "q": "¿Bajan el contenido por nosotros?",
+                    "a": "Entregamos evidencia y guía; el takedown puede involucrar a legal\/IT o partners especializados."
+                },
+                {
+                    "q": "¿Monitorean subsidiarias y marcas?",
+                    "a": "Sí. Los alcances multi-marca y multi-dominio son estándar."
+                }
+            ],
+            "meta": "Detección de filtraciones y monitoreo de exposición por Codefend. Credenciales, documentos y señales de marca.",
+            "slug": "data-leaks",
+            "image": "..\/assets\/services\/data-leaks-hero.jpg"
+        },
+        {
+            "name": "Modelos ofensivos",
+            "hero": "Construimos ataques a la medida de tu amenaza.",
+            "lead": "Modelos ofensivos, escenarios de ataque y automatización a medida para tensionar detección y respuesta.",
+            "body_title": "Herramientas de ataque a la medida de tu amenaza",
+            "card": "Más allá de las pruebas estándar: modelos y escenarios alineados a cómo operaría un adversario contra vos.",
+            "body": [
+                "Los checklists genéricos no coinciden con cada adversario. El desarrollo de modelos ofensivos arma escenarios, tooling y automatización alrededor de tu perfil de amenaza—industria, crown jewels y gaps de detección conocidos.",
+                "Diseñamos rutas que ejercitan pipelines SIEM\/SOAR, visibilidad EDR, controles de identidad y playbooks humanos. Los entregables pueden incluir scripts reutilizables, labs y procedimientos para tabletops o purple team futuros.",
+                "Se ubica entre pentest clásico y red team: más ingenierizado y repetible que una prueba puntual, más custom que una suscripción commodity de scanners.",
+                "Elegilo para validar detection engineering, preparar simulaciones avanzadas o construir capacidad ofensiva interna con guía experta."
+            ],
+            "sections": [
+                {
+                    "heading": "Qué cubrimos",
+                    "body": "Diseño de escenarios threat-informed, automatización ofensiva, hooks de validación de detección, documentación reutilizable y enablement opcional para tu equipo."
+                },
+                {
+                    "heading": "Entregables",
+                    "body": "Pack de escenarios, tooling\/activos según acuerdo, notas de cobertura de detección y readout que conecta presión ofensiva con prioridades defensivas."
+                }
+            ],
+            "benefits": [
+                "Creá escenarios adaptados a tus riesgos.",
+                "Probá detección y respuesta bajo presión realista.",
+                "Generá activos ofensivos reutilizables."
+            ],
+            "faq": [
+                {
+                    "q": "¿En qué se diferencia de un pentest?",
+                    "a": "El pentest encuentra vulnerabilidades. Los modelos ofensivos enfatizan escenarios a medida y activos reutilizables para tensionar detección y respuesta de forma repetible."
+                },
+                {
+                    "q": "¿Dejan malware en el entorno?",
+                    "a": "No. Los artefactos quedan controlados, documentados y se remueven o entregan según acuerdo."
+                },
+                {
+                    "q": "¿Sirve para purple team?",
+                    "a": "Sí. Muchos clientes usan los outputs como biblioteca fija para iteraciones purple team."
+                },
+                {
+                    "q": "¿Qué inputs necesitan?",
+                    "a": "Prioridades de amenaza, overview de arquitectura, detalle del stack de detección y criterios de éxito del ejercicio."
+                }
+            ],
+            "meta": "Desarrollo de modelos ofensivos y escenarios de ataque a medida por Codefend.",
+            "slug": "offensive-models",
+            "image": "..\/assets\/services\/offensive-models-hero.jpg"
+        },
+        {
+            "name": "Crawlers y extracción",
+            "hero": "Extraemos miles de millones de registros.",
+            "lead": "Crawlers web a gran escala y pipelines de extracción con rotación multi-IP, fingerprinting de navegador y resiliencia anti-bot.",
+            "body_title": "Plataformas de crawling para volumen y targets hostiles",
+            "card": "Diseñamos y operamos sistemas de extracción que sortean anti-bot y entregan datasets limpios y estructurados a escala.",
+            "body": [
+                "Cuando producto, research o intelligence necesitan datos estructurados de la web a escala, los scrapers frágiles fallan. Codefend diseña y opera plataformas de crawling para volumen: fetching distribuido, diversidad de sesión, fingerprints e IPs de egreso rotativas.",
+                "Ingenierizamos pipelines que toleran fricción anti-bot, captchas cuando el contrato lo permite, drift de layout y targets inestables. El monitoreo cubre tasas de éxito, cambios de schema, reintentos y SLAs de entrega para datasets usables en analytics o features de producto.",
+                "Los engagements pueden incluir arquitectura, builds greenfield, hardening de colectores existentes u operación continua. Formatos y warehouses se acuerdan de antemano—JSON, stores columnares, colas o feeds API.",
+                "Tratamos web scraping a escala, extracción de datos, fingerprinting, estrategias de proxy y crawling resiliente como problemas de ingeniería con disciplina operativa—no como scripts sueltos."
+            ],
+            "sections": [
+                {
+                    "heading": "Qué cubrimos",
+                    "body": "Arquitectura de crawlers, estrategia anti-bot, rotación de fingerprints e IPs, parsing y enrichment, monitoreo de calidad y modelos de handover u operación gestionada."
+                },
+                {
+                    "heading": "Entregables",
+                    "body": "Sistema de extracción funcionando o codebase endurecido, runbooks, dashboards de monitoreo y contratos de datos documentados para consumidores downstream."
+                }
+            ],
+            "benefits": [
+                "Escalá recolección con IPs rotativas y fingerprints.",
+                "Soportá fricción anti-bot y sitios inestables.",
+                "Entregá datos estructurados listos para análisis o producto."
+            ],
+            "faq": [
+                {
+                    "q": "¿Solo construyen o también operan?",
+                    "a": "Ambos. Podemos entregar un sistema que opere tu equipo, u operar la recolección bajo un SLA acordado."
+                },
+                {
+                    "q": "¿Cómo manejan límites legales y ToS?",
+                    "a": "El alcance queda en targets autorizados y responsabilidades del cliente. Discutimos compliance antes del build."
+                },
+                {
+                    "q": "¿Integran con nuestro data warehouse?",
+                    "a": "Sí. Entrega a S3, BigQuery, Snowflake, colas o APIs custom es frecuente."
+                },
+                {
+                    "q": "¿A qué escala llegan?",
+                    "a": "Las arquitecturas se diseñan para extracción de alto volumen—incluyendo programas de miles de millones de registros—según límites del target y presupuesto."
+                }
+            ],
+            "meta": "Desarrollo de crawlers y extracción de datos a gran escala por Codefend. Multi-IP, fingerprinting y pipelines resilientes.",
+            "slug": "crawlers",
+            "image": "..\/assets\/services\/crawlers-hero.jpg"
+        },
+        {
+            "name": "Hackers on demand",
+            "hero": "Contratá hackers profesionales",
+            "lead": "Especialistas ofensivos on-demand para metas acotadas—campañas puntuales, skills de nicho y resultados con evidencia.",
+            "body_title": "Especialistas armados alrededor de un objetivo concreto",
+            "card": "Contratá un esfuerzo ofensivo enfocado sobre un objetivo, campaña corta o skillset especializado—con evidencia accionable.",
+            "body": [
+                "Los paquetes fijos no siempre matchean el problema. Hackers on demand arma talento ofensivo alrededor de un objetivo concreto: una aplicación nombrada, una ventana corta, un skill especializado (por ejemplo AD, mobile o cloud) o capacidad extra para tu equipo.",
+                "Definimos reglas de engagement, criterios de éxito, cadencia de comunicación y formato de entregables antes de empezar. El reporting es evidence-driven para decidir próximos pasos sin status vagos.",
+                "Sirve para hunts acotados en el tiempo, pressure tests pre-lanzamiento, soporte de triage de bug bounty, o cubrir un gap de expertise sin un ciclo largo de hiring.",
+                "Vos mantenés el control del alcance y las condiciones de corte; nosotros aportamos operadores que ejecutan dentro de esos límites."
+            ],
+            "sections": [
+                {
+                    "heading": "Qué cubrimos",
+                    "body": "Definición de objetivo, matching de especialistas, ejecución ofensiva bajo RoE, evidencia continua y cierre con hallazgos accionables."
+                },
+                {
+                    "heading": "Entregables",
+                    "body": "Statement of work acotado, packs de evidencia interinos, hallazgos finales con notas de remediación y knowledge transfer opcional."
+                }
+            ],
+            "benefits": [
+                "Asigná especialistas a un objetivo ofensivo concreto.",
+                "Dejá explícitos alcance, tiempos y reglas de engagement.",
+                "Obtené hallazgos con evidencia y próximos pasos."
+            ],
+            "faq": [
+                {
+                    "q": "¿Cómo se estructura el precio?",
+                    "a": "Por lo general por objetivo acotado o time box. Cotizamos tras clarificar metas, activos y constraints."
+                },
+                {
+                    "q": "¿Puede apoyar a un red team interno?",
+                    "a": "Sí. A menudo sumamos skills de nicho o capacidad extra a equipos internos."
+                },
+                {
+                    "q": "¿Qué pasa si el objetivo cambia a mitad de camino?",
+                    "a": "Pausamos, re-scopiamos por escrito y seguimos solo con reglas y criterios actualizados."
+                },
+                {
+                    "q": "¿Hay retainer continuo?",
+                    "a": "Sí, cuando necesitás acceso recurrente a especialistas ofensivos."
+                }
+            ],
+            "meta": "Hackers on demand por Codefend. Especialistas ofensivos acotados para objetivos de seguridad puntuales.",
+            "slug": "hackers-on-demand",
+            "image": "..\/assets\/services\/hackers-on-demand-hero.jpg"
+        }
+    ],
+    "en": [
+        {
+            "name": "Web pentest",
+            "hero": "We break into your app before they do.",
+            "lead": "Manual and semi-automated penetration testing for web applications and APIs—anonymous and authenticated—focused on real exploit paths.",
+            "body_title": "Web and API testing that mirrors real attacks",
+            "card": "Evaluate your web applications and APIs the way real attackers would—before production incidents force the issue.",
+            "body": [
+                "A web application penetration test simulates how an adversary would attack your portals, dashboards, and APIs. Codefend combines commercial scanners with deep manual testing to uncover injection flaws, broken access control, authentication weaknesses, business-logic abuse, and misconfigurations that automated tools miss.",
+                "We test from both unauthenticated and authenticated perspectives, including role-based access and privilege boundaries. That means we pressure login flows, session handling, multi-tenant isolation, and sensitive workflows such as payments, admin panels, and data export.",
+                "Assessments typically align with OWASP Top 10 and OWASP API Security guidance, while staying grounded in your stack: SPA frontends, REST or GraphQL APIs, microservices, and third-party integrations. Findings include clear reproduction steps, evidence, business impact, and remediation recommendations your engineers can apply.",
+                "Whether you need a one-time release gate, a recurring web pentest program, or targeted API security testing before a launch, we scope the engagement to the assets that matter and report in language both security and product teams can use."
+            ],
+            "sections": [
+                {
+                    "heading": "What we cover",
+                    "body": "Attack surface mapping, authentication and session security, authorization and IDOR, injection (SQL, XSS, SSRF, command), API abuse, file upload and deserialization risks, security headers and TLS posture, and chaining findings into realistic compromise paths."
+                },
+                {
+                    "heading": "Deliverables",
+                    "body": "Executive summary, technical report with severity and CVSS-oriented context, proof-of-concept evidence, prioritized remediation backlog, and optional retest of critical fixes."
+                }
+            ],
+            "benefits": [
+                "Find and prioritize web and API vulnerabilities that matter.",
+                "Strengthen resilience against realistic attack paths.",
+                "Give stakeholders a clear, actionable security picture."
+            ],
+            "faq": [
+                {
+                    "q": "How long does a web application penetration test take?",
+                    "a": "Most engagements run from one to three weeks depending on application size, number of roles, and API surface. We confirm timeline during scoping."
+                },
+                {
+                    "q": "Do you test APIs as well as the UI?",
+                    "a": "Yes. REST, GraphQL, and related API endpoints are in scope when they support the application or are exposed as services."
+                },
+                {
+                    "q": "Is this only automated scanning?",
+                    "a": "No. Automation helps coverage; manual exploitation and business-logic testing drive the findings that usually matter most."
+                },
+                {
+                    "q": "Will testing disrupt production?",
+                    "a": "We agree on environment, rate limits, and forbidden actions up front. Many clients prefer staging; production tests use careful controls."
+                }
+            ],
+            "meta": "Web application and API penetration testing by Codefend. OWASP-aligned manual and semi-automated assessments with clear remediation.",
+            "slug": "web-pentest",
+            "image": "..\/assets\/services\/web-pentest-hero.jpg"
+        },
+        {
+            "name": "Mobile pentest",
+            "hero": "We test the app your users trust.",
+            "lead": "iOS and Android penetration testing focused on local storage, transport security, reverse engineering, and backend abuse.",
+            "body_title": "Mobile assessments across binary and backend",
+            "card": "Protect sensitive user data with penetration testing built for mobile apps—not desktop web checklists.",
+            "body": [
+                "Mobile apps concentrate credentials, tokens, PII, and offline caches on devices that leave the corporate perimeter. A mobile application penetration test evaluates how those assets can be extracted, manipulated, or leveraged against your APIs.",
+                "We assess binary protections, certificate pinning, jailbreak\/root detection gaps, insecure storage (Keychain, SharedPreferences, SQLite, logs), IPC surfaces, deep links, and WebView risks. Traffic analysis and API testing complete the picture of what a rooted device or MITM position can achieve.",
+                "Engagements follow mobile-focused methodologies (including OWASP MASVS\/MSTG guidance) while staying practical: we prioritize issues that lead to account takeover, data leakage, or unauthorized transactions—not noise from theoretical checks.",
+                "Ideal before a store release, after a major refactor, or when you need assurance for regulated data handled in consumer or workforce apps."
+            ],
+            "sections": [
+                {
+                    "heading": "What we cover",
+                    "body": "Static and dynamic analysis, client-side storage, cryptography misuse, network interception resistance, authentication token handling, backend API abuse from mobile clients, and third-party SDK exposure."
+                },
+                {
+                    "heading": "Deliverables",
+                    "body": "Risk-ranked findings with device and traffic evidence, remediation guidance for mobile and backend teams, and optional validation after patches."
+                }
+            ],
+            "benefits": [
+                "Evaluate mobile-specific security risks.",
+                "Strengthen resilience of iOS and Android apps.",
+                "Protect user data across the full mobile stack."
+            ],
+            "faq": [
+                {
+                    "q": "Do you test both iOS and Android?",
+                    "a": "Yes. We can cover one platform or both in the same engagement, depending on scope and build availability."
+                },
+                {
+                    "q": "Do you need source code?",
+                    "a": "Binary-only testing is possible. Source access speeds deep review of crypto, storage, and dangerous APIs."
+                },
+                {
+                    "q": "What about the mobile backend?",
+                    "a": "APIs called by the app are usually in scope—mobile security without API testing is incomplete."
+                },
+                {
+                    "q": "Can you test internal enterprise apps?",
+                    "a": "Yes, including MDM-distributed builds, with agreed device profiles and access."
+                }
+            ],
+            "meta": "iOS and Android mobile application penetration testing by Codefend. MASVS-aligned assessments for data and auth risks.",
+            "slug": "mobile-pentest",
+            "image": "..\/assets\/services\/mobile-pentest-hero.jpg"
+        },
+        {
+            "name": "Network pentest",
+            "hero": "We map the paths an attacker would take.",
+            "lead": "External perimeter and internal network penetration testing that maps exposure, footholds, and lateral movement.",
+            "body_title": "Internal network pressure from an attacker’s seat",
+            "card": "Assess exposed services and internal segments to find access paths, weak controls, and privilege escalation routes.",
+            "body": [
+                "Network penetration testing answers a practical question: if an attacker scans your perimeter—or lands inside your LAN—how far can they go? Codefend assesses internet-facing services and, when authorized, internal segments as a post-compromise adversary would.",
+                "External testing covers discovery of hosts, open ports, vulnerable services, weak remote access, and exposed management interfaces. Internal testing explores Active Directory attack paths, credential reuse, trust relationships, segmentation gaps, and privilege escalation toward crown-jewel systems.",
+                "We emphasize evidence-backed paths over raw vulnerability dumps: what is reachable, what can be chained, and which fixes collapse the most risk. That makes remediation planning clearer for infrastructure and identity teams.",
+                "Use this service for annual compliance-driven pentests, M&A due diligence, cloud-connected hybrid networks, or after major network or identity changes."
+            ],
+            "sections": [
+                {
+                    "heading": "What we cover",
+                    "body": "External recon and service exploitation, VPN and remote access, internal host and AD testing, lateral movement, segmentation validation, and high-value target pursuit under agreed rules of engagement."
+                },
+                {
+                    "heading": "Deliverables",
+                    "body": "Attack-path narrative, technical findings with evidence, prioritized remediation map, and optional purple-team style readout with defenders."
+                }
+            ],
+            "benefits": [
+                "Map exposure across internal and external surfaces.",
+                "Identify lateral movement and weak segmentation.",
+                "Prioritize fixes that cut real compromise risk."
+            ],
+            "faq": [
+                {
+                    "q": "External only, internal only, or both?",
+                    "a": "All three options are available. Combined engagements give the fullest picture of perimeter and post-foothold risk."
+                },
+                {
+                    "q": "Do you need VPN or jump-host access for internal tests?",
+                    "a": "Usually yes. We document required access, accounts, and out-of-scope systems before kickoff."
+                },
+                {
+                    "q": "Will you touch production servers aggressively?",
+                    "a": "Exploits and impact validation follow the rules of engagement. Destructive actions stay off-limits unless explicitly approved."
+                },
+                {
+                    "q": "Is Active Directory included?",
+                    "a": "When in scope, AD attack-path analysis is a core part of internal network pentesting."
+                }
+            ],
+            "meta": "Internal and external network penetration testing by Codefend. Perimeter, Active Directory, and lateral movement assessments.",
+            "slug": "network-pentest",
+            "image": "..\/assets\/services\/network-pentest-hero.jpg"
+        },
+        {
+            "name": "Source code review",
+            "hero": "We find risk in the code, not just the perimeter.",
+            "lead": "Secure source code review to catch injection sinks, auth flaws, crypto mistakes, and supply-chain risks before release.",
+            "body_title": "Security review where vulnerabilities start",
+            "card": "Specialized analysis of your codebase to uncover security flaws at the origin of the software lifecycle.",
+            "body": [
+                "Perimeter testing finds what is exploitable from the outside. Secure source code review finds why—dangerous patterns, missing checks, and design assumptions that scanners never see. Codefend reviewers read critical paths with an attacker mindset.",
+                "We focus on authentication, authorization, cryptography, input validation, deserialization, SSRF and injection sinks, secrets in repositories, and risky use of frameworks or cloud SDKs. Dependency and supply-chain review can be included when repositories and lockfiles are shared.",
+                "Reviews can be full-application or risk-based: payment modules, admin areas, identity providers, or new microservices. Findings map to file and line context so developers can fix without guessing.",
+                "Pair code review with a web or API pentest when you want both root-cause clarity and runtime confirmation."
+            ],
+            "sections": [
+                {
+                    "heading": "What we cover",
+                    "body": "AuthN\/AuthZ logic, crypto and secret handling, injection classes, unsafe file and command usage, framework misconfiguration, and high-risk third-party components."
+                },
+                {
+                    "heading": "Deliverables",
+                    "body": "Annotated findings with code references, severity and exploitability notes, remediation patterns, and optional follow-up on patched commits."
+                }
+            ],
+            "benefits": [
+                "Examine and harden application source code.",
+                "Catch security issues before production.",
+                "Protect software integrity across releases."
+            ],
+            "faq": [
+                {
+                    "q": "Which languages do you review?",
+                    "a": "Common stacks include JavaScript\/TypeScript, Python, PHP, Java, Go, C#, and mobile codebases. Confirm your stack during scoping."
+                },
+                {
+                    "q": "Is this the same as SAST?",
+                    "a": "SAST helps at scale; our review is expert-driven and targets business-critical paths and design flaws tools under-report."
+                },
+                {
+                    "q": "Do you need full repository access?",
+                    "a": "Read access to relevant repos and build docs is ideal. Partial reviews of specific modules are also common."
+                },
+                {
+                    "q": "Can you review infrastructure-as-code?",
+                    "a": "Yes, Terraform, CloudFormation, and similar configs can be included when cloud posture risk is in scope."
+                }
+            ],
+            "meta": "Secure source code review by Codefend. Expert analysis of auth, crypto, injection, and supply-chain risk.",
+            "slug": "source-code-review",
+            "image": "..\/assets\/services\/source-code-review-hero.jpg"
+        },
+        {
+            "name": "Social engineering",
+            "hero": "We test the human layer.",
+            "lead": "Authorized phishing, vishing, and targeted social engineering exercises that measure real human risk under clear rules.",
+            "body_title": "Controlled pressure on the human layer",
+            "card": "Sophisticated techniques to assess human defenses and turn weak spots into awareness and process improvements.",
+            "body": [
+                "Technology controls fail when people are convinced to click, share, or approve. Advanced social engineering assessments measure how your organization responds to realistic pretexting—not cartoon phishing templates.",
+                "Campaigns may include spear phishing, attachment or link payloads in a safe lab style, callback\/vishing scenarios, and multi-step lures aligned to your industry. Everything runs under explicit rules of engagement: approved domains, brands, targets, and success criteria.",
+                "Results focus on process and control gaps: reporting culture, mailbox filtering, identity verification, helpdesk procedures, and privileged-user exposure. We avoid blame narratives and emphasize measurable hardening.",
+                "Useful before awareness program redesigns, after mergers, or when executives and finance teams are high-value targets for BEC-style fraud."
+            ],
+            "sections": [
+                {
+                    "heading": "What we cover",
+                    "body": "Phishing and spear phishing, vishing, pretext scenarios, optional physical or hybrid elements when authorized, and metrics for click, report, and compromise rates."
+                },
+                {
+                    "heading": "Deliverables",
+                    "body": "Campaign metrics, anonymized and role-level insights as agreed, examples of successful pretexts, and recommendations for training and process controls."
+                }
+            ],
+            "benefits": [
+                "Measure susceptibility to advanced social attacks.",
+                "Evaluate human-centric risk with targeted techniques.",
+                "Strengthen defenses without guesswork."
+            ],
+            "faq": [
+                {
+                    "q": "Is employee shaming part of the report?",
+                    "a": "No. We report aggregate and role-level patterns as agreed—never public individual blame."
+                },
+                {
+                    "q": "Can you mimic our brand in phishing tests?",
+                    "a": "Only with written authorization and approved lookalike assets under the rules of engagement."
+                },
+                {
+                    "q": "Do you include vishing?",
+                    "a": "Yes, when scoped. Voice-based pretexting often reveals helpdesk and verification gaps."
+                },
+                {
+                    "q": "How do you handle accidental malware fears?",
+                    "a": "Payloads are controlled and non-destructive by default; we explain safety measures to stakeholders before launch."
+                }
+            ],
+            "meta": "Advanced social engineering and phishing assessments by Codefend. Authorized human-risk testing with clear rules of engagement.",
+            "slug": "social-engineering",
+            "image": "..\/assets\/services\/social-engineering-hero.jpg"
+        },
+        {
+            "name": "Cloud security",
+            "hero": "We expose cloud misconfigurations that matter.",
+            "lead": "Cloud security posture assessments for AWS, Azure, and GCP—identity, network, storage, and high-risk services.",
+            "body_title": "Cloud posture across identity, storage, and network",
+            "card": "Find misconfigurations and weak controls across your cloud footprint before they become a breach path.",
+            "body": [
+                "Cloud breaches often start with mundane misconfigurations: public storage, over-privileged roles, open security groups, missing logging, or forgotten test accounts. Codefend evaluates your cloud security posture with a blend of automated inventory and hands-on review.",
+                "We examine IAM and identity federation, network exposure, encryption and key management, logging and detection readiness, Kubernetes or container control planes when in scope, and SaaS-connected attack paths that expand the blast radius.",
+                "Findings are ranked by exploitability and business impact—not by raw alert count—so teams can fix the issues that actually open doors. Recommendations map to practical owner teams: platform, security, and application.",
+                "Use CSP assessments for baseline hardening, pre-audit preparation, multi-account sprawl cleanup, or after rapid cloud migrations."
+            ],
+            "sections": [
+                {
+                    "heading": "What we cover",
+                    "body": "Identity and access, network and perimeter in cloud, storage exposure, secrets and KMS, logging\/monitoring gaps, and workload configuration for major cloud providers."
+                },
+                {
+                    "heading": "Deliverables",
+                    "body": "Posture report with prioritized misconfigurations, remediation guidance per control family, and optional revalidation after fixes."
+                }
+            ],
+            "benefits": [
+                "Improve cloud infrastructure security posture.",
+                "Identify and fix critical misconfigurations.",
+                "Build a proactive foundation for cloud risk."
+            ],
+            "faq": [
+                {
+                    "q": "Which clouds do you support?",
+                    "a": "AWS, Microsoft Azure, and Google Cloud Platform are primary. Multi-cloud scopes are common."
+                },
+                {
+                    "q": "Do you need admin credentials?",
+                    "a": "We prefer least-privilege read roles for assessment. Write access is not required for posture review."
+                },
+                {
+                    "q": "Is this continuous CSPM?",
+                    "a": "This offering is an expert assessment. Continuous monitoring can be discussed as a follow-on operating model."
+                },
+                {
+                    "q": "Can containers and Kubernetes be included?",
+                    "a": "Yes, when cluster access and scope are defined—control plane and workload misconfigurations included."
+                }
+            ],
+            "meta": "Cloud security posture assessment by Codefend for AWS, Azure, and GCP. Misconfiguration and IAM risk reviews.",
+            "slug": "cloud-security",
+            "image": "..\/assets\/services\/cloud-security-hero.jpg"
+        },
+        {
+            "name": "Data leaks",
+            "hero": "We find your data before someone else does.",
+            "lead": "Detection of exposed credentials, documents, and sensitive brand or infrastructure mentions across open risk surfaces.",
+            "body_title": "Find exposed data before someone else does",
+            "card": "Hunt exposed credentials and sensitive documents early—so response starts before misuse.",
+            "body": [
+                "Credentials, customer files, and internal documents still leak through paste sites, public buckets, code repos, forums, and secondary markets. Data leak detection shrinks the time between exposure and response.",
+                "Codefend monitors domains, brands, executive identities, and infrastructure markers across open sources and risk channels, then analysts triage hits for true positives. You receive prioritized leak signals with enough context to rotate secrets, take down content, or open an incident.",
+                "This is complementary to pentesting: offensive testing finds what can be broken; leak detection finds what is already out. Together they reduce both future and present exposure.",
+                "Typical drivers include brand protection, credential stuffing risk reduction, M&A visibility, and continuous dark\/open-web monitoring for regulated industries."
+            ],
+            "sections": [
+                {
+                    "heading": "What we cover",
+                    "body": "Exposed credentials and session material, sensitive documents, code and config dumps mentioning your org, and brand\/infrastructure indicators tied to abuse potential."
+                },
+                {
+                    "heading": "Deliverables",
+                    "body": "Alerting with severity and evidence links, analyst notes, recommended response actions, and trend visibility across monitoring windows."
+                }
+            ],
+            "benefits": [
+                "Detect exposed credentials and documents early.",
+                "Shrink the window between exposure and response.",
+                "Give teams clear, prioritized leak signals."
+            ],
+            "faq": [
+                {
+                    "q": "Is this dark web monitoring only?",
+                    "a": "We cover open web, paste sites, and other exposure channels relevant to your brand—not a single underground source."
+                },
+                {
+                    "q": "How fast do you alert?",
+                    "a": "Timing depends on channel and plan. Critical credential exposures are prioritized for rapid notification."
+                },
+                {
+                    "q": "Do you take content down for us?",
+                    "a": "We provide evidence and guidance; takedown may involve your legal\/IT teams or specialized partners."
+                },
+                {
+                    "q": "Can you monitor subsidiaries and brands?",
+                    "a": "Yes. Multi-brand and multi-domain scopes are standard."
+                }
+            ],
+            "meta": "Data leak detection and exposure monitoring by Codefend. Credentials, documents, and brand risk signals.",
+            "slug": "data-leaks",
+            "image": "..\/assets\/services\/data-leaks-hero.jpg"
+        },
+        {
+            "name": "Offensive models",
+            "hero": "We build attacks tailored to your threat model.",
+            "lead": "Custom offensive models, attack scenarios, and automation that stress detection and response under realistic pressure.",
+            "body_title": "Custom attack tooling for your threat model",
+            "card": "Go beyond off-the-shelf tests with models and scenarios aligned to how adversaries would operate against you.",
+            "body": [
+                "Generic checklists do not match every adversary. Offensive models development builds scenarios, tooling, and automation around your threat profile—industry, crown jewels, and known detection gaps.",
+                "We design attack paths that exercise SIEM\/SOAR pipelines, EDR visibility, identity controls, and human response playbooks. Deliverables can include reusable scripts, lab environments, and documented procedures for future tabletop or purple-team exercises.",
+                "This service sits between classic pentest and red team: more engineered and repeatable than a one-off test, more customized than a commodity scanner subscription.",
+                "Choose it when you need to validate detection engineering, prepare for advanced threat simulations, or build internal offensive capability with expert guidance."
+            ],
+            "sections": [
+                {
+                    "heading": "What we cover",
+                    "body": "Threat-informed scenario design, offensive automation, detection validation hooks, documentation for reuse, and optional operator enablement for your team."
+                },
+                {
+                    "heading": "Deliverables",
+                    "body": "Scenario pack, tooling\/assets as agreed, detection coverage notes, and a readout that connects offensive pressure to defensive priorities."
+                }
+            ],
+            "benefits": [
+                "Create scenarios matched to your risks.",
+                "Test detection and response under realistic pressure.",
+                "Produce reusable offensive assets for later drills."
+            ],
+            "faq": [
+                {
+                    "q": "How is this different from a pentest?",
+                    "a": "Pentests find vulnerabilities. Offensive models emphasize tailored scenarios and reusable assets to pressure detection and response repeatedly."
+                },
+                {
+                    "q": "Do you leave malware in our environment?",
+                    "a": "No. Artifacts stay controlled, documented, and removed or handed over per agreement."
+                },
+                {
+                    "q": "Can this feed purple-team work?",
+                    "a": "Yes. Many clients use the outputs as a standing library for purple-team iterations."
+                },
+                {
+                    "q": "What inputs do you need?",
+                    "a": "Threat priorities, architecture overview, detection stack details, and success criteria for the exercise."
+                }
+            ],
+            "meta": "Custom offensive models and attack scenario development by Codefend for detection and response validation.",
+            "slug": "offensive-models",
+            "image": "..\/assets\/services\/offensive-models-hero.jpg"
+        },
+        {
+            "name": "Crawlers & extraction",
+            "hero": "We extract billions of records.",
+            "lead": "Large-scale web crawlers and data extraction pipelines with multi-IP rotation, browser fingerprinting, and anti-bot resilience.",
+            "body_title": "Crawler platforms built for volume and hostile targets",
+            "card": "Build and operate extraction systems that handle anti-bot defenses and deliver clean, structured datasets at scale.",
+            "body": [
+                "When product, research, or intelligence teams need structured data from the web at scale, brittle scrapers fail. Codefend designs and operates crawler platforms built for volume: distributed fetching, session diversity, fingerprint profiles, and rotating egress IPs.",
+                "We engineer extraction pipelines that tolerate anti-bot friction, captchas where contractually allowed, layout drift, and unstable targets. Monitoring covers success rates, schema changes, retries, and delivery SLAs so datasets stay usable for analytics or production features.",
+                "Engagements can include architecture design, greenfield crawler builds, hardening of existing collectors, or ongoing operations. Output formats and warehouses are agreed up front—JSON, columnar stores, queues, or direct API feeds.",
+                "Keywords that matter here—web scraping at scale, data extraction, browser fingerprinting, residential\/mobile proxy strategies, and resilient crawling—are treated as engineering problems with operational discipline, not one-off scripts."
+            ],
+            "sections": [
+                {
+                    "heading": "What we cover",
+                    "body": "Crawler architecture, anti-bot strategy, fingerprint and IP rotation, parsing and enrichment, quality monitoring, and handover or managed operation models."
+                },
+                {
+                    "heading": "Deliverables",
+                    "body": "Working extraction system or hardened codebase, runbooks, monitoring dashboards, and documented data contracts for downstream consumers."
+                }
+            ],
+            "benefits": [
+                "Scale collection with rotating IPs and fingerprint profiles.",
+                "Handle anti-bot friction and unstable targets.",
+                "Deliver structured data ready for analysis or product use."
+            ],
+            "faq": [
+                {
+                    "q": "Do you only build, or also operate crawlers?",
+                    "a": "Both. We can deliver a system your team runs, or operate collection under an agreed SLA."
+                },
+                {
+                    "q": "How do you handle legal and ToS constraints?",
+                    "a": "Scope stays within authorized targets and client responsibilities. We discuss compliance boundaries before build."
+                },
+                {
+                    "q": "Can you integrate with our data warehouse?",
+                    "a": "Yes. Delivery to S3, BigQuery, Snowflake, queues, or custom APIs is common."
+                },
+                {
+                    "q": "What scale can you reach?",
+                    "a": "Architectures are designed for high-volume extraction—including multi-billion record programs—subject to target limits and budget."
+                }
+            ],
+            "meta": "Large-scale crawler development and data extraction by Codefend. Multi-IP rotation, fingerprinting, and resilient pipelines.",
+            "slug": "crawlers",
+            "image": "..\/assets\/services\/crawlers-hero.jpg"
+        },
+        {
+            "name": "Hackers on demand",
+            "hero": "Hire professional hackers",
+            "lead": "On-demand offensive specialists for scoped goals—targeted campaigns, niche skills, and evidence-backed outcomes.",
+            "body_title": "Specialists assembled around a defined objective",
+            "card": "Contract focused offensive effort against a named target, short campaign, or specialized skill set—with evidence you can act on.",
+            "body": [
+                "Fixed packages do not always match the problem. Hackers on demand assembles offensive talent around a concrete objective: a named application, a short campaign window, a specialized skill (for example AD, mobile, or cloud), or surge capacity for your security team.",
+                "We define rules of engagement, success criteria, communication cadence, and deliverable format before work starts. Progress reporting stays evidence-driven so stakeholders can decide next steps without decoding vague status updates.",
+                "This model works well for time-boxed hunts, pre-launch pressure tests, bug-bounty triage support, or filling a temporary expertise gap without a long hiring cycle.",
+                "You keep control of scope and stop conditions; we bring operators who can execute within those boundaries."
+            ],
+            "sections": [
+                {
+                    "heading": "What we cover",
+                    "body": "Objective definition, specialist matching, offensive execution under RoE, continuous evidence sharing, and closeout with actionable findings."
+                },
+                {
+                    "heading": "Deliverables",
+                    "body": "Scoped statement of work, interim evidence packs, final findings with remediation notes, and optional knowledge transfer."
+                }
+            ],
+            "benefits": [
+                "Match specialists to a concrete offensive objective.",
+                "Keep scope, timing, and rules of engagement explicit.",
+                "Return evidence-backed findings and next steps."
+            ],
+            "faq": [
+                {
+                    "q": "How is pricing structured?",
+                    "a": "Usually by scoped objective or time box. We quote after clarifying goals, assets, and constraints."
+                },
+                {
+                    "q": "Can this support an existing internal red team?",
+                    "a": "Yes. We often augment internal teams with niche skills or surge capacity."
+                },
+                {
+                    "q": "What happens if the objective changes mid-engagement?",
+                    "a": "We pause, re-scope in writing, and continue only with updated rules and success criteria."
+                },
+                {
+                    "q": "Do you provide ongoing retainers?",
+                    "a": "Retainer-style capacity is available when you need recurring access to offensive specialists."
+                }
+            ],
+            "meta": "Hackers on demand by Codefend. Scoped offensive specialists for targeted security objectives.",
+            "slug": "hackers-on-demand",
+            "image": "..\/assets\/services\/hackers-on-demand-hero.jpg"
+        }
+    ],
+    "slugs": [
+        "web-pentest",
+        "mobile-pentest",
+        "network-pentest",
+        "source-code-review",
+        "social-engineering",
+        "cloud-security",
+        "data-leaks",
+        "offensive-models",
+        "crawlers",
+        "hackers-on-demand"
+    ]
+}

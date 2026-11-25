@@ -1,0 +1,1018 @@
+<!doctype html>
+<html lang="es" data-theme="auto" data-resolved-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <base href="http://codefend.com/es/services/es/" />
+  <meta name="theme-color" content="#17191b" />
+  <link rel="canonical" href="http://codefend.com/es/services/es/services/hackers-on-demand" />
+  <link rel="alternate" hreflang="en" href="http://codefend.com/es/services/en/services/hackers-on-demand" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <meta name="description" content="Hackers on demand por Codefend. Especialistas ofensivos acotados para objetivos de seguridad puntuales." />
+  <title>Hackers on demand — Codefend</title>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cómo se estructura el precio?","acceptedAnswer":{"@type":"Answer","text":"Por lo general por objetivo acotado o time box. Cotizamos tras clarificar metas, activos y constraints."}},{"@type":"Question","name":"¿Puede apoyar a un red team interno?","acceptedAnswer":{"@type":"Answer","text":"Sí. A menudo sumamos skills de nicho o capacidad extra a equipos internos."}},{"@type":"Question","name":"¿Qué pasa si el objetivo cambia a mitad de camino?","acceptedAnswer":{"@type":"Answer","text":"Pausamos, re-scopiamos por escrito y seguimos solo con reglas y criterios actualizados."}},{"@type":"Question","name":"¿Hay retainer continuo?","acceptedAnswer":{"@type":"Answer","text":"Sí, cuando necesitás acceso recurrente a especialistas ofensivos."}}]}</script>
+    <style>
+    :root {
+      color-scheme: dark;
+      --bg: #17191b;
+      --panel: #1d2022;
+      --line: #34393a;
+      --muted: #9aa19f;
+      --text: #f1f3ef;
+      --lime: #72d7f5;
+      --max: 1180px;
+      font-family: "Urbanist", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--bg); color: var(--text); }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(var(--max), calc(100% - 48px)); margin-inline: auto; }
+    .topline { height: 3px; background: linear-gradient(90deg, var(--lime), #458db4 48%, transparent); }
+    header { border-bottom: 1px solid rgba(255,255,255,.08); }
+    .button { display:inline-flex; align-items:center; justify-content:center; gap:10px; padding:13px 18px; border-radius:7px; font-size:13px; font-weight:700; transition:transform .18s, background .18s; }
+    .button:hover { transform:translateY(-2px); }
+    .button.primary { color:#11272e; background:var(--lime); }
+    .button.primary:hover { background:#a6e7f8; }
+    :root[data-resolved-theme="light"] .button.primary { color:#fff; background:#096a8a; }
+    .button.ghost { border:1px solid #555d59; color:#eff2ee; }
+    :root[data-resolved-theme="light"] .button.ghost { border-color:#b7c5cb; color:#1a2429; }
+    .eyebrow { display:inline-flex; align-items:center; gap:9px; color:var(--lime); text-transform:uppercase; letter-spacing:1.7px; font-size:10px; font-weight:750; }
+    .eyebrow:before { content:""; width:22px; height:1px; background:var(--lime); }
+    .service-hero {
+      --hero-line: rgba(255,255,255,.1);
+      --hero-grid: rgba(114,215,245,.1);
+      position:relative; isolation:isolate; overflow:hidden;
+      padding:96px 0 56px;
+      border-bottom:1px solid var(--hero-line);
+      background:
+        radial-gradient(ellipse 48% 62% at 10% 30%, rgba(114,215,245,.09), transparent 60%),
+        radial-gradient(ellipse 55% 70% at 88% 18%, rgba(114,215,245,.14), transparent 58%),
+        var(--bg);
+    }
+    .service-hero-mesh {
+      position:absolute; inset:0; z-index:0; pointer-events:none; color:#72d7f5;
+      mask-image:linear-gradient(90deg, rgba(0,0,0,.42) 0%, rgba(0,0,0,.55) 22%, rgba(0,0,0,.72) 48%, #000 64%);
+      -webkit-mask-image:linear-gradient(90deg, rgba(0,0,0,.42) 0%, rgba(0,0,0,.55) 22%, rgba(0,0,0,.72) 48%, #000 64%);
+    }
+    .service-hero-mesh svg { width:100%; height:100%; display:block; }
+    .service-hero-mesh .flow {
+      stroke-dasharray:5 9;
+      animation:hero-flow 16s linear infinite;
+    }
+    .service-hero-mesh .pulse { animation:hero-pulse 3.2s ease-in-out infinite; }
+    .service-hero-mesh .scan { animation:hero-scan 8.5s linear infinite; }
+    @keyframes hero-flow { to { stroke-dashoffset:-280; } }
+    @keyframes hero-pulse { 50% { opacity:.25; } }
+    @keyframes hero-scan { from { transform:translateY(-12%); } to { transform:translateY(112%); } }
+    .service-hero-layout {
+      position:relative; z-index:1;
+      display:grid;
+      grid-template-columns:minmax(0,1.05fr) minmax(240px,.95fr);
+      gap:0;
+      align-items:stretch;
+      border:1px solid var(--hero-line);
+      border-bottom:0;
+    }
+    .service-hero-copy {
+      position:relative;
+      padding:36px 40px 40px 0;
+      border-right:1px solid var(--hero-line);
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+    .service-hero-copy:before,
+    .service-hero-copy:after {
+      content:"+";
+      position:absolute;
+      top:-8px;
+      color:rgba(255,255,255,.28);
+      font-size:11px;
+      line-height:1;
+      pointer-events:none;
+    }
+    .service-hero-copy:before { left:0; }
+    .service-hero-copy:after { right:-5px; }
+    .service-hero h1 {
+      max-width:16ch; margin:18px 0 16px;
+      font-size:clamp(36px, 5.4vw, 62px); line-height:1.02; letter-spacing:-2.8px; font-weight:650;
+      color:var(--text);
+    }
+    .service-hero .lead {
+      max-width:48ch; margin:0; color:#c5cbc7; font-size:16px; line-height:1.65;
+    }
+    .service-hero-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:28px; }
+    .service-hero-visual {
+      position:relative;
+      min-height:300px;
+      padding:32px 8px 32px 32px;
+      display:grid;
+      place-items:center;
+    }
+    .service-hero-visual svg {
+      width:min(100%,540px);
+      height:auto;
+      display:block;
+      color:#72d7f5;
+      background:color-mix(in srgb, var(--bg) 94%, transparent);
+    }
+    .service-hero-visual .flow {
+      stroke-dasharray:4 7;
+      animation:hero-flow 9s linear infinite;
+    }
+    .service-hero-visual .pulse { animation:hero-pulse 2.8s ease-in-out infinite; }
+    .service-hero-visual .pkt,
+    .service-hero-mesh .pkt {
+      offset-rotate:0deg;
+      animation:hero-pkt 5.2s linear infinite;
+    }
+    .service-hero-visual .spin,
+    .service-hero-mesh .spin {
+      transform-box:view-box;
+      transform-origin:center;
+      animation:hero-spin 9s linear infinite;
+    }
+    .service-hero-visual .caret { animation:hero-pulse .9s steps(1) infinite; }
+    @keyframes hero-pkt { to { offset-distance:100%; } }
+    @keyframes hero-spin { to { transform:rotate(360deg); } }
+    .service-hero-visual:before {
+      content:"";
+      position:absolute;
+      inset:18px 0 18px 18px;
+      border:1px solid rgba(114,215,245,.22);
+      pointer-events:none;
+    }
+    .service-body { padding:64px 0 40px; }
+    .service-grid {
+      display:grid;
+      grid-template-columns:minmax(0,1.15fr) minmax(260px,.72fr);
+      gap:0;
+      align-items:stretch;
+      border-top:1px solid rgba(255,255,255,.1);
+      border-bottom:1px solid rgba(255,255,255,.1);
+    }
+    .service-prose {
+      padding:36px 40px 40px 0;
+      border-right:1px solid rgba(255,255,255,.1);
+    }
+    .service-prose > h2 {
+      margin:0 0 22px;
+      max-width:28ch;
+      color:#f4f7f5;
+      font-size:clamp(26px, 3.2vw, 34px);
+      line-height:1.18;
+      letter-spacing:-1.1px;
+      font-weight:620;
+    }
+    .service-prose p { margin:0 0 18px; color:#ccc; font-size:16px; line-height:1.75; max-width:62ch; }
+    .service-prose p:last-child { margin-bottom:0; }
+    .service-rail {
+      position:sticky;
+      top:24px;
+      align-self:start;
+      padding:0 0 0 36px;
+    }
+    .service-rail-block {
+      position:relative;
+      padding:28px 0 30px;
+      border-bottom:1px solid rgba(255,255,255,.1);
+    }
+    .service-rail-block:last-child { border-bottom:0; padding-bottom:28px; }
+    .service-rail-block:before,
+    .service-rail-block:after {
+      content:"+";
+      position:absolute;
+      top:-7px;
+      color:rgba(255,255,255,.28);
+      font-size:11px;
+      line-height:1;
+      font-weight:500;
+      pointer-events:none;
+    }
+    .service-rail-block:before { left:-40px; }
+    .service-rail-block:after { right:0; }
+    .service-rail h2 {
+      margin:0 0 12px;
+      font-size:13px;
+      letter-spacing:.9px;
+      text-transform:uppercase;
+      color:var(--lime);
+      font-weight:750;
+    }
+    .service-rail p {
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.65;
+    }
+    .service-rail ul {
+      margin:0;
+      padding:0;
+      list-style:none;
+      display:grid;
+      gap:10px;
+    }
+    .service-rail li {
+      position:relative;
+      padding-left:16px;
+      color:#c7cdc9;
+      font-size:14px;
+      line-height:1.55;
+    }
+    .service-rail li:before {
+      content:"";
+      position:absolute;
+      left:0;
+      top:.6em;
+      width:6px;
+      height:6px;
+      border-radius:50%;
+      background:var(--lime);
+    }
+    .service-faq { padding:48px 0 36px; border-top:1px solid var(--line); }
+    .service-faq-layout {
+      display:grid;
+      grid-template-columns:minmax(0,.36fr) minmax(0,1fr);
+      gap:0;
+      align-items:stretch;
+      border-top:1px solid rgba(255,255,255,.1);
+      border-bottom:1px solid rgba(255,255,255,.1);
+    }
+    .faq-visual {
+      position:relative;
+      padding:28px 28px 28px 0;
+      border-right:1px solid rgba(255,255,255,.1);
+      display:grid;
+      place-items:center;
+      min-height:280px;
+    }
+    .faq-visual:before,
+    .faq-visual:after {
+      content:"+";
+      position:absolute;
+      top:-7px;
+      color:rgba(255,255,255,.28);
+      font-size:11px;
+      line-height:1;
+      font-weight:500;
+      pointer-events:none;
+    }
+    .faq-visual:before { left:0; }
+    .faq-visual:after { right:-5px; }
+    .faq-visual-frame {
+      position:relative;
+      width:100%;
+      max-width:320px;
+      aspect-ratio:1;
+      display:grid;
+      place-items:center;
+    }
+    .faq-visual-frame:before {
+      content:"";
+      position:absolute;
+      inset:0;
+      border:1px solid rgba(114,215,245,.22);
+      pointer-events:none;
+    }
+    .faq-visual svg {
+      width:100%;
+      height:auto;
+      display:block;
+      color:#72d7f5;
+      background:color-mix(in srgb, var(--bg) 94%, transparent);
+    }
+    .faq-visual .flow {
+      stroke-dasharray:4 7;
+      animation:hero-flow 10s linear infinite;
+    }
+    .faq-visual .pulse { animation:hero-pulse 2.8s ease-in-out infinite; }
+    .faq-content {
+      padding:28px 0 28px 40px;
+      min-width:0;
+    }
+    .service-faq h2 {
+      margin:0 0 22px; font-size:clamp(28px,3.4vw,38px); letter-spacing:-1.2px; font-weight:620;
+    }
+    .faq-list { display:grid; gap:0; border-top:1px solid var(--line); }
+    .faq-item { border-bottom:1px solid var(--line); }
+    .faq-item details { padding:18px 0; }
+    .faq-item summary {
+      cursor:pointer; list-style:none; font-size:16px; font-weight:620; line-height:1.45; letter-spacing:-.2px;
+    }
+    .faq-item summary::-webkit-details-marker { display:none; }
+    .faq-item summary:after {
+      content:"+"; float:right; color:var(--lime); font-weight:700; margin-left:16px;
+    }
+    .faq-item details[open] summary:after { content:"–"; }
+    .faq-item p {
+      margin:12px 0 0; max-width:70ch; color:var(--muted); font-size:15px; line-height:1.7;
+    }
+    .service-cta {
+      --cta-line: rgba(255,255,255,.1);
+      position:relative;
+      margin:28px 0 80px;
+      padding:34px 0;
+      border-top:1px solid var(--cta-line);
+      border-bottom:1px solid var(--cta-line);
+      background:transparent;
+      display:flex; align-items:center; justify-content:space-between; gap:24px;
+    }
+    .service-cta:before,
+    .service-cta:after {
+      content:"+";
+      position:absolute;
+      top:-7px;
+      color:rgba(255,255,255,.28);
+      font-size:11px;
+      line-height:1;
+      font-weight:500;
+      pointer-events:none;
+    }
+    .service-cta:before { left:0; }
+    .service-cta:after { right:0; }
+    .service-cta h2 { margin:0 0 8px; color:var(--text); font-size:28px; letter-spacing:-1px; font-weight:600; }
+    .service-cta p { margin:0; color:var(--muted); font-size:14px; line-height:1.55; max-width:520px; }
+    footer { border-top:1px solid #2d3231; padding:28px 0 35px; }
+    .footer-row { display:flex; align-items:center; justify-content:space-between; gap:24px; color:#808984; font-size:11px; }
+    .footer-brand { color:#e8ece7; }
+    .footer-links { display:flex; gap:23px; }
+    .footer-links a:hover { color:#d9e0d9; }
+    :root[data-resolved-theme="light"] body { --bg:#f4f7f8; --panel:#fff; --line:#d5e0e4; --muted:#59676e; --text:#1a2429; }
+    :root[data-resolved-theme="light"] header { border-bottom-color:rgba(0,0,0,.08); }
+    :root[data-resolved-theme="light"] .service-hero {
+      --hero-line: rgba(0,0,0,.1);
+      --hero-grid: rgba(22,140,181,.12);
+      background:
+        radial-gradient(ellipse 48% 62% at 10% 30%, rgba(9,106,138,.07), transparent 60%),
+        radial-gradient(ellipse 55% 70% at 88% 18%, rgba(9,106,138,.1), transparent 58%),
+        var(--bg);
+    }
+    :root[data-resolved-theme="light"] .service-hero .lead { color:#3d4c54; }
+    :root[data-resolved-theme="light"] .service-hero-copy:before,
+    :root[data-resolved-theme="light"] .service-hero-copy:after { color:rgba(0,0,0,.28); }
+    :root[data-resolved-theme="light"] .service-hero-mesh,
+    :root[data-resolved-theme="light"] .service-hero-visual svg { color:#087090; }
+    :root[data-resolved-theme="light"] .service-hero-visual:before { border-color:rgba(9,106,138,.35); }
+    :root[data-resolved-theme="light"] .service-prose > h2 { color:#1a2429; }
+    :root[data-resolved-theme="light"] .service-prose p { color:#3d4c54; }
+    :root[data-resolved-theme="light"] .service-grid,
+    :root[data-resolved-theme="light"] .service-prose,
+    :root[data-resolved-theme="light"] .service-rail-block {
+      border-color:rgba(0,0,0,.1);
+    }
+    :root[data-resolved-theme="light"] .service-rail-block:before,
+    :root[data-resolved-theme="light"] .service-rail-block:after { color:rgba(0,0,0,.28); }
+    :root[data-resolved-theme="light"] .service-rail li { color:#3d4c54; }
+    :root[data-resolved-theme="light"] .service-faq-layout,
+    :root[data-resolved-theme="light"] .faq-visual {
+      border-color:rgba(0,0,0,.1);
+    }
+    :root[data-resolved-theme="light"] .faq-visual:before,
+    :root[data-resolved-theme="light"] .faq-visual:after { color:rgba(0,0,0,.28); }
+    :root[data-resolved-theme="light"] .faq-visual-frame:before { border-color:rgba(9,106,138,.35); }
+    :root[data-resolved-theme="light"] .faq-visual svg { color:#087090; }
+    :root[data-resolved-theme="light"] .service-cta {
+      --cta-line: rgba(0,0,0,.1);
+    }
+    :root[data-resolved-theme="light"] .service-cta:before,
+    :root[data-resolved-theme="light"] .service-cta:after { color:rgba(0,0,0,.28); }
+    :root[data-resolved-theme="light"] .service-cta h2 { color:#1a2429; }
+    :root[data-resolved-theme="light"] .service-cta p { color:#3d4c54; }
+    @media(max-width:900px){
+      .service-grid{grid-template-columns:1fr;border-bottom:0}
+      .service-prose{padding:28px 0;border-right:0;border-bottom:1px solid rgba(255,255,255,.1)}
+      .service-rail{position:static;padding:0}
+      .service-rail-block:before{left:0}
+      .service-hero{padding:72px 0 40px}
+      .service-hero-layout{grid-template-columns:1fr;border:0}
+      .service-hero-copy{padding:8px 0 28px;border-right:0;border-bottom:1px solid var(--hero-line)}
+      .service-hero-copy:after{right:0}
+      .service-hero-mesh{
+        mask-image:linear-gradient(180deg, rgba(0,0,0,.16) 0%, rgba(0,0,0,.42) 38%, #000 72%);
+        -webkit-mask-image:linear-gradient(180deg, rgba(0,0,0,.16) 0%, rgba(0,0,0,.42) 38%, #000 72%);
+      }
+      .service-hero-visual{padding:24px 0 8px;min-height:0}
+      .service-hero-visual:before{inset:8px 0}
+      .service-cta{flex-direction:column;align-items:flex-start;padding:28px 0}
+      .service-faq-layout{grid-template-columns:1fr;border-bottom:0}
+      .faq-visual{
+        padding:20px 0 24px;border-right:0;border-bottom:1px solid rgba(255,255,255,.1);
+        min-height:0;
+      }
+      .faq-visual:after{right:0}
+      .faq-visual-frame{max-width:220px;aspect-ratio:1}
+      .faq-content{padding:24px 0 8px}
+      :root[data-resolved-theme="light"] .service-prose,
+      :root[data-resolved-theme="light"] .faq-visual{border-color:rgba(0,0,0,.1)}
+    }
+    @media(max-width:560px){
+      .wrap{width:min(100% - 34px, var(--max))}
+      .service-hero h1{letter-spacing:-2px}
+      .service-cta{padding:24px 0}
+    }
+    @media(prefers-reduced-motion:reduce){
+      .service-hero-mesh .flow,
+      .service-hero-mesh .pulse,
+      .service-hero-mesh .scan,
+      .service-hero-mesh .spin,
+      .service-hero-mesh .pkt,
+      .service-hero-visual .flow,
+      .service-hero-visual .pulse,
+      .service-hero-visual .pkt,
+      .service-hero-visual .spin,
+      .service-hero-visual .caret,
+      .faq-visual .flow,
+      .faq-visual .pulse { animation:none; }
+    }
+        .site-nav{position:relative;z-index:40;display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:72px;padding:16px 0}
+    .site-nav .brand{display:inline-flex;align-items:center;flex:none;gap:0;text-decoration:none;color:inherit;font-size:0;line-height:0}
+    .site-nav .brand-mark{display:none!important}
+    .brand-wordmark{display:block;height:28px;width:auto}
+    .brand-wordmark--on-light{display:none}
+    :root[data-resolved-theme="light"] .brand-wordmark--on-dark{display:none}
+    :root[data-resolved-theme="light"] .brand-wordmark--on-light{display:block}
+    .footer-brand .brand-wordmark{height:24px;width:auto}
+    .nav-panel{display:flex;flex:none;align-items:center;min-width:0;margin-left:auto}
+    .navlinks{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:8px 28px;color:var(--text)}
+    .navlinks a,.nav-link-parent{position:relative;color:inherit;text-decoration:none;font-size:15px;font-weight:500;letter-spacing:.2px;text-transform:lowercase;line-height:1.2;white-space:nowrap;padding:8px 0 10px;opacity:.92;transition:color .18s,opacity .18s}
+    .navlinks a:hover,.nav-link-parent:hover,.nav-item.has-mega:hover > .nav-link-parent,.nav-item.has-mega.is-open > .nav-link-parent{color:var(--lime);opacity:1}
+    .navlinks a:focus-visible,.nav-link-parent:focus-visible,.flag-btn:focus-visible,.theme-cycle:focus-visible,.nav-toggle:focus-visible,.nav-panel-close:focus-visible{outline:2px solid var(--lime);outline-offset:3px;border-radius:2px}
+    .navlinks a[aria-current="page"],.nav-link-parent[aria-current="page"]{color:var(--lime);opacity:1;font-weight:600}
+    .navlinks a[aria-current="page"]::after,.nav-link-parent[aria-current="page"]::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;border-radius:1px;background:var(--lime)}
+    .nav-item.has-mega{position:relative;display:flex;align-items:center}
+    .nav-link-parent{display:inline-flex;align-items:center;gap:6px;background:none;border:0;cursor:pointer;font:inherit}
+    .nav-chevron{width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-top:5px solid currentColor;opacity:.7;transition:transform .18s}
+    .nav-item.has-mega.is-open .nav-chevron,.nav-item.has-mega:hover .nav-chevron{transform:rotate(180deg)}
+    .nav-mega{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%);z-index:80;min-width:min(720px,78vw);padding:22px 24px 20px;border:1px solid var(--line);border-radius:0;background:var(--panel);box-shadow:0 24px 60px rgba(0,0,0,.45)}
+    .nav-mega--narrow{min-width:min(420px,78vw)}
+    .nav-mega--compact{min-width:min(260px,78vw)}
+    .nav-mega--narrow .nav-mega-list,.nav-mega--compact .nav-mega-list{grid-template-columns:1fr}
+    .nav-mega[hidden]{display:none!important}
+    .nav-mega-inner{display:block}
+    .nav-mega-heading{margin:0 0 14px;color:var(--lime);font-size:11px;font-weight:750;letter-spacing:1.1px;text-transform:uppercase}
+    .nav-mega-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 28px;margin:0;padding:0;list-style:none}
+    .nav-mega-list a{display:block;padding:9px 0;font-size:14px;font-weight:550;letter-spacing:0;text-transform:none;white-space:normal;line-height:1.35;opacity:.95}
+    .nav-mega-list a::after{display:none!important}
+    .nav-mega-all{display:inline-flex;align-items:center;gap:8px;margin-top:14px;padding-top:12px;border-top:1px solid var(--line);color:var(--lime);font-size:13px;font-weight:700;text-transform:none}
+    .nav-mega-all::after{display:none!important}
+    :root[data-resolved-theme="light"] .nav-mega{background:#fff;box-shadow:0 18px 40px rgba(20,40,50,.12)}
+    .nav-actions{display:flex;align-items:center;gap:12px;flex:none;margin-left:8px}
+    .flag-btn,.theme-cycle{display:inline-grid;place-items:center;width:28px;height:22px;padding:0;border:1px solid transparent;border-radius:4px;background:transparent;color:var(--muted);cursor:pointer;text-decoration:none;transition:border-color .18s,color .18s,background .18s}
+    .flag-btn svg{width:18px;height:12px;display:block;border-radius:1px}
+    .theme-cycle{width:30px;height:30px;color:var(--text)}
+    .theme-cycle:hover{border-color:#72d7f566;color:var(--lime)}
+    .theme-cycle-ico{width:16px;height:16px}
+    .theme-cycle-ico[hidden]{display:none!important}
+    .flag-btn:hover{border-color:#72d7f566;color:var(--text)}
+    .nav-toggle{display:none;place-items:center;width:42px;height:42px;padding:0;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--text);cursor:pointer}
+    .nav-toggle-bars{display:grid;gap:5px;width:18px}
+    .nav-toggle-bars i{display:block;height:2px;border-radius:2px;background:currentColor;transition:transform .22s,opacity .22s}
+    .nav-panel-top,.nav-backdrop{display:none}
+    @media(max-width:1100px){.navlinks{gap:6px 18px}.navlinks a{font-size:13px}.brand-wordmark{height:22px}}
+    @media(max-width:850px){
+      .site-nav{display:flex;flex-wrap:nowrap;align-items:center;gap:10px;min-height:64px;padding:10px 0}
+      .site-nav .brand{order:1}
+      .nav-actions{order:2;margin-left:auto;gap:8px}
+      .nav-toggle{display:grid;order:3}
+      .brand-wordmark{height:22px}
+      .nav-panel{
+        display:flex!important;flex-direction:column;gap:8px;margin-left:0;
+        position:fixed;top:0;left:0;right:0;z-index:60;
+        height:min(86vh,720px);padding:22px 22px 28px;
+        background:#72d7f5;color:#10262e;
+        transform:translateY(-105%);opacity:0;visibility:hidden;pointer-events:none;
+        transition:transform .32s ease,opacity .24s ease,visibility .24s;
+        box-shadow:0 28px 60px rgba(0,0,0,.35);
+      }
+      .nav-panel.is-open{transform:none;opacity:1;visibility:visible;pointer-events:auto}
+      .nav-panel-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+      .nav-panel-brand{font-size:20px;font-weight:750;letter-spacing:-.6px;color:#10262e}
+      .nav-panel-close{display:grid;place-items:center;width:40px;height:40px;border:1px solid rgba(16,38,46,.22);border-radius:8px;background:rgba(255,255,255,.35);color:#10262e;cursor:pointer}
+      .nav-panel-close svg{width:18px;height:18px}
+      .nav-panel .navlinks{
+        display:flex!important;flex:1;flex-direction:column;flex-wrap:nowrap;align-items:stretch;
+        justify-content:flex-start;gap:4px;order:unset;margin:0;padding:0;color:#10262e
+      }
+      .nav-panel .navlinks a,.nav-panel .nav-link-parent{
+        display:block;padding:14px 4px;font-size:28px;font-weight:650;letter-spacing:-.8px;
+        text-transform:none;line-height:1.15;border-bottom:1px solid rgba(16,38,46,.12);color:#10262e;opacity:1;width:100%;text-align:left
+      }
+      .nav-panel .navlinks a::after,.nav-panel .nav-link-parent::after{display:none}
+      .nav-panel .navlinks a:hover,.nav-panel .navlinks a[aria-current="page"],.nav-panel .nav-link-parent:hover,.nav-panel .nav-link-parent[aria-current="page"]{color:#075573}
+      .nav-panel .nav-item.has-mega{display:block;width:100%}
+      .nav-panel .nav-mega{position:static;transform:none;min-width:0;width:100%;margin:0 0 8px;padding:8px 4px 14px;border:0;border-radius:0;background:transparent;box-shadow:none}
+      .nav-panel .nav-mega-heading{display:none}
+      .nav-panel .nav-mega-list{grid-template-columns:1fr;gap:0}
+      .nav-panel .nav-mega-list a{padding:10px 2px;font-size:17px;font-weight:600;border-bottom:1px solid rgba(16,38,46,.1);color:#163038}
+      .nav-panel .nav-mega-all{margin-top:10px;padding-top:10px;border-top:1px solid rgba(16,38,46,.14);color:#075573;font-size:15px}
+      .nav-panel .nav-chevron{border-top-color:#10262e}
+      .nav-backdrop{
+        display:block;position:fixed;inset:0;z-index:50;background:rgba(7,11,18,.55);
+        opacity:0;visibility:hidden;pointer-events:none;transition:opacity .24s,visibility .24s;border:0;padding:0;cursor:pointer
+      }
+      .nav-backdrop.is-open{opacity:1;visibility:visible;pointer-events:auto}
+      body.nav-open{overflow:hidden}
+      .nav-toggle[aria-expanded="true"] .nav-toggle-bars i:nth-child(1){transform:translateY(7px) rotate(45deg)}
+      .nav-toggle[aria-expanded="true"] .nav-toggle-bars i:nth-child(2){opacity:0}
+      .nav-toggle[aria-expanded="true"] .nav-toggle-bars i:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    }
+    @media(max-width:560px){
+      .flag-btn{width:26px;height:20px}.theme-cycle{width:28px;height:28px}
+      .brand-wordmark{height:20px}
+      .nav-panel{height:min(90vh,760px);padding:18px 18px 24px}
+      .nav-panel .navlinks a{font-size:24px;padding:12px 2px}
+    }
+
+    /* Site footer */
+    .site-footer{--footer-div:rgba(255,255,255,.1);border-top:1px solid var(--footer-div);padding:56px 0 28px;background:color-mix(in srgb, var(--bg) 92%, #000 8%)}
+    .site-footer-grid{display:grid;grid-template-columns:minmax(200px,.85fr) minmax(280px,1.45fr) minmax(0,.85fr) minmax(0,.75fr);gap:0;align-items:stretch;border-top:1px solid var(--footer-div);border-bottom:1px solid var(--footer-div)}
+    .site-footer-col{position:relative;padding:28px 28px 32px;border-right:1px solid var(--footer-div)}
+    .site-footer-col:last-child{border-right:0}
+    .site-footer-col:before,.site-footer-col:after{content:"+";position:absolute;top:-7px;color:rgba(255,255,255,.28);font-size:11px;line-height:1;font-weight:500;pointer-events:none}
+    .site-footer-col:before{left:0}
+    .site-footer-col:after{right:-5px}
+    .site-footer-col:last-child:after{right:0}
+    .site-footer-heading{margin:0 0 18px;color:var(--lime);font-size:13px;font-weight:750;letter-spacing:1px;text-transform:uppercase}
+    .site-footer-list,.site-footer-contact-list{margin:0;padding:0;list-style:none;display:grid;gap:12px}
+    .site-footer-services-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 28px}
+    .site-footer-list a,.site-footer-contact-list a{color:#d5dbd7;text-decoration:none;font-size:15px;line-height:1.45;transition:color .18s}
+    .site-footer-list a:hover,.site-footer-contact-list a:hover{color:var(--lime)}
+    .site-footer-all,.site-footer-access{display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding-top:14px;border-top:1px solid var(--footer-div);color:var(--lime)!important;font-size:14px;font-weight:700;text-decoration:none}
+    .site-footer-access{margin-top:0;padding-top:0;border-top:0}
+    .site-footer-contact-list a{display:flex;align-items:flex-start;gap:11px}
+    .site-footer-ico{display:inline-grid;place-items:center;width:20px;height:20px;flex:none;margin-top:1px;color:var(--lime)}
+    .site-footer-ico svg{width:18px;height:18px}
+    .site-footer-bottom{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:22px;color:#9aa19f;font-size:13px}
+    .site-footer-bottom .footer-brand{display:inline-flex;align-items:center}
+    :root[data-resolved-theme="light"] .site-footer{--footer-div:rgba(0,0,0,.1);background:#eef3f5}
+    :root[data-resolved-theme="light"] .site-footer-col:before,:root[data-resolved-theme="light"] .site-footer-col:after{color:rgba(0,0,0,.28)}
+    :root[data-resolved-theme="light"] .site-footer-list a,:root[data-resolved-theme="light"] .site-footer-contact-list a{color:#3d4c54}
+    :root[data-resolved-theme="light"] .site-footer-bottom{color:#6c787e}
+    @media(max-width:1100px){
+      .site-footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .site-footer-col:nth-child(2n){border-right:0}
+      .site-footer-col:nth-child(2n):after{right:0}
+      .site-footer-col:nth-child(n+3){border-top:1px solid var(--footer-div)}
+      .site-footer-col:nth-child(n+3):before,.site-footer-col:nth-child(n+3):after{top:-7px}
+    }
+    @media(max-width:640px){
+      .site-footer{padding:42px 0 24px}
+      .site-footer-grid{grid-template-columns:1fr}
+      .site-footer-col{padding:24px 0;border-right:0;border-top:1px solid var(--footer-div)}
+      .site-footer-col:first-child{border-top:0}
+      .site-footer-col:after{right:0}
+      .site-footer-services-list{grid-template-columns:1fr}
+      .site-footer-bottom{flex-direction:column;align-items:flex-start;gap:12px}
+    }  </style>
+</head>
+<body>
+  <div class="topline"></div>
+  <header>
+        <nav class="site-nav wrap" aria-label="Navegación principal">
+      <a class="brand" href="index#inicio" aria-label="Codefend, inicio">
+        <img class="brand-wordmark brand-wordmark--on-dark" src="/assets/brand/wordmark-on-dark.svg" width="168" height="27" alt="" decoding="async">
+        <img class="brand-wordmark brand-wordmark--on-light" src="/assets/brand/wordmark-on-light.svg" width="168" height="27" alt="" decoding="async">
+      </a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-panel" aria-label="Menú">
+        <span class="nav-toggle-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+      </button>
+      <div id="nav-panel" class="nav-panel">
+        <div class="nav-panel-top">
+          <span class="nav-panel-brand">codefend</span>
+          <button type="button" class="nav-panel-close" aria-label="Cerrar menú">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+        <div class="navlinks" role="list">
+              <div class="nav-item has-mega" role="listitem">
+      <a class="nav-link-parent" href="services" aria-current="page" aria-expanded="false" aria-haspopup="true">Servicios <span class="nav-chevron" aria-hidden="true"></span></a>
+      <div class="nav-mega" hidden>
+        <div class="nav-mega-inner">
+          <div class="nav-mega-col">
+            <p class="nav-mega-heading">Servicios</p>
+            <ul class="nav-mega-list">
+                              <li><a href="services/web-pentest">Pentest web</a></li>
+                              <li><a href="services/mobile-pentest">Pentest mobile</a></li>
+                              <li><a href="services/network-pentest">Pentest de redes</a></li>
+                              <li><a href="services/source-code-review">Revisión de código</a></li>
+                              <li><a href="services/social-engineering">Ingeniería social</a></li>
+                              <li><a href="services/cloud-security">Seguridad cloud</a></li>
+                              <li><a href="services/data-leaks">Filtraciones de datos</a></li>
+                              <li><a href="services/offensive-models">Modelos ofensivos</a></li>
+                              <li><a href="services/crawlers">Crawlers y extracción</a></li>
+                              <li><a href="services/hackers-on-demand">Hackers on demand</a></li>
+                          </ul>
+                          <a class="nav-mega-all" href="services">Ver todos los servicios <span aria-hidden="true">↗</span></a>
+                      </div>
+        </div>
+      </div>
+    </div>
+              <a role="listitem" href="software">Pentest platform</a>
+              <div class="nav-item has-mega" role="listitem">
+      <a class="nav-link-parent" href="models" aria-expanded="false" aria-haspopup="true">AI <span class="nav-chevron" aria-hidden="true"></span></a>
+      <div class="nav-mega nav-mega--compact" hidden>
+        <div class="nav-mega-inner">
+          <div class="nav-mega-col">
+            <p class="nav-mega-heading">AI</p>
+            <ul class="nav-mega-list">
+                              <li><a href="models">Modelos</a></li>
+                              <li><a href="cameras">Cámaras</a></li>
+                          </ul>
+                      </div>
+        </div>
+      </div>
+    </div>
+              <a role="listitem" href="industries">Industrias</a>
+          <a role="listitem" href="articles">Resources</a>
+          <a role="listitem" href="about">Nosotros</a>
+          <a role="listitem" href="/user-panel/user/access">Acceso</a>
+        </div>
+      </div>
+      <div class="nav-actions">
+                <a class="flag-btn" href="../en/services/hackers-on-demand" hreflang="en" lang="en" aria-label="English" title="English">
+                      <svg viewBox="0 0 60 40" aria-hidden="true"><rect width="60" height="40" fill="#AA151B"/><rect y="10" width="60" height="20" fill="#F1BF00"/></svg>
+                  </a>
+        <button
+          type="button"
+          class="theme-cycle"
+          id="theme-cycle"
+          data-label-auto="Sistema"
+          data-label-light="Claro"
+          data-label-dark="Oscuro"
+          title="Sistema"
+          aria-label="Apariencia: Sistema"
+        >
+          <svg class="theme-cycle-ico" data-theme-ico="auto" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="8.2" fill="none" stroke="currentColor" stroke-width="1.7"/>
+            <path d="M12 3.8A8.2 8.2 0 0 1 12 20.2Z" fill="currentColor"/>
+          </svg>
+          <svg class="theme-cycle-ico" data-theme-ico="light" viewBox="0 0 24 24" fill="none" aria-hidden="true" hidden>
+            <circle cx="12" cy="12" r="3.6" stroke="currentColor" stroke-width="1.7"/>
+            <path d="M12 2.8v2.2M12 19v2.2M2.8 12H5M19 12h2.2M5.1 5.1l1.6 1.6M17.3 17.3l1.6 1.6M18.9 5.1l-1.6 1.6M6.7 17.3l-1.6 1.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+          </svg>
+          <svg class="theme-cycle-ico" data-theme-ico="dark" viewBox="0 0 24 24" fill="none" aria-hidden="true" hidden>
+            <path d="M20.2 14.2A7.8 7.8 0 0 1 9.8 3.8 6.6 6.6 0 1 0 20.2 14.2Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
+    <div class="nav-backdrop" hidden></div>
+      </header>
+  <main>
+    <section class="service-hero">
+      <div class="service-hero-mesh" aria-hidden="true"><svg viewBox="0 0 1440 720" preserveAspectRatio="xMidYMid slice" fill="none"><g stroke="currentColor" fill="currentColor" fill-opacity=".025" stroke-opacity=".26">
+  <rect x="40" y="130" width="170" height="100"/>
+  <rect x="240" y="130" width="150" height="100"/>
+  <rect x="40" y="280" width="170" height="110"/>
+  <rect x="240" y="280" width="150" height="110"/>
+</g>
+<g stroke="currentColor" stroke-opacity=".22">
+  <path d="M60 160h120M60 180h90"/>
+  <circle cx="310" cy="180" r="22" fill="none"/>
+  <path d="M310 158v44M288 180h44"/>
+  <path d="M60 320h120M60 350h90"/>
+  <path d="M260 320h110M260 350h80"/>
+</g>
+<g stroke="currentColor" fill="currentColor" fill-opacity=".03" stroke-opacity=".38">
+  <rect x="980" y="110" width="200" height="120"/>
+  <rect x="1220" y="110" width="180" height="120"/>
+  <rect x="980" y="270" width="200" height="130"/>
+  <rect x="1220" y="270" width="180" height="130"/>
+</g>
+<g stroke="currentColor" stroke-opacity=".32">
+  <path d="M1000 140h140M1000 160h100"/>
+  <circle cx="1310" cy="170" r="28" fill="none"/>
+  <path d="M1310 142v56M1282 170h56"/>
+  <path d="M1000 310h140M1000 340h100"/>
+  <path d="M1240 310h140M1240 340h90"/>
+</g></svg></div>
+      <div class="wrap service-hero-layout">
+        <div class="service-hero-copy">
+          <div class="eyebrow">Hackers on demand</div>
+          <h1>Contratá hackers profesionales</h1>
+          <p class="lead">Especialistas ofensivos on-demand para metas acotadas—campañas puntuales, skills de nicho y resultados con evidencia.</p>
+          <div class="service-hero-actions">
+            <a class="button primary" href="mailto:hola@codefend.com">hola@codefend.com ↗</a>
+            <a class="button ghost" href="services">Todos los servicios</a>
+          </div>
+        </div>
+        <div class="service-hero-visual" aria-hidden="true"><svg viewBox="0 0 640 480" fill="none">
+  <rect width="640" height="480" fill="currentColor" fill-opacity=".035"/>
+  <g stroke="currentColor" stroke-opacity=".18">
+    <path d="M40 40H600M40 440H600M40 40V440M600 40V440"/>
+    <path d="M28 40h24m-12-12v24M588 40h24m-12-12v24M28 440h24m-12-12v24M588 440h24m-12-12v24"/>
+  </g><!-- 2x2 monitor grid -->
+<g stroke="currentColor" fill="currentColor" fill-opacity=".04" stroke-opacity=".55">
+  <rect x="56" y="72" width="250" height="150"/>
+  <rect x="322" y="72" width="250" height="150"/>
+  <rect x="56" y="238" width="250" height="150"/>
+  <rect x="322" y="238" width="250" height="150"/>
+</g>
+<g stroke="currentColor" stroke-opacity=".38">
+  <path d="M72 104h200M72 124h140M72 144h180M72 164h100"/>
+  <circle cx="448" cy="148" r="36" fill="none" stroke-opacity=".7"/>
+  <path d="M448 112v72M412 148h72" stroke-opacity=".7"/>
+  <path d="M72 270h200M72 294h150M72 318h180M72 342h110"/>
+  <path d="M338 270h200M338 294h150M338 318h180M338 342h90"/>
+</g>
+<g fill="currentColor" fill-opacity=".12">
+  <rect x="72" y="286" width="110" height="14"/>
+  <rect x="338" y="286" width="90" height="14"/>
+</g>
+<g fill="currentColor" fill-opacity=".78" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11">
+  <text x="66" y="64">FINDINGS</text>
+  <text x="332" y="64">TARGET MAP</text>
+  <text x="66" y="230">EVIDENCE</text>
+  <text x="332" y="230">ROE WINDOW</text>
+  <text x="56" y="416">operator on task</text>
+  <text x="470" y="416">day 03 / 05</text>
+</g></svg></div>
+      </div>
+    </section>
+
+    <section class="service-body">
+      <div class="wrap service-grid">
+        <div class="service-prose">
+          <h2>Especialistas armados alrededor de un objetivo concreto</h2>
+                      <p>Los paquetes fijos no siempre matchean el problema. Hackers on demand arma talento ofensivo alrededor de un objetivo concreto: una aplicación nombrada, una ventana corta, un skill especializado (por ejemplo AD, mobile o cloud) o capacidad extra para tu equipo.</p>
+                      <p>Definimos reglas de engagement, criterios de éxito, cadencia de comunicación y formato de entregables antes de empezar. El reporting es evidence-driven para decidir próximos pasos sin status vagos.</p>
+                      <p>Sirve para hunts acotados en el tiempo, pressure tests pre-lanzamiento, soporte de triage de bug bounty, o cubrir un gap de expertise sin un ciclo largo de hiring.</p>
+                      <p>Vos mantenés el control del alcance y las condiciones de corte; nosotros aportamos operadores que ejecutan dentro de esos límites.</p>
+                  </div>
+        <aside class="service-rail" aria-label="Beneficios">
+          <div class="service-rail-block">
+            <h2>Beneficios</h2>
+            <ul>
+                              <li>Asigná especialistas a un objetivo ofensivo concreto.</li>
+                              <li>Dejá explícitos alcance, tiempos y reglas de engagement.</li>
+                              <li>Obtené hallazgos con evidencia y próximos pasos.</li>
+                          </ul>
+          </div>
+                      <div class="service-rail-block">
+              <h2>Qué cubrimos</h2>
+              <p>Definición de objetivo, matching de especialistas, ejecución ofensiva bajo RoE, evidencia continua y cierre con hallazgos accionables.</p>
+            </div>
+                      <div class="service-rail-block">
+              <h2>Entregables</h2>
+              <p>Statement of work acotado, packs de evidencia interinos, hallazgos finales con notas de remediación y knowledge transfer opcional.</p>
+            </div>
+                  </aside>
+      </div>
+    </section>
+
+        <section class="service-faq" id="faq">
+      <div class="wrap service-faq-layout">
+        <aside class="faq-visual" aria-hidden="true">
+          <div class="faq-visual-frame">
+            <svg viewBox="0 0 320 320" fill="none">
+              <rect width="320" height="320" fill="currentColor" fill-opacity=".035"/>
+              <g stroke="currentColor" stroke-opacity=".18">
+                <path d="M24 24H296M24 296H296M24 24V296M296 24V296"/>
+                <path d="M16 24h16m-8-8v16M288 24h16m-8-8v16M16 296h16m-8-8v16M288 296h16m-8-8v16"/>
+              </g>
+              <g stroke="currentColor" stroke-opacity=".12">
+                <path d="M24 80H296M24 160H296M24 240H296M80 24V296M160 24V296M240 24V296"/>
+              </g>
+              <circle class="pulse" cx="160" cy="148" r="78" stroke="currentColor" stroke-opacity=".28" fill="none"/>
+              <circle cx="160" cy="148" r="58" stroke="currentColor" stroke-opacity=".4" fill="currentColor" fill-opacity=".04"/>
+              <path class="flow" d="M82 148a78 78 0 1 0 156 0" stroke="currentColor" stroke-opacity=".55" fill="none" stroke-width="1.25"/>
+              <g fill="currentColor" fill-opacity=".9" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">
+                <text x="160" y="168" text-anchor="middle" font-size="92" font-weight="600">?</text>
+                <text x="36" y="48" font-size="11" fill-opacity=".7">FAQ</text>
+                <text x="232" y="48" font-size="11" fill-opacity=".55">help.node</text>
+                <text x="36" y="286" font-size="11" fill-opacity=".55">q → a</text>
+                <text x="230" y="286" font-size="11" fill-opacity=".55">open +</text>
+              </g>
+              <g fill="currentColor">
+                <circle class="pulse" cx="160" cy="70" r="3.2"/>
+                <circle cx="238" cy="148" r="2.8" opacity=".75"/>
+                <circle cx="82" cy="148" r="2.8" opacity=".75"/>
+                <circle cx="160" cy="226" r="2.8" opacity=".6"/>
+              </g>
+            </svg>
+          </div>
+        </aside>
+        <div class="faq-content">
+          <h2>Preguntas frecuentes</h2>
+          <div class="faq-list">
+                          <div class="faq-item">
+                <details>
+                  <summary>¿Cómo se estructura el precio?</summary>
+                  <p>Por lo general por objetivo acotado o time box. Cotizamos tras clarificar metas, activos y constraints.</p>
+                </details>
+              </div>
+                          <div class="faq-item">
+                <details>
+                  <summary>¿Puede apoyar a un red team interno?</summary>
+                  <p>Sí. A menudo sumamos skills de nicho o capacidad extra a equipos internos.</p>
+                </details>
+              </div>
+                          <div class="faq-item">
+                <details>
+                  <summary>¿Qué pasa si el objetivo cambia a mitad de camino?</summary>
+                  <p>Pausamos, re-scopiamos por escrito y seguimos solo con reglas y criterios actualizados.</p>
+                </details>
+              </div>
+                          <div class="faq-item">
+                <details>
+                  <summary>¿Hay retainer continuo?</summary>
+                  <p>Sí, cuando necesitás acceso recurrente a especialistas ofensivos.</p>
+                </details>
+              </div>
+                      </div>
+        </div>
+      </div>
+    </section>
+    
+    <div class="wrap">
+      <div class="service-cta">
+        <div>
+          <h2>Hablemos del alcance</h2>
+          <p>Contanos el objetivo y armamos el engagement con reglas claras.</p>
+        </div>
+        <a class="button primary" href="mailto:hola@codefend.com">hola@codefend.com ↗</a>
+      </div>
+    </div>
+  </main>
+    <footer id="contacto" class="site-footer">
+    <div class="wrap">
+      <div class="site-footer-grid">
+        <div class="site-footer-col site-footer-contact">
+          <p class="site-footer-heading">Contacto</p>
+          <ul class="site-footer-contact-list">
+            <li>
+              <a href="mailto:hola@codefend.com">
+                <span class="site-footer-ico" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M4 7.5A2.5 2.5 0 0 1 6.5 5h11A2.5 2.5 0 0 1 20 7.5v9a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 16.5v-9Z" stroke="currentColor" stroke-width="1.7"/><path d="m5 8 7 5 7-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <span>Hablemos</span>
+              </a>
+            </li>
+            <li>
+              <a href="tel:+16509808600">
+                <span class="site-footer-ico" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M8.2 4.8c.4-.9 1.5-1.2 2.3-.7l1.6 1c.7.4.9 1.3.5 2l-.7 1.3c-.2.4-.2.9.1 1.2l2.9 2.9c.3.3.8.3 1.2.1l1.3-.7c.7-.4 1.6-.2 2 .5l1 1.6c.5.8.2 1.9-.7 2.3l-1.4.6c-1 .4-2.1.2-3-.4-2.1-1.4-4-3.3-5.4-5.4-.6-.9-.8-2-.4-3l.6-1.4Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+                </span>
+                <span>+1 (650) 980-8600</span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:hola@codefend.com">
+                <span class="site-footer-ico" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M4 6.8h16v10.4H4V6.8Z" stroke="currentColor" stroke-width="1.7"/><path d="m5.2 7.6 6.8 5.2 6.8-5.2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <span>hola@codefend.com</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="site-footer-col site-footer-services">
+          <p class="site-footer-heading">Servicios</p>
+          <ul class="site-footer-list site-footer-services-list">
+                          <li><a href="services/web-pentest">Pentest web</a></li>
+                          <li><a href="services/mobile-pentest">Pentest mobile</a></li>
+                          <li><a href="services/network-pentest">Pentest de redes</a></li>
+                          <li><a href="services/source-code-review">Revisión de código</a></li>
+                          <li><a href="services/social-engineering">Ingeniería social</a></li>
+                          <li><a href="services/cloud-security">Seguridad cloud</a></li>
+                          <li><a href="services/data-leaks">Filtraciones de datos</a></li>
+                          <li><a href="services/offensive-models">Modelos ofensivos</a></li>
+                          <li><a href="services/crawlers">Crawlers y extracción</a></li>
+                          <li><a href="services/hackers-on-demand">Hackers on demand</a></li>
+                      </ul>
+          <a class="site-footer-all" href="services">Ver todos los servicios <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <div class="site-footer-col">
+          <p class="site-footer-heading">Explorar</p>
+          <ul class="site-footer-list">
+            <li><a href="software">Pentest platform</a></li>
+            <li><a href="industries">Industrias</a></li>
+            <li><a href="articles">Resources</a></li>
+            <li><a href="about">Nosotros</a></li>
+            <li><a href="models">Modelos</a></li>
+            <li><a href="cameras">Cámaras</a></li>
+            <li><a href="index#metodo">Cómo trabajamos</a></li>
+          </ul>
+        </div>
+
+        <div class="site-footer-col">
+          <p class="site-footer-heading">Acceso</p>
+          <ul class="site-footer-list">
+            <li><a class="site-footer-access" href="/user-panel/user/access">Acceso a la plataforma <span aria-hidden="true">↗</span></a></li>
+            <li><a href="services">Servicios</a></li>
+            <li><a href="software">Pentest platform</a></li>
+            <li><a href="models">AI</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer-bottom">
+        <a class="brand footer-brand" href="index#inicio" aria-label="Codefend">
+          <img class="brand-wordmark brand-wordmark--on-dark" src="/assets/brand/wordmark-on-dark.svg" width="168" height="27" alt="Codefend" decoding="async">
+          <img class="brand-wordmark brand-wordmark--on-light" src="/assets/brand/wordmark-on-light.svg" width="168" height="27" alt="" decoding="async">
+        </a>
+        <span>© 2026 Codefend.</span>
+      </div>
+    </div>
+  </footer>
+    <script>
+(()=>{const root=document.documentElement,key='codefend-theme-mode';const media=window.matchMedia('(prefers-color-scheme: light)');const allowed=['auto','light','dark'];let mode='auto';try{mode=localStorage.getItem(key)||'auto'}catch(e){}
+if(!allowed.includes(mode))mode='auto';
+const btn=document.getElementById('theme-cycle');
+function systemResolved(){return media.matches?'light':'dark'}
+function labelFor(m){return btn?.dataset['label'+m[0].toUpperCase()+m.slice(1)]||m}
+function apply(){
+  const resolved=mode==='auto'?systemResolved():mode;
+  root.dataset.theme=mode;
+  root.dataset.resolvedTheme=resolved;
+  if(!btn)return;
+  const label=labelFor(mode);
+  btn.title=label;
+  btn.setAttribute('aria-label',label);
+  btn.querySelectorAll('.theme-cycle-ico').forEach(ico=>{
+    const on=ico.getAttribute('data-theme-ico')===mode;
+    ico.toggleAttribute('hidden',!on);
+  });
+}
+btn?.addEventListener('click',()=>{
+  if(mode==='auto'){
+    mode=systemResolved()==='dark'?'light':'dark';
+  }else{
+    mode=mode==='light'?'dark':'light';
+  }
+  try{localStorage.setItem(key,mode)}catch(e){}
+  apply();
+});
+media.addEventListener?.('change',()=>{if(mode==='auto')apply()});
+apply()})();
+(()=>{const toggle=document.querySelector('.nav-toggle'),panel=document.getElementById('nav-panel'),backdrop=document.querySelector('.nav-backdrop'),closeBtn=document.querySelector('.nav-panel-close'),nav=document.querySelector('.site-nav'),actions=document.querySelector('.nav-actions');
+if(!toggle||!panel||!nav)return;
+const mq=window.matchMedia('(max-width:850px)');
+const setOpen=(open)=>{toggle.setAttribute('aria-expanded',open?'true':'false');panel.classList.toggle('is-open',open);backdrop?.classList.toggle('is-open',open);if(backdrop)backdrop.hidden=!open;document.body.classList.toggle('nav-open',open)};
+/* On mobile, fixed panel must live on body — header backdrop-filter creates a containing block.
+   On desktop, keep panel inside .site-nav so the flex row layout works. */
+const placePanel=()=>{
+  if(mq.matches){
+    if(panel.parentElement!==document.body)document.body.appendChild(panel);
+    if(backdrop&&backdrop.parentElement!==document.body)document.body.appendChild(backdrop);
+  }else{
+    setOpen(false);
+    if(panel.parentElement!==nav){actions?nav.insertBefore(panel,actions):nav.appendChild(panel)}
+  }
+};
+placePanel();
+toggle.addEventListener('click',()=>setOpen(toggle.getAttribute('aria-expanded')!=='true'));
+closeBtn?.addEventListener('click',()=>setOpen(false));
+backdrop?.addEventListener('click',()=>setOpen(false));
+panel.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setOpen(false)));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')setOpen(false)});
+mq.addEventListener?.('change',()=>placePanel())})();
+(()=>{
+  const items=[...document.querySelectorAll('.nav-item.has-mega')];
+  if(!items.length)return;
+  const mq=window.matchMedia('(max-width:850px)');
+  const closeAll=()=>items.forEach(item=>{
+    item.classList.remove('is-open');
+    const trigger=item.querySelector('.nav-link-parent');
+    const mega=item.querySelector('.nav-mega');
+    if(trigger)trigger.setAttribute('aria-expanded','false');
+    if(mega)mega.hidden=true;
+  });
+  const openItem=(item)=>{
+    closeAll();
+    item.classList.add('is-open');
+    const trigger=item.querySelector('.nav-link-parent');
+    const mega=item.querySelector('.nav-mega');
+    if(trigger)trigger.setAttribute('aria-expanded','true');
+    if(mega)mega.hidden=false;
+  };
+  items.forEach(item=>{
+    const trigger=item.querySelector('.nav-link-parent');
+    const mega=item.querySelector('.nav-mega');
+    if(!trigger||!mega)return;
+    let timer=null;
+    const clear=()=>{if(timer){clearTimeout(timer);timer=null}};
+    item.addEventListener('mouseenter',()=>{if(mq.matches)return;clear();openItem(item)});
+    item.addEventListener('mouseleave',()=>{if(mq.matches)return;clear();timer=setTimeout(closeAll,120)});
+    trigger.addEventListener('click',(e)=>{
+      if(!mq.matches)return;
+      e.preventDefault();
+      const open=item.classList.contains('is-open');
+      if(open){closeAll()}else{openItem(item)}
+    });
+    trigger.addEventListener('keydown',(e)=>{
+      if(e.key==='Escape'){closeAll();trigger.focus()}
+      if((e.key==='Enter'||e.key===' ')&&mq.matches){e.preventDefault();trigger.click()}
+    });
+  });
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeAll()});
+  document.addEventListener('click',e=>{if(!e.target.closest('.nav-item.has-mega'))closeAll()});
+  mq.addEventListener?.('change',closeAll);
+})();</script>
+</body>
+</html>

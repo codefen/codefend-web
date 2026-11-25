@@ -3,23 +3,54 @@
 # dependencies
 /node_modules
 /.pnp
-.pnp.js
-package-lock.json
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
 
 # testing
 /coverage
+
+# next.js
+/.next/
+/out/
 
 # production
 /build
 
 # misc
 .DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+*.pem
 
+# debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-lock.yaml
+.pnpm-debug.log*
+
+# env files — never commit secrets
+.env
+.env.*
+!.env.example
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# local / deploy artifacts
+.cursor/
+*.tgz
+*.pem
+*.key
+
+# CMS media can be large; keep structure optional
+# public/uploads/media/ is site content — track selectively if needed
+public/uploads/**/*.mp4
+public/uploads/**/*.mov
+public/uploads/**/*.webm
+
